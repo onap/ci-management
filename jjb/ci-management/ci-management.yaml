@@ -1,0 +1,206 @@
+---
+- project:
+    name: ci-management-jobs
+    project: 'ci-management'
+    jobs:
+      - '{project}-verify-jjb'
+      - '{project}-merge-jjb'
+      # - '{project}-verify-packer-{platforms}-{templates}'
+      # - '{project}-merge-packer-{platforms}-{templates}'
+
+    archive-artifacts: '**/*.log'
+    branch: 'master'
+    build-timeout: '60'
+
+    platforms:
+      - centos
+      - ubuntu-16.04
+
+    templates:
+      - basebuild
+
+- job-template:
+    name: '{project}-verify-jjb'
+
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: 14
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: 'master'
+          refspec: 'refs/heads/master'
+          artifacts: '{archive-artifacts}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: 'jjb/**'
+
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: 'jjbini'
+              variable: 'JJBINI'
+      - shell: |
+          virtualenv $WORKSPACE/venv
+          source $WORKSPACE/venv/bin/activate
+          pip install --upgrade pip
+          pip freeze
+          pip install jenkins-job-builder
+          jenkins-jobs -l DEBUG --conf $JJBINI test -o archives/job_output jjb/
+          gzip archives/job_output/*
+      - ci-management-check-unicode
+
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
+
+- job-template:
+    name: '{project}-merge-jjb'
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: 14
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: 'master'
+          refspec: 'refs/heads/master'
+          artifacts: '{archive-artifacts}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: 'jjb/**'
+
+    builders:
+      - shell: |
+          virtualenv $WORKSPACE/venv
+          source $WORKSPACE/venv/bin/activate
+          pip install --upgrade pip
+          pip freeze
+          pip install jenkins-job-builder
+          jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
+
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
+
+- job-template:
+    name: '{project}-verify-packer-{platforms}-{templates}'
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: 14
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: 'master'
+          refspec: 'refs/heads/master'
+          artifacts: '{archive-artifacts}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: 'master'
+          files: 'packer/**'
+
+    builders:
+      - packer-validate:
+          platform: '{platforms}'
+          template: '{templates}'
+
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
+
+- job-template:
+    name: '{project}-merge-packer-{platforms}-{templates}'
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: 14
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: 'master'
+          refspec: 'refs/heads/master'
+          artifacts: '{archive-artifacts}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: 'master'
+          files: 'packer/**'
+
+    builders:
+      - packer-validate:
+          platform: '{platforms}'
+          template: '{templates}'
+      - packer-build:
+          platform: '{platforms}'
+          template: '{templates}'
+
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'

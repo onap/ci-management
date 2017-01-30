@@ -1,0 +1,56 @@
+---
+- job-template:
+    # Job template for python verify jobs
+    #
+    # The purpose of this job template is to run tox for projects using this
+    # template.
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+    # Optional Variables:
+    #     path:      directory containing the project's tox.ini relative to
+    #                the workspace. The default is the project root.
+    #     pattern:   ant file-path pattern relative to the workspace used to
+    #                trigger the job
+
+    name: '{project}-{stream}-{subproject}-verify-python'
+    path: '$WORKSPACE'
+
+    project-type: freestyle
+    concurrent: true
+    node: '{build-node}'
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted-pattern:
+          name: '{project}'
+          branch: '{branch}'
+          pattern: '{pattern}'
+
+    builders:
+      - shell: |
+          virtualenv $WORKSPACE/venv-tox
+          source $WORKSPACE/venv-tox/bin/activate
+          pip install --upgrade pip
+          pip install --upgrade tox argparse
+          pip freeze
+          cd $WORKSPACE/{path}
+          tox
+
+    publishers:
+      - ecomp-infra-shiplogs:
+          maven-version: 'mvn33'

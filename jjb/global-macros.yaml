@@ -1,0 +1,284 @@
+---
+# Global macros
+
+# BUILDERS
+- builder:
+    name: ci-management-check-unicode
+    builders:
+      - shell: |
+          $WORKSPACE/scripts/check-unicode.sh jjb/
+
+- builder:
+    name: provide-maven-settings
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: '{global-settings-file}'
+              variable: 'GLOBAL_SETTINGS_FILE'
+            - file-id: '{settings-file}'
+              variable: 'SETTINGS_FILE'
+
+# PARAMETERS
+- parameter:
+    name: ecomp-infra-parameters
+    parameters:
+      - string:
+          name: PROJECT
+          default: '{project}'
+          # yamllint disable rule:line-length
+          description: 'JJB configured PROJECT parameter to identify a Gerrit project'
+          # yamllint enable
+      - string:
+          name: ARCHIVE_ARTIFACTS
+          default: '{artifacts} **/target/surefire-reports/*-output.txt'
+          # yamllint disable rule:line-length
+          description: 'Space separated glob patterns for artifacts to archive to logs hosting'
+          # yamllint enable
+      - string:
+          name: GERRIT_BRANCH
+          default: '{branch}'
+          description: 'JJB configured GERRIT_BRANCH parameter'
+      - string:
+          name: GERRIT_PROJECT
+          default: '{project}'
+          description: 'GERRIT_PROJECT parameter if not given by trigger'
+      - string:
+          name: GERRIT_REFSPEC
+          default: '{refspec}'
+          description: 'GERRIT_REFSPEC parameter if not given by trigger'
+      - string:
+          name: STACK_NAME
+          default: '$JOB_NAME-$BUILD_NUMBER'
+          description: 'Used by Heat to generate a unique stack & vm name'
+
+- parameter:
+    name: maven-exec
+    parameters:
+      - string:
+          name: MVN
+          # yamllint disable rule:line-length
+          default: '/w/tools/hudson.tasks.Maven_MavenInstallation/{maven-version}/bin/mvn'
+          # yamllint enable
+          description: 'Maven selector to be used by shell scripts'
+
+# PROPERTIES
+- property:
+    name: ecomp-infra-properties
+    properties:
+      - build-discarder:
+          days-to-keep: '{build-days-to-keep}'
+          num-to-keep: 40
+          artifact-days-to-keep: -1
+          artifact-num-to-keep: 5
+
+# PUBLISHERS
+- publisher:
+    name: archive-artifacts
+    publishers:
+      - archive:
+          artifacts: '{artifacts}'
+          allow-empty: true
+          fingerprint: true
+          latest-only: true
+
+- publisher:
+    name: email-notification
+    publishers:
+      - email-ext:
+          recipients: 'nobody@open-o.org'
+          reply-to:
+          content-type: default
+          # yamllint disable rule:line-length
+          subject: '{email-prefix} $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!'
+          # yamllint enable
+          body: |
+            $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+            Check console output at $BUILD_URL to view the results.
+          unstable: true
+          fixed: true
+          send-to:
+            - developers
+            - recipients
+
+- publisher:
+    name: jacoco-report
+    publishers:
+      - jacoco:
+          exec-pattern: '**/**.exec'
+          class-pattern: '**/classes'
+          source-pattern: '**/src/main/java'
+          # yamllint disable rule:line-length
+          exclusion-pattern: '**/gen**,**/generated-sources/**,**/yang-gen**,**/pax/**'
+          # yamllint enable
+          status-update: true
+          targets:
+            - branch:
+                healthy: 10
+                unhealthy: 20
+            - method:
+                healthy: 50
+                unhealthy: 40
+
+- publisher:
+    name: ecomp-infra-shiplogs
+    # To archive things, the job will need to create an "archives" directory in
+    # the workspace and this macro will handle copying the contents of the
+    # archives directory.
+    #
+    # Uses the build parameter ARCHIVE_ARTIFACTS if not empty to find files to
+    # archive. You can pass globstar patterns for example "**/*.xml **/*.log" as
+    # the archive pattern. This is a space separated list of files to archive.
+    #
+    # Also ensure that the workspace is cleaned up at the end of the build.
+    publishers:
+      - postbuildscript:
+          builders:
+            - shell: !include-raw: include-raw-deploy-archives.sh
+            - maven-target:
+                maven-version: '{maven-version}'
+                pom: '.archives/deploy-archives.xml'
+                goals: 'clean deploy -V -B -q -Dmaven.repo.local=/tmp/r'
+                settings: 'jenkins-log-archives-settings'
+                settings-type: cfp
+                global-settings: 'global-settings'
+                global-settings-type: cfp
+            - description-setter:
+                regexp: '^Build logs: .*'
+          script-only-if-succeeded: false
+          script-only-if-failed: false
+          mark-unstable-if-failed: true
+      - workspace-cleanup:
+          fail-build: false`
+
+# SCMS
+- scm:
+    name: git-scm
+    scm:
+      - git:
+          credentials-id: 'ecomp-jenkins-ssh'
+          url: '$GIT_BASE'
+          refspec: ''
+          branches:
+            - 'origin/${branch}'
+          skip-tag: true
+          wipe-workspace: true
+          timeout: 30
+
+- scm:
+    name: gerrit-trigger-scm
+    scm:
+      - git:
+          credentials-id: 'ecomp-jenkins-ssh'
+          url: '$GIT_BASE'
+          refspec: '{refspec}'
+          branches:
+            - 'origin/$GERRIT_BRANCH'
+          skip-tag: true
+          timeout: 30
+          choosing-strategy: '{choosing-strategy}'
+
+- scm:
+    name: gerrit-trigger-scm-basedir
+    scm:
+      - git:
+          credentials-id: 'ecomp-jenkins-ssh'
+          url: '$GIT_BASE'
+          refspec: '{refspec}'
+          branches:
+            - 'origin/$GERRIT_BRANCH'
+          skip-tag: true
+          timeout: 30
+          choosing-strategy: '{choosing-strategy}'
+          basedir: '{basedir}'
+
+- scm:
+    name: git-branch-scm
+    scm:
+      - git:
+          credentials-id: 'ecomp-jenkins-ssh'
+          url: '$GIT_BASE'
+          refspec: ''
+          branches:
+            - 'origin/{branch}'
+          skip-tag: true
+          timeout: 30
+          wipe-workspace: true
+
+# TRIGGERS
+
+# This is a single macro to use for all jobs who vote on every (relevant) patch
+# set. Only 'recheck' trigger word is supported, it always triggers the full set
+# of relevant jobs, in order to prevent Jenkins from starting only a subset and
+# still voting Verified+1
+# Arguments:
+#     server: name of gerrit server to listen to
+#     project: pattern to match triggering projects
+#     branch: triggering branch name
+#     files: pattern to match triggering filepaths
+- trigger:
+    name: gerrit-trigger-patch-submitted
+    triggers:
+      - gerrit:
+          server-name: '{server}'
+          trigger-on:
+            - patchset-created-event:
+                exclude-drafts: 'false'
+                exclude-trivial-rebase: 'false'
+                exclude-no-code-change: 'false'
+            - draft-published-event
+            - comment-added-contains-event:
+                comment-contains-value: 'recheck'
+          projects:
+            - project-compare-type: 'ANT'
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: 'ANT'
+                  pattern: '{files}'
+
+- trigger:
+    name: gerrit-trigger-patch-merged
+    triggers:
+      - gerrit:
+          server-name: '{server}'
+          trigger-on:
+            - change-merged-event
+            - comment-added-contains-event:
+                comment-contains-value: 'remerge'
+          projects:
+            - project-compare-type: 'ANT'
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: 'ANT'
+                  pattern: '{files}'
+
+# WRAPPERS
+- wrapper:
+    name: build-timeout
+    wrappers:
+      - timeout:
+          type: absolute
+          timeout: 360
+          fail: true
+
+- wrapper:
+    # This wrapper is required for all jobs as it configures the wrappers
+    # needed by the eCOMP infra.
+    name: ecomp-infra-wrappers
+    wrappers:
+      - timeout:
+          type: absolute
+          timeout: '{build-timeout}'
+          timeout-var: 'BUILD_TIMEOUT'
+          fail: true
+      - ssh-agent-credentials:
+          users:
+            - 'ecomp-jenkins-ssh'
+      - openstack:
+          single-use: true

@@ -1,0 +1,28 @@
+---
+# vim: sw=2 ts=2 sts=2 et :
+- builder:
+    name: packer-validate
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: 'packer-cloud-env'
+              variable: 'CLOUDENV'
+      - shell: |
+          cd packer
+          export PACKER_LOG="yes"
+          export PACKER_LOG_PATH="packer-validate.log"
+          packer.io validate -var-file=$CLOUDENV \
+            -var-file=vars/{platform}.json \
+            templates/{template}.json
+
+- builder:
+    name: packer-build
+    builders:
+      - shell: |
+          cd packer
+          export PACKER_LOG="yes"
+          export PACKER_LOG_PATH="packer-validate.log"
+          packer.io build -color=false \
+            -var-file=$CLOUDENV \
+            -var-file=vars/{platform}.json \
+            templates/{template}.json
