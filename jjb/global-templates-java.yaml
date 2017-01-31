@@ -23,6 +23,7 @@
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
 
     scm:
       - gerrit-trigger-scm:
@@ -83,6 +84,7 @@
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
 
     scm:
       - gerrit-trigger-scm:
@@ -139,6 +141,7 @@
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
 
     scm:
       - gerrit-trigger-scm:
@@ -200,6 +203,7 @@
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
 
     scm:
       - gerrit-trigger-scm:
