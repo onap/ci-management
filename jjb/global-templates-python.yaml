@@ -13,7 +13,7 @@
     #     pattern:   ant file-path pattern relative to the workspace used to
     #                trigger the job
 
-    name: '{project}-{stream}-{subproject}-verify-python'
+    name: '{project-name}-{stream}-{subproject}-verify-python'
     path: '$WORKSPACE'
 
     project-type: freestyle

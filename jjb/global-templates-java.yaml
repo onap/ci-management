@@ -8,7 +8,7 @@
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project}-{stream}-verify-java'
+    name: '{project-name}-{stream}-verify-java'
 
     project-type: freestyle
     concurrent: true
@@ -69,7 +69,7 @@
     #     pattern:   ant file-path pattern relative to the workspace used to
     #                trigger the job
 
-    name: '{project}-{stream}-{subproject}-verify-java'
+    name: '{project-name}-{stream}-{subproject}-verify-java'
 
     project-type: freestyle
     concurrent: true
@@ -127,7 +127,7 @@
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
-    name: '{project}-{stream}-merge-java'
+    name: '{project-name}-{stream}-merge-java'
 
     project-type: freestyle
     node: '{build-node}'
@@ -166,7 +166,7 @@
       - maven-target:
           maven-version: 'mvn33'
           # yamllint disable rule:line-length
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.open-o.org'
+          goals: 'clean deploy'
           # yamllint enable
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -189,7 +189,7 @@
     #     pattern:   ant file-path pattern relative to the workspace used to
     #                trigger the job
 
-    name: '{project}-{stream}-{subproject}-merge-java'
+    name: '{project-name}-{stream}-{subproject}-merge-java'
 
     project-type: freestyle
     node: '{build-node}'
@@ -229,7 +229,7 @@
           maven-version: 'mvn33'
           pom: '{pom}'
           # yamllint disable rule:line-length
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.open-o.org'
+          goals: 'clean deploy'
           # yamllint enable
           settings: '{mvn-settings}'
           settings-type: cfp

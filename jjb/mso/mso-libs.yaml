@@ -1,12 +1,12 @@
 ---
 - project:
-    name: mso
-    project-name: 'mso'
+    name: mso-libs
+    project-name: 'mso-libs'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
-    project: 'mso'
+    project: 'mso/libs'
     stream:
       - 'master':
           branch: 'master'
