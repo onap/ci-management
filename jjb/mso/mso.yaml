@@ -1,0 +1,14 @@
+---
+- project:
+    name: mso
+    jobs:
+      - '{project}-{stream}-verify-java'
+      - '{project}-{stream}-merge-java'
+
+    project: 'mso'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'mso-settings'
+    files: '**'
+    archive-artifacts: ''
