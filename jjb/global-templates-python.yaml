@@ -51,6 +51,6 @@
           cd $WORKSPACE/{path}
           tox
 
-    publishers:
-      - ecomp-infra-shiplogs:
-          maven-version: 'mvn33'
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'

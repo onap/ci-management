@@ -53,9 +53,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-    publishers:
-      - ecomp-infra-shiplogs:
-          maven-version: 'mvn33'
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
 
 - job-template:
     # Job template for Java verify jobs with POM not at the root
@@ -116,9 +116,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-    publishers:
-      - ecomp-infra-shiplogs:
-          maven-version: 'mvn33'
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
 
 - job-template:
     # Job template for Java merge jobs
@@ -174,9 +174,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-    publishers:
-      - ecomp-infra-shiplogs:
-          maven-version: 'mvn33'
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
 
 - job-template:
     # Job template for Java merge jobs with POM not at the root
@@ -238,6 +238,6 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-    publishers:
-      - ecomp-infra-shiplogs:
-          maven-version: 'mvn33'
+#     publishers:
+#       - ecomp-infra-shiplogs:
+#           maven-version: 'mvn33'
