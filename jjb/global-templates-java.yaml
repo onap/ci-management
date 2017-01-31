@@ -15,11 +15,8 @@
     node: '{build-node}'
 
     properties:
-      - build-discarder:
-          days-to-keep: '{build-days-to-keep}'
-          num-to-keep: '{build-num-to-keep}'
-          artifact-days-to-keep: '{build-artifact-days-to-keep}'
-          artifact-num-to-keep: '{build-artifact-num-to-keep}'
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
       - ecomp-infra-parameters:
@@ -38,8 +35,10 @@
 
     triggers:
       - gerrit-trigger-patch-submitted:
-          name: '{project}'
+          server: '{server-name}'
+          project: '{project}'
           branch: '{branch}'
+          files: '**'
 
     builders:
       - provide-maven-settings:
@@ -76,11 +75,8 @@
     node: '{build-node}'
 
     properties:
-      - build-discarder:
-          days-to-keep: '{build-days-to-keep}'
-          num-to-keep: '{build-num-to-keep}'
-          artifact-days-to-keep: '{build-artifact-days-to-keep}'
-          artifact-num-to-keep: '{build-artifact-num-to-keep}'
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
       - ecomp-infra-parameters:
@@ -98,10 +94,11 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      - gerrit-trigger-patch-submitted-pattern:
-          name: '{project}'
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
           branch: '{branch}'
-          pattern: '{pattern}'
+          files: '{pattern}'
 
     builders:
       - provide-maven-settings:
@@ -134,11 +131,8 @@
     node: '{build-node}'
 
     properties:
-      - build-discarder:
-          days-to-keep: '{build-days-to-keep}'
-          num-to-keep: '{build-num-to-keep}'
-          artifact-days-to-keep: '{build-artifact-days-to-keep}'
-          artifact-num-to-keep: '{build-artifact-num-to-keep}'
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
       - ecomp-infra-parameters:
@@ -157,8 +151,10 @@
 
     triggers:
       - gerrit-trigger-patch-merged:
-          name: '{project}'
+          server: '{server-name}'
+          project: '{project}'
           branch: '{branch}'
+          files: '**'
 
     builders:
       - provide-maven-settings:
@@ -196,11 +192,8 @@
     node: '{build-node}'
 
     properties:
-      - build-discarder:
-          days-to-keep: '{build-days-to-keep}'
-          num-to-keep: '{build-num-to-keep}'
-          artifact-days-to-keep: '{build-artifact-days-to-keep}'
-          artifact-num-to-keep: '{build-artifact-num-to-keep}'
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
       - ecomp-infra-parameters:
@@ -218,10 +211,11 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      - gerrit-trigger-patch-merged-pattern:
-          name: '{project}'
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
           branch: '{branch}'
-          pattern: '{pattern}'
+          files: '{pattern}'
 
     builders:
       - provide-maven-settings:

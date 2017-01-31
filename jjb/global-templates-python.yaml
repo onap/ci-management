@@ -20,6 +20,10 @@
     concurrent: true
     node: '{build-node}'
 
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
     parameters:
       - ecomp-infra-parameters:
           project: '{project}'
@@ -36,10 +40,11 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      - gerrit-trigger-patch-submitted-pattern:
-          name: '{project}'
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
           branch: '{branch}'
-          pattern: '{pattern}'
+          files: '{pattern}'
 
     builders:
       - shell: |
