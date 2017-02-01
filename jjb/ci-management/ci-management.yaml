@@ -5,8 +5,8 @@
     jobs:
       - '{project}-verify-jjb'
       - '{project}-merge-jjb'
-      # - '{project}-verify-packer-{platforms}-{templates}'
-      # - '{project}-merge-packer-{platforms}-{templates}'
+      - '{project}-verify-packer'
+      - '{project}-merge-packer-{platforms}-{templates}'
 
     archive-artifacts: '**/*.log'
     branch: 'master'
@@ -123,7 +123,7 @@
 #           maven-version: 'mvn33'
 
 - job-template:
-    name: '{project}-verify-packer-{platforms}-{templates}'
+    name: '{project}-verify-packer'
     project-type: freestyle
     node: '{build-node}'
     concurrent: true
@@ -156,9 +156,7 @@
           files: 'packer/**'
 
     builders:
-      - packer-validate:
-          platform: '{platforms}'
-          template: '{templates}'
+      - packer-validate
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
