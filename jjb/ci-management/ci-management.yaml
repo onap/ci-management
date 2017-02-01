@@ -196,9 +196,7 @@
           files: 'packer/**'
 
     builders:
-      - packer-validate:
-          platform: '{platforms}'
-          template: '{templates}'
+      - packer-validate
       - packer-build:
           platform: '{platforms}'
           template: '{templates}'

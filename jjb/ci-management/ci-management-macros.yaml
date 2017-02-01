@@ -18,7 +18,7 @@
               for t in $templates; do
                   export PACKER_LOG="yes" && \
                   export PACKER_LOG_PATH="packer-validate-${{v##*/}}-${{t##*/}}.log" && \
-                              packer.io validate -var-file=$CLOUDENV -color=false \
+                              packer.io validate -var-file=$CLOUDENV \
                               -var-file=$v $t
                   if [ $? -ne 0 ]; then
                       break
