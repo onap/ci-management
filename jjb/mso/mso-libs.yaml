@@ -5,11 +5,13 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
 
     project: 'mso/libs'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'mso-settings'
+    maven-deploy-properties: 'deployAtEnd=true'
     files: '**'
     archive-artifacts: ''
