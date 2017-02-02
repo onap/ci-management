@@ -12,6 +12,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'mso-settings'
-    maven-deploy-properties: 'deployAtEnd=true'
+    maven-deploy-properties:
+      - 'deployAtEnd=true'
     files: '**'
     archive-artifacts: ''
