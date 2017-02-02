@@ -1,0 +1,15 @@
+---
+- project:
+    name: vid
+    project-name: 'vid'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'vid'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vid-settings'
+    files: '**'
+    archive-artifacts: ''
