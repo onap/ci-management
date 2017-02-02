@@ -1,0 +1,15 @@
+---
+- project:
+    name: portal
+    project-name: 'portal'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'portal'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'portal-settings'
+    files: '**'
+    archive-artifacts: ''
