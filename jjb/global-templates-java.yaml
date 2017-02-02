@@ -122,8 +122,8 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean deploy" for
-    # projects using this template.
+    # The purpose of this job template is to run "maven version && maven clean
+    # deploy" for projects using this template.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -176,7 +176,8 @@
       - maven-target:
           maven-version: 'mvn33'
           goals: 'clean deploy'
-          properties: '{maven-deploy-properties}'
+          properties:
+            - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
