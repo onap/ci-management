@@ -11,6 +11,7 @@
     archive-artifacts: '**/*.log'
     branch: 'master'
     build-timeout: '60'
+    build-node: 'centos7-basebuild-2c-1g'
 
     platforms:
       - centos
