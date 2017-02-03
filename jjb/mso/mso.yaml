@@ -13,3 +13,4 @@
     mvn-settings: 'mso-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: centos7-basebuild-4c-4g
