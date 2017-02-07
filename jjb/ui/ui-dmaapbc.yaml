@@ -1,16 +1,16 @@
 ---
 - project:
-    name: dmaapbc
-    project-name: 'dmaapbc'
+    name: ui-dmaapbc
+    project-name: 'ui-dmaapbc'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
-    project: 'dmaapbc'
+    project: 'ui/dmaapbc'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dmaapbc-settings'
+    mvn-settings: 'ui-dmaapbc-settings'
     files: '**'
     archive-artifacts: ''
     build-node: centos7-basebuild-4c-4g
