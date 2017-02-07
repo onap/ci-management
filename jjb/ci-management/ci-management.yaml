@@ -19,6 +19,12 @@
 
     templates:
       - basebuild
+      - docker
+
+    exclude:
+      # only build the docker image on centos at present
+      - platforms: ubuntu-16.04
+        templates: docker
 
 - job-template:
     name: '{project}-verify-jjb'
