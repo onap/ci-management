@@ -24,8 +24,6 @@ EOL
 
     # docker group doesn't get created by default for some reason
     groupadd docker
-
-    # Actual installation of robot is done from an integration JJB script
 }
 
 ubuntu_systems() {
@@ -36,8 +34,6 @@ ubuntu_systems() {
 
     # Install docker
     apt install -y docker.io
-
-    # Actual installation of robot is done from an integration JJB script
 }
 
 all_systems() {

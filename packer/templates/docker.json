@@ -19,7 +19,7 @@
       "password": "{{user `stack_pass`}}",
       "region": "ca-ymq-1",
       "ssh_username": "{{user `cloud_user`}}",
-      "image_name": "{{user `distro`}} - redis - {{isotime \"20060102-1504\"}}",
+      "image_name": "{{user `distro`}} - docker - {{isotime \"20060102-1504\"}}",
       "source_image_name": "{{user `base_image`}}",
       "flavor": "v1-standard-1",
       "availability_zone": "ca-ymq-2",
@@ -44,7 +44,7 @@
       "scripts": [
         "provision/baseline.sh",
         "provision/basebuild.sh",
-        "provision/redis-server.sh",
+        "provision/docker.sh",
         "provision/system_reseal.sh"
       ],
       "execute_command": "chmod +x {{ .Path }}; if [ \"$UID\" == \"0\" ]; then {{ .Vars }} '{{ .Path }}'; else {{ .Vars }} sudo -E '{{ .Path }}'; fi"
