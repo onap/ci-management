@@ -73,7 +73,7 @@ rh_systems() {
                 alternatives --set java_sdk_openjdk /usr/lib/jvm/java-1.7.0-openjdk.x86_64
             fi
         ;;
-        RedHat,CentOS)
+        RedHat|CentOS)
             if [ "$(echo $FACTER_OSVER | cut -d'.' -f1)" -ge "7" ]
             then
                 echo "---> not modifying java alternatives as OpenJDK 1.7.0 does not exist"
@@ -116,30 +116,42 @@ Dpkg::Options {
 EOF
 
     echo "---> Updating operating system"
-    apt-get update > /dev/null
-    apt-get upgrade > /dev/null
+    apt-get update
+    apt-get upgrade
 
     # add in stuff we know we need
     echo "---> Installing base packages"
-    apt-get install unzip xz-utils puppet git git-review libxml-xpath-perl make wget > /dev/null
+    apt-get install unzip xz-utils puppet git git-review libxml-xpath-perl make wget
 
     # install Java 7
     echo "---> Configuring OpenJDK"
-    apt-get install openjdk-7-jdk > /dev/null
+    FACTER_OSVER=$(/usr/bin/facter operatingsystemrelease)
+    case "$FACTER_OSVER" in
+        14.04)
+            apt-get install openjdk-7-jdk
+            # make jdk8 available
+            add-apt-repository -y ppa:openjdk-r/ppa
+            apt-get update
+            # We need to force openjdk-8-jdk to install
+            apt-get install openjdk-8-jdk
+            # make sure that we still default to openjdk 7
+            update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+            update-alternatives --set javac /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+        ;;
+        16.04)
+            apt-get install openjdk-8-jdk
+        ;;
+        *)
+            echo "---> Unknown Ubuntu version $FACTER_OSVER"
+            exit 1
+        ;;
+    esac
 
-    # make jdk8 available
-    add-apt-repository -y ppa:openjdk-r/ppa > /dev/null
-    apt-get update > /dev/null
-    # We need to force openjdk-8-jdk to install
-    apt-get install openjdk-8-jdk > /dev/null
 
-    # make sure that we still default to openjdk 7
-    update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
-    update-alternatives --set javac /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
 
     # Needed to parse OpenStack commands used by infra stack commands
     # to initialize Heat template based systems.
-    apt-get install jq > /dev/null
+    apt-get install jq
 
     # disable unattended upgrades & daily updates
     echo '---> Disabling automatic daily upgrades'
