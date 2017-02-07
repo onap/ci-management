@@ -175,7 +175,7 @@
 
       - maven-target:
           maven-version: 'mvn33'
-          goals: 'clean deploy'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
