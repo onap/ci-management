@@ -2,11 +2,14 @@
 
 # vim: ts=4 sw=4 sts=4 et tw=72 :
 
+# force any errors to cause the script and job to end in failure
+set -xeu -o pipefile
+
 rh_systems() {
     # Assumes that python is already installed by basebuild
 
     # Install dependencies for robotframework and robotframework-sshlibrary
-    yum install -y -q yum-utils unzip sshuttle nc libffi-devel openssl-devel
+    yum install -y yum-utils unzip sshuttle nc libffi-devel openssl-devel
 
     # Install docker
     yum install -y docker supervisor bridge-utils
