@@ -1,6 +1,8 @@
 ---
 # Global macros
 
+# vim: sw=2 ts=2 sts=2 et :
+
 # BUILDERS
 - builder:
     name: ci-management-check-unicode
@@ -160,7 +162,7 @@
           url: '$GIT_BASE'
           refspec: ''
           branches:
-            - 'origin/${branch}'
+            - 'origin/{branch}'
           skip-tag: true
           wipe-workspace: true
           timeout: 30
@@ -204,6 +206,21 @@
           skip-tag: true
           timeout: 30
           wipe-workspace: true
+
+- scm:
+    name: git-extra-project
+    scm:
+      - git:
+          credentials-id: 'ecomp-jenkins-ssh'
+          url: '$GIT_NO_PROJECT/{project}'
+          refspec: '{refspec}'
+          branches:
+            - 'origin/{branch}'
+          skip-tag: true
+          timeoute: 30
+          wipe-workspace: false
+          basedir: '{checkout-dir}'
+
 
 # TRIGGERS
 
