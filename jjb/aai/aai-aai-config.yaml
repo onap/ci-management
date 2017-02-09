@@ -1,0 +1,15 @@
+---
+- project:
+    name: aai-aai-config
+    project-name: 'aai-aai-config'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'aai/aai-config'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-aai-config-settings'
+    files: '**'
+    archive-artifacts: ''

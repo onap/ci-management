@@ -1,0 +1,15 @@
+---
+- project:
+    name: aai-logging-service
+    project-name: 'aai-logging-service'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'aai/logging-service'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-logging-service-settings'
+    files: '**'
+    archive-artifacts: ''
