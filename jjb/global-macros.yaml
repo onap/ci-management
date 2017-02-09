@@ -20,6 +20,38 @@
             - file-id: '{settings-file}'
               variable: 'SETTINGS_FILE'
 
+- builder:
+    name: maven-docker-push-release
+    builders:
+      - maven-target:
+          maven-version: 'mvn33'
+          pom: '{pom}'
+          goals: 'clean deploy -P {profile-name} -B'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+          properties:
+            - maven.test.skip=true
+            - docker.pull.registry=nexus3.openecomp.org:10001
+            - docker.push.registry=nexus3.openecomp.org:10002
+
+- builder:
+    name: maven-docker-push-daily
+    builders:
+      - maven-target:
+          maven-version: 'mvn33'
+          pom: '{pom}'
+          goals: 'clean deploy -P {profile-name} -B'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+          properties:
+            - maven.test.skip=true
+            - docker.pull.registry=nexus3.openecomp.org:10001
+            - docker.push.registry=nexus3.openecomp.org:10003
+
 # PARAMETERS
 - parameter:
     name: ecomp-infra-parameters
@@ -220,7 +252,6 @@
           timeoute: 30
           wipe-workspace: false
           basedir: '{checkout-dir}'
-
 
 # TRIGGERS
 
