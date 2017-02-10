@@ -1,4 +1,5 @@
 ---
+
 - project:
     name: mso
     project-name: 'mso'
@@ -6,6 +7,12 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+          extra-project: '/mso/chef-repo'
+          extra-branch: 'master'
+          extra-checkout-dir: './packages/docker/src/main/docker/docker-files/chef-repo'
+          docker-pom: './packages/docker/src/main/docker/docker-files/chef-repo/pom.xml'
+          profile-name: 'docker'
 
     project: 'mso'
     stream:
