@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: demo
+    project-name: 'demo'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'demo'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'demo-settings'
+    files: '**'
+    archive-artifacts: ''
