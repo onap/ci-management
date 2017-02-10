@@ -48,6 +48,9 @@
           files: '{pattern}'
 
     builders:
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
       - shell: |
           virtualenv $WORKSPACE/venv-tox
           source $WORKSPACE/venv-tox/bin/activate
