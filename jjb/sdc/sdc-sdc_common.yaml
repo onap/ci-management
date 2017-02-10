@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: sdc-sdc_common
+    project-name: 'sdc-sdc_common'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'sdc/sdc_common'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-sdc_common-settings'
+    files: '**'
+    archive-artifacts: ''
