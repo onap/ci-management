@@ -2,10 +2,14 @@
 - project:
     name: ecompsdkos
     project-name: 'ecompsdkos'
+    subproject:
+      - 'ecomp-sdk':
+          pom: 'ecomp-sdk/pom.xml'
+          pattern: 'ecomp-sdk/**'
+
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
 
     project: 'ecompsdkos'
     stream:
