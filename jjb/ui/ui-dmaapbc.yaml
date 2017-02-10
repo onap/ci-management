@@ -2,9 +2,20 @@
 - project:
     name: ui-dmaapbc
     project-name: 'ui-dmaapbc'
+    subproject:
+      - 'dcae_dmaapbc_client':
+          pom: 'dcae_dmaapbc_client/pom.xml'
+          pattern: 'dcae_dmaapbc_client/**'
+      - 'dcae_dmaapbc_model':
+          pom: 'dcae_dmaapbc_model/pom.xml'
+          pattern: 'dcae_dmaapbc_model/**'
+      - 'dcae_dmaapbc_webapp':
+          pom: 'dcae_dmaapbc_webapp/pom.xml'
+          pattern: 'dcae_dmaapbc_webapp/**'
+
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
 
     project: 'ui/dmaapbc'
     stream:
