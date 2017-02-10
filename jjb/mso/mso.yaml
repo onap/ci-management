@@ -8,9 +8,13 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
-          extra-project: '/mso/chef-repo'
+          extra-project: 'mso/chef-repo'
           extra-branch: 'master'
-          extra-checkout-dir: './packages/docker/src/main/docker/docker-files/chef-repo'
+          extra-checkout-dir: './packages/docker/src/main/docker/docker-files/chef-config/chef-repos'
+          extra-project-2: 'mso/mso-config'
+          extra-branch-2: 'master'
+          extra-checkout-dir-2: './packages/docker/src/main/docker/docker-files/chef-config/mso-config'
+
           docker-pom: './packages/docker/src/main/docker/docker-files/chef-repo/pom.xml'
           profile-name: 'docker'
 

@@ -330,6 +330,12 @@
           branch: '{extra-branch}'
           checkout-dir: '{extra-checkout-dir}'
 
+      - git-extra-project:
+          refspec: 'refs/heads/{extra-branch-2}'
+          project: '{extra-project-2}'
+          branch: '{extra-branch-2}'
+          checkout-dir: '{extra-checkout-dir-2}'
+
     wrappers:
       - ecomp-infra-wrappers:
           build-timeout: '{build-timeout}'
