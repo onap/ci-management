@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: appc
+    project-name: 'appc'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'appc'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'appc-settings'
+    files: '**'
+    archive-artifacts: ''

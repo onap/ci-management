@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: appc-deployment
+    project-name: 'appc-deployment'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'appc/deployment'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'appc-deployment-settings'
+    files: '**'
+    archive-artifacts: ''
