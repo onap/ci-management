@@ -15,7 +15,7 @@
           extra-branch-2: 'master'
           extra-checkout-dir-2: './packages/docker/src/main/docker/docker-files/chef-config/mso-config'
 
-          docker-pom: './packages/docker/src/main/docker/docker-files/chef-repo/pom.xml'
+          docker-pom: './packages/docker/pom.xml'
           profile-name: 'docker'
 
     project: 'mso'
