@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: dcae-inventory
+    project-name: 'dcae-inventory'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+
+    project: 'dcae/dcae-inventory'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcae-dcae-inventory-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
