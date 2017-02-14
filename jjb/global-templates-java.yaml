@@ -324,18 +324,6 @@
           refspec: ''
           choosing-strategy: 'default'
 
-      - git-extra-project:
-          refspec: 'refs/heads/{extra-branch}'
-          project: '{extra-project}'
-          branch: '{extra-branch}'
-          checkout-dir: '{extra-checkout-dir}'
-
-      - git-extra-project:
-          refspec: 'refs/heads/{extra-branch-2}'
-          project: '{extra-project-2}'
-          branch: '{extra-branch-2}'
-          checkout-dir: '{extra-checkout-dir-2}'
-
     wrappers:
       - ecomp-infra-wrappers:
           build-timeout: '{build-timeout}'
@@ -348,6 +336,7 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
+
       - maven-docker-push-daily:
           profile-name: '{profile-name}'
           mvn-settings: '{mvn-settings}'
