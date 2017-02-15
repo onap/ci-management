@@ -1,0 +1,16 @@
+---
+- project:
+    name: policy-drools-pdp
+    project-name: 'policy-drools-pdp'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+
+    project: 'policy/drools-pdp'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-drools-pdp-settings'
+    files: '**'
+    archive-artifacts: ''
