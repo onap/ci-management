@@ -22,8 +22,8 @@
       - docker
 
     exclude:
-      # only build the docker image on centos at present
-      - platforms: ubuntu-16.04
+      # only build the docker image on ubuntu at present
+      - platforms: centos
         templates: docker
 
 - job-template:
