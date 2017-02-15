@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DOCKER_REPOSITORIES=nexus3.openecomp.org:10001 \
+DOCKER_REPOSITORIES="nexus3.openecomp.org:10001 \
                    nexus3.openecomp.org:10002 \
-                   nexus3.openecomp.org:10003
+                   nexus3.openecomp.org:10003"
 
 for DOCKER_REPOSITORY in $DOCKER_REPOSITORIES;
 do
