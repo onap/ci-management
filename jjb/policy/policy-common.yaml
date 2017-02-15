@@ -1,0 +1,16 @@
+---
+- project:
+    name: policy-common
+    project-name: 'policy-common'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+
+    project: 'policy/common'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-common-settings'
+    files: '**'
+    archive-artifacts: ''

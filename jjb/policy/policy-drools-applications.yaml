@@ -1,0 +1,16 @@
+---
+- project:
+    name: policy-drools-applications
+    project-name: 'policy-drools-applications'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+
+    project: 'policy/drools-applications'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-drools-applications-settings'
+    files: '**'
+    archive-artifacts: ''
