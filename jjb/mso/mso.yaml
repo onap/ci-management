@@ -9,7 +9,6 @@
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: './packages/docker/pom.xml'
-          profile-name: 'docker'
 
     project: 'mso'
     stream:

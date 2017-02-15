@@ -338,6 +338,5 @@
           settings-file: '{mvn-settings}'
 
       - maven-docker-push-daily:
-          profile-name: '{profile-name}'
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
