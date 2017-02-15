@@ -115,6 +115,31 @@ Dpkg::Options {
 
 EOF
 
+    # Wrap apt-get to wait for the lock to become available for operation
+    # http://askubuntu.com/questions/132059/how-to-make-a-package-manager-wait-if-another-instance-of-apt-is-running
+    cat << 'EOF' >> /usr/local/bin/apt-get
+#!/bin/bash
+
+i=0
+tput sc
+while fuser /var/lib/dpkg/lock >/dev/null 2>&1 ; do
+    case $(($i % 4)) in
+        0 ) j="-" ;;
+        1 ) j="\\" ;;
+        2 ) j="|" ;;
+        3 ) j="/" ;;
+    esac
+    tput rc
+    echo -en "\r[$j] Waiting for other software managers to finish..."
+    sleep 0.5
+    ((i=i+1))
+done
+
+/usr/bin/apt-get "$@"
+
+EOF
+    chmod +x /usr/local/bin/apt-get
+
     echo "---> Updating operating system"
     apt-get update
     apt-get upgrade
@@ -137,9 +162,23 @@ EOF
             # make sure that we still default to openjdk 7
             update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
             update-alternatives --set javac /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+
+            # disable auto-update service?
+            if [ -f /etc/cron.daily/apt ]
+            then
+                rm -rf /etc/cron.daily/apt
+            fi
         ;;
         16.04)
             apt-get install openjdk-8-jdk
+
+            # force auto-update services off and mask them so they can't
+            # be started
+            for i in apt-daily.{service,timer}
+            do
+                systemctl disable ${i}
+                systemctl mask ${i}
+            done
         ;;
         *)
             echo "---> Unknown Ubuntu version $FACTER_OSVER"
@@ -155,8 +194,8 @@ EOF
 
     # disable unattended upgrades & daily updates
     echo '---> Disabling automatic daily upgrades'
-    sed -ine 's/"1"/"0"/g' /etc/apt/apt.conf.d/10periodic
-    echo 'APT::Periodic::Unattended-Upgrade "0";' >> /etc/apt/apt.conf.d/10periodic
+    grep -lR 'APT::Periodic' /etc/apt/apt.conf.d/ | perl -pi -e 's/"1"/"0"/g'
+
 }
 
 all_systems() {
