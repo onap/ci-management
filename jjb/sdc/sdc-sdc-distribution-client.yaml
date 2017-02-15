@@ -1,8 +1,8 @@
 ---
 
 - project:
-    name: sdc-distribution-client
-    project-name: 'sdc-distribution-client'
+    name: sdc-sdc-distribution-client
+    project-name: 'sdc-sdc-distribution-client'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -11,6 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'sdc-distribution-client-settings'
+    mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
