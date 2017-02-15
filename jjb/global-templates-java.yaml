@@ -307,6 +307,7 @@
 - job-template:
     name: '{project-name}-{stream}-docker-java-daily'
     project-type: freestyle
+    node: 'centos7-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
