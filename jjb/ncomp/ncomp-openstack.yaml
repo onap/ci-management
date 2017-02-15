@@ -1,0 +1,21 @@
+---
+- project:
+    name: ncomp-openstack
+    project-name: 'ncomp-openstack'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+
+    project: 'ncomp/openstack'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'ncomp-settings'
+    # due to a strange macro / variable translation problem this needs to be
+    # passed as a string block to properly get the properties correctly defined
+    # in the job
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
