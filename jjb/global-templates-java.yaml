@@ -339,8 +339,6 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
 
-      - docker-login
-
       - maven-docker-push-daily:
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
