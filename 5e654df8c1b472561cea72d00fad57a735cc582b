@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_db221301",
+        "filename": "jjb/dcae/include-raw-apod-cdap.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T22:17:17Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 54,
+        "startChar": 48,
+        "endLine": 54,
+        "endChar": 49
+      },
+      "revId": "5e654df8c1b472561cea72d00fad57a735cc582b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_bb1f47b7",
+        "filename": "jjb/dcae/include-raw-apod-cdap.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T22:17:17Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 55,
+        "startChar": 73,
+        "endLine": 55,
+        "endChar": 75
+      },
+      "revId": "5e654df8c1b472561cea72d00fad57a735cc582b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_9b1c8bc3",
+        "filename": "jjb/dcae/include-raw-apod-cdap.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T22:17:17Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 56,
+        "startChar": 54,
+        "endLine": 56,
+        "endChar": 55
+      },
+      "revId": "5e654df8c1b472561cea72d00fad57a735cc582b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_5b7e03e6",
+        "filename": "jjb/dcae/include-raw-apod-cdap.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T22:17:17Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 57,
+        "startChar": 75,
+        "endLine": 57,
+        "endChar": 76
+      },
+      "revId": "5e654df8c1b472561cea72d00fad57a735cc582b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_3b8337ce",
+        "filename": "jjb/dcae/include-raw-apod-cdap.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T22:17:17Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 58,
+        "startChar": 36,
+        "endLine": 58,
+        "endChar": 38
+      },
+      "revId": "5e654df8c1b472561cea72d00fad57a735cc582b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
