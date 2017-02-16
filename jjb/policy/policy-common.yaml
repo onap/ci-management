@@ -12,5 +12,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-common-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
     files: '**'
     archive-artifacts: ''
