@@ -15,7 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dcae-settings'
+    mvn-settings: 'dcae-operation-utils-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
     # in the job
