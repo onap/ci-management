@@ -6,6 +6,8 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-docker-java-daily'
 
     project: 'appc/deployment'
     stream:
@@ -14,3 +16,5 @@
     mvn-settings: 'appc-deployment-settings'
     files: '**'
     archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
