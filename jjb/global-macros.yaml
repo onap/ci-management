@@ -311,6 +311,24 @@
                 - compare-type: 'ANT'
                   pattern: '{files}'
 
+- trigger:
+    name: gerrit-trigger-release-manually
+    triggers:
+      - gerrit:
+          server-name: '{server}'
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: 'please release'
+          projects:
+            - project-compare-type: 'ANT'
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: 'ANT'
+                  pattern: '**'
+
 # WRAPPERS
 - wrapper:
     name: build-timeout

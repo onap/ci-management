@@ -216,6 +216,10 @@
     triggers:
       # 11 AM UTC
       - timed: 'H 11 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
 
     builders:
       - provide-maven-settings:
@@ -283,6 +287,10 @@
     triggers:
       # 11 AM UTC
       - timed: 'H 11 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
 
     builders:
       - provide-maven-settings:
@@ -446,8 +454,12 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      # 11 AM UTC
+      # 12 AM UTC
       - timed: 'H 12 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
 
     builders:
 
