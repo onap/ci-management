@@ -26,7 +26,7 @@
       - maven-target:
           maven-version: 'mvn33'
           pom: '{pom}'
-          goals: 'clean deploy -B'
+          goals: 'clean deploy -B -P ${mvn-profile}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -42,7 +42,7 @@
       - maven-target:
           maven-version: 'mvn33'
           pom: '{pom}'
-          goals: 'clean deploy -B'
+          goals: 'clean deploy -B -P ${mvn-profile}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'

@@ -412,3 +412,5 @@
       - maven-docker-push-daily:
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
+          # use default as mvn-profile if profile is not needed
+          mvn-profile: '{mvn-profile}'
