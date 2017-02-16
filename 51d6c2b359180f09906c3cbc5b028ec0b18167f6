@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_bb80678c",
+        "filename": "jjb/demo/include_raw_scripts.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T23:12:16Z",
+      "side": 1,
+      "message": "File name does not match yaml and is underscores, we generally go for dashes.\n\nIt\u0027s not also particularly distinctive file name",
+      "revId": "51d6c2b359180f09906c3cbc5b028ec0b18167f6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_7b4adf84",
+        "filename": "jjb/demo/include_raw_scripts.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-16T23:12:16Z",
+      "side": 1,
+      "message": "This should be a chmod +x on the deploy script and then call the deploy script directly. Using the bash call the way you are is going to cause some amount of the environment variables to get dropped",
+      "revId": "51d6c2b359180f09906c3cbc5b028ec0b18167f6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
