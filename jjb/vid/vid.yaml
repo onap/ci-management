@@ -5,6 +5,10 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+         docker-pom: 'deliveries/pom.xml'
+         mvn-profile: 'default'
 
     project: 'vid'
     stream:
