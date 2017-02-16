@@ -21,11 +21,11 @@ echo $NEXUS_RAW
 export REPACKAGEDEBIANUPLOAD="set -x; curl -k \
     --netrc-file '${NETRC}' \
     --upload-file '{0}' \
-        '${NEXUS_RAW}/org.openecomp.dcae/deb-snapshots/{2}/{1}'"
+        '${NEXUS_RAW}/org.openecomp.dcae.pgaas/deb-snapshots/{2}/{1}'"
 export REPACKAGEDEBIANUPLOAD2="set -x; curl -k \
     --netrc-file '${NETRC}' \
     --upload-file '{0}' \
-        '${NEXUS_RAW}/org.openecomp.dcae/deb-snapshots/{2}/{4}-LATEST.deb'"
+        '${NEXUS_RAW}/org.openecomp.dcae.pgaas/deb-snapshots/{2}/{4}-LATEST.deb'"
 make debian
 echo "================= ENDING SCRIPT TO CREATE DEBIAN FILES ================="
 
