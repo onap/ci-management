@@ -75,7 +75,7 @@
     #                     $WORKSPACE as it will destroy the initial
     #                     project checkout
 
-    name: '{project-name}-{stream}-multi-scm-verify-script'
+    name: '{project-name}-{stream}-two-scm-verify-script'
 
     project-type: freestyle
     concurrent: true

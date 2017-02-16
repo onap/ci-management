@@ -4,7 +4,7 @@
     name: dcae-pgaas
     project-name: 'dcae-pgaas'
     jobs:
-      - '{project-name}-{stream}-multi-scm-verify-script'
+      - '{project-name}-{stream}-two-scm-verify-script'
 
 
     #   script:         build script to execute
