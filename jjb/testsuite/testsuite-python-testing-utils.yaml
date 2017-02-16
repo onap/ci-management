@@ -1,0 +1,18 @@
+---
+- project:
+    name: testsuite-python-testing-utils
+    project-name: 'testsuite-python-testing-utils'
+    subproject:
+      - python-testing-utils:
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+
+    project: 'testsuite/python-testing-utils'
+
+    stream:
+      - 'master':
+          branch: 'master'
+
+    mvn-settings: 'testsuite-python-testing-utils-settings'
