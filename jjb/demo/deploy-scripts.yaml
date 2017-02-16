@@ -1,0 +1,19 @@
+---
+
+- project:
+    name: demo-scripts
+    project-name: 'demo-scripts'
+    jobs:
+      - '{project-name}-{stream}-verify-script'
+
+    #   branch:      git branch
+    #   script:      build script to execute
+
+    project: 'demo/scripts'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'demo-settings'
+    files: '**'
+    archive-artifacts: ''
+    script: 'deploy-init-scripts.sh'
