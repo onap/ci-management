@@ -18,7 +18,7 @@ echo $OPENECOMP_NEXUS_USER
 echo $OPENECOMP_NEXUS_PASSWORD
 
 export REPACKAGEDEBIANUPLOAD="set -x; curl -k \
-    --user ${OPENECOMP_NEXUS_USER}:${OPENECOMP_NEXUS_PASSWORD}' \
+    --user '${OPENECOMP_NEXUS_USER}:${OPENECOMP_NEXUS_PASSWORD}' \
     --upload-file '{0}' \
         '${OPENECOMP_NEXUS_RAW}/org.openecomp.dcae/deb-snapshots/{2}/{1}'"
 export REPACKAGEDEBIANUPLOAD2="set -x; curl -k \
