@@ -52,6 +52,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - shell: |
+          #!/bin/bash
           virtualenv $WORKSPACE/venv-tox
           source $WORKSPACE/venv-tox/bin/activate
           pip install --upgrade pip
