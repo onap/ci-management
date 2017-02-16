@@ -5,6 +5,7 @@ include_path=.:scripts:~/git/
 recursive=True
 
 [jenkins]
+query_plugins_info=False
 #user=jenkins
 #password=1234567890abcdef1234567890abcdef
 url=http://localhost:8080
