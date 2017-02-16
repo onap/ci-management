@@ -1,0 +1,26 @@
+---
+
+- project:
+    name: portal-docker
+    project-name: 'portal-docker'
+    jobs:
+      - '{project-name}-{stream}-three-scm-verify-script'
+
+    project: 'portal'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'portal-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+    extra-project1: 'ecompsdkos'
+    extra-branch1: 'master'
+    extra-refspec1: 'refs/heads/{branch}'
+    checkout-dir1: 'ecompsdkos'
+    extra-project2: 'ui/dmaapbc'
+    extra-branch2: 'master'
+    extra-refspec2: 'refs/heads/{branch}'
+    checkout-dir2: 'dmaapbc'
+    script:
+        !include-raw-escape: 'docker-build-deploy.sh'
