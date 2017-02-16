@@ -1,11 +1,18 @@
 ---
-
 - project:
     name: demo
     project-name: 'demo'
+    subproject:
+      - 'dns_client':
+          pom: 'vnfs/vLB/DNSClient/pom.xml'
+          pattern: 'vnfs/vLB/DNSClient/**'
+      - 'dns_manager':
+          pom: 'vnfs/vLB/DNSManager/pom.xml'
+          pattern: 'vnfs/vLB/DNSManager/**'
+
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
 
     project: 'demo'
     stream:
