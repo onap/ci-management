@@ -1,0 +1,33 @@
+---
+
+- project:
+    name: dcae-apod-tca-hi-lo
+    project-name: 'dcae-apod-cdap'
+    jobs:
+      - '{project-name}-{stream}-merge-2scm-mvn-script'
+
+
+    #   script:         build script to execute
+    #   extra-project:  extra gerrit project to checkout
+    #   extra-refspec:  refspec for the extra project
+    #   extra-branch:   branch to checkout for the extra project
+    #   checkout-dir:   directory to checkout the extra project to
+    #                     DO NOT SET THIS TO anything that translates to
+    #                     $WORKSPACE as it will destroy the initial
+    #                     project checkout
+
+    project: 'dcae/apod/analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcae-apod-cdap-settings'
+    mvn-goals: 'clean deploy"
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+    extra-project: 'dcae/apod/buildtools'
+    extra-branch: 'master'
+    extra-refspec: 'refs/heads/{branch}'
+    checkout-dir: 'dcae-apod-buildtools'
+    script:
+        !include-raw-escape: 'include-raw-apod-tca.sh'
