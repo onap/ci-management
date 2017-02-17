@@ -1,0 +1,19 @@
+---
+- project:
+    name: policy-docker
+    project-name: 'policy-docker-policy'
+    jobs:
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'prepare-package'
+          script:
+            !include-raw-escape: 'include-raw-docker.sh'
+
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-docker-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
