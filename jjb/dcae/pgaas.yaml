@@ -4,8 +4,9 @@
     name: dcae-pgaas
     project-name: 'dcae-pgaas'
     jobs:
-      - '{project-name}-{stream}-two-scm-verify-script'
-
+      # - '{project-name}-{stream}-two-scm-verify-script'
+      - '{project-name}-{stream}-verify-2scm-mvn-script'
+      - '{project-name}-{stream}-merge-2scm-mvn-script'
 
     #   script:         build script to execute
     #   extra-project:  extra gerrit project to checkout
@@ -28,5 +29,6 @@
     extra-branch: 'master'
     extra-refspec: 'refs/heads/{branch}'
     checkout-dir: 'buildtools'
+    mvn-goals: '--version'
     script:
         !include-raw-escape: 'include-raw-pgaas.sh'
