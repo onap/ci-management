@@ -3,19 +3,7 @@
 - project:
     name: dcae-pgaas
     project-name: 'dcae-pgaas'
-    jobs:
-      - '{project-name}-{stream}-two-scm-verify-script'
-
-
-    #   script:         build script to execute
-    #   extra-project:  extra gerrit project to checkout
-    #   extra-refspec:  refspec for the extra project
-    #   extra-branch:   branch to checkout for the extra project
-    #   checkout-dir:   directory to checkout the extra project to
-    #                     DO NOT SET THIS TO anything that translates to
-    #                     $WORKSPACE as it will destroy the initial
-    #                     project checkout
-
+    stream: 'master'
     project: 'dcae/pgaas'
     stream:
       - 'master':
@@ -24,9 +12,20 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
-    extra-project: 'dcae/utils/buildtools'
-    extra-branch: 'master'
-    extra-refspec: 'refs/heads/{branch}'
-    checkout-dir: 'buildtools'
+    mvn-goals: '--version'
+    mvn-goals-versioning: '--version'
     script:
         !include-raw-escape: 'include-raw-pgaas.sh'
+    jobs:
+      - '{project-name}-{stream}-daily-release-scm-mvn-script':
+          maven-deploy-properties: |
+              deployAtEnd=true
+          script:
+              !include-raw-escape: 'script-pgaas-daily-release.sh'
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+          script:
+              !include-raw-escape: 'script-pgaas-merge.sh'
+      - '{project-name}-{stream}-verify-scm-mvn-script':
+          script:
+              !include-raw-escape: 'script-pgaas-verify.sh'
+
