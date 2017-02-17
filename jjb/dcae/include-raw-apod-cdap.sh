@@ -1,7 +1,7 @@
 #!/bin/bash
 # Create a debian package and push to remote repo
 #
-
+set -x
 echo '===================== STARTING SCRIPT TO CREATE DEBIAN FILE ======================='
 # Extract the username, password and path to the nexus repo from the maven settings file
 USER=$(xpath -q -e "//servers/server[id='ecomp-raw']/username/text()" "$SETTINGS_FILE")
@@ -31,11 +31,10 @@ PACKAGE_GROUP_ID=$( \
     cat ${WORKSPACE}/dcae-apod-buildtools/configs/package-cdap3vm.json | \
     python -c 'import json,sys;print json.load(sys.stdin)["groupId"]')
 OUTPUT_FILE="${PACKAGE_NAME_APPLICATION}_${PACKAGE_NAME_VERSION}.deb"
-OUTPUT_FILE_DATE_STAMPED= \
-    "${PACKAGE_NAME_APPLICATION}_${PACKAGE_NAME_VERSION}-${DATE_STAMP}.deb"
+OUTPUT_FILE_DATE_STAMPED="${PACKAGE_NAME_APPLICATION}_${PACKAGE_NAME_VERSION}-${DATE_STAMP}.deb"
 
 echo 'Package variables:'
-echo "    STAGE_DIR = ${STATE_DIR}"
+echo "    STAGE_DIR = ${STAGE_DIR}"
 echo "    OUTPUT_DIR = ${OUTPUT_DIR}"
 echo "    PACKAGE_BUILD_NUMBER = ${PACKAGE_BUILD_NUMBER}"
 echo "    PACKAGE_NAME_APPLICATION = ${PACKAGE_NAME_APPLICATION}"
@@ -63,10 +62,6 @@ echo "Creating debian package"
 ${WORKSPACE}/dcae-apod-buildtools/scripts/package -b debian -d ${STAGE_DIR} \
     -o ${OUTPUT_DIR} -y package.json -B ${PACKAGE_BUILD_NUMBER} -v
 
-
-echo "Contents of output directory"
-ls -lR ${OUTPUT_DIR}
-
 # The controller needs the debian packaged named
 # dcae-cdap-small-hadoop_17.01.0-LATEST.deb so it can find and deploy it.
 # In order to have a copy of each file built a copy of
@@ -77,13 +72,14 @@ ls -lR ${OUTPUT_DIR}
 
 cp ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${OUTPUT_DIR}/${OUTPUT_FILE}
 
-SEND_TO= \
-"${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE}"
+echo "Contents of output directory"
+ls -lR ${OUTPUT_DIR}
+
+SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE}"
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE} ${SEND_TO}
 
-SEND_TO= \
-"${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE_DATE_STAMPED}"
+SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE_DATE_STAMPED}"
 
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
