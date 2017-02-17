@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_dec68149",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 586,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 586,
+        "startChar": 0,
+        "endLine": 586,
+        "endChar": 9
+      },
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_bec3b537",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 588,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_fed01df9",
+        "filename": "jjb/policy/docker_build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "Please name scripts that are going to be included as raw scripts as include-raw-\u003csomething\u003e. Additionally, our stylistic convention is to use dashes and not underscores",
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_7edd2d14",
+        "filename": "jjb/policy/docker_build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "This should be single quoted as you have nothing to interpolate",
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_1eece9c6",
+        "filename": "jjb/policy/docker_build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "Convert tab to 4 space expanded tab",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 1
+      },
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_decd615f",
+        "filename": "jjb/policy/policy-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:29:03Z",
+      "side": 1,
+      "message": "Please name scripts that are going to be included as raw scripts as include-raw-\u003csomething\u003e. Additionally, our stylistic convention is to use dashes and not underscores",
+      "range": {
+        "startLine": 10,
+        "startChar": 34,
+        "endLine": 10,
+        "endChar": 49
+      },
+      "revId": "ca25ec83b8e408b25283381a17720cf69087dfb5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
