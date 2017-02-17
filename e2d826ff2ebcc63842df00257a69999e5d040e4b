@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_de50c160",
+        "filename": "jjb/aai/aai-model-loader.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:55:01Z",
+      "side": 1,
+      "message": "unneeded tab and quote",
+      "range": {
+        "startLine": 19,
+        "startChar": 42,
+        "endLine": 19,
+        "endChar": 44
+      },
+      "revId": "e2d826ff2ebcc63842df00257a69999e5d040e4b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
