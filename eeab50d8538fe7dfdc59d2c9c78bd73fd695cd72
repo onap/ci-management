@@ -1,0 +1,216 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_5ebb91c4",
+        "filename": "jjb/dcae/collectors-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Proper yaml requires a space after the comment character",
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_7eb64dde",
+        "filename": "jjb/dcae/collectors-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Given how the job template is written this is going to cause jobs to get created for all of these stages that will trigger at the same time. Given your stage names I\u0027m pretty certain that is not what you want.",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 16
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_beacd58d",
+        "filename": "jjb/dcae/dmaap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Proper yaml requires a space after the comment character",
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_9ea9197e",
+        "filename": "jjb/dcae/dmaap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Given how the job template is written this is going to cause jobs to get created for all of these stages that will trigger at the same time. Given your stage names I\u0027m pretty certain that is not what you want.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 16
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_fea25d99",
+        "filename": "jjb/dcae/include-raw-dmaap.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 8,
+        "startChar": 78,
+        "endLine": 8,
+        "endChar": 79
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_de9fa14f",
+        "filename": "jjb/dcae/include-raw-dmaap.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 13,
+        "startChar": 22,
+        "endLine": 13,
+        "endChar": 23
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_9e723948",
+        "filename": "jjb/dcae/include-raw-pgaas.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Backticks are a deprecated method, use $( )",
+      "range": {
+        "startLine": 22,
+        "startChar": 19,
+        "endLine": 22,
+        "endChar": 58
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_de78c12d",
+        "filename": "jjb/dcae/pgaas.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "proper yaml requires a space after the comment character",
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_be75f533",
+        "filename": "jjb/dcae/pgaas.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "The way you currently have this setup you\u0027re going to create 3 jobs that will _all_ fire on changes. Given the names of your stages I\u0027m pretty certain that is not what you want",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 17
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_1e874911",
+        "filename": "jjb/global-templates-script.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T14:24:29Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 6,
+        "startChar": 56,
+        "endLine": 6,
+        "endChar": 57
+      },
+      "revId": "eeab50d8538fe7dfdc59d2c9c78bd73fd695cd72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
