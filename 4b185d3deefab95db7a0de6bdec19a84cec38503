@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_215c2a25",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-17T16:12:48Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 4
+      },
+      "revId": "4b185d3deefab95db7a0de6bdec19a84cec38503",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
