@@ -2,10 +2,14 @@
 - project:
     name: dcae-controller-analytics
     project-name: 'dcae-controller-analytics'
+    subproject:
+      - 'utils':
+          pom: 'dcae-analytics-cdap-common-model/pom.xml'
+          pattern: 'dcae-analytics-cdap-common-model/**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
 
     project: 'dcae/controller/analytics'
     stream:
