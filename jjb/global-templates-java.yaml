@@ -47,7 +47,7 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: 'mvn33'
-          goals: 'clean install'
+          goals: 'clean install -DskipTests=true'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
