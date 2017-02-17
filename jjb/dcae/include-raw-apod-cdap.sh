@@ -34,7 +34,17 @@ OUTPUT_FILE="${PACKAGE_NAME_APPLICATION}_${PACKAGE_NAME_VERSION}.deb"
 OUTPUT_FILE_DATE_STAMPED= \
     "${PACKAGE_NAME_APPLICATION}_${PACKAGE_NAME_VERSION}-${DATE_STAMP}.deb"
 
+echo 'Package variables:'
+echo "    STAGE_DIR = ${STATE_DIR}"
+echo "    OUTPUT_DIR = ${OUTPUT_DIR}"
+echo "    PACKAGE_BUILD_NUMBER = ${PACKAGE_BUILD_NUMBER}"
+echo "    PACKAGE_NAME_APPLICATION = ${PACKAGE_NAME_APPLICATION}"
+echo "    PACKAGE_NAME_VERSION = ${PACKAGE_NAME_VERSION}"
+echo "    PACKAGE_GROUP_ID = ${PACKAGE_GROUP_ID}"
+echo "    OUTPUT_FILE = ${OUTPUT_FILE}"
+echo "    OUTPUT_FILE_DATE_STAMPED = ${OUTPUT_FILE_DATE_STAMPED}"
 
+echo 'Creating Staging and Output directories'
 rm -rf ${STAGE_DIR}
 rm -rf ${OUTPUT_DIR}
 mkdir -p ${STAGE_DIR}/stage/opt/app/dcae-cdap-small-hadoop
@@ -46,10 +56,16 @@ cp -R ${WORKSPACE}/cdap3vm/* ${STAGE_DIR}/stage/opt/app/dcae-cdap-small-hadoop
 echo 'Copying json file to stage'
 cp ${WORKSPACE}/dcae-apod-buildtools/configs/package-cdap3vm.json ${STAGE_DIR}/package.json
 
+echo 'Contents of stage directory'
+ls -lR ${STAGE_DIR}
+
 echo "Creating debian package"
 ${WORKSPACE}/dcae-apod-buildtools/scripts/package -b debian -d ${STAGE_DIR} \
     -o ${OUTPUT_DIR} -y package.json -B ${PACKAGE_BUILD_NUMBER} -v
 
+
+echo "Contents of output directory"
+ls -lR ${OUTPUT_DIR}
 
 # The controller needs the debian packaged named
 # dcae-cdap-small-hadoop_17.01.0-LATEST.deb so it can find and deploy it.
@@ -63,10 +79,13 @@ cp ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${OUTPUT_DIR}/${OUTPUT_FILE}
 
 SEND_TO= \
 "${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE}"
+echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE} ${SEND_TO}
 
 SEND_TO= \
 "${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE_DATE_STAMPED}"
+
+echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
 
 echo '===================== ENDING SCRIPT TO CREATE DEBIAN FILE ======================='
