@@ -13,7 +13,7 @@
     mvn-settings: 'portal-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     extra-project1: 'ecompsdkos'
     extra-branch1: 'master'
     extra-refspec1: 'refs/heads/{branch}'
