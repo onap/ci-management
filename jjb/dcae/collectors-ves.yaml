@@ -1,11 +1,12 @@
 ---
 
 - project:
-    name: dcae-pgaas
-    project-name: 'dcae-pgaas'
+    name: dcae-collectors-ves
+    project-name: 'dcae-collectors-ves'
     jobs:
-      #- '{project-name}-{stream}-two-scm-verify-script'
-      - '{project-name}-{stream}-2scm-mvn-script-{stage}'
+      # - '{project-name}-{stream}-two-scm-mvn-script'
+      - '{project-name}-{stream}-scm-mvn-script-{stage}'
+
 
     #   script:         build script to execute
     #   extra-project:  extra gerrit project to checkout
@@ -16,7 +17,7 @@
     #                     $WORKSPACE as it will destroy the initial
     #                     project checkout
 
-    project: 'dcae/pgaas'
+    project: 'dcae/collectors/ves'
     stream:
       - 'master':
           branch: 'master'
@@ -24,14 +25,11 @@
       - 'VERIFY'
       - 'SNAPSHOT'
       - 'RELEASE'
-    mvn-settings: 'dcae-pgaas-settings'
+      # - 'WORLD'
+    mvn-settings: 'dcae-collectors-ves-settings'
+    mvn-goals: 'clean install'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
-    extra-project: 'dcae/utils/buildtools'
-    extra-branch: 'master'
-    extra-refspec: 'refs/heads/{branch}'
-    checkout-dir: 'buildtools'
-    mvn-goals: '--version'
     script:
-        !include-raw-escape: 'include-raw-pgaas.sh'
+        !include-raw-escape: 'include-raw-collectors-ves.sh'
