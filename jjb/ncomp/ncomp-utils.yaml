@@ -4,7 +4,8 @@
     project-name: 'ncomp-utils'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-downstream-merge-java':
+          dependencies: 'ncomp-master-merge-java'
       - '{project-name}-{stream}-release-java-daily'
 
     project: 'ncomp/utils'
