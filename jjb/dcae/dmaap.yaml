@@ -1,0 +1,25 @@
+---
+
+- project:
+    name: dcae-dmaap
+    project-name: 'dcae-dmaap'
+    jobs:
+      #- '{project-name}-{stream}-two-scm-verify-script'
+      - '{project-name}-{stream}-scm-mvn-script-{stage}'
+
+    project: 'dcae/pgaas'
+    stream:
+      - 'master':
+          branch: 'master'
+    stage:
+      - 'VERIFY'
+      - 'SNAPSHOT'
+      - 'RELEASE'
+      #- 'WORLD'
+    mvn-settings: 'dcae-dmaap-settings'
+    mvn-goals: 'clean install'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+    script:
+        !include-raw-escape: 'include-raw-dmaap.sh'
