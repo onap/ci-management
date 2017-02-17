@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
          docker-pom: 'pom.xml'
-         mvn-profile: 'default'
+         mvn-profile: 'docker'
 
     project: 'vid'
     stream:
