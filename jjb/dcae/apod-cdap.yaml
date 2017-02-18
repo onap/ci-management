@@ -3,18 +3,6 @@
 - project:
     name: dcae-apod-cdap
     project-name: 'dcae-apod-cdap'
-    jobs:
-      - '{project-name}-{stream}-two-scm-verify-script'
-
-
-    #   script:         build script to execute
-    #   extra-project:  extra gerrit project to checkout
-    #   extra-refspec:  refspec for the extra project
-    #   extra-branch:   branch to checkout for the extra project
-    #   checkout-dir:   directory to checkout the extra project to
-    #                     DO NOT SET THIS TO anything that translates to
-    #                     $WORKSPACE as it will destroy the initial
-    #                     project checkout
 
     project: 'dcae/apod/cdap'
     stream:
@@ -23,10 +11,22 @@
     mvn-settings: 'dcae-apod-cdap-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
+    mvn-goals: '--version'
+    mvn-goals-versioning: '--version'
     extra-project: 'dcae/apod/buildtools'
     extra-branch: 'master'
     extra-refspec: 'refs/heads/{branch}'
     checkout-dir: 'dcae-apod-buildtools'
-    script:
-        !include-raw-escape: 'include-raw-apod-cdap.sh'
+    jobs:
+      - '{project-name}-{stream}-daily-release-2scm-mvn-script':
+          maven-deploy-properties: |
+              deployAtEnd=true
+          script:
+            !include-raw-escape: 'script-apod-cdap-daily-release.sh'
+      - '{project-name}-{stream}-verify-2scm-mvn-script':
+          script:
+            !include-raw-escape: 'script-apod-cdap-verify.sh'
+      - '{project-name}-{stream}-merge-2scm-mvn-script':
+          script:
+            !include-raw-escape: 'script-apod-cdap-merge.sh'
