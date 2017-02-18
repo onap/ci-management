@@ -5,15 +5,13 @@
     jobs:
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'policy/common'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-common-settings'
-    maven-deploy-properties: |
-      deployAtEnd=true
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g

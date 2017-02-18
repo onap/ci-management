@@ -5,14 +5,12 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'policy/engine'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-engine-settings'
-    maven-deploy-properties: |
-      deployAtEnd=true
     files: '**'
     archive-artifacts: ''
