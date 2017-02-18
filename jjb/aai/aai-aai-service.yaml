@@ -7,7 +7,7 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
-          docker-pom: 'pom.xml'
+          docker-pom: 'ajsc-aai/pom.xml'
           mvn-profile: 'docker'
 
     project: 'aai/aai-service'
