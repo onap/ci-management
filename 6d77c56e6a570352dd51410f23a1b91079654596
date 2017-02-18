@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_64c120e4",
+        "filename": "jjb/dcae/script-apod-analytics-daily-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String needs to be double quoted as it has variables to interpolate",
+      "range": {
+        "startLine": 87,
+        "startChar": 5,
+        "endLine": 87,
+        "endChar": 82
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_04b01c8a",
+        "filename": "jjb/dcae/script-apod-analytics-daily-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String should be single quoted as there are no variables to interpolate",
+      "range": {
+        "startLine": 90,
+        "startChar": 5,
+        "endLine": 90,
+        "endChar": 80
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_c4a91426",
+        "filename": "jjb/dcae/script-apod-analytics-merge.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String needs to be double quoted as it has variables to interpolate",
+      "range": {
+        "startLine": 87,
+        "startChar": 5,
+        "endLine": 87,
+        "endChar": 82
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_84630c1a",
+        "filename": "jjb/dcae/script-apod-analytics-merge.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String should be single quoted as there are no variables to interpolate",
+      "range": {
+        "startLine": 90,
+        "startChar": 5,
+        "endLine": 90,
+        "endChar": 81
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_446d0404",
+        "filename": "jjb/dcae/script-apod-analytics-verify.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String needs to be double quoted as it has variables to interpolate",
+      "range": {
+        "startLine": 87,
+        "startChar": 5,
+        "endLine": 87,
+        "endChar": 82
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_646800f6",
+        "filename": "jjb/dcae/script-apod-analytics-verify.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T22:40:40Z",
+      "side": 1,
+      "message": "String should be single quoted as there are no variables to interpolate",
+      "range": {
+        "startLine": 90,
+        "startChar": 5,
+        "endLine": 90,
+        "endChar": 80
+      },
+      "revId": "6d77c56e6a570352dd51410f23a1b91079654596",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
