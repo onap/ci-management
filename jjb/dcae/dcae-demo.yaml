@@ -1,0 +1,34 @@
+---
+
+- project:
+    name: dcae-demo
+    project-name: 'dcae-demo'
+    stream: 'master'
+    project: 'dcae/demo'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcae-demo-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-8c-8g
+    mvn-goals: '--version'
+    mvn-goals-versioning: '--version'
+    jobs:
+      - '{project-name}-{stream}-daily-release-scm-mvn-script':
+          mvn-goals: 'clean deploy'
+          maven-deploy-properties: |
+              deployAtEnd=true
+          script: |
+              bash dcae-demo-controller/src/main/docker-build/build.sh
+              bash dcae-demo-controller/src/main/docker-build/push.sh nexus3.openecomp.org:10003
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+          mvn-goals: 'clean deploy'
+          script: |
+              bash dcae-demo-controller/src/main/docker-build/build.sh
+              bash dcae-demo-controller/src/main/docker-build/push.sh nexus3.openecomp.org:10003
+      - '{project-name}-{stream}-verify-scm-mvn-script':
+          mvn-goals: 'clean install'
+          script: |
+              bash dcae-demo-controller/src/main/docker-build/build.sh
+
