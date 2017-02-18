@@ -13,7 +13,7 @@
     build-node: ubuntu1604-docker-8c-8g
     mvn-goals: '--version'
     mvn-goals-versioning: '--version'
-    extra-project: 'dcae/buildtools'
+    extra-project: 'dcae/utils/buildtools'
     extra-refspec: 'refs/heads/{branch}'
     extra-branch: 'master'
     checkout-dir: 'buildtools'
