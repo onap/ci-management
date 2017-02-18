@@ -2,8 +2,8 @@
 # Create a debian package and push to remote repo
 #
 set -x
-echo '===================== STARTING SCRIPT TO CREATE DEBIAN FILE ======================='
-# Extract the username, password and path to the nexus repo from the maven settings file
+echo '================= STARTING SCRIPT TO CREATE DEBIAN FILE ================='
+# Extract the username and password to the nexus repo from the settings file
 USER=$(xpath -q -e "//servers/server[id='ecomp-raw']/username/text()" "$SETTINGS_FILE")
 PASS=$(xpath -q -e "//servers/server[id='ecomp-raw']/password/text()" "$SETTINGS_FILE")
 OPENECOMP_NEXUS_REPO="${NEXUSPROXY}/content/sites/raw"
@@ -75,13 +75,13 @@ cp ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${OUTPUT_DIR}/${OUTPUT_FILE}
 echo "Contents of output directory"
 ls -lR ${OUTPUT_DIR}
 
-SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE}"
-echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus Repo: ${SEND_TO}"
+SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE}"
+echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE} ${SEND_TO}
 
-SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE_DATE_STAMPED}"
+SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae/deb-snapshots/${PACKAGE_GROUP_ID}/${OUTPUT_FILE_DATE_STAMPED}"
 
-echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus Repo: ${SEND_TO}"
+echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
 
-echo '===================== ENDING SCRIPT TO CREATE DEBIAN FILE ======================='
+echo '================= ENDING SCRIPT TO CREATE DEBIAN FILE ==================='
