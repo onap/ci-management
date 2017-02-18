@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_24879811",
+        "filename": "jjb/global-templates-script.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T19:33:00Z",
+      "side": 1,
+      "message": "mispelled maven. mispelled install, dangling white space",
+      "revId": "f336928ecf9645e2803e1ba0a626508848084e2a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_047c9c1f",
+        "filename": "jjb/global-templates-script.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 367,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T19:33:00Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 367,
+        "startChar": 53,
+        "endLine": 367,
+        "endChar": 54
+      },
+      "revId": "f336928ecf9645e2803e1ba0a626508848084e2a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
