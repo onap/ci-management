@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_e4f530cc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-18T17:10:36Z",
+      "side": 1,
+      "message": "Only one Change-Id line per commit message. While this one is being ignored by Gerrit, it\u0027s not good to have more than one as it can confuse other things.",
+      "revId": "60f23decce3bd5db2743db9b437358b389af619c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
