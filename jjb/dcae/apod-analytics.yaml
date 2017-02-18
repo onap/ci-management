@@ -12,13 +12,13 @@
     # apply to all jobs
     project: 'dcae/apod/analytics'
     mvn-settings: 'dcae-apod-analytics-settings'
-    # default to no op
-    mvn-goals: '--version'
-    # default to no op
-    mvn-goals-versioning: '--version'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+    extra-project: 'dcae/apod/buildtools'
+    extra-branch: 'master'
+    extra-refspec: 'refs/heads/{branch}'
+    checkout-dir: 'dcae-apod-buildtools'
 
     jobs:
       - '{project-name}-{stream}-daily-release-scm-mvn-script':
