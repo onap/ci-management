@@ -1,0 +1,39 @@
+---
+
+- project:
+    name: dcae-apod-anlytics
+
+    # job template iterators
+    project-name: 'dcae-apod-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+
+    # apply to all jobs
+    project: 'dcae/apod/analytics'
+    mvn-settings: 'dcae-apod-analytics-settings'
+    # default to no op
+    mvn-goals: '--version'
+    # default to no op
+    mvn-goals-versioning: '--version'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+
+    jobs:
+      - '{project-name}-{stream}-daily-release-scm-mvn-script':
+          mvn-goals-versioning:
+            'versions:set versions:update-child-modules versions:commit'
+          mvn-goals: 'clean deploy'
+          maven-deploy-properties: |
+              deployAtEnd=true
+          script:
+            !include-raw-escape: 'script-apod-analytics-daily-release.sh'
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+          mvn-goals: 'clean deploy'
+          script:
+            !include-raw-escape: 'script-apod-analytics-merge.sh'
+      - '{project-name}-{stream}-verify-scm-mvn-script':
+          mvn-goals: 'clean install'
+          script:
+              !include-raw-escape: 'script-apod-analytics-verify.sh'
