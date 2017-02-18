@@ -3,21 +3,21 @@
 
 
 - job-template:
-    # Job template for verify a submission.  triggered on gerrit-trigger-patch-submitted, does
-    # scm, mvn with passed in goals, then run script
+    # Job template for verifying a submission.  triggered on
+    # gerrit-trigger-patch-submitted, does scm, mvn with passed in goals,
+    # then run script
     #
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
     #   mvn-settings:   settings file for this specific job
-    #   mvn-goals:      space separated list of maven build goals (e.g. clean, install
-    #                   etc, --version for noop)
+    #   mvn-goals:      space separated list of maven build goals (e.g.
+    #                   clean, install etc, --version for noop)
     name: '{project-name}-{stream}-verify-scm-mvn-script'
 
     project-type: freestyle
     concurrent: true
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -61,22 +61,20 @@
       - shell: '{script}'
 
 
-
 - job-template:
-    # Job template for merging a submission.  triggered on gerrit-trigger-patch-merged, does
-    # scm, mvn with passed-in goals, then run script
-    #
+    # Job template for merging a submission.  triggered on
+    # gerrit-trigger-patch-merged, does scm, mvn with passed-in goals, then
+    # run script
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
     #   mvn-settings:   settings file for this specific job
-    #   mvn-goals:      space separated list of maven build goals (--version for noop,
-    #                   clean deploy for deploy [version must be snapshot])
+    #   mvn-goals:      space separated list of maven build goals (--version
+    #                   for noop, clean deploy for deploy [snapshot])
     name: '{project-name}-{stream}-merge-scm-mvn-script'
 
     project-type: freestyle
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -120,24 +118,23 @@
       - shell: '{script}'
 
 
-
-
 - job-template:
-    # Job template for daily-release a submission.  triggered on timer, does scm,
-    # mvn with passed-in goals, then run script
+    # Job template for daily-release a submission.  triggered on timer, does
+    # scm mvn with passed-in goals, then run script
     #
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
-    #   mvn-goals-versioning:    space separated list of maven build goals (--version for no op,
-    #                or    versions:set versions:update-child-modules versions:commit or --version)
-    #   mvn-goals: space separated list of maven build goals (--version for noop, or clean deploy)
+    #   mvn-goals-versioning: space separated list of maven build goals
+    #      (--version for no op,
+    #      or versions:set versions:update-child-modules versions:commit)
+    #   mvn-goals: space separated list of maven build goals (--version for
+    #      noop, or clean deploy)
     name: '{project-name}-{stream}-daily-release-scm-mvn-script'
 
     project-type: freestyle
     concurrent: true
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -192,15 +189,13 @@
       - shell: '{script}'
 
 
-
-
 - job-template:
-    # Job template for verifying a submission.  triggered on gerrit-trigger-patch-submitted,
+    # Job template for verifying a submission.  triggered on
+    # gerrit-trigger-patch-submitted,
     # does scm 2 repos, mvn with passed-in goals, then run script
     #
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
     #   extra-project:  extra gerrit project to checkout
     #   extra-refspec:  refspec for the extra project
@@ -209,14 +204,14 @@
     #                     DO NOT SET THIS TO anything that translates to
     #                     $WORKSPACE as it will destroy the initial
     #                     project checkout
-    #   mvn-goals:      space separated list of maven build goals (e.g. clean, install etc,
-    #                   --version for noop)
+    #   mvn-goals:      space separated list of maven build goals (e.g.
+    #                   clean, install etc,  --version for noop)
 
     name: '{project-name}-{stream}-verify-2scm-mvn-script'
 
     project-type: freestyle
     concurrent: true
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -265,14 +260,13 @@
       - shell: '{script}'
 
 
-
 - job-template:
-    # Job template for merged submission.  triggered on gerrit-trigger-patch-merged,
-    # does scm of 2 repos, mvn with passed in goals, then run script
+    # Job template for merged submission.  triggered on
+    # gerrit-trigger-patch-merged,does scm of 2 repos, mvn with passed in
+    # goals, then run script
     #
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
     #   extra-project:  extra gerrit project to checkout
     #   extra-refspec:  refspec for the extra project
@@ -281,14 +275,14 @@
     #                     DO NOT SET THIS TO anything that translates to
     #                     $WORKSPACE as it will destroy the initial
     #                     project checkout
-    #   mvn-goals:      space separated list of maven build goals (--version for no op,
-    #                   clean deploy for mvn project)
+    #   mvn-goals:      space separated list of maven build goals (--version
+    #                   for noop, clean deploy for mvn project)
 
     name: '{project-name}-{stream}-merge-2scm-mvn-script'
 
     project-type: freestyle
     concurrent: true
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -337,14 +331,13 @@
       - shell: '{script}'
 
 
-
 - job-template:
-    # Job template for merged submission.  triggered on gerrit-trigger-patch-merged,
-    # does scm x2, mvn with passed-in goals, then run script
+    # Job template for merged submission.  triggered on
+    # gerrit-trigger-patch-merged, does scm x2, mvn with passed-in goals,
+    # then run script
     #
     # Required Variables:
     #   branch:         git branch
-    #   build-node:     what build node to run on
     #   script:         build script to execute
     #   extra-project:  extra gerrit project to checkout
     #   extra-refspec:  refspec for the extra project
@@ -353,16 +346,15 @@
     #                     DO NOT SET THIS TO anything that translates to
     #                     $WORKSPACE as it will destroy the initial
     #                     project checkout
-    #   mvn-goals:      space separated list of maven build goals (--version for no op,
-    #                   clean deploy for mvn project)
-    #   mvn-goals-versioning:      space separated list of maven build goals (--version for no op,
-    #                   clean deploy for mvn project)
+    #   mvn-goals:      space separated list of maven build goals (--version
+    #                   for noop, clean deploy for mvn project)
+    #   mvn-goals-versioning:      space separated list of maven build goals
+    #                   (--version for no op, clean deploy for mvn project)
 
     name: '{project-name}-{stream}-daily-release-2scm-mvn-script'
 
     project-type: freestyle
-    concurrent: true
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - ecomp-infra-properties:
@@ -417,9 +409,6 @@
           global-settings-type: cfp
       - docker-login
       - shell: '{script}'
-
-
-
 
 
 - job-template:
