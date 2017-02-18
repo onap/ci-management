@@ -18,14 +18,13 @@ echo "machine nexus.openecomp.org login ${USER} password ${PASS}" > "${NETRC}"
 
 echo $NEXUS_RAW
 
-export REPACKAGEDEBIANUPLOAD="set -x; curl -k \
-    --netrc-file '${NETRC}' \
-    --upload-file '{0}' \
-        '${NEXUS_RAW}/org.openecomp.dcae.pgaas/deb-snapshots/{2}/{1}'"
-export REPACKAGEDEBIANUPLOAD2="set -x; curl -k \
-    --netrc-file '${NETRC}' \
-    --upload-file '{0}' \
-        '${NEXUS_RAW}/org.openecomp.dcae.pgaas/deb-snapshots/{2}/{4}-LATEST.deb'"
+
+REPO="${NEXUS_RAW}/org.openecomp.dcae.pgaas/deb-snapshots"
+
+export REPACKAGEDEBIANUPLOAD="set -x; curl -k --netrc-file '${NETRC}' \
+    --upload-file '{0}' '${REPO}/{2}/{1}'"
+export REPACKAGEDEBIANUPLOAD2="set -x; curl -k --netrc-file '${NETRC}' \
+    --upload-file '{0}' '${REPO}/{2}/{4}-LATEST.deb'"
 make debian
 echo "================= ENDING SCRIPT TO CREATE DEBIAN FILES ================="
 
