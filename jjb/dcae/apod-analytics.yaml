@@ -30,7 +30,7 @@
           script:
             !include-raw-escape: 'script-apod-analytics-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
-          mvn-goals: 'clean deploy'
+          mvn-goals: 'clean install'
           script:
             !include-raw-escape: 'script-apod-analytics-merge.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
