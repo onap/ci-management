@@ -663,9 +663,6 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      - reverse:
-          jobs: '{dependencies}'
-          result: 'success'
       - gerrit-trigger-patch-merged:
           server: '{server-name}'
           project: '{project}'
