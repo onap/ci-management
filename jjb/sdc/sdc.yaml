@@ -6,7 +6,10 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-
+      - '{project-name}-{stream}-docker-java-daily':
+        docker-pom: 'pom.xml'
+        mvn-profile: 'docker'
+        mvn-goals: 'clean install -B -P {mvn-profile}'
     project: 'sdc'
     stream:
       - 'master':
