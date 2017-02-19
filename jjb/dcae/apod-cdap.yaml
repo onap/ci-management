@@ -11,7 +11,7 @@
     mvn-settings: 'dcae-apod-cdap-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1604-basebuild-4c-4g
     mvn-goals: '--version'
     mvn-goals-versioning: '--version'
     extra-project: 'dcae/apod/buildtools'
