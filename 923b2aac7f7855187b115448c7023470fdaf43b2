@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_7030b656",
+        "filename": "jjb/include-docker-push.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T19:32:54Z",
+      "side": 1,
+      "message": "Wrap line at 80 characters",
+      "revId": "923b2aac7f7855187b115448c7023470fdaf43b2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
