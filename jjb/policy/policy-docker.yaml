@@ -3,8 +3,13 @@
     name: policy-docker
     project-name: 'policy-docker-policy'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-verify-script':
+           script:
+            !include-raw-escape: 'include-raw-docker-verify.sh'
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+           mvn-goals: '--version'
+           script:
+            !include-raw-escape: 'include-raw-docker-verify.sh'
       - '{project-name}-{stream}-docker-java-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'prepare-package'
