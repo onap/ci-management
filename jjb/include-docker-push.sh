@@ -4,7 +4,7 @@ DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
 SEARCH="aai-service";
 
 if [[ $PROJECT =~ $SEARCH ]] ; then
-    docker push $DOCKER_REPOSITORY/ecomp/ajsc-aai:latest;
+    docker push $DOCKER_REPOSITORY/openecomp/ajsc-aai:latest;
 else
-    docker push $DOCKER_REPOSITORY/ecomp/model-loader:latest;
+    docker push $DOCKER_REPOSITORY/openecomp/model-loader:latest;
 fi
