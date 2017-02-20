@@ -8,7 +8,7 @@ echo '================= STARTING SCRIPT TO CREATE DEBIAN FILE ================='
 # Extract the username and password for the nexus repo
 USER=$(xpath -q -e "//servers/server[id='ecomp-raw']/username/text()" "$SETTINGS_FILE")
 PASS=$(xpath -q -e "//servers/server[id='ecomp-raw']/password/text()" "$SETTINGS_FILE")
-OPENECOMP_NEXUS_REPO="${NEXUSPROXY}/content/sites/raw"
+REPO="${NEXUSPROXY}/content/sites/raw"
 
 #Create a netrc file for use with curl
 NETRC=$(mktemp)
@@ -51,7 +51,10 @@ mkdir -p ${STAGE_DIR}/stage/opt/app/cdap-apps
 mkdir -p ${OUTPUT_DIR}
 
 echo 'Copying jar file to stage'
-cp ${WORKSPACE}/dcae-analytics-tca/target/dcae-analytics-tca-${POM_VERSION}.jar \
+JAR_FILE=$(ls ${WORKSPACE}/dcae-analytics-tca/target/ | \
+    grep dcae-analytics-tca- | grep -v javadoc | grep -v sources)
+
+cp ${WORKSPACE}/dcae-analytics-tca/target/${JAR_FILE} \
     ${STAGE_DIR}/stage/opt/app/cdap-apps
 
 echo 'Copying json file to stage'
@@ -78,11 +81,11 @@ cp ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${OUTPUT_DIR}/${OUTPUT_FILE}
 echo 'Contents of output directory'
 ls -lR ${OUTPUT_DIR}
 
-SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.analytics/deb-snapshots/${OUTPUT_FILE}"
+SEND_TO="${REPO}/org.openecomp.dcae.apod.analytics/deb-snapshots/${OUTPUT_FILE}"
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE} ${SEND_TO}
 
-SEND_TO="${OPENECOMP_NEXUS_REPO}/org.openecomp.dcae.apod.analytics/deb-snapshots/${OUTPUT_FILE_DATE_STAMPED}"
+SEND_TO="${REPO}/org.openecomp.dcae.apod.analytics/deb-snapshots/${OUTPUT_FILE_DATE_STAMPED}"
 
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus Repo: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
