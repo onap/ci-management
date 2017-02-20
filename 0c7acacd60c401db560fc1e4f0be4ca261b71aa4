@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_d5489cce",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:15:25Z",
+      "side": 1,
+      "message": "Do not quote the EOF, if you\u0027re going to quote ${DCM_DIR} then you need to quote the entire string",
+      "revId": "0c7acacd60c401db560fc1e4f0be4ca261b71aa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b54510b5",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:15:25Z",
+      "side": 1,
+      "message": "Do not quote the EOF, if you\u0027re going to quote ${STAGE} then you need to quote the entire string",
+      "revId": "0c7acacd60c401db560fc1e4f0be4ca261b71aa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_751788a4",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:15:25Z",
+      "side": 1,
+      "message": "Do not quote EOF",
+      "revId": "0c7acacd60c401db560fc1e4f0be4ca261b71aa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_351100ad",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:15:25Z",
+      "side": 1,
+      "message": "Do not quote the EOF, if you\u0027re going to quote ${DCM_DIR} then you need to quote the entire string",
+      "revId": "0c7acacd60c401db560fc1e4f0be4ca261b71aa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_15260417",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:15:25Z",
+      "side": 1,
+      "message": "Do not quote the EOF",
+      "revId": "0c7acacd60c401db560fc1e4f0be4ca261b71aa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
