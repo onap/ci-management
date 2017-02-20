@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_55836ccc",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:18:02Z",
+      "side": 1,
+      "message": "This value is not used by the {project-name}-{stream}-docker-java-daily template. Setting it to empty is not useful.",
+      "revId": "d8a458b71171b81cf1df8ba2f6e75784beb4a1b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_3588e0e6",
+        "filename": "jjb/aai/aai-model-loader.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T15:18:02Z",
+      "side": 1,
+      "message": "This value is not used by the {project-name}-{stream}-docker-java-daily template. Setting it to empty is not useful.",
+      "revId": "d8a458b71171b81cf1df8ba2f6e75784beb4a1b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
