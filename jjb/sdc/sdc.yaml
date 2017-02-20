@@ -7,7 +7,6 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean install'
-          build-node: ubuntu1604-basebuild-8c-8g
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
@@ -19,4 +18,4 @@
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-basebuild-8c-8g
