@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_f092869e",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 647,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:19:25Z",
+      "side": 1,
+      "message": "For clarity / cleanliness there should be a blank line between the previous template and another one.",
+      "revId": "6e6af3e07a48f4d5af5f50b8917df673aa2d5018",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d08f8a74",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:19:25Z",
+      "side": 1,
+      "message": "Unless there is a good reason for it, there should not be a project specific job template. It would be better to generalize the extra changes that are being needed between this and current {project-name}-{stream}-docker-java-daily template and if new variables are being added, make sure that they get added to all other projects presently using the template with a sane default.",
+      "revId": "6e6af3e07a48f4d5af5f50b8917df673aa2d5018",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
