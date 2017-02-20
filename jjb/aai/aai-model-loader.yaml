@@ -6,9 +6,9 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
-      - '{project-name}-{stream}-docker-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: '-P docker'
     project: 'aai/model-loader'
     stream:
       - 'master':
