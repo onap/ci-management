@@ -707,3 +707,4 @@
             - docker.pull.registry=nexus3.openecomp.org:10001
             - docker.push.registry=nexus3.openecomp.org:10003
 
+      - shell: !include-raw: include-docker-push.sh
