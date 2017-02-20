@@ -635,10 +635,12 @@
 
       - docker-login
 
-      - maven-docker-push-daily:
-          mvn-settings: '{mvn-settings}'
-          pom: '{docker-pom}'
-          # use default as mvn-profile if profile is not needed
-          mvn-profile: '{mvn-profile}'
+      - maven-target:
+          maven-version: 'mvn33'
+          goals: '{mvn-goals}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
 
       - shell: '{script}'
