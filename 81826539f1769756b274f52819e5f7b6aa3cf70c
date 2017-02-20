@@ -1,0 +1,791 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_b5b51033",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "I would highly recommend that you look into installing ShellCheck for shell linting",
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_156844b9",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 14,
+        "startChar": 9,
+        "endLine": 14,
+        "endChar": 40
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f564b8e6",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 68
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d561bcd4",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 16,
+        "startChar": 8,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b55e3011",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 17,
+        "startChar": 7,
+        "endLine": 17,
+        "endChar": 12
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_959b34c9",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 18,
+        "startChar": 6,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_75a0a8f4",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_55a5ac02",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 66,
+        "startChar": 6,
+        "endLine": 66,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_35aa20d5",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted as there is nothing being interpolated",
+      "range": {
+        "startLine": 88,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 41
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_15af24e5",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted as there is nothing being interpolated",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 36
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f5ab98d4",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted as there is nothing being interpolated",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d5b89c2c",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted as there is nothing being interpolated",
+      "range": {
+        "startLine": 109,
+        "startChar": 5,
+        "endLine": 109,
+        "endChar": 33
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_95821451",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "I would highly recommend that you look into installing ShellCheck for shell linting",
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_75878862",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 14,
+        "startChar": 9,
+        "endLine": 14,
+        "endChar": 40
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_557c8c72",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 15,
+        "startChar": 12,
+        "endLine": 15,
+        "endChar": 68
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_3581004b",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 16,
+        "startChar": 8,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_15960495",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 17,
+        "startChar": 7,
+        "endLine": 17,
+        "endChar": 12
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f592789e",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 18,
+        "startChar": 6,
+        "endLine": 18,
+        "endChar": 15
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d58f7c74",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b58cf080",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 66,
+        "startChar": 6,
+        "endLine": 66,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f5c0387e",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 88,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 41
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_95e9f41c",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 36
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_75ee6824",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_55f36c0a",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 109,
+        "startChar": 5,
+        "endLine": 109,
+        "endChar": 33
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d5bd3c04",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "I would highly recommend that you look into installing ShellCheck for shell linting",
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_35f8e0e4",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 20,
+        "endChar": 40
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_15dde470",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 68
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f5d95884",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 24
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d5e65c44",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 23,
+        "startChar": 7,
+        "endLine": 23,
+        "endChar": 12
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b5e3d032",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 24,
+        "startChar": 6,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_95d0d454",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 49,
+        "startChar": 6,
+        "endLine": 49,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_75d54842",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should not be quoted",
+      "range": {
+        "startLine": 72,
+        "startChar": 6,
+        "endLine": 72,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_55ca4ca2",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 41
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_35cfc0b2",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 100,
+        "startChar": 6,
+        "endLine": 100,
+        "endChar": 36
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_15c4c490",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:39:18Z",
+      "side": 1,
+      "message": "This should be single quoted since there is nothing being interpolated",
+      "range": {
+        "startLine": 101,
+        "startChar": 4,
+        "endLine": 101,
+        "endChar": 11
+      },
+      "revId": "81826539f1769756b274f52819e5f7b6aa3cf70c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
