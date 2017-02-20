@@ -29,6 +29,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -86,6 +88,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -146,6 +150,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -223,6 +229,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -294,6 +302,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -366,6 +376,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -435,6 +447,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -501,6 +515,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: 'mvn33'
 
     scm:
       - gerrit-trigger-scm:
@@ -580,7 +596,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-                maven-version: 'mvn33'
+          maven-version: 'mvn33'
     scm:
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
