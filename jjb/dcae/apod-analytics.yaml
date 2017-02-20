@@ -32,8 +32,8 @@
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           mvn-goals: 'clean install'
           script:
-            !include-raw-escape: 'script-apod-analytics-merge.sh'
+            !include-raw-escape: 'script-apod-analytics-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean install'
           script:
-              !include-raw-escape: 'script-apod-analytics-verify.sh'
+              !include-raw-escape: 'script-apod-analytics-merge.sh'
