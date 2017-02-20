@@ -24,7 +24,7 @@ FORMAT='zip'
 SCOPE='runtime'
 ARTIFACT_FQID="${GROUP_ID}:${ARTIFACT_ID}:${VERSION}:${FORMAT}:${SCOPE}"
 ARTIFACT_FILENAME="${ARTIFACT_ID}-${VERSION}-${SCOPE}.${FORMAT}"
-mvn -s "$SETTINGS_FILE" \
+${MVN} -s "$SETTINGS_FILE" \
    org.apache.maven.plugins:maven-dependency-plugin:2.10:copy \
    -Dartifact="${ARTIFACT_FQID}" -DoutputDirectory=/tmp
 DCM_AR="/tmp/${ARTIFACT_FILENAME}"
