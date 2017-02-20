@@ -15,7 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'mso-settings'
+    mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
