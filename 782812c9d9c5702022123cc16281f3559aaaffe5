@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_9037c2b0",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${DCM_DIR} then you should be quoting the full string",
+      "range": {
+        "startLine": 60,
+        "startChar": 10,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d0bd4a04",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${STAGE} then you should be quoting the full string",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 33
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b0babe08",
+        "filename": "jjb/dcae/script-collectors-ves-daily-release.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "This should be single quoted as there is no variable interpolation being done in the string.",
+      "range": {
+        "startLine": 88,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 41
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_50413a0a",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${DCM_DIR} then you should be quoting the full string",
+      "range": {
+        "startLine": 43,
+        "startChar": 12,
+        "endLine": 43,
+        "endChar": 41
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_3046ae24",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to be quoting ${STAGE} then you should be quoting the full string",
+      "range": {
+        "startLine": 66,
+        "startChar": 12,
+        "endLine": 66,
+        "endChar": 33
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_104bb22c",
+        "filename": "jjb/dcae/script-collectors-ves-merge.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "This should be single quoted as there is no variable interpolation in the string",
+      "range": {
+        "startLine": 88,
+        "startChar": 6,
+        "endLine": 88,
+        "endChar": 41
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f047261c",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${DCM_DIR} then you should quote the full string",
+      "range": {
+        "startLine": 49,
+        "startChar": 12,
+        "endLine": 49,
+        "endChar": 41
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_905ea2e8",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${DCM_DIR} then you should quote the full string",
+      "range": {
+        "startLine": 66,
+        "startChar": 10,
+        "endLine": 66,
+        "endChar": 39
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d0542acc",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "If you\u0027re going to quote ${STAGE} then you should quote the full string",
+      "range": {
+        "startLine": 72,
+        "startChar": 12,
+        "endLine": 72,
+        "endChar": 33
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_50581afa",
+        "filename": "jjb/dcae/script-collectors-ves-verify.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T18:29:43Z",
+      "side": 1,
+      "message": "This should be single quoted as there is no interpolation in the string",
+      "range": {
+        "startLine": 94,
+        "startChar": 6,
+        "endLine": 94,
+        "endChar": 41
+      },
+      "revId": "782812c9d9c5702022123cc16281f3559aaaffe5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
