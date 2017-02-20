@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_7579c892",
+        "filename": "jjb/dcae/script-apod-analytics-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:27:23Z",
+      "side": 1,
+      "message": "This is going to make the job fail. Since this will fail to upload. If you don\u0027t want to actually upload like your comment states, then remove this section.",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 100
+      },
+      "revId": "0c2acabfccb874875addc86aa3c70385b9333df9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_556eccca",
+        "filename": "jjb/dcae/script-apod-cdap-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-20T04:27:23Z",
+      "side": 1,
+      "message": "This is going to make the job fail. Since this will fail to upload. If you don\u0027t want to actually upload, then remove this section.",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 100
+      },
+      "revId": "0c2acabfccb874875addc86aa3c70385b9333df9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
