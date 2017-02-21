@@ -18,3 +18,4 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
+    build-node: ubuntu1604-basebuild-4c-4g

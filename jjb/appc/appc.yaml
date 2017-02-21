@@ -15,3 +15,4 @@
     mvn-settings: 'appc-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
