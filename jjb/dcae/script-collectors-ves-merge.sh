@@ -10,18 +10,8 @@
 # before calling this script
 
 
-# downloading DCAE Controller service manager for VES collector
-GROUP_ID='org.openecomp.dcae.controller'
-ARTIFACT_ID='dcae-controller-service-standardeventcollector-manager'
-VERSION='0.1.0-SNAPSHOT'
-FORMAT='zip'
-SCOPE='runtime'
-ARTIFACT_FQID="${GROUP_ID}:${ARTIFACT_ID}:${VERSION}:${FORMAT}:${SCOPE}"
-ARTIFACT_FILENAME="${ARTIFACT_ID}-${VERSION}-${SCOPE}.${FORMAT}"
-${MVN} -s "$SETTINGS_FILE" \
-   org.apache.maven.plugins:maven-dependency-plugin:2.10:copy \
-   -Dartifact="${ARTIFACT_FQID}" -DoutputDirectory=/tmp
-DCM_AR="/tmp/${ARTIFACT_FILENAME}"
+# DCAE Controller service manager for VES collector
+DCM_AR="${WORKSPACE}/manager.zip"
 if [ ! -f "${DCM_AR}" ]
 then
     echo "FATAL error cannot locate ${DCM_AR}"
