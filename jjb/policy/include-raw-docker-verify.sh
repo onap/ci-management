@@ -1,12 +1,10 @@
 #!/bin/bash
 #
-echo '============== STARTING SCRIPT TO BUILD DOCKER IMAGES ================='
+echo '============== CALLING SCRIPT TO VERIFY DOCKER IMAGES ================='
 
+CURRENTDIR="$(pwd)"
+echo $CURRENTDIR
 
-DOCKER_REPOSITORY=nexus3.openecomp.org:10003
+chmod 755 *.*
 
-for image in policy-os policy-nexus policy-db policy-base policy-drools policy-pe ; do
-    echo "Building $image"
-    mkdir -p target/$image
-    cp $image/* target/$image
-done
+./docker_verify.sh
