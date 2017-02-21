@@ -1,0 +1,14 @@
+---
+- project:
+    name: testsuite
+    project-name: 'testsuite'
+    jobs:
+      - '{project-name}-{stream}-docker-shell-daily'
+
+    project: 'testsuite'
+
+    stream:
+      - 'master':
+          branch: 'master'
+
+    mvn-settings: 'testsuite-settings'
