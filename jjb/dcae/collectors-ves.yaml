@@ -27,15 +27,15 @@
           mvn-goals: 'clean deploy'
           maven-deploy-properties: |
               deployAtEnd=true
-          script:
-            !include-raw-escape: 'script-collectors-ves-daily-release.sh'
+          script: |
+            bash ./docker-build.sh release
       - '{project-name}-{stream}-merge-scm-mvn-script':
           # job specific
           mvn-goals: 'clean deploy'
-          script:
-            !include-raw-escape: 'script-collectors-ves-merge.sh'
+          script: |
+            bash ./docker-build.sh merge
       - '{project-name}-{stream}-verify-scm-mvn-script':
           # job specific
           mvn-goals: 'clean install'
-          script:
-            !include-raw-escape: 'script-collectors-ves-verify.sh'
+          script: |
+            bash ./docker-build.sh verify
