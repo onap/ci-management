@@ -24,13 +24,13 @@
           mvn-goals: 'clean deploy'
           maven-deploy-properties: |
               deployAtEnd=true
-          script:
-            !include-raw-escape: 'script-dmaapbc-daily-release.sh'
+          script: |
+            bash ./script-dmaap-docker-build.sh release
       - '{project-name}-{stream}-merge-scm-mvn-script':
           mvn-goals: 'clean deploy'
-          script:
-            !include-raw-escape: 'script-dmaapbc-merge.sh'
+          script: |
+            bash ./script-dmaap-docker-build.sh merge
       - '{project-name}-{stream}-verify-scm-mvn-script':
           mvn-goals: 'clean install'
           script:
-            !include-raw-escape: 'script-dmaapbc-verify.sh'
+            bash ./script-dmaap-docker-build.sh verify
