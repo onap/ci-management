@@ -20,8 +20,6 @@
     checkout-dir: 'dcae-apod-buildtools'
     jobs:
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
-          maven-deploy-properties: |
-              deployAtEnd=true
           script:
             !include-raw-escape: 'script-apod-cdap-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
