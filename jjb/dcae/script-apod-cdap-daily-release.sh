@@ -75,12 +75,11 @@ cp ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${OUTPUT_DIR}/${OUTPUT_FILE}
 echo "Contents of output directory"
 ls -lR ${OUTPUT_DIR}
 
-SEND_TO="${REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${OUTPUT_FILE}"
+SEND_TO="${REPO}/org.openecomp.dcae.apod.cdap/deb-releases/${OUTPUT_FILE}"
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE} to Nexus: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE} ${SEND_TO}
 
-SEND_TO="${REPO}/org.openecomp.dcae.apod.cdap/deb-snapshots/${OUTPUT_FILE_DATE_STAMPED}"
-
+SEND_TO="${REPO}/org.openecomp.dcae.apod.cdap/deb-releases/${OUTPUT_FILE_DATE_STAMPED}"
 echo "Sending ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} to Nexus: ${SEND_TO}"
 curl -vkn --netrc-file "${NETRC}" --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
 
