@@ -21,11 +21,11 @@
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
           maven-deploy-properties: |
               deployAtEnd=true
-          script:
-            !include-raw-escape: 'script-pgaas-daily-release.sh'
+          script: |
+            bash ./script-pgaas-deb-build.sh release
       - '{project-name}-{stream}-merge-2scm-mvn-script':
-          script:
-            !include-raw-escape: 'script-pgaas-merge.sh'
+          script: |
+            bash ./script-pgaas-deb-build.sh merge
       - '{project-name}-{stream}-verify-2scm-mvn-script':
-          script:
-            !include-raw-escape: 'script-pgaas-verify.sh'
+          script: |
+            bash ./script-pgaas-deb-build.sh verify
