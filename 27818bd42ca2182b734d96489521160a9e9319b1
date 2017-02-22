@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_1892b457",
+        "filename": "jjb/dcae/dmaapbc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-22T20:25:40Z",
+      "side": 1,
+      "message": "Instead of commenting this just remove it",
+      "revId": "27818bd42ca2182b734d96489521160a9e9319b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f89ee862",
+        "filename": "jjb/dcae/dmaapbc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-22T20:25:40Z",
+      "side": 1,
+      "message": "Instead of commenting this just remove it",
+      "revId": "27818bd42ca2182b734d96489521160a9e9319b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d89b2c71",
+        "filename": "jjb/dcae/dmaapbc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-22T20:25:40Z",
+      "side": 1,
+      "message": "Instead of commenting this just remove it",
+      "revId": "27818bd42ca2182b734d96489521160a9e9319b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
