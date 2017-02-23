@@ -108,7 +108,7 @@
 
       - shell: |
           cp $WORKSPACE/docker/* .
-          docker -D build -t testsuite .
+          docker -D build -t openecomp/testuite .
           export DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
           docker tag openecomp/testuite:latest $DOCKER_REPOSITORY/openecomp/testuite:latest
           docker push $DOCKER_REPOSITORY/openecomp/testuite:latest
