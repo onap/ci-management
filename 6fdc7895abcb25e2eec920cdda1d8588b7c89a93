@@ -1,0 +1,274 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_aefffa00",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 716,
+        "startChar": 48,
+        "endLine": 716,
+        "endChar": 49
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_8e043e16",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 717,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 717,
+        "startChar": 74,
+        "endLine": 717,
+        "endChar": 75
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_6e09f22b",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 718,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 718,
+        "startChar": 72,
+        "endLine": 718,
+        "endChar": 73
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_4e0e3636",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 721,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 721,
+        "startChar": 5,
+        "endLine": 721,
+        "endChar": 6
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_2e13ea5d",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 783,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 783,
+        "startChar": 48,
+        "endLine": 783,
+        "endChar": 49
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_0e102e4d",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 784,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 784,
+        "startChar": 74,
+        "endLine": 784,
+        "endChar": 75
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_ee1ce26c",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 785,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 785,
+        "startChar": 72,
+        "endLine": 785,
+        "endChar": 73
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_ce19267b",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 788,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 788,
+        "startChar": 5,
+        "endLine": 788,
+        "endChar": 6
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_ae26dab8",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 797,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 797,
+        "startChar": 0,
+        "endLine": 797,
+        "endChar": 4
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_2e3acacd",
+        "filename": "jjb/include-update-pom-versions.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Please use 4 space expanded tabs instead of heard tabs",
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_6e20d29b",
+        "filename": "jjb/include-update-pom-versions.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 18,
+        "startChar": 3,
+        "endLine": 18,
+        "endChar": 4
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_4e2516aa",
+        "filename": "jjb/include-update-pom-versions.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T19:35:28Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 25,
+        "startChar": 4,
+        "endLine": 25,
+        "endChar": 5
+      },
+      "revId": "6fdc7895abcb25e2eec920cdda1d8588b7c89a93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
