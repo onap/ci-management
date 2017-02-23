@@ -10,7 +10,7 @@
       - '{project-name}-{stream}-merge-docker-script':
           script:
               !include-raw-escape: 'docker-build-push.sh'
-      - '{project-name}-{stream}-release-docker-script-daily':
+      - '{project-name}-{stream}-release-docker-script-manual':
           script:
               !include-raw-escape: 'docker-build-release.sh'
     project: 'portal'
