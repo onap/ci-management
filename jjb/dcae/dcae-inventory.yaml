@@ -5,6 +5,9 @@
     project-name: 'dcae-inventory'
     jobs:
       - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+
 
     project: 'dcae/dcae-inventory'
     stream:
@@ -13,4 +16,3 @@
     mvn-settings: 'dcae-dcae-inventory-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
