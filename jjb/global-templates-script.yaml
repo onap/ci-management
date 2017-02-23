@@ -762,8 +762,6 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      # 12 AM UTC
-      - timed: 'H 12 * * *'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
