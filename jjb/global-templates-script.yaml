@@ -723,7 +723,7 @@
     #   build-node:     what build node to run on
     #   script:         build script to execute
 
-    name: '{project-name}-{stream}-release-docker-script-daily'
+    name: '{project-name}-{stream}-release-docker-script-manual'
 
     project-type: freestyle
     concurrent: true
@@ -762,8 +762,6 @@
           build-timeout: '{build-timeout}'
 
     triggers:
-      # 12 AM UTC
-      - timed: 'H 12 * * *'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
