@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_5346df24",
+        "filename": "jjb/global-templates-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T15:10:41Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 108,
+        "endChar": 6
+      },
+      "revId": "c95bf54c7b269716480f160057dd23c972a3d71b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_f354cbcb",
+        "filename": "jjb/global-templates-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-23T15:10:41Z",
+      "side": 1,
+      "message": "This has got to be fixed up to be more generic with variables passed in to specify what docker image is being created. Otherwise projects are going to either be fighting over what the template does or building custom templates to their project. In truth the docker-push script shouldn\u0027t have been allowed in either as it was to specific, particularly at a global template level.\n\n!include-raw-escape allows for macro expanded include files vs just the !include-raw that only does unprocessed inclusion.",
+      "range": {
+        "startLine": 110,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 66
+      },
+      "revId": "c95bf54c7b269716480f160057dd23c972a3d71b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
