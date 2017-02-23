@@ -3,18 +3,19 @@
     name: policy-docker
     project-name: 'policy-docker-policy'
     jobs:
-      - '{project-name}-{stream}-verify-script':
+      - '{project-name}-{stream}-verify-scm-mvn-script':
+           mvn-goals: 'clean install prepare-package'
            script:
             !include-raw-escape: 'include-raw-docker-verify.sh'
       - '{project-name}-{stream}-merge-scm-mvn-script':
-           mvn-goals: '--version'
+           mvn-goals: 'clean install prepare-package'
            script:
-            !include-raw-escape: 'include-raw-docker-verify.sh'
+            !include-raw-escape: 'include-raw-docker-merge.sh'
       - '{project-name}-{stream}-docker-java-shell-daily':
           docker-pom: 'pom.xml'
-          mvn-goals: 'prepare-package'
+          mvn-goals: 'clean install prepare-package'
           script:
-            !include-raw-escape: 'include-raw-docker.sh'
+            !include-raw-escape: 'include-raw-docker-release.sh'
 
     project: 'policy/docker'
     stream:
