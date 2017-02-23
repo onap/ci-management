@@ -5,7 +5,7 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version2-java-daily'
 
     project: 'ncomp/openstack'
     stream:
