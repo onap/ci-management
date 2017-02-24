@@ -85,6 +85,16 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+      - git-extra-project:
+          project: '{extra-project1}'
+          refspec: '{extra-refspec1}'
+          branch: '{extra-branch1}'
+          checkout-dir: '{checkout-dir1}'
+      - git-extra-project:
+          project: '{extra-project2}'
+          refspec: '{extra-refspec2}'
+          branch: '{extra-branch2}'
+          checkout-dir: '{checkout-dir2}'
 
     wrappers:
       - ecomp-infra-wrappers:
