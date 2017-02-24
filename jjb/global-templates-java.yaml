@@ -788,7 +788,8 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-      - maven-install
+      - maven-install:
+          maven-version: '{maven-version}'
 
       - inject:
           properties-file: version.properties
@@ -863,7 +864,8 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-      - maven-install
+      - maven-install:
+          maven-version: '{maven-version}'
 
       - inject:
           properties-file: version.properties
