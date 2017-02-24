@@ -6,6 +6,15 @@
       - '{project-name}-{stream}-docker-shell-daily'
 
     project: 'testsuite'
+    extra-project1: 'python-testing-utils'
+    extra-branch1: 'master'
+    extra-refspec1: 'refs/heads/{branch}'
+    checkout-dir1: 'testsuite/eteutils'
+
+    extra-project2: 'heatbridge'
+    extra-branch2: 'master'
+    extra-refspec2: 'refs/heads/{branch}'
+    checkout-dir2: 'testsuite/heatbridge'
 
     stream:
       - 'master':
