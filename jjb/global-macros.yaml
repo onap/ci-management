@@ -20,6 +20,15 @@
             - file-id: '{settings-file}'
               variable: 'SETTINGS_FILE'
 
+# call maven-target builder with a goal of --version to force Jenkins to
+# install the needed maven version
+- builder:
+    name: maven-install
+    builders:
+      - maven-target:
+          maven-version: '{maven-version}'
+          goals: '--version'
+
 - builder:
     name: maven-docker-push-release
     builders:
