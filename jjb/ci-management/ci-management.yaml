@@ -76,8 +76,7 @@
       - ci-management-check-unicode
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#       - ecomp-infra-shiplogs
 
 - job-template:
     name: '{project}-merge-jjb'
@@ -126,8 +125,7 @@
           jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#       - ecomp-infra-shiplogs
 
 - job-template:
     name: '{project}-verify-packer'
@@ -166,8 +164,7 @@
       - packer-validate
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#       - ecomp-infra-shiplogs
 
 - job-template:
     name: '{project}-merge-packer-{platforms}-{templates}'
@@ -209,5 +206,4 @@
           template: '{templates}'
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#       - ecomp-infra-shiplogs

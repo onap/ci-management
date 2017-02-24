@@ -24,7 +24,7 @@
     name: maven-docker-push-release
     builders:
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: 'clean deploy -B -P {mvn-profile}'
           settings: '{mvn-settings}'
@@ -40,7 +40,7 @@
     name: maven-docker-push-daily
     builders:
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: 'clean deploy -B -P {mvn-profile}'
           settings: '{mvn-settings}'

@@ -19,3 +19,6 @@
     build-node: ubuntu1604-basebuild-2c-1g
 
     archive-artifacts: ''
+
+    # Set default maven version used for everything
+    maven-version: 'mvn33'

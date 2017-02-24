@@ -25,7 +25,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -48,7 +48,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'clean install -DskipTests=true'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -59,7 +59,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 
 - job-template:
@@ -88,7 +88,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -111,7 +111,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'clean install'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -120,7 +120,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java verify jobs with POM not at the root
@@ -151,7 +151,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -174,7 +174,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: 'clean install'
           settings: '{mvn-settings}'
@@ -184,7 +184,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java daily release jobs
@@ -210,7 +210,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -235,7 +235,7 @@
           settings-file: '{mvn-settings}'
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:
             - '{maven-deploy-properties}'
@@ -268,7 +268,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -295,7 +295,7 @@
       - inject:
           properties-file: version.properties
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'versions:set versions:update-child-modules versions:commit'
           properties:
             - 'newVersion=${{release_version}}'
@@ -305,7 +305,7 @@
           global-settings-type: cfp
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:
             - '{maven-deploy-properties}'
@@ -341,7 +341,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -366,7 +366,7 @@
           settings-file: '{mvn-settings}'
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:
@@ -400,7 +400,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -423,7 +423,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           # yamllint disable rule:line-length
           goals: 'clean deploy'
           # yamllint enable
@@ -434,7 +434,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java merge jobs that should also be triggered by upstream
@@ -461,7 +461,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -487,7 +487,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           # yamllint disable rule:line-length
           goals: 'clean deploy'
           # yamllint enable
@@ -498,7 +498,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java merge jobs with POM not at the root
@@ -528,7 +528,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -551,7 +551,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           # yamllint disable rule:line-length
           goals: 'clean deploy'
@@ -563,7 +563,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-java-daily'
@@ -581,7 +581,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -609,6 +609,7 @@
       - docker-login
 
       - maven-docker-push-daily:
+          maven-version: '{maven-version}'
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
@@ -630,7 +631,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -658,7 +659,7 @@
       - docker-login
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -683,7 +684,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -711,7 +712,7 @@
       - docker-login
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: 'pom.xml'
           goals: 'clean install -DskipTests'
           settings: '{mvn-settings}'
@@ -720,7 +721,7 @@
           global-settings-type: cfp
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
@@ -764,7 +765,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -794,7 +795,7 @@
       - shell: !include-raw-escape: include-update-pom-versions.sh
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:
             - '{maven-deploy-properties}'
@@ -837,7 +838,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -868,7 +869,7 @@
       - shell: !include-raw-escape: include-update-pom-versions.sh
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           pom: '{pom}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
           properties:

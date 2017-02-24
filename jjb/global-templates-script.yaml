@@ -30,7 +30,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -53,7 +53,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -89,7 +89,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -112,7 +112,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -151,7 +151,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -177,7 +177,7 @@
       - inject:
           properties-file: version.properties
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals-versioning}'
           properties:
             - 'newVersion=${{release_version}}'
@@ -187,7 +187,7 @@
           global-settings-type: cfp
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           properties:
             - '{maven-deploy-properties}'
@@ -234,7 +234,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -262,7 +262,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -307,7 +307,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -335,7 +335,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -381,7 +381,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -411,7 +411,7 @@
       - inject:
           properties-file: version.properties
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals-versioning}'
           properties:
             - 'newVersion=${{release_version}}'
@@ -421,7 +421,7 @@
           global-settings-type: cfp
 
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -456,7 +456,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -480,7 +480,7 @@
           settings-file: '{mvn-settings}'
       # make sure maven gets installed / setup
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '--version'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -490,7 +490,7 @@
 
 #    publishers:
 #      - ecomp-infra-shiplogs:
-#          maven-version: 'mvn33'
+#          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for 2 scm and script trigger
@@ -524,7 +524,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -553,7 +553,7 @@
           settings-file: '{mvn-settings}'
       # make sure maven gets installed / setup
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '--version'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -563,7 +563,7 @@
 
 #    publishers:
 #      - ecomp-infra-shiplogs:
-#          maven-version: 'mvn33'
+#          maven-version: '{maven-version}'
 
 
 - job-template:
@@ -604,7 +604,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
     scm:
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
@@ -637,7 +637,7 @@
           settings-file: '{mvn-settings}'
       # make sure maven gets installed / setup
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '--version'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -647,7 +647,7 @@
 
 #    publishers:
 #      - ecomp-infra-shiplogs:
-#          maven-version: 'mvn33'
+#          maven-version: '{maven-version}'
 
 # vim: sw=2 ts=2 sts=2 et :
 
@@ -676,7 +676,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -711,7 +711,7 @@
       - docker-login
       # make sure maven gets installed / setup
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '--version'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -721,7 +721,7 @@
 
 #    publishers:
 #      - ecomp-infra-shiplogs:
-#          maven-version: 'mvn33'
+#          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for scm and script trigger - for docker daily release
@@ -748,7 +748,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -782,7 +782,7 @@
       - docker-login
       # make sure maven gets installed / setup
       - maven-target:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
           goals: '--version'
           settings: '{mvn-settings}'
           settings-type: cfp
@@ -792,4 +792,4 @@
 
 #    publishers:
 #      - ecomp-infra-shiplogs:
-#          maven-version: 'mvn33'
+#          maven-version: '{maven-version}'

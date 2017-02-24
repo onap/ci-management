@@ -31,7 +31,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -65,7 +65,7 @@
 
 #     publishers:
 #       - ecomp-infra-shiplogs:
-#           maven-version: 'mvn33'
+#           maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-shell-daily'
@@ -83,7 +83,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
@@ -133,7 +133,7 @@
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
-          maven-version: 'mvn33'
+          maven-version: '{maven-version}'
 
     scm:
       - gerrit-trigger-scm:
