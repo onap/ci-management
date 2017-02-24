@@ -3,7 +3,7 @@
     name: testsuite
     project-name: 'testsuite'
     jobs:
-      - '{project-name}-{stream}-docker-shell-daily'
+      - '{project-name}-{stream}-2scm-docker-shell-daily'
 
     project: 'testsuite'
     extra-project1: 'python-testing-utils'
