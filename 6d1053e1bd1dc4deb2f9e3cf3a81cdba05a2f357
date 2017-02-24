@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_0eceee5a",
+        "filename": "jjb/global-templates-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-24T12:42:10Z",
+      "side": 1,
+      "message": "This should be done in a new template that explicitly calls out how many scms are being added beyond the base.\n\n{project-name}-{stream}-2scm-docker-shell-daily would be what I suggest",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 97,
+        "endChar": 41
+      },
+      "revId": "6d1053e1bd1dc4deb2f9e3cf3a81cdba05a2f357",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_4eecf6c7",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-24T12:42:10Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 1
+      },
+      "revId": "6d1053e1bd1dc4deb2f9e3cf3a81cdba05a2f357",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_2ed1aafb",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-02-24T12:42:10Z",
+      "side": 1,
+      "message": "This should be an expanded tab",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 1
+      },
+      "revId": "6d1053e1bd1dc4deb2f9e3cf3a81cdba05a2f357",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
