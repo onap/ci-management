@@ -6,13 +6,13 @@
     jobs:
       - '{project-name}-{stream}-three-scm-verify-script':
           script:
-              !include-raw-escape: 'docker-build-deploy.sh'
+            !include-raw-escape: 'docker-build-deploy.sh'
       - '{project-name}-{stream}-merge-docker-script':
           script:
-              !include-raw-escape: 'docker-build-push.sh'
+            !include-raw-escape: 'docker-build-push.sh'
       - '{project-name}-{stream}-release-docker-script-manual':
           script:
-              !include-raw-escape: 'docker-build-release.sh'
+            !include-raw-escape: 'docker-build-release.sh'
     project: 'portal'
     stream:
       - 'master':

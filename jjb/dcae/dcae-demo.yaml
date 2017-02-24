@@ -3,7 +3,6 @@
 - project:
     name: dcae-demo
     project-name: 'dcae-demo'
-    stream: 'master'
     project: 'dcae/demo'
     stream:
       - 'master':
@@ -19,16 +18,19 @@
           mvn-goals: 'clean deploy'
           maven-deploy-properties: |
               deployAtEnd=true
+          # yamllint disable rule:line-length
           script: |
               bash dcae-demo-controller/src/main/docker-build/build.sh
               bash dcae-demo-controller/src/main/docker-build/push.sh nexus3.openecomp.org:10003
+          # yamllint enable
       - '{project-name}-{stream}-merge-scm-mvn-script':
           mvn-goals: 'clean deploy'
+          # yamllint disable rule:line-length
           script: |
               bash dcae-demo-controller/src/main/docker-build/build.sh
               bash dcae-demo-controller/src/main/docker-build/push.sh nexus3.openecomp.org:10003
+          # yamllint enable
       - '{project-name}-{stream}-verify-scm-mvn-script':
           mvn-goals: 'clean install'
           script: |
               bash dcae-demo-controller/src/main/docker-build/build.sh
-

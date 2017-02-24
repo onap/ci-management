@@ -36,4 +36,4 @@
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean deploy'
           script:
-              !include-raw-escape: 'script-apod-analytics-merge.sh'
+            !include-raw-escape: 'script-apod-analytics-merge.sh'

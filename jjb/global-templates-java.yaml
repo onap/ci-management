@@ -236,7 +236,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -306,7 +306,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -368,7 +368,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -798,7 +798,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -875,7 +875,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=https://sonar.openecomp.org'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'

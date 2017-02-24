@@ -7,8 +7,8 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
-         docker-pom: 'pom.xml'
-         mvn-profile: 'docker'
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
 
     project: 'vid'
     stream:

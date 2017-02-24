@@ -113,9 +113,9 @@
       - shell: |
           cp $WORKSPACE/docker/* .
           docker -D build -t openecomp/testsuite .
-          export DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
-          docker tag openecomp/testsuite:latest $DOCKER_REPOSITORY/openecomp/testsuite:latest
-          docker push $DOCKER_REPOSITORY/openecomp/testsuite:latest
+          export REPO="nexus3.openecomp.org:10003"
+          docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:latest
+          docker push $REPO/openecomp/testsuite:latest
 
 - job-template:
     name: '{project-name}-{stream}-2scm-docker-shell-daily'
@@ -173,6 +173,6 @@
       - shell: |
           cp $WORKSPACE/docker/* .
           docker -D build -t openecomp/testsuite .
-          export DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
-          docker tag openecomp/testsuite:latest $DOCKER_REPOSITORY/openecomp/testsuite:latest
-          docker push $DOCKER_REPOSITORY/openecomp/testsuite:latest
+          export REPO="nexus3.openecomp.org:10003"
+          docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:latest
+          docker push $REPO/openecomp/testsuite:latest

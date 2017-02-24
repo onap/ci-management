@@ -23,7 +23,9 @@
       - '{project-name}-{stream}-daily-release-scm-mvn-script':
           # job specific
           mvn-goals-versioning:
+            # yamllint disable rule:line-length
             'versions:set versions:update-child-modules versions:commit -D1.0.0-SNAPSHOT'
+            # yamllint enable
           mvn-goals: 'clean deploy'
           maven-deploy-properties: |
               deployAtEnd=true
