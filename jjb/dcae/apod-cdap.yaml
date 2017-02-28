@@ -20,11 +20,11 @@
     checkout-dir: 'dcae-apod-buildtools'
     jobs:
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
-          script:
-            !include-raw-escape: 'script-apod-cdap-daily-release.sh'
+          script: |
+            bash './dcae-apod-builtools/script-apod-cdap-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
-          script:
-            !include-raw-escape: 'script-apod-cdap-verify.sh'
+          script: |
+            bash './dcae-apod-buildtools/script-apod-cdap-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
-          script:
-            !include-raw-escape: 'script-apod-cdap-merge.sh'
+          script: |
+            bash './dcae-apod-buildtools/script-apod-cdap-merge.sh'
