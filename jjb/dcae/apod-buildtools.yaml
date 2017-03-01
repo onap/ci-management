@@ -16,5 +16,4 @@
     mvn-goals-versioning: '--version'
     jobs:
       - '{project-name}-{stream}-verify-scm-mvn-script':
-          script: |
-            /bin/bash 'ls -lR'
+          script: 'ls -lR'
