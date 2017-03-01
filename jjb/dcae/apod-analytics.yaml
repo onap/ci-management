@@ -23,7 +23,9 @@
     jobs:
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
           mvn-goals-versioning:
+            # yamllint disable rule:line-length
             'versions:set versions:update-child-modules versions:commit'
+            # yamllint enable
           mvn-goals: 'clean deploy'
           maven-deploy-properties: |
               deployAtEnd=true
@@ -32,8 +34,8 @@
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           mvn-goals: 'clean install'
           script: |
-            /bin/bash './dcae-apod-builds-tools/scripts/script-apod-analytics-verify.sh'
+            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean deploy'
           script:
-            /bin/bash './dcae-apod-build-tools/scripts/script-apod-analytics-merge.sh'
+            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-merge.sh'
