@@ -21,10 +21,10 @@
     jobs:
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
           script: |
-            bash './dcae-apod-builtools/script-apod-cdap-daily-release.sh'
+            bash './dcae-apod-builtools/scripts/script-apod-cdap-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           script: |
-            bash './dcae-apod-buildtools/script-apod-cdap-verify.sh'
+            bash './dcae-apod-buildtools/scripts/script-apod-cdap-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           script: |
-            bash './dcae-apod-buildtools/script-apod-cdap-merge.sh'
+            bash './dcae-apod-buildtools/scripts/script-apod-cdap-merge.sh'
