@@ -28,12 +28,12 @@
           maven-deploy-properties: |
               deployAtEnd=true
           script: |
-            bash './dcae-apod-buildtools/script-apod-analytics-daily-release.sh'
+            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           mvn-goals: 'clean install'
           script: |
-            bash './dcae-apod-builds-tools/script-apod-analytics-verify.sh'
+            /bin/bash './dcae-apod-builds-tools/scripts/script-apod-analytics-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean deploy'
           script:
-            bash './dcae-apod-build-tools/script-apod-analytics-merge.sh'
+            /bin/bash './dcae-apod-build-tools/scripts/script-apod-analytics-merge.sh'
