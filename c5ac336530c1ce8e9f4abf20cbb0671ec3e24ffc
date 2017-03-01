@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_10fcc83d",
+        "filename": "jjb/dcae/apod-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-01T20:03:07Z",
+      "side": 1,
+      "message": "Why are you adding in these linting statements?\n\nI would expect them if you had the \u0027versions:set...\u0027 line on the same line as the mvn-goals-versioning: but not as it currently is.",
+      "revId": "c5ac336530c1ce8e9f4abf20cbb0671ec3e24ffc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
