@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_f0d71cec",
+        "filename": "jjb/dcae/apod-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-01T17:19:52Z",
+      "side": 1,
+      "message": "You should fully specify /bin/bash instead of just bash. While \u0027bash\u0027 will work, it\u0027s best to be very specific when calling a shell",
+      "range": {
+        "startLine": 31,
+        "startChar": 12,
+        "endLine": 31,
+        "endChar": 16
+      },
+      "revId": "5d6aca33198a10263735ef5825035e9c16703e10",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d0042080",
+        "filename": "jjb/dcae/apod-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-01T17:19:52Z",
+      "side": 1,
+      "message": "You should fully specify /bin/bash instead of just bash. While \u0027bash\u0027 will work, it\u0027s best to be very specific when calling a shell",
+      "range": {
+        "startLine": 35,
+        "startChar": 12,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "5d6aca33198a10263735ef5825035e9c16703e10",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_b0099497",
+        "filename": "jjb/dcae/apod-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-01T17:19:52Z",
+      "side": 1,
+      "message": "You should fully specify /bin/bash instead of just bash. While \u0027bash\u0027 will work, it\u0027s best to be very specific when calling a shell",
+      "range": {
+        "startLine": 39,
+        "startChar": 12,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "5d6aca33198a10263735ef5825035e9c16703e10",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_10dba81c",
+        "filename": "jjb/dcae/apod-buildtools.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-01T17:19:52Z",
+      "side": 1,
+      "message": "You should fully specify /bin/bash instead of just bash. While \u0027bash\u0027 will work, it\u0027s best to be very specific when calling a shell",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 16
+      },
+      "revId": "5d6aca33198a10263735ef5825035e9c16703e10",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
