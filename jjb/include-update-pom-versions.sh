@@ -10,24 +10,42 @@ fi
 ## will setup variable release_version
 source ./version.properties
 
-VERSION=$release_version
+RELEASE_VERSION=$release_version
 
-echo Changing POM version to $VERSION
+echo Changing POM version to $RELEASE_VERSION
 
-## handle POM files with no parent
+## handle POM
 for file in $(find . -name pom.xml); do
-    if [ "$(grep -c '<parent>' $file)" == "0" ]; then
-        echo Updating version in $file to $VERSION
-        (
-            cd $(dirname $file)
-            ${MVN} versions:set versions:commit \
-                -DnewVersion=$VERSION \
-                -DprocessDependencies=false
-        )
-        grep version $file
-        echo DONE $file
+    VERSION=$(xpath -q -e '//project/version/text()' $file)
+    PVERSION=$(xpath -q -e '//project/parent/version/text()' $file)
+    echo before changes VERSION=$VERSION PVERSION=$PVERSION file=$file
+    if [ "$VERSION" != "" ]; then
+        awk -v v=$RELEASE_VERSION '
+            /<version>/ {
+                if (! done) {
+                    sub(/<version>.*</,"<version>" v "<",$0)
+                    done = 1
+                }
+            }
+            { print $0 }
+        ' $file > $file.tmp
+        mv $file.tmp $file
     fi
+    if [ "$PVERSION" != "" ]; then
+        awk -v v=$RELEASE_VERSION '
+            /<version>/ {
+                if (parent && ! done) {
+                    sub(/<version>.*</,"<version>" v "<",$0)
+                    done = 1
+                }
+            }
+            /<parent>/ { parent = 1 }
+            { print $0 }
+        ' $file > $file.tmp
+        mv $file.tmp $file
+    fi
+    VERSION=$(xpath -q -e '//project/version/text()' $file)
+    PVERSION=$(xpath -q -e '//project/parent/version/text()' $file)
+    echo after changes VERSION=$VERSION PVERSION=$PVERSION file=$file
 done
-
-find . -name pom.xml.versionsBackup -delete
 
