@@ -20,6 +20,7 @@
               deployAtEnd=true
           # yamllint disable rule:line-length
           script: |
+              bash update-version.sh
               bash dcae-demo-controller/src/main/docker-build/build.sh
               bash dcae-demo-controller/src/main/docker-build/push.sh nexus3.openecomp.org:10003
           # yamllint enable
