@@ -3,7 +3,7 @@
     name: portal
     project-name: 'portal'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'portal'
     stream:
