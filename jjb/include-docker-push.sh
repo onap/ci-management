@@ -2,11 +2,31 @@
 
 DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
 SEARCH="aai-service";
+DATETIME_STAMP=$(date +%Y%m%dT%H%M%S);
+VERSION=1.0.0;
+SNAPSHOT_TAG=${VERSION}-SNAPSHOT-${DATETIME_STAMP};
+STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
 if [[ $PROJECT =~ $SEARCH ]] ; then
-    docker push $DOCKER_REPOSITORY/openecomp/ajsc-aai:latest;
+
+    REPO_PATH=$DOCKER_REPOSITORY/openecomp/ajsc-aai;
+
+    docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
+    docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
+
+    docker push $REPO_PATH:latest;
+    docker push $REPO_PATH:$STAGING_TAG;
+    docker push $REPO_PATH:$SNAPSHOT_TAG;
 else
     # Cut the prefix aai/ in example aai/model-loader
     DOCKER_REPO_NAME=$(echo ${PROJECT} | cut -d"/" -f2-);
-    docker push $DOCKER_REPOSITORY/openecomp/${DOCKER_REPO_NAME}:latest;
+
+    REPO_PATH=$DOCKER_REPOSITORY/openecomp/${DOCKER_REPO_NAME};
+
+    docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
+    docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
+
+    docker push $REPO_PATH:latest;
+    docker push $REPO_PATH:$SNAPSHOT_TAG;
+    docker push $REPO_PATH:$STAGING_TAG;
 fi
