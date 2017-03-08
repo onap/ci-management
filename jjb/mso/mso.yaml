@@ -10,6 +10,7 @@
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
+      - '{project-name}-docker-image-blessing'
 
     project: 'mso'
     stream:
