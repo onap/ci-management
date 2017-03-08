@@ -14,7 +14,7 @@
     mvn-goals-versioning: '--version'
     jobs:
       - '{project-name}-{stream}-daily-release-version2-scm-mvn-script':
-          mvn-goals: 'clean deploy'
+          mvn-goals: 'clean install'
           maven-deploy-properties: |
               deployAtEnd=true
           # yamllint disable rule:line-length
