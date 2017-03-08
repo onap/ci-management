@@ -1,0 +1,7 @@
+---
+
+- project:
+    name: blessing
+    project-name: 'blessing'
+    jobs:
+      - '{project-name}-docker-image'

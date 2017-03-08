@@ -793,3 +793,40 @@
 #    publishers:
 #      - ecomp-infra-shiplogs:
 #          maven-version: '{maven-version}'
+
+- job-template:
+    # 1. PULL the desired image
+    # 2. TAG it to the desired release name
+    # 3. PUSH the newly tagged image on release repo
+    #
+    # Required variable :
+    #   - Name of the STAGING image to bless
+    #   - Name of the RELEASE
+
+    name: '{project-name}-docker-image'
+
+    project-type: freestyle
+    concurrent: true
+    node: 'ubuntu1604-docker-2c-1g'
+
+    parameters:
+      - string:
+          name: STAGING-IMAGE-NAME
+          description: "The name of the image that will be pulled from the snapshot repository
+            Example : openecomp/mso:latest"
+      - string:
+          name: RELEASE-IMAGE-NAME
+          description: "The name that will be used to tag the image for the release
+            Example : openecomp/mso:1.2.3"
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    builders:
+      - docker-login
+      - shell: !include-raw: include-docker-blessing.sh
