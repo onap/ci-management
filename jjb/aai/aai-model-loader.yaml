@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
-          mvn-goals: 'docker:build docker:push'
+          mvn-goals: 'docker:build'
     project: 'aai/model-loader'
     stream:
       - 'master':
