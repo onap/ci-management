@@ -793,3 +793,42 @@
 #    publishers:
 #      - ecomp-infra-shiplogs:
 #          maven-version: '{maven-version}'
+
+- job-template:
+    # 1. PULL the desired image
+    # 2. TAG it to the desired release name
+    # 3. PUSH the newly tagged image on release repo
+
+    name: '{project-name}-docker-image-blessing'
+
+    project-type: freestyle
+    concurrent: true
+    node: 'ubuntu1604-docker-2c-1g'
+
+    parameters:
+      - string:
+          name: VERSION
+          description: "VERSION of the STAGING image to bless into this RELEASE VERSION
+            Example : 1.2.3"
+      - string:
+          name: TIMESTAMP
+          description: "TIMESTAMP of the STAGING image to pull
+            Example : 20170308T1332"
+      - string:
+          name: PROJECT
+          default: '{project}'
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    builders:
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - docker-login
+      - shell: !include-raw: include-docker-blessing.sh
