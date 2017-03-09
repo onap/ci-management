@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_a20a66d0",
+        "filename": "jjb/global-templates-script.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 830,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-09T15:25:15Z",
+      "side": 1,
+      "message": "To use the docker-login builder you must first use the provide-maven-settings builder.",
+      "revId": "e1168b27f07e09258f3d10564b8d89c8e4332ab0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
