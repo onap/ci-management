@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a014df3_3658d755",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-10T16:05:41Z",
+      "side": 1,
+      "message": "To be more clear this should be trigger-job not trigger-project. Also it\u0027s not ${} but {} and it _must_ be enclosed in single quotes for the macro expansion to happen.",
+      "range": {
+        "startLine": 347,
+        "startChar": 17,
+        "endLine": 347,
+        "endChar": 32
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_1655db1c",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 961,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-10T16:05:41Z",
+      "side": 1,
+      "message": "Sites are not \"staged\" they are only ever deployed / pushed",
+      "range": {
+        "startLine": 961,
+        "startChar": 35,
+        "endLine": 961,
+        "endChar": 40
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_765e5f47",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 988,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-10T16:05:41Z",
+      "side": 1,
+      "message": "To be more clear this should be trigger-job not trigger-project. Also, it\u0027s not ${} but {} for macros",
+      "range": {
+        "startLine": 988,
+        "startChar": 10,
+        "endLine": 988,
+        "endChar": 22
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_d6365303",
+        "filename": "jjb/mso/mso.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-10T16:05:41Z",
+      "side": 1,
+      "message": "Sites are not \"staged\" they are only ever deployed / pushed",
+      "range": {
+        "startLine": 14,
+        "startChar": 33,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a014df3_9649eb8d",
+        "filename": "jjb/mso/mso.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-10T16:05:41Z",
+      "side": 1,
+      "message": "To be more clear this should be trigger-job not trigger-project",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 25
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
