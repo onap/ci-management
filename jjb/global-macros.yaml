@@ -338,6 +338,16 @@
                 - compare-type: 'ANT'
                   pattern: '**'
 
+- trigger:
+    name: trigger-on-build-success
+    triggers:
+      - build-result:
+          groups:
+            - jobs:
+               - '{job-name}'
+              results:
+               - success
+
 # WRAPPERS
 - wrapper:
     name: build-timeout
