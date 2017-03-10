@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
     # apply to all jobs
     project: 'dcae/dmaapbc'
     mvn-settings: 'dcae-dmaapbc-settings'

@@ -8,6 +8,9 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+
     mvn-settings: 'dcae-apod-cdap-settings'
     files: '**'
     archive-artifacts: ''
@@ -21,7 +24,8 @@
     jobs:
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
           script: |
-            /bin/bash ./dcae-apod-buildtools/scripts/script-apod-cdap-daily-release.sh
+            /bin/bash \
+               ./dcae-apod-buildtools/scripts/script-apod-cdap-daily-release.sh
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           script: |
             /bin/bash ./dcae-apod-buildtools/scripts/script-apod-cdap-verify.sh

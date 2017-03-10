@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
 
     # apply to all jobs
     project: 'dcae/apod/analytics'
@@ -28,12 +30,15 @@
           maven-deploy-properties: |
               deployAtEnd=true
           script: |
-            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-daily-release.sh'
+            /bin/bash \
+                './dcae-apod-buildtools/scripts/script-apod-analytics-daily-release.sh'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           mvn-goals: 'clean install'
           script: |
-            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-verify.sh'
+            /bin/bash \
+                './dcae-apod-buildtools/scripts/script-apod-analytics-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean deploy'
           script:
-            /bin/bash './dcae-apod-buildtools/scripts/script-apod-analytics-merge.sh'
+            /bin/bash \
+                './dcae-apod-buildtools/scripts/script-apod-analytics-merge.sh'

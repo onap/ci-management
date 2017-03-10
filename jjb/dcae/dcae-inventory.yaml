@@ -13,6 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
     mvn-settings: 'dcae-dcae-inventory-settings'
     files: '**'
     archive-artifacts: ''
