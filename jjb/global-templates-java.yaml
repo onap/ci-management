@@ -945,3 +945,58 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
+
+- job-template:
+    # Template for maven site plugin invocation
+    #
+    # It's designed to be triggered when the trigger-job job
+    # succeeds as there's no need for new documentaiton
+    # if the build job fails.
+    #
+    # Those parameters should be set :
+    # - site-pom : the pom file that contains the site confiration
+    # - trigger-job : the name of the project that triggers this job
+    #                     upon success. The job name can be
+    #                     parameterized.
+    name: '{project-name}-{stream}-stage-site-java'
+    project-type: freestyle
+
+    properties:
+      - ecomp-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - ecomp-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: '{maven-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+
+    wrappers:
+      - ecomp-infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - trigger-on-build-success:
+          job-name: '{trigger-job}'
+
+    builders:
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '${site-pom}'
+          goals: 'clean site:stage-deploy'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
