@@ -94,6 +94,30 @@
     },
     {
       "key": {
+        "uuid": "1a014df3_b612a760",
+        "filename": "jjb/mso/mso.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 11
+      },
+      "writtenOn": "2017-03-10T16:33:35Z",
+      "side": 1,
+      "message": "Actually, that\u0027s what the maven plugin can push to a staging sub folder instead of the main folder. We would use that for the next-to-be-released version doc",
+      "parentUuid": "1a014df3_d6365303",
+      "range": {
+        "startLine": 14,
+        "startChar": 33,
+        "endLine": 14,
+        "endChar": 38
+      },
+      "revId": "dd7122db353a131f7731e57bc6fabf7899cdab31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a014df3_9649eb8d",
         "filename": "jjb/mso/mso.yaml",
         "patchSetId": 4
