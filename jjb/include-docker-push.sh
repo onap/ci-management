@@ -3,7 +3,19 @@
 DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
 SEARCH="aai-service";
 DATETIME_STAMP=$(date +%Y%m%dT%H%M%S);
-VERSION=1.0.0;
+VERSION_FILE="version.properties"
+
+# Check for the version file
+# If it exists, load the version from that file
+# If not found, then use the current version as 1.1.0 for docker images
+if [ -f "$VERSION_FILE" ]; then
+    source $VERSION_FILE;
+    VERSION=$release_version;
+else
+    VERSION=1.1.0;
+fi
+
+
 SNAPSHOT_TAG=${VERSION}-SNAPSHOT-${DATETIME_STAMP};
 STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
