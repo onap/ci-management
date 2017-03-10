@@ -10,6 +10,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
     mvn-settings: 'aai-logging-service-settings'
     files: '**'
     archive-artifacts: ''
