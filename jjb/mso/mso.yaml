@@ -11,6 +11,9 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
       - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-project: '{project-name}-{stream}-release-version-java-daily'
 
     project: 'mso'
     stream:
