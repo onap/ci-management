@@ -1,0 +1,7 @@
+Verified+1: ecomp jobbuilder <ecomp-jobbuilder@jenkins.openecomp.org>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Fri, 10 Mar 2017 19:18:24 +0000
+Reviewed-on: http://gerrit.openecomp.org/r/2007
+Project: ci-management
+Branch: refs/heads/master
