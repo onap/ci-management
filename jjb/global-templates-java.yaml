@@ -994,7 +994,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          pom: '${site-pom}'
+          pom: '{site-pom}'
           goals: 'clean site:stage-deploy'
           settings: '{mvn-settings}'
           settings-type: cfp
