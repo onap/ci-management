@@ -341,12 +341,10 @@
 - trigger:
     name: trigger-on-build-success
     triggers:
-      - build-result:
-          groups:
-            - jobs:
-               - '{job-name}'
-              results:
-               - success
+      - reverse:
+          jobs: '{job-name}'
+          result: 'success'
+
 
 # WRAPPERS
 - wrapper:
