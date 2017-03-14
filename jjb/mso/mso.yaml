@@ -7,7 +7,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-daily':
+      - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
       - '{project-name}-docker-image-blessing'
@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
     mvn-settings: 'mso-settings'
     files: '**'
     archive-artifacts: ''
