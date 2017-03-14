@@ -872,7 +872,7 @@
 
     project-type: freestyle
     concurrent: true
-    node: 'ubuntu1604-docker-2c-1g'
+    node: 'ubuntu1604-docker-8c-8g'
 
     parameters:
       - string:
