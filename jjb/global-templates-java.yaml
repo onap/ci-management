@@ -996,16 +996,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{site-pom}'
-          goals: 'clean site:site'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{site-pom}'
-          goals: 'clean site:stage-deploy'
+          goals: 'clean site:site site:stage-deploy'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
