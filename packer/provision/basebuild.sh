@@ -48,6 +48,10 @@ ubuntu_systems() {
 
     # Additional libraries for Python ncclient
     apt-get install -y wget unzip python-ncclient
+
+    # Add graphviz for documentation building
+    apt-get install -y graphviz
+
 }
 
 all_systems() {
