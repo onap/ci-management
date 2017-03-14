@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
     mvn-settings: 'mso-settings'
     files: '**'
     archive-artifacts: ''
