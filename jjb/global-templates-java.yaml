@@ -958,7 +958,9 @@
     # - trigger-job : the name of the project that triggers this job
     #                     upon success. The job name can be
     #                     parameterized.
-    name: '{project-name}-{stream}-stage-site-java'
+    name: '{project-name}-stage-site-java'
+    branch: 'master'
+
     project-type: freestyle
 
     properties:
