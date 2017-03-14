@@ -14,6 +14,7 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          build-node: 'ubuntu1604-basebuild-8c-8g'
 
     project: 'mso'
     stream:

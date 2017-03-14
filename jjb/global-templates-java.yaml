@@ -960,6 +960,7 @@
     #                     parameterized.
     name: '{project-name}-{stream}-stage-site-java'
     project-type: freestyle
+    node: '{build-node}'
 
     properties:
       - ecomp-infra-properties:
