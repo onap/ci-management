@@ -947,7 +947,7 @@
           global-settings-type: cfp
 
 - job-template:
-    # Template for maven site plugin invocation
+    # Template for maven stage site deployment
     #
     # It's designed to be triggered when the trigger-job job
     # succeeds as there's no need for new documentaiton
@@ -958,7 +958,9 @@
     # - trigger-job : the name of the project that triggers this job
     #                     upon success. The job name can be
     #                     parameterized.
-    name: '{project-name}-{stream}-stage-site-java'
+    name: '{project-name}-stage-site-java'
+    branch: 'master'
+
     project-type: freestyle
 
     properties:
