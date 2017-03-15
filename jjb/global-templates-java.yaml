@@ -992,6 +992,17 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
+      - inject:
+          properties-file: version.properties
+      - maven-target:
+          maven-version: '{maven-version}'
+          goals: 'versions:set versions:update-child-modules versions:commit'
+          properties:
+            - 'newVersion=${{release_version}}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
 
       - maven-target:
           maven-version: '{maven-version}'
