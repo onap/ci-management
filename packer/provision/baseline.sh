@@ -115,8 +115,6 @@ Dpkg::Options {
 
 EOF
 
-    chmod +x /usr/local/bin/apt-get
-
     echo "---> Updating operating system"
     apt-get update
     apt-get upgrade
