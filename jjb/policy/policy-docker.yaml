@@ -11,9 +11,9 @@
           mvn-goals: 'clean install prepare-package'
           script:
             !include-raw-escape: 'include-raw-docker-merge.sh'
-      - '{project-name}-{stream}-docker-java-shell-daily':
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
-          mvn-goals: 'clean install prepare-package'
+          mvn-goals: 'prepare-package'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
 
