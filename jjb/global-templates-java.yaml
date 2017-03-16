@@ -15,11 +15,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -33,7 +33,7 @@
           choosing-strategy: 'gerrit'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -58,7 +58,7 @@
             - maven.test.skip=true
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 
@@ -78,11 +78,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -96,7 +96,7 @@
           choosing-strategy: 'gerrit'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -119,7 +119,7 @@
           global-settings-type: cfp
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 - job-template:
@@ -141,11 +141,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -159,7 +159,7 @@
           choosing-strategy: 'gerrit'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -183,7 +183,7 @@
           global-settings-type: cfp
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 - job-template:
@@ -200,11 +200,11 @@
     node: '{build-node}'
     maven-deploy-properties:
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -218,7 +218,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -258,11 +258,11 @@
     node: '{build-node}'
     maven-deploy-properties:
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -276,7 +276,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -331,11 +331,11 @@
     node: '{build-node}'
     maven-deploy-properties:
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -349,7 +349,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -390,11 +390,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -408,7 +408,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -433,7 +433,7 @@
           global-settings-type: cfp
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 - job-template:
@@ -451,11 +451,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -469,7 +469,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -497,7 +497,7 @@
           global-settings-type: cfp
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 - job-template:
@@ -518,11 +518,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -536,7 +536,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -562,7 +562,7 @@
           global-settings-type: cfp
 
 #     publishers:
-#       - ecomp-infra-shiplogs:
+#       - infra-shiplogs:
 #           maven-version: '{maven-version}'
 
 - job-template:
@@ -571,11 +571,11 @@
     node: 'ubuntu1604-docker-8c-8g'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -589,7 +589,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -621,11 +621,11 @@
     node: 'ubuntu1604-docker-8c-8g'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -639,7 +639,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -674,11 +674,11 @@
     node: 'ubuntu1604-docker-8c-8g'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -692,7 +692,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -740,11 +740,11 @@
     node: 'ubuntu1604-docker-8c-8g'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -758,7 +758,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -803,11 +803,11 @@
     node: 'ubuntu1604-docker-8c-8g'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -821,7 +821,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -884,11 +884,11 @@
     node: '{build-node}'
     maven-deploy-properties:
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -902,7 +902,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -959,11 +959,11 @@
     node: '{build-node}'
     maven-deploy-properties:
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -977,7 +977,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -1029,11 +1029,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
@@ -1047,7 +1047,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:

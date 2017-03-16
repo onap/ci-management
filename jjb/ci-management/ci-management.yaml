@@ -34,11 +34,11 @@
     concurrent: true
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: 14
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: 'master'
           refspec: 'refs/heads/master'
@@ -50,7 +50,7 @@
           choosing-strategy: 'gerrit'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -76,7 +76,7 @@
       - ci-management-check-unicode
 
 #     publishers:
-#       - ecomp-infra-shiplogs
+#       - infra-shiplogs
 
 - job-template:
     name: '{project}-merge-jjb'
@@ -85,11 +85,11 @@
     node: '{build-node}'
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: 14
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: 'master'
           refspec: 'refs/heads/master'
@@ -101,7 +101,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -125,7 +125,7 @@
           jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
 
 #     publishers:
-#       - ecomp-infra-shiplogs
+#       - infra-shiplogs
 
 - job-template:
     name: '{project}-verify-packer'
@@ -134,11 +134,11 @@
     concurrent: true
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: 14
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: 'master'
           refspec: 'refs/heads/master'
@@ -150,7 +150,7 @@
           choosing-strategy: 'gerrit'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -164,7 +164,7 @@
       - packer-validate
 
 #     publishers:
-#       - ecomp-infra-shiplogs
+#       - infra-shiplogs
 
 - job-template:
     name: '{project}-merge-packer-{platforms}-{templates}'
@@ -173,11 +173,11 @@
     concurrent: true
 
     properties:
-      - ecomp-infra-properties:
+      - infra-properties:
           build-days-to-keep: 14
 
     parameters:
-      - ecomp-infra-parameters:
+      - infra-parameters:
           project: '{project}'
           branch: 'master'
           refspec: 'refs/heads/master'
@@ -189,7 +189,7 @@
           choosing-strategy: 'default'
 
     wrappers:
-      - ecomp-infra-wrappers:
+      - infra-wrappers:
           build-timeout: '{build-timeout}'
 
     triggers:
@@ -206,4 +206,4 @@
           template: '{templates}'
 
 #     publishers:
-#       - ecomp-infra-shiplogs
+#       - infra-shiplogs

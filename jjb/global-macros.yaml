@@ -68,7 +68,7 @@
 
 # PARAMETERS
 - parameter:
-    name: ecomp-infra-parameters
+    name: infra-parameters
     parameters:
       - string:
           name: PROJECT
@@ -111,7 +111,7 @@
 
 # PROPERTIES
 - property:
-    name: ecomp-infra-properties
+    name: infra-properties
     properties:
       - build-discarder:
           days-to-keep: '{build-days-to-keep}'
@@ -169,7 +169,7 @@
                 unhealthy: 40
 
 - publisher:
-    name: ecomp-infra-shiplogs
+    name: infra-shiplogs
     # To archive things, the job will need to create an "archives" directory in
     # the workspace and this macro will handle copying the contents of the
     # archives directory.
@@ -358,7 +358,7 @@
 - wrapper:
     # This wrapper is required for all jobs as it configures the wrappers
     # needed by the eCOMP infra.
-    name: ecomp-infra-wrappers
+    name: infra-wrappers
     wrappers:
       - timeout:
           type: absolute
