@@ -1,0 +1,7 @@
+Verified+1: ecomp jobbuilder <ecomp-jobbuilder@jenkins.openecomp.org>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Thu, 16 Mar 2017 15:41:30 +0000
+Reviewed-on: http://gerrit.openecomp.org/r/2213
+Project: ci-management
+Branch: refs/heads/master
