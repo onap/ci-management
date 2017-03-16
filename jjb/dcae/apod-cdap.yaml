@@ -18,7 +18,7 @@
     mvn-goals: '--version'
     mvn-goals-versioning: '--version'
     extra-project: 'dcae/apod/buildtools'
-    extra-branch: 'master'
+    extra-branch: '{branch}'
     extra-refspec: 'refs/heads/{branch}'
     checkout-dir: 'dcae-apod-buildtools'
     jobs:
