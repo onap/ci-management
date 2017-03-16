@@ -204,7 +204,7 @@
     name: git-scm
     scm:
       - git:
-          credentials-id: 'ecomp-jenkins-ssh'
+          credentials-id: 'onap-jenkins-ssh'
           url: '$GIT_BASE'
           refspec: ''
           branches:
@@ -217,7 +217,7 @@
     name: gerrit-trigger-scm
     scm:
       - git:
-          credentials-id: 'ecomp-jenkins-ssh'
+          credentials-id: 'onap-jenkins-ssh'
           url: '$GIT_BASE'
           refspec: '{refspec}'
           branches:
@@ -230,7 +230,7 @@
     name: gerrit-trigger-scm-basedir
     scm:
       - git:
-          credentials-id: 'ecomp-jenkins-ssh'
+          credentials-id: 'onap-jenkins-ssh'
           url: '$GIT_BASE'
           refspec: '{refspec}'
           branches:
@@ -244,7 +244,7 @@
     name: git-branch-scm
     scm:
       - git:
-          credentials-id: 'ecomp-jenkins-ssh'
+          credentials-id: 'onap-jenkins-ssh'
           url: '$GIT_BASE'
           refspec: ''
           branches:
@@ -257,7 +257,7 @@
     name: git-extra-project
     scm:
       - git:
-          credentials-id: 'ecomp-jenkins-ssh'
+          credentials-id: 'onap-jenkins-ssh'
           url: '$GIT_NO_PROJECT/{project}'
           refspec: '{refspec}'
           branches:
@@ -367,6 +367,6 @@
           fail: true
       - ssh-agent-credentials:
           users:
-            - 'ecomp-jenkins-ssh'
+            - 'onap-jenkins-ssh'
       - openstack:
           single-use: true
