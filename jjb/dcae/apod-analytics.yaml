@@ -18,7 +18,7 @@
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
     extra-project: 'dcae/apod/buildtools'
-    extra-branch: 'master'
+    extra-branch: '{branch}'
     extra-refspec: 'refs/heads/{branch}'
     checkout-dir: 'dcae-apod-buildtools'
 
@@ -39,6 +39,6 @@
                 './dcae-apod-buildtools/scripts/script-apod-analytics-verify.sh'
       - '{project-name}-{stream}-merge-2scm-mvn-script':
           mvn-goals: 'clean deploy'
-          script:
+          script: |
             /bin/bash \
                 './dcae-apod-buildtools/scripts/script-apod-analytics-merge.sh'
