@@ -16,6 +16,7 @@
           mvn-goals: 'prepare-package'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
+      - '{project-name}-docker-image-blessing'
 
     project: 'policy/docker'
     stream:
