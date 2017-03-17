@@ -8,6 +8,7 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily'
+      - '{project-name}-docker-image-blessing'
 
     project: 'appc/deployment'
     stream:
