@@ -862,7 +862,7 @@
             - docker.pull.registry=nexus3.openecomp.org:10001
             - docker.push.registry=nexus3.openecomp.org:10003
 
-      - shell: !include-raw-escape: include-docker-push.sh
+    #      - shell: !include-raw-escape: include-docker-push.sh
 
 - job-template:
     # Job template for Java daily release jobs

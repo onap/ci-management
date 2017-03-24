@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'ajsc-aai/pom.xml'
-          mvn-goals: 'docker:build'
+          mvn-goals: 'docker:build docker:push'
 
     project: 'aai/aai-service'
     stream:
