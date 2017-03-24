@@ -24,10 +24,10 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     extra-project1: 'ecompsdkos'
-    extra-branch1: 'master'
+    extra-branch1: '{branch}'
     extra-refspec1: 'refs/heads/{branch}'
     checkout-dir1: 'ecompsdkos'
     extra-project2: 'ui/dmaapbc'
-    extra-branch2: 'master'
+    extra-branch2: '{branch}'
     extra-refspec2: 'refs/heads/{branch}'
     checkout-dir2: 'dmaapbc'
