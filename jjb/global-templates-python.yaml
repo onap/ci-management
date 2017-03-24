@@ -114,7 +114,7 @@
           cp $WORKSPACE/docker/* .
           docker -D build -t openecomp/testsuite .
           export REPO="nexus3.openecomp.org:10003"
-          docker tag openecomp/testsuite:1.0-STAGING-latest $REPO/openecomp/testsuite:1.0-STAGING-latest
+          docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:1.0-STAGING-latest
           docker push $REPO/openecomp/testsuite:1.0-STAGING-latest
 
 - job-template:
@@ -174,5 +174,5 @@
           cp $WORKSPACE/docker/* .
           docker -D build -t openecomp/testsuite .
           export REPO="nexus3.openecomp.org:10003"
-          docker tag openecomp/testsuite:1.0-STAGING-latest $REPO/openecomp/testsuite:1.0-STAGING-latest
+          docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:1.0-STAGING-latest
           docker push $REPO/openecomp/testsuite:1.0-STAGING-latest
