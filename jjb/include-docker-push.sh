@@ -15,7 +15,6 @@ else
     VERSION=1.1.0;
 fi
 
-
 SNAPSHOT_TAG=${VERSION}-SNAPSHOT-${DATETIME_STAMP};
 STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
@@ -26,7 +25,13 @@ if [[ $PROJECT =~ $SEARCH ]] ; then
     docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
     docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
 
-    docker push $REPO_PATH:latest;
+    if [ "$VERSION" == "1.0.0" ]; then
+        docker tag $REPO_PATH:latest $REPO_PATH:1.0-STAGING-latest;
+        docker push $REPO_PATH:1.0-STAGING-latest;
+    else
+        docker push $REPO_PATH:latest;
+    fi
+
     docker push $REPO_PATH:$STAGING_TAG;
     docker push $REPO_PATH:$SNAPSHOT_TAG;
 else
@@ -37,6 +42,13 @@ else
 
     docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
     docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
+
+    if [ "$VERSION" == "1.0.0" ]; then
+        docker tag $REPO_PATH:latest $REPO_PATH:1.0-STAGING-latest;
+        docker push $REPO_PATH:1.0-STAGING-latest;
+    else
+        docker push $REPO_PATH:latest;
+    fi
 
     docker push $REPO_PATH:latest;
     docker push $REPO_PATH:$SNAPSHOT_TAG;
