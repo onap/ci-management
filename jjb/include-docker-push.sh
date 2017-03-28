@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_REPOSITORY="nexus3.openecomp.org:10003"
+DOCKER_REPOSITORY="nexus3.onap.org:10003"
 SEARCH="aai-service";
 DATETIME_STAMP=$(date +%Y%m%dT%H%M%S);
 VERSION_FILE="version.properties"

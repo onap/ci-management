@@ -24,8 +24,8 @@ then
     exit 1
 fi
 
-RELEASE_REPOSITORY="nexus3.openecomp.org:10002"
-SNAPSHOT_REPOSITORY="nexus3.openecomp.org:10003"
+RELEASE_REPOSITORY="nexus3.onap.org:10002"
+SNAPSHOT_REPOSITORY="nexus3.onap.org:10003"
 STAGING_IMAGE="openecomp/$PROJECT:$X.$Y-STAGING-latest"
 RELEASE_IMAGE="openecomp/$PROJECT:$X.$Y.$Z"
 
