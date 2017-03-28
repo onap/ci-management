@@ -876,13 +876,17 @@
 
     parameters:
       - string:
-          name: VERSION
-          description: "VERSION of the STAGING image to bless into this RELEASE VERSION
-            Example : 1.2.3"
+          name: X
+          description: "x VERSION of the STAGING image to bless into this RELEASE VERSION
+            Example : 1"
       - string:
-          name: TIMESTAMP
-          description: "TIMESTAMP of the STAGING image to pull
-            Example : 20170308T1332"
+          name: Y
+          description: "y VERSION of the STAGING image to bless into this RELEASE VERSION
+            Example : 2"
+      - string:
+          name: Z
+          description: "z VERSION of the RELEASE VERSION
+            Example : 3"
       - string:
           name: PROJECT
           default: '{project}'
