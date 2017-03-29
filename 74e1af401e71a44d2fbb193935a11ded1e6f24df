@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_f91f1708",
+        "filename": "jjb/global-templates-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-03-29T14:16:04Z",
+      "side": 1,
+      "message": "Missing a space at the start of this line",
+      "revId": "74e1af401e71a44d2fbb193935a11ded1e6f24df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
