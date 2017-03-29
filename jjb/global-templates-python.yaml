@@ -168,11 +168,17 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
 
+     - inject:
+          properties-file: version.properties
+
       - docker-login
 
       - shell: |
           cp $WORKSPACE/docker/* .
           docker -D build -t openecomp/testsuite .
           export REPO="nexus3.onap.org:10003"
-          docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:1.0-STAGING-latest
-          docker push $REPO/openecomp/testsuite:1.0-STAGING-latest
+          for tag in $tags
+          do
+              docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:$tag
+              docker push $REPO/openecomp/testsuite:$tag
+          done
