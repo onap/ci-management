@@ -43,3 +43,4 @@
           mvn-goals: 'clean install'
           script: |
             bash ./docker-build.sh verify
+      - '{project-name}-docker-image-blessing'

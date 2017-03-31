@@ -36,3 +36,4 @@
           mvn-goals: 'clean install'
           script:
             bash ./script-dmaapbc-docker-build.sh verify
+      - '{project-name}-docker-image-blessing'
