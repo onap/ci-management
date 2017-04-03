@@ -33,6 +33,9 @@
               deployAtEnd=true
           script: |
             bash ./docker-build.sh release
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-daily-release-scm-mvn-script'
       - '{project-name}-{stream}-merge-scm-mvn-script':
           # job specific
           mvn-goals: 'clean deploy'

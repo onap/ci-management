@@ -10,6 +10,11 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version2-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom:
+            'operation-utils/pom.xml'
+          trigger-job:
+            '{project-name}-{stream}-{subproject}-release-version2-java-daily'
 
     project: 'dcae/operation/utils'
     stream:

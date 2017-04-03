@@ -32,6 +32,9 @@
           script: |
             /bin/bash \
                 './dcae-apod-buildtools/scripts/script-apod-analytics-daily-release.sh'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-daily-release-2scm-mvn-script'
       - '{project-name}-{stream}-verify-2scm-mvn-script':
           mvn-goals: 'clean install'
           script: |
