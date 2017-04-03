@@ -5,10 +5,11 @@
     project-name: 'sdc'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-docker-java-daily':
-          docker-pom: 'pom.xml'
+      - '{project-name}-{stream}-sdc-merge-java':
           mvn-profile: 'docker'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker,docker-staging'
     project: 'sdc'
     stream:
       - 'master':
