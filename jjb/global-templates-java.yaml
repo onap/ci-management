@@ -1090,7 +1090,7 @@
     name: '{project-name}-{stream}-sdc-merge-java'
 
     project-type: freestyle
-    node: '{build-node}'
+    node: 'ubuntu1604-docker-8c-8g'
 
     properties:
       - infra-properties:
