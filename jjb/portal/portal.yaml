@@ -4,6 +4,9 @@
     project-name: 'portal'
     jobs:
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+                site-pom: 'pom.xml'
+                trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
     project: 'portal'
     stream:
