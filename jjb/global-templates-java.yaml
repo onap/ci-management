@@ -1125,16 +1125,12 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-          mvn-profile: '{mvn-profile}'
 
       - docker-login
 
-      - maven-target:
+      - maven-docker-push-daily:
           maven-version: '{maven-version}'
-          # yamllint disable rule:line-length
-          goals: 'clean deploy'
-          # yamllint enable
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
+          mvn-settings: '{mvn-settings}'
+          pom: '{docker-pom}'
+          # use default as mvn-profile if profile is not needed
+          mvn-profile: '{mvn-profile}'
