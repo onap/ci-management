@@ -6,6 +6,9 @@
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
     project: 'sdnc/core'
     stream:
