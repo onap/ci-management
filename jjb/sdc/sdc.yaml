@@ -6,10 +6,14 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-sdc-merge-java':
+          docker-pom: 'pom.xml'
           mvn-profile: 'docker'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker,docker-staging'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-docker-version-java-daily'
     project: 'sdc'
     stream:
       - 'master':
