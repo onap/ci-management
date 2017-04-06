@@ -75,8 +75,8 @@
           gzip archives/job_output/*
       - ci-management-check-unicode
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs
 
 - job-template:
     name: '{project}-merge-jjb'
@@ -124,8 +124,8 @@
           pip install jenkins-job-builder
           jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs
 
 - job-template:
     name: '{project}-verify-packer'
@@ -163,8 +163,8 @@
     builders:
       - packer-validate
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs
 
 - job-template:
     name: '{project}-merge-packer-{platforms}-{templates}'
@@ -205,5 +205,5 @@
           platform: '{platforms}'
           template: '{templates}'
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs
