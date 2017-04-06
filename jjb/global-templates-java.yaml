@@ -927,7 +927,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
+          goals: 'clean deploy sonar:sonar site:site site:stage-deploy -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -1004,7 +1004,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
+          goals: 'clean deploy sonar:sonar site:site site:stage-deploy -Dsonar.host.url=${{SONAR}}'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
