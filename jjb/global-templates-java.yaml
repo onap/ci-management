@@ -57,9 +57,9 @@
           maven-opts:
             - maven.test.skip=true
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 
 - job-template:
@@ -118,9 +118,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java verify jobs with POM not at the root
@@ -182,9 +182,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java daily release jobs
@@ -243,6 +243,10 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java daily release jobs
@@ -314,6 +318,10 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     # Job template for Java daily release jobs with POM not at the root
     #
@@ -376,6 +384,10 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     # Job template for Java merge jobs
     #
@@ -432,9 +444,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java merge jobs that should also be triggered by upstream
@@ -496,9 +508,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java merge jobs with POM not at the root
@@ -561,9 +573,9 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-java-daily'
@@ -614,6 +626,10 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-java-shell-daily'
@@ -667,6 +683,10 @@
           global-settings-type: cfp
 
       - shell: '{script}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-java-version-shell-daily'
@@ -734,6 +754,10 @@
 
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     name: '{project-name}-{stream}-docker-version-java-daily'
     project-type: freestyle
@@ -796,6 +820,10 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-aai-docker-java-daily'
@@ -863,6 +891,10 @@
             - docker.push.registry=nexus3.onap.org:10003
 
       - shell: !include-raw-escape: include-docker-push.sh
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java daily release jobs
@@ -934,6 +966,10 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for Java daily release jobs
@@ -1012,6 +1048,10 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     # Template for maven site plugin invocation
     #
@@ -1079,6 +1119,10 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     # Job template for Java merge jobs
     #
@@ -1134,3 +1178,7 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'

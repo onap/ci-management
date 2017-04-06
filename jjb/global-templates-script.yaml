@@ -62,6 +62,9 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for merging a submission.  triggered on
@@ -121,6 +124,9 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for daily-release a submission.  triggered on timer, does
@@ -198,6 +204,10 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
 - job-template:
     # Job template for daily-release a submission.  triggered on timer, does
     # scm mvn with passed-in goals, then run script.
@@ -266,7 +276,9 @@
       - docker-login
       - shell: '{script}'
 
-
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for verifying a submission.  triggered on
@@ -340,6 +352,9 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for merged submission.  triggered on
@@ -413,6 +428,9 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for merged submission.  triggered on
@@ -499,6 +517,9 @@
       - docker-login
       - shell: '{script}'
 
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for basic scm and script trigger
@@ -557,9 +578,9 @@
           global-settings-type: cfp
       - shell: '{script}'
 
-#    publishers:
-#      - infra-shiplogs:
-#          maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for 2 scm and script trigger
@@ -630,9 +651,9 @@
           global-settings-type: cfp
       - shell: '{script}'
 
-#    publishers:
-#      - infra-shiplogs:
-#          maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 
 - job-template:
@@ -714,9 +735,9 @@
           global-settings-type: cfp
       - shell: '{script}'
 
-#    publishers:
-#      - infra-shiplogs:
-#          maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 # vim: sw=2 ts=2 sts=2 et :
 
@@ -788,9 +809,9 @@
           global-settings-type: cfp
       - shell: '{script}'
 
-#    publishers:
-#      - infra-shiplogs:
-#          maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # Job template for scm and script trigger - for docker daily release
@@ -859,9 +880,9 @@
           global-settings-type: cfp
       - shell: '{script}'
 
-#    publishers:
-#      - infra-shiplogs:
-#          maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     # 1. PULL the desired image
@@ -905,3 +926,7 @@
           settings-file: '{mvn-settings}'
       - docker-login
       - shell: !include-raw: include-docker-blessing.sh
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'

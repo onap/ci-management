@@ -63,9 +63,9 @@
           cd $WORKSPACE/{path}
           tox
 
-#     publishers:
-#       - infra-shiplogs:
-#           maven-version: '{maven-version}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-docker-shell-daily'
@@ -116,6 +116,10 @@
           export REPO="nexus3.onap.org:10003"
           docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:1.0-STAGING-latest
           docker push $REPO/openecomp/testsuite:1.0-STAGING-latest
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project-name}-{stream}-2scm-docker-shell-daily'
@@ -182,3 +186,7 @@
               docker tag openecomp/testsuite:latest $REPO/openecomp/testsuite:$tag
               docker push $REPO/openecomp/testsuite:$tag
           done
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'

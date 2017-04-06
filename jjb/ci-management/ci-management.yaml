@@ -75,8 +75,9 @@
           gzip archives/job_output/*
       - ci-management-check-unicode
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project}-merge-jjb'
@@ -164,9 +165,9 @@
     builders:
       - packer-validate
 
-#     publishers:
-#       - infra-shiplogs
-
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 - job-template:
     name: '{project}-merge-packer-{platforms}-{templates}'
     project-type: freestyle
@@ -206,5 +207,6 @@
           platform: '{platforms}'
           template: '{templates}'
 
-#     publishers:
-#       - infra-shiplogs
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
