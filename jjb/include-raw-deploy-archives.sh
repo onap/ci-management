@@ -56,10 +56,10 @@ EOF
 
 mkdir -p $ARCHIVES_DIR
 mkdir -p $WORKSPACE/archives
-if [ ! -z "${{ARCHIVE_ARTIFACTS}}" ]; then
+if [ ! -z "${ARCHIVE_ARTIFACTS}" ]; then
     pushd $WORKSPACE
     shopt -s globstar  # Enable globstar to copy archives
-    archive_artifacts=$(echo ${{ARCHIVE_ARTIFACTS}})
+    archive_artifacts=$(echo ${ARCHIVE_ARTIFACTS})
     for f in $archive_artifacts; do
         echo "Archiving $f"
         mkdir -p $WORKSPACE/archives/$(dirname $f)
@@ -73,7 +73,7 @@ fi
 # Ignore logging if archives doesn't exist
 mv $WORKSPACE/archives/ $ARCHIVES_DIR > /dev/null 2>&1
 touch $ARCHIVES_DIR/_build-details.txt
-echo "build-url: ${{BUILD_URL}}" >> $ARCHIVES_DIR/_build-details.txt
+echo "build-url: ${BUILD_URL}" >> $ARCHIVES_DIR/_build-details.txt
 env > $ARCHIVES_DIR/_build-enviroment-variables.txt
 
 # capture system info
@@ -89,8 +89,8 @@ touch $ARCHIVES_DIR/_sys-info.txt
 
 # Magic string used to trim console logs at the appropriate level during wget
 echo "-----END_OF_BUILD-----"
-wget -O $ARCHIVES_DIR/console.log ${{BUILD_URL}}consoleText
-wget -O $ARCHIVES_DIR/console-timestamp.log ${{BUILD_URL}}/timestamps?time=HH:mm:ss\&appendLog
+wget -O $ARCHIVES_DIR/console.log ${BUILD_URL}consoleText
+wget -O $ARCHIVES_DIR/console-timestamp.log ${BUILD_URL}/timestamps?time=HH:mm:ss\&appendLog
 sed -i '/^-----END_OF_BUILD-----$/,$d' $ARCHIVES_DIR/console.log
 sed -i '/^.*-----END_OF_BUILD-----$/,$d' $ARCHIVES_DIR/console-timestamp.log
 
