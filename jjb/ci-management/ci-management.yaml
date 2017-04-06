@@ -125,7 +125,8 @@
           jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
 
     publishers:
-      - infra-shiplogs
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
 
 - job-template:
     name: '{project}-verify-packer'
