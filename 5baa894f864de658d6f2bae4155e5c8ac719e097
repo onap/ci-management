@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_9b9b66c9",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-04-10T21:42:04Z",
+      "side": 1,
+      "message": "Do the docs really need an 8G system to build on? I suspect that they\u0027ll build just fine if you don\u0027t override this and take the 4c-4g system that is being defined as the default for aai-aai-service jobs",
+      "range": {
+        "startLine": 16,
+        "startChar": 44,
+        "endLine": 16,
+        "endChar": 49
+      },
+      "revId": "5baa894f864de658d6f2bae4155e5c8ac719e097",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
