@@ -6,10 +6,10 @@
     jobs:
       - '{project-name}-{stream}-verify-profile-java':
           mvn-profile: 'with-integration-tests'
-          build-node: 'ubuntu1604-basebuild-8c-8g'
+          build-node: 'ubuntu1604-docker-8c-8g'
       - '{project-name}-{stream}-merge-profile-java':
           mvn-profile: 'with-integration-tests'
-          build-node: 'ubuntu1604-basebuild-8c-8g'
+          build-node: 'ubuntu1604-docker-8c-8g'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
