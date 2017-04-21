@@ -2,7 +2,14 @@
 - project:
     name: sdnc-core
     project-name: 'sdnc-core'
+    subproject:
+      - 'rootpom':
+          pom: 'rootpom/pom.xml'
+          pattern: 'rootpom/**'
     jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
