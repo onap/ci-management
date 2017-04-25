@@ -24,4 +24,4 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-8c-8g
-    build-timeout: 90
+    build-timeout: 240
