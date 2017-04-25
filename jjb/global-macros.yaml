@@ -360,6 +360,7 @@
     # needed by the eCOMP infra.
     name: infra-wrappers
     wrappers:
+      - timestamps
       - timeout:
           type: absolute
           timeout: '{build-timeout}'
