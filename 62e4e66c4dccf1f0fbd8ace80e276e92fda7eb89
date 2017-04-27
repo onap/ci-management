@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Code-Review+1: Christophe Closset <cc697w@intl.att.com>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Thu, 27 Apr 2017 13:41:51 +0000
+Reviewed-on: http://gerrit.onap.org/r/3723
+Project: ci-management
+Branch: refs/heads/master
