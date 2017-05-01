@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: elhay efrat <elhayefrat@gmail.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Mon, 01 May 2017 13:48:19 +0000
+Reviewed-on: http://gerrit.onap.org/r/3775
+Project: ci-management
+Branch: refs/heads/master
