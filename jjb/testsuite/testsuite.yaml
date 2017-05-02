@@ -3,7 +3,7 @@
     name: testsuite
     project-name: 'testsuite'
     jobs:
-      - '{project-name}-{stream}-2scm-docker-shell-daily'
+      - '{project-name}-{stream}-3scm-docker-shell-daily'
 
     project: 'testsuite'
     extra-project1: 'testsuite/python-testing-utils'
@@ -15,6 +15,11 @@
     extra-branch2: 'master'
     extra-refspec2: 'refs/heads/{branch}'
     checkout-dir2: 'testsuite/heatbridge'
+
+    extra-project3: 'demo'
+    extra-branch3: 'master'
+    extra-refspec3: 'refs/heads/{branch}'
+    checkout-dir3: 'demo'
 
     stream:
       - 'master':
