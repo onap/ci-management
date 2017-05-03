@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_5b5f0573",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-03T13:32:31Z",
+      "side": 1,
+      "message": "Please do not put issue IDs in the subject line, but as part of the footer in the form:\n\nIssue: \u003cISSUE-KEY\u003e\n\nAdditionally, please explain why this is being done.\n\nSee https://chris.beams.io/posts/git-commit/ on writing good commit messages.\n\nNote: we have new checks that will be rolling in eventually that require following these guidelines.",
+      "revId": "b06b273c9794d34b5980651cf2f355a3cad5e4a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_3b6d7133",
+        "filename": "jjb/global-templates-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-03T13:32:31Z",
+      "side": 1,
+      "message": "This should have been done with the previous template as well but it wasn\u0027t caught previously. This shell hardcodes expectation of a given project with how it\u0027s configured. Instead of this it should be moved to a macro variable that is passed in as part of the job definition parameters.\n\nSo, something like:\n\nshell: \u0027{shell-step}\u0027",
+      "range": {
+        "startLine": 255,
+        "startChar": 0,
+        "endLine": 263,
+        "endChar": 14
+      },
+      "revId": "b06b273c9794d34b5980651cf2f355a3cad5e4a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_fb76d905",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-03T13:32:31Z",
+      "side": 1,
+      "message": "This should have a trailing \u0027:\u0027 and then an additional passed variable called shell-step which is the shell script to be executed.",
+      "revId": "b06b273c9794d34b5980651cf2f355a3cad5e4a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
