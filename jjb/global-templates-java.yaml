@@ -49,7 +49,8 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean install -DskipTests=true -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean install -DskipTests=true -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -111,7 +112,8 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean install -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean install -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -171,7 +173,8 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean install -P {mvn-profile} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean install -P {mvn-profile} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -235,7 +238,8 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean install -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean install -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -295,7 +299,8 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -369,7 +374,8 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -435,7 +441,8 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -495,9 +502,8 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: '{maven-version}'
-          # yamllint disable rule:line-length
-          goals: 'clean deploy -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          # yamllint enable
+          goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -558,9 +564,8 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          # yamllint disable rule:line-length
-          goals: 'clean deploy -P {mvn-profile} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          # yamllint enable
+          goals: 'clean deploy -P {mvn-profile} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -625,9 +630,8 @@
           settings-file: '{mvn-settings}'
       - maven-target:
           maven-version: '{maven-version}'
-          # yamllint disable rule:line-length
-          goals: 'clean deploy -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          # yamllint enable
+          goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -690,9 +694,8 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          # yamllint disable rule:line-length
-          goals: 'clean deploy -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          # yamllint enable
+          goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -996,7 +999,8 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: 'pom.xml'
-          goals: 'clean install -DskipTests -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean install -DskipTests -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -1084,7 +1088,9 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar site:site site:stage-deploy -Dsonar.host.url=${{SONAR}} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean deploy sonar:sonar site:site site:stage-deploy
+            -Dsonar.host.url=${{SONAR}} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
@@ -1165,7 +1171,9 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar site:site site:stage-deploy -Dsonar.host.url=${{SONAR}} -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          goals: 'clean deploy sonar:sonar site:site site:stage-deploy
+            -Dsonar.host.url=${{SONAR}} -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
           settings: '{mvn-settings}'
