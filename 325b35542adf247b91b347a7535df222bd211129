@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_bb12a1b2",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-03T12:31:21Z",
+      "side": 1,
+      "message": "Instead of slowly increasing the timeout like this, it would be better to just remove the lower than default timeout. This will set your timeout to 6 hours which is our default.",
+      "revId": "325b35542adf247b91b347a7535df222bd211129",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
