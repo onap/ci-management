@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_3b89f1ca",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-03T15:26:29Z",
+      "side": 1,
+      "message": "Instead of doing a comment, just remove the line. If it needs to be added back, it can be.",
+      "revId": "dbd9693ac7dea5876829281f54be137f88e58c25",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
