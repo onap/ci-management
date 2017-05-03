@@ -12,8 +12,8 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-stage-site-java':
-                site-pom: 'ecomp-sdk/pom.xml'
-                trigger-job: '{project-name}-{stream}-{subproject}-release-java-daily'
+          site-pom: 'ecomp-sdk/pom.xml'
+          trigger-job: '{project-name}-{stream}-{subproject}-release-java-daily'
 
     project: 'ecompsdkos'
     stream:
