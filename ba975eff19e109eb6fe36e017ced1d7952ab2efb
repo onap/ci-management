@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Vijay Venkatesh Kumar <vv770d@att.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Thu, 11 May 2017 15:09:28 +0000
+Reviewed-on: http://gerrit.onap.org/r/4065
+Project: ci-management
+Branch: refs/heads/master
