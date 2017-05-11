@@ -1,0 +1,15 @@
+---
+- project:
+    name: aai-rest-client
+    project-name: 'aai-rest-client'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    project: 'aai/rest-client'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-rest-client-settings'
+    files: '**'
+    archive-artifacts: ''
