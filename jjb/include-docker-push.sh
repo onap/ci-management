@@ -29,7 +29,7 @@ if [[ $PROJECT =~ $SEARCH ]] ; then
     if [ "$VERSION" == "1.0.0" ]; then
         docker tag $REPO_PATH:latest $REPO_PATH:1.0-STAGING-latest;
         docker push $REPO_PATH:1.0-STAGING-latest;
-    else if [ "$VERSION" == "1.1.0" ]; then
+    elif [ "$VERSION" == "1.1.0" ]; then
         docker tag $REPO_PATH:latest $REPO_PATH:1.1-STAGING-latest;
         docker push $REPO_PATH:1.0-STAGING-latest;
     else
