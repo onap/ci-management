@@ -26,7 +26,7 @@
       - '{project-name}-{stream}-daily-release-2scm-mvn-script':
           mvn-goals-versioning:
             'versions:set versions:update-child-modules versions:commit'
-          mvn-goals: 'clean deploy'
+          mvn-goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
           maven-deploy-properties: |
               deployAtEnd=true
           script: |
