@@ -1,0 +1,24 @@
+---
+- project:
+    name: aai-traversal
+    project-name: 'aai-traversal'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-aai-docker-java-version-daily':
+          pom: 'aai-traversal/pom.xml'
+          mvn-goals: 'docker:build docker:push'
+
+    project: 'aai/traversal'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-traversal-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
