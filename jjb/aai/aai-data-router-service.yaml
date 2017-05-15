@@ -1,0 +1,19 @@
+---
+- project:
+    name: aai-data-router-service
+    project-name: 'aai-data-router-service'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/data-router-service'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-data-router-service-settings'
+    files: '**'
+    archive-artifacts: ''
