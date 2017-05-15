@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_e612b9b3",
+        "filename": "jjb/aai/aai-data-router-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-05-15T18:01:03Z",
+      "side": 1,
+      "message": "You should also rename the yaml file to reflect the change.",
+      "revId": "3dccc85aa3540c3e0ee5442df6cd064d6c1cc296",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
