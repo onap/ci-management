@@ -19,6 +19,10 @@ fi
 SNAPSHOT_TAG=${VERSION}-SNAPSHOT-${DATETIME_STAMP};
 STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
+if [[ $PROJECT =~ "resources" ]] || [[ $PROJECT =~ "traversal" ]]; then
+    exit;
+fi;
+
 if [[ $PROJECT =~ $SEARCH ]] ; then
 
     REPO_PATH=$DOCKER_REPOSITORY/openecomp/ajsc-aai;
