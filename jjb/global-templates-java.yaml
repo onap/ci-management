@@ -1307,3 +1307,73 @@
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
+
+- job-template:
+    name: '{project-name}-{stream}-aai-docker-java-version-daily'
+    project-type: freestyle
+    node: 'ubuntu1604-docker-8c-8g'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: '{maven-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      # 12 AM UTC
+      - timed: 'H 12 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
+    builders:
+
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+
+      - docker-login
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: 'pom.xml'
+          goals: 'clean install -DskipTests -B -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
+          goals: '{mvn-goals}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+          properties:
+            - maven.test.skip=true
+            - docker.pull.registry=nexus3.onap.org:10001
+            - docker.push.registry=nexus3.onap.org:10003
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
