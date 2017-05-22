@@ -4,7 +4,6 @@
     "stack_user": null,
     "stack_pass": null,
     "stack_network": null,
-
     "base_image": null,
     "cloud_user": null,
     "distro": null,
@@ -32,7 +31,9 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["mkdir -p /tmp/packer"]
+      "inline": [
+        "mkdir -p /tmp/packer"
+      ]
     },
     {
       "type": "file",
