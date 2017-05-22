@@ -14,7 +14,7 @@
           pom: 'aai-resources/pom.xml'
           mvn-goals: 'docker:build docker:push'
 
-    project: 'aai/aai-resources'
+    project: 'aai/resources'
     stream:
       - 'master':
           branch: 'master'
