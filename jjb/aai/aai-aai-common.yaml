@@ -6,7 +6,6 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-docker-image-blessing'
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
@@ -15,8 +14,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
     mvn-settings: 'aai-aai-common-settings'
     files: '**'
     archive-artifacts: ''
