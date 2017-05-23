@@ -15,6 +15,23 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-engine-settings'
+    files: '**'
+    archive-artifacts: ''
+- project:
+    name: policy-engine-release-1.0.0
+    project-name: 'policy-engine'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-stage-site-java':
+          build-node: 'ubuntu1604-basebuild-4c-4g'
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'policy/engine'
+    stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'policy-engine-settings'
