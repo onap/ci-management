@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Richard von Dadelszen <richard.vondadelszen@amdocs.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Thu, 25 May 2017 20:01:40 +0000
+Reviewed-on: http://gerrit.onap.org/r/4491
+Project: ci-management
+Branch: refs/heads/master
