@@ -1,0 +1,19 @@
+---
+- project:
+    name: aai-sparky-be
+    project-name: 'aai-sparky-be'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/sparky-be'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-sparky-be-settings'
+    files: '**'
+    archive-artifacts: ''
