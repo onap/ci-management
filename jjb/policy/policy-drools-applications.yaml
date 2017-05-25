@@ -14,6 +14,22 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-drools-applications-settings'
+    files: '**'
+    archive-artifacts: ''
+- project:
+    name: policy-drools-applications-release-1.0.0
+    project-name: 'policy-drools-applications'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'policy/drools-applications'
+    stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'policy-drools-applications-settings'

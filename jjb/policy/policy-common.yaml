@@ -14,6 +14,23 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-common-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: policy-common-release-1.0.0
+    project-name: 'policy-common'
+    jobs:
+      - '{project-name}-{stream}-verify-java-skip-tests'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'policy/common'
+    stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'policy-common-settings'
