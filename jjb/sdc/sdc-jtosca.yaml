@@ -1,0 +1,21 @@
+---
+
+- project:
+    name: sdc-jtosca
+    project-name: 'sdc-jtosca'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'sdc/jtosca'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-jtosca-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
