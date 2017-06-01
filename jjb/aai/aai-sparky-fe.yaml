@@ -2,10 +2,12 @@
 - project:
     name: sparky-fe
     project-name: 'sparky-fe'
+    node: 'centos7-basebuild-4c-4g'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+          
     project: 'aai/sparky-fe'
     stream:
       - 'master':
