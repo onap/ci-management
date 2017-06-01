@@ -3,9 +3,12 @@
     name: sparky-fe
     project-name: 'sparky-fe'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-verify-java':
+          node: 'ubuntu1604-docker-8c-8g'
+      - '{project-name}-{stream}-merge-java':
+          node: 'ubuntu1604-docker-8c-8g'
+      - '{project-name}-{stream}-release-version-java-daily':
+          node: 'ubuntu1604-docker-8c-8g'
     project: 'aai/sparky-fe'
     stream:
       - 'master':
