@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_f80a51d1",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-06-02T16:30:11Z",
+      "side": 1,
+      "message": "Some extra white space that should be cleaned up.",
+      "revId": "76be473bca1179516c93091abd514876502714cb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
