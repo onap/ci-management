@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_b8e29901",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-02T17:03:25Z",
+      "side": 1,
+      "message": "I was looking over the rendered jobs and noticed that they weren\u0027t being named aai-sparky-fe-\u003cjob\u003e like they should. That\u0027s because you don\u0027t have your project correctly named here. It should be aai-sparky-fe if you don\u0027t do that you won\u0027t ever be able to find your jobs in Jenkins since we don\u0027t have a  tab that would find them for you.",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "e1e0498e87f1465ba5465f7dd5d41a908b362149",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_98e7d512",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-02T17:03:25Z",
+      "side": 1,
+      "message": "This variable should be build-node not node",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 8
+      },
+      "revId": "e1e0498e87f1465ba5465f7dd5d41a908b362149",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
