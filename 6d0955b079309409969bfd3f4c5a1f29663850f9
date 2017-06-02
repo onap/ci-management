@@ -22,6 +22,30 @@
       "revId": "6d0955b079309409969bfd3f4c5a1f29663850f9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_984b552b",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1157
+      },
+      "writtenOn": "2017-06-02T16:25:39Z",
+      "side": 1,
+      "message": "Hi Andy,\n\nThose are good points!  I\u0027ll change the configuration and submit another version momentarily.  The reason I put the node over-ride at the job definition level was that I didn\u0027t think I could define it higher in the project template based on the openstack jjb schema that I was looking at.  \n\nBut you know this stuff better than I do, so I\u0027ll make that change and flip over to a slightly smaller centos jenkins slave and hopefully that will unblock us.\n\nregards,\n\nDave Adams.",
+      "parentUuid": "da141535_b8cf39b0",
+      "range": {
+        "startLine": 11,
+        "startChar": 17,
+        "endLine": 11,
+        "endChar": 40
+      },
+      "revId": "6d0955b079309409969bfd3f4c5a1f29663850f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
