@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_38ee89ed",
+        "filename": "jjb/include-docker-push.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-02T17:08:22Z",
+      "side": 1,
+      "message": "I really don\u0027t like how this is slowly growing. This should be some sort of function that figures out how these should be getting tagged for docker based on information either already available in the project repo, or being handed in with the given job.",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 49
+      },
+      "revId": "ad784a4aae2475fbb2421e97f441cd5fb8dc1678",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
