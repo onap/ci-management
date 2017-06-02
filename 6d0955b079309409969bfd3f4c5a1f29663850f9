@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_b8cf39b0",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-02T15:16:28Z",
+      "side": 1,
+      "message": "Given you\u0027re primarily trying to increase the size of the instance to get it to build properly I would suggest doing the following:\n\nRemove all the current node definitions and set just one at the same level as your project variable below.\n\nAdditionally, instead of jumping up to such a large instance, let\u0027s step to the next size which would be \u0027centos7-basebuild-4c-4g\u0027 If that fails for whatever reason, we can step up to the 8c-8g instance, but I would continue to use the centos7-basebuild flavor and not the ubuntu1604-docker flavor since that instance is targeted at running docker, not being a maven build host.",
+      "range": {
+        "startLine": 11,
+        "startChar": 17,
+        "endLine": 11,
+        "endChar": 40
+      },
+      "revId": "6d0955b079309409969bfd3f4c5a1f29663850f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
