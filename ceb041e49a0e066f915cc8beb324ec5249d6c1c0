@@ -34,6 +34,24 @@
       "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_bbd613c4",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-06T17:10:03Z",
+      "side": 1,
+      "message": "The template itself is fine. What I\u0027m saying is that you should have two discreet patches.\n\n1) That adds the macro and template\n2) That is based on the other one that adds the job to the project.",
+      "parentUuid": "da141535_fbcc8b37",
+      "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
