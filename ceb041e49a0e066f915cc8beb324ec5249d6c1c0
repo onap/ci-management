@@ -16,6 +16,24 @@
       "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_fbcc8b37",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-06-06T17:04:21Z",
+      "side": 1,
+      "message": "Thanks Andy! :)  Should the entire job template be defined in this file rather than in global-templates-java.yaml?",
+      "parentUuid": "da141535_3b4b23b2",
+      "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
