@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_bbbbb371",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "Put this in the footer block.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_9b77cfd4",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "What\u0027s the point of a 5 line macro that does the same thing as just calling this directly in the job?\n\n - sonatype-clm:\n     application-name: \u0027{project-name}\u0027",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 48
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_7bad1b31",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "Rather than letting projects override this. Set this to 30 days.",
+      "range": {
+        "startLine": 17,
+        "startChar": 30,
+        "endLine": 17,
+        "endChar": 52
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_3ba7a351",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "Is \u0027q\u0027 a valid profile in ONAP?\n\nIn OpenDaylight it\u0027s an odlparent defined profile.",
+      "range": {
+        "startLine": 47,
+        "startChar": 14,
+        "endLine": 47,
+        "endChar": 17
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_1b64df20",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "Basically this set of Maven commands are useful in all Maven calls so best make this a default.yaml variable that can be recalled eg {onap-infra-mvn-opts}",
+      "range": {
+        "startLine": 48,
+        "startChar": 14,
+        "endLine": 53,
+        "endChar": 60
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_5b81378e",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2017-06-06T17:37:18Z",
+      "side": 1,
+      "message": "As mentioned in the macros file. What\u0027s the point of declaring a 5 line macro that can be achieved in the same 2 lines here.",
+      "range": {
+        "startLine": 61,
+        "startChar": 6,
+        "endLine": 62,
+        "endChar": 44
+      },
+      "revId": "7a37aa2c9e37fa0438a0efedac6555a4ffb2d655",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
