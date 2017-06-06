@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da141535_3b4b23b2",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-06T16:54:17Z",
+      "side": 1,
+      "message": "Don\u0027t conflate adding templates with adding a call to the template.\n\nThey should be discreet changes so that it\u0027s easier to do bisects when needed.",
+      "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
