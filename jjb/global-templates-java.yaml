@@ -14,7 +14,7 @@
 
     properties:
       - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: 30
 
     parameters:
       - infra-parameters:
@@ -44,13 +44,7 @@
           pom: 'pom.xml'
           goals: |
               clean install dependency:tree com.sonatype.clm:clm-maven-plugin:index
-              -Pq
-              --show-version
-              --batch-mode
-              -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
-              -Djenkins
-              -Dmaven.repo.local=/tmp/r
-              -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
+              {onap-infra-mvn-opts}
           java-opts:
             - '-Xmx4096m -XX:MaxPermSize=512m'
           settings: '{mvn-settings}'
@@ -58,7 +52,7 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
       - shell: 'find . -regex ".*karaf/target" | xargs rm -rf'
-      - check-clm:
+      - sonatype-clm:
           application-name: '{project-name}'
 
     publishers:

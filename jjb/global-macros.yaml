@@ -66,12 +66,6 @@
     builders:
       - shell: !include-raw: include-docker-login.sh
 
-- builder:
-    name: check-clm
-    builders:
-      - sonatype-clm:
-          application-name: '{application-name}'
-
 # PARAMETERS
 - parameter:
     name: infra-parameters

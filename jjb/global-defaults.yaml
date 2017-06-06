@@ -14,6 +14,16 @@
     # default gerrit server definition
     server-name: 'Primary'
 
+    # Maven / Java
+    jdk: 'openjdk8'
+    onap-infra-mvn-opts: |
+        --show-version
+        --batch-mode
+        -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+        -Djenkins
+        -Dmaven.repo.local=/tmp/r
+        -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
+
     # Timeout in minutes
     build-timeout: 360
     build-node: ubuntu1604-basebuild-2c-1g
