@@ -52,6 +52,24 @@
       "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da141535_7bd87bef",
+        "filename": "jjb/aai/aai-aai-service.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-06-06T17:11:14Z",
+      "side": 1,
+      "message": "Got it ;)\n\nThanks a ton!\nLet me separate them ..",
+      "parentUuid": "da141535_bbd613c4",
+      "revId": "ceb041e49a0e066f915cc8beb324ec5249d6c1c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
