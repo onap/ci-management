@@ -14,8 +14,7 @@
     # default gerrit server definition
     server-name: 'Primary'
 
-    # Maven / Java
-    jdk: 'openjdk8'
+    # Maven
     onap-infra-mvn-opts: |
         --show-version
         --batch-mode
