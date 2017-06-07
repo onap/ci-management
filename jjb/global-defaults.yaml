@@ -14,6 +14,9 @@
     # default gerrit server definition
     server-name: 'Primary'
 
+    # Java
+    jdk: ''
+
     # Maven
     onap-infra-mvn-opts: |
         --show-version
