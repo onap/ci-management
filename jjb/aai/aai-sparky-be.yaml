@@ -3,6 +3,7 @@
     name: aai-sparky-be
     project-name: 'aai-sparky-be'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
