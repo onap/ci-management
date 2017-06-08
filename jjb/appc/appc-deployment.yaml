@@ -4,6 +4,7 @@
     name: appc-deployment
     project-name: 'appc-deployment'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
