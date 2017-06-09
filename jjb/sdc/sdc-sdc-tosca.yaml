@@ -4,6 +4,7 @@
     name: sdc-sdc-tosca
     project-name: 'sdc-sdc-tosca'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
