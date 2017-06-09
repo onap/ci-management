@@ -3,6 +3,7 @@
     name: sdnc-plugins
     project-name: 'sdnc-plugins'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
