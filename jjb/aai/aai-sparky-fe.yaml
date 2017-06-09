@@ -4,6 +4,7 @@
     project-name: 'aai-sparky-fe'
     build-node: 'centos7-basebuild-4c-4g'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
