@@ -895,6 +895,61 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run :
+    #  1. login to the docker registry
+    #  2. do a clean deploy on the specified profile
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     profile:   the docker profile defined in the pom
+    #     maven-properties: properties passed to maven
+    name: '{project-name}-{stream}-docker-java-properties-daily'
+    project-type: freestyle
+    node: 'ubuntu1604-docker-8c-8g'
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: '{maven-version}'
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+    triggers:
+      # 12 AM UTC
+      - timed: 'H 12 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+    builders:
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - docker-login
+      - maven-docker-push-daily:
+          maven-version: '{maven-version}'
+          mvn-settings: '{mvn-settings}'
+          pom: '{docker-pom}'
+          properties: '{maven-properties}'
+          # use default as mvn-profile if profile is not needed
+          mvn-profile: '{mvn-profile}'
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
+- job-template:
     name: '{project-name}-{stream}-docker-java-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
