@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: oparent
+    project-name: 'oparent'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'oparent'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'oparent-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
