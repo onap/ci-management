@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_9a45a9b5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-23T14:35:05Z",
+      "side": 1,
+      "message": "When I stated \u003cJIRA-KEY\u003e I didn\u0027t mean the literal \u003c \u0026 \u003e ;)",
+      "range": {
+        "startLine": 9,
+        "startChar": 7,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "91c56ec978bf3e542144038aefdcb29f3a537013",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
