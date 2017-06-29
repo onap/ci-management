@@ -34,3 +34,7 @@
 
     # Set default maven version used for everything
     maven-version: 'mvn33'
+
+    # LF infra defaults
+    gerrit-server: onap
+    jenkins-ssh-credential: opendaylight-jenkins-ssh
