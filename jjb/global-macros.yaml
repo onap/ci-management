@@ -225,6 +225,7 @@
           skip-tag: true
           timeout: 30
           choosing-strategy: '{choosing-strategy}'
+          submodule-recursive: '{submodule-recursive}'
 
 - scm:
     name: gerrit-trigger-scm-basedir
@@ -239,6 +240,7 @@
           timeout: 30
           choosing-strategy: '{choosing-strategy}'
           basedir: '{basedir}'
+          submodule-recursive: '{submodule-recursive}'
 
 - scm:
     name: git-branch-scm
