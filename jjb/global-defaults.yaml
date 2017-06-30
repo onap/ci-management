@@ -34,3 +34,6 @@
 
     # Set default maven version used for everything
     maven-version: 'mvn33'
+
+    # git submodule attributes
+    submodule-recursive: true
