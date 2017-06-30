@@ -22,6 +22,30 @@
       "revId": "582c2073c86b9568d135b326bd9acaf5265973b1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_cb6b5584",
+        "filename": "jjb/ci-management/ci-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-06-30T20:38:07Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "9a0e1d27_2b465124",
+      "range": {
+        "startLine": 51,
+        "startChar": 10,
+        "endLine": 51,
+        "endChar": 54
+      },
+      "revId": "582c2073c86b9568d135b326bd9acaf5265973b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
