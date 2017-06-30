@@ -12,7 +12,7 @@
     branch: 'master'
     build-timeout: '60'
     build-node: 'centos7-basebuild-2c-1g'
-
+    submodule-recursive: true
     platforms:
       - centos
       - ubuntu-16.04
@@ -48,6 +48,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -100,6 +101,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -150,6 +152,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -189,6 +192,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
