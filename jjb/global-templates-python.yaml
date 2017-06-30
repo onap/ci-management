@@ -37,6 +37,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -89,6 +90,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -143,6 +145,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
       - git-extra-project:
           project: '{extra-project1}'
           refspec: '{extra-refspec1}'
@@ -205,6 +208,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
       - git-extra-project:
           project: '{extra-project1}'
           refspec: '{extra-refspec1}'
