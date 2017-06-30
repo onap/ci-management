@@ -11,6 +11,7 @@
     project-type: freestyle
     node: '{build-node}'
     jdk: '{jdk}'
+    submodule-recursive: true
 
     properties:
       - infra-properties:
@@ -27,6 +28,7 @@
       - git-scm:
           refspec: ''
           branch: '{branch}'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -91,6 +93,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -154,6 +157,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -215,6 +219,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -279,6 +284,7 @@
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -339,6 +345,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -402,6 +409,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -477,6 +485,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -555,6 +564,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -619,6 +629,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -678,6 +689,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -744,6 +756,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -810,6 +823,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -862,6 +876,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -923,6 +938,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
     wrappers:
       - infra-wrappers:
           build-timeout: '{build-timeout}'
@@ -971,6 +987,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1028,6 +1045,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1098,6 +1116,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1165,6 +1184,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1251,6 +1271,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1332,6 +1353,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1408,6 +1430,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1476,6 +1499,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
@@ -1528,6 +1552,7 @@
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:
