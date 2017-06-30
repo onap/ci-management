@@ -11,6 +11,7 @@
     project-type: freestyle
     node: '{build-node}'
     jdk: '{jdk}'
+    submodule-recursive: true
 
     properties:
       - infra-properties:
@@ -27,6 +28,7 @@
       - git-scm:
           refspec: ''
           branch: '{branch}'
+          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:

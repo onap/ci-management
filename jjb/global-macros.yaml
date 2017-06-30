@@ -212,6 +212,7 @@
           skip-tag: true
           wipe-workspace: true
           timeout: 30
+          submodule-recursive: '{submodule-recursive}'
 
 - scm:
     name: gerrit-trigger-scm
@@ -239,6 +240,7 @@
           timeout: 30
           choosing-strategy: '{choosing-strategy}'
           basedir: '{basedir}'
+          submodule-recursive: '{submodule-recursive}'
 
 - scm:
     name: git-branch-scm
@@ -252,6 +254,7 @@
           skip-tag: true
           timeout: 30
           wipe-workspace: true
+          submodule-recursive: '{submodule-recursive}'
 
 - scm:
     name: git-extra-project
@@ -266,6 +269,7 @@
           timeoute: 30
           wipe-workspace: false
           basedir: '{checkout-dir}'
+          submodule-recursive: '{submodule-recursive}'
 
 # TRIGGERS
 
