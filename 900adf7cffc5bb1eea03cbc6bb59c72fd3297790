@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_4bf3c50a",
+        "filename": ".gitmodules",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-30T14:57:39Z",
+      "side": 1,
+      "message": "Instead of linking against the LF Gerrit instance, I recommend linking against our GitHub mirror of https://github.com/lfit/releng-global-jjb the reason for this is once we enable GitHub mirroring then GitHub will allow fairly seamless navigation into the submodule since it will then also be on GitHub. Besides, using our GitHub mirror is perfectly fine since it\u0027s read-only anyway.",
+      "revId": "900adf7cffc5bb1eea03cbc6bb59c72fd3297790",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_6bee8924",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-06-30T14:57:39Z",
+      "side": 1,
+      "message": "This should be part of the footer, not part of the body.\n\nI would also recommend that since this Gerrit instance is tied to the ONAP JIRA that you create a card in the CIMAN project there, reference it in this commit and on the card do the link to the LF JIRA card.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "900adf7cffc5bb1eea03cbc6bb59c72fd3297790",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
