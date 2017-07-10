@@ -424,7 +424,7 @@
           properties-file: version.properties
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'versions:set versions:update-child-modules versions:commit'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
           settings: '{mvn-settings}'
@@ -499,7 +499,7 @@
           properties-file: version.properties
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'versions:set versions:update-child-modules versions:commit'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
           settings: '{mvn-settings}'
@@ -1052,7 +1052,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'versions:set versions:update-child-modules versions:commit'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
           settings: '{mvn-settings}'
@@ -1122,7 +1122,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'versions:set versions:update-child-modules versions:commit'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
           settings: '{mvn-settings}'
@@ -1425,7 +1425,7 @@
           properties-file: version.properties
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'versions:set versions:update-child-modules versions:commit'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
           settings: '{mvn-settings}'
