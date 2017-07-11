@@ -16,6 +16,24 @@
       "revId": "90aa1178cddda81cd3295481bc18b0ab708cbafc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_f10f282d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 741
+      },
+      "writtenOn": "2017-07-11T14:08:16Z",
+      "side": 1,
+      "message": "sorry, i didn\u0027t get you fully, pls correct if anything wrong in below commit message, thanks\n\n-----------\nAdd jenkins job for cli project\n\nJIRA: CLI-4\n\nChange-Id: Icd4140d16c6b85f7ba5764f85d8f937ec255847a\nSigned-off-by: Kanagaraj Manickam k00365106 \u003ckanagaraj.manickam@huawei.com\u003e",
+      "parentUuid": "9a0e1d27_46129c63",
+      "revId": "90aa1178cddda81cd3295481bc18b0ab708cbafc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
