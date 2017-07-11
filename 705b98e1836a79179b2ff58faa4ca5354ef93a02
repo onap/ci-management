@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_f164c8e6",
+        "filename": "jjb/ci-management/ci-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-11T16:24:15Z",
+      "side": 1,
+      "message": "Move this to the global-defaults.yaml",
+      "revId": "705b98e1836a79179b2ff58faa4ca5354ef93a02",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_d161c4d4",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-11T16:24:15Z",
+      "side": 1,
+      "message": "Move this to the global-defaults.yaml",
+      "revId": "705b98e1836a79179b2ff58faa4ca5354ef93a02",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
