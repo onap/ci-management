@@ -1,7 +1,7 @@
 ---
 - project:
-    name: mso-libs
-    project-name: 'mso-libs'
+    name: so-libs
+    project-name: 'so-libs'
     jobs:
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
@@ -11,13 +11,13 @@
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
-    project: 'mso/libs'
+    project: 'so/libs'
     stream:
       - 'master':
           branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
-    mvn-settings: 'mso-settings'
+    mvn-settings: 'so-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
     # in the job

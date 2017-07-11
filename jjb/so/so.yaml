@@ -1,8 +1,8 @@
 ---
 
 - project:
-    name: mso
-    project-name: 'mso'
+    name: so
+    project-name: 'so'
     jobs:
       - '{project-name}-{stream}-verify-profile-java':
           mvn-profile: 'with-integration-tests'
@@ -22,13 +22,13 @@
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
           build-node: 'ubuntu1604-basebuild-8c-8g'
 
-    project: 'mso'
+    project: 'so'
     stream:
       - 'master':
           branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
-    mvn-settings: 'mso-settings'
+    mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
