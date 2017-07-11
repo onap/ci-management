@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Manoop Talasila <talasila@research.att.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Tue, 11 Jul 2017 12:52:42 +0000
+Reviewed-on: http://gerrit.onap.org/r/5729
+Project: ci-management
+Branch: refs/heads/master
