@@ -34,6 +34,24 @@
       "revId": "90aa1178cddda81cd3295481bc18b0ab708cbafc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_f13608e7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-11T14:42:07Z",
+      "side": 1,
+      "message": "You need to resubmit your change modifying the commit message. The CLI-4 needs to be part of the _footer_ of the message.\n\nCommit messages are just like email messages they have the following format:\n\n[subjectline]\n\u003cemptyline\u003e\n[body] (one or more paragraphs)\n\u003cemptyline\u003e\n[footerblock]\n\nI\u0027m stating that the JIRA issue needs to be part of the footerblock which contains the Change-Id and your DCO line, not part of the body.",
+      "parentUuid": "9a0e1d27_f10f282d",
+      "revId": "90aa1178cddda81cd3295481bc18b0ab708cbafc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
