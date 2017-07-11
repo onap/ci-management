@@ -225,7 +225,7 @@
           skip-tag: true
           timeout: 30
           choosing-strategy: '{choosing-strategy}'
-          submodule-recursive: '{submodule-recursive}'
+          recursive: '{submodule-recursive}'
 
 - scm:
     name: gerrit-trigger-scm-basedir
