@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_46129c63",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-11T12:53:49Z",
+      "side": 1,
+      "message": "The JIRA Issue should be part of the footer of the message. Additionally, you should prefix it with either Issue: or JIRA:",
+      "revId": "90aa1178cddda81cd3295481bc18b0ab708cbafc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
