@@ -13,6 +13,7 @@
 
     # default gerrit server definition
     server-name: 'Primary'
+    gerrit-server-name: 'Primary'
 
     # Java
     jdk: ''
@@ -37,3 +38,6 @@
 
     # git submodule attributes
     submodule-recursive: true
+
+    # Jenkins
+    jenkins-ssh-credential: opendaylight-jenkins-ssh
