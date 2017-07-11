@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: vfc-gvnfm-vnfres
+    project-name: 'vfc-gvnfm-vnfres'
+    jobs:
+      - '{project-name}-{stream}-verify-python'
+    project: 'vfc/gvnfm/vnfres'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    files: '**'
+    archive-artifacts: ''
