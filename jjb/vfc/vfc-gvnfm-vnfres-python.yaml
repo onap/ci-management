@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: vfc-gvnfm-vnfres-python
+    project: 'vfc-gvnfm-vnfres'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'res':
+          path: 'res'
+          pattern: 'res/**'
+    jobs:
+      - '{project}-{stream}-{subproject}-verify-python'
