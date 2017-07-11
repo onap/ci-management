@@ -1,13 +1,15 @@
 ---
 - project:
     name: ci-management-jobs
-    project: 'ci-management'
     jobs:
+      - '{project-name}-ci-jobs'
       - '{project}-verify-jjb'
       - '{project}-merge-jjb'
       - '{project}-verify-packer'
       - '{project}-merge-packer-{platforms}-{templates}'
 
+    project: 'ci-management'
+    project-name: 'ci-management'
     archive-artifacts: '**/*.log'
     branch: 'master'
     build-timeout: '60'
