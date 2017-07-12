@@ -4,9 +4,9 @@
     name: clamp
     project-name: 'clamp'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-java-daily-checkstyle'
       - '{project-name}-{stream}-docker-java-properties-daily':
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'

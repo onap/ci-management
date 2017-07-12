@@ -169,6 +169,45 @@
                 unhealthy: 40
 
 - publisher:
+    name: checkstyle-result
+    publishers:
+      - checkstyle:
+          pattern: '**/checkstyle-result.xml'
+          healthy: 0
+          unhealthy: 100
+          health-threshold: 'high'
+          thresholds:
+            unstable:
+              total-all: 30
+              total-high: 15
+              total-normal: 20
+              total-low: 25
+              new-all: 5
+              new-high: 0
+              new-normal: 2
+              new-low: 5
+
+- publisher:
+    name: checkstyle-result-daily
+    publishers:
+      - checkstyle:
+          pattern: '**/checkstyle-result.xml'
+          healthy: 0
+          unhealthy: 100
+          health-threshold: 'high'
+          thresholds:
+            unstable:
+              total-all: 30
+              total-high: 15
+              total-normal: 20
+              total-low: 25
+              new-all: 1
+              new-high: 0
+              new-normal: 1
+              new-low: 1
+
+
+- publisher:
     name: infra-shiplogs
     # To archive things, the job will need to create an "archives" directory in
     # the workspace and this macro will handle copying the contents of the
