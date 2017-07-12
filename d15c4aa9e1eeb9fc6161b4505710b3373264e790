@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_31b5a0cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-12T14:52:51Z",
+      "side": 1,
+      "message": "Issue links should not be in the commit subject line. Move this to the commit message footer prefixed with either \u0027Issue: \u0027 or \u0027JIRA: \u0027\n\nex:\n\nIssue: CIMAN-6\nSigned-off-by: ...",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 9
+      },
+      "revId": "d15c4aa9e1eeb9fc6161b4505710b3373264e790",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_11ca9c4f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-12T14:52:51Z",
+      "side": 1,
+      "message": "Yes this is the correct way to do this. JJB does a recursive load of all yaml files in the jjb directory.",
+      "revId": "d15c4aa9e1eeb9fc6161b4505710b3373264e790",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
