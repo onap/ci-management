@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_d1c30437",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-12T14:54:03Z",
+      "side": 1,
+      "message": "Thank you for moving this to the footer but I suppose I should have been a bit more clear on this. It should additionally be prefixed with either \u0027Issue: \u0027 or \u0027JIRA: \u0027 as well.",
+      "revId": "e1e32dcf88148bd36016a63b0f7a541ff86a5326",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
