@@ -2,8 +2,6 @@
 - project:
     name: ci-management-jobs
     jobs:
-      - '{project}-verify-jjb'
-      - '{project}-merge-jjb'
       - '{project-name}-ci-jobs'
       - '{project}-verify-packer'
       - '{project}-merge-packer-{platforms}-{templates}'
