@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a0e1d27_ec6e2f96",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-07-12T22:20:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a0e1d27_2c466724",
+      "range": {
+        "startLine": 7,
+        "startChar": 11,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "b1d92f3604f4998f2bc5f55ec5ea0fab1a2044de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a0e1d27_ec474f1c",
         "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
         "patchSetId": 1
@@ -71,6 +95,54 @@
     },
     {
       "key": {
+        "uuid": "9a0e1d27_ac683788",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-07-12T22:20:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a0e1d27_ec474f1c",
+      "range": {
+        "startLine": 8,
+        "startChar": 5,
+        "endLine": 8,
+        "endChar": 29
+      },
+      "revId": "b1d92f3604f4998f2bc5f55ec5ea0fab1a2044de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_cc6b6b84",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-07-12T22:20:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a0e1d27_cc548bcc",
+      "range": {
+        "startLine": 8,
+        "startChar": 33,
+        "endLine": 8,
+        "endChar": 60
+      },
+      "revId": "b1d92f3604f4998f2bc5f55ec5ea0fab1a2044de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a0e1d27_8c5e93e8",
         "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
         "patchSetId": 1
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "9a0e1d27_8c0573c4",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-07-12T22:20:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a0e1d27_8c5e93e8",
+      "range": {
+        "startLine": 13,
+        "startChar": 34,
+        "endLine": 13,
+        "endChar": 47
+      },
+      "revId": "b1d92f3604f4998f2bc5f55ec5ea0fab1a2044de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a0e1d27_ac5157da",
         "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
         "patchSetId": 1
@@ -105,6 +201,30 @@
       "writtenOn": "2017-07-12T22:09:31Z",
       "side": 1,
       "message": "This should be double quoted",
+      "range": {
+        "startLine": 14,
+        "startChar": 7,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "b1d92f3604f4998f2bc5f55ec5ea0fab1a2044de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_6c0a1fd4",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-07-12T22:20:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a0e1d27_ac5157da",
       "range": {
         "startLine": 14,
         "startChar": 7,
