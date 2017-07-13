@@ -1,0 +1,111 @@
+---
+- job-template:
+    name: '{project-name}-{stream}-verify-csit-{functionality}'
+    disabled: false
+
+    project-type: freestyle
+    build-node: 'ubuntu1604-docker-8c-8g'
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project-name}'
+          build-days-to-keep: 30
+
+    parameters:
+      - infra-parameters:
+          project: '{project-name}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - integration-test-plan:
+          test-plan: 'plans/{project-name}/{functionality}'
+      - integration-test-options:
+          test-options: '{robot-options}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: 'integration'
+          branch: '{branch}'
+          files: 'test/csit/**/{project-name}/**'
+
+    builders:
+      - integration-install-robotframework
+      - inject:
+          properties-file: 'env.properties'
+      - integration-run-test
+
+    publishers:
+      - integration-robot:
+          unstable-if: 0.0
+          pass-if: 100.0
+      - lf-infra-publish
+
+- job-template:
+    name: '{project-name}-{stream}-csit-{functionality}'
+    disabled: false
+
+    project-type: freestyle
+    build-node: 'ubuntu1604-docker-8c-8g'
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project-name}'
+          build-days-to-keep: 30
+
+    parameters:
+      - infra-parameters:
+          project: '{project-name}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - integration-test-plan:
+          test-plan: 'plans/{project-name}/{functionality}'
+      - integration-test-options:
+          test-options: '{robot-options}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: 'integration'
+          branch: '{branch}'
+          files: 'test/csit/**/{project-name}/**'
+      - timed: '@daily'
+      - reverse:
+          jobs: '{obj:trigger_jobs}'
+
+    builders:
+      - integration-install-robotframework
+      - inject:
+          properties-file: 'env.properties'
+      - integration-run-test
+
+    publishers:
+      - integration-robot:
+          unstable-if: 0.0
+          pass-if: 100.0
+      - lf-infra-publish

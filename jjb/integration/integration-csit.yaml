@@ -1,0 +1,13 @@
+---
+- project:
+    name: integration-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'integration'
+    stream: 'master'
+    functionality:
+      - 'functionality1':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
