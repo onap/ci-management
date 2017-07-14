@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_6020e39b",
+        "filename": "jjb/ci-management/ci-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-14T14:34:53Z",
+      "side": 0,
+      "message": "Do _not_ remove this. This is required for the production system to operate properly",
+      "revId": "3b31ed323f50edc0e2dec03f21cea540084a53ec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
