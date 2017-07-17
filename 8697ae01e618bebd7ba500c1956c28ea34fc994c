@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a0e1d27_23af95e5",
+        "filename": "jjb/integration/integration-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-07-17T17:35:49Z",
+      "side": 1,
+      "message": "Can this name be more specific? or is this already decided by the team?",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "8697ae01e618bebd7ba500c1956c28ea34fc994c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_63a58d03",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-07-17T17:35:49Z",
+      "side": 1,
+      "message": "Will this name cause a redundancy?\nwill look like \"integration-verify-integration\"...\nwill \u0027{project-name}-{stream}-verify-csit-{functionality}\u0027 be a better name?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 61
+      },
+      "revId": "8697ae01e618bebd7ba500c1956c28ea34fc994c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0e1d27_43aa89d5",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-07-17T17:35:49Z",
+      "side": 1,
+      "message": "\u0027{project-name}-{stream}-csit-{functionality}\u0027 might be a better name so that we can reflect the branch is running this job in (stream)?",
+      "range": {
+        "startLine": 56,
+        "startChar": 10,
+        "endLine": 56,
+        "endChar": 42
+      },
+      "revId": "8697ae01e618bebd7ba500c1956c28ea34fc994c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
