@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_9568e488",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with the new global lf-infra-properties macro.\n\nIt takes the following two parameters:\nproject : \u0027{project}\u0027\nbuild-days-to-keep: \u0027{build-days-to-keep}\u0027",
+      "range": {
+        "startLine": 11,
+        "startChar": 8,
+        "endLine": 12,
+        "endChar": 32
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_d56e5c96",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with the new global macro of lf-infra-wrappers\n\nIt takes two parameters of:\nbuild-timeout: \u0027{build-timeout}\u0027\njenkins-ssh-credential: \u0027{jenkins-ssh-credential}\u0027",
+      "range": {
+        "startLine": 32,
+        "startChar": 8,
+        "endLine": 33,
+        "endChar": 42
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_b56be084",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with our global macro of lf-infra-publish\n\nThe macro takes no extra parameters.",
+      "range": {
+        "startLine": 52,
+        "startChar": 8,
+        "endLine": 53,
+        "endChar": 42
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_3558f0f9",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with the new global lf-infra-properties macro.\n\nIt takes the following two parameters:\nproject : \u0027{project}\u0027\nbuild-days-to-keep: \u0027{build-days-to-keep}\u0027",
+      "range": {
+        "startLine": 64,
+        "startChar": 8,
+        "endLine": 65,
+        "endChar": 32
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_155df4e9",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with the new global macro of lf-infra-wrappers\n\nIt takes two parameters of:\nbuild-timeout: \u0027{build-timeout}\u0027\njenkins-ssh-credential: \u0027{jenkins-ssh-credential}\u0027",
+      "range": {
+        "startLine": 85,
+        "startChar": 8,
+        "endLine": 86,
+        "endChar": 42
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_55636cb1",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:36:57Z",
+      "side": 1,
+      "message": "This should be replaced with our global macro of lf-infra-publish\n\nThe macro takes no extra parameters.",
+      "range": {
+        "startLine": 108,
+        "startChar": 8,
+        "endLine": 109,
+        "endChar": 42
+      },
+      "revId": "8f8d39b0700947af69f8c0cf66153f3d727c74fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
