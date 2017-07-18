@@ -1,0 +1,17 @@
+---
+
+- project:
+    name: vfc-nfvo-lcm
+    project-name: 'vfc-nfvo-lcm'
+    project: 'vfc/nfvo/lcm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-lcm-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'lcm':
+          path: 'lcm'
+          pattern: 'lcm/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
