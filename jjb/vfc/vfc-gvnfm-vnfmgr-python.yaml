@@ -1,0 +1,19 @@
+---
+
+- project:
+    name: vfc-gvnfm-vnfmgr
+    project-name: 'vfc-gvnfm-vnfmgr'
+    project: 'vfc/gvnfm/vnfmgr'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'mgr':
+          path: 'mgr'
+          pattern: 'mgr/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
