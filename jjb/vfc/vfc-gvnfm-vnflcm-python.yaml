@@ -1,0 +1,19 @@
+---
+
+- project:
+    name: vfc-gvnfm-vnflcm
+    project-name: 'vfc-gvnfm-vnflcm'
+    project: 'vfc/gvnfm/vnflcm'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vfc-gvnfm-vnflcm-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'lcm':
+          path: 'lcm'
+          pattern: 'lcm/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
