@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_f54a7826",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:26:32Z",
+      "side": 1,
+      "message": "This should just be:\n\nSandbox jobs CANNOT upload",
+      "range": {
+        "startLine": 16,
+        "startChar": 28,
+        "endLine": 16,
+        "endChar": 55
+      },
+      "revId": "5da1ff9e1bd0b455204001c03d031ece39cd7cf3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_d5477c1c",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:26:32Z",
+      "side": 1,
+      "message": "Add --recursive before the first \u0026\u0026",
+      "revId": "5da1ff9e1bd0b455204001c03d031ece39cd7cf3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_b55400cb",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T15:26:32Z",
+      "side": 1,
+      "message": "Don\u0027t hard code the JJB version. Besides, We\u0027re currently using JJB 1.6.1",
+      "range": {
+        "startLine": 41,
+        "startChar": 32,
+        "endLine": 41,
+        "endChar": 39
+      },
+      "revId": "5da1ff9e1bd0b455204001c03d031ece39cd7cf3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
