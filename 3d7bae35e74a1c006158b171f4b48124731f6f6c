@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_d53bfc36",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T20:50:06Z",
+      "side": 1,
+      "message": "Please don\u0027t hard code this. We have a global default that is set via \u0027{build-days-to-keep}\u0027 it so happens it\u0027s set to 30, and without a good explanation we won\u0027t accept anything larger, but are fine with it being set smaller.",
+      "range": {
+        "startLine": 13,
+        "startChar": 30,
+        "endLine": 13,
+        "endChar": 32
+      },
+      "revId": "3d7bae35e74a1c006158b171f4b48124731f6f6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_b54880cd",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-18T20:50:06Z",
+      "side": 1,
+      "message": "Please don\u0027t hard code this. We have a global default that is set via \u0027{build-days-to-keep}\u0027 it so happens it\u0027s set to 30, and without a good explanation we won\u0027t accept anything larger, but are fine with it being set smaller.",
+      "range": {
+        "startLine": 67,
+        "startChar": 30,
+        "endLine": 67,
+        "endChar": 32
+      },
+      "revId": "3d7bae35e74a1c006158b171f4b48124731f6f6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
