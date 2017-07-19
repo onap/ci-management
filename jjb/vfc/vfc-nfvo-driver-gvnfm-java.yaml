@@ -1,0 +1,19 @@
+---
+
+- project:
+    name: vfc-nfvo-driver-gvnfm-java
+    project-name: 'vfc-nfvo-driver-gvnfm'
+    project: 'vfc/nfvo/driver/vnfm/gvnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vfc-nfvo-driver-gvnfm-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'juju':
+          path: 'juju/juju-vnfmadapter'
+          pattern: 'juju/juju-vnfmadapter/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
