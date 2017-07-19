@@ -1,7 +1,7 @@
 ---
 - project:
     name: ccsdk-sli-adaptors
-    project-name: 'ccsdk-sli-adaptors''
+    project-name: 'ccsdk-sli-adaptors'
     jobs:
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
@@ -11,14 +11,13 @@
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
-    project: 'ccsdk/sli/adaptors''
+    project: 'ccsdk/sli/adaptors'
     stream:
       - 'master':
           branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'ccsdk-sli-adaptors-settings'
-
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
     # in the job
