@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_d8c69149",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T17:45:09Z",
+      "side": 1,
+      "message": "Do not place Issue IDs in the subject line. They _must_ be part of the footer and prefixed with one of the following: \u0027Issue: \u0027, \u0027Issue-Id: \u0027, or \u0027JIRA: \u0027\n\nThe footer is defined as the _last_ contiguous block of the commit message that is not the subject line.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 9
+      },
+      "revId": "75a46a7b52eedd543a6e63a55f0541b7e2e05839",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
