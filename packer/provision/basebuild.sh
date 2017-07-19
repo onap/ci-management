@@ -46,6 +46,9 @@ ubuntu_systems() {
     # Build dependencies for Python packages
     apt-get install -y libssl-dev libmysqlclient-dev gcc
 
+    # Autorelease support packages
+    apt-get install -y xmlstarlet
+
     # Additional libraries for Python ncclient
     apt-get install -y wget unzip python-ncclient
 
