@@ -1,0 +1,24 @@
+---
+- project:
+    name: portal-sdk
+    project-name: 'portal-sdk'
+    subproject:
+      - 'ecomp-sdk':
+          pom: 'ecomp-sdk/pom.xml'
+          pattern: 'ecomp-sdk/**'
+
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'ecomp-sdk/pom.xml'
+          trigger-job: '{project-name}-{stream}-{subproject}-release-java-daily'
+
+    project: 'portal/sdk'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'portal-sdk-settings'
+    files: '**'
+    archive-artifacts: ''
