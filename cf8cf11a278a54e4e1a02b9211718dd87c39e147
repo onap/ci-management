@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_b89e3562",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T17:25:49Z",
+      "side": 1,
+      "message": "This needs to be part of the footer, not the body. A commit message is broken apart as follows:\n\nsubject\n[blank line]\n\u003ctext of message\u003e\n[blank line]\nfooter",
+      "revId": "cf8cf11a278a54e4e1a02b9211718dd87c39e147",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
