@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_f8e6ed15",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T16:29:50Z",
+      "side": 1,
+      "message": "Commit message body line too long. Wrap at no more than 80 characters.",
+      "revId": "bb31aa85e48d89124c69eaae866e84deb654b74d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
