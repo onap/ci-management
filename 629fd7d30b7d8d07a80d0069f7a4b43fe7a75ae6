@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_38dd8543",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T16:28:47Z",
+      "side": 1,
+      "message": "Please move this line into the message footer",
+      "revId": "629fd7d30b7d8d07a80d0069f7a4b43fe7a75ae6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
