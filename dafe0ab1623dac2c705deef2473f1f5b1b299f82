@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_d8cd715f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T17:59:07Z",
+      "side": 1,
+      "message": "This line needs to be moved to the footer, not the body.\n\nMake sure that it is _above_ the Signed-off-by, it doesn\u0027t matter if it is the line before or after the Change-Id.",
+      "revId": "dafe0ab1623dac2c705deef2473f1f5b1b299f82",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
