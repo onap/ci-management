@@ -1,0 +1,15 @@
+---
+
+- project:
+    name: vfc-nfvo-resmanagement
+    project-name: 'vfc-nfvo-resmanagement'
+    project: 'vfc/nfvo/resmanagement'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vfc-nfvo-resmanagement-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
