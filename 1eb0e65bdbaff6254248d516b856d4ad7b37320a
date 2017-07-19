@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_b8f075ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-19T16:42:35Z",
+      "side": 1,
+      "message": "Do not put JIRA issues in commit messages. They should be part of the commit footer and prefixed with \u0027Issue: \u0027, \u0027Issue-Id: \u0027, or \u0027JIRA: \u0027",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 11
+      },
+      "revId": "1eb0e65bdbaff6254248d516b856d4ad7b37320a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
