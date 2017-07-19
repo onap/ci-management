@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Sunder Tattavarada <statta@research.att.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Wed, 19 Jul 2017 17:43:14 +0000
+Reviewed-on: http://gerrit.onap.org/r/6039
+Project: ci-management
+Branch: refs/heads/master
