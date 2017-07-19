@@ -1,0 +1,27 @@
+---
+- project:
+    name: ccsdk-sli-core
+    project-name: 'ccsdk-sli-core'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'ccsdk/sli/core'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'ccsdk-sli-core-settings'
+    # due to a strange macro / variable translation problem this needs to be
+    # passed as a string block to properly get the properties correctly defined
+    # in the job
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
