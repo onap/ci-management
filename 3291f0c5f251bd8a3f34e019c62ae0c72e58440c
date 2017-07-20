@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_7bdd3714",
+        "filename": "jjb/vfc/vfc-nfvo-resmanagement-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-20T15:25:46Z",
+      "side": 1,
+      "message": "The filename should be vfc-nfvo-resmanagement.yaml not vfc-nfvo-resmanagement-java.yaml",
+      "revId": "3291f0c5f251bd8a3f34e019c62ae0c72e58440c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
