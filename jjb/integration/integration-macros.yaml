@@ -1,0 +1,48 @@
+---
+- parameter:
+    name: integration-test-plan
+    parameters:
+      - string:
+          name: TESTPLAN
+          default: '{test-plan}'
+          description: 'General test plan we will run unless stream-specific one is found'
+
+- parameter:
+    name: integration-test-options
+    parameters:
+      - string:
+          name: TESTOPTIONS
+          default: '{test-options}'
+          description: 'Robot command options'
+
+- builder:
+    name: integration-install-robotframework
+    builders:
+      - shell:
+          !include-raw:
+          - include-raw-integration-install-robotframework.sh
+
+- builder:
+    name: integration-run-test
+    builders:
+      - shell: "${WORKSPACE}/test/csit/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+
+- builder:
+    name: integration-autorelease-fix-relativepaths
+    builders:
+      - shell: "${WORKSPACE}/autorelease/scripts/fix-relativepaths.sh"
+
+- builder:
+    name: integration-autorelease-set-version
+    builders:
+      - shell: "${WORKSPACE}/autorelease/scripts/set-version.sh"
+
+- publisher:
+    name: integration-robot
+    publishers:
+      - robot:
+          output-path: 'archives'
+          other-files: ''
+          unstable-threshold: '{unstable-if}'
+          pass-threshold: '{pass-if}'
+          only-critical: false
