@@ -23,10 +23,10 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
-    extra-project1: 'ecompsdkos'
+    extra-project1: 'portal/sdk'
     extra-branch1: '{branch}'
     extra-refspec1: 'refs/heads/{branch}'
-    checkout-dir1: 'ecompsdkos'
+    checkout-dir1: 'sdk'
     extra-project2: 'ui/dmaapbc'
     extra-branch2: '{branch}'
     extra-refspec2: 'refs/heads/{branch}'
