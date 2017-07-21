@@ -1,0 +1,19 @@
+---
+- project:
+    name: vfc-gvnfm-vnfres
+    project-name: 'vfc-gvnfm-vnfres'
+    project: 'vfc/gvnfm/vnfres'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    subproject:
+      - 'res':
+          pom: 'res/pom.xml'
+          pattern: 'res/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
