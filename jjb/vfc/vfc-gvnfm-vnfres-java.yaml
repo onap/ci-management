@@ -2,7 +2,7 @@
 
 - project:
     name: vfc-gvnfm-vnfres-java
-    project-name: 'vfc-gvnfm-vfcres-java'
+    project-name: 'vfc-gvnfm-vnfres-java'
     project: 'vfc/gvnfm/vnfres'
     stream:
       - 'master':
