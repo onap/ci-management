@@ -1,0 +1,20 @@
+---
+
+- project:
+    name: vfc-gvnfm-vnflcm-java
+    project-name: 'vfc-gvnfm-vnflcm-java'
+    project: 'vfc/gvnfm/vnflcm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnflcm-java-settings'
+    subproject:
+      - 'lcm':
+          pom: 'lcm/pom.xml'
+          pattern: 'lcm/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
