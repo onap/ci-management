@@ -6,7 +6,9 @@
     jobs:
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily-checkstyle'
+      - '{project-name}-{stream}-release-java-daily-checkstyle':
+         maven-deploy-properties: |
+          skipDockerBuild
       - '{project-name}-{stream}-docker-java-properties-daily':
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
