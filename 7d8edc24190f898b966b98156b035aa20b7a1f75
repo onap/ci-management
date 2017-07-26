@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_2f465524",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T21:23:23Z",
+      "side": 1,
+      "message": "Remove from the subject line and moved to the footer prefixed with \u0027Issue: \u0027",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 9
+      },
+      "revId": "7d8edc24190f898b966b98156b035aa20b7a1f75",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a202591_0f4b992c",
+        "filename": "jjb/appc/appc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T21:23:23Z",
+      "side": 1,
+      "message": "Move to a separate file. Our preference is a single project per yaml file with the file named after the project. This makes it easier to match a job with what file created it.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 42
+      },
+      "revId": "7d8edc24190f898b966b98156b035aa20b7a1f75",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
