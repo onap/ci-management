@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_6fbfadd1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T22:59:46Z",
+      "side": 1,
+      "message": "Git commit messages have the following format:\n\nsubject\n[blankline]\nbody\n[blankline]\nfooter\n\nPlease see [0] on writing good commit messages. The current one doesn\u0027t give a good clear subject, nor body.\n\n[0] https://chris.beams.io/posts/git-commit/",
+      "revId": "4d0d60c46f861003ff7134f3a3fb46e11dafefa5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
