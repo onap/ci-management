@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_2f1415f4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T21:37:53Z",
+      "side": 1,
+      "message": "Your subject / body and the content of the change to do not match. You\u0027re adding not just a verify job but the full project definition for vfc-gvnfm-vnfmgr along with a merge job\n\nBe more clear in your commit message, see [0]. Your commit message subject should give a good indication of what is happening. The commit message body should give a clear reason as to why it is happening.\n\n[0] http://chris.beams.io/posts/git-commit",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "b6d7f37626af33c683b9b695e3528844342f3a36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
