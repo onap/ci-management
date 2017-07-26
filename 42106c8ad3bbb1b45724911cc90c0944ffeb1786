@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_cf5481cc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T21:27:33Z",
+      "side": 1,
+      "message": "Be more clear in your commit message, see [0]. Your commit message subject should give a good indication of what is happening. The commit message body should give a clear reason as to why it is happening.\n\nA subject of \u0027Add release job of vfc gvnfm vnfres\u0027 is not clear, especially given the content of the change.\n\nInstead this would be better as \u0027Add release-1.0.0 stream to vfc-gvnfm-vnfres\u0027\n\n[0] http://chris.beams.io/posts/git-commit",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "42106c8ad3bbb1b45724911cc90c0944ffeb1786",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
