@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a202591_4f5871fa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-07-26T21:32:30Z",
+      "side": 1,
+      "message": "Your subject / body and the content of the change to do not match. You\u0027re adding not just a verify job but the full project definition for vfc-gvnfm-vnfmgr along with a merge job",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 39
+      },
+      "revId": "f75a72a551b22ef187675d5a1f5b8287ae50bc59",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
