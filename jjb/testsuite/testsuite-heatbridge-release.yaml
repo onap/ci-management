@@ -1,6 +1,6 @@
 ---
 - project:
-    name: testsuite-heatbridge
+    name: testsuite-heatbridge-release
     project-name: 'testsuite-heatbridge'
     subproject:
       - heatbridge:
@@ -12,8 +12,6 @@
     project: 'testsuite/heatbridge'
 
     stream:
-      - 'master':
-          branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'testsuite-heatbridge-settings'
