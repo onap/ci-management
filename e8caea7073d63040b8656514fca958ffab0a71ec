@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_9c16c9f0",
+        "filename": "jjb/vfc/vfc-gvnfm-vnfmgr-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-01T23:46:55Z",
+      "side": 1,
+      "message": "We dont have a vfc-gvnfm-vnfmgr-java project. We have only vfc-gvnfm-vnfmgr. Is \"java\" a subproject needed?",
+      "range": {
+        "startLine": 10,
+        "startChar": 3,
+        "endLine": 10,
+        "endChar": 50
+      },
+      "revId": "e8caea7073d63040b8656514fca958ffab0a71ec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
