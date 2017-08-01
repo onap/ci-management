@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_79609f35",
+        "filename": "jjb/holmes/holmes-engine-mgt.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-01T16:23:29Z",
+      "side": 1,
+      "message": "The actual gerrit project name is holmes/engine-management\nDo you intentionally shorten it?",
+      "range": {
+        "startLine": 4,
+        "startChar": 18,
+        "endLine": 4,
+        "endChar": 38
+      },
+      "revId": "a05fad8c4fa29e2c58cf42b798079d3003661630",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_5965e343",
+        "filename": "jjb/holmes/holmes-rule-mgt.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-01T16:23:29Z",
+      "side": 1,
+      "message": "This name, was it also intentionally shorten?",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 36
+      },
+      "revId": "a05fad8c4fa29e2c58cf42b798079d3003661630",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
