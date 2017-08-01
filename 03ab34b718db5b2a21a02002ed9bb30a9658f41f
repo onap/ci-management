@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_9cffe9aa",
+        "filename": "jjb/vfc/vfc-nfvo-lcm-java.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-01T23:38:44Z",
+      "side": 1,
+      "message": "is java a sub folder of vfc-nfvo-lcm?\nWe only have this repo requested:\nhttps://gerrit.onap.org/r/#/admin/projects/vfc/nfvo/lcm",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "03ab34b718db5b2a21a02002ed9bb30a9658f41f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
