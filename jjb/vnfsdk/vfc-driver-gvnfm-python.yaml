@@ -1,0 +1,15 @@
+---
+
+- project:
+    name: vfc-sdk-pkgtools
+    project-name: 'vnf-sdk-pkgtools'
+    project: 'vnfsdk/pkgtools'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'vnf-sdk-pkgtools-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
