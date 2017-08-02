@@ -1,0 +1,13 @@
+---
+- project:
+    name: so-csit
+    jobs:
+      - 'integration-verify-{project}-csit-{functionality}'
+      - '{project}-csit-{functionality}'
+    project: 'so'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+            - 'so-master-docker-version-java-daily'
+    robot-options: ''
+    branch: 'master'
