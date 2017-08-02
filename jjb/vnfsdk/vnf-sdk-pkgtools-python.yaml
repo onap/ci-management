@@ -1,0 +1,17 @@
+---
+
+- project:
+    name: vnf-sdk-pkgtools
+    project-name: 'vnf-sdk-pkgtools'
+    subproject:
+      - pkgtools:
+          path: '.'
+          pattern: '**'
+    project: 'vnfsdk/pkgtools'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnf-sdk-pkgtools-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
