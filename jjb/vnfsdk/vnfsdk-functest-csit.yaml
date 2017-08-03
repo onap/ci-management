@@ -1,0 +1,12 @@
+---
+- project:
+    name: vnfsdk-functest-csit
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'vnfsdk-functest'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
