@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_225f9074",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-08-03T16:38:33Z",
+      "side": 1,
+      "message": "I don\u0027t think this parameter is needed by the template.  Or are you using it for some other purpose?",
+      "revId": "8514245709396afbf13fab2a3e7cf454e7f733f8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
