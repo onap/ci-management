@@ -1,0 +1,15 @@
+- project:
+    name: policy-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'policy'
+    stream: 'master'
+    functionality:
+      - 'health':
+          trigger_jobs:
+            - 'policy-engine-{stream}-merge-java'
+            - 'policy-drools-pdp-{stream}-merge-java'
+            - 'policy-drools-applications-{stream}-merge-java'
+    robot-options: ''
+    branch: 'master'
