@@ -1,0 +1,12 @@
+---
+- project:
+    name: vnfsdk-lctest-csit
+    jobs:
+      - 'integration-verify-{project}-csit-{functionality}'
+      - '{project}-csit-{functionality}'
+    project: 'vnf-sdk-validate-lc-test'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
