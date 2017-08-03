@@ -1,0 +1,13 @@
+---
+- project:
+    name: vnfsdk-validation
+    project-name: 'vnfsdk-validation'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'vnfsdk/validation'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-validation-settings'

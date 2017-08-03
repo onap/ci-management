@@ -1,0 +1,13 @@
+---
+- project:
+    name: vnfsdk-functest
+    project-name: 'vnfsdk-functest'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'vnfsdk/functest'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-functest-settings'
