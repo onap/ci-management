@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_e28518ae",
+        "filename": "jjb/vnfsdk/refrepo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-03T18:26:47Z",
+      "side": 1,
+      "message": "Lets remove this empty line",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 0
+      },
+      "revId": "d1fe3a6de3619b1e0e871cce7cf18bbd083293b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_c2921cf6",
+        "filename": "jjb/vnfsdk/refrepo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-03T18:26:47Z",
+      "side": 1,
+      "message": "This repo doesn\u0027t exist and hasn\u0027t been requested yet. \nWe can\u0027t merge this change now.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 29
+      },
+      "revId": "d1fe3a6de3619b1e0e871cce7cf18bbd083293b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
