@@ -1,0 +1,13 @@
+---
+- project:
+    name: vnfsdk-marketplace
+    project-name: 'vnfsdk-marketplace'
+    jobs:
+      - '{project}-{stream}-verify-java'
+      - '{project}-{stream}-merge-java'
+
+    project: 'vnfsdk/marketplace'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-marketplace-settings'
