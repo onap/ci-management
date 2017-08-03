@@ -2,12 +2,12 @@
 
 - project:
     name: vfc-gvnfm-vnfres-java
-    project-name: 'vfc-gvnfm-vnfres-java'
+    project-name: 'vfc-gvnfm-vnfres'
     project: 'vfc/gvnfm/vnfres'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'vfc-gvnfm-vnfres-java-settings'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
     subproject:
       - 'res':
           pom: 'res/pom.xml'
