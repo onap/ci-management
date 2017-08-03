@@ -1,0 +1,20 @@
+---
+- project:
+    name: policy-gui
+    project-name: 'policy-gui'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'policy/gui'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-gui-settings'
+    files: '**'
+    archive-artifacts: ''
