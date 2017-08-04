@@ -8,13 +8,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'vfc-nfvo-lcm-settings'
-    subproject:
-      - 'lcm':
-          pom: 'lcm/pom.xml'
-          pattern: 'lcm/**'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    files: '**'
-    archive-artifacts: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
     build-node: ubuntu1604-basebuild-4c-4g
