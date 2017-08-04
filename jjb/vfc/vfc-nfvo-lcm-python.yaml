@@ -11,7 +11,7 @@
     build-node: ubuntu1604-basebuild-4c-4g
     subproject:
       - 'lcm':
-          path: 'lcm'
-          pattern: 'lcm/**'
+          path: '.'
+          pattern: '**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
