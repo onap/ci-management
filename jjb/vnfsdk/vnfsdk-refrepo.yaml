@@ -1,0 +1,13 @@
+---
+- project:
+    name: vnfsdk-refrepo
+    project: 'vnfsdk/refrepo'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project-name: 'vnfsdk-refrepo'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-refrepo-settings'
