@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_687e87e6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-04T23:32:35Z",
+      "side": 1,
+      "message": "Let\u0027s not have the JIRA ID in the title. \nWe have to move it to the footer section and has to be prefixed by \"Issue-ID\" or \"Issue\" or \"JIRA\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "4bdaf4f12172f98dfdc61ac1b9e917767c04c3a5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
