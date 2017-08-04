@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_6830c756",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-04T23:10:35Z",
+      "side": 1,
+      "message": "Let\u0027s not have the JIRA ID in the title. \n\nWe have to move it to the footer section and has to be prefixed by \"Issue-ID\" or \"Issue\" or \"JIRA\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "56922544dba6777011f9293f818c400f2a0a42aa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_283acf36",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-04T23:10:35Z",
+      "side": 1,
+      "message": "We don\u0027t have a policy repo. Does this job needs to be adjusted for a particular one of these repos:\nhttps://gerrit.onap.org/r/#/admin/projects/?filter\u003dpolicy",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 6,
+        "endChar": 26
+      },
+      "revId": "56922544dba6777011f9293f818c400f2a0a42aa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
