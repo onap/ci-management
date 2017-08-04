@@ -45,6 +45,30 @@
       "revId": "d1fe3a6de3619b1e0e871cce7cf18bbd083293b1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_4d5abd84",
+        "filename": "jjb/vnfsdk/refrepo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 749
+      },
+      "writtenOn": "2017-08-04T09:57:56Z",
+      "side": 1,
+      "message": "It is also called as refrepo or vnf repository",
+      "parentUuid": "1a1a2d67_c2921cf6",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 29
+      },
+      "revId": "d1fe3a6de3619b1e0e871cce7cf18bbd083293b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
