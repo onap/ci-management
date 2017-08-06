@@ -45,6 +45,30 @@
       "revId": "56922544dba6777011f9293f818c400f2a0a42aa",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_08b0338a",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-08-06T22:47:25Z",
+      "side": 1,
+      "message": "The project-name for the CSIT template corresponds to a directory under integration repo; it\u0027s not required to match actual repo names.",
+      "parentUuid": "1a1a2d67_283acf36",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 6,
+        "endChar": 26
+      },
+      "revId": "56922544dba6777011f9293f818c400f2a0a42aa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
