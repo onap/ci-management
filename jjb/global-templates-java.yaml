@@ -423,6 +423,8 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
+          java-opts:
+            - '-Xmx4096m -XX:MaxPermSize=512m'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
