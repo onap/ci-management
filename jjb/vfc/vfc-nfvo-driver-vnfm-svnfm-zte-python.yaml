@@ -1,15 +1,15 @@
 ---
 
 - project:
-    name: vfc-nfvo-driver-svnfm
-    project-name: 'vfc-nfvo-driver-svnfm'
+    name: vfc-nfvo-driver-vnfm-svnfm-zte-python
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
           branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
-    mvn-settings: 'vfc-nfvo-driver-svnfm-settings'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     subproject:
       - 'drv-vnfm-zte':
