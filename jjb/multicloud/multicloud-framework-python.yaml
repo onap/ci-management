@@ -1,0 +1,15 @@
+---
+- project:
+    name: multicloud-framework-python
+    project: 'multicloud/framework'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-framework-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    subproject:
+      - 'multivimbroker':
+          path: 'multivimbroker'
+          pattern: 'multivimbroker/**'
+    jobs:
+      - '{project}-{stream}-{subproject}-verify-python'
