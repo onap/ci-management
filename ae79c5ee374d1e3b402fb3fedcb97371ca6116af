@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_dfa9ce25",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-07T22:14:00Z",
+      "side": 1,
+      "message": "Can we be more explicit here please?\nIs best to explicitly mention the repos aai/esr-gui and aai/esr-server to help with future developers browsing he history",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "ae79c5ee374d1e3b402fb3fedcb97371ca6116af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_ffac8a37",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-07T22:14:00Z",
+      "side": 1,
+      "message": "Remove line 10 so hat the Issue-ID becomes part of the footer",
+      "range": {
+        "startLine": 9,
+        "startChar": 17,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "ae79c5ee374d1e3b402fb3fedcb97371ca6116af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
