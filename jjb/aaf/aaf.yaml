@@ -1,0 +1,20 @@
+---
+- project:
+    name: aaf
+    project-name: 'aaf'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'aaf/authz/pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aaf'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-settings'
+    files: '**'
+    archive-artifacts: ''
