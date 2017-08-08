@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_f5226b00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-08T13:17:03Z",
+      "side": 1,
+      "message": "Unneeded white space. Additionally, this commit message is unhelpful.\n\nSee: https://chris.beams.io/posts/git-commit/ for how to write a good commit message",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 1
+      },
+      "revId": "5c11c46a0d02c345c7f3e9da7ec88f87332c7a09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
