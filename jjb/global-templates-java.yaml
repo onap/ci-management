@@ -479,8 +479,7 @@
           maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          properties:
-            - '{maven-deploy-properties}'
+          properties: '{obj:mvn_properties}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -826,7 +825,7 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
-          properties: '{maven-properties}'
+          properties: '{obj:mvn_properties}'
 
     publishers:
       - infra-shiplogs:

@@ -6,12 +6,14 @@
     jobs:
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-properties-java':
-         maven-properties: |
-          docker.pull.registry=nexus3.onap.org:10001
-          docker.push.registry=nexus3.onap.org:10003
+         mvn_properties:
+            - docker.pull.registry=nexus3.onap.org:10001
+            - docker.push.registry=nexus3.onap.org:10003
       - '{project-name}-{stream}-release-java-daily-checkstyle':
-         maven-deploy-properties: |
-          skipDockerBuild
+         mvn_properties:
+          - skipDockerBuild=true
+          - skipDockerTag=true
+          - skipDockerPush=true
       - '{project-name}-{stream}-docker-java-properties-daily':
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
