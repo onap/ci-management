@@ -826,7 +826,8 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
-          properties: '{maven-properties}'
+          properties:
+           - '{maven-properties}'
 
     publishers:
       - infra-shiplogs:
