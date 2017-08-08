@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_b51cf3c2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-08T13:18:29Z",
+      "side": 1,
+      "message": "Please improve the message subject line. I would suggest:\n\nInitial policy project CSIT jobs\n\nSee how to write good messages: https://chris.beams.io/posts/git-commit/",
+      "revId": "953e5c400dc0d4013df0cdb86c57dfff0f1cc511",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
