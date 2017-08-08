@@ -19,6 +19,7 @@
     templates:
       - basebuild
       - docker
+      - redis
 
     exclude:
       # only build the docker image on ubuntu at present
