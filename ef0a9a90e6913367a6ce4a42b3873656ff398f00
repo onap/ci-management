@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_555a3f84",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-08T13:22:29Z",
+      "side": 1,
+      "message": "Please capitalize subject. Also, you should note that the jobs are for new policy project repos.\n\nSee https://chris.beams.io/posts/git-commit/ for how to write good commit messages",
+      "revId": "ef0a9a90e6913367a6ce4a42b3873656ff398f00",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_1554c752",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-08T13:22:29Z",
+      "side": 1,
+      "message": "This needs to be prefixed with one of the following: \u0027Issue-id: \u0027, \u0027Issue: \u0027, or \u0027JIRA: \u0027",
+      "revId": "ef0a9a90e6913367a6ce4a42b3873656ff398f00",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
