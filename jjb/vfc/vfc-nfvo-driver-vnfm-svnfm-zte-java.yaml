@@ -1,0 +1,20 @@
+---
+
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-zte-java
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    subproject:
+      - 'drv-vnfm-zte':
+          pom: 'zte/vmanager/pom.xml'
+          pattern: 'zte/vmanager/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g

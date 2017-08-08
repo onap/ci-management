@@ -1,0 +1,20 @@
+---
+
+- project:
+    name: vfc-nfvo-driver-vnfm-gvnfm-java
+    project-name: 'vfc-nfvo-driver-vnfm-gvnfm'
+    project: 'vfc/nfvo/driver/vnfm/gvnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+    subproject:
+      - 'gvnfmadapter':
+          pom: 'gvnfmadapter/pom.xml'
+          pattern: 'gvnfmadapter/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
