@@ -1,0 +1,13 @@
+---
+- project:
+    name: vnfsdk-pkgtools
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'vnfsdk-pkgtools'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
