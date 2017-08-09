@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_66823302",
+        "filename": "jjb/ci-management/ci-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-09T17:16:45Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be a platform, but a template",
+      "revId": "effdb824c10508ad8cad39e80e8e349705e2d8db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
