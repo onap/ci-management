@@ -2,8 +2,8 @@
 
 - project:
     name: vfc-nfvo-resmanagement
-    project-name: 'vfc-nfvo-resmanagement'
     project: 'vfc/nfvo/resmanagement'
+    project-name: 'vfc-nfvo-resmanagement'
     stream:
       - 'master':
           branch: 'master'
@@ -13,3 +13,4 @@
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
