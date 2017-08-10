@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_e547584a",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "Dangling whitespace",
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_056254d8",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "Job templates should not be stored with project definitions. They should be stored in a yaml file that has the name templates in it.\n\nAdditionally, these templates are far too generically named.",
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_85a54406",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "This looks like you copied from OpenDaylight\u0027s docs jobs. This node does not exist in the ONAP environment.\n\nI would suggest doing the following:\n\nbuild-node: centos7-basebuild-4c-4g\nnode: \u0027{build-node}\u0027\n\nThis will set a default build-node of centos7-basebuild-4c-4g but makes it overrideable if needed.",
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_e55e3812",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "docs/**/*.rst should find any .rst file in any subdirectory of docs. This comment is unneeded",
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_c59b3cc8",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "If the intent is to get an environment variable set, this isn\u0027t going to do it. The variable would need to be written out to a file and then the next step would be an inject step to use that file",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 14
+      },
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_65aa28d6",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:39:14Z",
+      "side": 1,
+      "message": "This looks like you copied from OpenDaylight\u0027s docs jobs. This node does not exist in the ONAP environment.\n\nI would suggest doing the following:\n\nbuild-node: centos7-basebuild-4c-4g\nnode: \u0027{build-node}\u0027\n\nThis will set a default build-node of centos7-basebuild-4c-4g but makes it overrideable if needed.",
+      "revId": "321efc832d445922b8e5fa429b0c90600b3aa63e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
