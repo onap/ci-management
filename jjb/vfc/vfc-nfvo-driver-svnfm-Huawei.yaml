@@ -1,12 +1,12 @@
 ---
 - project:
-    name: vfc-nfvo-driver-svnfm-Huawei
+    name: vfc-nfvo-driver-svnfm-huawei
     project-name: 'vfc-nfvo-driver-svnfm'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-svnfm-settings'
+    mvn-settings: 'vfc-nfvo-driver-svnfm-huawei-settings'
     subproject:
       - 'drv-vnfm-huawei':
           pom: 'huawei/vnfmadapter/pom.xml'
