@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_a5ee0021",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:46:28Z",
+      "side": 1,
+      "message": "This commit subject line is poorly done. I would suggest the following:\n\nAdd merge job for vfc/nfvo/resmanagement\n\nSee https://chris.beams.io/posts/git-commit/ on how to write good commit messages",
+      "revId": "b1d04714feef0cffc4519d6335f8252eaf4876a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
