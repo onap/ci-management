@@ -1,0 +1,19 @@
+---
+- project:
+    name: dmaap-datarouter-prov
+    project-name: 'dmaap-datarouter-prov'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-docker-java-daily':
+          pom: 'dmaap/datarouter/datarouter-prov/pom.xml'
+    project: 'dmaap/datarouter-prov'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-datarouter-prov-settings'
+    files: '**'
+    archive-artifacts: ''
