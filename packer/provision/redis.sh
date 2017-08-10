@@ -24,9 +24,9 @@ ubuntu_systems() {
     make install
 
     # 2. set conf file and init script
-    mv /tmp/redis-4.0.1/redis-server /etc/init.d/redis-server
+    cp /tmp/redis-4.0.1/src/redis-server /etc/init.d/redis-server
     chmod +x /etc/init.d/redis-server
-    mv /tmp/redis-4.0.1/redis.conf /etc/redis.conf
+    cp /tmp/redis-4.0.1/redis.conf /etc/redis.conf
 
     # 3. set auto start when start system
     update-rc.d redis-server defaults
