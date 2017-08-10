@@ -2,8 +2,8 @@
 
 - project:
     name: vfc-nfvo-resmanagement
-    project-name: 'vfc-nfvo-resmanagement'
     project: 'vfc/nfvo/resmanagement'
+    project-name: 'vfc-nfvo-resmanagement'
     stream:
       - 'master':
           branch: 'master'
