@@ -1,0 +1,23 @@
+---
+
+- project:
+    name: vfc_workflow
+    project-name: 'vfc_workflow'
+    project: 'vfc/nfvo/wfengine'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-workflow-settings'
+    subproject:
+      - 'engine_mgr_service':
+          pom: 'wfenginemgrservice/pom.xml'
+          pattern: 'wfenginemgrservice/**'
+      - 'engine_activiti_extension':
+          pom: 'activiti-extension/pom.xml'
+          pattern: 'activiti-extension/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
