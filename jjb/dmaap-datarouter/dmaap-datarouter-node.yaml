@@ -1,0 +1,21 @@
+---
+- project:
+    name: dmaap-datarouter-node
+    project-name: 'dmaap-datarouter-node'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-stage-site-java':
+          pom: 'dmaap/datarouter/datarouter-node/pom.xml'
+          mvn-goals: 'clean install'
+    project: 'dmaap/datarouter/datarouter-node'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'dmaap-datarouter-node-settings'
+    files: '**'
+    archive-artifacts: ''
