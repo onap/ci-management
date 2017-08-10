@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_e58cf881",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:44:38Z",
+      "side": 1,
+      "message": "The subject should be:\n\nUpdate vfc huawei driver\n\nThe body of the message should explain why you are making the change.\n\nSee https://chris.beams.io/posts/git-commit/ on how to write good commit messages",
+      "revId": "77ee110756ce89253dd65b0a267f653992d764b0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
