@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_857c2474",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:42:39Z",
+      "side": 1,
+      "message": "This should be capitalized. Additionally it could be more clear if stated as follows:\n\nAdd vfc-workflow jobs",
+      "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_45960c96",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:42:39Z",
+      "side": 1,
+      "message": "This needs to be a \u0027-\u0027",
+      "range": {
+        "startLine": 4,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 14
+      },
+      "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_259310a5",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:42:39Z",
+      "side": 1,
+      "message": "This needs to be a \u0027-\u0027",
+      "range": {
+        "startLine": 5,
+        "startChar": 22,
+        "endLine": 5,
+        "endChar": 23
+      },
+      "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
