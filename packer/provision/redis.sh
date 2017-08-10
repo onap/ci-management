@@ -8,7 +8,7 @@ set -xeu -o pipefail
 
 rh_systems() {
     # redis
-    yum install redis
+    yum install -y redis
     systemctl enable redis.service
 }
 
