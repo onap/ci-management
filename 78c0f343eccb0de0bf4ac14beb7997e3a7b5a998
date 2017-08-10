@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_25ac30ed",
+        "filename": "jjb/holmes/holmes-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:40:47Z",
+      "side": 0,
+      "message": "All java projects are required to have the clm job.",
+      "revId": "78c0f343eccb0de0bf4ac14beb7997e3a7b5a998",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_05b9342e",
+        "filename": "jjb/holmes/holmes-dsa.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:40:47Z",
+      "side": 0,
+      "message": "All java projects are required to have the clm job.",
+      "revId": "78c0f343eccb0de0bf4ac14beb7997e3a7b5a998",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_e5b51832",
+        "filename": "jjb/holmes/holmes-engine-mgt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:40:47Z",
+      "side": 0,
+      "message": "All java projects are required to have the clm job.",
+      "revId": "78c0f343eccb0de0bf4ac14beb7997e3a7b5a998",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_c5821c52",
+        "filename": "jjb/holmes/holmes-rule-mgt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:40:47Z",
+      "side": 0,
+      "message": "All java projects are required to have the clm job.",
+      "revId": "78c0f343eccb0de0bf4ac14beb7997e3a7b5a998",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
