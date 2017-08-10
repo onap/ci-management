@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_65f8e8e5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:49:22Z",
+      "side": 1,
+      "message": "This commit message needs work. The subject line should be capitalized and there should be a message body explaining why the change is being made.\n\nSee: https://chris.beams.io/posts/git-commit/ on how to write a good commit message",
+      "revId": "d4c3b3772aaf1d7780ce48a864f91b0feeb77960",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_45ddec6f",
+        "filename": "jjb/vfc/vfc-nfvo-driver-ems-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-10T14:49:22Z",
+      "side": 1,
+      "message": "Dangling whitespace",
+      "revId": "d4c3b3772aaf1d7780ce48a864f91b0feeb77960",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
