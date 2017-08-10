@@ -1,0 +1,86 @@
+---
+- project:
+    name: doc
+    jobs:
+        - '{project}-merge-{stream}'
+        - '{project}-verify-{stream}'
+    stream:
+        - master:
+             branch: 'master'
+    project: doc
+    project-name: doc
+    rtdproject: onap
+    
+- job-template:
+    name: '{project}-merge-{stream}'
+    node: centos7-java-builder-2c-8g
+    project-type: freestyle
+    parameters:
+        - infra-parameters:
+            project: '{project}'
+            branch: '{branch}'
+    triggers:
+        - gerrit:
+            server-name: '{server-name}'
+            trigger-on:
+               - change-merged-event
+               - comment-added-contains-event:
+                   comment-contains-value: 'remerge'
+            projects:
+               - project-compare-type: 'ANT'
+                 project-pattern: '**'
+            branches:
+               - branch-compare-type: 'ANT'
+                 branch-pattern: '**/{branch}'
+            file-path:
+               - compare-type: ANT
+                 pattern: docs/**/*.rst
+            # TODO Verify files pattern works with multi-level repo hierarchy
+    builders:
+        - shell: |
+            if [ $GERRIT_BRANCH == "master" ]; then
+                RTD_BUILD_VERSION=latest
+            else
+                RTD_BUILD_VERSION=${{GERRIT_BRANCH/\//-}}
+            fi
+        - shell: |
+            echo RTD Version $RTD_BUILD_VERSION
+            # TODO Update RTD request
+- job-template:
+    name: '{project}-verify-{stream}'
+    node: centos7-java-builder-2c-8g
+    concurrent: true
+    project-type: freestyle
+    parameters:
+        - project-parameter:
+            project: '{project}'
+            branch: '{branch}'
+        - string:
+            name: GIT_BASE
+            default: https://gerrit.onap.org/r/doc
+    scm:
+        - git-scm-with-submodules:
+            branch: '{branch}'
+    triggers:
+        - gerrit-trigger-patchset-created:
+            server: '{server-name}'
+            project: '**'
+            branch: '{branch}'
+            files:  'docs/**/*.rst'
+            timed: 'H H * * *'
+    builders:
+        - shell: |
+            if [ $GERRIT_PROJECT != "doc" ]; then
+              cd docs/submodules/$GERRIT_PROJECT
+              git fetch origin $GERRIT_REFSPEC && git checkout FETCH_HEAD
+            else
+              git fetch origin $GERRIT_REFSPEC && git checkout FETCH_HEAD
+            fi
+        - shell: |
+            virtualenv $WORKSPACE/venv
+            source $WORKSPACE/env/bin/activate
+            PYTHON=$WORKSPACE/env/bin/python"
+            $PYTHON -m pip install --upgrade pip
+            $PYTHON -m pip freeze
+            $PYTHON -m pip install tox
+            tox -edocs
