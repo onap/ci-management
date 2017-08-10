@@ -1,0 +1,19 @@
+---
+- project:
+    name: multicloud-openstack-vmware-java
+    project-name: 'multicloud-openstack-vmware'
+    project: 'multicloud/openstack/vmware'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-openstack-vmware-settings'
+    subproject:
+      - 'vio':
+          pom: 'vio/pom.xml'
+          pattern: 'vio/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
