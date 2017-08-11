@@ -1,0 +1,20 @@
+---
+- project:
+    name: aaf-authz
+    project-name: 'aaf-authz'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily':
+          pom: 'aaf/authz/pom.xml'
+          mvn-goals: 'clean install'
+    project: 'aaf/authz'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'aaf-authz-settings'
+    files: '**'
+    archive-artifacts: ''
