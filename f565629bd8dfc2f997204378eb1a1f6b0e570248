@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_6b5d57e9",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T16:42:50Z",
+      "side": 1,
+      "message": "This file should be named vfc-nfvo-wfengine.yaml _or_ vfc-nfvo-wfengine-java.yaml. Basically the file name and the project-name and the project should all line up.",
+      "revId": "f565629bd8dfc2f997204378eb1a1f6b0e570248",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_ab636fb0",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T16:42:50Z",
+      "side": 1,
+      "message": "Given that the project being checked out is vfc/nfvo/wfengine then this name really should be vfc-nfvo-wfengine",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 22
+      },
+      "revId": "f565629bd8dfc2f997204378eb1a1f6b0e570248",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_8b58b3fb",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T16:42:50Z",
+      "side": 1,
+      "message": "Given that the project being checked out is vfc/nfvo/wfengine then this project-name really should be vfc-nfvo-wfengine",
+      "range": {
+        "startLine": 5,
+        "startChar": 19,
+        "endLine": 5,
+        "endChar": 31
+      },
+      "revId": "f565629bd8dfc2f997204378eb1a1f6b0e570248",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
