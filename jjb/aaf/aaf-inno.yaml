@@ -1,0 +1,22 @@
+---
+- project:
+    name: aaf-inno
+    project-name: 'aaf-inno'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-aaf-docker-java-daily':
+          pom: 'aaf/inno/pom.xml'
+          mvn-goals: 'clean install'
+    project: 'aaf/inno'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'aaf-inno-settings'
+    files: '**'
+    archive-artifacts: ''
