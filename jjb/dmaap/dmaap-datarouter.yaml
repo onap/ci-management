@@ -1,0 +1,21 @@
+---
+- project:
+    name: dmaap-datarouter
+    project-name: 'dmaap-datarouter'
+    project: 'dmaap/datarouter'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    subproject:
+      - 'datarouter-prov':
+          pom: 'datarouter-prov/pom.xml'
+          pattern: 'datarouter-prov/**'
+      - 'datarouter-node':
+          pom: 'datarouter-node/pom.xml'
+          pattern: 'datarouter-node/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
