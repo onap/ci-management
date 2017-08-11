@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a1a2d67_8841d90d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-11T00:04:54Z",
+      "side": 1,
+      "message": "Can we also mention in the commit text the reference to the actual project name \"vfc/nfvo/wfengine\"\n\nThis will help anyone trying to browse for information in the history.",
+      "parentUuid": "1a1a2d67_857c2474",
+      "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a1a2d67_45960c96",
         "filename": "jjb/vfc/vfc-workflow-java.yaml",
         "patchSetId": 1
@@ -58,6 +76,29 @@
         "startChar": 22,
         "endLine": 5,
         "endChar": 23
+      },
+      "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_e8ba8d09",
+        "filename": "jjb/vfc/vfc-workflow-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-11T00:04:54Z",
+      "side": 1,
+      "message": "This is not the correct settings file. \nIt should be vfc-nfvo-wfengine-settings",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 41
       },
       "revId": "e0794f85b786bb252ea68f07432b1190de83a76a",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
