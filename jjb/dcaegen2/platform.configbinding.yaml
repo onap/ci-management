@@ -1,0 +1,19 @@
+---
+- project:
+    name: dcaegen2-platform-configbinding
+    project-name: 'dcaegen2-platform-configbinding'
+    subproject:
+      - platform-configbinding:
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+
+    project: 'dcaegen2/platform/configbinding'
+
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'dcaegen2-platform-configbinding-settings'
