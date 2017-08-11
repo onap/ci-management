@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_4b205b49",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T17:08:46Z",
+      "side": 1,
+      "message": "This should be msb-swagger-sdk",
+      "range": {
+        "startLine": 7,
+        "startChar": 20,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "621eb0e4d2874101da3637dfb9d336f53c4c500e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_8b267367",
+        "filename": "jjb/msb/msb-swagger-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T17:08:46Z",
+      "side": 1,
+      "message": "This should be msb-swagger-sdk",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 21
+      },
+      "revId": "621eb0e4d2874101da3637dfb9d336f53c4c500e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_6b2b1731",
+        "filename": "jjb/msb/msb-swagger-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T17:08:46Z",
+      "side": 1,
+      "message": "This should be msb-swagger-sdk",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "621eb0e4d2874101da3637dfb9d336f53c4c500e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
