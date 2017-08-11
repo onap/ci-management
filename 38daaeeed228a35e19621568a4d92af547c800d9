@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_2b6f5f94",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T16:44:36Z",
+      "side": 1,
+      "message": "The commit subject line is fine, but you need a commit body explaining why you are modifying the jobs.\n\nSee https://chris.beams.io/posts/git-commit/ on how to write good commit messages",
+      "revId": "38daaeeed228a35e19621568a4d92af547c800d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
