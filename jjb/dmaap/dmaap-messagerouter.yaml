@@ -1,0 +1,24 @@
+---
+- project:
+    name: dmaap-messagerouter
+    project-name: 'dmaap-messagerouter'
+    project: 'dmaap/messagerouter'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-messagerouter-settings'
+    subproject:
+      - 'Msgrtr':
+          pom: 'Msgrtr/pom.xml'
+          pattern: 'Msgrtr/**'
+      - 'dmaap':
+          pom: 'dmaap/pom.xml'
+          pattern: 'dmaap/**'
+      - 'dmaapClient':
+          pom: 'dmaapClient/pom.xml'
+          pattern: 'dmaapClient/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    files: '**'
+    archive-artifacts: ''
