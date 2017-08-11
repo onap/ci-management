@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_cb2c6b4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-11T17:08:00Z",
+      "side": 1,
+      "message": "This needs to be moved to the footer (the section with the change id and DCO line) as follows:\n\nIssue-Id: DMAAP-38\n\nAdditionally the message should be more precise:\n\nAdd JJB file dmaap-datarouter\n\nSee https://chris.beams.io/posts/git-commit/ on writing good commit messages",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 11
+      },
+      "revId": "ca0d572c3c046588ea8ffff7e79208ab1da39bda",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
