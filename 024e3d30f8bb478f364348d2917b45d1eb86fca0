@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_929b3a72",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-14T21:39:50Z",
+      "side": 1,
+      "message": "Let\u0027s change this commit text please. \n\nDo not link the jira in the title and use \"Issue-Id: PORTAL-75\" rather than just the jira id. Please add them as the footer. \nYou can use this as an example: https://gerrit.onap.org/r/#/c/7365/",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "024e3d30f8bb478f364348d2917b45d1eb86fca0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
