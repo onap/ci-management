@@ -13,9 +13,11 @@
           pattern: 'datarouter-prov/**'
       - 'datarouter-node':
           pom: 'datarouter-node/pom.xml'
-          pattern: 'datarouter-node/**'
+          pattern: 'datarouter-node/**'        
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-release-java-daily':
+          mvn-goals: 'clean install' 
     files: '**'
     archive-artifacts: ''

@@ -10,7 +10,7 @@
     subproject:
       - 'Msgrtr':
           pom: 'Msgrtr/pom.xml'
-          pattern: 'Msgrtr/**'
+          pattern: 'Msgrtr/**'          
       - 'dmaap':
           pom: 'dmaap/pom.xml'
           pattern: 'dmaap/**'
@@ -20,5 +20,6 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+          mvn-goals: 'clean install'
     files: '**'
     archive-artifacts: ''
