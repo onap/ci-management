@@ -22,6 +22,29 @@
       "revId": "024e3d30f8bb478f364348d2917b45d1eb86fca0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_32824e01",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-14T21:41:27Z",
+      "side": 1,
+      "message": "Can we also elaborate a little bit more on this information? \nMaybe we can mention the purpose of the branch? or that what we are adding is a branch.",
+      "range": {
+        "startLine": 7,
+        "startChar": 10,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "024e3d30f8bb478f364348d2917b45d1eb86fca0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
