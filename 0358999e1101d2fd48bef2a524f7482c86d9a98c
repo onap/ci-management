@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_af5499ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-14T16:59:53Z",
+      "side": 1,
+      "message": "Can we please specify that we are indeed adding these?\nmaybe \"Add doc project JJB job and templates\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 33
+      },
+      "revId": "0358999e1101d2fd48bef2a524f7482c86d9a98c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_6f5eb1eb",
+        "filename": "jjb/doc/doc-templates-rtd.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-14T16:59:53Z",
+      "side": 1,
+      "message": "Remove trailing space",
+      "range": {
+        "startLine": 8,
+        "startChar": 35,
+        "endLine": 8,
+        "endChar": 36
+      },
+      "revId": "0358999e1101d2fd48bef2a524f7482c86d9a98c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_4f63edb1",
+        "filename": "jjb/doc/doc-templates-rtd.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-14T16:59:53Z",
+      "side": 1,
+      "message": "Remove trailing space",
+      "range": {
+        "startLine": 82,
+        "startChar": 35,
+        "endLine": 82,
+        "endChar": 36
+      },
+      "revId": "0358999e1101d2fd48bef2a524f7482c86d9a98c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
