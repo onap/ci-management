@@ -20,8 +20,13 @@
           pom: 'dmaapClient/pom.xml'
           pattern: 'dmaapClient/**'
           mvn-goals: 'clean install'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
     files: '**'
     archive-artifacts: ''
