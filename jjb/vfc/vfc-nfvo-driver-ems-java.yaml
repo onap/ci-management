@@ -9,9 +9,9 @@
           branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-ems-settings'
     subproject:
-      - 'ems-driver-boco':
-          pom: 'ems/ems/sems/boco/ems-driver/pom.xml'
-          pattern: 'ems/ems/sems/boco/ems-driver/**'
+      - 'drv-ems-boco':
+          pom: 'ems/boco/pom.xml'
+          pattern: 'ems/boco/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
