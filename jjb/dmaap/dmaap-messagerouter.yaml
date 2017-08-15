@@ -11,17 +11,22 @@
       - 'Msgrtr':
           pom: 'Msgrtr/pom.xml'
           pattern: 'Msgrtr/**'
-          mvn-goals: 'clean install'
       - 'dmaap':
           pom: 'dmaap/pom.xml'
           pattern: 'dmaap/**'
-          mvn-goals: 'clean install'
       - 'dmaapClient':
           pom: 'dmaapClient/pom.xml'
           pattern: 'dmaapClient/**'
+      jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-java-daily':
+          pom: 'Msgrtr/pom.xml'
+          pom: 'dmaap/pom.xml'
+          pom: 'dmaapClient/pom.xml'
           mvn-goals: 'clean install'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
     files: '**'
     archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g

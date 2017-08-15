@@ -11,13 +11,18 @@
       - 'datarouter-prov':
           pom: 'datarouter-prov/pom.xml'
           pattern: 'datarouter-prov/**'
-          mvn-goals: 'clean install'
       - 'datarouter-node':
           pom: 'datarouter-node/pom.xml'
           pattern: 'datarouter-node/**'
-          mvn-goals: 'clean install'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-java-daily':
+          pom: 'datarouter-prov/pom.xml'
+          pom: 'datarouter-node/pom.xml'
+          mvn-goals: 'clean install'
     files: '**'
     archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
