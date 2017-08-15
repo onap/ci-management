@@ -11,17 +11,16 @@
       - 'Msgrtr':
           pom: 'Msgrtr/pom.xml'
           pattern: 'Msgrtr/**'
-          mvn-goals: 'clean install'
       - 'dmaap':
           pom: 'dmaap/pom.xml'
           pattern: 'dmaap/**'
-          mvn-goals: 'clean install'
       - 'dmaapClient':
           pom: 'dmaapClient/pom.xml'
           pattern: 'dmaapClient/**'
-          mvn-goals: 'clean install'
     jobs:
+      - '{project-name}-{stream}-{subproject}-clm'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+          mvn-goals: 'clean install'
     files: '**'
     archive-artifacts: ''
