@@ -23,5 +23,7 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+          mvn-goals: 'clean install'
+
     files: '**'
     archive-artifacts: ''
