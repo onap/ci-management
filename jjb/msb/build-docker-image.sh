@@ -7,4 +7,6 @@ echo $CURRENTDIR
 
 chmod 755 *.*
 
+./build4basedocker.sh
 ./build4docker.sh
+
