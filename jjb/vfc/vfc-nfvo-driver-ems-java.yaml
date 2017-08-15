@@ -2,19 +2,17 @@
 
 - project:
     name: vfc-nfvo-driver-ems-java
-    project-name: 'vfc-nfvo-driver-ems'
     project: 'vfc/nfvo/driver/ems'
+    project-name: 'vfc-nfvo-driver-ems'
+    mvn-settings: 'vfc-nfvo-driver-ems-settings'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-ems-settings'
-    subproject:
-      - 'ems-driver-boco':
-          pom: 'ems/ems/sems/boco/ems-driver/pom.xml'
-          pattern: 'ems/ems/sems/boco/ems-driver/**'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    files: '**'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    files: 'ems/boco/**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+	
+	
