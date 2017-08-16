@@ -1,13 +1,28 @@
 ---
 - project:
     name: vnfsdk-refrepo
-    project: 'vnfsdk/refrepo'
+    project-name: 'vnfsdk-refrepo'
     jobs:
+      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-version-java-daily':
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
+         maven-properties: |
+          skip.docker.build=false
+          skip.docker.tag=false
+          skip.docker.push=false
 
-    project-name: 'vnfsdk-refrepo'
+    project: 'vnfsdk/refrepo'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'vnfsdk-refrepo-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
