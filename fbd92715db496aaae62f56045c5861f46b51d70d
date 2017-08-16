@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_895e6de8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-16T13:35:38Z",
+      "side": 1,
+      "message": "This subject line is a bit ambiguous and also doesn\u0027t target the project you\u0027re modifying enough. I would go with something more like:\n\nAdd more jobs to vnfsdk-refrepo\n\nSee https://chris.beams.io/posts/git-commit/ on how to write good commit messages and why it matters.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "fbd92715db496aaae62f56045c5861f46b51d70d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
