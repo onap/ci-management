@@ -6,7 +6,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-svnfm-huawei-settings'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
       - 'drv-vnfm-huawei':
           pom: 'huawei/vnfmadapter/pom.xml'
