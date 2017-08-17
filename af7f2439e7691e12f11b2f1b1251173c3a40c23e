@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_ce4a3655",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-17T19:59:54Z",
+      "side": 1,
+      "message": "Please line wrap commit body lines at 72 characters or at maximum 80 except where it\u0027s impossible to line wrap (aka long URLs)",
+      "revId": "af7f2439e7691e12f11b2f1b1251173c3a40c23e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
