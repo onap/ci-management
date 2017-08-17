@@ -1,0 +1,36 @@
+---
+- project:
+    name: dcae-apod-analytics
+
+    # job template iterators
+    project-name: 'dcae-apod-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+
+    # apply to all jobs
+    project: 'dcaegen2/analytics/tca'
+    mvn-settings: 'dcae-apod-analytics-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+    extra-branch: '{branch}'
+    extra-refspec: 'refs/heads/{branch}'
+    checkout-dir: 'dcae-apod-buildtools'
+
+    jobs:
+      - '{project-name}-{stream}-release-java-daily':
+          mvn-goals-versioning:
+            'versions:set versions:update-child-modules versions:commit'
+          mvn-goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
+          maven-deploy-properties: |
+              deployAtEnd=true
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-verify-java-skip-tests':
+          mvn-goals: 'clean install'
+      - '{project-name}-{stream}-merge-java':
+          mvn-goals: 'clean deploy'
