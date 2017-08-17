@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_bbe3b232",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-17T14:47:38Z",
+      "side": 1,
+      "message": "Capitalize and use imperative language here. As such, Instead of updating it should be Update",
+      "revId": "89aef194d4817af3b4ad0536d6f6860c4a7e00f6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_9bd0ee54",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-17T14:47:38Z",
+      "side": 1,
+      "message": "Capitalize and use imperative language here. As such, Instead of adding it should be Add",
+      "revId": "89aef194d4817af3b4ad0536d6f6860c4a7e00f6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
