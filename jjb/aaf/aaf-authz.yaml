@@ -6,8 +6,10 @@
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily':
-          pom: 'aaf/authz/pom.xml'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'aaf/authz/pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
           mvn-goals: 'clean install'
     project: 'aaf/authz'
     stream:
