@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_78c1d0e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-17T13:42:37Z",
+      "side": 1,
+      "message": "This subject line isn\u0027t specific enough. It should be\n\nAdd release 1.1.0 for sdnc projects\n\nSee: https://chris.beams.io/posts/git-commit/ on writing good commit messages.",
+      "revId": "883235a7c96304f78e0145586fef7e1483e5859f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
