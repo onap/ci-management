@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_187764d6",
+        "filename": "jjb/msb/msb-swagger-sdk.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-17T13:54:10Z",
+      "side": 1,
+      "message": "The mvn-settings is incorrect, it\u0027s going to match your project\u0027s repo path using \u0027-\u0027 instead of \u0027/\u0027 with an extension of -settings.\n\nTherefore this should be msb-swagger-sdk-settings",
+      "range": {
+        "startLine": 18,
+        "startChar": 19,
+        "endLine": 18,
+        "endChar": 39
+      },
+      "revId": "d499aa4e061630eeeb0ec560062a9e476892ad0b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
