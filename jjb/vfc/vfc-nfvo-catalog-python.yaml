@@ -1,0 +1,17 @@
+---
+
+- project:
+    name: vfc-nfvo-catalog-python
+    project-name: 'vfc-nfvo-catalog'
+    project: 'vfc/nfvo/catalog'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-catalog-settings'
+    build-node: ubuntu1604-redis-4c-4g
+    subproject:
+      - 'catalog':
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
