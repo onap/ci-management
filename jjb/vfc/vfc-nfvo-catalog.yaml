@@ -1,0 +1,21 @@
+---
+
+- project:
+    name: vfc-nfvo-catalog
+    project-name: 'vfc-nfvo-catalog'
+    project: 'vfc/nfvo/catalog'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-catalog-settings'
+    subproject:
+      - 'catalog':
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-redis-4c-4g
