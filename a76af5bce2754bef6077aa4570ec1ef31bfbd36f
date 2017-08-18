@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_6ca59203",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-18T14:33:32Z",
+      "side": 1,
+      "message": "Capitalize",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "a76af5bce2754bef6077aa4570ec1ef31bfbd36f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_0cacc6ec",
+        "filename": "jjb/vfc/vfc-nfvo-catalog-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-18T14:33:32Z",
+      "side": 1,
+      "message": "Rename this file to vfc-nfvo-catalog.yaml and merge in the vfc-nfvo-catalog-python.yaml differences.\n\nThere is no reason to have the python and java jobs be in separate projects when everything in them can be hosted in a single file.",
+      "revId": "a76af5bce2754bef6077aa4570ec1ef31bfbd36f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_ecb8622c",
+        "filename": "jjb/vfc/vfc-nfvo-catalog-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-18T14:33:32Z",
+      "side": 1,
+      "message": "Drop this",
+      "range": {
+        "startLine": 4,
+        "startChar": 26,
+        "endLine": 4,
+        "endChar": 31
+      },
+      "revId": "a76af5bce2754bef6077aa4570ec1ef31bfbd36f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_ccb59e32",
+        "filename": "jjb/vfc/vfc-nfvo-catalog-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-18T14:33:32Z",
+      "side": 1,
+      "message": "Merge into vfc-nfvo-catalog-java.yaml which should be renamed to vfc-nfvo-catalog.yaml\n\nThere is no reason to have the python and java jobs be in separate projects when everything in them can be hosted in a single file.",
+      "revId": "a76af5bce2754bef6077aa4570ec1ef31bfbd36f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
