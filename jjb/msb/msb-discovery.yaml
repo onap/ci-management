@@ -10,7 +10,11 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
-
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-discovery-docker-image.sh'            
     project: 'msb/discovery'
     stream:
       - 'master':
