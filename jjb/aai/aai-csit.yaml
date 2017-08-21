@@ -1,0 +1,13 @@
+---
+- project:
+    name: aai-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'aai'
+    stream: 'master'
+    functionality:
+      - 'search-data-service':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
