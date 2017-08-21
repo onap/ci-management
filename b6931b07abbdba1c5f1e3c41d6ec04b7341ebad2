@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_810f5ce1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-21T21:53:21Z",
+      "side": 1,
+      "message": "docker\n\nCan we please mention in the description the 2 projects affected here?",
+      "range": {
+        "startLine": 7,
+        "startChar": 19,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "b6931b07abbdba1c5f1e3c41d6ec04b7341ebad2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_c15e84e9",
+        "filename": "jjb/msb/msb-discovery.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-21T21:53:21Z",
+      "side": 1,
+      "message": "remove trailing space",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 12
+      },
+      "revId": "b6931b07abbdba1c5f1e3c41d6ec04b7341ebad2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
