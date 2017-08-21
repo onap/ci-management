@@ -1,0 +1,16 @@
+---
+- project:
+    name: msb-java-sdk
+    project-name: 'msb-java-sdk'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'msb/java-sdk'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'msb-java-sdk-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
