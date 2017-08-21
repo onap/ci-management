@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_61b918e9",
+        "filename": "jjb/dcaegen2/apod-analytics.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-21T22:44:49Z",
+      "side": 1,
+      "message": "Maven settings file should match the project name:\n\ndcaegen2-analytics-tca-settings",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 48
+      },
+      "revId": "2391022b335f539a3ddec36a5388456b3327fdda",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
