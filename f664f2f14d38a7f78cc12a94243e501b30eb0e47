@@ -16,6 +16,23 @@
       "revId": "f664f2f14d38a7f78cc12a94243e501b30eb0e47",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_c74a1483",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-22T21:02:05Z",
+      "side": 1,
+      "message": "I think we need to remove the quotes here.",
+      "revId": "f664f2f14d38a7f78cc12a94243e501b30eb0e47",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
