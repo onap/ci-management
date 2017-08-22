@@ -10,8 +10,8 @@
     mvn-settings: 'vfc-nfvo-driver-ems-settings'
     subproject:
       - 'drv-ems-boco':
-          pom: 'ems/boco/pom.xml'
-          pattern: 'ems/boco/**'
+          pom: 'ems/pom.xml'
+          pattern: 'ems/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
