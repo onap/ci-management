@@ -14,7 +14,7 @@
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:
-            !include-raw-escape: 'build-docker-image.sh'
+            !include-raw-escape: 'build-apigateway-docker-image.sh'
 
     project: 'msb/apigateway'
     stream:
