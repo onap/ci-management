@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_a79a7012",
+        "filename": "jjb/doc/doc-templates-rtd.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-22T19:52:41Z",
+      "side": 1,
+      "message": "We will still need scm config here.",
+      "revId": "f664f2f14d38a7f78cc12a94243e501b30eb0e47",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
