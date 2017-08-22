@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_87440c75",
+        "filename": "jjb/doc/doc-templates-rtd.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-22T21:07:51Z",
+      "side": 1,
+      "message": "This will only trigger on a change in the doc project now.",
+      "revId": "5ca19d51951d550a85c2a7436d9fe87c70fcd4ec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
