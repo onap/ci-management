@@ -9,10 +9,8 @@
     # Optional Variables:
     #     path:      directory containing the project's tox.ini relative to
     #                the workspace. The default is the project root.
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
 
-    name: '{project-name}-{stream}-verify-rtd'
+    name: 'doc-{stream}-verify-rtd'
     path: '$WORKSPACE'
 
     project-type: freestyle
@@ -45,7 +43,7 @@
     triggers:
       - gerrit-trigger-patch-submitted:
           server: '{server-name}'
-          project: '**'
+          project: 'doc'
           branch: '{branch}'
           files: 'docs/**/*.rst'
       - timed: 'H H * * *'
@@ -84,10 +82,8 @@
     # Optional Variables:
     #     path:      directory containing the project's tox.ini relative to
     #                the workspace. The default is the project root.
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
 
-    name: '{project-name}-{stream}-merge-rtd'
+    name: 'doc-{stream}-merge-rtd'
     path: '$WORKSPACE'
 
     project-type: freestyle
@@ -100,18 +96,12 @@
 
     parameters:
       - infra-parameters:
-          project: '{project}'
+          project: 'doc'
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
 
     wrappers:
       - infra-wrappers:

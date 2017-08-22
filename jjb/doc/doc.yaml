@@ -4,14 +4,15 @@
     project-name: 'doc'
 
     jobs:
-        - '{project-name}-{stream}-verify-rtd':
-            build-node: centos7-basebuild-4c-4g
-        - '{project-name}-{stream}-merge-rtd'
+      - 'doc-{stream}-verify-rtd':
+          build-node: centos7-basebuild-4c-4g
+      - 'doc-{stream}-merge-rtd'
 
     project: 'doc'
+
 
     rtdproject: 'onap'
 
     stream:
-        - master:
-             branch: 'master'
+      - 'master':
+          branch: 'master'
