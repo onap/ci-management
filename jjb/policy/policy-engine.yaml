@@ -7,7 +7,8 @@
           build-node: 'ubuntu1604-basebuild-4c-4g'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+          build-node: 'ubuntu1604-basebuild-4c-4g'
       - '{project-name}-{stream}-stage-site-java':
           build-node: 'ubuntu1604-basebuild-4c-4g'
           site-pom: 'pom.xml'
