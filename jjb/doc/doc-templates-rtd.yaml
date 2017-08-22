@@ -9,8 +9,6 @@
     # Optional Variables:
     #     path:      directory containing the project's tox.ini relative to
     #                the workspace. The default is the project root.
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
 
     name: '{project-name}-{stream}-verify-rtd'
     path: '$WORKSPACE'
@@ -34,7 +32,7 @@
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
+          refspec: ''
           choosing-strategy: 'gerrit'
           submodule-recursive: '{submodule-recursive}'
 
@@ -84,8 +82,6 @@
     # Optional Variables:
     #     path:      directory containing the project's tox.ini relative to
     #                the workspace. The default is the project root.
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
 
     name: '{project-name}-{stream}-merge-rtd'
     path: '$WORKSPACE'
@@ -107,9 +103,10 @@
       - maven-exec:
           maven-version: '{maven-version}'
 
+
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
+          refspec: ''
           choosing-strategy: 'gerrit'
           submodule-recursive: '{submodule-recursive}'
 
@@ -119,8 +116,8 @@
 
     triggers:
       - gerrit:
-          server-name: '{server-name}'
-          trigger-on:
+	  server-name: '{server-name}'
+	  trigger-on:
             - change-merged-event
             - comment-added-contains-event:
                 comment-contains-value: 'remerge'
