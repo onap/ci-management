@@ -1,9 +1,9 @@
 ---
 - project:
-    name: dcaegen2-analytics
+    name: dcaegen2-analytics-tca
 
     # job template iterators
-    project-name: 'dcaegen2-analytics'
+    project-name: 'dcaegen2-analytics-tca'
     stream:
       - 'master':
           branch: 'master'
