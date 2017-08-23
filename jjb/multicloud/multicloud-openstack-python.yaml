@@ -1,0 +1,13 @@
+---
+- project:
+    name: multicloud-openstack-python
+    project-name: 'multicloud-openstack'
+    project: 'multicloud/openstack'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-openstack-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    jobs:
+      - '{project-name}-{stream}-verify-python'
+    files: '**'
