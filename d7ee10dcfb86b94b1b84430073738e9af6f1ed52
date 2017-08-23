@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_3b957540",
+        "filename": "jjb/portal/portal-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-23T21:05:17Z",
+      "side": 1,
+      "message": "Line 24.. This change is not needed. Can we update this file?\n\nThanks!",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 1
+      },
+      "revId": "d7ee10dcfb86b94b1b84430073738e9af6f1ed52",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
