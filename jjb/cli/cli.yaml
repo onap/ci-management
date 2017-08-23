@@ -14,6 +14,7 @@
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'deployment/docker/pom.xml'
           mvn-goals: 'docker:build'
+          docker-image-name: 'onap/cli'
 
     project: 'cli'
     stream:
