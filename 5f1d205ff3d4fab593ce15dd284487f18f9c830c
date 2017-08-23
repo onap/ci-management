@@ -22,6 +22,30 @@
       "revId": "5f1d205ff3d4fab593ce15dd284487f18f9c830c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_bb604536",
+        "filename": "jjb/doc/doc-templates-rtd.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-23T22:17:47Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "9a437d4f_1b6ab11a",
+      "range": {
+        "startLine": 118,
+        "startChar": 28,
+        "endLine": 118,
+        "endChar": 37
+      },
+      "revId": "5f1d205ff3d4fab593ce15dd284487f18f9c830c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
