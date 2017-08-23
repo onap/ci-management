@@ -109,6 +109,16 @@
           # yamllint enable
           description: 'Maven selector to be used by shell scripts'
 
+- parameter:
+    name: docker-image-name
+    parameters:
+      - string:
+          name: DOCKER_IMAGE_NAME
+          # yamllint disable rule:line-length
+          default: '{docker-image-name}'
+          # yamllint enable
+          description: 'Docker image name, e.g. onap/appc'
+
 # PROPERTIES
 - property:
     name: infra-properties

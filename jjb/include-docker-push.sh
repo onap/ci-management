@@ -20,40 +20,31 @@ RELEASE_VERSION_REGEX="^[0-9]+\.[0-9]+\.[0-9]+$";
 SNAPSHOT_TAG=${VERSION}-SNAPSHOT-${DATETIME_STAMP};
 STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
-if [[ $PROJECT =~ $SEARCH ]] ; then
 
+# Set REPO_PATH variable
+
+if [ ! -z "$DOCKER_IMAGE_NAME" ]; then
+    REPO_PATH=$DOCKER_REPOSITORY/${$DOCKER_IMAGE_NAME};
+elif [[ $PROJECT =~ $SEARCH ]] ; then
     REPO_PATH=$DOCKER_REPOSITORY/openecomp/ajsc-aai;
-
-    docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
-    docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
-
-    if [[ "$VERSION" =~ $RELEASE_VERSION_REGEX ]]; then
-        STRIPPED_RELEASE=$(echo $VERSION | cut -d"." -f1,2);
-        docker tag $REPO_PATH:latest $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
-        docker push $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
-    else
-        docker push $REPO_PATH:latest;
-    fi
-
-    docker push $REPO_PATH:$STAGING_TAG;
-    docker push $REPO_PATH:$SNAPSHOT_TAG;
 else
     # Cut the prefix aai/ in example aai/model-loader
     DOCKER_REPO_NAME=$(echo ${PROJECT} | cut -d"/" -f2-);
 
     REPO_PATH=$DOCKER_REPOSITORY/openecomp/${DOCKER_REPO_NAME};
-
-    docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
-    docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
-
-    if [[ "$VERSION" =~ $RELEASE_VERSION_REGEX ]]; then
-        STRIPPED_RELEASE=$(echo $VERSION | cut -d"." -f1,2);
-        docker tag $REPO_PATH:latest $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
-        docker push $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
-    else
-        docker push $REPO_PATH:latest;
-    fi
-
-    docker push $REPO_PATH:$SNAPSHOT_TAG;
-    docker push $REPO_PATH:$STAGING_TAG;
 fi
+
+
+docker tag $REPO_PATH:latest $REPO_PATH:$STAGING_TAG;
+docker tag $REPO_PATH:latest $REPO_PATH:$SNAPSHOT_TAG;
+
+if [[ "$VERSION" =~ $RELEASE_VERSION_REGEX ]]; then
+    STRIPPED_RELEASE=$(echo $VERSION | cut -d"." -f1,2);
+    docker tag $REPO_PATH:latest $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
+    docker push $REPO_PATH:${STRIPPED_RELEASE}-STAGING-latest;
+else
+    docker push $REPO_PATH:latest;
+fi
+
+docker push $REPO_PATH:$SNAPSHOT_TAG;
+docker push $REPO_PATH:$STAGING_TAG;
