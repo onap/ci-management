@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_ea4dd873",
+        "filename": "jjb/cli/cli.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-24T06:29:26Z",
+      "side": 1,
+      "message": "I would suggest having this change in a separate gerrit. \nThat way, we can have 1 change for just the refactoring and the next separate changes being the projects adding this line into their yaml templates as needed.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 39
+      },
+      "revId": "c2bca84c1877a535c4abd04a5ec439e27a099dd6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
