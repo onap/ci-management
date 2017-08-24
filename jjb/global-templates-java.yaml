@@ -1342,6 +1342,7 @@
     name: '{project-name}-{stream}-aai-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
+    docker-image-name: ''
 
     properties:
       - infra-properties:
@@ -1355,6 +1356,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - docker-image-name:
+          docker-image-name: '{docker-image-name}'
 
     scm:
       - gerrit-trigger-scm:
