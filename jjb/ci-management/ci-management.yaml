@@ -3,8 +3,6 @@
     name: ci-management-jobs
     jobs:
       - '{project-name}-ci-jobs'
-      - '{project}-verify-packer'
-      - '{project}-merge-packer-{platforms}-{templates}'
 
     project: 'ci-management'
     project-name: 'ci-management'
@@ -12,16 +10,25 @@
     branch: 'master'
     build-timeout: '60'
     build-node: 'centos7-basebuild-2c-1g'
+
+- project:
+    name: packer-jobs
+    # packer jobs templates are defined in global-jjb
+    jobs:
+      - '{project-name}-packer-jobs'
+    project: 'ci-management'
+    project-name: 'ci-management'
+    branch: master
+    archive-artifacts: '**/*.log'
+    build-node: 'centos7-basebuild-2c-1g'
     platforms:
       - centos
       - ubuntu-16.04
-
     templates:
       - basebuild
       - docker
-      - redis
       - memcached
-
+      - redis
     exclude:
       # only build the docker image on ubuntu at present
       - platforms: centos
@@ -127,90 +134,6 @@
           pip freeze
           pip install jenkins-job-builder
           jenkins-jobs --conf $JJBINI update --delete-old --workers 4 jjb/
-
-    publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-
-- job-template:
-    name: '{project}-verify-packer'
-    project-type: freestyle
-    node: '{build-node}'
-    concurrent: true
-
-    properties:
-      - infra-properties:
-          build-days-to-keep: 14
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: 'master'
-          refspec: 'refs/heads/master'
-          artifacts: '{archive-artifacts}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: 'master'
-          files: 'packer/**'
-
-    builders:
-      - packer-validate
-
-    publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-- job-template:
-    name: '{project}-merge-packer-{platforms}-{templates}'
-    project-type: freestyle
-    node: '{build-node}'
-    concurrent: true
-
-    properties:
-      - infra-properties:
-          build-days-to-keep: 14
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: 'master'
-          refspec: 'refs/heads/master'
-          artifacts: '{archive-artifacts}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      - gerrit-trigger-patch-merged:
-          server: '{server-name}'
-          project: '{project}'
-          branch: 'master'
-          files: 'packer/**'
-
-    builders:
-      - packer-validate
-      - packer-build:
-          platform: '{platforms}'
-          template: '{templates}'
 
     publishers:
       - infra-shiplogs:
