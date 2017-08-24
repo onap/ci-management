@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_2d49bad0",
+        "filename": "jjb/vfc/vfc-nfvo-driver-ems-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-24T18:17:23Z",
+      "side": 1,
+      "message": "Change on line 21 is not needed. Please remove any new/line or space changes done to this line",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 42
+      },
+      "revId": "f4d6d9725942b409b5e7b7dbae920a6335604db3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
