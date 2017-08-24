@@ -25,6 +25,9 @@ STAGING_TAG=${VERSION}-STAGING-${DATETIME_STAMP};
 
 if [ ! -z "$DOCKER_IMAGE_NAME" ]; then
     REPO_PATH=$DOCKER_REPOSITORY/${DOCKER_IMAGE_NAME};
+
+    # tag image with nexus3 proxy prefix
+    docker tag ${DOCKER_IMAGE_NAME} $REPO_PATH
 elif [[ $PROJECT =~ $SEARCH ]] ; then
     REPO_PATH=$DOCKER_REPOSITORY/openecomp/ajsc-aai;
 else
