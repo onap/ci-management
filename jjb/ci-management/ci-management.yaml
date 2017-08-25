@@ -20,6 +20,7 @@
       - basebuild
       - docker
       - redis
+      - memcached
 
     exclude:
       # only build the docker image on ubuntu at present
