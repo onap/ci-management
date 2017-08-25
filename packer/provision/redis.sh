@@ -29,7 +29,7 @@ ubuntu_systems() {
     cp /tmp/redis-4.0.1/redis.conf /etc/redis.conf
 
     # 3. set auto start when start system
-    update-rc.d redis-server defaults
+    redis-server /etc/redis.conf &
 }
 
 all_systems() {
