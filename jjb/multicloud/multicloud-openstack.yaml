@@ -1,0 +1,20 @@
+---
+- project:
+    name: multicloud-openstack
+    project-name: 'multicloud-openstack'
+    project: 'multicloud/openstack'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-openstack-settings'
+    subproject:
+      - 'openstack':
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-basebuild-4c-4g'
