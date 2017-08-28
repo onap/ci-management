@@ -8,13 +8,13 @@
           branch: 'master'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
-      - 'openstack':
-          path: '.'
-          pattern: '**'
+      - 'newton':
+          path: 'newton'
+          pattern: 'newton/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-basebuild-4c-4g'
+    build-node: 'ubuntu1604-memcached-4c-4g'
