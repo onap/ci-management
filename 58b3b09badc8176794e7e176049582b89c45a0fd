@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_f4d7f7eb",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-28T14:58:37Z",
+      "side": 1,
+      "message": "Can we make these changes to the script in a separate gerrit?\nIs better to isolate these changes on a separate gerrit explaining the purpose of why we need these packages.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 28
+      },
+      "revId": "58b3b09badc8176794e7e176049582b89c45a0fd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
