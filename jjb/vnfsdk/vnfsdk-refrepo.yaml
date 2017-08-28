@@ -10,13 +10,10 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-version-java-daily':
-         docker-pom: 'pom.xml'
-         mvn-profile: 'docker'
-         maven-properties: |
-          skip.docker.build=false
-          skip.docker.tag=false
-          skip.docker.push=false
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'deployment/docker/pom.xml'
+          mvn-goals: 'docker:build'
+          docker-image-name: 'onap/refrepo'
 
     project: 'vnfsdk/refrepo'
     stream:
