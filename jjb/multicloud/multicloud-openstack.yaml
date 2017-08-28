@@ -14,7 +14,7 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      # - '{project-name}-{stream}-merge-java'
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-basebuild-4c-4g'
