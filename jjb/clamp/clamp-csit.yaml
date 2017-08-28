@@ -1,0 +1,15 @@
+---
+- project:
+    name: clamp-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'clamp'
+    stream: 'master'
+    functionality:
+      - 'TCA':
+          trigger_jobs:
+      - 'UIs':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
