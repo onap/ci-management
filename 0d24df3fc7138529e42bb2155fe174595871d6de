@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_0e194788",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-29T13:43:03Z",
+      "side": 1,
+      "message": "This subject is fine, but the commit body doesn\u0027t state why you\u0027re \"fixing\" the jobs.\n\nPlease be more descriptive in your commit message.\n\nhttps://wiki.onap.org/display/DW/Commit+Messages",
+      "revId": "0d24df3fc7138529e42bb2155fe174595871d6de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
