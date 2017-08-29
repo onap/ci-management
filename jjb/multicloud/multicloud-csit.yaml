@@ -4,10 +4,10 @@
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'multicloud-framework'
+    project-name: 'multicloud'
     stream: 'master'
     functionality:
-      - 'provision':
+      - 'functionality1':
           trigger_jobs:
             - '{project-name}-{stream}-multivimbroker-merge-java'
     robot-options: ''
