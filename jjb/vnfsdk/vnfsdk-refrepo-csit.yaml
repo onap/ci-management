@@ -1,0 +1,14 @@
+---
+- project:
+    name: vnfsdk-refrepo-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'vnfsdk-refrepo'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+           - '{project-name}-{stream}-merge-java'
+    robot-options: ''
+    branch: 'master'
