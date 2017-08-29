@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_d109a02d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-29T13:48:12Z",
+      "side": 1,
+      "message": "You can issue a \u0027sudo apt-get install xvfb\u0027 if you need it and it\u0027s not installed. That can be done as a temporary fix, but if you need extra libraries installed it would probably be better to have a separate patch to update the packer provisioning script to add it in to the image being used.",
+      "revId": "f96d50a3ef6e0a7f27897bcf741254092c5cf6e2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
