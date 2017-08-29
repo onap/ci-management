@@ -17,3 +17,4 @@
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'dcaegen2-platform-configbinding-settings'
+    build-node: 'ubuntu1604-docker-8c-8g'
