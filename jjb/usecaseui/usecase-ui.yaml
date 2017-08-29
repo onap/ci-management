@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: usecase-ui
+    project-name: 'usecase-ui'
+    project: 'usecase-ui'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'usecase-ui-settings'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
