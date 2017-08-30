@@ -1,0 +1,15 @@
+---
+
+- project:
+    name: vfc-nfvo-driver-svnfm-huawei-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'vfc-nfvo-driver-svnfm'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+            - 'vfc-nfvo-driver-svnfm-huawei-master-docker-version-java-daily'
+    robot-options: ''
+    branch: 'master'
