@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: sdc-sdc-docker-base 
+    project-name: 'sdc-sdc-docker-base'
+    jobs:
+      - '{project-name}-{stream}-sdc-merge-java':
+          docker-pom: 'pom.xml'
+    project: 'sdc/sdc-docker-base'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-sdc-docker-base-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-8c-8g
