@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_34f2159b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-30T16:14:26Z",
+      "side": 1,
+      "message": "Not sure if this is the best way to describe this change. \nInstead of \"Create\" can we use \"Update\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 27
+      },
+      "revId": "b6bf9dfe537211f9e29f73412fd7dd1518be38cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_74f89d7c",
+        "filename": "jjb/sdc/sdc-sdc-docker-base.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-30T16:14:26Z",
+      "side": 1,
+      "message": "I know is not part of the change, but can we remove this space while at it?\n\nThanks a ton!",
+      "range": {
+        "startLine": 4,
+        "startChar": 29,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "b6bf9dfe537211f9e29f73412fd7dd1518be38cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
