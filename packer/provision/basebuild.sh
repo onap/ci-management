@@ -13,7 +13,7 @@ rh_systems() {
     yum install -y openssl-devel mysql-devel gcc
 
     # Autorelease support packages
-    yum install -y python-tox xmlstarlet xvfb
+    yum install -y firefox python-tox xmlstarlet xvfb
 
     # Additional libraries for Python ncclient
     yum install -y libxml2 libxslt libxslt-devel libffi libffi-devel
@@ -47,7 +47,7 @@ ubuntu_systems() {
     apt-get install -y libssl-dev libmysqlclient-dev gcc
 
     # Autorelease support packages
-    apt-get install -y python-tox xmlstarlet xvfb
+    apt-get install -y firefox python-tox xmlstarlet xvfb
 
     # Additional libraries for Python ncclient
     apt-get install -y wget unzip python-ncclient
