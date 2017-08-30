@@ -55,6 +55,18 @@ ubuntu_systems() {
     # Add graphviz for documentation building
     apt-get install -y graphviz
 
+    # Erlang and Rebar packages needed for DCAEGEN2
+    apt-get install libwxgtk3.0-0v5 libsctp1
+    wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
+    dpkg -i esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
+    apt-get install libwxbase3.0-0v5
+    apt-get -f
+    apt-get -f install
+    git clone https://github.com/erlang/rebar3.git
+    cd rebar3
+    ./bootstrap
+    mv rebar3 /usr/bin/rebar3
+    cd ..
 }
 
 all_systems() {
