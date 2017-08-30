@@ -11,10 +11,11 @@
       - 'newton':
           path: 'newton'
           pattern: 'newton/**'
+          pom: 'newton/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-memcached-4c-4g'
