@@ -1,0 +1,22 @@
+---
+- project:
+    name: dmaap-messagerouter-messageservice
+    project-name: 'dmaap-messagerouter-messageservice'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'dmaap/messageservice/pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          mvn-goals: 'clean install'
+    project: 'dmaap/messagerouter/messageservice'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
+    files: '**'
+    archive-artifacts: ''
