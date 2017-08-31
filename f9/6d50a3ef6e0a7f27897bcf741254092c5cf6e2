@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Pierre Close <pc457b@intl.att.com>
+Code-Review+1: Sébastien Determe <sd378r@intl.att.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Thu, 31 Aug 2017 12:24:11 +0000
+Reviewed-on: http://gerrit.onap.org/r/9115
+Project: ci-management
+Branch: refs/heads/master
