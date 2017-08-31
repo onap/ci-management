@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_a381294c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-31T17:13:25Z",
+      "side": 1,
+      "message": "This title can be a little bit more descriptive. \n\nCan we use:\nAdd gvnfm juju driver jjb templates\n\nAdd verify and merge CI jjb jobs for\nvfc/nfvo/driver/vnfm/gvnfm.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "7f7cff0d5ba82fc5433dfe0668f832bb01e38062",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
