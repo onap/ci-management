@@ -16,6 +16,24 @@
       "revId": "a82ccdf169c844f4a05efa48f1a17c40def859db",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_63cea15c",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-31T19:14:42Z",
+      "side": 1,
+      "message": "Thanks Jeremy,, what about /usr/local/bin?",
+      "parentUuid": "9a437d4f_e3bbb1c2",
+      "revId": "a82ccdf169c844f4a05efa48f1a17c40def859db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
