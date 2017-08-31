@@ -20,7 +20,10 @@ pip install --upgrade pip
 
 pip install --upgrade --no-binary pycparser pycparser
 pip install --upgrade pyOpenSSL==16.2.0 docker-py importlib requests scapy netifaces netaddr ipaddr simplejson demjson
-pip install --upgrade robotframework{,-{httplibrary,requests,sshlibrary,selenium2library}}
+pip install --upgrade robotframework{,-{httplibrary,requests,sshlibrary,selenium2library,xvfb}}
+
+pip install xvfbwrapper
+pip install PyVirtualDisplay
 
 # Print installed versions.
 pip freeze
