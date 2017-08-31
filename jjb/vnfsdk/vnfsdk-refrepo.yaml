@@ -11,7 +11,7 @@
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'deployment/docker/pom.xml'
+          pom: 'vnfmarket-be/deployment/docker/pom.xml'
           mvn-goals: 'docker:build'
           docker-image-name: 'onap/refrepo'
 
