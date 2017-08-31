@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_e3bbb1c2",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-31T19:08:55Z",
+      "side": 1,
+      "message": "I think it\u0027s ok but I dunno if I\u0027d put it in /tmp.  Maybe /opt ?  Unless it is tmp",
+      "revId": "a82ccdf169c844f4a05efa48f1a17c40def859db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
