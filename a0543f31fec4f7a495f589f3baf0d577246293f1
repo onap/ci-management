@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a437d4f_a8b906eb",
+        "filename": "packer/provision/basebuild.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-08-31T14:22:04Z",
+      "side": 1,
+      "message": "The -y is required for packer builds",
+      "parentUuid": "9a437d4f_ed4a8082",
+      "revId": "a0543f31fec4f7a495f589f3baf0d577246293f1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_ed31600c",
         "filename": "packer/provision/basebuild.sh",
         "patchSetId": 6
