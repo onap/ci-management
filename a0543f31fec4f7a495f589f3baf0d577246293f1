@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_ed4a8082",
+        "filename": "packer/provision/basebuild.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-31T12:21:31Z",
+      "side": 1,
+      "message": "I would do `apt-get install -y libwxgtk3.0-0v5 libsctp1` In case the install prompts for a yes.",
+      "revId": "a0543f31fec4f7a495f589f3baf0d577246293f1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_ed31600c",
+        "filename": "packer/provision/basebuild.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-08-31T12:21:31Z",
+      "side": 1,
+      "message": "Add -y flag here too",
+      "revId": "a0543f31fec4f7a495f589f3baf0d577246293f1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
