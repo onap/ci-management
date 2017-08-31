@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_835e2544",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-08-31T20:09:41Z",
+      "side": 1,
+      "message": "Can we add a small description of the problem we are fixing? We can say something like \"Adjusting the location of the pom.xml to...\" or similar.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "a54f710f985eb0c46a55601c53391bc329e8fd16",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
