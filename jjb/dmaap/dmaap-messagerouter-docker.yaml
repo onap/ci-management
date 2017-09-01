@@ -1,0 +1,34 @@
+---
+
+- project:
+    name: dmaap-messsagerouter-docker
+    project-name: ' dmaap-messsagerouter-docker'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java-checkstyle'
+      - '{project-name}-{stream}-merge-properties-java':
+         mvn_properties:
+            - docker.pull.registry=nexus3.onap.org:10001
+            - docker.push.registry=nexus3.onap.org:10003
+      - '{project-name}-{stream}-release-java-daily-checkstyle':
+         mvn_properties:
+          - skipDockerBuild=true
+          - skipDockerTag=true
+          - skipDockerPush=true
+      - '{project-name}-{stream}-docker-java-properties-daily':
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
+         maven-properties: |
+          skip.docker.build=false
+          skip.docker.tag=false
+          skip.docker.push=false
+          dmaap-messsagerouter-docker.registry=$
+
+    project: 'dmaap/messagerouter/messageservice'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-messsagerouter-messageservice-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-8c-8g
