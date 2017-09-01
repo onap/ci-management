@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a437d4f_e30ccc44",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-01T22:22:04Z",
+      "side": 1,
+      "message": "Why is this change being added?",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 12
+      },
+      "revId": "3d48a8965d1ed14c8229bf2c5e79fdd238a502f7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_a32fe4a0",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
