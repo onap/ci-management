@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_f181324b",
+        "filename": "jjb/dmaap/dmaap-messagerouter-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-02T18:23:41Z",
+      "side": 1,
+      "message": "We also need to add the CLM job",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 9
+      },
+      "revId": "6b358804a788a4ec168f422555d79147418ce0c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_117dd66e",
+        "filename": "jjb/dmaap/dmaap-messagerouter-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-02T18:23:41Z",
+      "side": 1,
+      "message": "this file is called dmaap-messagerouter-messageservice-settings",
+      "range": {
+        "startLine": 30,
+        "startChar": 19,
+        "endLine": 30,
+        "endChar": 55
+      },
+      "revId": "6b358804a788a4ec168f422555d79147418ce0c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
