@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_77a77250",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-04T21:17:59Z",
+      "side": 1,
+      "message": "Fix this indentation\nThe description lines can be 72 characters max long, no need to truncate this paragraph too much.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 7
+      },
+      "revId": "a4dce43bcff2ecee60330d339d75aff6b72f233a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_57646e21",
+        "filename": "jjb/vfc/build-gvnfm-vnfres-docker-image.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-04T21:17:59Z",
+      "side": 1,
+      "message": "not needed",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 1
+      },
+      "revId": "a4dce43bcff2ecee60330d339d75aff6b72f233a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
