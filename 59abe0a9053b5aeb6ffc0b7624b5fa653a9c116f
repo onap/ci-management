@@ -22,6 +22,52 @@
       "revId": "59abe0a9053b5aeb6ffc0b7624b5fa653a9c116f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_d7b05e8d",
+        "filename": "jjb/vfc/build-gvnfm-driver-docker-image.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-04T21:17:20Z",
+      "side": 1,
+      "message": "not needed",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 1
+      },
+      "revId": "59abe0a9053b5aeb6ffc0b7624b5fa653a9c116f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_b7adda33",
+        "filename": "jjb/vfc/build-gvnfm-vnfmgr-docker-image.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-04T21:17:20Z",
+      "side": 1,
+      "message": "Why are we changing the permissions on this file?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 0
+      },
+      "revId": "59abe0a9053b5aeb6ffc0b7624b5fa653a9c116f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
