@@ -5,7 +5,7 @@ echo '============== CALLING SCRIPT TO BUILD DOCKER IMAGES ================='
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
-chmod 755 ./docker/*.*
+chmod 755 ./lcm/docker/*.*
 
-./docker/build_image.sh
+./lcm/docker/build_image.sh
 
