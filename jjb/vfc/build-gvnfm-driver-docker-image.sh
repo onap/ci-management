@@ -1,11 +1,11 @@
 #!/bin/bash
-#
+
 echo '============== CALLING SCRIPT TO BUILD DOCKER IMAGES ================='
 
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
-chmod 755 ./mgr/docker/*.*
+chmod 755 ./gvnfmadapter/docker/*.*
 
-./mgr/docker/build_image.sh
+./gvnfmadapter/docker/build_image.sh
 
