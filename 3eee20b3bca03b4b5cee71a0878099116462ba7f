@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_379b2a1a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-04T21:10:42Z",
+      "side": 1,
+      "message": "Please improve this commit text. \nSomething like this would describe better what the changes is actually bringing in:\n\nAdd CI Jenkins jobs for oom/registrator\n\nAdd initial yaml jjb template for oom-registrator.\nJobs include: clm, verify, merge and release.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 32
+      },
+      "revId": "3eee20b3bca03b4b5cee71a0878099116462ba7f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
