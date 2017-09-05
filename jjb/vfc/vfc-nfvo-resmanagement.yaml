@@ -8,13 +8,13 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'
-      - '{project-name}-{stream}-docker-version-java-daily':
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-resmanagement-docker-image.sh'
