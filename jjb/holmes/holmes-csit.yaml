@@ -1,0 +1,14 @@
+---
+- project:
+    name: holmes-rule-management-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'holmes-rule-management'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+            - 'holmes-rule-management-master-docker-java-daily'
+    robot-options: ''
+    branch: 'master'
