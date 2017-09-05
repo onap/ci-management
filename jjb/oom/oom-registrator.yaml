@@ -1,0 +1,17 @@
+---
+- project:
+    name: oom-registrator
+    project-name: 'oom-registrator'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    project: 'oom/registrator'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'oom-registrator-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
