@@ -1,20 +1,19 @@
 ---
 
 - project:
-    name: vfc-nfvo-driver-vnfm-svnfm-zte-java
+    name: vfc-nfvo-driver-vnfm-svnfm-docker
     project-name: 'vfc-nfvo-driver-vnfm-svnfm'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
-    subproject:
-      - 'drv-vnfm-zte':
-          pom: 'zte/vmanager/pom.xml'
-          pattern: 'zte/vmanager/**'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-svnfm-driver-docker-image.sh'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
