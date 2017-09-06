@@ -1,0 +1,14 @@
+---
+- project:
+    name: msb-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'msb'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+            - 'msb-discovery-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
