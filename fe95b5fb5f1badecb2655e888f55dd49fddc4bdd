@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_7f62a4d9",
+        "filename": "jjb/dmaap/dmaap-messagerouter-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2017-09-06T00:01:26Z",
+      "side": 0,
+      "message": "ws not required! not sure if this would be causing a http 400 error",
+      "range": {
+        "startLine": 5,
+        "startChar": 19,
+        "endLine": 5,
+        "endChar": 20
+      },
+      "revId": "fe95b5fb5f1badecb2655e888f55dd49fddc4bdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
