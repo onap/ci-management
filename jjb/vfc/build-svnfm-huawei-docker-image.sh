@@ -5,7 +5,7 @@ echo '============== CALLING SCRIPT TO BUILD DOCKER IMAGES ================='
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
-chmod 755 ./VnfmadapterService/docker/*.*
+chmod 755 ./huawei/vnfmadapter/VnfmadapterService/docker/*.*
 
-./VnfmadapterService/docker/build_image.sh
+./huawei/vnfmadapter/VnfmadapterService/docker/build_image.sh
 

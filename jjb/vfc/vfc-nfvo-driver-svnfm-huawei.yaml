@@ -16,7 +16,7 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'huawei/vnfmadapter/pom.xml'
+          docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-svnfm-huawei-docker-image.sh'
