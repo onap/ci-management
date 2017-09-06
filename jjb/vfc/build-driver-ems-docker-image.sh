@@ -5,7 +5,7 @@ echo '============== CALLING SCRIPT TO BUILD DOCKER IMAGES ================='
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
-chmod 755 ./ems/docker/*.*
+chmod 755 ./ems/microservice-standalone/src/main/assembly/docker/*.*
 
-./ems/docker/build_image.sh
+./ems/microservice-standalone/src/main/assembly/docker/build_image.sh
 
