@@ -2,7 +2,7 @@
 
 - project:
     name: dmaap-messsagerouter-docker
-    project-name: ' dmaap-messsagerouter-docker'
+    project-name: 'dmaap-messsagerouter-docker'
     jobs:
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java-checkstyle'
