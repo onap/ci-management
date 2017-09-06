@@ -1,0 +1,13 @@
+---
+- project:
+    name: cli-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'cli'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+    robot-options: ''
+    branch: 'master'
