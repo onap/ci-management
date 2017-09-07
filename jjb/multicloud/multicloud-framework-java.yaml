@@ -14,6 +14,11 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-multicloud-framework-docker-image.sh'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
