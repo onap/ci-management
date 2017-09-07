@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_b6ea6e0d",
+        "filename": "jjb/modeling/modeling-toscaparsers-nfvparser.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-07T17:07:47Z",
+      "side": 1,
+      "message": "Need to add the CLM job too",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 9
+      },
+      "revId": "6450553eaeffb1bba5805b2a2fb78836bc6e94d6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
