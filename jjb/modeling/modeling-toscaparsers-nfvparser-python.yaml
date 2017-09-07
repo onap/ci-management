@@ -1,0 +1,19 @@
+---
+
+- project:
+    name: modeling-toscaparsers
+    project-name: 'modeling-toscaparsers'
+    project: 'modeling/toscaparsers'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'modeling-toscaparsers-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'nfvparser':
+          path: 'nfvparser/'
+          pattern: 'nfvparser/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-{subproject}-merge-python'
+      - '{project-name}-{stream}-{subproject}-release-python-daily'
