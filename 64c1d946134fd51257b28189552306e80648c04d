@@ -22,6 +22,30 @@
       "revId": "64c1d946134fd51257b28189552306e80648c04d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_f6ad9689",
+        "filename": "jjb/oparent/oparent.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-09-07T18:04:52Z",
+      "side": 1,
+      "message": "To make this change work, we probably need a subproject release-version job template that accepts a version.properties file stored in the subproject\u0027s directory.",
+      "parentUuid": "9a437d4f_16c01a7b",
+      "range": {
+        "startLine": 12,
+        "startChar": 6,
+        "endLine": 12,
+        "endChar": 73
+      },
+      "revId": "64c1d946134fd51257b28189552306e80648c04d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
