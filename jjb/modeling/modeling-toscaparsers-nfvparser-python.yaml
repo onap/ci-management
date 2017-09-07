@@ -1,0 +1,28 @@
+---
+
+- project:
+    name: modeling-toscaparsers
+    project-name: 'modeling-toscaparsers'
+    project: 'modeling/toscaparsers'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'modeling-toscaparsers-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    subproject:
+      - 'nfvparser':
+          path: 'nfvparser/'
+          pattern: 'nfvparser/**'
+          pom: 'nfvparser/pom.xml'
+      - 'javatoscachecker':
+          path: 'javatoscachecker/'
+          pattern: 'javatoscachecker/**'
+          pom: 'javatoscachecker/pom.xml'
+    jobs:
+      - '{project-name}-{stream}-nfvparser-verify-python'
+      - '{project-name}-{stream}-nfvparser-verify-java'
+      - '{project-name}-{stream}-nfvparser-merge-java'
+      - '{project-name}-{stream}-nfvparser-release-java-daily'
+      - '{project-name}-{stream}-javatoscachecker-verify-java'
+      - '{project-name}-{stream}-javatoscachecker-merge-java'
+      - '{project-name}-{stream}-javatoscachecker-release-java-daily'
