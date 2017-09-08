@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_1f302600",
+        "filename": "jjb/dmaap/dmaap-datarouter-node-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-08T22:42:12Z",
+      "side": 1,
+      "message": "Project should be dmaap/datarouter",
+      "range": {
+        "startLine": 27,
+        "startChar": 14,
+        "endLine": 27,
+        "endChar": 46
+      },
+      "revId": "8360e840c6e79099cf2ea50934084cf3e80cf15e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_ff2a028f",
+        "filename": "jjb/dmaap/dmaap-datarouter-node-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-08T22:42:12Z",
+      "side": 1,
+      "message": "settings file should be dmaap-datarouter-settings",
+      "range": {
+        "startLine": 31,
+        "startChar": 19,
+        "endLine": 31,
+        "endChar": 61
+      },
+      "revId": "8360e840c6e79099cf2ea50934084cf3e80cf15e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_9f13f665",
+        "filename": "jjb/dmaap/dmaap-datarouter-prov-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-08T22:42:12Z",
+      "side": 1,
+      "message": "We should not be having 2 files for subprojects of dmaap/datarouter\n\nInstead, we need to use the subproject parameter like other projects do. for example: https://gerrit.onap.org/r/#/c/10017/4/jjb/oparent/oparent.yaml",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 47
+      },
+      "revId": "8360e840c6e79099cf2ea50934084cf3e80cf15e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
