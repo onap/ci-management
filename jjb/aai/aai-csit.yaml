@@ -9,5 +9,8 @@
     functionality:
       - 'search-data-service':
           trigger_jobs:
+      - 'resources':
+          trigger_jobs:
+            - 'aai-resources-{stream}-aai-docker-java-version-daily'
     robot-options: ''
     branch: 'master'
