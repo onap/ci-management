@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_7f3f32d7",
+        "filename": "jjb/aaf/aaf-authz-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-08T22:38:36Z",
+      "side": 1,
+      "message": "Project should be just the root project \naaf/authz",
+      "range": {
+        "startLine": 27,
+        "startChar": 14,
+        "endLine": 27,
+        "endChar": 37
+      },
+      "revId": "53344199473bbb3c7c807d91a1c7e02c1159ce62",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
