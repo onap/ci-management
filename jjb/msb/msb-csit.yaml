@@ -10,6 +10,9 @@
       - 'sanity-check':
           trigger_jobs:
             - 'msb-discovery-master-docker-java-version-shell-daily'
+      - 'rest-service':
+          trigger_jobs:
+            - 'msb-discovery-master-docker-java-version-shell-daily'
       - 'tcp-service':
           trigger_jobs:
             - 'msb-discovery-master-docker-java-version-shell-daily'
