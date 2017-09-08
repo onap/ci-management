@@ -8,5 +8,5 @@ echo $CURRENTDIR
 chmod 755 ./zte/vmanager/docker/*.*
 ./zte/vmanager/docker/build_image.sh
 
-chmod 755 ./VnfmadapterService/docker/*.*
-./VnfmadapterService/docker/build_image.sh
+chmod 755 ./huawei/vnfmadapter/VnfmadapterService/docker/*.*
+./huawei/vnfmadapter/VnfmadapterService/docker/build_image.sh
