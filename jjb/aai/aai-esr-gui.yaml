@@ -7,9 +7,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily'
 
     project: 'aai/esr-gui'
     stream:
@@ -18,4 +16,6 @@
     mvn-settings: 'aai-esr-gui-settings'
     files: '**'
     archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
