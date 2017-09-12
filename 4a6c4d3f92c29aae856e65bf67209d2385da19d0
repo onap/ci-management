@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_58d23ad3",
+        "filename": "vvp/vvp-validation-scripts.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-12T16:31:08Z",
+      "side": 1,
+      "message": "why are we not adding the rest of the jobs? merge, release, clm?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 9
+      },
+      "revId": "4a6c4d3f92c29aae856e65bf67209d2385da19d0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
