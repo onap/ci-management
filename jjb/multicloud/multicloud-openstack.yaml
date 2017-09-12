@@ -12,6 +12,10 @@
           path: 'newton'
           pattern: 'newton/**'
           pom: 'newton/pom.xml'
+      - 'ocata':
+          path: 'ocata'
+          pattern: 'ocata/**'
+          pom: 'ocata/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
