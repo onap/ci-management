@@ -16,5 +16,8 @@
       - 'tcp-service':
           trigger_jobs:
             - 'msb-discovery-master-docker-java-version-shell-daily'
+      - 'iag-redirect-discovery':
+          trigger_jobs:
+            - 'msb-discovery-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
