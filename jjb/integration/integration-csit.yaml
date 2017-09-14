@@ -9,5 +9,7 @@
     functionality:
       - 'functionality1':
           trigger_jobs:
+      - 'vCPE':
+          trigger_jobs:
     robot-options: ''
     branch: 'master'
