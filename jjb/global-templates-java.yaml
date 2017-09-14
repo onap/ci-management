@@ -628,6 +628,8 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
 
+      - docker-login
+
       - maven-target:
           maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
