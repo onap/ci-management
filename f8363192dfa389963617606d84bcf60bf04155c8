@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_f2eb42ae",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-14T16:44:13Z",
+      "side": 1,
+      "message": "Needs to be like this:\nIssue-id: PORTAL-98\nSubstitute \"\u003d\" and use \":\"\n\nRemove line 10, line 9 should be part of the footer too with line 11 and 12",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 18
+      },
+      "revId": "f8363192dfa389963617606d84bcf60bf04155c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
