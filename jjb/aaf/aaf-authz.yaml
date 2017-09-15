@@ -11,6 +11,9 @@
           site-pom: 'aaf/authz/pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
           mvn-goals: 'clean install'
+      - '{project-name}-{stream}-aaf-docker-java-daily':
+          pom: 'authz-service/pom.xml'
+          mvn-goals: 'docker:build'
     project: 'aaf/authz'
     stream:
       - 'master':
