@@ -1,0 +1,24 @@
+---
+
+- project:
+    name: dmaap-messsagerouter-docker
+    project-name: 'dmaap-messsagerouter-docker'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily'
+      - '{project-name}-{stream}-docker-version-java-daily'
+      - '{project-name}-docker-image-blessing'  
+
+    project: 'dmaap/messagerouter/messageservice'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-messsagerouter-messageservice-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: 'docker'
+    build-node: ubuntu1604-basebuild-4c-4g
