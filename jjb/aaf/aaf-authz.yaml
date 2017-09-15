@@ -7,10 +7,15 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily'
+      - '{project-name}-docker-image-blessing'
       - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'aaf/authz/pom.xml'
+          site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
           mvn-goals: 'clean install'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'authz-service/pom.xml'
+          mvn-goals: 'docker:build'
     project: 'aaf/authz'
     stream:
       - 'master':
