@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_0022eba3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-15T18:26:34Z",
+      "side": 1,
+      "message": "Line 9 suits better as the title since it is more explicit than line 7. \n\nAs a description, we should add more detail on what the change is bringing in. \n\nRemove line 12. The Issue-ID should be part of the footer along with the changeID and Sign-off-by",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 44
+      },
+      "revId": "da7d116b357009d5f17d1294329dda0aeed7b158",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
