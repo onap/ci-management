@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_b6036541",
+        "filename": "jjb/aaf/aaf-authz.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-17T15:34:38Z",
+      "side": 1,
+      "message": "This pom doesn\u0027t exist. \nWe only have these:\n./authz-gw/pom.xml\n./authz-fs/pom.xml\n./authz-core/pom.xml\n./authz-gui/pom.xml\n./authz-service/pom.xml\n./authz-certman/pom.xml\n./authz-batch/pom.xml\n./authz-client/pom.xml\n./authz-cmd/pom.xml\n./authz-cass/pom.xml\n./authz-test/pom.xml\n./authz-defOrg/pom.xml\n./pom.xml",
+      "range": {
+        "startLine": 13,
+        "startChar": 20,
+        "endLine": 13,
+        "endChar": 39
+      },
+      "revId": "ca4ba9fc1cb19b08a83a5e9d276fe213cde541c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
