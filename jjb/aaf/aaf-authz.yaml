@@ -10,7 +10,7 @@
       - '{project-name}-{stream}-docker-java-daily'
       - '{project-name}-docker-image-blessing'
       - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
+          site-pom: 'aaf/authz/pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-docker-version-java-daily':
