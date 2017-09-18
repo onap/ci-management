@@ -16,6 +16,24 @@
       "revId": "f31df925ee41a91696d4dcf207e2ae59c23e55ee",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_09332f15",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 635,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-18T21:12:14Z",
+      "side": 1,
+      "message": "Thanks Gary! Funny, I added it but didn\u0027t save it\n D\u003d",
+      "parentUuid": "9a437d4f_297dd3b1",
+      "revId": "f31df925ee41a91696d4dcf207e2ae59c23e55ee",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
