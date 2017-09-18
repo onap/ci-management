@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_c49aae62",
+        "filename": "jjb/dmaap/dmaap-messagerouter-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-18T23:14:33Z",
+      "side": 1,
+      "message": "Fix this trailing space",
+      "range": {
+        "startLine": 13,
+        "startChar": 46,
+        "endLine": 13,
+        "endChar": 47
+      },
+      "revId": "142a9b3d97644fe05a093c991ecf997d5ddc2985",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
