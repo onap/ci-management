@@ -16,7 +16,7 @@
           - skipDockerTag=true
           - skipDockerPush=true
       - '{project-name}-{stream}-docker-java-properties-daily':
-         docker-pom: 'pom.xml'
+         docker-pom: 'authz-service/pom.xml'
          mvn-profile: 'docker'
          maven-properties: |
           skip.docker.build=false
