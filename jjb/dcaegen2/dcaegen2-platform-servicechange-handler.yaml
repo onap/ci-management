@@ -6,6 +6,10 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-docker-java-shell-daily':
+        mvn-goals: 'clean package docker:build -DpushImage'
+        # No-op
+        script: '/bin/true'
 
     project: 'dcaegen2/platform/servicechange-handler'
     stream:
