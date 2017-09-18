@@ -16,6 +16,10 @@
           path: 'ocata'
           pattern: 'ocata/**'
           pom: 'ocata/pom.xml'
+      - 'windriver':
+          path: 'windriver'
+          pattern: 'windriver/**'
+          pom: 'windriver/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
