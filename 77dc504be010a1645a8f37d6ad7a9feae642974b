@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_945e0f75",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1545,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-09-19T19:05:01Z",
+      "side": 1,
+      "message": "Should this be \u0027{pom}\u0027?",
+      "range": {
+        "startLine": 1545,
+        "startChar": 16,
+        "endLine": 1545,
+        "endChar": 23
+      },
+      "revId": "77dc504be010a1645a8f37d6ad7a9feae642974b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
