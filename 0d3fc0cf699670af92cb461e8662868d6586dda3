@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_817813c5",
+        "filename": "jjb/vfc/vfc-nfvo-catalog.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T16:24:09Z",
+      "side": 1,
+      "message": "Please remove the change on this line.. it is not needed.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 35
+      },
+      "revId": "0d3fc0cf699670af92cb461e8662868d6586dda3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
