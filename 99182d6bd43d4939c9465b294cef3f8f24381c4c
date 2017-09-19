@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_217de7b1",
+        "filename": "jjb/vfc/vfc-gvnfm-vnfmgr-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T16:24:33Z",
+      "side": 1,
+      "message": "Please remove the change on this line. It is not needed",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 42
+      },
+      "revId": "99182d6bd43d4939c9465b294cef3f8f24381c4c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
