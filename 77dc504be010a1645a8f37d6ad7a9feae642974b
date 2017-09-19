@@ -22,6 +22,30 @@
       "revId": "77dc504be010a1645a8f37d6ad7a9feae642974b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_f7755d98",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1545,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T20:45:57Z",
+      "side": 1,
+      "message": "I thought so, but the original job \"{project-name}-{stream}-aai-docker-java-daily\" Also had this variable set like that: https://gerrit.onap.org/r/#/c/935/ . Maybe is being forced to use root pom?",
+      "parentUuid": "9a437d4f_945e0f75",
+      "range": {
+        "startLine": 1545,
+        "startChar": 16,
+        "endLine": 1545,
+        "endChar": 23
+      },
+      "revId": "77dc504be010a1645a8f37d6ad7a9feae642974b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
