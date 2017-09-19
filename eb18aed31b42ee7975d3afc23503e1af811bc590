@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_94484f88",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-19T19:33:57Z",
+      "side": 1,
+      "message": "This is going to fail as the jenkins user does not (and cannot exist for timing reasons) until the instance is brought online to service a request.\n\nThis configuration should be moved to a docker.sh script in system-scripts and a new resource type of docker,docker should be defined in the system_type matrix before the distro types.",
+      "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
