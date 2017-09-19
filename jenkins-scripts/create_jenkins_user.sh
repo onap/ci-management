@@ -23,6 +23,12 @@ if [ "$?" == '0' ]
 then
   # Add jenkins user to docker group
   usermod -a -G docker jenkins
+
+  # If /data exists it needs to be owned by jenkins
+  if [ -d /data ]
+  then
+    chown jenkins:jenkins /data
+  fi
 fi
 
 # Check if mock group exists
