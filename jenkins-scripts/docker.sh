@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # @License EPL-1.0 <http://spdx.org/licenses/EPL-1.0>
 ##############################################################################
 # Copyright (c) 2016 The Linux Foundation and others.
@@ -10,23 +9,7 @@
 # http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
 
-HOST=$(/bin/hostname)
-SYSTEM_TYPE=''
+# INT-216 add write permission to /data
+mkdir -p /data
 
-IFS=','
-for i in "basebuild,basebuild" \
-         "docker,docker" \
-         "centos,centos" \
-         "trusty,trusty" \
-         "xenial,xenial"
-do set -- $i
-    if [[ $HOST == *"$1"* ]]; then
-        SYSTEM_TYPE="$2"
-        break
-    fi
-done
-
-# Write out the system type to an environment file to then be sourced
-echo "SYSTEM_TYPE=${SYSTEM_TYPE}" > /tmp/system_type.sh
-
-# vim: sw=4 ts=4 sts=4 et :
+# vim: sw=2 ts=2 sts=2 et :
