@@ -34,6 +34,24 @@
       "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_b77d9570",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-19T20:58:31Z",
+      "side": 1,
+      "message": "world writeable, even in the CI infrastructure, is not something we\u0027ll allow",
+      "parentUuid": "9a437d4f_f419db88",
+      "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
