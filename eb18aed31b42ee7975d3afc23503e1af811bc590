@@ -16,6 +16,24 @@
       "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_f419db88",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-09-19T19:52:24Z",
+      "side": 1,
+      "message": "How about if we just remove the chown?  If the directory exists and is world-writable then it is sufficient for the test flows.",
+      "parentUuid": "9a437d4f_94484f88",
+      "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
