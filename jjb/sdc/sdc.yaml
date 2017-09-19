@@ -8,6 +8,7 @@
       - '{project-name}-{stream}-sdc-merge-java':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
+      - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker,docker-staging'
@@ -20,6 +21,8 @@
           branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
+      - 'release-1.1.0':
+          branch: 'release-1.1.0'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
