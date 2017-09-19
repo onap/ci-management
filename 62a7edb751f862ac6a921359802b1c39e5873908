@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_b76fd5c4",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T20:47:13Z",
+      "side": 1,
+      "message": "Lets remove one of these blank lines please",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 52,
+        "endChar": 1
+      },
+      "revId": "62a7edb751f862ac6a921359802b1c39e5873908",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
