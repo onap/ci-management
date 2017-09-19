@@ -52,6 +52,24 @@
       "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_d7edb926",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-19T21:03:18Z",
+      "side": 1,
+      "message": "Plus, moving this to the jenkins-scripts puts it into play as soon as it\u0027s merged and a new instance that utilizes it comes online, instead of having to wait for a new image to be built out and then the manual update to Jenkins to happen.",
+      "parentUuid": "9a437d4f_b77d9570",
+      "revId": "eb18aed31b42ee7975d3afc23503e1af811bc590",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
