@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_6121afb3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T16:28:53Z",
+      "side": 1,
+      "message": "Please fix this commit text. \nHere are some guidelines:  https://chris.beams.io/posts/git-commit/",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 9
+      },
+      "revId": "0a961d281f7ecc275e83032322f51a1986bc4f15",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_c13cdbe4",
+        "filename": "jjb/modeling/modeling-toscaparsers-nfvparser.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-19T16:28:53Z",
+      "side": 1,
+      "message": "Please do not add a # character on these lines. Was this intended?",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 61
+      },
+      "revId": "0a961d281f7ecc275e83032322f51a1986bc4f15",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
