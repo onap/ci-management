@@ -22,6 +22,30 @@
       "revId": "0d3fc0cf699670af92cb461e8662868d6586dda3",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_b2cb63a4",
+        "filename": "jjb/vfc/vfc-nfvo-catalog.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1337
+      },
+      "writtenOn": "2017-09-20T03:07:19Z",
+      "side": 1,
+      "message": "The code for this project uses the Redis service, so we need to compile code on centos7-redis-4c-4g node",
+      "parentUuid": "9a437d4f_817813c5",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 35
+      },
+      "revId": "0d3fc0cf699670af92cb461e8662868d6586dda3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
