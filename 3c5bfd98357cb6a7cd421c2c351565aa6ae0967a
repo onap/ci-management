@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_42046417",
+        "filename": "jjb/vfc/vfc-gvnfm-vnfres-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-20T17:11:03Z",
+      "side": 1,
+      "message": "There is no change here.. did you intended to make a change in the node?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 42
+      },
+      "revId": "3c5bfd98357cb6a7cd421c2c351565aa6ae0967a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
