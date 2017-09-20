@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_452d8ea7",
+        "filename": "jjb/aaf/aaf-authz.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-20T20:46:45Z",
+      "side": 1,
+      "message": "make sure this docker profile exists in your pom.xml. Is currently not there:\n13:02:11 [WARNING] The requested profile \"docker\" could not be activated because it does not exist.",
+      "range": {
+        "startLine": 22,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 23
+      },
+      "revId": "02fa35a483109ecff562eb9806ea0709ca903f3d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
