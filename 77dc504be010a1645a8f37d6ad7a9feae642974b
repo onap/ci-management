@@ -46,6 +46,30 @@
       "revId": "77dc504be010a1645a8f37d6ad7a9feae642974b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_e2c358eb",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1545,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-09-20T17:00:53Z",
+      "side": 1,
+      "message": "The original one seems wrong as well, but I don\u0027t know enough about how AAI intended to use that template.  I guess we can move forward as is and then fix it if it\u0027s not working for people.",
+      "parentUuid": "9a437d4f_f7755d98",
+      "range": {
+        "startLine": 1545,
+        "startChar": 16,
+        "endLine": 1545,
+        "endChar": 23
+      },
+      "revId": "77dc504be010a1645a8f37d6ad7a9feae642974b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
