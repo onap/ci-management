@@ -1,0 +1,14 @@
+---
+- project:
+    name: dmaap-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dmaap'
+    stream: 'master'
+    functionality:
+      - 'mrpubsub':
+          trigger_jobs:
+            - 'dmaap-messagerouter-messageservice-{stream}-merge-java''
+    robot-options: ''
+    branch: 'master'
