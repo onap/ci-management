@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_212f1541",
+        "filename": "jjb/dmaap/dmaap-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2017-09-21T21:21:15Z",
+      "side": 1,
+      "message": "I don\u0027t think you are appc right?",
+      "range": {
+        "startLine": 7,
+        "startChar": 19,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "1f4c0580ead30492a191e59c22682d69670df858",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_01341191",
+        "filename": "jjb/dmaap/dmaap-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2017-09-21T21:21:15Z",
+      "side": 1,
+      "message": "The trigger job should be one of your merge jobs.",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 12,
+        "endChar": 68
+      },
+      "revId": "1f4c0580ead30492a191e59c22682d69670df858",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
