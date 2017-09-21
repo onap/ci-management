@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_c1ae0998",
+        "filename": "jjb/dmaap/dmaap-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2017-09-21T21:31:51Z",
+      "side": 1,
+      "message": "You should probably use merge jobs. The intent is for any code change that occurs the CSIT tests get triggered.",
+      "range": {
+        "startLine": 12,
+        "startChar": 39,
+        "endLine": 12,
+        "endChar": 69
+      },
+      "revId": "e766eb03ffc88b3f0c97dbb522dc03f5106ba8a3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
