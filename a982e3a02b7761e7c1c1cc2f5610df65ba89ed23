@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_3133de64",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-22T15:27:02Z",
+      "side": 1,
+      "message": "Could we please clarify the subject to be about sdnc jobs",
+      "revId": "a982e3a02b7761e7c1c1cc2f5610df65ba89ed23",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
