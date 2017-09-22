@@ -15,6 +15,19 @@ rh_systems() {
     # Autorelease support packages
     yum install -y firefox python-tox xmlstarlet xvfb
 
+    # Install chrome to support ChromeDriver
+    cat <<EOF > /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+EOF
+
+    yum -y update
+    yum -y install google-chrome-stable
+
     # Additional libraries for Python ncclient
     yum install -y libxml2 libxslt libxslt-devel libffi libffi-devel
 
@@ -48,6 +61,12 @@ ubuntu_systems() {
 
     # Autorelease support packages
     apt-get install -y firefox python-tox xmlstarlet xvfb
+
+    # Install chrome to support ChromeDriver
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+    apt-get update -y
+    apt-get install -y google-chrome-stable
 
     # Additional libraries for Python ncclient
     apt-get install -y wget unzip python-ncclient
