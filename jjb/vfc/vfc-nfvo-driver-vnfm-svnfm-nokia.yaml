@@ -1,0 +1,20 @@
+---
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-nokia
+    project-name: 'vfc-nfvo-driver-svnfm'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    subproject:
+      - 'drv-vnfm-nokia':
+          pom: 'nokia/vnfmdriver/pom.xml'
+          pattern: 'nokia/vnfmdriver/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
