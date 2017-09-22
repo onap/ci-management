@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_711ba6ca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-22T15:32:03Z",
+      "side": 1,
+      "message": "Please properly specify your full project. While wfengine may be fairly unique, using full project specifications as much as possible gives more clarity to the commit messages",
+      "range": {
+        "startLine": 7,
+        "startChar": 26,
+        "endLine": 7,
+        "endChar": 34
+      },
+      "revId": "136a52199760b69032be79d3fa39be645aaf9ee8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_911e0aba",
+        "filename": "jjb/vfc/vfc-nfvo-wfengine-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-22T15:32:03Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 26,
+        "startChar": 70,
+        "endLine": 26,
+        "endChar": 76
+      },
+      "revId": "136a52199760b69032be79d3fa39be645aaf9ee8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
