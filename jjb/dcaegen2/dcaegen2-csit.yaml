@@ -1,0 +1,13 @@
+- project:
+    name: dcaegen2-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2'
+    stream: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - 'dcaegen2-master-docker-java-daily'
+    robot-options: ''
+    branch: 'master'
