@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_5115429a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-22T15:30:25Z",
+      "side": 1,
+      "message": "Please clarify in the subject line that you\u0027re adding sdc jobs",
+      "revId": "0b0db4b065928334742c579318abf07e8169b07e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_311abecc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-22T15:30:25Z",
+      "side": 1,
+      "message": "Please properly capitalize your message.",
+      "revId": "0b0db4b065928334742c579318abf07e8169b07e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
