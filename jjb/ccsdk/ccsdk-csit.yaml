@@ -1,0 +1,14 @@
+---
+- project:
+    name: ccsdk-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'ccsdk'
+    stream: 'master'
+    functionality:
+      - 'healthcheck':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
+    robot-options: ''
+    branch: 'master'
