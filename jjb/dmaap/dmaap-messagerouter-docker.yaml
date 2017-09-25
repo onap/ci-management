@@ -1,8 +1,8 @@
 ---
 
 - project:
-    name: dmaap-messsagerouter-docker
-    project-name: 'dmaap-messsagerouter-docker'
+    name: dmaap-messagerouter-docker
+    project-name: 'dmaap-messagerouter-docker'
     jobs:
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
@@ -15,7 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dmaap-messsagerouter-messageservice-settings'
+    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
