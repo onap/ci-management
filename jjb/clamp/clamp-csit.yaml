@@ -7,7 +7,7 @@
     project-name: 'clamp'
     stream: 'master'
     functionality:
-      - 'TCA':
+      - 'APIs':
           trigger_jobs:
             - '{project-name}-{stream}-release-java-daily-checkstyle'
       - 'UIs':
