@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a437d4f_f0d30702",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-09-25T14:57:04Z",
+      "side": 1,
+      "message": "Clarification that this is for sdc has not been added to the subject line. Please correct this.",
+      "revId": "531bca8b44158c8406c45a9fea35039e63c25c24",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_baef9ee8",
         "filename": "/COMMIT_MSG",
         "patchSetId": 4
