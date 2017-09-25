@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_3adcce45",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-25T08:20:00Z",
+      "side": 1,
+      "message": "Can we be more specific on this commit text?\nmaybe we can mention the repo affected to make it more browsable in the git history. \n\nWe can add a small description too if all doesnt fit in the title.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 23
+      },
+      "revId": "0d1d4a4830fdcd190ad1c8c656e6b4db39ff05df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
