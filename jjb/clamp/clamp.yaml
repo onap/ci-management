@@ -10,6 +10,7 @@
             - docker.pull.registry=nexus3.onap.org:10001
             - docker.push.registry=nexus3.onap.org:10003
       - '{project-name}-{stream}-release-java-daily-checkstyle':
+         setVersion: 'DoSetVersion'
          mvn_properties:
           - skipDockerBuild=true
           - skipDockerTag=true
