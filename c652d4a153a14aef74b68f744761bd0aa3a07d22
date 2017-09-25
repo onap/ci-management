@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_5abe72b5",
+        "filename": "jjb/integration/integration-templates-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-25T08:31:44Z",
+      "side": 1,
+      "message": "Are these templates going to be used also by other repos? \nIf so, is it a good idea to add them to the global templates?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "c652d4a153a14aef74b68f744761bd0aa3a07d22",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
