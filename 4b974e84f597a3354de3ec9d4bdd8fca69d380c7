@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_309e2f08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-25T15:49:30Z",
+      "side": 1,
+      "message": "Capitalize and use imperative tense. \"Create\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 7
+      },
+      "revId": "4b974e84f597a3354de3ec9d4bdd8fca69d380c7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
