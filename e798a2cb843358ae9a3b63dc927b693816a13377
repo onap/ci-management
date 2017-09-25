@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_89b93617",
+        "filename": "jjb/vvp/vvp-image-scanner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-09-25T21:54:15Z",
+      "side": 1,
+      "message": "Hi Areli,\nThis job will run `tox` which will not work on image-scanner project as there is no tox.ini in the root.",
+      "revId": "e798a2cb843358ae9a3b63dc927b693816a13377",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
