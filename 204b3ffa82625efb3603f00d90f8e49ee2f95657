@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_7ae016cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-25T08:34:12Z",
+      "side": 1,
+      "message": "Use imperative tense. \"Remove\"\n\nWhy are we removing the master branch? I don\u0027t think this can be a good integration model without a master \"mainline\" branch",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 7
+      },
+      "revId": "204b3ffa82625efb3603f00d90f8e49ee2f95657",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
