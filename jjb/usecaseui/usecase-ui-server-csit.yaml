@@ -1,0 +1,13 @@
+- project:
+    name: usecase-ui-server-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'usecase-ui-server'
+    stream: 'master'
+    functionality:
+      - 'testsuite':
+          trigger_jobs:
+            - 'usecase-ui-server-{stream}-version-docker-java-daily'
+    robot-options: ''
+    branch: 'master'
