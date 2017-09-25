@@ -1,0 +1,22 @@
+---
+
+- project:
+    name: vvp-image-scanner
+    project-name: 'vvp-image-scanner'
+    project: 'vvp-image-scanner'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - validation-scripts:
+          path: '.'
+          pattern: '**'
+    mvn-settings: 'vvp-image-scanner'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-docker-version-java-daily':
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
