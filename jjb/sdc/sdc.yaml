@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-sdc-merge-java':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker,docker-staging'
