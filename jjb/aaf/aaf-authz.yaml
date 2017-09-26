@@ -18,8 +18,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
     mvn-settings: 'aaf-authz-settings'
     mvn-profile: docker
     docker-pom: 'authz-service/pom.xml'
