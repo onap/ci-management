@@ -1,0 +1,19 @@
+---
+- project:
+    name: integration-docker
+    project-name: 'integration'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-docker-merge'
+      - '{project-name}-{stream}-{subproject}-docker-verify'
+    project: 'integration'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - 'sniroemulator':
+          pom: 'test/mocks/sniroemulator/pom.xml'
+          pattern: 'test/mocks/sniroemulator/**'
+    mvn-settings: 'integration-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
