@@ -8,6 +8,7 @@
     functionality:
       - 'testsuites':
           trigger_jobs:
-            - 'dcaegen2-master-release-version-java-daily-no-sonar'
+            - 'dcaegen2-master-merge-java'
+            - 'dcaegen2-collectors-ves-master-merge-java'
     robot-options: ''
     branch: 'master'
