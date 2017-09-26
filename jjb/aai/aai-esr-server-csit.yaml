@@ -1,0 +1,14 @@
+---
+- project:
+    name: aai-esr-server-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'aai-esr-server'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs:
+            - 'aai-esr-server-master-docker-java-daily'
+    robot-options: ''
+    branch: 'master'
