@@ -12,5 +12,8 @@
       - 'vio':
           path: 'vio'
           pattern: 'vio/**'
+      - 'vesagent':
+          path: 'vesagent'
+          pattern: 'vesagent/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
