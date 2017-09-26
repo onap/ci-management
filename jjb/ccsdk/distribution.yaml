@@ -9,7 +9,6 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily'
-      - '{project-name}-docker-image-blessing'
 
     project: 'ccsdk/distribution'
     stream:

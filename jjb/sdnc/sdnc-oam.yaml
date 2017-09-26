@@ -11,16 +11,11 @@
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
     project: 'sdnc/oam'
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.1.0':
-          branch: 'release-1.1.0'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
