@@ -16,7 +16,6 @@
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-      - '{project-name}-docker-image-blessing'
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
@@ -26,8 +25,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
