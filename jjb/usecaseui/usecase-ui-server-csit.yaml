@@ -8,6 +8,6 @@
     functionality:
       - 'testsuite':
           trigger_jobs:
-            - 'usecase-ui-server-{stream}-version-docker-java-daily'
+            - '{project-name}-{stream}-docker-java-daily'
     robot-options: ''
     branch: 'master'
