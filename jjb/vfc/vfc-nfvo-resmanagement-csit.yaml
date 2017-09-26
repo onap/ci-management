@@ -9,6 +9,6 @@
     functionality:
       - 'sanity-check':
           trigger_jobs:
-            - 'vfc-nfvo-resmanagement-master-docker-version-java-daily'
+            - 'vfc-nfvo-resmanagement-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
