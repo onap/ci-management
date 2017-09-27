@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_eead56ea",
+        "filename": "jjb/aai/aai-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 931
+      },
+      "writtenOn": "2017-09-27T18:37:39Z",
+      "side": 0,
+      "message": "Disabling because I don\u0027t have time to investigate the failures and they are blocking someone else",
+      "revId": "c38ef8c27b169bceb2175f76b92ce14611280bbb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
