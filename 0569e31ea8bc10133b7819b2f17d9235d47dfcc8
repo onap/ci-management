@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_9814d0a0",
+        "filename": "jjb/oom/oom-oneclick-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2017-09-27T15:40:27Z",
+      "side": 1,
+      "message": "should be oom",
+      "range": {
+        "startLine": 5,
+        "startChar": 13,
+        "endLine": 5,
+        "endChar": 22
+      },
+      "revId": "0569e31ea8bc10133b7819b2f17d9235d47dfcc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_380f248a",
+        "filename": "jjb/oom/oom-oneclick-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2017-09-27T15:40:27Z",
+      "side": 1,
+      "message": "with current setup, this would look like:\noomconfig-master-release-oom-config\n\nA little bit redundant, I think.\n\nI would call this {project}-{stream}-release-config",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 14,
+        "endChar": 45
+      },
+      "revId": "0569e31ea8bc10133b7819b2f17d9235d47dfcc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_d846d8bf",
+        "filename": "jjb/oom/oom-oneclick-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2017-09-27T15:40:27Z",
+      "side": 1,
+      "message": "oops - whitespace",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 3
+      },
+      "revId": "0569e31ea8bc10133b7819b2f17d9235d47dfcc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_b81af4c3",
+        "filename": "jjb/oom/oom-oneclick-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2017-09-27T15:40:27Z",
+      "side": 1,
+      "message": "wondering if this shouldn\u0027t be gerrit instead.",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 32,
+        "endChar": 37
+      },
+      "revId": "0569e31ea8bc10133b7819b2f17d9235d47dfcc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
