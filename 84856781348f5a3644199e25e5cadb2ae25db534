@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_53a9ab8e",
+        "filename": "jjb/oom/oom-oneclick-config.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2017-09-27T16:52:37Z",
+      "side": 1,
+      "message": "You forget to update the job-template name",
+      "range": {
+        "startLine": 20,
+        "startChar": 37,
+        "endLine": 20,
+        "endChar": 41
+      },
+      "revId": "84856781348f5a3644199e25e5cadb2ae25db534",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
