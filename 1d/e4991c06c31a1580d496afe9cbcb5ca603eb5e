@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Yan Yang <yangyanyj@chinamobile.com>
+Code-Review+1: yunlong ying <ying.yunlong@zte.com.cn>
+Code-Review+1: Fu Jinhua <fu.jinhua@zte.com.cn>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 27 Sep 2017 18:24:27 +0000
+Reviewed-on: http://gerrit.onap.org/r/15879
+Project: ci-management
+Branch: refs/heads/master
