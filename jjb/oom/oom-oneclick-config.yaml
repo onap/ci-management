@@ -1,0 +1,42 @@
+---
+- project:
+   name: oomconfig
+   project-name: 'oomconfig'
+   project: 'oom'
+
+   files: '**'
+   archive-artifacts: ''
+   build-timeout: 60
+   build-node: ubuntu1604-docker-8c-8g
+   submodule-recursive: true
+
+   jobs:
+     - '{project}-{stream}-release-config'
+   stream:
+     - 'master':
+         branch: 'master'
+
+- job-template:
+    name: '{project}-{stream}-release-config'
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: 14
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: 'refs/heads/master'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    builders:
+      - docker-login
+      - shell: !include-raw-escape: oneclick-config-make-tar.sh
+      - shell: !include-raw-escape: oneclick-config-build-docker-image.sh
+      - shell: !include-raw-escape: ../include-docker-push.sh
