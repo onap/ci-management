@@ -22,6 +22,30 @@
       "revId": "846f0f73ff874cbeb2ddf53aca7b2901bdbfb89b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_139afe6d",
+        "filename": "jjb/multicloud/multicloud-openstack-vmware-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2017-09-28T06:01:54Z",
+      "side": 1,
+      "message": "vesagent don\u0027t need this job either.\nAs you mentioned I am removing this job",
+      "parentUuid": "9a437d4f_f00770c8",
+      "range": {
+        "startLine": 21,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 75
+      },
+      "revId": "846f0f73ff874cbeb2ddf53aca7b2901bdbfb89b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
