@@ -10,10 +10,10 @@
       - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - '{project-name}-{stream}-{subproject}-release-java-daily-no-sonar'
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
 
     project: 'sdnc/core'
     stream:
