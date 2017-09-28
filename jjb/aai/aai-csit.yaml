@@ -12,6 +12,9 @@
             - 'aai-resources-{stream}-aai-docker-java-version-daily'
       - 'traversal':
           trigger_jobs:
-            - 'aai-traversal-{stream}-aai-docker-java-version-daily'
+            - 'aai-traversal-{stream}-aai-docker-java-version-daily'	    
+      - 'esr-server':
+          trigger_jobs:
+            - 'aai-esr-server-{stream}-docker-java-daily'
     robot-options: ''
     branch: 'master'
