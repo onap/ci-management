@@ -51,6 +51,24 @@
       "revId": "e798a2cb843358ae9a3b63dc927b693816a13377",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_16ec2cf2",
+        "filename": "jjb/vvp/vvp-image-scanner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1937
+      },
+      "writtenOn": "2017-09-28T08:04:38Z",
+      "side": 1,
+      "message": "We have a POM file that should handle the  docker build and push.\nSomething similar to SDC.\nIs that fine ?",
+      "parentUuid": "9a437d4f_0f942141",
+      "revId": "e798a2cb843358ae9a3b63dc927b693816a13377",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
