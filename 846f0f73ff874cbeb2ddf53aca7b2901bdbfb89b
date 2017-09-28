@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_f00770c8",
+        "filename": "jjb/multicloud/multicloud-openstack-vmware-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1899
+      },
+      "writtenOn": "2017-09-28T02:59:04Z",
+      "side": 1,
+      "message": "stage-site-java job will upload the javadoc. so vio do not need this job.\nif vesagent must run this job, please refer to jjb template(https://wiki.onap.org/display/DW/Using+Standard+Jenkins+Job+%28JJB%29+Templates) to configure vesagent project rightly.\nIf not please remove this job.",
+      "range": {
+        "startLine": 21,
+        "startChar": 6,
+        "endLine": 23,
+        "endChar": 75
+      },
+      "revId": "846f0f73ff874cbeb2ddf53aca7b2901bdbfb89b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
