@@ -477,6 +477,22 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
+      - conditional-step:
+          condition-kind: regex-match
+          regex: DoSetVersion
+          label: '{setVersion}'
+          steps:
+            - inject:
+                properties-file: version.properties
+            - maven-target:
+                maven-version: '{maven-version}'
+                goals: 'versions:set versions:update-child-modules versions:commit -B'
+                properties:
+                  - 'newVersion=${{release_version}}'
+                settings: '{mvn-settings}'
+                settings-type: cfp
+                global-settings: 'global-settings'
+                global-settings-type: cfp
       - maven-target:
           maven-version: '{maven-version}'
           goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
