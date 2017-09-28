@@ -1,0 +1,20 @@
+---
+- project:
+    name: aai-babel
+    project-name: 'aai-babel'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/babel'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-babel-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
