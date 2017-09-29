@@ -2,7 +2,6 @@
 - project:
     name: multicloud-openstack-windriver-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-windriver'
     stream: 'master'
