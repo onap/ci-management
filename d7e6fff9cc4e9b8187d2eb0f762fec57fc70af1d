@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9a437d4f_a0daad49",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2017-09-30T13:27:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a437d4f_02718643",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "d7e6fff9cc4e9b8187d2eb0f762fec57fc70af1d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_427b0e28",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9a437d4f_80db294e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2017-09-30T13:27:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a437d4f_427b0e28",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "d7e6fff9cc4e9b8187d2eb0f762fec57fc70af1d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_e291e247",
         "filename": "jjb/multicloud/build-multicloud-openstack-vmware-docker-image.sh",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2017-09-28T16:30:29Z",
       "side": 1,
       "message": "Remove 1 of the blank lines.. we just need 1",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 0
+      },
+      "revId": "d7e6fff9cc4e9b8187d2eb0f762fec57fc70af1d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_c0d5b11c",
+        "filename": "jjb/multicloud/build-multicloud-openstack-vmware-docker-image.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2017-09-30T13:27:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9a437d4f_e291e247",
       "range": {
         "startLine": 11,
         "startChar": 0,
