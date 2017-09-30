@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a437d4f_0074d933",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-09-30T18:38:25Z",
+      "side": 1,
+      "message": "Remove line 10. Issue-ID should be part of the footer. \n\nAlso, please use \"Issue-ID: \"",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 35
+      },
+      "revId": "0784b01d7cb6e608c8d900afec6090c6fd5033f6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a437d4f_6ab94478",
         "filename": "jjb/portal/portal.yaml",
         "patchSetId": 1
