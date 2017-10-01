@@ -11,6 +11,9 @@
       - 'vio':
           pom: 'vio/pom.xml'
           pattern: 'vio/**'
+      - 'vesagent':
+          pom: 'vesagent/pom.xml'
+          pattern: 'vesagent/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
