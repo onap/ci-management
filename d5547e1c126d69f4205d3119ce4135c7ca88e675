@@ -22,6 +22,30 @@
       "revId": "d5547e1c126d69f4205d3119ce4135c7ca88e675",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a437d4f_3bfb8cc2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1331
+      },
+      "writtenOn": "2017-10-01T13:54:16Z",
+      "side": 1,
+      "message": "Done\n\nAnd just to tell in advance the reason to add empty line b/w the commit msg lines.. without empty line the commit header char length of 50 exceeds.",
+      "parentUuid": "9a437d4f_407e611a",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 48
+      },
+      "revId": "d5547e1c126d69f4205d3119ce4135c7ca88e675",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
