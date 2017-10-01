@@ -1,0 +1,17 @@
+---
+
+- project:
+    name: vvp-validation-scripts
+    project-name: 'vvp-validation-scripts'
+    project: 'vvp/validation-scripts'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - validation-scripts:
+          path: '.'
+          pattern: '**'
+    mvn-settings: 'vvp-validation-scripts-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
