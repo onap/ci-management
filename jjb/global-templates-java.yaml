@@ -2011,6 +2011,7 @@
           properties-file: version.properties
       - maven-target:
           maven-version: '{maven-version}'
+          pom: '{pom}'
           goals: 'versions:set versions:update-child-modules versions:commit -B'
           properties:
             - 'newVersion=${{release_version}}'
