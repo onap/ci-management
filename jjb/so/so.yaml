@@ -14,6 +14,7 @@
           archive-artifacts: 'packages/arquillian-unit-tests/target/**/*'
       - '{project-name}-{stream}-release-version-profile-java-daily':
           mvn-profile: 'with-integration-tests'
+          build-node: 'ubuntu1604-basebuild-8c-8g'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
