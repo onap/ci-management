@@ -611,7 +611,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: 'H H(10-17) * * *'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -688,7 +688,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: 'H H(10-17) * * *'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -766,7 +766,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: 'H H(10-17) * * *'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
