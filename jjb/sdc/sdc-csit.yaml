@@ -7,7 +7,7 @@
     project-name: 'sdc'
     stream: 'master'
     functionality:
-      - 'healthCheck':
+      - 'sanity':
           trigger_jobs:
             - '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
