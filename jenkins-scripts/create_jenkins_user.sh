@@ -39,6 +39,12 @@ then
   usermod -a -G mock jenkins
 fi
 
+# Grant the Jenkins user sudo rights
+cat <<EOFSUDO >/etc/sudoers.d/89-jenkins-user-defaults
+Defaults:jenkins !requiretty
+jenkins     ALL = NOPASSWD: ALL
+EOFSUDO
+
 mkdir /home/jenkins/.ssh
 mkdir /w
 cp -r /home/${OS}/.ssh/authorized_keys /home/jenkins/.ssh/authorized_keys
