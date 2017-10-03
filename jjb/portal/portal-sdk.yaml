@@ -6,6 +6,7 @@
       - 'ecomp-sdk':
           pom: 'ecomp-sdk/pom.xml'
           pattern: 'ecomp-sdk/**'
+    subproject-name: 'ecomp-sdk'
 
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -14,7 +15,7 @@
       - '{project-name}-{stream}-stage-site-java':
           pom: 'ecomp-sdk/pom.xml'
           site-pom: 'ecomp-sdk/pom.xml'
-          trigger-job: '{project-name}-{stream}-{subproject}-release-java-daily'
+          trigger-job: '{project-name}-{stream}-{subproject-name}-release-java-daily'
 
     project: 'portal/sdk'
     stream:
