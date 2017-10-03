@@ -15,5 +15,6 @@
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-docker-java-daily'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
