@@ -9,6 +9,6 @@
     functionality:
       - 'mrpubsub':
           trigger_jobs:
-            - 'dmaap-messagerouter-messageservice-{stream}-merge-java'
+            - '{project-name}-{stream}-merge-java'
     robot-options: ''
     branch: 'master'
