@@ -1,0 +1,13 @@
+- project:
+    name: portal-sdk-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'portal-sdk'
+    stream: 'master'
+    functionality:
+      - 'testsuite':
+          trigger_jobs:
+            - 'portal-docker-{stream}-merge-docker-script'
+    robot-options: ''
+    branch: 'master'
