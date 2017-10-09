@@ -18,6 +18,7 @@
     mvn-settings: 'policy-drools-applications-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: 'ubuntu1604-basebuild-4c-4g'
 - project:
     name: policy-drools-applications-release-1.0.0
     project-name: 'policy-drools-applications'
