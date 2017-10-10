@@ -9,6 +9,6 @@
     functionality:
       - 'mrpubsub':
           trigger_jobs:
-            - '{project-name}-{stream}-merge-java'
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
     branch: 'master'
