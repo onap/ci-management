@@ -3,7 +3,8 @@
     name: oom-registrator
     project-name: 'oom-registrator'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
