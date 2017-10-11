@@ -3,7 +3,7 @@
     name: dmaap-messagerouter-msgrtr
     project-name: 'dmaap-messagerouter-msgrtr'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
