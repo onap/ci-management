@@ -13,6 +13,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version3-java-daily'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
