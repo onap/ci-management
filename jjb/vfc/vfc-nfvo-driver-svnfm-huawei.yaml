@@ -9,8 +9,8 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
       - 'drv-vnfm-huawei':
-          pom: 'huawei/vnfmadapter/pom.xml'
-          pattern: 'huawei/vnfmadapter/**'
+          pom: 'huawei/pom.xml'
+          pattern: 'huawei/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
