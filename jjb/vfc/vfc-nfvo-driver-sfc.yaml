@@ -12,6 +12,7 @@
           pom: 'zte/sfc-driver/pom.xml'
           pattern: 'zte/sfc-driver/**'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'

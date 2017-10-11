@@ -3,6 +3,7 @@
     name: dcaegen2-collectors-snmptrap
     project-name: 'dcaegen2-collectors-snmptrap'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'

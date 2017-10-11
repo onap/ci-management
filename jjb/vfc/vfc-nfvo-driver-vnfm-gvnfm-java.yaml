@@ -13,6 +13,7 @@
           pom: 'gvnfmadapter/pom.xml'
           pattern: 'gvnfmadapter/**'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily-no-sonar'

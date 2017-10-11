@@ -3,7 +3,7 @@
     name: policy-drools-applications
     project-name: 'policy-drools-applications'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -23,6 +23,7 @@
     name: policy-drools-applications-release-1.0.0
     project-name: 'policy-drools-applications'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'

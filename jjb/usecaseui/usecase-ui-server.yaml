@@ -9,6 +9,7 @@
           branch: 'master'
     mvn-settings: 'usecase-ui-server-settings'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-java-daily'

@@ -7,10 +7,11 @@
           pom: 'rootpom/pom.xml'
           pattern: 'rootpom/**'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily-no-sonar'
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'

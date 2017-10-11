@@ -3,7 +3,7 @@
     name: policy-engine
     project-name: 'policy-engine'
     jobs:
-      - '{project-name}-{stream}-clm':
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
@@ -23,6 +23,7 @@
     name: policy-engine-release-1.0.0
     project-name: 'policy-engine'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'

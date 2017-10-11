@@ -12,6 +12,7 @@
           pom: 'multivimbroker/pom.xml'
           pattern: 'multivimbroker/**'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
