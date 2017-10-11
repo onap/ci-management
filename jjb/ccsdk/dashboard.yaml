@@ -3,7 +3,8 @@
     name: ccsdk-dashboard
     project-name: 'ccsdk-dashboard'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
