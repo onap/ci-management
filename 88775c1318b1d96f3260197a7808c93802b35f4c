@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2f8d8d_a02b8093",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1017,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-11T05:33:14Z",
+      "side": 1,
+      "message": "fix trailing spaces",
+      "range": {
+        "startLine": 1017,
+        "startChar": 0,
+        "endLine": 1017,
+        "endChar": 10
+      },
+      "revId": "88775c1318b1d96f3260197a7808c93802b35f4c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a2f8d8d_80188485",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1033,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-11T05:33:14Z",
+      "side": 1,
+      "message": "fix trailing spaces",
+      "range": {
+        "startLine": 1033,
+        "startChar": 0,
+        "endLine": 1033,
+        "endChar": 10
+      },
+      "revId": "88775c1318b1d96f3260197a7808c93802b35f4c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a2f8d8d_c02e8ca5",
+        "filename": "jjb/vfc/vfc-nfvo-wfengine-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-11T05:33:14Z",
+      "side": 1,
+      "message": "Please fix these trailing spaces",
+      "range": {
+        "startLine": 21,
+        "startChar": 73,
+        "endLine": 21,
+        "endChar": 79
+      },
+      "revId": "88775c1318b1d96f3260197a7808c93802b35f4c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
