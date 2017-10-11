@@ -4,7 +4,8 @@
     name: sdc-sdc-titan-cassandra
     project-name: 'sdc-sdc-titan-cassandra'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: openjdk8
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'

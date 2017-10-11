@@ -4,7 +4,8 @@
     name: aaf-authz-docker
     project-name: 'aaf-authz-docker'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: openjdk8
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:

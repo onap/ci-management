@@ -3,7 +3,8 @@
     name: ccsdk-sli-northbound
     project-name: 'ccsdk-sli-northbound'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: openjdk8
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'

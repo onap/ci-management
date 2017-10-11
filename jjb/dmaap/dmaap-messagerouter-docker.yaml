@@ -4,7 +4,8 @@
     name: dmaap-messagerouter-docker
     project-name: 'dmaap-messagerouter-docker'
     jobs:
-      - '{project-name}-{stream}-clm'
+      - gerrit-maven-clm:
+          java-version: openjdk8
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
