@@ -4,7 +4,6 @@
     name: aaf-authz-docker
     project-name: 'aaf-authz-docker'
     jobs:
-      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:

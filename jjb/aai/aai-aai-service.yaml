@@ -3,7 +3,6 @@
     name: aai-aai-service
     project-name: 'aai-aai-service'
     jobs:
-      - '{project-name}-{stream}-clm'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
