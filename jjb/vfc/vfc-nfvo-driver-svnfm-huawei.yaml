@@ -9,12 +9,13 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
       - 'drv-vnfm-huawei':
-          pom: 'huawei/vnfmadapter/pom.xml'
-          pattern: 'huawei/vnfmadapter/**'
+          pom: 'huawei/pom.xml'
+          pattern: 'huawei/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version3-java-daily'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
+	  - '{project-name}-{stream}-{subproject}-release-version3-java-daily'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
