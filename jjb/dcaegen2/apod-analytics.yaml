@@ -12,19 +12,13 @@
     project: 'dcaegen2/analytics/tca'
     mvn-settings: 'dcaegen2-analytics-tca-settings'
     files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
 
     jobs:
-      - '{project-name}-{stream}-release-java-daily':
-          mvn-goals-versioning:
-            'versions:set versions:update-child-modules versions:commit'
-          mvn-goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}}'
-          maven-deploy-properties: |
-              deployAtEnd=true
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java-skip-tests':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
