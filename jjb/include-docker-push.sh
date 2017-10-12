@@ -34,7 +34,7 @@ else
     # Cut the prefix aai/ in example aai/model-loader
     DOCKER_REPO_NAME=$(echo ${PROJECT} | cut -d"/" -f2-);
 
-    REPO_PATH=$DOCKER_REPOSITORY/openecomp/${DOCKER_REPO_NAME};
+    REPO_PATH=$DOCKER_REPOSITORY/onap/${DOCKER_REPO_NAME};
 fi
 
 
