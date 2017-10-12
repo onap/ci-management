@@ -3,10 +3,14 @@
     name: integration
     project-name: 'integration'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
     project: 'integration'
+    subproject:
+      - 'version-manifest':
+          pom: 'version-manifest/pom.xml'
+          pattern: 'version-manifest/**'
     stream:
       - 'master':
           branch: 'master'
