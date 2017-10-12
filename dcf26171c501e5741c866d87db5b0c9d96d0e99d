@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2f8d8d_80a51a06",
+        "filename": "jjb/usecaseui/usecase-ui.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-12T16:28:52Z",
+      "side": 1,
+      "message": "Can we please justify the use on -no-sonar for this repo?\n\nThanks!\nJess",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 69
+      },
+      "revId": "dcf26171c501e5741c866d87db5b0c9d96d0e99d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
