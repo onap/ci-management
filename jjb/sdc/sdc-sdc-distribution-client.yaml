@@ -4,7 +4,8 @@
     name: sdc-sdc-distribution-client
     project-name: 'sdc-sdc-distribution-client'
     jobs:
-      - gerrit-maven-clm
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
