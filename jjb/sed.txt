@@ -1,0 +1,99 @@
+ 1602  find . -type f -exec sed -i -e 's/{project-name}-{stream}-clm/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1606  find . -type f -exec sed -i -e 's/'gerrit-maven-clm'/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1608  find . -type f -exec sed -i -e 's/\'gerrit-maven-clm\'/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1609  find . -type f -exec sed -i -e 's//'gerrit-maven-clm/'/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1610  find . -type f -exec sed -i -e 's/''gerrit-maven-clm''/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1614  find . -type f -exec sed -i -e 's/\'\gerrit-maven-clm\'\/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1615  find . -type f -exec sed -i -e 's/[']gerrit-maven-clm[']/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1616  find . -type f -exec sed -i -e 's/\([']\)gerrit-maven-clm[']/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1617  find . -type f -exec sed -i -e 's/\([']\)gerrit-maven-clm\([']\)/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1618  find . -type f -exec sed -i -e 's/\([''"]\)gerrit-maven-clm\([']\)/gerrit-maven-clm/g' {} \;
+          java-version: ''
+ 1619  find . -type f -exec sed -i -e "s/'gerrit-maven-clm'/gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1647  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1649  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1651  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1660  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1674  sed -i '/gerrit-maven-clm/i \
+          java-version: ''
+ 1676  sed -i '/gerrit-maven-clm/i \
+          java-version: ''
+ 1677  sed -i '/gerrit-maven-clm/i "          java-version: '' ''"' jjb/so/so-libs.yaml
+          java-version: ''
+ 1679  sed -i '/gerrit-maven-clm/i '          java-version: '' '''' jjb/so/so-libs.yaml
+          java-version: ''
+ 1680  sed -i '/gerrit-maven-clm/i           java-version: '' ''' jjb/so/so-libs.yaml
+          java-version: ''
+ 1682  sed -i '/gerrit-maven-clm/i           java-version: ''' jjb/so/so-libs.yaml
+          java-version: ''
+ 1684  sed -i '/gerrit-maven-clm/i "               java-version: '''" jjb/so/so-libs.yaml
+          java-version: ''
+ 1685  sed -i '/gerrit-maven-clm/i "               java-version: ''"' jjb/so/so-libs.yaml
+          java-version: ''
+ 1687  sed -i '/gerrit-maven-clm/i                java-version: ''' jjb/so/so-libs.yaml
+          java-version: ''
+ 1689  sed -i '/gerrit-maven-clm/a                java-version: ''' jjb/so/so-libs.yaml
+          java-version: ''
+ 1691  find . -type f -exec sed -i -e '/gerrit-maven-clm/a           java-version: ''' {} \;
+          java-version: ''
+ 1693  find . -type f -exec sed -i -e '/gerrit-maven-clm/a           java-version: ''' {} \;
+          java-version: ''
+ 1698  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1702  find . -type f -exec sed -i -e 's/gerrit-maven-clm/gerrit-maven-clm:/g' {} \;
+          java-version: ''
+ 1704  find . -type f -exec sed -i -e '/gerrit-maven-clm/a           java-version: ''' {} \;
+          java-version: ''
+ 1706  find . -type f -exec sed -i -e "s/          java-version: ''/          java-version: '' ''/g" {} \;
+ 1709  find . -type f -exec sed -i -e "s/          java-version: '' ''/           java-version: '' ''/g" {} \;
+ 1713  find . -type f -exec sed -i -e "s/           java-version: '' ''/          java-version: '' '' ''/g" {} \;
+ 1828  find . -type f -exec sed -i -e "s/          java-version: '' ''/          java-version: '' '' openjdk8/g" {} \;
+ 1831  find . -type f -exec sed -i -e "s/          java-version: ''/          java-version: '' openjdk8/g" {} \;
+ 1833  find . -type f -exec sed -i -e "s/          java-version: '' ''/          java-version: '' openjdk8/g" {} \;
+ 1835  find . -type f -exec sed -i -e "s/          java-version: '' openjdk8 openjdk8 openjdk8/          java-version: '' openjdk8/g" {} \;
+ 1842  find . -type f -exec sed -i -e "s/          java-version: '' openjdk8//g" {} \;
+ 1848  find . -type f -exec sed -i -e "s/          java-version: '' '' openjdk8//g" {} \;
+ 1850  find . -type f -exec sed -i -e "s/gerrit-maven-clm:/gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1854  find . -type f -exec sed -i -e 's/gerrit-maven-clm/,+1d' {} \;
+          java-version: ''
+ 1855  find . -type f -exec sed -i -e '/gerrit-maven-clm/,+1d' {} \;
+          java-version: ''
+ 1867  find . -type f -exec sed -i -e '/-verify-java/a -gerrit-maven-clm' {} \;
+          java-version: ''
+ 1872  find . -type f -exec sed -i -e '/-verify-java/i -gerrit-maven-clm' {} \;
+          java-version: ''
+ 1874  find . -type f -exec sed -i -e "s/gerrit-maven-clm:/        gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1876  find . -type f -exec sed -i -e "s/gerrit-maven-clm/        gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1878  find . -type f -exec sed -i -e "s/-        gerrit-maven-clm/         -gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1880  find . -type f -exec sed -i -e "s/gerrit-maven-clm/       - gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1882  find . -type f -exec sed -i -e "s/-       - gerrit-maven-clm/       - gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1884  find . -type f -exec sed -i -e "s/        - gerrit-maven-clm/- gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 1886  find . -type f -exec sed -i -e "s/  - gerrit-maven-clm/- gerrit-maven-clm/g" {} \;
+          java-version: ''
+ 2104  find . -type f -exec sed -i -e "s/gerrit-maven-clm/gerrit-maven-clm:/g" {} \;
+          java-version: ''
+ 2107  find . -type f -exec sed -i -e "s/gerrit-maven-clm/gerrit-maven-clm:/g" {} \;
+          java-version: ''
+ 2121  history | grep sed
+ 2122  history | grep sed | tee sed.txt

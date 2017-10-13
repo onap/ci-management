@@ -3,7 +3,8 @@
     name: holmes-engine-management
     project-name: 'holmes-engine-management'
     jobs:
-      - gerrit-maven-clm
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
