@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2f8d8d_9109ea97",
+        "filename": "packer/provision/baseline.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2017-10-13T09:35:32Z",
+      "side": 1,
+      "message": "Just a thought ... why not use `update-alternatives` here before setting JAVA_HOME? `alternatives` can be used to manage installations and is generally done before setting JAVA_HOME.",
+      "range": {
+        "startLine": 149,
+        "startChar": 11,
+        "endLine": 149,
+        "endChar": 68
+      },
+      "revId": "a18975c3fbdfa950d8c54a797ed589cfb7f6f26a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
