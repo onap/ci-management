@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a2f8d8d_d1e1b29b",
+        "filename": "packer/provision/baseline.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2017-10-13T10:37:19Z",
+      "side": 1,
+      "message": "this needs to be fixed in accordance with the case statements.",
+      "range": {
+        "startLine": 126,
+        "startChar": 4,
+        "endLine": 126,
+        "endChar": 20
+      },
+      "revId": "a18975c3fbdfa950d8c54a797ed589cfb7f6f26a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a2f8d8d_9109ea97",
         "filename": "packer/provision/baseline.sh",
         "patchSetId": 1
@@ -13,6 +36,30 @@
       "writtenOn": "2017-10-13T09:35:32Z",
       "side": 1,
       "message": "Just a thought ... why not use `update-alternatives` here before setting JAVA_HOME? `alternatives` can be used to manage installations and is generally done before setting JAVA_HOME.",
+      "range": {
+        "startLine": 149,
+        "startChar": 11,
+        "endLine": 149,
+        "endChar": 68
+      },
+      "revId": "a18975c3fbdfa950d8c54a797ed589cfb7f6f26a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a2f8d8d_11d85aee",
+        "filename": "packer/provision/baseline.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2017-10-13T10:37:19Z",
+      "side": 1,
+      "message": "Just realized you are not installing multiple version of Java for Ubuntu 16.04.",
+      "parentUuid": "1a2f8d8d_9109ea97",
       "range": {
         "startLine": 149,
         "startChar": 11,
