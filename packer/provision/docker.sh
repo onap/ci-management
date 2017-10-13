@@ -32,6 +32,11 @@ EOL
 ubuntu_systems() {
     # Assumes that python is already installed by basebuild
 
+    # Install Python3.6
+    sudo add-apt-repository ppa:jonathonf/python-3.6
+    sudo apt-get update
+    sudo apt-get install -y python3.6
+
     # Install dependencies for robotframework and robotframework-sshlibrary
     apt install -y unzip sshuttle netcat libffi-dev libssl-dev
     wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
