@@ -12,18 +12,17 @@
       - 'engine-mgr-service':
           pom: 'wfenginemgrservice/pom.xml'
           pattern: 'wfenginemgrservice/**'
+          scritp: 'build-nfvo-wfengine-engine-mgr-service-docker-image.sh'
       - 'engine-activiti-extension':
           pom: 'activiti-extension/pom.xml'
           pattern: 'activiti-extension/**'
+          scritp: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-nfvo-wfengine-docker-image.sh'
+      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+          mvn-goals: 'clean'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
