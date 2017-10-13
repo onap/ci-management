@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Yan Yang <yangyanyj@chinamobile.com>
+Code-Review+2: Anil Shashikumar Belur <abelur@linuxfoundation.org>
+Submitted-by: Anil Shashikumar Belur <abelur@linuxfoundation.org>
+Submitted-at: Fri, 13 Oct 2017 09:30:03 +0000
+Reviewed-on: http://gerrit.onap.org/r/18699
+Project: ci-management
+Branch: refs/heads/master
