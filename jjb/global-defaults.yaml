@@ -20,7 +20,7 @@
 
     # Java
     jdk: ''
-    java-version: openjdk8
+    java-version: ''
 
     # Maven
     onap-infra-mvn-opts: |
