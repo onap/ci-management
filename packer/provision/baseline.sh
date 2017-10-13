@@ -146,6 +146,7 @@ EOF
         ;;
         16.04)
             apt-get install openjdk-8-jdk
+            export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64/jre'
 
             # force auto-update services off and mask them so they can't
             # be started
