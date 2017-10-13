@@ -53,6 +53,11 @@ EOF
 }
 
 ubuntu_systems() {
+    # Install python3.6
+    sudo add-apt-repository -y ppa:jonathonf/python-3.6
+    sudo apt-get update
+    sudo apt-get install -y python3.6
+
     # Install python dependencies
     apt-get install -y python-{dev,virtualenv,setuptools,pip}
 
