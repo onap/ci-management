@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2f8d8d_4c9e4958",
+        "filename": "jjb/vfc/vfc-nfvo-wfengine-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-10-13T14:52:30Z",
+      "side": 1,
+      "message": "This subproject variable will not interpolate here inside of the `-project` section.  We will need to move this into a template.",
+      "revId": "0a90a7fa2974fcf373f37ed26b33a3f86c9abfa0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
