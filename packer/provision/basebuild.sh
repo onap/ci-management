@@ -13,7 +13,7 @@ rh_systems() {
     yum install -y openssl-devel mysql-devel gcc
 
     # Autorelease support packages
-    yum install -y firefox python-tox xmlstarlet xvfb
+    yum install -y firefox python-tox xmlstarlet xvfb crudini
 
     # Install chrome to support ChromeDriver
     cat <<EOF > /etc/yum.repos.d/google-chrome.repo
@@ -65,7 +65,7 @@ ubuntu_systems() {
     apt-get install -y libssl-dev libmysqlclient-dev gcc
 
     # Autorelease support packages
-    apt-get install -y firefox python-tox xmlstarlet xvfb
+    apt-get install -y firefox python-tox xmlstarlet xvfb crudini
 
     # Install chrome to support ChromeDriver
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
