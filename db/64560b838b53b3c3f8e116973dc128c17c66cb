@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 17 Oct 2017 05:11:34 +0000
+Reviewed-on: http://gerrit.onap.org/r/18971
+Project: ci-management
+Branch: refs/heads/master
