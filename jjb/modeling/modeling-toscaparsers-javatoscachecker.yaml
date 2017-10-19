@@ -18,6 +18,7 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-docker-java-properties-daily':
+         setVersion: 'DontSetVersion'
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          maven-properties: |
