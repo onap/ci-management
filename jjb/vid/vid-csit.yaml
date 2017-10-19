@@ -9,6 +9,6 @@
     functionality:
       - 'healthCheck':
           trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+            - '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
