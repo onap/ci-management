@@ -16,6 +16,7 @@
           - skipDockerTag=true
           - skipDockerPush=true
       - '{project-name}-{stream}-docker-java-properties-daily':
+         setVersion: 'DoSetVersion'
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          maven-properties: |
