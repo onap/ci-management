@@ -29,12 +29,12 @@ if [ ! -z "$DOCKER_IMAGE_NAME" ]; then
     # tag image with nexus3 proxy prefix
     docker tag ${DOCKER_IMAGE_NAME} $REPO_PATH
 elif [[ $PROJECT =~ $SEARCH ]] ; then
-    REPO_PATH=$DOCKER_REPOSITORY/openecomp/ajsc-aai;
+    REPO_PATH=$DOCKER_REPOSITORY/onap/ajsc-aai;
 else
     # Cut the prefix aai/ in example aai/model-loader
     DOCKER_REPO_NAME=$(echo ${PROJECT} | cut -d"/" -f2-);
 
-    REPO_PATH=$DOCKER_REPOSITORY/openecomp/${DOCKER_REPO_NAME};
+    REPO_PATH=$DOCKER_REPOSITORY/onap/${DOCKER_REPO_NAME};
 fi
 
 
