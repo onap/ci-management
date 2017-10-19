@@ -7,11 +7,12 @@
           pom: 'ecomp-sdk/pom.xml'
           pattern: 'ecomp-sdk/**'
     subproject-name: 'ecomp-sdk'
-
+    cron: 'H 11 * * *'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - '{project-name}-gerrit-maven-jobs'
       - '{project-name}-{stream}-stage-site-java':
           pom: 'ecomp-sdk/pom.xml'
           site-pom: 'ecomp-sdk/pom.xml'
