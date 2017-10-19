@@ -17,3 +17,10 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - '{project-name}-{stream}-docker-java-properties-daily':
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
+         maven-properties: |
+          skip.docker.build=false
+          skip.docker.tag=false
+          skip.docker.push=false
