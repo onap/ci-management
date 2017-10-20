@@ -19,7 +19,7 @@
       - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-docker-java-properties-daily':
          setVersion: 'DontSetVersion'
-         docker-pom: 'pom.xml'
+         docker-pom: 'javatoscachecker/pom.xml'
          mvn-profile: 'docker'
          maven-properties: |
           skip.docker.build=false
