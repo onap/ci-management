@@ -2146,7 +2146,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{site-pom}'
-          goals: 'clean site:site site:stage-deploy'
+          goals: 'clean site:site site:stage-deploy -B'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
