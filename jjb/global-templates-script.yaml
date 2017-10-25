@@ -752,14 +752,14 @@
 # vim: sw=2 ts=2 sts=2 et :
 
 - job-template:
-    # Job template for scm and script trigger - for docker merge
+    # Job template for two scm and script trigger - for docker merge
     #
     # Required Variables:
     #   branch:         git branch
     #   build-node:     what build node to run on
     #   script:         build script to execute
 
-    name: '{project-name}-{stream}-merge-docker-script'
+    name: '{project-name}-{stream}-two-scm-merge-docker-script'
 
     project-type: freestyle
     concurrent: true
@@ -784,15 +784,10 @@
           choosing-strategy: 'default'
           submodule-recursive: '{submodule-recursive}'
       - git-extra-project:
-          project: '{extra-project1}'
-          refspec: '{extra-refspec1}'
-          branch: '{extra-branch1}'
-          checkout-dir: '{checkout-dir1}'
-      - git-extra-project:
-          project: '{extra-project2}'
-          refspec: '{extra-refspec2}'
-          branch: '{extra-branch2}'
-          checkout-dir: '{checkout-dir2}'
+          project: '{extra-project}'
+          refspec: '{extra-refspec}'
+          branch: '{extra-branch}'
+          checkout-dir: '{checkout-dir}'
 
     wrappers:
       - infra-wrappers:
@@ -825,14 +820,14 @@
           maven-version: '{maven-version}'
 
 - job-template:
-    # Job template for scm and script trigger - for docker daily release
+    # Job template for two scm and script trigger - for docker daily release
     #
     # Required Variables:
     #   branch:         git branch
     #   build-node:     what build node to run on
     #   script:         build script to execute
 
-    name: '{project-name}-{stream}-release-docker-script-manual'
+    name: '{project-name}-{stream}-two-scm-release-docker-script-manual'
 
     project-type: freestyle
     concurrent: true
@@ -857,15 +852,10 @@
           choosing-strategy: 'default'
           submodule-recursive: '{submodule-recursive}'
       - git-extra-project:
-          project: '{extra-project1}'
-          refspec: '{extra-refspec1}'
-          branch: '{extra-branch1}'
-          checkout-dir: '{checkout-dir1}'
-      - git-extra-project:
-          project: '{extra-project2}'
-          refspec: '{extra-refspec2}'
-          branch: '{extra-branch2}'
-          checkout-dir: '{checkout-dir2}'
+          project: '{extra-project}'
+          refspec: '{extra-refspec}'
+          branch: '{extra-branch}'
+          checkout-dir: '{checkout-dir}'
 
     wrappers:
       - infra-wrappers:
