@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a2f8d8d_cd969294",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-26T04:35:45Z",
+      "side": 1,
+      "message": "Please add a description of why is this change needed",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 40
+      },
+      "revId": "232dbf7c72e4da7aa9a7caf3f041a7fb9d806c04",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a2f8d8d_ed814e4b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-10-26T04:35:45Z",
+      "side": 1,
+      "message": "Please remove empty line 10\nIssue-ID should be part of the footer",
+      "range": {
+        "startLine": 9,
+        "startChar": 1,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "232dbf7c72e4da7aa9a7caf3f041a7fb9d806c04",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
