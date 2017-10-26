@@ -1616,6 +1616,79 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    name: '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily'
+    project-type: freestyle
+    node: 'ubuntu1604-docker-8c-8g'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: '{maven-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      # 12 AM UTC
+      - timed: 'H 12 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
+    builders:
+
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+
+      - inject:
+          properties-file: version.properties
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
+          properties:
+            - 'newVersion=${{release_version}}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+
+      - docker-login
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
+          goals: '{mvn-goals}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+
+      - shell: '{script}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
+- job-template:
     name: '{project-name}-{stream}-docker-version-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1674,6 +1747,76 @@
 
       - maven-docker-push-daily:
           maven-version: '{maven-version}'
+          mvn-settings: '{mvn-settings}'
+          pom: '{docker-pom}'
+          # use default as mvn-profile if profile is not needed
+          mvn-profile: '{mvn-profile}'
+
+    publishers:
+      - infra-shiplogs:
+          maven-version: '{maven-version}'
+
+- job-template:
+    name: '{project-name}-{stream}-{subproject}-docker-version-java-daily'
+    project-type: freestyle
+    node: 'ubuntu1604-docker-8c-8g'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - maven-exec:
+          maven-version: '{maven-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      # 12 AM UTC
+      - timed: 'H 12 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
+    builders:
+
+      - provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+
+      - inject:
+          properties-file: version.properties
+
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
+          properties:
+            - 'newVersion=${{release_version}}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+
+      - docker-login
+
+      - maven-docker-push-daily:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
