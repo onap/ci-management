@@ -12,11 +12,13 @@
       - 'engine-mgr-service':
           pom: 'wfenginemgrservice/pom.xml'
           pattern: 'wfenginemgrservice/**'
-          script: 'build-nfvo-wfengine-engine-mgr-service-docker-image.sh'
+          script:
+            !include-raw-escape: 'build-nfvo-wfengine-engine-mgr-service-docker-image.sh'
       - 'engine-activiti-extension':
           pom: 'activiti-extension/pom.xml'
           pattern: 'activiti-extension/**'
-          script: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
+          script:
+            !include-raw-escape: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
