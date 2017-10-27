@@ -9,4 +9,5 @@ cd kubernetes/config/docker/init
 
 chmod 755 *.*
 
-./make-tar.sh
+cd src/config
+tar -czvf ../../onap-cfg.tar.gz *

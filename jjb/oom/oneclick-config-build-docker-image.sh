@@ -9,4 +9,4 @@ cd kubernetes/config/docker/init
 
 chmod 755 *.*
 
-docker build
+docker build .
