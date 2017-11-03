@@ -1,6 +1,6 @@
 ---
 - project:
-    name: vnfsdk-refrepo
+    name: vnfsdk-compliance
     project-name: 'vnfsdk-compliance'
     jobs:
       - gerrit-maven-clm:
