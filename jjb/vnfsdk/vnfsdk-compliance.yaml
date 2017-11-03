@@ -1,0 +1,26 @@
+---
+- project:
+    name: vnfsdk-refrepo
+    project-name: 'vnfsdk-compliance'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          mvn-goals: 'docker:build'
+          docker-image-name: 'onap/compliance'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          mvn-profile: 'docker'
+
+    project: 'vnfsdk/compliance'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-compliance-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
