@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_faaecde6",
+        "filename": "jjb/vnfsdk/vnfsdk-compliance.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-11-03T20:20:55Z",
+      "side": 1,
+      "message": "Did you meant vnfsdk-compliance?",
+      "range": {
+        "startLine": 3,
+        "startChar": 4,
+        "endLine": 3,
+        "endChar": 24
+      },
+      "revId": "7b5b597cc465787bf2509b6c41fb1f8d557959e9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
