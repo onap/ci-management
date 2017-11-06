@@ -5,6 +5,7 @@
     jobs:
       - gerrit-maven-clm:
           java-version: ''
+          build-timeout: 45
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
