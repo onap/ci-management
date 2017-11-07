@@ -32,7 +32,7 @@ EOL
 ubuntu_docker_mtu_fix(){
     echo "---> Fixing docker's mtu settings"
     systemctl stop docker
-    cat <<EOL > /etc/systemd/system/docker.service
+    cat <<'EOL' > /etc/systemd/system/docker.service
 [Unit]
 Description=Docker Application Container Engine
 Documentation=https://docs.docker.com
