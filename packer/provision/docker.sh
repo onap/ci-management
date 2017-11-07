@@ -29,6 +29,47 @@ EOL
     groupadd docker
 }
 
+ubuntu_docker_mtu_fix(){
+    echo "---> Fixing docker's mtu settings"
+    systemctl stop docker
+    cat <<EOL > /etc/systemd/system/docker.service
+[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target docker.socket
+Requires=docker.socket
+
+[Service]
+Type=notify
+# the default is not to use systemd for cgroups because the delegate issues still
+# exists and systemd currently does not support the cgroup feature set required
+# for containers run by docker
+ExecStart=
+ExecStart=/usr/bin/dockerd --mtu 1454 -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+ExecReload=/bin/kill -s HUP $MAINPID
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+EOL
+    systemctl start docker
+    echo "---> Checking MTU"
+    docker network inspect bridge
+    echo "---> MTU set to 1454"
+}
+
 ubuntu_systems() {
     # Assumes that python is already installed by basebuild
 
