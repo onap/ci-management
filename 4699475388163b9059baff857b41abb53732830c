@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_f38f1274",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2017-11-07T17:26:22Z",
+      "side": 1,
+      "message": "doesn\u0027t this conflict with line 26 above.  selinux-enabled flag?",
+      "revId": "4699475388163b9059baff857b41abb53732830c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
