@@ -28,6 +28,10 @@ To download **ci-management**, execute the following command to clone the
 `git clone ssh://<LFID>@gerrit.onap.org:29418/ci-management --recursive && scp -p -P 29418 \
 <LFID>@gerrit.onap.org:hooks/commit-msg ci-management/.git/hooks/`
 
+Make sure to sync global-jjb submodule using:
+
+`git submodule update --init` 
+
 Once you successfully clone the repository, next step is to install JJB
 (Jenkins Job Builder) in order to experiment with Jenkins jobs.
 
