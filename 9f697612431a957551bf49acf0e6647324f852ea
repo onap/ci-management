@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_e26bb683",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-11-08T22:12:24Z",
+      "side": 1,
+      "message": "Please remove line 10. \n\nIssue-ID needs to be part of the footer and please use \"Issue-ID\" since we will soon be enforcing this text. \n\nThanks a ton!",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "9f697612431a957551bf49acf0e6647324f852ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
