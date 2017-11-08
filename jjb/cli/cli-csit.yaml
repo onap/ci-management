@@ -5,7 +5,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'cli'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.1.0':
+          branch: 'release-1.1.0'
     functionality:
       - 'sanity-check':
           trigger_jobs:
