@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_55e7e112",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-11-10T22:59:38Z",
+      "side": 1,
+      "message": "Everything looks fine, but this commit message is not specific enough. \n\nCan we mention something like this?: \n\nAdd jjb templates for vnfsdk-compliance\n\n- Add vnfsdk-compliance-csit.yaml\n- Add vnfsdk-compliance for verifiation, merge and \n  release.",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "3898fd22f65d49121eed1de5612e2789d535c68c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
