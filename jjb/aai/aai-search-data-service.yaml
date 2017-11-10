@@ -7,10 +7,10 @@
           java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
-      - '{project-name}-{stream}-aai-docker-java-daily':
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-aai-docker-java-version-daily':
           pom: 'pom.xml'
-          mvn-goals: 'docker:build'
+          mvn-goals: 'docker:build docker:push'
     project: 'aai/search-data-service'
     stream:
       - 'master':
