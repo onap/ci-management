@@ -10,6 +10,6 @@
     functionality:
       - 'APIs':
           trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily'
+            - '{project-name}-{stream}-release-version-java-daily'
     robot-options: ''
     branch: 'master'
