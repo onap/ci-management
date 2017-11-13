@@ -16,7 +16,7 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-properties-daily':
          setVersion: 'DontSetVersion'
          docker-pom: 'javatoscachecker/pom.xml'
