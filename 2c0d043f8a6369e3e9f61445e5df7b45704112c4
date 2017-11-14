@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_69e4410d",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-14T14:09:25Z",
+      "side": 1,
+      "message": "Why are you using raw XML injection here instead of using the built in testng publisher configuration that JJB supports??\n\nhttps://docs.openstack.org/infra/jenkins-job-builder/publishers.html?highlight\u003dtestng#publishers.testng",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 46
+      },
+      "revId": "2c0d043f8a6369e3e9f61445e5df7b45704112c4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
