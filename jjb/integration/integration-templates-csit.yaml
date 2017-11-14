@@ -52,6 +52,18 @@
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
+      - testng:
+          pattern: archives/testng-results.xml
+          escape-test-description: true
+          escape-exception-msg: true
+          show-failed-builds: true
+      - html-publisher:
+          allow-missing: false
+          dir: archives//logs/sdc-sanity/ExtentReport
+          files: SDC_CI_Extent_Report.html
+          keep-all: false
+          link-to-last-build: false
+          name: ExtentReport
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}'
