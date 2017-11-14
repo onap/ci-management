@@ -15,6 +15,22 @@
           default: '{test-options}'
           description: 'Robot command options'
 
+- parameter:
+    name: html-publisher-dir
+    parameters:
+      - string:
+          name: HTMLDIR
+          default: '{html-dir}'
+          description: 'Directory location to be used by HTML publisher plugin'
+
+- parameter:
+    name: html-publisher-files
+    parameters:
+      - string:
+          name: HTMLFILES
+          default: '{html-files}'
+          description: 'File name to be used by HTML publisher plugin to produce the report'
+
 - builder:
     name: integration-install-robotframework
     builders:
