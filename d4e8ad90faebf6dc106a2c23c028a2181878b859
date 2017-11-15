@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_786529e0",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 35
+      },
+      "writtenOn": "2017-11-15T21:09:21Z",
+      "side": 1,
+      "message": "This seems like it would cause all CSIT jobs to fail except that one SDC job that produces this particular file?",
+      "range": {
+        "startLine": 61,
+        "startChar": 25,
+        "endLine": 61,
+        "endChar": 30
+      },
+      "revId": "d4e8ad90faebf6dc106a2c23c028a2181878b859",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
