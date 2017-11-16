@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a4e6583_523c892f",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-16T16:30:53Z",
+      "side": 1,
+      "message": "change this to testng",
+      "range": {
+        "startLine": 57,
+        "startChar": 63,
+        "endLine": 57,
+        "endChar": 66
+      },
+      "revId": "afcfd3d694878916aa3e8a16db81871bb3b14f93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a4e6583_32490dd1",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-16T16:30:53Z",
+      "side": 1,
+      "message": "Make this a required parameter",
+      "range": {
+        "startLine": 116,
+        "startChar": 15,
+        "endLine": 116,
+        "endChar": 52
+      },
+      "revId": "afcfd3d694878916aa3e8a16db81871bb3b14f93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a4e6583_124611c0",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-16T16:30:53Z",
+      "side": 1,
+      "message": "Make this a required parameter",
+      "range": {
+        "startLine": 117,
+        "startChar": 17,
+        "endLine": 117,
+        "endChar": 42
+      },
+      "revId": "afcfd3d694878916aa3e8a16db81871bb3b14f93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
