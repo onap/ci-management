@@ -35,6 +35,9 @@
     stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'policy-drools-applications-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: 'ubuntu1604-basebuild-4c-4g'
