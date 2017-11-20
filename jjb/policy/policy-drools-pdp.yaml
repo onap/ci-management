@@ -39,3 +39,22 @@
     mvn-settings: 'policy-drools-pdp-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: policy-drools-pdp-amsterdam
+    project-name: 'policy-drools-pdp'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'policy/drools-pdp'
+    stream:
+      - 'amsterdam':
+          branch: 'amsterdam'
+    mvn-settings: 'policy-drools-pdp-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-basebuild-4c-4g'
