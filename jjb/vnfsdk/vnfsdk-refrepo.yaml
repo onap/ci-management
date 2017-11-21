@@ -20,6 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'vnfsdk-refrepo-settings'
     files: '**'
     archive-artifacts: ''
