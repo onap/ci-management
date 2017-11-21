@@ -9,5 +9,4 @@ query_plugins_info=False
 #user=jenkins
 #password=1234567890abcdef1234567890abcdef
 url=http://localhost:8080
-##### This is deprecated, use job_builder section instead
-#ignore_cache=True
+# test
