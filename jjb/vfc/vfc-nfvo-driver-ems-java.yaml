@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-driver-ems-settings'
     subproject:
       - 'drv-ems-boco':
