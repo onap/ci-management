@@ -1,0 +1,9 @@
+Code-Review+1: Marcus Williams <marcus.williams@intel.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Tue, 21 Nov 2017 20:46:27 +0000
+Reviewed-on: https://gerrit.onap.org/r/24669
+Project: ci-management
+Branch: refs/heads/master
