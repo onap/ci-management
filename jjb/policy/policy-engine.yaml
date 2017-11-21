@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'policy-engine-settings'
     files: '**'
     archive-artifacts: ''
