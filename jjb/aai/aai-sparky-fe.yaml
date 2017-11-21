@@ -13,6 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'aai-sparky-fe-settings'
     files: '**'
     archive-artifacts: ''
