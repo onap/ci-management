@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
     files: '**'
     archive-artifacts: ''
