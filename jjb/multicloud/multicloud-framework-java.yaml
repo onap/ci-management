@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'multicloud-framework-settings'
     subproject:
       - 'multivimbroker':
