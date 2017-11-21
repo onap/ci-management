@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
