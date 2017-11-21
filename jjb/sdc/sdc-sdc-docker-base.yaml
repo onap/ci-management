@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'sdc-sdc-docker-base-settings'
     files: '**'
     archive-artifacts: ''
