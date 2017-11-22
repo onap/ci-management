@@ -16,3 +16,5 @@
     stream:
       - master:
           branch: 'master'
+      - amsterdam:
+          branch: 'amsterdam'
