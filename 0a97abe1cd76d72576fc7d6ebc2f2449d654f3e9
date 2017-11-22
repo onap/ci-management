@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_80e2f8d3",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-22T15:56:21Z",
+      "side": 1,
+      "message": "This still hard codes in sdc instead of making it a required passed in parameter like I previously mentioned.\n\nSince you\u0027ve created the html-publisher-dir parameter you should be using it here",
+      "revId": "0a97abe1cd76d72576fc7d6ebc2f2449d654f3e9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_20e764e6",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-11-22T15:56:21Z",
+      "side": 1,
+      "message": "This still hard codes in sdc instead of making it a required passed in parameter like I previously mentioned.\n\nSince you\u0027ve created the html-publisher-files parameter you should be using it here.",
+      "revId": "0a97abe1cd76d72576fc7d6ebc2f2449d654f3e9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
