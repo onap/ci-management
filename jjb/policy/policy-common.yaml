@@ -35,6 +35,8 @@
     stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'policy-common-settings'
     files: '**'
     archive-artifacts: ''

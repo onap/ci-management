@@ -29,7 +29,6 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'
       - '{project-name}-{stream}-stage-site-java':
-          build-node: 'ubuntu1604-basebuild-4c-4g'
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
@@ -37,6 +36,9 @@
     stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'policy-engine-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: 'ubuntu1604-basebuild-4c-4g'
