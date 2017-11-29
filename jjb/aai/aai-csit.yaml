@@ -17,4 +17,6 @@
           trigger_jobs:
             - 'aai-esr-server-{stream}-docker-java-daily'
     robot-options: ''
-    branch: 'master'
+    branch:
+      - 'master'
+      - 'amsterdam'
