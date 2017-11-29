@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
     mvn-settings: 'testsuite-settings'
