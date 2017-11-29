@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'aai-router-core-settings'
     files: '**'
     archive-artifacts: ''
