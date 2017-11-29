@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_c6c7b363",
+        "filename": "jjb/aai/aai-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2017-11-29T23:14:50Z",
+      "side": 1,
+      "message": "Remove this empty space",
+      "range": {
+        "startLine": 20,
+        "startChar": 11,
+        "endLine": 20,
+        "endChar": 12
+      },
+      "revId": "581e2b94c4eab3ef652eaae9b46406c2108e8731",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
