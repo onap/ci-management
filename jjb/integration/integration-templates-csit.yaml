@@ -122,6 +122,9 @@
           keep-all: false
           link-to-last-build: false
           name: ExtentReport
+      - junit:
+          results: archives/testng-results.xml
+          health-scale-factor: 1.0
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}'
