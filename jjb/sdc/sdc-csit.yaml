@@ -2,8 +2,8 @@
 - project:
     name: sdc-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-verify-csit-{functionality}-testng'
+      - '{project-name}-{stream}-csit-{functionality}-testng'
     project-name: 'sdc'
     stream:
       - 'master':
@@ -17,3 +17,5 @@
             - '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
+    html-dir: 'archives'
+    html-files: 'SDC_CI_Extent_Report.html'
