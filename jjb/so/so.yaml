@@ -27,6 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam":
+          branch: 'amsterdam'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''

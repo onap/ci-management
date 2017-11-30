@@ -5,7 +5,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'so'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'amsterdam":
+          branch: 'amsterdam'
     functionality:
       - 'sanity-check':
           trigger_jobs:
