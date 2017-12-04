@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_ba1718a3",
+        "filename": "jjb/cli/cli.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 741
+      },
+      "writtenOn": "2017-12-04T05:38:24Z",
+      "side": 1,
+      "message": "if possible, can you please remove this entries as amsterdam branch will be same as this one. thanks",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 27,
+        "endChar": 33
+      },
+      "revId": "0d7d72ba09bab64a12ec33c929c4f23100be8d5b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
