@@ -16,8 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-champ-settings'
     files: '**'
     archive-artifacts: ''
