@@ -4,6 +4,8 @@
     name: clamp
     project-name: 'clamp'
     jobs:
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:
