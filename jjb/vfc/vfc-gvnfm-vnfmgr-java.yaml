@@ -14,6 +14,8 @@
           pom: 'mgr/pom.xml'
           pattern: 'mgr/**'
     jobs:
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'
