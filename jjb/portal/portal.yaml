@@ -3,6 +3,8 @@
     name: portal
     project-name: 'portal'
     jobs:
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
