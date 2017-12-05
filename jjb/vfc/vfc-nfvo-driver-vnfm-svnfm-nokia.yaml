@@ -14,6 +14,8 @@
           pom: 'nokia/vnfmdriver/pom.xml'
           pattern: 'nokia/vnfmdriver/**'
     jobs:
+      - gerrit-maven-clm:
+          java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
