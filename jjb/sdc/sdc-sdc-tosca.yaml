@@ -17,8 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.1.0':
-          branch: 'release-1.1.0'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'sdc-sdc-tosca-settings'
     files: '**'
     archive-artifacts: ''
