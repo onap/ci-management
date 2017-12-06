@@ -4,11 +4,14 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dcaegen2'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     functionality:
       - 'testsuites':
           trigger_jobs:
             - 'dcaegen2-master-merge-java'
             - 'dcaegen2-collectors-ves-master-merge-java'
     robot-options: ''
-    branch: 'master'
