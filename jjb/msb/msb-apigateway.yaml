@@ -21,6 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'msb-apigateway-settings'
     files: '**'
     archive-artifacts: ''
