@@ -1,0 +1,22 @@
+---
+- project:
+    name: dmaap-dbcapi
+    project-name: 'dmaap-dbcapi'
+    jobs:
+      - '{project-name}-{stream}-clm'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'dmaap/dbcapi/pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          mvn-goals: 'clean install'
+    project: 'dmaap/dbcapi'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'dmaap-dbcapi-settings'
+    files: '**'
+    archive-artifacts: ''
