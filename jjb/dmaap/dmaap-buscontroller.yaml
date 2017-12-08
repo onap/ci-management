@@ -1,0 +1,23 @@
+---
+- project:
+    name: dmaap-buscontroller
+    project-name: 'dmaap-buscontroller'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          mvn-goals: 'clean install'
+    project: 'dmaap/buscontroller'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-1.0.0':
+          branch: 'release-1.0.0'
+    mvn-settings: 'dmaap-buscontroller-settings'
+    files: '**'
+    archive-artifacts: ''
