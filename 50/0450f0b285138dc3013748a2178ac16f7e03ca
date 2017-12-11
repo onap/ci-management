@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dominic Lunanuova <dgl@research.att.com>
+Code-Review+1: varun gudisena <vg411h@att.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 11 Dec 2017 19:50:00 +0000
+Reviewed-on: https://gerrit.onap.org/r/25943
+Project: ci-management
+Branch: refs/heads/master
