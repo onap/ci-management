@@ -5,7 +5,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'aai'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: master
+      - 'amsterdam':
+          branch: amsterdam
     functionality:
       - 'resources':
           trigger_jobs:
@@ -17,6 +21,4 @@
           trigger_jobs:
             - 'aai-esr-server-{stream}-docker-java-daily'
     robot-options: ''
-    branch:
-      - 'master'
-      - 'amsterdam'
+
