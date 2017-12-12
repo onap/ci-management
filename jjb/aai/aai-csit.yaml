@@ -6,10 +6,8 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'aai'
     stream:
-      - 'master':
-          branch: master
-      - 'amsterdam':
-          branch: amsterdam
+      - 'master'
+      - 'amsterdam'
     functionality:
       - 'resources':
           trigger_jobs:
