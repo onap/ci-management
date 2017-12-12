@@ -5,7 +5,11 @@
     jobs:
       - gerrit-maven-clm:
           java-version: ''
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-gerrit-maven-verify':
+          publishers:
+            - junit:
+              results: '{junit-results}'
+
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-stage-site-java':
@@ -20,6 +24,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+    junit-results: <set junit results file here>
 - project:
     name: policy-common-release-1.0.0
     project-name: 'policy-common'
