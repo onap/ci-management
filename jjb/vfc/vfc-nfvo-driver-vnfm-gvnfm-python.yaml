@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     subproject:
