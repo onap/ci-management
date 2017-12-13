@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'sdc-sdc-titan-cassandra-settings'
     files: '**'
     archive-artifacts: ''
