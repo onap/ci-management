@@ -2,8 +2,10 @@
 - job-template:
     # Job template for python verify jobs
     #
-    # The purpose of this job template is to run tox for projects using this
-    # template.
+    # The purpose of this job template is to run:
+    # 1. tox
+    #
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -69,6 +71,17 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for docker daily jobs
+    #
+    # The purpose of this job template is to run:
+    # 1. login into the docker registry
+    # 2. docker build
+    # 3. docker tag
+    # 4. docker push
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-docker-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -105,7 +118,6 @@
           branch: '{branch}'
 
     builders:
-
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -124,6 +136,16 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for docker daily jobs for 2 SCMs
+    #
+    # The purpose of this job template is to run:
+    # 1. inject a version properties file
+    # 2. login into the docker registry
+    # 4. run a specified shell script
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-2scm-docker-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -170,23 +192,28 @@
           branch: '{branch}'
 
     builders:
-
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-
       - inject:
           properties-file: version.properties
-
       - docker-login
-
       - shell: '{script}'
-
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for docker daily jobs for 3 SCMs
+    #
+    # The purpose of this job template is to run:
+    # 1. inject a version properties file
+    # 2. login into the docker registry
+    # 4. run a specified shell script
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-3scm-docker-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -238,19 +265,13 @@
           branch: '{branch}'
 
     builders:
-
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-
       - inject:
           properties-file: version.properties
-
       - docker-login
-
       - shell: '{script}'
-
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
-

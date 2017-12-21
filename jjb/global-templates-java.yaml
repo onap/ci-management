@@ -2,8 +2,8 @@
 - job-template:
     # Job template for Java verify jobs
     #
-    # The purpose of this job template is to run "maven clean install" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean install -DskipTests=true
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -66,8 +66,8 @@
 - job-template:
     # Job template for Java verify jobs
     #
-    # The purpose of this job template is to run "maven clean install" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean install
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -129,11 +129,15 @@
     # Job template for Java verify jobs running checkstyle at the end
     # When checkstyle will be fully incorporated, it is meant to replace
     #  '{project-name}-{stream}-verify-java-checkstyle'
-    # The purpose of this job template is to run "maven clean install" for
-    # projects using this template.
+    #
+    # The purpose of this job template is to run:
+    # 1. maven clean install
+    #
+    # This job publishes checkstyle results.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-verify-java-checkstyle'
     project-type: freestyle
     concurrent: true
@@ -183,8 +187,8 @@
 - job-template:
     # Job template for Java verify jobs that takes a maven template
     #
-    # The purpose of this job template is to run "maven clean install -P {x}"
-    # for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean install -P {mvn-profile}
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -245,8 +249,10 @@
 - job-template:
     # Job template for Java verify jobs with POM not at the root
     #
-    # The purpose of this job template is to run "maven clean install" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean install
+    #
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -311,11 +317,12 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy with Sonar scans
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-java-daily'
 
     project-type: freestyle
@@ -377,11 +384,14 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy skipping Sonar scans
+    #
+    # This template skips Sonar scans.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-java-daily-no-sonar'
 
     project-type: freestyle
@@ -444,11 +454,16 @@
     # Job template for Java daily release jobs running checkstyle at the end
     # When checkstyle will be fully incorporated, it is meant to replace
     #  '{project-name}-{stream}-release-java-daily'
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    #
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy with Sonar scans
+    #
+    # This job publishes checkstyle results.
+    # This job uses a conditional regex match step to set versions.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-java-daily-checkstyle'
     project-type: freestyle
     node: '{build-node}'
@@ -516,11 +531,15 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean deploy
+    #
+    # This template skips Sonar scans.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-version-java-daily-no-sonar'
 
     project-type: freestyle
@@ -590,14 +609,18 @@
           maven-version: '{maven-version}'
 
 - job-template:
-    # Job template for Java daily release jobs
+    # Job template for Java daily release jobs for subprojects
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
-    # This template supports subprojects.
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean deploy
+    #
+    # This template skips Sonar scans.
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-{subproject}-release-version-java-daily-no-sonar'
 
     project-type: freestyle
@@ -671,11 +694,13 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean deploy with Sonar scans
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-version-java-daily'
 
     project-type: freestyle
@@ -747,11 +772,13 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean deploy -P {mvn-profile} with Sonar scans
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-version-profile-java-daily'
 
     project-type: freestyle
@@ -824,13 +851,14 @@
 - job-template:
     # Job template for Java daily release jobs with POM not at the root
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy with Sonar scans
+    #
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
     #     pom:       name/location of the pom.xml file relative to the workspace
-
 
     name: '{project-name}-{stream}-{subproject}-release-java-daily'
 
@@ -894,13 +922,15 @@
 - job-template:
     # Job template for Java daily release jobs with POM not at the root
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean deploy with Sonar scans
+    #
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
     #     pom:       name/location of the pom.xml file relative to the workspace
-
 
     name: '{project-name}-{stream}-{subproject}-release-version-java-daily'
 
@@ -975,13 +1005,14 @@
 - job-template:
     # Job template for Java daily release jobs with POM not at the root
     #
-    # The purpose of this job template is to run "maven version && maven clean
-    # deploy" for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy
+    #
+    # This job supports subprojects and skips Sonar scans.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
     #     pom:       name/location of the pom.xml file relative to the workspace
-
 
     name: '{project-name}-{stream}-{subproject}-release-java-daily-no-sonar'
 
@@ -1045,11 +1076,12 @@
 - job-template:
     # Job template for Java merge jobs
     #
-    # The purpose of this job template is to run "maven clean deploy" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-merge-java'
 
     project-type: freestyle
@@ -1105,12 +1137,15 @@
 - job-template:
     # Job template for Java merge jobs based on
     #   '{project-name}-{stream}-merge-java'
-    # The purpose of this job template is to run "maven clean deploy" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy
+    #
+    # This project supports maven properties.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
     #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-merge-properties-java'
 
     project-type: freestyle
@@ -1167,11 +1202,12 @@
 - job-template:
     # Job template for Java merge jobs that takes a maven template
     #
-    # The purpose of this job template is to run "maven clean deploy -P {x}"
-    # for projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy -P {mvn-profile}
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-merge-profile-java'
 
     project-type: freestyle
@@ -1239,6 +1275,7 @@
     #   branch:         git branch
     #   dependencies:   fully qualified upstream job name to trigger on
     #                   this may be ''
+
     name: '{project-name}-{stream}-downstream-merge-java'
 
     project-type: freestyle
@@ -1297,8 +1334,10 @@
 - job-template:
     # Job template for Java merge jobs with POM not at the root
     #
-    # The purpose of this job template is to run "maven clean deploy" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy
+    #
+    # This job supports subprojects.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
@@ -1360,6 +1399,15 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for Docker daily jobs
+    #
+    # The purpose of this job template is to run:
+    # 1. login to the docker registry
+    # 2. docker push
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1417,14 +1465,18 @@
 - job-template:
     # Job template for building & pushing docker images
     #
-    # The purpose of this job template is to run :
+    # The purpose of this job template is to run:
     #  1. login to the docker registry
-    #  2. do a clean deploy on the specified profile
+    #  2. maven clean deploy on the specified profile
+    #
+    # This job uses a conditional regex match step to set versions.
+    # This template supports maven properties.
     #
     # Required Variables:
     #     pom:       name/location of the pom.xml file relative to the workspace
     #     profile:   the docker profile defined in the pom
     #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-docker-java-properties-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1487,6 +1539,16 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. run a specified shell builder
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-docker-java-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1545,6 +1607,17 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. inject a version.properties file and set versions
+    #  3. run a specified shell builder
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-docker-java-version-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1616,6 +1689,19 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. inject a version.properties file and set versions
+    #  3. run a specified shell builder
+    #
+    # This template supports subprojects.
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1689,6 +1775,18 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. inject a version.properties file and set versions
+    #  3. run a docker push
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     profile:   the docker profile defined in the pom
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-docker-version-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1757,6 +1855,19 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. inject a version.properties file and set versions
+    #  2. login to the docker registry
+    #  3. run a docker push
+    #
+    # This job supports subprojects.
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-{subproject}-docker-version-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1827,6 +1938,17 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images for AAI specific repos
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. run maven goals
+    #  3. run include-docker-push.sh
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-aai-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1903,6 +2025,19 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images for AAI specific repos
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. run maven goals
+    #  3. run include-docker-push.sh
+    #
+    # This job supports subprojects
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-{subproject}-aai-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
@@ -1981,17 +2116,19 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run
-    #   - change version in all POM files to the release version specified
-    #     in version.properties. This is done using a script instread of
-    #     the mvn version plugin that assumes some specific parent structure.
-    #   - runs maven clean deploy sonar
+    # The purpose of this job template is to run:
+    # 1. inject a version.properties file and set versions
+    # 2. change version in all POM files to the release version specified
+    #    in version.properties. This is done using a script instread of
+    #    the mvn version plugin that assumes some specific parent structure
+    # 3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-release-version2-java-daily'
 
     project-type: freestyle
@@ -2059,11 +2196,12 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run
-    #   - change version in all POM files to the release version specified
+    # The purpose of this job template is to run:
+    # 1. inject a version.properties file and set versions
+    # 2. change version in all POM files to the release version specified
     #     in version.properties. This is done using a script instread of
-    #     the mvn version plugin that assumes some specific parent structure.
-    #   - runs maven clean deploy sonar
+    #     the mvn version plugin that assumes some specific parent structure
+    # 3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
@@ -2143,12 +2281,13 @@
 - job-template:
     # Job template for Java daily release jobs
     #
-    # The purpose of this job template is to run
-    #   - change version in all POM files to the release version specified
+    # The purpose of this job template is to run:
+    #  1. inject a version.properties file and set versions
+    #  2. change version in all POM files to the release version specified
     #     in version.properties. This is done using a script instread of
     #     the mvn version plugin that assumes some specific parent structure
-    #     This version does NOT change the version within the <parent> tag.
-    #   - runs maven clean deploy sonar
+    #     This version does NOT change the version within the <parent> tag
+    #  3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
@@ -2232,11 +2371,16 @@
     # succeeds as there's no need for new documentaiton
     # if the build job fails.
     #
+    # The purpose of this job template is to run:
+    # 1. maven set versions
+    # 2. maven clean site
+    #
     # Those parameters should be set :
     # - site-pom : the pom file that contains the site confiration
     # - trigger-job : the name of the project that triggers this job
     #                     upon success. The job name can be
     #                     parameterized.
+
     name: '{project-name}-{stream}-stage-site-java'
     project-type: freestyle
     node: '{build-node}'
@@ -2300,13 +2444,14 @@
           maven-version: '{maven-version}'
 
 - job-template:
-    # Job template for Java merge jobs
+    # Job template for Java merge jobs for SDC specific repos
     #
-    # The purpose of this job template is to run "maven clean deploy" for
-    # projects using this template.
+    # The purpose of this job template is to run:
+    # 1. maven clean deploy
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+
     name: '{project-name}-{stream}-sdc-merge-java'
 
     project-type: freestyle
@@ -2361,6 +2506,17 @@
           maven-version: '{maven-version}'
 
 - job-template:
+    # Job template for building & pushing docker images for AAI specific repos
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. run maven clean install goals skipping tests
+    #  3. run maven goals
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     maven-properties: properties passed to maven
+
     name: '{project-name}-{stream}-aai-docker-java-version-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
