@@ -6,7 +6,7 @@
       - gerrit-maven-clm:
           java-version: ''
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
@@ -18,6 +18,10 @@
           mvn-profile: 'docker'
 
     project: 'vnfsdk/compliance'
+    subproject:
+      - 'veslibrary':
+          pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          pattern: 'veslibrary/**'
     stream:
       - 'master':
           branch: 'master'
