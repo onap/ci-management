@@ -22,6 +22,10 @@
           path: 'windriver'
           pattern: 'windriver/**'
           pom: 'windriver/pom.xml'
+      - 'common':
+          path: 'common'
+          pattern: 'common/**'
+          pom: 'common/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
