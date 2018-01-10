@@ -111,14 +111,17 @@
           escape-test-description: true
           escape-exception-msg: true
           show-failed-builds: true
+          unstable-on-skipped-tests: false
+          failure-on-failed-test-config: false
       - junit:
           results: archives/testng-results.xml
           health-scale-factor: 1.0
+          allow-empty-results: true
       - integration-robot:
           unstable-if: 0.0
           pass-if: 100.0
       - html-publisher:
-          allow-missing: false
+          allow-missing: true
           dir: '{html-dir}'
           files: '{html-files}'
           keep-all: false
@@ -248,8 +251,14 @@
           escape-test-description: true
           escape-exception-msg: true
           show-failed-builds: true
+          unstable-on-skipped-tests: false
+          failure-on-failed-test-config: false
+      - junit:
+          results: archives/testng-results.xml
+          health-scale-factor: 1.0
+          allow-empty-results: true
       - html-publisher:
-          allow-missing: false
+          allow-missing: true
           dir: '{html-dir}'
           files: '{html-files}'
           keep-all: false
