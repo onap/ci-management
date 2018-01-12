@@ -1,0 +1,18 @@
+---
+- project:
+    name: integration-bootstrap
+    project-name: 'integration'
+    project: 'integration'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+    subproject:
+      - 'vagrant-onap':
+          path: 'bootstrap/vagrant-onap'
+          pattern: 'bootstrap/vagrant-onap/**'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
+    mvn-settings: 'integration-settings'
+    build-node: ubuntu1604-basebuild-2c-1g
