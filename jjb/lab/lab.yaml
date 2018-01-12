@@ -1,0 +1,12 @@
+---
+- project:
+    name: lab
+    jobs:
+      - 'lab-{lab-name}-{env-name}-{job-name}'
+    lab-name:
+      - "windriver"
+    env-name:
+      - "jenkins"
+    job-name:
+      - "deploy"
+      - "healthcheck"

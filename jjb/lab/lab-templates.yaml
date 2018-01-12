@@ -1,0 +1,5 @@
+---
+- job-template:
+    name: 'lab-{lab-name}-{env-name}-{job-name}'
+    disabled: false
+    project-type: externaljob
