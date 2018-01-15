@@ -14,4 +14,7 @@
       - 'healthcheck':
           trigger_jobs:
             - '{project-name}-{stream}-release-java-daily-checkstyle'
+      - 'healthcheck_amsterdam':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
