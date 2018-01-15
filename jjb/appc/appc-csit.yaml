@@ -8,10 +8,14 @@
     stream:
       - 'master':
           branch: 'master'
+          functionality:
+            - 'healthcheck':
+                trigger_jobs:
+                  - '{project-name}-{stream}-release-java-daily-checkstyle'
       - 'amsterdam':
           branch: 'amsterdam'
-    functionality:
-      - 'healthcheck':
-          trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+          functionality:
+            - 'healthcheck_amsterdam':
+                trigger_jobs:
+                  - '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
