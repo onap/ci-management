@@ -1,0 +1,21 @@
+---
+- project:
+    name: aai-model-loader-release
+    project-name: 'aai-model-loader'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/model-loader'
+    stream:
+      - 'amsterdam':
+          branch: 'amsterdam'
+    mvn-settings: 'aai-model-loader-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g

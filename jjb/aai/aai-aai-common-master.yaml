@@ -1,0 +1,22 @@
+---
+- project:
+    name: aai-aai-common-master
+    project-name: 'aai-aai-common'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'aai/aai-common'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-aai-common-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g

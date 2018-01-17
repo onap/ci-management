@@ -1,7 +1,7 @@
 ---
 - project:
-    name: aai-search-data-service
-    project-name: 'aai-search-data-service'
+    name: aai-model-loader-master
+    project-name: 'aai-model-loader'
     jobs:
       - gerrit-maven-clm:
           java-version: ''
@@ -11,12 +11,11 @@
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'docker:build'
-    project: 'aai/search-data-service'
+    project: 'aai/model-loader'
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
-    mvn-settings: 'aai-search-data-service-settings'
+    mvn-settings: 'aai-model-loader-settings'
     files: '**'
     archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
