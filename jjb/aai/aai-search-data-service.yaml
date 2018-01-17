@@ -1,6 +1,6 @@
 ---
 - project:
-    name: aai-search-data-service
+    name: aai-search-data-service-master
     project-name: 'aai-search-data-service'
     jobs:
       - gerrit-maven-clm:
@@ -15,6 +15,26 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'amsterdam':
+          branch: 'amsterdam'
+    mvn-settings: 'aai-search-data-service-settings'
+    files: '**'
+    archive-artifacts: ''
+---
+- project:
+    name: aai-search-data-service-releases
+    project-name: 'aai-search-data-service'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/search-data-service'
+    stream:
       - 'amsterdam':
           branch: 'amsterdam'
     mvn-settings: 'aai-search-data-service-settings'

@@ -1,6 +1,6 @@
 ---
 - project:
-    name: aai-esr-server
+    name: aai-esr-server-master
     project-name: 'aai-esr-server'
     jobs:
       - gerrit-maven-clm:
@@ -14,6 +14,26 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'aai-esr-server-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1604-basebuild-4c-4g
+---
+- project:
+    name: aai-esr-server-releases
+    project-name: 'aai-esr-server'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-docker-java-daily'
+
+    project: 'aai/esr-server'
+    stream:
       - 'amsterdam':
           branch: 'amsterdam'
     mvn-settings: 'aai-esr-server-settings'
