@@ -1,6 +1,6 @@
 ---
 - project:
-    name: aai-logging-service
+    name: aai-logging-service-master
     project-name: 'aai-logging-service'
     jobs:
       - gerrit-maven-clm:
@@ -12,6 +12,20 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'aai-logging-service-settings'
+    files: '**'
+    archive-artifacts: ''
+- project:
+    name: aai-logging-service-releases
+    project-name: 'aai-logging-service'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+    project: 'aai/logging-service'
+    stream:
       - 'release-1.0.0':
           branch: 'release-1.0.0'
       - 'amsterdam':
