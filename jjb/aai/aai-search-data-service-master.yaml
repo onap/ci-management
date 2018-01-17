@@ -15,8 +15,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-search-data-service-settings'
     files: '**'
     archive-artifacts: ''

@@ -19,8 +19,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-traversal-settings'
     files: '**'
     archive-artifacts: ''

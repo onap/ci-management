@@ -7,11 +7,9 @@
           java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
     project: 'aai/logging-service'
     stream:
-      - 'master':
-          branch: 'master'
       - 'release-1.0.0':
           branch: 'release-1.0.0'
       - 'amsterdam':
@@ -19,3 +17,4 @@
     mvn-settings: 'aai-logging-service-settings'
     files: '**'
     archive-artifacts: ''
+
