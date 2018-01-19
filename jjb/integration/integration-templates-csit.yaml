@@ -245,7 +245,6 @@
       - integration-robot:
           unstable-if: 0.0
           pass-if: 100.0
-      - lf-infra-publish
       - testng:
           pattern: archives/testng-results.xml
           escape-test-description: true
@@ -264,3 +263,4 @@
           keep-all: false
           link-to-last-build: false
           name: ExtentReport
+      - lf-infra-publish
