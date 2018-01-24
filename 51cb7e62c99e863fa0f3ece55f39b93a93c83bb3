@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_8f32ce0e",
+        "filename": "jjb/multicloud/multicloud-openstack.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1889
+      },
+      "writtenOn": "2018-01-24T09:34:25Z",
+      "side": 1,
+      "message": "wrong format",
+      "range": {
+        "startLine": 18,
+        "startChar": 17,
+        "endLine": 18,
+        "endChar": 22
+      },
+      "revId": "51cb7e62c99e863fa0f3ece55f39b93a93c83bb3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
