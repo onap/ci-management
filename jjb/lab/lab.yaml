@@ -6,7 +6,8 @@
     lab-name:
       - "windriver"
     env-name:
-      - "jenkins"
+      - "beijing-heat"
+      - "beijing-oom"
     job-name:
       - "deploy"
       - "healthcheck"
