@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_d95adf4f",
+        "filename": "jjb/lab/lab-templates.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-01-26T15:16:07Z",
+      "side": 1,
+      "message": "Forgot to mention this on the previous review. JJB can\u0027t convert a job from one type to another. Jenkins itself doesn\u0027t allow this. For us to do this we have first remove the current jobs using the template.\n\nI suggest a separate change that first removes the current jobs defined. Once that\u0027s merged we can merge this one and then a follow on patch to add the jobs back.",
+      "revId": "236acc9ddd6d492872e5cfa27f962b3bbb9106ac",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
