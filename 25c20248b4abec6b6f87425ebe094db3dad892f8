@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_998f77cc",
+        "filename": "jjb/lab/include-raw-lab-retrieve-logs.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-01-26T14:49:38Z",
+      "side": 1,
+      "message": "I strongly recommend that the first step of this script be the following so it will fail the build if any step fails:\n\nset -xe -o pipefail",
+      "revId": "25c20248b4abec6b6f87425ebe094db3dad892f8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
