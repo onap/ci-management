@@ -2,4 +2,35 @@
 - job-template:
     name: 'lab-{lab-name}-{env-name}-{job-name}'
     disabled: false
-    project-type: externaljob
+    project-type: freestyle
+    build-node: ubuntu1604-basebuild-4c-4g
+    auth-token: lab
+
+    properties:
+      - lf-infra-properties:
+          project: 'integration'
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - string:
+          name: LOG_DIR_URL
+          description: 'URL for the log directory produced by the external job'
+      - string:
+          name: SRC_BUILD_URL
+          description: 'URL for the external Jenkins build triggering this build'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - shell:
+          !include-raw:
+          - include-raw-lab-retrieve-logs.sh
+
+    publishers:
+      - integration-robot:
+          unstable-if: 0.0
+          pass-if: 100.0
+      - lf-infra-publish
