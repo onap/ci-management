@@ -16,7 +16,11 @@
           pom: 'newton/pom.xml'
       - 'ocata':
           path: 'ocata'
-          pattern: 'ocata/**:share/**'
+          pattern: 'ocata/**'
+          pom: 'ocata/pom.xml'
+      - 'ocata_share':
+          path: 'ocata'
+          pattern: 'share/**'
           pom: 'ocata/pom.xml'
       - 'windriver':
           path: 'windriver'
