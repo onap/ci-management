@@ -3,7 +3,7 @@
     name: dcaegen2-collectors-snmptrap
     project-name: 'dcaegen2-collectors-snmptrap'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'
 
@@ -22,3 +22,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+- project:
+    name: dcaegen2-collectors-snmptrap-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'dcaegen2/collectors/snmptrap'
+    project-name: 'dcaegen2-collectors-snmptrap'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

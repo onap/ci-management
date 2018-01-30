@@ -23,3 +23,13 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+- project:
+    name: sdc-sdc-distribution-client-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'sdc/sdc-distribution-client'
+    project-name: 'sdc-sdc-distribution-client'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-distribution-client-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
