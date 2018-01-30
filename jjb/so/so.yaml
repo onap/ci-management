@@ -4,6 +4,7 @@
     name: so
     project-name: 'so'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-verify-profile-java':
           mvn-profile: 'with-integration-tests'
           build-node: 'ubuntu1604-docker-8c-8g'

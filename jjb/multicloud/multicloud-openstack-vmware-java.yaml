@@ -14,6 +14,7 @@
           pom: 'vio/pom.xml'
           pattern: 'vio/**'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily-no-sonar'

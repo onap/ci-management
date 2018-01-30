@@ -3,6 +3,7 @@
     name: msb-swagger-sdk
     project-name: 'msb-swagger-sdk'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
