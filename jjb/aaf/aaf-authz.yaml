@@ -23,3 +23,14 @@
     docker-pom: 'authz-service/pom.xml'
     files: '**'
     archive-artifacts: ''
+    
+- project:
+    name: aaf-authz
+    jobs:
+      - gerrit-maven-sonar
+    project: 'aaf/authz'
+    project-name: 'aaf-authz'
+    branch: 'master'
+    mvn-settings: 'aaf-authz-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

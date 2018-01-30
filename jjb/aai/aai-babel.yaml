@@ -3,6 +3,7 @@
     name: aai-babel
     project-name: 'aai-babel'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

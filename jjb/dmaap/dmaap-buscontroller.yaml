@@ -3,6 +3,7 @@
     name: dmaap-buscontroller
     project-name: 'dmaap-buscontroller'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
