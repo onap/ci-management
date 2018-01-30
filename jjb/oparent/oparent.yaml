@@ -7,6 +7,7 @@
           pom: 'oparent-odlparent/pom.xml'
           pattern: 'oparent-odlparent/**'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version3-java-daily'

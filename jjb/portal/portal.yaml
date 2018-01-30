@@ -3,6 +3,7 @@
     name: portal
     project-name: 'portal'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-release-java-daily'

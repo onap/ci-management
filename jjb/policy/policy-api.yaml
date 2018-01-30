@@ -3,6 +3,7 @@
     name: policy-api
     project-name: 'policy-api'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
