@@ -4,6 +4,7 @@
     name: appc-deployment
     project-name: 'appc-deployment'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

@@ -27,6 +27,7 @@
           pattern: 'windriver/**'
           pom: 'windriver/pom.xml'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'

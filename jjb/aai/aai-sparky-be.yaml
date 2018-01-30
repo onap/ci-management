@@ -3,6 +3,7 @@
     name: aai-sparky-be-master
     project-name: 'aai-sparky-be'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

@@ -14,6 +14,7 @@
     mvn-settings: 'vvp-jenkins-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-python'
