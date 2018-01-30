@@ -23,3 +23,14 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+- project:
+    name: sdc-jtosca-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'sdc/jtosca'
+    project-name: 'sdc-jtosca'
+    branch: 'master'
+    mvn-settings: 'sdc-jtosca-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

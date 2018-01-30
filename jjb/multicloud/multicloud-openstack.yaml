@@ -39,3 +39,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-memcached-4c-4g'
+- project:
+    name: multicloud-openstack-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack'
+    branch: 'master'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

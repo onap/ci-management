@@ -23,3 +23,14 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+- project:
+    name: sdc-sdc-tosca-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'sdc/sdc-tosca'
+    project-name: 'sdc-sdc-tosca'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-tosca-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

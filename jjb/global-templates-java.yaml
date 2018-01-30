@@ -366,7 +366,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -516,7 +516,7 @@
                 global-settings-type: cfp
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties: '{obj:mvn_properties}'
           settings: '{mvn-settings}'
@@ -756,7 +756,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -834,7 +834,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar -P {mvn-profile} -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -P {mvn-profile} -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -904,7 +904,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -989,7 +989,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -2121,7 +2121,6 @@
     # 2. change version in all POM files to the release version specified
     #    in version.properties. This is done using a script instread of
     #    the mvn version plugin that assumes some specific parent structure
-    # 3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
@@ -2179,8 +2178,7 @@
 
       - maven-target:
           maven-version: '{maven-version}'
-          goals: 'clean deploy sonar:sonar site:site site:stage-deploy
-            -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy site:site site:stage-deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -2201,7 +2199,6 @@
     # 2. change version in all POM files to the release version specified
     #     in version.properties. This is done using a script instread of
     #     the mvn version plugin that assumes some specific parent structure
-    # 3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
@@ -2264,8 +2261,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar site:site site:stage-deploy
-            -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy site:site site:stage-deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'
@@ -2287,7 +2283,6 @@
     #     in version.properties. This is done using a script instread of
     #     the mvn version plugin that assumes some specific parent structure
     #     This version does NOT change the version within the <parent> tag
-    #  3. runs maven clean deploy sonar
     #
     # The POM files are required to use the Maven staging plugin so the deploy
     # does not deploy directly to the release repo.
@@ -2350,8 +2345,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean deploy sonar:sonar site:site site:stage-deploy
-            -Dsonar.host.url=${{SONAR}} -B
+          goals: 'clean deploy site:site site:stage-deploy -B
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           properties:
             - '{maven-deploy-properties}'

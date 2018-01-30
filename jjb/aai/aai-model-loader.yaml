@@ -39,3 +39,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-model-loader-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/model-loader'
+    project-name: 'aai-model-loader'
+    branch: 'master'
+    mvn-settings: 'aai-model-loader-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

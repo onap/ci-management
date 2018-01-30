@@ -37,3 +37,14 @@
     mvn-settings: 'aai-data-router-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-data-router-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/data-router'
+    project-name: 'aai-data-router'
+    branch: 'master'
+    mvn-settings: 'aai-data-router-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

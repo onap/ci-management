@@ -22,3 +22,14 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: holmes-dsa-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'holmes/dsa'
+    project-name: 'holmes-dsa'
+    branch: 'master'
+    mvn-settings: 'holmes-dsa-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -22,3 +22,14 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-resmanagement-docker-image.sh'
+- project:
+    name: vfc-nfvo-resmanagement-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'vfc/nfvo/resmanagement'
+    project-name: 'vfc-nfvo-resmanagement'
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-resmanagement-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

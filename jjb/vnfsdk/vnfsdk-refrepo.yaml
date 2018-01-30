@@ -26,3 +26,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vnfsdk-refrepo-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'vnfsdk/refrepo'
+    project-name: 'vnfsdk-refrepo'
+    branch: 'master'
+    mvn-settings: 'vnfsdk-refrepo-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

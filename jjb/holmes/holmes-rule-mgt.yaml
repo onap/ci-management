@@ -22,3 +22,14 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: holmes-rule-management-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'holmes/rule-management'
+    project-name: 'holmes-rule-management'
+    branch: 'master'
+    mvn-settings: 'holmes-rule-management-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

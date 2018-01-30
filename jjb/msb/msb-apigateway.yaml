@@ -24,3 +24,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: msb-apigateway-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'msb/apigateway'
+    project-name: 'msb-apigateway'
+    branch: 'master'
+    mvn-settings: 'msb-apigateway-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

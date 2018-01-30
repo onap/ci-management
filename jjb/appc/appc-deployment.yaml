@@ -25,3 +25,14 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: appc-deployment-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'appc/deployment'
+    project-name: 'appc-deployment'
+    branch: 'master'
+    mvn-settings: 'appc-deployment-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

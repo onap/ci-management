@@ -29,3 +29,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: centos7-redis-4c-4g
+- project:
+    name: vfc-nfvo-catalog-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'vfc/nfvo/catalog'
+    project-name: 'vfc-nfvo-catalog'
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-catalog-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

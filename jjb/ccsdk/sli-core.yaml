@@ -24,3 +24,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: ccsdk-sli-core-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'ccsdk/sli/core'
+    project-name: 'ccsdk-sli-core'
+    branch: 'master'
+    mvn-settings: 'ccsdk-sli-core-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

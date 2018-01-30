@@ -18,3 +18,14 @@
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: vid-asdcclient-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'vid/asdcclient'
+    project-name: 'vid-asdcclient'
+    branch: 'master'
+    mvn-settings: 'vid-asdcclient-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
