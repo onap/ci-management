@@ -3,6 +3,7 @@
     name: ccsdk-parent
     project-name: 'ccsdk-parent'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

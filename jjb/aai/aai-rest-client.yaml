@@ -3,6 +3,7 @@
     name: aai-rest-client-master
     project-name: 'aai-rest-client'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

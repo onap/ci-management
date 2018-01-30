@@ -3,6 +3,7 @@
     name: dmaap-messagerouter-messageservice
     project-name: 'dmaap-messagerouter-messageservice'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

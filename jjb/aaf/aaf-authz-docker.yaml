@@ -4,6 +4,7 @@
     name: aaf-authz-docker
     project-name: 'aaf-authz-docker'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java-checkstyle'
