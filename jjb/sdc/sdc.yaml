@@ -4,6 +4,7 @@
     name: sdc
     project-name: 'sdc'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-sdc-merge-java':
           docker-pom: 'pom.xml'

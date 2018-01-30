@@ -3,6 +3,7 @@
     name: vnfsdk-compliance
     project-name: 'vnfsdk-compliance'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'

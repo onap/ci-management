@@ -3,6 +3,7 @@
     name: holmes-common
     project-name: 'holmes-common'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

@@ -21,3 +21,13 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-platform-plugins-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'ccsdk/platform/plugins'
+    project-name: 'ccsdk-platform-plugins'
+    branch: 'master'
+    mvn-settings: 'ccsdk-platform-plugins-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
