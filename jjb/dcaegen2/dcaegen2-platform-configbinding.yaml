@@ -22,3 +22,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+- project:
+    name: dcaegen2-platform-configbinding-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'dcaegen2/platform/configbinding'
+    project-name: 'dcaegen2-platform-configbinding'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-platform-configbinding-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

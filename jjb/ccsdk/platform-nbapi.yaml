@@ -23,3 +23,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-platform-nbapi-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'ccsdk/platform/nbapi'
+    project-name: 'ccsdk-platform-nbapi'
+    branch: 'master'
+    mvn-settings: 'ccsdk-platform-nbapi-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

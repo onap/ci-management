@@ -17,3 +17,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-aai-service-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/aai-service'
+    project-name: 'aai-aai-service'
+    branch: 'master'
+    mvn-settings: 'aai-aai-service-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

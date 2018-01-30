@@ -23,3 +23,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: ui-dmaapbc-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'ui/dmaapbc'
+    project-name: 'ui-dmaapbc'
+    branch: 'master'
+    mvn-settings: 'ui-dmaapbc-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

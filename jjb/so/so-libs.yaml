@@ -26,3 +26,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: so-libs-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'so/libs'
+    project-name: 'so-libs'
+    branch: 'master'
+    mvn-settings: 'so-libs-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

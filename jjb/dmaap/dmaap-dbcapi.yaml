@@ -21,3 +21,14 @@
     mvn-settings: 'dmaap-dbcapi-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: dmaap-dbcapi-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'dmaap/dbcapi'
+    project-name: 'dmaap-dbcapi'
+    branch: 'master'
+    mvn-settings: 'dmaap-dbcapi-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

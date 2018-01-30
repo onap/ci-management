@@ -22,3 +22,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: sdc-plugins-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'sdc/plugins'
+    project-name: 'sdc-plugins'
+    branch: 'master'
+    mvn-settings: 'sdc-plugins-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -19,3 +19,14 @@
     mvn-settings: 'aaf-inno-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aaf-inno-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aaf/inno'
+    project-name: 'aaf-inno'
+    branch: 'master'
+    mvn-settings: 'aaf-inno-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

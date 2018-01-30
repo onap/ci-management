@@ -23,3 +23,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: oparent-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'oparent'
+    project-name: 'oparent'
+    branch: 'master'
+    mvn-settings: 'oparent-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -31,3 +31,14 @@
     mvn-settings: 'aai-rest-client-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-rest-client-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/rest-client'
+    project-name: 'aai-rest-client'
+    branch: 'master'
+    mvn-settings: 'aai-rest-client-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

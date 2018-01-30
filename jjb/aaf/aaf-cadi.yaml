@@ -19,3 +19,14 @@
     mvn-settings: 'aaf-cadi-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aaf-cadi-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aaf/cadi'
+    project-name: 'aaf-cadi'
+    branch: 'master'
+    mvn-settings: 'aaf-cadi-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

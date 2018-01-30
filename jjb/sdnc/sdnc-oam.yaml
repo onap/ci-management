@@ -23,3 +23,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: sdc-oam-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'sdc/oam'
+    project-name: 'sdc-oam'
+    branch: 'master'
+    mvn-settings: 'sdc-oam-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

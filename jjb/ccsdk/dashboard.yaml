@@ -20,3 +20,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-dashboard-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'ccsdk/dashboard'
+    project-name: 'ccsdk-dashboard'
+    branch: 'master'
+    mvn-settings: 'ccsdk-dashboard-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

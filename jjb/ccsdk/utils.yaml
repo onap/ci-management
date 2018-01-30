@@ -23,3 +23,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-utils-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'ccsdk/utils'
+    project-name: 'ccsdk-utils'
+    branch: 'master'
+    mvn-settings: 'ccsdk-utils-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

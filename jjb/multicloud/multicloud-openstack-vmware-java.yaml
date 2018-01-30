@@ -25,3 +25,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: multicloud-openstack-vmware-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'multicloud/openstack/vmware'
+    project-name: 'multicloud-openstack-vmware'
+    branch: 'master'
+    mvn-settings: 'multicloud-openstack-vmware-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

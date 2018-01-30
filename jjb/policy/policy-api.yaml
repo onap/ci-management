@@ -20,3 +20,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: policy-api-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'policy/api'
+    project-name: 'policy-api'
+    branch: 'master'
+    mvn-settings: 'policy-api-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

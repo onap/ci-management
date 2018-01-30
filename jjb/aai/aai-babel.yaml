@@ -19,3 +19,14 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-babel-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/babel'
+    project-name: 'aai-babel'
+    branch: 'master'
+    mvn-settings: 'aai-babel-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

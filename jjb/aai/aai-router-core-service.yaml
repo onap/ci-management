@@ -31,3 +31,14 @@
     mvn-settings: 'aai-router-core-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-router-core-sonar
+    jobs:
+      - gerrit-maven-sonar
+    java-version: ''
+    project: 'aai/router-core'
+    project-name: 'aai-router-core'
+    branch: 'master'
+    mvn-settings: 'aai-router-core-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
