@@ -4,6 +4,7 @@
     name: dmaap-messagerouter-docker
     project-name: 'dmaap-messagerouter-docker'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

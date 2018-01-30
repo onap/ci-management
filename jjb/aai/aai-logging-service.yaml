@@ -3,6 +3,7 @@
     name: aai-logging-service-master
     project-name: 'aai-logging-service'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

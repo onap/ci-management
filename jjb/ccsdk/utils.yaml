@@ -3,6 +3,7 @@
     name: ccsdk-utils
     project-name: 'ccsdk-utils'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

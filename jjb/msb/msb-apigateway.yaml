@@ -3,6 +3,7 @@
     name: msb-apigateway
     project-name: 'msb-apigateway'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

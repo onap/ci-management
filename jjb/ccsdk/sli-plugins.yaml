@@ -3,6 +3,7 @@
     name: ccsdk-sli-plugins
     project-name: 'ccsdk-sli-plugins'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
