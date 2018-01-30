@@ -3,6 +3,7 @@
     name: aai-aai-service
     project-name: 'aai-aai-service'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           build-timeout: 45

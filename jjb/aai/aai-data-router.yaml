@@ -3,6 +3,7 @@
     name: aai-data-router-master
     project-name: 'aai-data-router'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
@@ -22,6 +23,7 @@
     name: aai-data-router-releases
     project-name: 'aai-data-router'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
