@@ -15,6 +15,7 @@
           pom: 'zte/vmanager/pom.xml'
           pattern: 'zte/vmanager/**'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'
