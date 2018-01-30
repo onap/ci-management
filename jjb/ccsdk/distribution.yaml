@@ -3,6 +3,7 @@
     name: ccsdk-distribution
     project-name: 'ccsdk-distribution'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

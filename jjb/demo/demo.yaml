@@ -4,6 +4,7 @@
     name: demo
     project-name: 'demo'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

@@ -15,6 +15,7 @@
           path: '.'
           pattern: '**'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-python'
