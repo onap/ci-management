@@ -4,6 +4,7 @@
     name: sdc-sdc-tosca
     project-name: 'sdc-sdc-tosca'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
