@@ -3,6 +3,7 @@
     name: policy-drools-applications
     project-name: 'policy-drools-applications'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

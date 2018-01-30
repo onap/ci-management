@@ -22,6 +22,7 @@
           script:
             !include-raw-escape: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'

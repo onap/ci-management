@@ -4,6 +4,7 @@
     name: sdc-sdc-titan-cassandra
     project-name: 'sdc-sdc-titan-cassandra'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

@@ -11,6 +11,7 @@
           branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-lcm-settings'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
