@@ -3,6 +3,7 @@
     name: ccsdk-platform-nbapi
     project-name: 'ccsdk-platform-nbapi'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
