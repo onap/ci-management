@@ -33,3 +33,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: so-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'so'
+    project-name: 'so'
+    branch: 'master'
+    mvn-settings: 'so-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

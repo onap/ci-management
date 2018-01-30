@@ -17,3 +17,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vnfsdk-validation-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'vnfsdk/validation'
+    project-name: 'vnfsdk-validation'
+    branch: 'master'
+    mvn-settings: 'vnfsdk-validation-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -33,3 +33,13 @@
     mvn-settings: 'aai-logging-service-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-logging-service-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'aai/logging-service'
+    project-name: 'aai-logging-service'
+    branch: 'master'
+    mvn-settings: 'aai-logging-service-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -22,3 +22,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: msb-swagger-sdk-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'msb/swagger-sdk'
+    project-name: 'msb-swagger-sdk'
+    branch: 'master'
+    mvn-settings: 'msb-swagger-sdk-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

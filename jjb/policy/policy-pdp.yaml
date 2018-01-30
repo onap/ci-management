@@ -19,3 +19,13 @@
     mvn-settings: 'policy-pdp-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: policy-pdp-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'policy/pdp'
+    project-name: 'policy-pdp'
+    branch: 'master'
+    mvn-settings: 'policy-pdp-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

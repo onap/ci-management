@@ -24,3 +24,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: ccsdk-sli-adaptors-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'ccsdk/sli/adaptors'
+    project-name: 'ccsdk-sli-adaptors'
+    branch: 'master'
+    mvn-settings: 'ccsdk-sli-adaptors-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
