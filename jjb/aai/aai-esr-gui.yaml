@@ -22,3 +22,13 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-esr-gui-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'aai/esr-gui'
+    project-name: 'aai-esr-gui'
+    branch: 'master'
+    mvn-settings: 'aai-esr-gui-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

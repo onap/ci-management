@@ -23,3 +23,13 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-sli-plugins-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'ccsdk/sli/plugins'
+    project-name: 'ccsdk-sli-plugins'
+    branch: 'master'
+    mvn-settings: 'ccsdk-sli-plugins-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

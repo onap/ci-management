@@ -23,3 +23,13 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+- project:
+    name: ccsdk-storage-pgaas-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'ccsdk/storage/pgaas'
+    project-name: 'ccsdk-storage-pgaas'
+    branch: 'master'
+    mvn-settings: 'ccsdk-storage-pgaas-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -23,3 +23,13 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+- project:
+    name: sdc-sdc-titan-cassandra-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'sdc/sdc-titan-cassandra'
+    project-name: 'sdc-sdc-titan-cassandra'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-titan-cassandra-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

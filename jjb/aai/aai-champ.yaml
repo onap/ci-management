@@ -20,3 +20,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-champ-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'aai/champ'
+    project-name: 'aai-champ'
+    branch: 'master'
+    mvn-settings: 'aai-champ-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
