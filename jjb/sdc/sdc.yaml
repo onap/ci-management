@@ -25,3 +25,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-8c-8g
+- project:
+    name: sdc-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'sdc'
+    project-name: 'sdc'
+    branch: 'master'
+    mvn-settings: 'sdc-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

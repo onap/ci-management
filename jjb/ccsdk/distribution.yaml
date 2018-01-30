@@ -23,3 +23,13 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-docker-8c-8g
+- project:
+    name: ccsdk-distribution-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'ccsdk/distribution'
+    project-name: 'ccsdk-distribution'
+    branch: 'master'
+    mvn-settings: 'ccsdk-distribution-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

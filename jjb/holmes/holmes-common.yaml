@@ -19,3 +19,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: holmes-common-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'holmes/common'
+    project-name: 'holmes-common'
+    branch: 'master'
+    mvn-settings: 'holmes-common-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

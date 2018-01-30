@@ -21,3 +21,13 @@
     mvn-settings: 'dmaap-buscontroller-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: dmaap-buscontroller-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'dmaap/buscontroller'
+    project-name: 'dmaap-buscontroller'
+    branch: 'master'
+    mvn-settings: 'dmaap-buscontroller-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

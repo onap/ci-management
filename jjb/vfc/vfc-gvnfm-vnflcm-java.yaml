@@ -28,3 +28,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vfc-gvnfm-vnflcm-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'vfc/gvnfm/vnflcm'
+    project-name: 'vfc-gvnfm-vnflcm'
+    branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnflcm-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

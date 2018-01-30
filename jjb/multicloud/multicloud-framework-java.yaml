@@ -25,3 +25,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: multicloud-framework-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'multicloud/framework'
+    project-name: 'multicloud-framework'
+    branch: 'master'
+    mvn-settings: 'multicloud-framework-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
