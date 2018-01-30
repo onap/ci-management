@@ -20,3 +20,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: integration-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'integration'
+    project-name: 'integration'
+    branch: 'master'
+    mvn-settings: 'integration-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -21,3 +21,13 @@
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: demo-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'demo'
+    project-name: 'demo'
+    branch: 'master'
+    mvn-settings: 'demo-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

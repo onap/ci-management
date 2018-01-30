@@ -25,3 +25,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: sdc-northbound-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'sdc/northbound'
+    project-name: 'sdc-northbound'
+    branch: 'master'
+    mvn-settings: 'sdc-northbound-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

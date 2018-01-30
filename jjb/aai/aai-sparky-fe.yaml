@@ -18,3 +18,13 @@
     mvn-settings: 'aai-sparky-fe-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-sparky-fe-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'aai/sparky-fe'
+    project-name: 'aai-sparky-fe'
+    branch: 'master'
+    mvn-settings: 'aai-sparky-fe-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
