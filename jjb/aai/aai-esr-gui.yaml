@@ -3,6 +3,7 @@
     name: aai-esr-gui
     project-name: 'aai-esr-gui'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

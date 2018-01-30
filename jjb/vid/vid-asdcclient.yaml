@@ -3,6 +3,7 @@
     name: vid-asdcclient
     project-name: 'vid-asdcclient'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

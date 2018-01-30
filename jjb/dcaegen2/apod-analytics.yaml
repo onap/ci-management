@@ -20,6 +20,7 @@
     build-node: ubuntu1604-basebuild-4c-4g
 
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java-skip-tests':
           mvn-goals: 'clean install'

@@ -3,9 +3,12 @@
 - project:
     name: modeling-toscaparsers-javatoscachecker-csit
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'modeling-toscaparsers-javatoscachecker'
+    project: 'modeling/toscaparsers'
+    mvn-settings: 'modeling-toscaparsers-settings'
     stream: 'master'
     functionality:
       - 'APIs':

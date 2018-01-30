@@ -3,6 +3,7 @@
     name: aai-search-data-service-master
     project-name: 'aai-search-data-service'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
