@@ -28,3 +28,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vfc-gvnfm-vnfres-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'vfc/gvnfm/vnfres'
+    project-name: 'vfc-gvnfm-vnfres'
+    branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

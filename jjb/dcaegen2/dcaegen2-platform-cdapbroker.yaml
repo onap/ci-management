@@ -22,3 +22,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+- project:
+    name: dcaegen2-platform-cdapbroker-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'dcaegen2/platform/cdapbroker'
+    project-name: 'dcaegen2-platform-cdapbroker'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-platform-cdapbroker-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

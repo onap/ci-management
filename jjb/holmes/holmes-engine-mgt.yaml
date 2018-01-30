@@ -22,3 +22,13 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: holmes-engine-management-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'holmes/engine-management'
+    project-name: 'holmes-engine-management'
+    branch: 'master'
+    mvn-settings: 'holmes-engine-management-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

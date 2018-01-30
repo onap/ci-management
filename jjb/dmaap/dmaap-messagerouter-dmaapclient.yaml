@@ -21,3 +21,13 @@
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: dmaap-messagerouter-dmaapclient-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'dmaap/messagerouter/dmaapclient'
+    project-name: 'dmaap-messagerouter-dmaapclient'
+    branch: 'master'
+    mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

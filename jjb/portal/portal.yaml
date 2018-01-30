@@ -20,3 +20,13 @@
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
     maven-deploy-properties: -Dbuild.number=$BUILD_NUMBER
+- project:
+    name: portal-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'portal'
+    project-name: 'portal'
+    branch: 'master'
+    mvn-settings: 'portal-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

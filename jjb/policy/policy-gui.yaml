@@ -19,3 +19,13 @@
     mvn-settings: 'policy-gui-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: policy-gui-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'policy/gui'
+    project-name: 'policy-gui'
+    branch: 'master'
+    mvn-settings: 'policy-gui-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
