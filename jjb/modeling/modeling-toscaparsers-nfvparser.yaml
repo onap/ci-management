@@ -18,6 +18,7 @@
           pom: 'nfvparser/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           mvn-params: '-f nfvparser/pom.xml'
