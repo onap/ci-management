@@ -3,6 +3,7 @@
     name: policy-drools-pdp
     project-name: 'policy-drools-pdp'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           mvn-params: '-DskipTests'

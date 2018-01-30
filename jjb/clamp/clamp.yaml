@@ -37,3 +37,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
+- project:
+    name: clamp-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'clamp'
+    project-name: 'clamp'
+    branch: 'master'
+    mvn-settings: 'clamp-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -3,6 +3,7 @@
     name: policy-engine
     project-name: 'policy-engine'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           build-timeout: 30

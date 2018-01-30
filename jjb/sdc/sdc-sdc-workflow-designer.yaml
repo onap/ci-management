@@ -3,6 +3,7 @@
     name: sdc-sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
