@@ -3,6 +3,7 @@
     name: appc-master
     project-name: 'appc'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
           mvn-params: '-DskipTests'

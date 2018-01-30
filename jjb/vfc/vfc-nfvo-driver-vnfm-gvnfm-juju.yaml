@@ -15,6 +15,7 @@
           pom: 'juju/juju-vnfmadapter/pom.xml'
           pattern: 'juju/juju-vnfmadapter/**'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'

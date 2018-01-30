@@ -3,6 +3,7 @@
     name: so-libs
     project-name: 'so-libs'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

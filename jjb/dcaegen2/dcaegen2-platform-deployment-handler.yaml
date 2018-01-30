@@ -3,6 +3,7 @@
     name: dcaegen2-platform-deployment-handler
     project-name: 'dcaegen2-platform-deployment-handler'
     jobs:
+      - gerrit-maven-sonar
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily-no-sonar'

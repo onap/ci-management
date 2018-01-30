@@ -3,6 +3,7 @@
     name: aai-model-loader-master
     project-name: 'aai-model-loader'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
@@ -23,6 +24,7 @@
     name: aai-model-loader-releases
     project-name: 'aai-model-loader'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'

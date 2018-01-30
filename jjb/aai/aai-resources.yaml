@@ -3,6 +3,7 @@
     name: aai-resources
     project-name: 'aai-resources'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
@@ -27,6 +28,7 @@
     name: aai-resources-amsterdam
     project-name: 'aai-resources'
     jobs:
+      - gerrit-maven-sonar
       - gerrit-maven-clm:
           java-version: ''
       - '{project-name}-{stream}-verify-java'
