@@ -22,3 +22,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+- project:
+    name: dcaegen2-analytics-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'dcaegen2/analytics'
+    project-name: 'dcaegen2-analytics'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

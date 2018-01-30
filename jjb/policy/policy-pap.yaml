@@ -19,3 +19,13 @@
     mvn-settings: 'policy-pap-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: policy-pap-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'policy/pap'
+    project-name: 'policy-pap'
+    branch: 'master'
+    mvn-settings: 'policy-pap-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

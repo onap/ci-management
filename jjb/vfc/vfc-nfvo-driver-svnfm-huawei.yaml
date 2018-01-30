@@ -20,3 +20,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vfc-nfvo-driver-svnfm-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'vfc/nfvo/driver/svnfm'
+    project-name: 'vfc-nfvo-driver-svnfm'
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-svnfm-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

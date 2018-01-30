@@ -23,3 +23,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: msb-discovery-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'msb/discovery'
+    project-name: 'msb-discovery'
+    branch: 'master'
+    mvn-settings: 'msb-discovery-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

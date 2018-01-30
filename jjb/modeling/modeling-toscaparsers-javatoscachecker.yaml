@@ -25,3 +25,13 @@
           skip.docker.build=false
           skip.docker.tag=false
           skip.docker.push=false
+- project:
+    name: modeling-toscaparsers-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'modeling/toscaparsers'
+    project-name: 'modeling-toscaparsers'
+    branch: 'master'
+    mvn-settings: 'modeling-toscaparsers-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

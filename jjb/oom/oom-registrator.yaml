@@ -21,3 +21,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: oom-registrator-sonar
+    jobs:
+      - gerrit-maven-sonar
+    project: 'oom/registrator'
+    project-name: 'oom-registrator'
+    branch: 'master'
+    mvn-settings: 'oom-registrator-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
