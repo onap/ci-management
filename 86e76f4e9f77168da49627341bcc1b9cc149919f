@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_f6b55dee",
+        "filename": "jjb/lab/lab.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-01-31T18:55:40Z",
+      "side": 1,
+      "message": "What is this auto-token? I don\u0027t think I noticed the name previously. Is this data that should be private in some way???\n\nIf so, then we need to come up with a different way of getting this particular data into the job!",
+      "revId": "86e76f4e9f77168da49627341bcc1b9cc149919f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_16b9e9e8",
+        "filename": "jjb/lab/lab.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-01-31T18:55:40Z",
+      "side": 1,
+      "message": "What is this auto-token? I don\u0027t think I noticed the name previously. Is this data that should be private in some way???\n\nIf so, then we need to come up with a different way of getting this particular data into the job!",
+      "revId": "86e76f4e9f77168da49627341bcc1b9cc149919f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_b6cfd57e",
+        "filename": "jjb/lab/lab.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-01-31T18:55:40Z",
+      "side": 1,
+      "message": "What is this auto-token? I don\u0027t think I noticed the name previously. Is this data that should be private in some way???\n\nIf so, then we need to come up with a different way of getting this particular data into the job!",
+      "revId": "86e76f4e9f77168da49627341bcc1b9cc149919f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
