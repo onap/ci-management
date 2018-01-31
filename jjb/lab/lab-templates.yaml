@@ -1,10 +1,10 @@
 ---
 - job-template:
-    name: 'lab-{lab-name}-{env-name}-{job-name}'
+    name: 'lab-{job-name}'
+    description: '{job-desc}'
     disabled: false
     project-type: freestyle
     build-node: ubuntu1604-basebuild-2c-1g
-    auth-token: lab
 
     properties:
       - lf-infra-properties:
@@ -31,6 +31,6 @@
 
     publishers:
       - integration-robot:
-          unstable-if: 0.0
+          unstable-if: 75.0
           pass-if: 100.0
       - lf-infra-publish

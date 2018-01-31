@@ -2,12 +2,11 @@
 - project:
     name: lab
     jobs:
-      - 'lab-{lab-name}-{env-name}-{job-name}'
-    lab-name:
-      - "windriver"
-    env-name:
-      - "beijing-heat"
-      - "beijing-oom"
+      - 'lab-{job-name}'
     job-name:
-      - "deploy"
-      - "healthcheck"
+      - "windriver-beijing-heat-deploy":
+          job-desc: "Heat-based deployment into Wind River lab Integration-Stable tenant"
+      - "windriver-beijing-oom-deploy":
+          job-desc: "OOM-based deployment into Wind River lab Integration-Jenkins tenant"
+      - "aws-beijing-oom-deploy":
+          job-desc: "OOM-based deployment into AWS"
