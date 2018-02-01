@@ -16,6 +16,24 @@
       "revId": "b0e72cde3f152280c58f83fb81e53384ae70c2ec",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_e70da591",
+        "filename": "jjb/aaf/aaf-authz.yaml",
+        "patchSetId": 30
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-01T17:56:01Z",
+      "side": 1,
+      "message": "Discussed this with Thanh, is best to keep the purpose separated from the main project definition. Also, keeping it in the same project I constantly got serialized stream errors.",
+      "parentUuid": "5a93c517_c7c66949",
+      "revId": "b0e72cde3f152280c58f83fb81e53384ae70c2ec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
