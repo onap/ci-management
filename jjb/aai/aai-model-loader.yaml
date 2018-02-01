@@ -27,7 +27,7 @@
           java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'docker:build'

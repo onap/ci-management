@@ -30,7 +30,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'

@@ -28,10 +28,10 @@
           java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily-no-sonar'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
 
     project: 'aai/aai-common'
     stream:

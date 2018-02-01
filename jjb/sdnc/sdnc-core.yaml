@@ -14,7 +14,7 @@
       - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-verify-java-skip-tests'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'sdnc/core'
     stream:

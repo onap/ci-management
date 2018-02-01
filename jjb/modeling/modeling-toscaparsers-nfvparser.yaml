@@ -23,4 +23,4 @@
           mvn-params: '-f nfvparser/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily-no-sonar'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
