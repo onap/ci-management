@@ -1,0 +1,17 @@
+---
+- project:
+    name: aai-event-client-master
+    project-name: 'aai-event-client'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    project: 'aai/event-client'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-event-client-settings'
+    files: '**'
+    archive-artifacts: ''
