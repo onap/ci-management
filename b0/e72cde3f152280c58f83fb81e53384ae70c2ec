@@ -1,0 +1,11 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Michael O'Brien <frank.obrien@amdocs.com>
+Code-Review+1: Chris Donley <christopher.donley@huawei.com>
+Code-Review+1: James Forsyth <jf2512@att.com>
+Code-Review+1: Gary Wu <gary.i.wu@huawei.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Thu, 01 Feb 2018 18:30:28 +0000
+Reviewed-on: https://gerrit.onap.org/r/29561
+Project: ci-management
+Branch: refs/heads/master
