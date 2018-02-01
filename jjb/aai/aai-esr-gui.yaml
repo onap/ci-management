@@ -26,6 +26,7 @@
     name: aai-esr-gui-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'

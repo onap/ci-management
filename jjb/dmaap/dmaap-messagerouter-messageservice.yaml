@@ -25,6 +25,7 @@
     name: dmaap-messagerouter-messageservice-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'dmaap/messagerouter/messageservice'
     project-name: 'dmaap-messagerouter-messageservice'

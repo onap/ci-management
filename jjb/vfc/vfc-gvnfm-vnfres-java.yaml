@@ -32,6 +32,7 @@
     name: vfc-gvnfm-vnfres-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/gvnfm/vnfres'
     project-name: 'vfc-gvnfm-vnfres'

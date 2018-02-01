@@ -32,6 +32,7 @@
     name: vfc-nfvo-driver-vnfm-gvnfm-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/nfvo/driver/vnfm/gvnfm'
     project-name: 'vfc-nfvo-driver-vnfm-gvnfm'

@@ -27,6 +27,7 @@
     name: sdc-jtosca-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'sdc/jtosca'
     project-name: 'sdc-jtosca'

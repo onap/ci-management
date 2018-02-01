@@ -46,6 +46,7 @@
     name: policy-drools-pdp-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'policy/drools-pdp'
     project-name: 'policy-drools-pdp'

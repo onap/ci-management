@@ -26,6 +26,7 @@
     name: holmes-engine-management-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'holmes/engine-management'
     project-name: 'holmes-engine-management'

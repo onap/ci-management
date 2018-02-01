@@ -34,6 +34,7 @@
     name: sdc-core-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'sdc/core'
     project-name: 'sdc-core'

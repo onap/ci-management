@@ -27,6 +27,7 @@
     name: sdc-sdc-distribution-client-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'sdc/sdc-distribution-client'
     project-name: 'sdc-sdc-distribution-client'

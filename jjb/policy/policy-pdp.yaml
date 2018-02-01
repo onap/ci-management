@@ -23,6 +23,7 @@
     name: policy-pdp-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'policy/pdp'
     project-name: 'policy-pdp'

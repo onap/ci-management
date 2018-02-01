@@ -33,6 +33,7 @@
     name: vnfsdk-compliance-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vnfsdk/compliance'
     project-name: 'vnfsdk-compliance'

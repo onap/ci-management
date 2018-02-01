@@ -28,6 +28,7 @@
     name: ccsdk-sli-adaptors-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'ccsdk/sli/adaptors'
     project-name: 'ccsdk-sli-adaptors'

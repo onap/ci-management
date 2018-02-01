@@ -32,6 +32,7 @@
     name: vfc-nfvo-driver-ems-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/nfvo/driver/ems'
     project-name: 'vfc-nfvo-driver-ems'

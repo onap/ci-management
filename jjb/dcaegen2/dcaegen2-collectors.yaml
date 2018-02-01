@@ -26,6 +26,7 @@
     name: dcaegen2-collectors-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'dcaegen2/collectors'
     project-name: 'dcaegen2-collectors'

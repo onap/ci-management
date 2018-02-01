@@ -27,6 +27,7 @@
     name: sdc-oam-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'sdc/oam'
     project-name: 'sdc-oam'

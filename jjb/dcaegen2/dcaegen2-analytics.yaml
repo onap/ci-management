@@ -26,6 +26,7 @@
     name: dcaegen2-analytics-sonar
     jobs:
       - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'dcaegen2/analytics'
     project-name: 'dcaegen2-analytics'
