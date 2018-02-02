@@ -2,8 +2,8 @@
 ---
 - project:
     name: has-project
-    project-name: has 
-    project: has 
+    project-name: has
+    project: optf/has
     mvn-settings: has-settings
     python-version: python3
     build-timeout: 30
