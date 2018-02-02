@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_0d7b0ff6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-02-02T21:14:36Z",
+      "side": 1,
+      "message": "No space between Issue: and Change-Id below. The last block of a commit message is reserved for metadata and Issue: is a metadata field so ideally should be connected to the metadata block.",
+      "revId": "7dc82c455cba7e9425f94505aacd8a81a7a5b711",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_2d7e0be5",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-02-02T21:14:36Z",
+      "side": 1,
+      "message": "trailing whitespacie should be removed.",
+      "revId": "7dc82c455cba7e9425f94505aacd8a81a7a5b711",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
