@@ -31,14 +31,14 @@
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-2g
 - project:
-    name: sdc-core-sonar
+    name: sdnc-core-sonar
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
-    project: 'sdc/core'
-    project-name: 'sdc-core'
+    project: 'sdnc/core'
+    project-name: 'sdnc-core'
     branch: 'master'
-    mvn-settings: 'sdc-core-settings'
+    mvn-settings: 'sdnc-core-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

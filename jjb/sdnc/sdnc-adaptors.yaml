@@ -23,14 +23,14 @@
     files: '**'
     archive-artifacts: ''
 - project:
-    name: sdc-adaptors-sonar
+    name: sdnc-adaptors-sonar
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
-    project: 'sdc/adaptors'
-    project-name: 'sdc-adaptors'
+    project: 'sdnc/adaptors'
+    project-name: 'sdnc-adaptors'
     branch: 'master'
-    mvn-settings: 'sdc-adaptors-settings'
+    mvn-settings: 'sdnc-adaptors-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
