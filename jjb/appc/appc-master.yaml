@@ -25,7 +25,7 @@
     name: appc-sonar
     jobs:
       - gerrit-maven-sonar
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-basebuild-8c-8g
     java-version: ''
     project: 'appc'
     project-name: 'appc'
