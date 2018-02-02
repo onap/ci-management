@@ -27,6 +27,6 @@
     project: 'vid/asdcclient'
     project-name: 'vid-asdcclient'
     branch: 'master'
-    mvn-settings: 'vid-asdcclient-settings'
+    mvn-settings: 'vid-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
