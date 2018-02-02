@@ -1,0 +1,16 @@
+---
+- project:
+    name: optf-has
+    project-name: 'optf-has'
+    project: 'optf/has'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'optf-has-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    subproject:
+      - 'conductor':
+          path: 'conductor'
+          pattern: 'has/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
