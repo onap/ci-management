@@ -26,9 +26,9 @@
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
-    project: 'vfc/nfvo/driver/svnfm'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-svnfm'
     branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-svnfm-settings'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
