@@ -34,6 +34,7 @@
     project: 'modeling/toscaparsers'
     project-name: 'modeling-toscaparsers'
     branch: 'master'
+    mvn-params: '-f javatoscachecker/pom.xml'
     mvn-settings: 'modeling-toscaparsers-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

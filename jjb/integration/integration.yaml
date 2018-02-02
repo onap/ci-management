@@ -29,6 +29,7 @@
     project: 'integration'
     project-name: 'integration'
     branch: 'master'
+    mvn-params: '-f version-manifest/pom.xml'
     mvn-settings: 'integration-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
