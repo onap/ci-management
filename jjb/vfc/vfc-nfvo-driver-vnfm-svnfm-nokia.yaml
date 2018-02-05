@@ -22,3 +22,16 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-nokia-sonar
+    jobs:
+      - gerrit-maven-sonar
+    mvn-params: '-f nokia/vnfmdriver/pom.xml'
+    build-node: ubuntu1604-basebuild-4c-4g
+    java-version: ''
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm'
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
