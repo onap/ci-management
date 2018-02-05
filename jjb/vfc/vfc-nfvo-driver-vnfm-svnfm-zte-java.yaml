@@ -24,13 +24,14 @@
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
 - project:
-    name: vfc-nfvo-driver-vnfm-svnfm-sonar
+    name: vfc-nfvo-driver-vnfm-svnfm-zte-sonar
     jobs:
       - gerrit-maven-sonar
+    mvn-params: '-f zte/vmanager/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
-    project-name: 'vfc-nfvo-driver-vnfm-svnfm'
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm-zte'
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-goals: 'clean install'
