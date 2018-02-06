@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a93c517_bc36cb50",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1361
+      },
+      "writtenOn": "2018-02-06T08:41:35Z",
+      "side": 1,
+      "message": "I feel that it is better to name the folder as optf which will have both \"has\" and \"osdf\" related files.",
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_a15a244e",
         "filename": "jjb/has/optf-has.yaml",
         "patchSetId": 1
@@ -64,6 +81,29 @@
         "startChar": 18,
         "endLine": 7,
         "endChar": 30
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_1c301f55",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1361
+      },
+      "writtenOn": "2018-02-06T08:41:35Z",
+      "side": 1,
+      "message": "Is this job intended as gerrit triggered verify job?\nShould we use \u0027{project-name}-{stream}-{subproject}-verify-python\u0027?",
+      "range": {
+        "startLine": 11,
+        "startChar": 8,
+        "endLine": 11,
+        "endChar": 36
       },
       "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
