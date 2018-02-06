@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a93c517_464a51ad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1361
+      },
+      "writtenOn": "2018-02-06T21:23:10Z",
+      "side": 1,
+      "message": "Could this be changed to a description that reflects the jenkins build jobs for optf/has?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_e6c83d24",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1361
+      },
+      "writtenOn": "2018-02-06T21:23:10Z",
+      "side": 1,
+      "message": "trailing?",
+      "range": {
+        "startLine": 9,
+        "startChar": 12,
+        "endLine": 9,
+        "endChar": 21
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_bc36cb50",
         "filename": "jjb/has/optf-has.yaml",
         "patchSetId": 1
