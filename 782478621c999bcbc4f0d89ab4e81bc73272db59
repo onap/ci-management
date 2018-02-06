@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_09045a13",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T23:19:06Z",
+      "side": 1,
+      "message": "Let\u0027s put a more appropriate commit text since the commit history never had this file in first place. \n\nSomething more appropriate will be:\n\nAdd optf-has JJB yaml file\n\n\nAdd python jobs for optf-has project",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 27
+      },
+      "revId": "782478621c999bcbc4f0d89ab4e81bc73272db59",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
