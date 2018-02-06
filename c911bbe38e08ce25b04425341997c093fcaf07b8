@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_a15a244e",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T05:01:08Z",
+      "side": 1,
+      "message": "Let\u0027s set this as optf-has",
+      "range": {
+        "startLine": 4,
+        "startChar": 10,
+        "endLine": 4,
+        "endChar": 21
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_815fe840",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T05:01:08Z",
+      "side": 1,
+      "message": "Let\u0027s set this as optf-has",
+      "range": {
+        "startLine": 5,
+        "startChar": 18,
+        "endLine": 5,
+        "endChar": 21
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_c145f070",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T05:01:08Z",
+      "side": 1,
+      "message": "This should be optf-has-settings",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
