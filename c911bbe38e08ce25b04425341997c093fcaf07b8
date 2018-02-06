@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_266dc598",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T19:26:26Z",
+      "side": 1,
+      "message": "Agree with you. \nthat way, we will have:\njjb/optf/optf-has.yaml\njjb/optf/optf-osdf.yaml",
+      "parentUuid": "5a93c517_bc36cb50",
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_a15a244e",
         "filename": "jjb/has/optf-has.yaml",
         "patchSetId": 1
@@ -99,6 +117,30 @@
       "writtenOn": "2018-02-06T08:41:35Z",
       "side": 1,
       "message": "Is this job intended as gerrit triggered verify job?\nShould we use \u0027{project-name}-{stream}-{subproject}-verify-python\u0027?",
+      "range": {
+        "startLine": 11,
+        "startChar": 8,
+        "endLine": 11,
+        "endChar": 36
+      },
+      "revId": "c911bbe38e08ce25b04425341997c093fcaf07b8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_c613c10b",
+        "filename": "jjb/has/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-06T19:26:26Z",
+      "side": 1,
+      "message": "\u0027{project-name}-python-jobs\u0027 will make a call to the group from global-jjb (global-jjb/jjb/lf-python-jobs.yaml) which includes the following job: gerrit-tox-verify\n\nBetter keep that job which is equivalent to \u0027{project-name}-{stream}-{subproject}-verify-python\u0027 and is in constant maintenance by LF.",
+      "parentUuid": "5a93c517_1c301f55",
       "range": {
         "startLine": 11,
         "startChar": 8,
