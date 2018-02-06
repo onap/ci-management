@@ -1,0 +1,14 @@
+---
+- project:
+    name: music-sonar
+    jobs:
+      - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
+    java-version: ''
+    project: 'music'
+    project-name: 'music'
+    branch: 'master'
+    mvn-settings: 'music-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
