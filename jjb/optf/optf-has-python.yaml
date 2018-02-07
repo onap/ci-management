@@ -11,6 +11,6 @@
     subproject:
       - 'conductor':
           path: 'conductor'
-          pattern: 'has/**'
+          pattern: 'conductor/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
