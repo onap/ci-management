@@ -1,0 +1,16 @@
+---
+- project:
+    name: optf-osdf
+    project-name: 'optf-osdf'
+    project: 'optf/osdf'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'optf-osdf-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    subproject:
+      - 'osdf':
+          path: '.'
+          pattern: '**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
