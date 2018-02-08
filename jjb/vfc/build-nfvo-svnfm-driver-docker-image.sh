@@ -11,5 +11,6 @@ chmod 755 ./zte/vmanager/docker/*.*
 chmod 755 ./huawei/vnfmadapter/VnfmadapterService/docker/*.*
 ./huawei/vnfmadapter/VnfmadapterService/docker/build_image.sh
 
-chmod 755 ./nokia/vnfmdriver/vfcadaptorservice/docker/*.*
-./nokia/vnfmdriver/vfcadaptorservice/docker/build_image.sh
+cd nokia/deployment
+mvn package -Dexec.args="buildDocker pushImage"
+

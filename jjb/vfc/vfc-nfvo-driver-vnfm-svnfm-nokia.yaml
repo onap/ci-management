@@ -11,8 +11,8 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
       - 'drv-vnfm-nokia':
-          pom: 'nokia/vnfmdriver/pom.xml'
-          pattern: 'nokia/vnfmdriver/**'
+          pom: 'nokia/pom.xml'
+          pattern: 'nokia/**'
     jobs:
       - gerrit-maven-clm:
           java-version: ''
@@ -26,7 +26,7 @@
     name: vfc-nfvo-driver-vnfm-svnfm-nokia-sonar
     jobs:
       - gerrit-maven-sonar
-    mvn-params: '-f nokia/vnfmdriver/pom.xml'
+    mvn-params: '-f nokia/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
