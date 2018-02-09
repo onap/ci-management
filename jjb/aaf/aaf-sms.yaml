@@ -1,0 +1,16 @@
+---
+- project:
+    name: aaf-sms
+    project-name: 'aaf-sms'
+    path: 'sms-service/src/sms'
+    jobs:
+      - '{project-name}-{stream}-verify-golang'
+      - '{project-name}-{stream}-merge-golang'
+    project: 'aaf/sms'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-sms-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
