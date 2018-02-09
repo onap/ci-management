@@ -7,6 +7,7 @@
           java-version: ''
           mvn-params: '-DskipTests'
           build-timeout: 30
+          build-node: ubuntu1604-basebuild-8c-8g
       - '{project-name}-{stream}-verify-java':
           build-node: ubuntu1604-basebuild-8c-8g
       - '{project-name}-{stream}-merge-java':
