@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_c20f2087",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-10T00:18:04Z",
+      "side": 1,
+      "message": "Issue-ID should be part of the footer, please remove the empty lines between Issue-ID and Change-Id",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 47
+      },
+      "revId": "d1f700d6dcd7846bf48296d049867a0b340c79c4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_a20a1477",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-10T00:18:04Z",
+      "side": 1,
+      "message": "Please remove these trailing spaces",
+      "range": {
+        "startLine": 31,
+        "startChar": 33,
+        "endLine": 31,
+        "endChar": 43
+      },
+      "revId": "d1f700d6dcd7846bf48296d049867a0b340c79c4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
