@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_0268a81b",
+        "filename": "jjb/aaf/aaf-sms.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-10T00:39:14Z",
+      "side": 1,
+      "message": "Remove trailing space",
+      "range": {
+        "startLine": 3,
+        "startChar": 16,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "164fc451e19fad15bf0ebcafbce75692bf1ddafa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_a258d48a",
+        "filename": "jjb/aaf/aaf-sms.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-10T00:39:14Z",
+      "side": 1,
+      "message": "This file should be aaf-sms-settings",
+      "range": {
+        "startLine": 13,
+        "startChar": 4,
+        "endLine": 13,
+        "endChar": 35
+      },
+      "revId": "164fc451e19fad15bf0ebcafbce75692bf1ddafa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_c25de07a",
+        "filename": "jjb/global-templates-golang.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-10T00:39:14Z",
+      "side": 1,
+      "message": "Remove trailing spaces",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 6
+      },
+      "revId": "164fc451e19fad15bf0ebcafbce75692bf1ddafa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
