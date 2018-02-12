@@ -1,18 +1,16 @@
 ---
 - project:
-    name: vfc-nfvo-driver-vnfm-svnfm-nokia
+    name: vfc-nfvo-driver-vnfm-svnfm-nokiav2
     project-name: 'vfc-nfvo-driver-svnfm'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
-      - 'drv-vnfm-nokia':
-          pom: 'nokia/vnfmdriver/pom.xml'
-          pattern: 'nokia/vnfmdriver/**'
+      - 'drv-vnfm-nokiav2':
+          pom: 'nokia/pom.xml'
+          pattern: 'nokia/**'
     jobs:
       - gerrit-maven-clm:
           java-version: ''
@@ -23,14 +21,14 @@
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
 - project:
-    name: vfc-nfvo-driver-vnfm-svnfm-nokia-sonar
+    name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
     jobs:
       - gerrit-maven-sonar
-    mvn-params: '-f nokia/vnfmdriver/pom.xml'
+    mvn-params: '-f nokiav2/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
     java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
-    project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokia'
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokiav2'
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-goals: 'clean install'
