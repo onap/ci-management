@@ -21,27 +21,6 @@
     archive-artifacts: ''
     build-node: 'ubuntu1604-basebuild-4c-4g'
 - project:
-    name: policy-drools-applications-release-1.0.0
-    project-name: 'policy-drools-applications'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
-
-    project: 'policy/drools-applications'
-    stream:
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
-      - 'amsterdam':
-          branch: 'amsterdam'
-    mvn-settings: 'policy-drools-applications-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1604-basebuild-4c-4g'
-- project:
     name: policy-drools-applications-sonar
     jobs:
       - gerrit-maven-sonar
