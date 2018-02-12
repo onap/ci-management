@@ -13,4 +13,10 @@ chmod 755 ./huawei/vnfmadapter/VnfmadapterService/docker/*.*
 
 chmod 755 ./nokia/vnfmdriver/vfcadaptorservice/docker/*.*
 ./nokia/vnfmdriver/vfcadaptorservice/docker/build_image.sh
+<<<<<<< HEAD
+=======
+
+cd nokiav2/deployment
+mvn package -Dexec.args="buildDocker pushImage"
+>>>>>>> bddbb63... Add Nokia v2 driver into separate directory
 

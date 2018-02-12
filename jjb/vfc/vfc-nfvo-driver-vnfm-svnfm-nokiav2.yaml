@@ -1,0 +1,35 @@
+---
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-nokiav2
+    project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    subproject:
+      - 'drv-vnfm-nokiav2':
+          pom: 'nokia/pom.xml'
+          pattern: 'nokia/**'
+    jobs:
+      - gerrit-maven-clm:
+          java-version: ''
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
+    jobs:
+      - gerrit-maven-sonar
+    mvn-params: '-f nokiav2/pom.xml'
+    build-node: ubuntu1604-basebuild-4c-4g
+    java-version: ''
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokiav2'
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
