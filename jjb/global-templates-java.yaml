@@ -327,6 +327,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -398,6 +399,7 @@
     name: '{project-name}-{stream}-release-java-daily-checkstyle'
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -473,6 +475,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -551,6 +554,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -632,6 +636,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -704,6 +709,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -1108,7 +1114,7 @@
     name: '{project-name}-{stream}-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1177,6 +1183,7 @@
     name: '{project-name}-{stream}-docker-java-properties-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1249,7 +1256,7 @@
     name: '{project-name}-{stream}-docker-java-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1318,7 +1325,7 @@
     name: '{project-name}-{stream}-docker-java-version-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1402,7 +1409,7 @@
     name: '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1487,7 +1494,7 @@
     name: '{project-name}-{stream}-docker-version-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1568,7 +1575,7 @@
     name: '{project-name}-{stream}-{subproject}-docker-version-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1650,7 +1657,7 @@
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
     docker-image-name: ''
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -1738,6 +1745,7 @@
     name: '{project-name}-{stream}-{subproject}-aai-docker-java-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
+    disabled: false
     docker-image-name: ''
 
     properties:
@@ -1829,6 +1837,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -1910,6 +1919,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -1994,6 +2004,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    disabled: false
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -2211,7 +2222,7 @@
     name: '{project-name}-{stream}-aai-docker-java-version-daily'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
-
+    disabled: false
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
