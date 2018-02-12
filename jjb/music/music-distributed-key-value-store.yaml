@@ -1,0 +1,16 @@
+---
+- project:
+    name: music-distributed-key-value-store
+    project-name: 'music-distributed-key-value-store'
+    path: 'src/dkv'
+    jobs:
+      - '{project-name}-{stream}-verify-golang'
+      - '{project-name}-{stream}-merge-golang'
+    project: 'music/distributed-kv-store'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'music-distributed-key-value-store-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
