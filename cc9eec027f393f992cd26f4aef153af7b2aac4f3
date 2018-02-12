@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_80602b02",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-12T23:28:31Z",
+      "side": 1,
+      "message": "This project name needs to be changed too \nadding the \"v2\" suffix otherwise it will conflict with the one in vfc-nfvo-driver-vnfm-svnfm-nokia.yaml",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 41
+      },
+      "revId": "cc9eec027f393f992cd26f4aef153af7b2aac4f3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
