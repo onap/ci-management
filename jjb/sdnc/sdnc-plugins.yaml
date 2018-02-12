@@ -22,15 +22,3 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-- project:
-    name: sdnc-plugins-sonar
-    jobs:
-      - gerrit-maven-sonar
-    build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
-    project: 'sdnc/plugins'
-    project-name: 'sdnc-plugins'
-    branch: 'master'
-    mvn-settings: 'sdnc-plugins-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
