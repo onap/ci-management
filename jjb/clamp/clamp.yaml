@@ -5,7 +5,6 @@
     project-name: 'clamp'
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
       - '{project-name}-{stream}-verify-java-checkstyle'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:
@@ -42,7 +41,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-docker-8c-8g
-    java-version: ''
     project: 'clamp'
     project-name: 'clamp'
     branch: 'master'

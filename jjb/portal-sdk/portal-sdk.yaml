@@ -38,7 +38,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'portal/sdk'
     project-name: 'portal-sdk'
     branch: 'master'

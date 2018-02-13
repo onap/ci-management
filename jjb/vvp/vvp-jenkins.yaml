@@ -15,7 +15,6 @@
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-docker-java-daily'
     docker-pom: 'pom.xml'
@@ -25,7 +24,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'vvp/jenkins'
     project-name: 'vvp-jenkins'
     branch: 'master'

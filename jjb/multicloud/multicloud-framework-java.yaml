@@ -30,7 +30,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'multicloud/framework'
     project-name: 'multicloud-framework'
     branch: 'master'

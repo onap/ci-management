@@ -26,7 +26,6 @@
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
     mvn-params: '-f huawei/pom.xml'
-    java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-svnfm-huawei'
     branch: 'master'

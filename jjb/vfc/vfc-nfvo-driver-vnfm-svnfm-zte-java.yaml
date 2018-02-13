@@ -16,7 +16,6 @@
           pattern: 'zte/vmanager/**'
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -29,7 +28,6 @@
       - gerrit-maven-sonar
     mvn-params: '-f zte/vmanager/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-vnfm-svnfm-zte'
     branch: 'master'

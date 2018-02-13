@@ -25,7 +25,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'dcaegen2/platform/cli'
     project-name: 'dcaegen2-platform-cli'
     branch: 'master'

@@ -4,7 +4,6 @@
     project-name: 'appc'
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
           mvn-params: '-DskipTests'
           build-timeout: 30
           build-node: ubuntu1604-basebuild-8c-8g
@@ -27,7 +26,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-8c-8g
-    java-version: ''
     project: 'appc'
     project-name: 'appc'
     branch: 'master'
