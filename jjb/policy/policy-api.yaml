@@ -4,7 +4,6 @@
     project-name: 'policy-api'
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -25,7 +24,6 @@
     jobs:
       - gerrit-maven-sonar
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'policy/api'
     project-name: 'policy-api'
     branch: 'master'
