@@ -20,8 +20,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
