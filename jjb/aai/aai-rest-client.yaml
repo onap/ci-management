@@ -6,26 +6,12 @@
       - gerrit-maven-clm:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+         disabled: true
     project: 'aai/rest-client'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'aai-rest-client-settings'
-    files: '**'
-    archive-artifacts: ''
-- project:
-    name: aai-rest-client-releases
-    project-name: 'aai-rest-client'
-    jobs:
-      - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-    project: 'aai/rest-client'
-    stream:
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-rest-client-settings'
     files: '**'
     archive-artifacts: ''

@@ -6,32 +6,17 @@
       - gerrit-maven-clm:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+          disabled: true
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'docker:build'
+          disabled: true
+   
     project: 'aai/data-router'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'aai-data-router-settings'
-    files: '**'
-    archive-artifacts: ''
-- project:
-    name: aai-data-router-releases
-    project-name: 'aai-data-router'
-    jobs:
-      - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'pom.xml'
-          mvn-goals: 'docker:build'
-    project: 'aai/data-router'
-    stream:
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-data-router-settings'
     files: '**'
     archive-artifacts: ''
