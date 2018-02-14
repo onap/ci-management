@@ -6,32 +6,16 @@
       - gerrit-maven-clm:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+          disabled: true
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'docker:build'
+	  disabled: true
     project: 'aai/search-data-service'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'aai-search-data-service-settings'
-    files: '**'
-    archive-artifacts: ''
-- project:
-    name: aai-search-data-service-releases
-    project-name: 'aai-search-data-service'
-    jobs:
-      - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'pom.xml'
-          mvn-goals: 'docker:build'
-    project: 'aai/search-data-service'
-    stream:
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-search-data-service-settings'
     files: '**'
     archive-artifacts: ''
