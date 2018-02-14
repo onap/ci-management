@@ -1,0 +1,33 @@
+---
+- project:
+    name: dmaap-datarouter-prov
+    project-name: 'dmaap-datarouter-prov'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-stage-site-java':
+          site-pom: 'pom.xml'
+          trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          mvn-goals: 'clean install'
+    project: 'dmaap/datarouter/datarouter-prov'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
+    mvn-settings: 'dmaap-datarouter-prov-settings'
+    files: '**'
+    archive-artifacts: ''
+- project:
+    name: dmaap-datarouter-prov-sonar
+    jobs:
+      - gerrit-maven-sonar
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'dmaap/datarouter/datarouter-prov'
+    project-name: 'dmaap-datarouter-prov'
+    branch: 'master'
+    mvn-settings: 'dmaap-datarouter-prov-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
