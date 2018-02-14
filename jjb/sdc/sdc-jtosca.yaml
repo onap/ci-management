@@ -12,13 +12,10 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
-
     project: 'sdc/jtosca'
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'sdc-jtosca-settings'
     files: '**'
     archive-artifacts: ''

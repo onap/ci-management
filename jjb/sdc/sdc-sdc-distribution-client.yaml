@@ -12,13 +12,10 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
-
     project: 'sdc/sdc-distribution-client'
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
