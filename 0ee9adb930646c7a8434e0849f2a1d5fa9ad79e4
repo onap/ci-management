@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_c1d074f8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 69
+      },
+      "writtenOn": "2018-02-14T08:27:07Z",
+      "side": 1,
+      "message": "done!",
+      "parentUuid": "5a93c517_61740036",
+      "range": {
+        "startLine": 11,
+        "startChar": 53,
+        "endLine": 11,
+        "endChar": 60
+      },
+      "revId": "0ee9adb930646c7a8434e0849f2a1d5fa9ad79e4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_c17b9426",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_61d96021",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 69
+      },
+      "writtenOn": "2018-02-14T08:27:07Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "5a93c517_c17b9426",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "0ee9adb930646c7a8434e0849f2a1d5fa9ad79e4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_81710c46",
         "filename": "jjb/sdc/sdc-sdc-titan-cassandra.yaml",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2018-02-14T07:30:54Z",
       "side": 1,
       "message": "why are we adding this back?\n\nGlobal-jjb version 0.16.0 now should not need this variable to be blank",
+      "range": {
+        "startLine": 8,
+        "startChar": 10,
+        "endLine": 8,
+        "endChar": 26
+      },
+      "revId": "0ee9adb930646c7a8434e0849f2a1d5fa9ad79e4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_81d6ecef",
+        "filename": "jjb/sdc/sdc-sdc-titan-cassandra.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 69
+      },
+      "writtenOn": "2018-02-14T08:27:07Z",
+      "side": 1,
+      "message": "this is an new change that you did i updated the commit with your input",
+      "parentUuid": "5a93c517_81710c46",
       "range": {
         "startLine": 8,
         "startChar": 10,
