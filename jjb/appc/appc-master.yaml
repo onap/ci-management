@@ -31,4 +31,4 @@
     branch: 'master'
     mvn-settings: 'appc-settings'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx4096m'
