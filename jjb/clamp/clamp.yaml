@@ -30,8 +30,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'clamp-settings'
     files: '**'
     archive-artifacts: ''

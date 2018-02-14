@@ -18,8 +18,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'logging-analytics-settings'
     files: '**'
     archive-artifacts: ''
