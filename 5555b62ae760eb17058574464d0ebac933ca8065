@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_0f66832a",
+        "filename": "jjb/dmaap/dmaap-datarouter-node.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-14T23:23:31Z",
+      "side": 1,
+      "message": "This will fail though since the project in gerrit is dmaap/datarouter and not\nproject: \u0027dmaap/datarouter/datarouter-node\u0027 \n\nThe clone will try to clone dmaap/datarouter/datarouter-node which will fail",
+      "range": {
+        "startLine": 28,
+        "startChar": 14,
+        "endLine": 28,
+        "endChar": 46
+      },
+      "revId": "5555b62ae760eb17058574464d0ebac933ca8065",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
