@@ -24,6 +24,7 @@
     name: dcaegen2-collectors-snmptrap-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'dcaegen2/collectors/snmptrap'
     project-name: 'dcaegen2-collectors-snmptrap'

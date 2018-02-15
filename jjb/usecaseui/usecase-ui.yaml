@@ -24,6 +24,7 @@
     name: usecase-ui-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-8c-8g
     project: 'usecase-ui'
     project-name: 'usecase-ui'

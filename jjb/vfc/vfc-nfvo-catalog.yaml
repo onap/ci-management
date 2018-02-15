@@ -32,6 +32,7 @@
     name: vfc-nfvo-catalog-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'vfc/nfvo/catalog'
     project-name: 'vfc-nfvo-catalog'

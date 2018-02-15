@@ -22,6 +22,7 @@
     name: holmes-common-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'holmes/common'
     project-name: 'holmes-common'

@@ -49,6 +49,7 @@
     name: aai-resources-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'aai/resources'
     project-name: 'aai-resources'

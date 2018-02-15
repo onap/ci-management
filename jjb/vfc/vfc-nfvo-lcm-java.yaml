@@ -27,6 +27,7 @@
     name: vfc-nfvo-lcm-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'vfc/nfvo/lcm'
     project-name: 'vfc-nfvo-lcm'

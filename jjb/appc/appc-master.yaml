@@ -25,6 +25,7 @@
     name: appc-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-8c-8g
     project: 'appc'
     project-name: 'appc'

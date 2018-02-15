@@ -24,6 +24,7 @@
     name: sdnc-oam-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'sdnc/oam'
     project-name: 'sdnc-oam'
