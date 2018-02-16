@@ -1,0 +1,32 @@
+---
+- project:
+    name: aai-gizmo
+    project-name: 'aai-gizmo'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/gizmo'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-gizmo-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: aai-gizmo-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'aai/gizmo'
+    project-name: 'aai-gizmo'
+    branch: 'master'
+    mvn-settings: 'aai-gizmo-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
