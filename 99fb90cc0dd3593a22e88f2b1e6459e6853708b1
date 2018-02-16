@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_a753f337",
+        "filename": "jjb/aai/aai-gizmo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-16T18:07:43Z",
+      "side": 1,
+      "message": "Remove this \":\"",
+      "range": {
+        "startLine": 6,
+        "startChar": 24,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "99fb90cc0dd3593a22e88f2b1e6459e6853708b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
