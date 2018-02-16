@@ -6,35 +6,17 @@
       - gerrit-maven-clm:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+          disabled: true
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
+          disabled: true
 
     project: 'aai/aai-common'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'aai-aai-common-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
-- project:
-    name: aai-aai-common-releases
-    project-name: 'aai-aai-common'
-    jobs:
-      - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
-
-    project: 'aai/aai-common'
-    stream:
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'aai-aai-common-settings'
     files: '**'
     archive-artifacts: ''
