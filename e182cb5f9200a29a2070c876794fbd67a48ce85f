@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_648ac96b",
+        "filename": "jjb/aai/aai-data-router.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-16T01:53:11Z",
+      "side": 1,
+      "message": "Please correct this trailing spaces",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 3
+      },
+      "revId": "e182cb5f9200a29a2070c876794fbd67a48ce85f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
