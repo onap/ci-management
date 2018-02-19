@@ -8,8 +8,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     functionality:
       - 'healthcheck':
           trigger_jobs:
