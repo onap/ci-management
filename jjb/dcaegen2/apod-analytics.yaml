@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
 
     # apply to all jobs
     project: 'dcaegen2/analytics/tca'

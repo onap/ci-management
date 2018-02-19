@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     functionality:
       - 'testsuites':
           trigger_jobs:
