@@ -1,0 +1,14 @@
+---
+- project:
+    name: aai-graphadmin
+    project-name: 'aai-graphadmin'
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/graphadmin'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-graphadmin-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
