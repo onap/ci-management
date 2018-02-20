@@ -4,6 +4,7 @@
     project-name: 'music-distributed-kv-store'
     path: 'src/dkv'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
     project: 'music/distributed-kv-store'
