@@ -1,0 +1,15 @@
+---
+- project:
+    name: appc-cdt
+    project-name: 'appc-cdt'
+    jobs:
+      - gerrit-maven-clm:
+
+    project: 'appc/cdt'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'appc-cdt-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
