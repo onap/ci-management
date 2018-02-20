@@ -1,0 +1,13 @@
+---
+- project:
+    name: so-docker-config
+    project-name: 'so-docker-config'
+    jobs:
+      - gerrit-maven-clm
+    project: 'so/docker-config'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'so-docker-config-settings'
+    files: '**'
+    archive-artifacts: ''
