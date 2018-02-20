@@ -49,8 +49,8 @@
           settings-file: '{mvn-settings}'
       - shell: |
           #!/bin/bash
-          curl -O https://dl.google.com/go/go1.9.4.linux-amd64.tar.gz
-          tar -zxf go1.9.4.linux-amd64.tar.gz
+          curl -O https://dl.google.com/go/go1.10.linux-amd64.tar.gz
+          tar -zxf go1.10.linux-amd64.tar.gz
           export GOROOT=$WORKSPACE/go
           export PATH=$PATH:$GOROOT/bin
           cd $WORKSPACE/{path}
