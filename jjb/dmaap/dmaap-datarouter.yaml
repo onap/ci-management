@@ -1,0 +1,13 @@
+---
+- project:
+    name: dmaap-datarouter
+    project-name: 'dmaap-datarouter'
+    jobs:
+      - gerrit-maven-clm
+    project: 'dmaap/datarouter'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    files: '**'
+    archive-artifacts: ''
