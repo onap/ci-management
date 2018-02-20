@@ -1,0 +1,14 @@
+---
+- project:
+    name: dcaegen2-analytics-pnda
+    project-name: 'dcaegen2-analytics-pnda'
+    jobs:
+      - gerrit-maven-clm
+    project: 'dcaegen2/analytics/pnda'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-pnda-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
