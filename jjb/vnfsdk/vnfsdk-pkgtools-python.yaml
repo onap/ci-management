@@ -14,4 +14,5 @@
     mvn-settings: 'vnfsdk-pkgtools-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
