@@ -3,6 +3,7 @@
     name: policy-docker
     project-name: 'policy-docker-policy'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-scm-mvn-script':
           mvn-goals: 'clean install prepare-package'
           script:
