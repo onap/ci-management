@@ -2,11 +2,15 @@
 - project:
     name: vnfsdk-ves-agent
     project-name: 'vnfsdk-ves-agent'
+    subproject:
+      - 'veslibrary':
+          pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          pattern: 'veslibrary/**'
     jobs:
       - gerrit-maven-clm
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
 
     project: 'vnfsdk/ves-agent'
     stream:
