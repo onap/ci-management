@@ -1,0 +1,14 @@
+---
+- project:
+    name: dcaegen2-services-mapper
+    project-name: 'dcaegen2-services-mapper'
+    jobs:
+      - gerrit-maven-clm
+    project: 'dcaegen2/services/mapper'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-services-mapper-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
