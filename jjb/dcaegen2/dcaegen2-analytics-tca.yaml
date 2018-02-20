@@ -1,0 +1,14 @@
+---
+- project:
+    name: dcaegen2-analytics-tca
+    project-name: 'dcaegen2-analytics-tca'
+    jobs:
+      - gerrit-maven-clm
+    project: 'dcaegen2/analytics/tca'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-tca-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
