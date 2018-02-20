@@ -3,10 +3,10 @@
     name: portal-sdk
     project-name: 'portal-sdk'
     subproject:
-      - 'ecomp-sdk':
+      - 'onap-sdk':
           pom: 'ecomp-sdk/pom.xml'
           pattern: 'ecomp-sdk/**'
-    subproject-name: 'ecomp-sdk'
+    subproject-name: 'onap-sdk'
 
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
