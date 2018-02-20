@@ -1,0 +1,15 @@
+---
+- project:
+    name: sdnc-features
+    project-name: 'sdnc-features'
+    jobs:
+      - gerrit-maven-clm
+
+    project: 'sdnc/features'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdnc-features-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
