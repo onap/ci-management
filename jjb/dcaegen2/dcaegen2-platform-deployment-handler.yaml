@@ -20,15 +20,3 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
-- project:
-    name: dcaegen2-platform-deployment-handler-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
-    project: 'dcaegen2/platform/deployment-handler'
-    project-name: 'dcaegen2-platform-deployment-handler'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-platform-deployment-handler-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
