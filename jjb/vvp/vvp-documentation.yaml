@@ -1,0 +1,12 @@
+---
+- project:
+    name: vvp-documentation
+    project-name: 'vvp-documentation'
+    project: 'vvp/documentation'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vvp-documentation-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - gerrit-maven-clm
