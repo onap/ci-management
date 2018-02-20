@@ -1,0 +1,14 @@
+---
+- project:
+    name: aai-spike
+    project-name: 'aai-spike'
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/spike'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-spike-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
