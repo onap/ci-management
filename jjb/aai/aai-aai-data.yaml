@@ -1,14 +1,14 @@
 ---
 - project:
-    name: aai-data
-    project-name: 'aai-data'
+    name: aai-aai-data
+    project-name: 'aai-aai-data'
     jobs:
       - gerrit-maven-clm
-    project: 'aai/data'
+    project: 'aai-aai/data'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'aai-data-settings'
+    mvn-settings: 'aai-aai-data-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
