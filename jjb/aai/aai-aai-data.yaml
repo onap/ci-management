@@ -4,7 +4,7 @@
     project-name: 'aai-aai-data'
     jobs:
       - gerrit-maven-clm
-    project: 'aai-aai/data'
+    project: 'aai/aai-data'
     stream:
       - 'master':
           branch: 'master'
