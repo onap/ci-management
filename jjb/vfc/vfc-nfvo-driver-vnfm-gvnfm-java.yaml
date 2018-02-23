@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
     subproject:
       - 'gvnfmadapter':

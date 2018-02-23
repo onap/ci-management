@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
     subproject:
       - 'mgr':

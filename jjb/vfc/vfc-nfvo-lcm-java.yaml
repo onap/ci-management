@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'vfc-nfvo-lcm-settings'
     jobs:
       - gerrit-maven-clm:

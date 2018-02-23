@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'usecase-ui-server-settings'
     jobs:
       - gerrit-maven-clm

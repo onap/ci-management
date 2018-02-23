@@ -11,8 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'msb-java-sdk-settings'
     files: '**'
     archive-artifacts: ''

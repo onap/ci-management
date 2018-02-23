@@ -12,7 +12,5 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1604-basebuild-2c-1g

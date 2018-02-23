@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'amsterdam':
-          branch: 'amsterdam'
     mvn-settings: 'holmes-engine-management-settings'
     files: '**'
     archive-artifacts: ''
