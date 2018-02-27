@@ -66,6 +66,14 @@
     builders:
       - shell: !include-raw: include-docker-login.sh
 
+- builder:
+    name: publish-pypi
+    builders:
+      - inject:
+          properties-content: PYPI_SERVER={pypi-server}
+      - shell:
+          !include-raw-escape: ../shell/pypi-publish.sh
+
 # PARAMETERS
 - parameter:
     name: infra-parameters
