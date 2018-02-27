@@ -20,15 +20,3 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
-- project:
-    name: sdnc-oam-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
-    project: 'sdnc/oam'
-    project-name: 'sdnc-oam'
-    branch: 'master'
-    mvn-settings: 'sdnc-oam-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
