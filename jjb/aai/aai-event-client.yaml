@@ -16,3 +16,16 @@
     mvn-settings: 'aai-event-client-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aai-event-client-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'aai/event-client'
+    project-name: 'aai-event-client'
+    branch: 'master'
+    mvn-settings: 'aai-event-client-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
