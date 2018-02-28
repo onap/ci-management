@@ -34,3 +34,41 @@
     mvn-settings: 'logging-analytics-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: logging-analytics-pylog-java
+    project-name: 'logging-analytics-pylog'
+    project: 'logging-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'logging-analytics-settings'
+    subproject:
+      - 'pylog':
+          pom: 'pylog/pom.xml'
+          pattern: 'pylog/**'
+          tox-dir: pylog/
+          tox-envs: ''
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-{subproject}-python-release-{stream}'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
+- project:
+    name: logging-analytics-pylog-python
+    project-name: 'logging-analytics-pylog'
+    project: 'logging-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'logging-analytics-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    subproject:
+      - 'pylog':
+          path: 'pylog'
+          pattern: 'pylog/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
