@@ -1,0 +1,17 @@
+---
+- project:
+    name: vnfsdk-dovetail-integration
+    project-name: 'vnfsdk-dovetail-integration'
+    subproject:
+      - dovetail-integration:
+          path: '.'
+          pattern: '**'
+    project: 'vnfsdk/dovetail-integration'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-dovetail-integration-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-{subproject}-verify-python'
