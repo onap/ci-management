@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_81a803dc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-28T18:16:34Z",
+      "side": 1,
+      "message": "Let\u0027s change this from dovetail-integration to vnfsdk-dovetail-integration to make it more specific",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "e2b54c219e454f4c33d0e1085d8dcfdbed1c3e0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_61a37700",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-28T18:16:34Z",
+      "side": 1,
+      "message": "Capitalize word",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "e2b54c219e454f4c33d0e1085d8dcfdbed1c3e0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_21b1ef46",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-28T18:16:34Z",
+      "side": 1,
+      "message": "Remove empty line between Issue-ID and Change-Id",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 52
+      },
+      "revId": "e2b54c219e454f4c33d0e1085d8dcfdbed1c3e0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_41ae7be7",
+        "filename": "jjb/vnfsdk/vnfsdk-dovetail-integration-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-28T18:16:34Z",
+      "side": 1,
+      "message": "Remove empty line",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 10
+      },
+      "revId": "e2b54c219e454f4c33d0e1085d8dcfdbed1c3e0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
