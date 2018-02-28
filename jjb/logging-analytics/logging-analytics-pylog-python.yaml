@@ -1,0 +1,16 @@
+---
+- project:
+    name: logging-analytics-pylog-python
+    project-name: 'logging-analytics-pylog'
+    project: 'logging-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'logging-analytics-settings'
+    build-node: 'ubuntu1604-basebuild-4c-4g'
+    subproject:
+      - 'pylog':
+          path: 'pylog'
+          pattern: 'pylog/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'

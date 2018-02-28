@@ -1,0 +1,20 @@
+---
+- project:
+    name: logging-analytics-pylog-java
+    project-name: 'logging-analytics-pylog'
+    project: 'logging-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'logging-analytics-settings'
+    subproject:
+      - 'pylog':
+          pom: 'pylog/pom.xml'
+          pattern: 'pylog/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-basebuild-4c-4g
