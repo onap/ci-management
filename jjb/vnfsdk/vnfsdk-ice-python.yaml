@@ -1,0 +1,17 @@
+---
+- project:
+    name: vnfsdk-ice
+    project-name: 'vnfsdk-ice'
+    project: 'vnfsdk/ice'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - ice:
+          path: '.'
+          pattern: '**'
+    mvn-settings: 'vnfsdk-ice-settings'
+    build-node: ubuntu1604-basebuild-4c-4g
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-{subproject}-verify-python'
