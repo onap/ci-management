@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_617a9778",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-02-28T18:19:52Z",
+      "side": 1,
+      "message": "Remove empty spaces and capitalize \"Initial\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 4
+      },
+      "revId": "875e166976274881d50f184d734a09304826e01a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
