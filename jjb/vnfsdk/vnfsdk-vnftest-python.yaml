@@ -1,0 +1,12 @@
+---
+
+- project:
+    name: vnfsdk-vnftest
+    project-name: 'vnfsdk-vnftest'
+    project: 'vnfsdk/dovetail-integration'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-vnftest-settings'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
