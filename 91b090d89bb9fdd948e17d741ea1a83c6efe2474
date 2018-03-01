@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_5cae6282",
+        "filename": "shell/pypi-get.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1899
+      },
+      "writtenOn": "2018-03-01T02:44:48Z",
+      "side": 1,
+      "message": "Why not get version  from setup.py?",
+      "range": {
+        "startLine": 6,
+        "startChar": 52,
+        "endLine": 6,
+        "endChar": 60
+      },
+      "revId": "91b090d89bb9fdd948e17d741ea1a83c6efe2474",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
