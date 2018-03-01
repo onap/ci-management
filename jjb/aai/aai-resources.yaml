@@ -12,10 +12,9 @@
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
           disabled: true
-      - '{project-name}-{stream}-aai-docker-java-version-daily':
-          pom: 'aai-resources/pom.xml'
-          mvn-goals: 'docker:build docker:push'
-          disabled: true
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'aai-resources/pom.xml'
+          mvn-profile: 'docker'
 
     project: 'aai/resources'
     stream:
