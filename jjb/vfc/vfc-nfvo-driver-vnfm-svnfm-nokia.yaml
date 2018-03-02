@@ -9,7 +9,7 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     subproject:
       - 'drv-vnfm-nokia':
-          pom: 'nokia/vnfmdirver/pom.xml'
+          pom: 'nokia/vnfmdriver/pom.xml'
           pattern: 'nokia/vnfmdriver/**'
     jobs:
       - gerrit-maven-clm:
