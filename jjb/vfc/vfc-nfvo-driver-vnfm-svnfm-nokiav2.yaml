@@ -13,7 +13,6 @@
           pattern: 'nokiav2/**'
     jobs:
       - gerrit-maven-clm:
-          java-version: ''
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -24,9 +23,9 @@
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
     jobs:
       - gerrit-maven-sonar
+    cron: 'H 11 * * *'
     mvn-params: '-f nokiav2/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
-    java-version: ''
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokiav2'
     branch: 'master'
