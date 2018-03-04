@@ -1,4 +1,5 @@
 ---
+
 - project:
     name: dmaap-buscontroller
     project-name: 'dmaap-buscontroller'
@@ -10,7 +11,12 @@
       - '{project-name}-{stream}-stage-site-java':
           site-pom: 'pom.xml'
           trigger-job: '{project-name}-{stream}-release-version-java-daily'
-          mvn-goals: 'clean install'
+          mvn-goals: 'clean install docker:build'
+      - '{project-name}-{stream}-docker-java-daily'
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-goals: 'clean install docker:build'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'dmaap/buscontroller'
     stream:
       - 'master':
