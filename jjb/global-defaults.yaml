@@ -31,7 +31,7 @@
         -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
 
     # Timeout in minutes
-    build-timeout: 360
+    build-timeout: 90
     build-node: ubuntu1604-basebuild-2c-1g
 
     archive-artifacts: ''
