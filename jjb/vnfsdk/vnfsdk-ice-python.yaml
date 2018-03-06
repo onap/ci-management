@@ -3,6 +3,7 @@
     name: vnfsdk-ice
     project-name: 'vnfsdk-ice'
     project: 'vnfsdk/ice'
+    pom: 'pom.xml'
     stream:
       - 'master':
           branch: 'master'
@@ -15,3 +16,4 @@
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-{subproject}-merge-java'
