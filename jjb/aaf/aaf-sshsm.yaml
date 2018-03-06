@@ -2,13 +2,50 @@
 - project:
     name: aaf-sshsm
     project-name: 'aaf-sshsm'
-    jobs:
-      - gerrit-maven-clm
+    build-timeout: 60
     project: 'aaf/sshsm'
+    jobs:
+#      - gerrit-maven-clm
+      - '{project}-{stream}-build'
+
     stream:
       - 'master':
           branch: 'master'
+
     mvn-settings: 'aaf-sshsm-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-basebuild-4c-4g
+
+- job-template:
+    name: '{project}-{stream}-build'
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: 14
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: 'refs/heads/master'
+          choosing-strategy: 'gerrit'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '**'
+
+    builders:
+      - shell: |
+          #!/bin/bash
+          cd TPM2_plugin
+          ./bootstrap
+          ./configure
+          make
