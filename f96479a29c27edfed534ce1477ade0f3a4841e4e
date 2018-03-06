@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_d33a4e98",
+        "filename": "jjb/aaf/aaf-sshsm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 301
+      },
+      "writtenOn": "2018-03-06T21:50:59Z",
+      "side": 1,
+      "message": "Remove spaces",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 4
+      },
+      "revId": "f96479a29c27edfed534ce1477ade0f3a4841e4e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
