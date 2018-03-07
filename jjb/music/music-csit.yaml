@@ -1,0 +1,16 @@
+---
+- project:
+     name: music-csit
+     jobs:
+       - '{project-name}-{stream}-verify-csit-{functionality}'
+       - '{project-name}-{stream}-csit-{functionality}'
+     project-name: 'music'
+     stream: 'master'
+     functionality:
+       - 'functionality1':
+           trigger_jobs:
+             - 'music-master-docker-version-java-daily'
+     robot-options: ''
+     branch: 'master'
+
+
