@@ -19,3 +19,15 @@
     mvn-settings: 'aai-search-data-service-settings'
     files: '**'
     archive-artifacts: ''
+- project:
+    name: aai-search-data-service-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'aai/search-data-service'
+    project-name: 'aai-search-data-service'
+    branch: 'master'
+    mvn-settings: 'aai-search-data-service'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
