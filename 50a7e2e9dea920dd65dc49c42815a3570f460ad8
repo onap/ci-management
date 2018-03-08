@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_9593415a",
+        "filename": "jjb/aaf/aaf-sshsm.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-08T20:06:09Z",
+      "side": 1,
+      "message": "Let\u0027s not add a job template here. \n\nAny new templates should be done in jjb/global-templates-*.yaml files \n\nIs this a java or a python project?\n\nThanks!\nJess",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 14
+      },
+      "revId": "50a7e2e9dea920dd65dc49c42815a3570f460ad8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
