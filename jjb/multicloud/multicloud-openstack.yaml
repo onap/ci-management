@@ -39,14 +39,42 @@
     archive-artifacts: ''
     build-node: 'ubuntu1604-memcached-4c-4g'
 - project:
-    name: multicloud-openstack-sonar
+    name: multicloud-openstack-newton-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack'
+    project-name: 'multicloud-openstack-newton'
     branch: 'master'
+    mvn-params: '-f newton/pom.xml'
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: multicloud-openstack-ocata-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-ocata'
+    branch: 'master'
+    mvn-params: '-f ocata/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: multicloud-openstack-windriver-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-windriver'
+    branch: 'master'
+    mvn-params: '-f windriver/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
