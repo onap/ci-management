@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_b582fdc5",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-08T20:57:36Z",
+      "side": 1,
+      "message": "This line was correct, do not change it. \nMake sure these params are:\n\nproject: \u0027optf/has\u0027\nproject-name: \u0027optf-has\u0027",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "96e546ab9b632f1243cfeae94348924a54bafe2f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
