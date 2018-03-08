@@ -8,9 +8,14 @@
       - 'master':
           branch: 'master'
     subproject:
-      - ice:
-          path: '.'
-          pattern: '**'
+      - 'scripts':
+          path: 'validation-scripts'
+          pattern: 'validation-scripts/**'
+          pom: 'validation-scripts/pom.xml'
+      - 'server':
+          path: 'ice-server'
+          pattern: 'ice-server/**'
+          pom: 'ice-server/pom.xml'
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
