@@ -12,6 +12,10 @@
           path: 'newton'
           pattern: 'newton/**'
           pom: 'newton/pom.xml'
+      - 'newton_share':
+          path: 'newton'
+          pattern: 'share/**'
+          pom: 'newton/pom.xml'
       - 'ocata':
           path: 'ocata'
           pattern: 'ocata/**'
