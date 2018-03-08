@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_158f312b",
+        "filename": "jjb/dcaegen2/dcaegen2-services-heartbeat.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-08T20:07:49Z",
+      "side": 1,
+      "message": "Please use dcaegen2-services-heartbeat-settings",
+      "range": {
+        "startLine": 15,
+        "startChar": 18,
+        "endLine": 15,
+        "endChar": 65
+      },
+      "revId": "2a25b3479f9eb49d9410d3feb6a08e5ff08bc935",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
