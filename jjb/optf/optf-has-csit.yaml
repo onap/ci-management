@@ -1,0 +1,14 @@
+---
+- project:
+     name: optf-has-csit
+     jobs:
+       - '{project-name}-{stream}-verify-csit-{functionality}'
+       - '{project-name}-{stream}-csit-{functionality}'
+     project-name: 'optf-has'
+     stream: 'master'
+     functionality:
+       - 'has':
+           trigger_jobs:
+             - 'optf-has-master-conductor-docker-java-version-shell-daily'
+     robot-options: ''
+     branch: 'master'
