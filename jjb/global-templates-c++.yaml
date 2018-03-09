@@ -1,0 +1,47 @@
+---
+# vim: sw=2 ts=2 sts=2 et :
+
+- job-template:
+    #
+    # job template for build C/C++ project
+    #
+    # Required Variables:
+    #   script:         build script to execute
+    #
+
+    name: '{project-name}-{stream}-build'
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: 14
+    
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+          
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: 'refs/heads/master'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '**'
+
+    builders:
+      - shell: '{script}'
+
