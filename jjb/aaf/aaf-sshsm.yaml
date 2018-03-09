@@ -4,6 +4,14 @@
     project-name: 'aaf-sshsm'
     jobs:
       - gerrit-maven-clm
+       shell: |
+          #!/bin/bash
+          cd TPM2_plugin
+          ./bootstrap
+          ./configure
+          make
+#         script:
+#         !include-raw-escape: 'build-sshsm.sh'
     project: 'aaf/sshsm'
     stream:
       - 'master':
