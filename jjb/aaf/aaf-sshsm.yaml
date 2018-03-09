@@ -4,6 +4,7 @@
     project-name: 'aaf-sshsm'
     jobs:
       - gerrit-maven-clm
+      script:       !include-raw-escape: 'build-sshsm.sh'
     project: 'aaf/sshsm'
     stream:
       - 'master':
