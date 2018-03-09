@@ -932,3 +932,4 @@
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
+
