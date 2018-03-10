@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_690ed9e6",
+        "filename": "jjb/global-templates-c++.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-10T00:22:57Z",
+      "side": 1,
+      "message": "We need to name this a less generic way. \nmaybe {project-name}-{stream}-verify-c",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 41
+      },
+      "revId": "8fcec10e23df9f9d6d2bc9255a3de719342cebdc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_49f75dd3",
+        "filename": "jjb/global-templates-c++.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-10T00:22:57Z",
+      "side": 1,
+      "message": "Please also define the job parameters after properties, \nfor example:\n    parameters:\n      - infra-parameters:\n          project: \u0027{project}\u0027\n          branch: \u0027{branch}\u0027\n          refspec: \u0027refs/heads/{branch}\u0027\n          artifacts: \u0027{archive-artifacts}\u0027",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 32
+      },
+      "revId": "8fcec10e23df9f9d6d2bc9255a3de719342cebdc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_e90189af",
+        "filename": "jjb/global-templates-c++.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-10T00:22:57Z",
+      "side": 1,
+      "message": "Please define the publisher after builders\nfor example:\n    publishers:\n      - infra-shiplogs:\n          maven-version: \u0027{maven-version}\u0027",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 25
+      },
+      "revId": "8fcec10e23df9f9d6d2bc9255a3de719342cebdc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
