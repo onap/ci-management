@@ -28,6 +28,6 @@
     project: 'aai/search-data-service'
     project-name: 'aai-search-data-service'
     branch: 'master'
-    mvn-settings: 'aai-search-data-service'
+    mvn-settings: 'aai-search-data-service-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
