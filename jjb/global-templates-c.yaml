@@ -28,7 +28,7 @@
 
     scm:
       - gerrit-trigger-scm:
-          refspec: 'refs/heads/master'
+          refspec: '$GERRIT_REFSPEC'
           choosing-strategy: 'gerrit'
           submodule-recursive: '{submodule-recursive}'
 
