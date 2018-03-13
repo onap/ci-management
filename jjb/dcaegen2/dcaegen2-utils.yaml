@@ -7,8 +7,8 @@
       - 'dcaeapplib':
           tox-dir: dcaeapplib/
           tox-envs: ''
-      - 'onap-dcae-dbs-docker-client':
-          tox-dir: onap-dcae-dbs-docker-client/
+      - 'onap-dcae-cbs-docker-client':
+          tox-dir: onap-dcae-cbs-docker-client/
           tox-envs: ''
       - 'onap-dcae-dcaepolicy-lib':
           tox-dir: onap-dcae-dcaepolicy-lib/
