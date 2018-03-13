@@ -9,10 +9,8 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-goals: 'clean install docker:build'
-          build-node: ubuntu1604-docker-8c-8g
+          mvn-goals: 'clean package docker:build -DpushImage'
+
     project: 'dmaap/buscontroller'
     stream:
       - 'master':
