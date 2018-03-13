@@ -4,17 +4,6 @@
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
-echo 'Building the SoftHSMv2...'
+echo 'Building AAF/sshsm project'
+sh build.sh
 
-cd SoftHSMv2
-sh autogen.sh
-./configure
-make check
-cd ..
-
-echo 'Building the TPM2-Plugin...'
-
-cd TPM2-Plugin
-./bootstrap
-./configure
-make
