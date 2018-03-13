@@ -5,9 +5,6 @@
     jobs:
       - gerrit-maven-clm:
       - '{project-name}-{stream}-release-java-daily'
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-java-daily'
     project: 'portal'
     stream:
       - 'master':

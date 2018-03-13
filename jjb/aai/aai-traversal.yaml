@@ -8,10 +8,6 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
          disabled: true
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
-          disabled: true
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'aai-traversal/pom.xml'
           mvn-profile: 'docker'

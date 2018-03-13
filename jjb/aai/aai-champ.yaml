@@ -12,11 +12,6 @@
           mvn-goals: 'docker:build'
       - '{project-name}-{stream}-release-version-java-daily':
           disabled: true
-      - '{project-name}-{stream}-stage-site-java':
-          site-pom: 'pom.xml'
-          trigger-job: '{project-name}-{stream}-release-version-java-daily'
-          disabled: true
-
     project: 'aai/champ'
     stream:
       - 'master':
