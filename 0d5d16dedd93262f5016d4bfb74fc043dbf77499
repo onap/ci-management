@@ -94,6 +94,30 @@
       "revId": "0d5d16dedd93262f5016d4bfb74fc043dbf77499",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_46497f2f",
+        "filename": "jjb/aaf/build-sshsm.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-13T23:42:54Z",
+      "side": 1,
+      "message": "Since you are calling it in your template should be fine\n         script:\n            !include-raw-escape: \u0027build-sshsm.sh\u0027",
+      "parentUuid": "5a93c517_e68e8b78",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 11
+      },
+      "revId": "0d5d16dedd93262f5016d4bfb74fc043dbf77499",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
