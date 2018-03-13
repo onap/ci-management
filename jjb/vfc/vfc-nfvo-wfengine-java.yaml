@@ -55,15 +55,3 @@
     mvn-settings: 'vfc-nfvo-wfengine-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-- project:
-    name: vfc-nfvo-wfengine-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
-    project: 'vfc/nfvo/wfengine'
-    project-name: 'vfc-nfvo-wfengine'
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-wfengine-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
