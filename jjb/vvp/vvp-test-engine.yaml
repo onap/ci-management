@@ -14,7 +14,7 @@
     mvn-settings: 'vvp-test-engine-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
-      - gerrit-maven-clm
+      - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-docker-java-daily'
     docker-pom: 'pom.xml'
