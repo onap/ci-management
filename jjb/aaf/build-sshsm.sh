@@ -4,6 +4,10 @@
 CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
+apt -y install autoconf
+apt -y install automake
+apt -y install libtool
+
 echo 'Building the SoftHSMv2...'
 
 cd SoftHSMv2
