@@ -70,6 +70,30 @@
       "revId": "0d5d16dedd93262f5016d4bfb74fc043dbf77499",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_46dbbf7b",
+        "filename": "jjb/aaf/build-sshsm.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3169
+      },
+      "writtenOn": "2018-03-13T23:18:02Z",
+      "side": 1,
+      "message": "we will install the autotools-dev on jenkins node using our project build script.\nIn this way, autotools will not be required to be installed on Jenkins nodes before hand.",
+      "parentUuid": "5a93c517_e68e8b78",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 11
+      },
+      "revId": "0d5d16dedd93262f5016d4bfb74fc043dbf77499",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
