@@ -1,0 +1,12 @@
+---
+- project:
+    name: integration-devtool
+    project-name: 'integration-devtool'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+    project: 'integration/devtool'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'integration-devtool-settings'
+    build-node: ubuntu1604-basebuild-2c-1g
