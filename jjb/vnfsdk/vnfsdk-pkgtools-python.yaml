@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vnfsdk-pkgtools
     project-name: 'vnfsdk-pkgtools'
@@ -17,3 +16,15 @@
       - gerrit-maven-clm
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
+- project:
+    name: vnfsdk-pkgtools-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'vnfsdk/pkgtools'
+    project-name: 'vnfsdk-pkgtools'
+    branch: 'master'
+    mvn-settings: 'vnfsdk-pkgtools-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
