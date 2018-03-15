@@ -4,6 +4,7 @@
     project-name: 'vnfsdk-ice'
     project: 'vnfsdk/ice'
     pom: 'pom.xml'
+    python-version: python3
     stream:
       - 'master':
           branch: 'master'
@@ -12,16 +13,21 @@
           path: 'validation-scripts'
           pattern: 'validation-scripts/**'
           pom: 'validation-scripts/pom.xml'
+          tox-dir: 'validation-scripts/'
+          tox-envs: ''
       - 'server':
           path: 'ice-server'
           pattern: 'ice-server/**'
           pom: 'ice-server/pom.xml'
+          tox-dir: 'ice-server/'
+          tox-envs: ''
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-basebuild-4c-4g
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{subproject}-python-staging-{stream}'
 - project:
     name: vnfsdk-ice-sonar
     jobs:
