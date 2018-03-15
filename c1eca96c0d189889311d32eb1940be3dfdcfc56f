@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_cc160549",
+        "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-15T22:27:38Z",
+      "side": 1,
+      "message": "Please define tox-envs too",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 19
+      },
+      "revId": "c1eca96c0d189889311d32eb1940be3dfdcfc56f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_6c29f188",
+        "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-15T22:27:38Z",
+      "side": 1,
+      "message": "Please define tox-envs too",
+      "range": {
+        "startLine": 20,
+        "startChar": 1,
+        "endLine": 20,
+        "endChar": 17
+      },
+      "revId": "c1eca96c0d189889311d32eb1940be3dfdcfc56f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
