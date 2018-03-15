@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_ec43c13f",
+        "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 335
+      },
+      "writtenOn": "2018-03-15T23:17:36Z",
+      "side": 1,
+      "message": "Is it looking for a pointer to tox.ini or the actual variables?",
+      "parentUuid": "5a93c517_cc160549",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 19
+      },
+      "revId": "c1eca96c0d189889311d32eb1940be3dfdcfc56f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_6c29f188",
         "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
         "patchSetId": 1
