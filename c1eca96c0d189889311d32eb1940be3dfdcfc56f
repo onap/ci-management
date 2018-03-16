@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_4cad159a",
+        "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-16T01:27:16Z",
+      "side": 1,
+      "message": "tox-dir? yes. it is the location of where to find the tox.ini,\njust the directory",
+      "parentUuid": "5a93c517_ec43c13f",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 19
+      },
+      "revId": "c1eca96c0d189889311d32eb1940be3dfdcfc56f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_6c29f188",
         "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
         "patchSetId": 1
