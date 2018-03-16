@@ -7,6 +7,9 @@
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
+      - '{project-name}-{stream}-docker-golang-shell-daily':
+          script:
+            !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
     project: 'music/distributed-kv-store'
     stream:
       - 'master':
