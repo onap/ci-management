@@ -16,6 +16,7 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
       - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
