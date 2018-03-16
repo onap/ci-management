@@ -16,3 +16,15 @@
     jobs:
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
+- project:
+    name: vvp-validation-scripts-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'vvp/validation-scripts'
+    project-name: 'vvp-validation-scripts'
+    branch: 'master'
+    mvn-settings: 'vvp-validation-scripts-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
