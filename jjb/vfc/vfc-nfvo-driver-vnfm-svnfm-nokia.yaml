@@ -1,7 +1,7 @@
 ---
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokia
-    project-name: 'vfc-nfvo-driver-svnfm'
+    project-name: 'vfc-nfvo-driver-svnfm-nokia'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
@@ -13,6 +13,7 @@
           pattern: 'nokia/vnfmdriver/**'
     jobs:
       - gerrit-maven-clm:
+          mvn-params: '-f nokia/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
