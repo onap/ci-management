@@ -23,14 +23,29 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
 - project:
-    name: vnfsdk-ice-sonar
+    name: vnfsdk-ice-validation-scripts-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
+    mvn-params: '-f validation-scripts/pom.xml'
     build-node: ubuntu1604-basebuild-4c-4g
     project: 'vnfsdk/ice'
-    project-name: 'vnfsdk-ice'
+    project-name: 'vnfsdk-ice-validation-scripts'
     branch: 'master'
     mvn-settings: 'vnfsdk-ice-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: vnfsdk-ice-ice-server-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    mvn-params: '-f ice-server/pom.xml'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'vnfsdk/ice'
+    project-name: 'vnfsdk-ice-ice-server'
+    branch: 'master'
+    mvn-settings: 'vnfsdk-ice-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
