@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_962d6baa",
+        "filename": "jjb/vnfsdk/vnfsdk-dovetail-integration-python.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-16T18:15:18Z",
+      "side": 1,
+      "message": "This should match the folder name in /usr/bin/\nShall we change this to python2.7?",
+      "range": {
+        "startLine": 11,
+        "startChar": 20,
+        "endLine": 11,
+        "endChar": 28
+      },
+      "revId": "20c0544e0390050a6833719291b93481a8d8a296",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
