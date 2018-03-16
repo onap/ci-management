@@ -2,6 +2,9 @@
 - project:
     name: vnfsdk-pkgtools
     project-name: 'vnfsdk-pkgtools'
+    python-version: python2.7
+    tox-dir: '.'
+    tox-envs: ''
     subproject:
       - pkgtools:
           path: '.'
@@ -15,6 +18,7 @@
     jobs:
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{subproject}-python-staging-{stream}'
 - project:
     name: vnfsdk-pkgtools-sonar
     jobs:
