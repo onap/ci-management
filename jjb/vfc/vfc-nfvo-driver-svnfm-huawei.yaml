@@ -12,6 +12,8 @@
           pom: 'huawei/pom.xml'
           pattern: 'huawei/**'
     jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f huawei/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
