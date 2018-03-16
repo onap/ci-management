@@ -8,6 +8,9 @@
           pattern: '**'
     project: 'vnfsdk/dovetail-integration'
     pom: 'pom.xml'
+    python-version: python27
+    tox-dir: '.'
+    tox-envs: ''
     stream:
       - 'master':
           branch: 'master'
@@ -17,6 +20,7 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{subproject}-python-staging-{stream}'
 - project:
     name: vnfsdk-dovetail-integration-sonar
     jobs:
