@@ -2,6 +2,9 @@
 - project:
     name: vnfsdk-pkgtools
     project-name: 'vnfsdk-pkgtools'
+    python-version: python27
+    tox-dir: '.'
+    tox-envs: ''
     subproject:
       - pkgtools:
           path: '.'
