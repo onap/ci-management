@@ -4,6 +4,9 @@
     project-name: 'dcaegen2-services-mapper'
     jobs:
       - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
     project: 'dcaegen2/services/mapper'
     stream:
       - 'master':
@@ -12,3 +15,18 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+    maven-deploy-properties: |
+      deployAtEnd=true
+- project:
+    name: dcaegen2-services-mapper-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-basebuild-4c-4g
+    project: 'dcaegen2/collectors/ves'
+    project-name: 'dcaegen2-services-mapper'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-mapper-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
