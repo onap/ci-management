@@ -134,9 +134,11 @@ EOF
             apt-get update
             # We need to force openjdk-8-jdk to install
             apt-get install openjdk-8-jdk
-            # make sure that we still default to openjdk 7
-            update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
-            update-alternatives --set javac /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+            # Install openjdk-9-jdk
+            apt-get install openjdk-9-jdk
+            # make sure that we still default to openjdk 8
+            update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+            update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
 
             # disable auto-update service?
             if [ -f /etc/cron.daily/apt ]
@@ -146,7 +148,11 @@ EOF
         ;;
         16.04)
             apt-get install openjdk-8-jdk
-
+            # Install openjdk-9-jdk
+            apt-get install openjdk-9-jdk
+            # make sure that we still default to openjdk 8
+            update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+            update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
             # force auto-update services off and mask them so they can't
             # be started
             for i in apt-daily.{service,timer}
