@@ -6,11 +6,11 @@
       - gerrit-maven-clm:
           mvn-params: '-DskipTests'
           build-timeout: 30
-          build-node: ubuntu1604-basebuild-8c-8g
+          build-node: ubuntu1604-builder-8c-8g
       - '{project-name}-{stream}-verify-java':
-          build-node: ubuntu1604-basebuild-8c-8g
+          build-node: ubuntu1604-builder-8c-8g
       - '{project-name}-{stream}-merge-java':
-          build-node: ubuntu1604-basebuild-8c-8g
+          build-node: ubuntu1604-builder-8c-8g
       - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'appc'
@@ -20,13 +20,13 @@
     mvn-settings: 'appc-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: appc-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-8c-8g
+    build-node: ubuntu1604-builder-8c-8g
     project: 'appc'
     project-name: 'appc'
     branch: 'master'

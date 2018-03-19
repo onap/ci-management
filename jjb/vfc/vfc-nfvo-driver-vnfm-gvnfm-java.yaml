@@ -24,14 +24,14 @@
             !include-raw-escape: 'build-gvnfm-driver-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-gvnfmadapter-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
     mvn-params: '-f gvnfmadapter/pom.xml'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/driver/vnfm/gvnfm'
     project-name: 'vfc-nfvo-driver-vnfm-gvnfm-gvnfmadapter'
     branch: 'master'

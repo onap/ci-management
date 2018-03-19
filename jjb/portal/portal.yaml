@@ -14,14 +14,14 @@
     mvn-settings: 'portal-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     maven-deploy-properties: -Dbuild.number=$BUILD_NUMBER
 - project:
     name: portal-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'portal'
     project-name: 'portal'
     branch: 'master'

@@ -22,13 +22,13 @@
     mvn-settings: 'vnfsdk-refrepo-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: vnfsdk-refrepo-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'

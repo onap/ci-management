@@ -12,7 +12,7 @@
           path: '.'
           pattern: '**'
     mvn-settings: 'vvp-portal-settings'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     jobs:
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'

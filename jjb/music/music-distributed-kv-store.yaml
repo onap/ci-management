@@ -14,4 +14,4 @@
     mvn-settings: 'music-distributed-kv-store-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g

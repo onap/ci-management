@@ -23,14 +23,14 @@
             !include-raw-escape: 'build-gvnfm-vnfmgr-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: vfc-gvnfm-vnfmgr-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
     mvn-params: '-f mgr/pom.xml'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/gvnfm/vnfmgr'
     project-name: 'vfc-gvnfm-vnfmgr'
     branch: 'master'

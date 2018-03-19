@@ -32,7 +32,7 @@
 
     # Timeout in minutes
     build-timeout: 90
-    build-node: ubuntu1604-basebuild-2c-1g
+    build-node: ubuntu1604-builder-2c-1g
 
     archive-artifacts: ''
 

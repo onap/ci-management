@@ -13,4 +13,4 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'integration-devtool-settings'
-    build-node: ubuntu1604-basebuild-2c-1g
+    build-node: ubuntu1604-builder-2c-1g

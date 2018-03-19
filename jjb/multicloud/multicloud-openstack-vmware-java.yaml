@@ -23,13 +23,13 @@
             !include-raw-escape: 'build-multicloud-openstack-vmware-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: multicloud-openstack-vmware-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/openstack/vmware'
     project-name: 'multicloud-openstack-vmware'
     branch: 'master'

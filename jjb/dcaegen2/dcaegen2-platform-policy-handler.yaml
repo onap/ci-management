@@ -26,7 +26,7 @@
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'dcaegen2/platform/policy-handler'
     project-name: 'dcaegen2-platform-policy-handler'
     branch: 'master'

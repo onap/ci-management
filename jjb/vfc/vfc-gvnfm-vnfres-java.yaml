@@ -24,14 +24,14 @@
             !include-raw-escape: 'build-gvnfm-vnfres-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: vfc-gvnfm-vnfres-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
     mvn-params: '-f res/pom.xml'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/gvnfm/vnfres'
     project-name: 'vfc-gvnfm-vnfres'
     branch: 'master'

@@ -16,13 +16,13 @@
     mvn-settings: 'policy-drools-applications-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-basebuild-4c-4g'
+    build-node: 'ubuntu1604-builder-4c-4g'
 - project:
     name: policy-drools-applications-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'policy/drools-applications'
     project-name: 'policy-drools-applications'
     branch: 'master'

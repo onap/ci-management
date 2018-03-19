@@ -25,13 +25,13 @@
             !include-raw-escape: 'build-optf-osdf-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-basebuild-4c-4g'
+    build-node: 'ubuntu1604-builder-4c-4g'
 - project:
     name: optf-osdf-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'optf/osdf'
     project-name: 'optf-osdf'
     branch: 'master'

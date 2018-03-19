@@ -28,14 +28,14 @@
           mvn-goals: 'clean'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
 - project:
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
     jobs:
       - gerrit-maven-sonar
     mvn-params: '-f wfenginemgrservice/pom.xml'
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-wfenginemgrservice'
     branch: 'master'
@@ -48,7 +48,7 @@
       - gerrit-maven-sonar
     mvn-params: '-f activiti-extension/pom.xml'
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-basebuild-4c-4g
+    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-activiti-extension'
     branch: 'master'
