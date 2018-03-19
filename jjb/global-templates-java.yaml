@@ -2117,7 +2117,7 @@
 
       - docker-login
 
-      - maven-docker-push-daily:
+      - maven-docker-push-daily-test:
           maven-version: '{maven-version}'
           mvn-settings: '{mvn-settings}'
           pom: '{docker-pom}'
