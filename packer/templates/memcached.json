@@ -37,14 +37,14 @@
     },
     {
       "type": "file",
-      "source": "provision/basebuild/",
+      "source": "provision/builder/",
       "destination": "/tmp/packer"
     },
     {
       "type": "shell",
       "scripts": [
         "provision/baseline.sh",
-        "provision/basebuild.sh",
+        "provision/builder.sh",
         "provision/memcached.sh",
         "provision/system_reseal.sh"
       ],
