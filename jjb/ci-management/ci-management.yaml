@@ -12,29 +12,6 @@
     build-node: 'centos7-builder-2c-1g'
     jjb-version: 2.0.0
 
-- project:
-    name: packer-jobs
-    # packer jobs templates are defined in global-jjb
-    jobs:
-      - '{project-name}-packer-jobs'
-    project: 'ci-management'
-    project-name: 'ci-management'
-    branch: master
-    archive-artifacts: '**/*.log'
-    build-node: 'centos7-builder-2c-1g'
-    platforms:
-      - centos
-      - ubuntu-16.04
-    templates:
-      - builder
-      - docker
-      - memcached
-      - redis
-    exclude:
-      # only build the docker image on ubuntu at present
-      - platforms: centos
-        templates: docker
-
 - job-template:
     name: '{project}-verify-jjb'
 
