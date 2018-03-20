@@ -27,7 +27,10 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-scripts-python-staging-{stream}'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'docker/pom.xml'
+          mvn-profile: 'docker'
 - project:
     name: vnfsdk-ice-validation-scripts-sonar
     jobs:
