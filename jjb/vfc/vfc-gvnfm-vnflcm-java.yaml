@@ -33,7 +33,7 @@
     mvn-params: '-f lcm/pom.xml'
     build-node: centos7-redis-4c-4g
     project: 'vfc/gvnfm/vnflcm'
-    project-name: 'vfc-gvnfm-vnflcm'
+    project-name: 'vfc-gvnfm-vnflcm-lcm'
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnflcm-settings'
     mvn-goals: 'clean install'
