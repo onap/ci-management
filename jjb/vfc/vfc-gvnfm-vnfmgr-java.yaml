@@ -32,7 +32,7 @@
     mvn-params: '-f mgr/pom.xml'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/gvnfm/vnfmgr'
-    project-name: 'vfc-gvnfm-vnfmgr'
+    project-name: 'vfc-gvnfm-vnfmgr-mgr'
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
     mvn-goals: 'clean install'
