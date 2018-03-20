@@ -33,7 +33,7 @@
     mvn-params: '-f res/pom.xml'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/gvnfm/vnfres'
-    project-name: 'vfc-gvnfm-vnfres'
+    project-name: 'vfc-gvnfm-vnfres-res'
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfres-settings'
     mvn-goals: 'clean install'
