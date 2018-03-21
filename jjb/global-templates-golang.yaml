@@ -33,6 +33,11 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
+      - raw:
+          xml: |
+          <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.10</goVersion>
+          </org.jenkinsci.plugins.golang.GolangBuildWrapper>
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -49,10 +54,6 @@
           settings-file: '{mvn-settings}'
       - shell: |
           #!/bin/bash
-          curl -O https://dl.google.com/go/go1.10.linux-amd64.tar.gz
-          tar -zxf go1.10.linux-amd64.tar.gz
-          export GOROOT=$WORKSPACE/go
-          export PATH=$PATH:$GOROOT/bin
           cd $WORKSPACE/{path}
           make build
 
