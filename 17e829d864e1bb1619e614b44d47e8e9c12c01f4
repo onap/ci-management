@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_da569b2a",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-03-21T20:56:28Z",
+      "side": 1,
+      "message": "No need for this as the import_playbook above does it.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 38
+      },
+      "revId": "17e829d864e1bb1619e614b44d47e8e9c12c01f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_5a3a8be8",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-03-21T20:56:28Z",
+      "side": 0,
+      "message": "Do you need to retain this MTU? because the common-packer defaults to 1458. We will need to override if so...",
+      "range": {
+        "startLine": 48,
+        "startChar": 33,
+        "endLine": 48,
+        "endChar": 37
+      },
+      "revId": "4f41c69646466dd82ec7b0482f236cf1bb076639",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_9a301309",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-03-21T20:56:28Z",
+      "side": 0,
+      "message": "Probably should install docker-compose in the new local-builder.yaml",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 21
+      },
+      "revId": "4f41c69646466dd82ec7b0482f236cf1bb076639",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
