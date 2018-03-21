@@ -25,7 +25,7 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 - project:
-    name: vfc-gvnfm-vnfmgr-sonar
+    name: vfc-gvnfm-vnfmgr-mgr-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
