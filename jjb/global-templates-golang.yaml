@@ -33,6 +33,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
+      - golang
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -49,10 +50,6 @@
           settings-file: '{mvn-settings}'
       - shell: |
           #!/bin/bash
-          curl -O https://dl.google.com/go/go1.10.linux-amd64.tar.gz
-          tar -zxf go1.10.linux-amd64.tar.gz
-          export GOROOT=$WORKSPACE/go
-          export PATH=$PATH:$GOROOT/bin
           cd $WORKSPACE/{path}
           make build
 
@@ -95,6 +92,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
+      - golang
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -111,10 +109,6 @@
           settings-file: '{mvn-settings}'
       - shell: |
           #!/bin/bash
-          curl -O https://dl.google.com/go/go1.10.linux-amd64.tar.gz
-          tar -zxf go1.10.linux-amd64.tar.gz
-          export GOROOT=$PWD/go
-          export PATH=$PATH:$GOROOT/bin
           cd $WORKSPACE/{path}
           make deploy
 
@@ -152,6 +146,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
+      - golang
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
