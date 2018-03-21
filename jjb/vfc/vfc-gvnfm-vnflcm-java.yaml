@@ -26,7 +26,7 @@
     archive-artifacts: ''
     build-node: centos7-redis-4c-4g
 - project:
-    name: vfc-gvnfm-vnflcm-sonar
+    name: vfc-gvnfm-vnflcm-lcm-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
