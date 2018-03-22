@@ -7,6 +7,9 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
+      - '{project-name}-{stream}-docker-golang-shell-daily':
+          script:
+            !include-raw-escape: 'build-sms-docker-image.sh'
     project: 'aaf/sms'
     stream:
       - 'master':
