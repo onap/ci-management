@@ -13,8 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.0.0':
-          branch: 'release-1.0.0'
+      - 'amsterdam':
+          branch: 'amsterdam'
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
