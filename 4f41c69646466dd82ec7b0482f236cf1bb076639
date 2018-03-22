@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_03e497aa",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-22T21:01:56Z",
+      "side": 0,
+      "message": "Not really.. the 1458 MTU should work for us. \nLet me remove this",
+      "parentUuid": "5a93c517_5a3a8be8",
+      "range": {
+        "startLine": 48,
+        "startChar": 33,
+        "endLine": 48,
+        "endChar": 37
+      },
+      "revId": "4f41c69646466dd82ec7b0482f236cf1bb076639",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_9a301309",
         "filename": "packer/provision/docker.sh",
         "patchSetId": 14
@@ -36,6 +60,30 @@
       "writtenOn": "2018-03-21T20:56:28Z",
       "side": 0,
       "message": "Probably should install docker-compose in the new local-builder.yaml",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 21
+      },
+      "revId": "4f41c69646466dd82ec7b0482f236cf1bb076639",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_836c270a",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-22T21:01:56Z",
+      "side": 0,
+      "message": "sure",
+      "parentUuid": "5a93c517_9a301309",
       "range": {
         "startLine": 95,
         "startChar": 0,
