@@ -6,7 +6,7 @@
     python-version: python3
     build-node: 'ubuntu1604-builder-4c-4g'
     subproject:
-      - 'aria/aria-rest-sever':
+      - 'aria-aria-rest-sever':
           tox-dir: aria/aria-rest-server/
           tox-envs: ''
     jobs:
