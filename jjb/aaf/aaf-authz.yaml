@@ -7,16 +7,11 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-daily'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-goals: 'docker:build'
     project: 'aaf/authz'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'aaf-authz-settings'
-    mvn-profile: docker
-    docker-pom: 'authz-service/pom.xml'
     files: '**'
     archive-artifacts: ''
 - project:
