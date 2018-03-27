@@ -4,14 +4,31 @@
 - hosts: all
   become_user: root
   become_method: sudo
+  vars:
+    docker_compose_version: 1.17.1
+    glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
+    glide_version: v0.13.1
+    golang_checksum: sha256:07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7
+    golang_version: 1.9.1
 
-  pre_tasks:
-    - include_role: name=system-update
-
-  roles:
-    - protobuf-install
-
-  post_tasks:
-    - name: System Reseal
-      script: ../common-packer/provision/system-reseal.sh
+  tasks:
+    - name: 'Install Docker Compose {{docker_compose_version}}'
+      command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-$(uname -s)-$(uname -m)"
       become: true
+
+    - name: 'Install GoLang {{golang_version}}'
+      block:
+        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-amd64.tar.gz'
+          get_url:
+            url: 'https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz'
+            dest: '/tmp/go{{golang_version}}.linux-amd64.tar.gz'
+            checksum: '{{golang_checksum}}'
+        - name: 'Install golang {{golang_version}} to /usr/local'
+          unarchive:
+            src: '/tmp/go{{golang_version}}.linux-amd64.tar.gz'
+            dest: /usr/local
+            remote_src: true
+          become: true
+        - name: 'Add golang to PATH'
+          command: 'echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile'
+          become: true
