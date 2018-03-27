@@ -3,30 +3,12 @@
     name: dcaegen2-utils
     project-name: 'dcaegen2-utils'
     python-version: python3
-    subproject:
-      - 'dcaeapplib':
-          tox-dir: dcaeapplib/
-          tox-envs: ''
-      - 'onap-dcae-cbs-docker-client':
-          tox-dir: onap-dcae-cbs-docker-client/
-          tox-envs: ''
-      - 'onap-dcae-dcaepolicy-lib':
-          tox-dir: onap-dcae-dcaepolicy-lib/
-          tox-envs: ''
-      - 'python-discovery-client':
-          tox-dir: python-discovery-client/
-          tox-envs: ''
-      - 'python-dockering':
-          tox-dir: python-dockering/
-          tox-envs: ''
 
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{subproject}-python-staging-{stream}'
-      - '{project-name}-{subproject}-python-release-{stream}'
 
     project: 'dcaegen2/utils'
     stream:
