@@ -3,6 +3,7 @@
     name: ci-management-jobs
     jobs:
       - '{project-name}-ci-jobs'
+      - gerrit-packer-verify
 
     project: 'ci-management'
     project-name: 'ci-management'
