@@ -1,0 +1,30 @@
+---
+- project:
+    name: vnfsdk-functest
+    project-name: 'vnfsdk-functest'
+    jobs:
+    - gerrit-maven-clm:
+    - '{project-name}-{stream}-verify-java'
+    - '{project-name}-{stream}-merge-java'
+    - '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'vnfsdk/functest'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-functest-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+- project:
+    name: vnfsdk-functest-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'vnfsdk/functest'
+    project-name: 'vnfsdk-functest'
+    branch: 'master'
+    mvn-settings: 'vnfsdk-functest-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
