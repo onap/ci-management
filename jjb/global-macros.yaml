@@ -123,6 +123,14 @@
           description: 'Used by Heat to generate a unique stack & vm name'
 
 - parameter:
+    name: maven-params
+    parameters:
+      - string:
+          name: MAVEN_PARAMS
+          default: '{mvn-params}'
+          description: Maven parameters to pass to the mvn command.
+
+- parameter:
     name: maven-exec
     parameters:
       - string:
