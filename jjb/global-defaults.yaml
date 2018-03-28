@@ -25,6 +25,7 @@
     jdk: ''
 
     # Maven
+    mvn-params: ''
     onap-infra-mvn-opts: |
         --show-version
         --batch-mode
