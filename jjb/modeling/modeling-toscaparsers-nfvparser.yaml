@@ -21,3 +21,17 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+
+- project:
+    name: modeling-toscaparsers-nfvparser-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'modeling/toscaparsers'
+    project-name: 'modeling-toscaparsers-nfvparser'
+    branch: 'master'
+    mvn-params: '-f nfvparser/pom.xml'
+    mvn-settings: 'modeling-toscaparsers-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
