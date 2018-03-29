@@ -1,0 +1,21 @@
+---
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-root
+    project-name: 'vfc-nfvo-driver-svnfm-root'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    mvn-params: '-pl nokia,nokiav2,huawei,zte'
+    subproject:
+      - 'drv-vnfm-root':
+          pom: 'pom.xml'
+          pattern: 'pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
