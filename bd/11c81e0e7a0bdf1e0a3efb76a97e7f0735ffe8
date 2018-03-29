@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Chris Donley <christopher.donley@huawei.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+2: Ry Jones <rjones@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 29 Mar 2018 15:09:40 +0000
+Reviewed-on: https://gerrit.onap.org/r/39889
+Project: ci-management
+Branch: refs/heads/master
