@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dave Adams <Dave.Adams@amdocs.com>
+Code-Review+1: Arul Nambi <arul.n.mohan@gmail.com>
+Code-Review+1: James Forsyth <jf2512@att.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 29 Mar 2018 15:07:58 +0000
+Reviewed-on: https://gerrit.onap.org/r/40155
+Project: ci-management
+Branch: refs/heads/master
