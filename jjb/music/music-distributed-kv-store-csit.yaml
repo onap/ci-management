@@ -1,14 +1,11 @@
 ---
 - project:
     name: music-distributed-kv-store-csit
-    project-name: 'music-distributed-kv-store'
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project: 'music/distributed-kv-store'
-    stream:
-      - 'master':
-          branch: 'master'
+    project-name: 'music'
+    stream: 'master'
     functionality:
       - 'music-distributed-kv-store-test-plan':
           trigger_jobs:
