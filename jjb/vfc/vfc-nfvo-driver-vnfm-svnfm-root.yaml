@@ -7,7 +7,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
-    mvn-params: '-pl nokia,nokiav2,huawei,zte'
+    mvn-params: '-P rootOnly'
     subproject:
       - 'drv-vnfm-root':
           pom: 'pom.xml'
