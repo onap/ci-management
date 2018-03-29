@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'pom.xml'
+          pom: 'sparkybe-onap-application/pom.xml'
           mvn-goals: 'docker:build'
     project: 'aai/sparky-be'
     stream:
