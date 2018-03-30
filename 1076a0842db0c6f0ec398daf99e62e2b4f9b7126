@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a93c517_a266c127",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-root.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2255
+      },
+      "writtenOn": "2018-03-30T16:52:36Z",
+      "side": 1,
+      "message": "Maybe the subproject means that that this is located within VFC?",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 14
+      },
+      "revId": "1076a0842db0c6f0ec398daf99e62e2b4f9b7126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_224f11c0",
         "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-root.yaml",
         "patchSetId": 5
