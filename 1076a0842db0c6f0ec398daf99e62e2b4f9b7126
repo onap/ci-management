@@ -69,6 +69,30 @@
       "revId": "1076a0842db0c6f0ec398daf99e62e2b4f9b7126",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_2272b1e3",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-root.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-03-30T16:54:55Z",
+      "side": 1,
+      "message": "Don\u0027t worry.. I am here to help.. \n\nSo, looking at your repo \"vfc/nfvo/driver/vnfm/svnfm\" it seems that the subproject section you will not need it at all since this is just for specific subfolders in svnfm. Since we need this to be triggered by the files in the root on svnfm, then these jobs should do it. \n\nGo ahead and remove the subproject section. Everything else looks good.",
+      "parentUuid": "5a93c517_e28da9d4",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 68
+      },
+      "revId": "1076a0842db0c6f0ec398daf99e62e2b4f9b7126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
