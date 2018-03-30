@@ -4,6 +4,7 @@
     project-name: 'vid'
     jobs:
       - gerrit-maven-clm:
+          mvn-params: '-f epsdk-app-onap/pom.xml'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
