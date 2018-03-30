@@ -229,7 +229,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '**'
+          files: '{files}'
 
     builders:
       - provide-maven-settings:
@@ -1032,7 +1032,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '**'
+          files: '{files}'
 
     builders:
       - provide-maven-settings:
