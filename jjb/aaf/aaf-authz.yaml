@@ -7,6 +7,9 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-golang-shell-daily':
+          script:
+            !include-raw-escape: 'build-aaf-docker-image.sh'
     project: 'aaf/authz'
     stream:
       - 'master':
