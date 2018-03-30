@@ -22,6 +22,30 @@
       "revId": "1076a0842db0c6f0ec398daf99e62e2b4f9b7126",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_e28da9d4",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-root.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2255
+      },
+      "writtenOn": "2018-03-30T16:49:10Z",
+      "side": 1,
+      "message": "Unfortunately I have no idea what some of these lines mean. I have no idea what the subproject section does. What is drv-vnfm-root. For example does dev mean anything or just a string.\nWhat I need is a build that runs in the svnfm folder, is only triggered by the change in the pom.xml within that folder. If uses the onlyRoot profile during mvn executions. Very sorry, but have not idea if the subproject is required or not.",
+      "parentUuid": "5a93c517_224f11c0",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 68
+      },
+      "revId": "1076a0842db0c6f0ec398daf99e62e2b4f9b7126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
