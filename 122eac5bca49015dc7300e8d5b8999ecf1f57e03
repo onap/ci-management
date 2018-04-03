@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_e81b3f1a",
+        "filename": "jjb/appc/appc-deployment.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-04-03T21:29:53Z",
+      "side": 1,
+      "message": "These will stay also?",
+      "range": {
+        "startLine": 11,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 59
+      },
+      "revId": "122eac5bca49015dc7300e8d5b8999ecf1f57e03",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
