@@ -4,7 +4,7 @@
 set -e -o pipefail
 
 FULL_DATE=`date +'%Y%m%dT%H%M%S'`
-IMAGE_VERSION= $( xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5 )
+IMAGE_VERSION=`xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
 
 case $DOCKERREGISTRY in
    '$DOCKER_REGISTRY:10004') DOCKER_TAG="$IMAGE_VERSION"-STAGING-"$FULL_DATE"Z
