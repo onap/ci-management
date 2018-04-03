@@ -10,7 +10,9 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily'
-      - '{project-name}-docker-image-blessing'
+      - '{project-name}-{stream}-verify-docker'
+      - '{project-name}-{stream}-merge-docker'
+      - '{project-name}-{stream}-release-version-docker-daily-no-sonar'
 
     project: 'appc/deployment'
     stream:
