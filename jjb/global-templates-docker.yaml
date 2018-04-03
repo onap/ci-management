@@ -65,6 +65,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
+          files: '{files}'
 
 - docker_merge_boiler_plate: &docker_merge_boiler_plate
     name: docker_merge_boiler_plate
@@ -80,7 +81,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '**'
+          files: '{files}'
       - pollscm:
           cron: ''
 
