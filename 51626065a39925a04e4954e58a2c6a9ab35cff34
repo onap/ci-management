@@ -22,6 +22,30 @@
       "revId": "51626065a39925a04e4954e58a2c6a9ab35cff34",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_931af015",
+        "filename": "jjb/appc/appc-deployment.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-04T02:51:17Z",
+      "side": 1,
+      "message": "In many cases we will have project using the builder machines for most jobs (defined in line 29) since I don\u0027t want to overload a specific node, I set these 3 jobs to use the docker build and have the rest of the jobs using the builder one.",
+      "parentUuid": "5a93c517_13426010",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "51626065a39925a04e4954e58a2c6a9ab35cff34",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
