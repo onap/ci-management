@@ -5,7 +5,8 @@
     project-name: 'clamp'
     jobs:
       - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java-checkstyle'
+      - '{project-name}-{stream}-verify-java-checkstyle':
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:
             - docker.pull.registry=nexus3.onap.org:10001
