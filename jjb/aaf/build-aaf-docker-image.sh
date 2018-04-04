@@ -4,4 +4,5 @@ ls -ltr
 cd auth/docker/
 ls -ltr
 chmod 755 *
-./dbuild
+sh dbuild.sh
+sh dpush.sh
