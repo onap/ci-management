@@ -10,7 +10,8 @@
     mvn-profile: rootOnly
     jobs:
       - '{project-name}-{stream}-verify-profile-java'
-      - '{project-name}-{stream}-merge-profile-java'
+      - '{project-name}-{stream}-merge-profile-java':
+            build-node: ubuntu1604-docker-8c-8g
       - '{project-name}-{stream}-release-version-profile-java-daily'
     files: 'pom.xml'
     archive-artifacts: ''
