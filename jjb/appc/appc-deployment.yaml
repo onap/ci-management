@@ -8,9 +8,12 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-verify-docker'
-      - '{project-name}-{stream}-merge-docker'
-      - '{project-name}-{stream}-release-version-docker-daily-no-sonar'
+      - '{project-name}-{stream}-verify-docker':
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-merge-docker':
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-release-version-docker-daily-no-sonar':
+          build-node: ubuntu1604-docker-8c-8g
 
     project: 'appc/deployment'
     stream:
@@ -20,5 +23,7 @@
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
+    docker_build_args: '-f docker-files/Dockerfile'
+    docker_name: docker-appc-deployment
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
