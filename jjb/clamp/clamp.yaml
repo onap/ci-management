@@ -5,7 +5,8 @@
     project-name: 'clamp'
     jobs:
       - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java-checkstyle'
+      - '{project-name}-{stream}-verify-java-checkstyle':
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:
             - docker.pull.registry=nexus3.onap.org:10001
@@ -37,7 +38,8 @@
 - project:
     name: clamp-sonar
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-maven-sonar:
+          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
     cron: 'H 11 * * *'
     build-node: ubuntu1604-docker-8c-8g
     project: 'clamp'

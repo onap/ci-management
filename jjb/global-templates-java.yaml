@@ -155,6 +155,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
     scm:
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
@@ -176,7 +178,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           goals: 'clean install -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn {mvn-params}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
