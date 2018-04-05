@@ -5,6 +5,7 @@
     project-name: 'clamp'
     jobs:
       - gerrit-maven-clm:
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-verify-java-checkstyle':
          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
@@ -17,6 +18,7 @@
           - skipDockerBuild=true
           - skipDockerTag=true
           - skipDockerPush=true
+          - docker.pull.registry=nexus3.onap.org:10001
       - '{project-name}-{stream}-docker-java-properties-daily':
          setVersion: 'DoSetVersion'
          docker-pom: 'pom.xml'
