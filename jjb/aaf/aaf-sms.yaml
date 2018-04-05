@@ -2,7 +2,7 @@
 - project:
     name: aaf-sms
     project-name: 'aaf-sms'
-    path: 'sms-service/src/sms'
+    path: 'sms-service/src'
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-golang'
