@@ -20,6 +20,8 @@
           branch: 'master'
       - 'release-2.1.0':
           branch: 'release-2.1.0'
+      - 'release-2.1.1':
+          branch: 'release-2.1.1'
     mvn-settings: 'portal-sdk-settings'
     files: '**'
     archive-artifacts: ''
