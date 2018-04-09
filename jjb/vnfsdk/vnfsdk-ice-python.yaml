@@ -21,6 +21,12 @@
           pom: 'ice-server/pom.xml'
           tox-dir: 'ice-server/'
           tox-envs: ''
+      - ‘docker’:
+          path: ‘docker’
+          pattern: ‘docker/**’
+          pom: ‘docker/pom.xml’
+          tox-dir: 'ice-server/'
+          tox-envs: ''
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
