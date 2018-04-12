@@ -1,0 +1,22 @@
+---
+- project:
+    name: music-jar
+    project-name: 'music'
+    subproject:
+      - 'music-jar':
+          pom: 'jar/pom.xml'
+          pattern: 'jar/**'
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f jar/pom.xml'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+    project: 'music'
+    stream:
+      - 'release-2.5.3':
+          branch: 'release-2.5.3'
+    mvn-settings: 'music-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
