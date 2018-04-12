@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_6ab85e11",
+        "filename": "jjb/music/music-jar.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-12T16:14:01Z",
+      "side": 1,
+      "message": "subproject:",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 15
+      },
+      "revId": "d2e1a9211ea45993dd81bd0357e81234ee19a3db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_0a399aa3",
+        "filename": "jjb/music/music-jar.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-12T16:14:01Z",
+      "side": 1,
+      "message": "remove this line",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 9,
+        "endChar": 32
+      },
+      "revId": "d2e1a9211ea45993dd81bd0357e81234ee19a3db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_2a3ed68c",
+        "filename": "jjb/music/music-jar.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-12T16:14:01Z",
+      "side": 1,
+      "message": "The project should be \u0027music\u0027",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "d2e1a9211ea45993dd81bd0357e81234ee19a3db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_ea430e11",
+        "filename": "jjb/music/music-jar.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-12T16:14:01Z",
+      "side": 1,
+      "message": "Indent this line 2 more spaces",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 31
+      },
+      "revId": "d2e1a9211ea45993dd81bd0357e81234ee19a3db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
