@@ -7,10 +7,7 @@
     project-name: 'so'
     stream: 'master'
     functionality:
-      - 'sanity-check':
-          trigger_jobs:
-            - 'so-master-docker-version-java-daily'
-      - 'hpa':
+      - 'integration-testing':
           trigger_jobs:
             - 'so-master-docker-version-java-daily'
     robot-options: ''
