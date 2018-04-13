@@ -13,6 +13,7 @@
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
 
     project: 'vnfsdk/ves-agent'
