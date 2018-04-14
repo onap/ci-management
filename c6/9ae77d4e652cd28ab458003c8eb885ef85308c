@@ -1,0 +1,9 @@
+Code-Review+2: Thanh Ha <thanh.ha@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Code-Review+2: Ry Jones <rjones@linuxfoundation.org>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Sat, 14 Apr 2018 18:35:39 +0000
+Reviewed-on: https://gerrit.onap.org/r/42863
+Project: ci-management
+Branch: refs/heads/master
