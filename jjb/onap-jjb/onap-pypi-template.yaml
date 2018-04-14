@@ -88,7 +88,7 @@
             - file-id: pypirc
               target: '$HOME/.pypirc'
       - shell:
-          !include-raw-escape: ../shell/pypi-dist-build.sh
+          !include-raw-escape: ../../shell/pypi-dist-build.sh
 
       - publish-pypi:
           pypi-server: staging
@@ -121,7 +121,7 @@
             - file-id: pypirc
               target: '$HOME/.pypirc'
       - shell:
-          !include-raw-escape: ../shell/pypi-dist-build.sh
+          !include-raw-escape: ../../shell/pypi-dist-build.sh
 
       - publish-pypi:
           pypi-server: release
@@ -155,7 +155,7 @@
             - file-id: pypirc
               target: '$HOME/.pypirc'
       - shell:
-          !include-raw-escape: ../shell/pypi-dist-build.sh
+          !include-raw-escape: ../../shell/pypi-dist-build.sh
 
       - publish-pypi:
           pypi-server: staging
@@ -188,7 +188,7 @@
             - file-id: pypirc
               target: '$HOME/.pypirc'
       - shell:
-          !include-raw-escape: ../shell/pypi-dist-build.sh
+          !include-raw-escape: ../../shell/pypi-dist-build.sh
 
       - publish-pypi:
           pypi-server: release
