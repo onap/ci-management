@@ -10,7 +10,7 @@
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
           mvn-goals: 'docker:build'
-          docker-image-name: 'onap/refrepo'
+          docker-image-name: 'onap/vnfsdk/refrepo'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
           mvn-profile: 'docker'
