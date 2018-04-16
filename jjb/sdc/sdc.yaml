@@ -31,5 +31,5 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-goals: 'clean install'
+    mvn-goals: 'clean install -Djacoco.skip=false'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
