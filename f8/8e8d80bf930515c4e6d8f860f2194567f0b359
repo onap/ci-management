@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Liam Fallon <liam.fallon@ericsson.com>
+Code-Review+1: Jorge Hernandez <jh1730@att.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-by: Jeremy Phelps <jphelps@linuxfoundation.org>
+Submitted-at: Tue, 17 Apr 2018 13:40:28 +0000
+Reviewed-on: https://gerrit.onap.org/r/43329
+Project: ci-management
+Branch: refs/heads/master
