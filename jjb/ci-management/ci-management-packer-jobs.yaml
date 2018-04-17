@@ -69,3 +69,21 @@
       - centos-7
       - ubuntu-16.04
     templates: redis
+
+- project:
+    name: packer-helm-jobs
+    jobs:
+      - gerrit-packer-merge
+
+    project: ci-management
+    project-name: ci-management
+    branch: master
+    archive-artifacts: '**/*.log'
+
+    build-node: centos7-builder-2c-1g
+
+    platforms:
+      - centos-7
+      - ubuntu-16.04
+    templates: helm
+
