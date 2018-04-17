@@ -1,0 +1,15 @@
+---
+- import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+  vars:
+    kubernetes_version: 1.8.6
+    kubernetes_helm_ver: 2.6.1
+    kubernetes_helm_checksum: 5e90d8ad17ba42e67dad97b5c2230707beadd2635f89d6ccc96f8a92777c42c4
+
+  roles:
+    - fkautz.kubernetes
+    - andrewrothstein.kubernetes-helm
+
