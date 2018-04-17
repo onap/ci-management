@@ -1,0 +1,5 @@
+---
+- src: fkautz.kubernetes
+  version: 1.8.6
+- src: andrewrothstein.kubernetes-helm
+  version: 2.6.1
