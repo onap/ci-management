@@ -20,7 +20,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{subproject}-python-staging-{stream}'
 - project:
-    name: vnfsdk-pkgtools-sonar
+    name: vnfsdk-pkgtools-tox-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
