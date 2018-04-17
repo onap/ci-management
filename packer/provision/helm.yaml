@@ -1,0 +1,34 @@
+---
+- import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+
+  vars:
+    kubectl_version: 1.8.6
+    helm_version: 2.6.1
+
+  tasks:
+    - name: 'Install kubectl {{kubectl_version}}'
+      get_url:
+        url: https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/linux/amd64/kubectl
+        dest: /usr/local/bin/kubectl
+        mode: 0775
+      become: yes
+
+    - name: 'Install Helm {{helm_version}}'
+      block:
+        - name: 'Fetch tar.gz'
+          get_url:
+            url: http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz
+            dest: /tmp/helm-v{{helm_version}}-linux-amd64.tar.gz
+        - name: 'Unarchive'
+          unarchive:
+            src: /tmp/helm-v{{helm_version}}-linux-amd64.tar.gz
+            dest: /tmp
+            remote_src: true
+          become: yes
+        - name: 'Copy help to /usr/local/bin and set as executable'
+          command: 'cp /tmp/linux-amd64/helm /usr/local/bin && ls -a /usr/local/bin && chmod +x /usr/local/bin/helm'
+          become: yes
