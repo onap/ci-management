@@ -25,9 +25,9 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
 - project:
-    name: vnfsdk-dovetail-integration-sonar
+    name: vnfsdk-dovetail-integration-tox-sonar
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-tox-sonar
     cron: 'H 11 * * *'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vnfsdk/dovetail-integration'
