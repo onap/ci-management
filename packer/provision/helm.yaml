@@ -1,0 +1,25 @@
+---
+- import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+
+  vars:
+    kubectl_version: 1.8.6
+    helm_ver: 2.6.1
+
+  tasks:
+    - name: 'Install kubectl {{kubectl_version}}'
+      command: |
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/linux/amd64/kubectl
+          sudo chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
+      become: true
+
+    - name: 'Install Helm {{helm_version}}'
+      command: |
+          wget http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz
+          sudo tar -zxvf helm-v{{helm_version}}-linux-amd64.tar.gz
+          sudo mv linux-amd64/helm /usr/local/bin/helm
+      become: true

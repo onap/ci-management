@@ -1,0 +1,3 @@
+---
+- src: fkautz.kubernetes-install
+- src: andrewrothstein.kubernetes-helm
