@@ -21,12 +21,6 @@
           pom: 'ice-server/pom.xml'
           tox-dir: 'ice-server/'
           tox-envs: ''
-      - 'docker':
-          path: 'docker'
-          pattern: 'docker/**'
-          pom: 'docker/pom.xml'
-          tox-dir: 'ice-server/'
-          tox-envs: ''
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
@@ -34,6 +28,23 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
+- project:
+    name: vnfsdk-ice-docker
+    project-name: 'vnfsdk-ice-docker'
+    project: 'vnfsdk/ice'
+    pom: 'pom.xml'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - 'docker':
+          path: 'docker'
+          pattern: 'docker/**'
+          pom: 'docker/pom.xml'
+    mvn-settings: 'vnfsdk-ice-settings'
+    build-node: ubuntu1604-builder-4c-4g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'docker/pom.xml'
           mvn-profile: 'docker'
