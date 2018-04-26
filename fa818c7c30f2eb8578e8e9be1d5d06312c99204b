@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_de7d8ab3",
+        "filename": "jjb/sdc/sdc-dcae-ci.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "remove blank line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_fe7ac6b8",
+        "filename": "jjb/sdc/sdc-dcae-ci.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "add blank line between project defs, makes the code much cleaner to read/maintain",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_7e46b67c",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "rm blank line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_9e4b8286",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "add blank line between project defs, makes the code much cleaner to read/maintain",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3e5cae4a",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-property.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "rm blank line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_5e389aed",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-property.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "add empty line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3e234ebe",
+        "filename": "jjb/sdc/sdc-dcae-fe.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "rm blank line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_9e19428a",
+        "filename": "jjb/sdc/sdc-dcae-fe.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-04-26T11:39:47Z",
+      "side": 1,
+      "message": "add empty line",
+      "revId": "fa818c7c30f2eb8578e8e9be1d5d06312c99204b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
