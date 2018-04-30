@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_ff587732",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-30T15:26:48Z",
+      "side": 1,
+      "message": "Capitalize the firs word of every line",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "d4f5007ff19f67554cc47965c4c0533eb094f7a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_5f496b5e",
+        "filename": "jjb/sdc/sdc-dcae-ci.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-30T15:26:48Z",
+      "side": 1,
+      "message": "Remove \":\" since we are not passing any parameters",
+      "range": {
+        "startLine": 7,
+        "startChar": 24,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "d4f5007ff19f67554cc47965c4c0533eb094f7a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_7f446746",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-30T15:26:48Z",
+      "side": 1,
+      "message": "Remove \":\" since we are not passing any parameters",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "d4f5007ff19f67554cc47965c4c0533eb094f7a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_1f7763a1",
+        "filename": "jjb/sdc/sdc-dcae-dt-be-property.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-30T15:26:48Z",
+      "side": 1,
+      "message": "Remove \":\" since we are not passing any parameters",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "d4f5007ff19f67554cc47965c4c0533eb094f7a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3f7a5f88",
+        "filename": "jjb/sdc/sdc-dcae-fe.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-04-30T15:26:48Z",
+      "side": 1,
+      "message": "Remove \":\" since we are not passing any parameters",
+      "range": {
+        "startLine": 6,
+        "startChar": 8,
+        "endLine": 6,
+        "endChar": 25
+      },
+      "revId": "d4f5007ff19f67554cc47965c4c0533eb094f7a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
