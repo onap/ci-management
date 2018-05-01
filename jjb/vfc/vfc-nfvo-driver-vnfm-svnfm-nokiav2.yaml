@@ -17,6 +17,14 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - '{project-name}-{subproject}-{stream}-merge-docker':
+          pre_build_script: 'cd $WORKSPACE/nokiav2/deployment; mvn install'
+          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
+          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
+      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
+          pre_build_script: 'cd $WORKSPACE/nokiav2/deployment; mvn install'
+          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
+          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
