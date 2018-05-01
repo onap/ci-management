@@ -17,6 +17,10 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - '{project-name}-{stream}-{subproject}-docker-java-version-daily':
+          docker-pom: 'nokiav2/deployment/pom.xml'
+          mvn-goals: 'install'
+          mvn-opts: '-Dexec.args="buildDocker pushImage"'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
