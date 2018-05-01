@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_a7b2e191",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-01T23:11:30Z",
+      "side": 1,
+      "message": "This template does not use these parameters. \nIt uses the following: \n    pre_build_script: \u0027\u0027\n    post_build_script: \u0027\u0027\n    docker_root: \u0027$WORKSPACE\u0027\n    docker_build_args: \u0027\u0027\n    docker_name: \u0027unnamed\u0027\n    # Default to LF standard \u0027snapshots\u0027 docker registry\n    docker_registry: \u0027$DOCKER_REGISTRY:10003\u0027\n    docker_tag: \u0027latest\u0027\n\nYou can take a look at global-templates-docker.yaml to see where these variables are used in our scripts for this template",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 57
+      },
+      "revId": "7b104a5a59481ab2c110769db42f906b7fc126a3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_c7adad32",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-01T23:11:30Z",
+      "side": 1,
+      "message": "Same as my previous comment.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 57
+      },
+      "revId": "7b104a5a59481ab2c110769db42f906b7fc126a3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
