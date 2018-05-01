@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_87f56552",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-01T22:45:15Z",
+      "side": 1,
+      "message": "You need a \":\" at the end of this line since you are passing parameters to this job.",
+      "range": {
+        "startLine": 20,
+        "startChar": 8,
+        "endLine": 20,
+        "endChar": 59
+      },
+      "revId": "20075f9c88f987e3f39963f3b3e7fbe842205085",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
