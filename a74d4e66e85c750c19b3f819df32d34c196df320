@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_e739c9f2",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-01T23:52:29Z",
+      "side": 1,
+      "message": "ps remove whitespace or this would cause JJB failures.",
+      "range": {
+        "startLine": 22,
+        "startChar": 52,
+        "endLine": 22,
+        "endChar": 53
+      },
+      "revId": "a74d4e66e85c750c19b3f819df32d34c196df320",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_073dd5dc",
+        "filename": "jjb/vfc/vfc-nfvo-driver-vnfm-svnfm-nokiav2.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-01T23:52:29Z",
+      "side": 1,
+      "message": "ps remove whitespace or this would cause JJB failures.",
+      "range": {
+        "startLine": 26,
+        "startChar": 52,
+        "endLine": 26,
+        "endChar": 53
+      },
+      "revId": "a74d4e66e85c750c19b3f819df32d34c196df320",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
