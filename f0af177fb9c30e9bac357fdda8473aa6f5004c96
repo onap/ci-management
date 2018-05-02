@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_b843e040",
+        "filename": "jjb/sdc/sdc-dcae-d-ci.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T12:11:11Z",
+      "side": 1,
+      "message": "rm whitespace, this fails JJB verify",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 4
+      },
+      "revId": "f0af177fb9c30e9bac357fdda8473aa6f5004c96",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_d83eecb7",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-main.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T12:11:11Z",
+      "side": 1,
+      "message": "rm whitespace, this fails JJB verify",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 4
+      },
+      "revId": "f0af177fb9c30e9bac357fdda8473aa6f5004c96",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_7849d85e",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-property.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T12:11:11Z",
+      "side": 1,
+      "message": "rm whitespace, this fails JJB verify",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 4
+      },
+      "revId": "f0af177fb9c30e9bac357fdda8473aa6f5004c96",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3877d0a1",
+        "filename": "jjb/sdc/sdc-dcae-d-fe.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T12:11:11Z",
+      "side": 1,
+      "message": "rm whitespace, this fails JJB verify",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 4
+      },
+      "revId": "f0af177fb9c30e9bac357fdda8473aa6f5004c96",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
