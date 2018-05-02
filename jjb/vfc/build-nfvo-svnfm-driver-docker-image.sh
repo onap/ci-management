@@ -17,7 +17,3 @@ echo '============== BUILDING NOKIA V1 IMAGE ================='
 chmod 755 ./nokia/vnfmdriver/vfcadaptorservice/docker/*.*
 ./nokia/vnfmdriver/vfcadaptorservice/docker/build_image.sh
 
-echo '============== BUILDING NOKIA V2 IMAGE ================='
-chmod 755 ./nokiav2/deployment/src/main/resources/*.sh
-./nokiav2/deployment/src/main/resources/build_image.sh buildDocker pushImage
-
