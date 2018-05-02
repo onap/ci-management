@@ -1,8 +1,8 @@
 ---
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2
-    project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
     project: 'vfc/nfvo/driver/vnfm/svnfm'
+    project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
     stream:
       - 'master':
           branch: 'master'
@@ -17,27 +17,43 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{subproject}-{stream}-merge-docker':
-          pre_build_script: 'cd $WORKSPACE/nokiav2/deployment; mvn install'
-          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
-          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
-      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
-          pre_build_script: 'cd $WORKSPACE/nokiav2/deployment; mvn install'
-          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
-          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-docker
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    subproject:
+      - 'docker-vnfm-nokiav2':
+          pom: 'nokiav2/pom.xml'
+          pattern: 'nokiav2/**'
+    jobs:
+      - '{project-name}-{subproject}-{stream}-merge-docker':
+          docker_build_args: '--build-arg --build-arg MODE=-SNAPSHOT --build-arg REPO=snapshots'
+          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
+          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
+      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
+          docker_build_args: '--build-arg --build-arg MODE= --build-arg REPO=staging'
+          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
+          docker_root: '$WORKSPACE/nokiav2/deployment/src/main/resources'
+    build-node: ubuntu1604-docker-8c-8g
+
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    mvn-params: '-f nokiav2/pom.xml'
-    build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokiav2'
+    cron: 'H 11 * * *'
     branch: 'master'
+    mvn-params: '-f nokiav2/pom.xml'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    jobs:
+      - gerrit-maven-sonar
+    build-node: ubuntu1604-builder-4c-4g
