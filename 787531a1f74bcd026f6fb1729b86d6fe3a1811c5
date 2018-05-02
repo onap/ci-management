@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_582c1c99",
+        "filename": "jjb/sdc/sdc-dcae-d-ci.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "rm empty line",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_f81e485e",
+        "filename": "jjb/sdc/sdc-dcae-d-ci.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "Please add a blank line above the \u0027- project\u0027 section, makes the code more easily readable.",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_98162448",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "rm empty line",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3829108a",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "- project\n\nPlease add a blank line above the \u0027- project\u0027 section, makes the code more easily readable.",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_180bf424",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-property.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "rm blank line",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_781b1873",
+        "filename": "jjb/sdc/sdc-dcae-d-dt-be-property.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "Please add a blank line above the \u0027- project\u0027 section, makes the code more easily readable.",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_5805fc0e",
+        "filename": "jjb/sdc/sdc-dcae-d-fe.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-02T11:57:29Z",
+      "side": 1,
+      "message": "- project\n\nPlease add a blank line above the \u0027- project\u0027 section, makes the code more easily readable.",
+      "revId": "787531a1f74bcd026f6fb1729b86d6fe3a1811c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
