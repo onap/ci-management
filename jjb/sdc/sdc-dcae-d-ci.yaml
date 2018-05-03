@@ -1,0 +1,30 @@
+---
+- project:
+    name: sdc-dcae-d-ci
+    project-name: 'sdc-dcae-d-ci'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/dcae-d/ci'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-dcae-d-ci-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+- project:
+    name: sdc-dcae-ci-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/dcae-d/ci'
+    project-name: 'sdc-dcae-d-ci'
+    branch: 'master'
+    mvn-settings: 'sdc-dcae-d-ci-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
