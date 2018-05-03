@@ -41,7 +41,7 @@
       - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
           docker_build_args: '--build-arg MODE= --build-arg REPO=staging'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
-          docker_root: '$WORKSPACE/nokiav2/deployment/src'
+          docker_root: '$WORKSPACE/nokiav2/deployment'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
