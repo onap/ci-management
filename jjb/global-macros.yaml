@@ -57,7 +57,6 @@
           global-settings: 'global-settings'
           global-settings-type: cfp
           properties:
-            - maven.test.skip=true
             - docker.pull.registry=nexus3.onap.org:10001
             - docker.push.registry=nexus3.onap.org:10003
 
