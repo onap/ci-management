@@ -16,7 +16,8 @@
     jobs:
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-docker-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
 - project:

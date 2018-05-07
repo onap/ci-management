@@ -48,6 +48,7 @@
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'docker/pom.xml'
           mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
 - project:
     name: vnfsdk-ice-validation-scripts-tox-sonar
     jobs:
