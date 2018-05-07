@@ -17,6 +17,7 @@
             - 'aai-traversal-{stream}-aai-docker-java-version-daily'
       - 'esr-server':
           trigger_jobs:
-            - 'aai-esr-server-{stream}-docker-java-daily'
+            - 'aai-esr-server-{stream}-docker-java-daily':
+                mvn-params: '-Dmaven.test.skip=true'
     robot-options: ''
 
