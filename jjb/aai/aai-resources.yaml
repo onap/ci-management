@@ -10,6 +10,7 @@
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'aai-resources/pom.xml'
           mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
     project: 'aai/resources'
     stream:
       - 'master':
