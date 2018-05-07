@@ -14,10 +14,12 @@
             - '{project-name}-{stream}-sdc-merge-java'
       - 'nightly':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+            - '{project-name}-{stream}-docker-version-java-daily':
+                mvn-params: '-Dmaven.test.skip=true'
       - 'uiSanity':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+            - '{project-name}-{stream}-docker-version-java-daily':
+                mvn-params: '-Dmaven.test.skip=true'
     robot-options: ''
     branch: 'master'
     html-dir: 'archives'
