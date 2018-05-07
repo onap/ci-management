@@ -9,6 +9,7 @@
     functionality:
       - 'healthCheck':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+            - '{project-name}-{stream}-docker-version-java-daily':
+                mvn-params: '-Dmaven.test.skip=true'
     robot-options: ''
     branch: 'master'
