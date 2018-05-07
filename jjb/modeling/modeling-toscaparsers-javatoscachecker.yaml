@@ -23,6 +23,7 @@
          setVersion: 'DontSetVersion'
          docker-pom: 'javatoscachecker/pom.xml'
          mvn-profile: 'docker'
+         mvn-params: '-Dmaven.test.skip=true'
          maven-properties: |
           skip.docker.build=false
           skip.docker.tag=false
