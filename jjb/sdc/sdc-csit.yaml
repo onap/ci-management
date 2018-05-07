@@ -15,9 +15,6 @@
       - 'nightly':
           trigger_jobs:
             - '{project-name}-{stream}-docker-version-java-daily'
-      - 'uiSanity':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
     html-dir: 'archives'
