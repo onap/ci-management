@@ -1217,6 +1217,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
 
     scm:
       - gerrit-trigger-scm:
@@ -1250,6 +1252,7 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+          mvn-params: '{mvn-params}'
 
     publishers:
       - infra-shiplogs:
@@ -1285,6 +1288,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
     scm:
       - gerrit-trigger-scm:
           refspec: ''
@@ -1328,6 +1333,7 @@
           properties: '{maven-properties}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+          mvn-params: '{mvn-params}'
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
@@ -1597,6 +1603,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
 
     scm:
       - gerrit-trigger-scm:
@@ -1643,6 +1651,7 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+          mvn-params: '{mvn-params}'
 
     publishers:
       - infra-shiplogs:
@@ -1678,6 +1687,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
 
     scm:
       - gerrit-trigger-scm:
@@ -1726,6 +1737,7 @@
           pom: '{docker-pom}'
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
+          mvn-params: '{mvn-params}'
 
     publishers:
       - infra-shiplogs:
