@@ -12,6 +12,7 @@
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
+          mvn-params: '-DskipTests=true'
       - gerrit-maven-clm
     project: 'sdc'
     stream:
