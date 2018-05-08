@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Vitaly Emporopulo <Vitaliy.Emporopulo@amdocs.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Code-Review+1: Michael Lando <ml636r@att.com>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 08 May 2018 22:55:45 +0000
+Reviewed-on: https://gerrit.onap.org/r/46437
+Project: ci-management
+Branch: refs/heads/master
