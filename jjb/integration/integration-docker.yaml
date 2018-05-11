@@ -13,6 +13,10 @@
       - 'sniroemulator':
           pom: 'test/mocks/sniroemulator/pom.xml'
           pattern: 'test/mocks/sniroemulator/**'
+    subproject:
+      - 'pnfsimulator':
+          pom: 'test/mocks/pnfsimulator/pom.xml'
+          pattern: 'test/mocks/pnfsimulator/**'
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
