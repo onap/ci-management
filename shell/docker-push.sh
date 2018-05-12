@@ -4,3 +4,4 @@ set -e -o pipefail
 
 # Push our image to wherever it's defined to go by the name
 docker push "$DOCKER_IMAGE"
+docker push "$DOCKER_IMAGE_LATEST"
