@@ -10,8 +10,6 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
     project: 'dmaap/messagerouter/messageservice'
     stream:
       - 'master':
