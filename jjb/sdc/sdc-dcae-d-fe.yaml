@@ -2,6 +2,7 @@
 - project:
     name: sdc-dcae-d-fe
     project-name: 'sdc-dcae-d-fe'
+    build-node: ubuntu1604-builder-4c-2g
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
