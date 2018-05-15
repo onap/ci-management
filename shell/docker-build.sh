@@ -6,13 +6,13 @@ set -e -o pipefail
 FULL_DATE=`date +'%Y%m%dT%H%M%S'`
 IMAGE_VERSION=`xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
 
-case "$DOCKERREGISTRY" in
-   "$DOCKER_REGISTRY:10004")
+case "$BUILD_MODE" in
+   "SNAPSHOT")
       DOCKER_TAG="$IMAGE_VERSION"-STAGING-"$FULL_DATE"Z
       DOCKER_LATEST_TAG="$IMAGE_VERSION"-STAGING-latest
       echo "Using tags $DOCKER_TAG and $DOCKER_LATEST_TAG"
       ;;
-   "$DOCKER_REGISTRY:10003")
+   "STAGING")
       DOCKER_TAG="$IMAGE_VERSION"-SNAPSHOT-"$FULL_DATE"Z
       DOCKER_LATEST_TAG="$IMAGE_VERSION"-SNAPSHOT-latest
       echo "Using tags $DOCKER_TAG and $DOCKER_LATEST_TAG"
