@@ -112,6 +112,7 @@
             DOCKER_NAME={docker_name}
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
+            BUILD_MODE=SNAPSHOT
             DOCKERREGISTRY={docker_registry}
       # Do the docker build
       - shell: !include-raw: ../shell/docker-build.sh
@@ -151,6 +152,7 @@
             DOCKER_NAME={docker_name}
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
+            BUILD_MODE=SNAPSHOT
             DOCKERREGISTRY={docker_registry}
       # Do the docker build
       - shell: !include-raw: ../shell/docker-build.sh
@@ -171,7 +173,7 @@
     #     branch:    git branch (eg. stable/lithium or master)
     <<: *docker_job_boiler_plate
 
-    docker_registry: '$DOCKER_REGISTRY:10004'
+    docker_registry: '$DOCKER_REGISTRY:10003'
 
     scm:
       - lf-infra-gerrit-scm:
@@ -196,6 +198,7 @@
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
             DOCKERREGISTRY={docker_registry}
+            BUILD_MODE=STAGING
 
       # Do the docker build
       - shell: !include-raw: ../shell/snapshot-strip.sh
@@ -241,6 +244,7 @@
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
             DOCKERREGISTRY={docker_registry}
+            BUILD_MODE=SNAPSHOT
       # Do the docker build
       - shell: !include-raw: ../shell/docker-build.sh
       - inject:
@@ -280,6 +284,7 @@
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
             DOCKERREGISTRY={docker_registry}
+            BUILD_MODE=SNAPSHOT
       # Do the docker build
       - shell: !include-raw: ../shell/docker-build.sh
       - inject:
@@ -299,7 +304,7 @@
     #     branch:    git branch (eg. stable/lithium or master)
     <<: *docker_job_boiler_plate
 
-    docker_registry: '$DOCKER_REGISTRY:10004'
+    docker_registry: '$DOCKER_REGISTRY:10003'
 
     scm:
       - lf-infra-gerrit-scm:
@@ -324,6 +329,7 @@
             DOCKER_ROOT={docker_root}
             DOCKER_TAG={docker_tag}
             DOCKERREGISTRY={docker_registry}
+            BUILD_MODE=STAGING
 
       # Do the docker build
       - shell: !include-raw: ../shell/snapshot-strip.sh
