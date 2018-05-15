@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_2b0af378",
+        "filename": "shell/docker-build.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2255
+      },
+      "writtenOn": "2018-05-15T17:36:30Z",
+      "side": 1,
+      "message": "just realised this should be latest",
+      "range": {
+        "startLine": 28,
+        "startChar": 43,
+        "endLine": 28,
+        "endChar": 47
+      },
+      "revId": "09d512bc2f92641ca4a0315e9222770697f7807a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
