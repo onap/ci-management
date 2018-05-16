@@ -86,8 +86,8 @@
 
     scm:
       - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
