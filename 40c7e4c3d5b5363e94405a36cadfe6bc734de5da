@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a93c517_433c03e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-16T17:47:55Z",
+      "side": 1,
+      "message": "My only concern with this change is this description. \n\nCan we elaborate better on it so that people know why we are\nmaking this change precisely?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "40c7e4c3d5b5363e94405a36cadfe6bc734de5da",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_06792e2e",
         "filename": "jjb/global-templates-docker.yaml",
         "patchSetId": 2
