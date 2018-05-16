@@ -17,7 +17,7 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-    files: '**'
+    files: 'nokiav2/**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
@@ -42,8 +42,8 @@
           docker_build_args: '--build-arg MODE= --build-arg REPO=staging'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
-          docker_registry: 10003
-    files: '**'
+          docker_registry: '$DOCKER_REGISTRY:10003'
+    files: 'nokiav2/**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
 
