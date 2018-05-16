@@ -414,7 +414,7 @@
                   branch-pattern: '**/{branch}'
               file-paths:
                 - compare-type: 'ANT'
-                  pattern: '**'
+                  pattern: '{files}'
 
 - trigger:
     name: trigger-on-build-success
