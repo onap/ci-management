@@ -1,0 +1,34 @@
+---
+
+- project:
+    name: sdc-dcae-d-tosca-lab
+    project-name: 'sdc-dcae-d-tosca-lab'
+    project: 'sdc/dcae-d/tosca-lab'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - validation-scripts:
+          path: '.'
+          pattern: '**'
+    mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
+    build-node: ubuntu1604-docker-8c-8g
+    jobs:
+      - gerrit-python-xc-clm:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
+- project:
+    name: sdc-dcae-d-tosca-lab-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-docker-8c-8g
+    project: 'sdc/dcae-d/tosca-lab'
+    project-name: 'sdc-dcae-d-tosca-lab'
+    branch: 'master'
+    mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
