@@ -28,6 +28,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-{subproject}-python-release-{stream}'
 - project:
     name: vnfsdk-ice-docker
     project-name: 'vnfsdk-ice-docker'
