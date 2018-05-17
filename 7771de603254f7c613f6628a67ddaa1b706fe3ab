@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_942c83ad",
+        "filename": "jjb/sdc/sdc-dcae-d-tosca-lab.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-17T09:03:19Z",
+      "side": 1,
+      "message": "remove this empty line",
+      "revId": "7771de603254f7c613f6628a67ddaa1b706fe3ab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_b4273fc6",
+        "filename": "jjb/sdc/sdc-dcae-d-tosca-lab.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-05-17T09:03:19Z",
+      "side": 1,
+      "message": "add a line between project sections",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 46
+      },
+      "revId": "7771de603254f7c613f6628a67ddaa1b706fe3ab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
