@@ -3,6 +3,7 @@
     name: vvp-documentation
     project-name: 'vvp-documentation'
     project: 'vvp/documentation'
+    rtdproject: 'onap'
     stream:
       - 'master':
           branch: 'master'
@@ -10,3 +11,5 @@
     build-node: ubuntu1604-builder-4c-4g
     jobs:
       - gerrit-python-xc-clm
+      - '{project-name}-{stream}-verify-rtd'
+      - '{project-name}-{stream}-merge-rtd'
