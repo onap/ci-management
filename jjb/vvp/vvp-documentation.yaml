@@ -11,5 +11,4 @@
     build-node: ubuntu1604-builder-4c-4g
     jobs:
       - gerrit-python-xc-clm
-      - '{project-name}-{stream}-verify-rtd'
-      - '{project-name}-{stream}-merge-rtd'
+      - '{project-name}-tox-verify-{stream}'
