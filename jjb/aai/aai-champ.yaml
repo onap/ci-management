@@ -6,11 +6,10 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'champ-service/pom.xml'
           mvn-goals: 'docker:build'
-      - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/champ'
     stream:
       - 'master':
