@@ -1,0 +1,17 @@
+---
+- project:
+    name: policy-parent
+    project-name: 'policy-parent'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'policy/parent'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-parent-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
