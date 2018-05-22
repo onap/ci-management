@@ -1,0 +1,29 @@
+---
+- project:
+    name: policy-xacml-pdp
+    project-name: 'policy-xacml-pdp'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'policy/xacml-pdp'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-xacml-pdp-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+- project:
+    name: policy-xacml-pdp-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'policy/xacml-pdp'
+    project-name: 'policy-xacml-pdp'
+    branch: 'master'
+    mvn-settings: 'policy-xacml-pdp-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
