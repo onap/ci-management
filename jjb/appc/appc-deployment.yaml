@@ -18,6 +18,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'appc-deployment-settings'
     files: '**'
     archive-artifacts: ''

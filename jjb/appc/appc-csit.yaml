@@ -6,8 +6,8 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'appc'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     functionality:
       - 'healthcheck':
           trigger_jobs:
