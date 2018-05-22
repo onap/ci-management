@@ -9,6 +9,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     subproject:
       - 'sniroemulator':
           pom: 'test/mocks/sniroemulator/pom.xml'
