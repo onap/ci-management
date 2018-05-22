@@ -15,6 +15,9 @@
     stream:
       - 'master':
           branch: 'master'
+    stream:
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
