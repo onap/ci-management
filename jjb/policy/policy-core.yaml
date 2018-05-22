@@ -1,0 +1,29 @@
+---
+- project:
+    name: policy-core
+    project-name: 'policy-core'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'policy/core'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-core-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+- project:
+    name: policy-core-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'policy/core'
+    project-name: 'policy-core'
+    branch: 'master'
+    mvn-settings: 'policy-core-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
