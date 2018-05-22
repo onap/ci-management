@@ -2,11 +2,15 @@
 - project:
     name: aaf-sms
     project-name: 'aaf-sms'
+    subproject: 'aaf-sms-client'
     path: 'sms-service/src'
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
+      - '{project-name}-{stream}-{subproject}-release-java-daily':
+          pom:
+            'sms-client/java/pom.xml'
       - '{project-name}-{stream}-docker-golang-shell-daily':
           script:
             !include-raw-escape: 'build-sms-docker-image.sh'
