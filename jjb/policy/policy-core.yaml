@@ -1,0 +1,17 @@
+---
+- project:
+    name: policy-core
+    project-name: 'policy-core'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'policy/core'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-core-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
