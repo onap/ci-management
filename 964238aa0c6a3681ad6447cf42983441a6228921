@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_09f7ecd5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-22T20:36:22Z",
+      "side": 1,
+      "message": "Please elaborate a little bit more in a separate description",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "964238aa0c6a3681ad6447cf42983441a6228921",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_6912300b",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-22T20:36:22Z",
+      "side": 1,
+      "message": "Remove trailing spaces",
+      "range": {
+        "startLine": 30,
+        "startChar": 33,
+        "endLine": 30,
+        "endChar": 43
+      },
+      "revId": "964238aa0c6a3681ad6447cf42983441a6228921",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
