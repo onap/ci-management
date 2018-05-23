@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'aai-search-data-service-settings'
     files: '**'
     archive-artifacts: ''

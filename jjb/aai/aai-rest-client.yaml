@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'aai-rest-client-settings'
     files: '**'
     archive-artifacts: ''
