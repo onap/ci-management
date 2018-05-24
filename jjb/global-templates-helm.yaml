@@ -1,0 +1,175 @@
+---
+###########
+# ANCHORS #
+###########
+- helm_job_boiler_plate: &helm_job_boiler_plate
+    name: helm_job_boiler_plate
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    submodule-recursive: true
+
+    # default params for helm jobs
+    pre_build_script: ''
+    post_build_script: ''
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    publishers:
+      - lf-infra-publish
+
+- helm_verify_boiler_plate: &helm_verify_boiler_plate
+    name: helm_verify_boiler_plate
+
+    concurrent: true
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          status-context: '{project}-Helm-Verify'
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+- helm_merge_boiler_plate: &helm_merge_boiler_plate
+    name: helm_merge_boiler_plate
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+      - pollscm:
+          cron: ''
+
+#################
+# JOB TEMPLATES #
+#################
+- job-template:
+    name: '{project-name}-{stream}-verify-helm'
+    # Job template for helm verify jobs
+    #
+
+    ######################
+    # Default parameters #
+    ######################
+
+    <<: *helm_job_boiler_plate
+    # yamllint disable-line rule:key-duplicates
+    <<: *helm_verify_boiler_plate
+
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-merge-helm'
+    # Job template for Helm merge jobs
+
+    <<: *helm_job_boiler_plate
+    # yamllint disable-line rule:key-duplicates
+    <<: *helm_merge_boiler_plate
+
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{subproject}-{stream}-verify-helm'
+    # Job template for helm verify jobs
+
+    ######################
+    # Default parameters #
+    ######################
+
+    <<: *helm_job_boiler_plate
+    # yamllint disable-line rule:key-duplicates
+    <<: *helm_verify_boiler_plate
+
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{subproject}-{stream}-merge-helm'
+    # Job template for helm merge jobs
+
+    <<: *helm_job_boiler_plate
+    # yamllint disable-line rule:key-duplicates
+    <<: *helm_merge_boiler_plate
+
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-update-helm-weekly'
+    # Job template for weekly helm update jobs
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+    <<: *helm_job_boiler_plate
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '$GIT_URL/$PROJECT'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: true
+          choosing-strategy: default
+
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+    triggers:
+      # 11 AM UTC
+      - timed: 'H 11 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
