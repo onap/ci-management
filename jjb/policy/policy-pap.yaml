@@ -1,0 +1,29 @@
+---
+- project:
+    name: policy-pap
+    project-name: 'policy-pap'
+    jobs:
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+
+    project: 'policy/pap'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-pap-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+- project:
+    name: policy-pap-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'policy/pap'
+    project-name: 'policy-pap'
+    branch: 'master'
+    mvn-settings: 'policy-pap-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
