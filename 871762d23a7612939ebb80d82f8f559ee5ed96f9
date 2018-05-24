@@ -22,6 +22,30 @@
       "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_bf3aa196",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-05-24T21:44:28Z",
+      "side": 1,
+      "message": "Good idea, will make it a patchset",
+      "parentUuid": "5a93c517_3fd8d17e",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
