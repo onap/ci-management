@@ -23,7 +23,7 @@
          setVersion: 'DoSetVersion'
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
-         mvn-params: '-Dmaven.test.skip=true'
+         mvn-params: '-X -Dmaven.test.skip=true'
          maven-properties: |
           skip.docker.build=false
           skip.docker.tag=false
