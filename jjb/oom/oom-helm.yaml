@@ -1,0 +1,83 @@
+---
+- project:
+    name: oom
+    project-name: oom
+    project: oom
+    mvn-settings: oom-settings
+    archive-artifacts: ''
+    build-node: ubuntu1604-helm-2c-1g
+    pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
+    stream:
+      - 'master':
+          branch: 'master'
+
+    subproject:
+      - 'aaf':
+          files: 'kubernetes/aaf/**'
+      - 'aai':
+          files: 'kubernetes/aai/**'
+      - 'appc':
+          files: 'kubernetes/appc/**'
+      - 'clamp':
+          files: 'kubernetes/clamp/**'
+      - 'cli':
+          files: 'kubernetes/cli/**'
+      - 'common':
+          files: 'kubernetes/common/**'
+      - 'consul':
+          files: 'kubernetes/consul/**'
+      - 'dcaegen2':
+          files: 'kubernetes/dcaegen2/**'
+      - 'dmaap':
+          files: 'kubernetes/dmaap/**'
+      - 'esr':
+          files: 'kubernetes/esr/**'
+      - 'log':
+          files: 'kubernetes/log/**'
+      - 'msb':
+          files: 'kubernetes/msb/**'
+      - 'multicloud':
+          files: 'kubernetes/multicloud/**'
+      - 'nbi':
+          files: 'kubernetes/nbi/**'
+      - 'oof':
+          files: 'kubernetes/oof/**'
+      - 'policy':
+          files: 'kubernetes/policy/**'
+      - 'portal':
+          files: 'kubernetes/portal/**'
+      - 'readiness':
+          files: 'kubernetes/readiness/**'
+      - 'robot':
+          files: 'kubernetes/robot/**'
+      - 'sdc':
+          files: 'kubernetes/sdc/**'
+      - 'sdnc':
+          files: 'kubernetes/sdnc/**'
+      - 'sniro-emulator':
+          files: 'kubernetes/sniro-emulator/**'
+      - 'so':
+          files: 'kubernetes/so/**'
+      - 'uui':
+          files: 'kubernetes/uui/**'
+      - 'vfc':
+          files: 'kubernetes/vfc/**'
+      - 'vid':
+          files: 'kubernetes/vid/**'
+      - 'vnfsdk':
+          files: 'kubernetes/vnfsdk/**'
+
+    jobs:
+      - '{project-name}-{stream}-verify-helm':
+          build_script: 'make all'
+          files: '**'
+      - '{project-name}-{stream}-merge-helm':
+          build_script: 'make all'
+          files: '**'
+      - '{project-name}-{subproject}-{stream}-verify-helm':
+          build_script: 'make {subproject}'
+      - '{project-name}-{subproject}-{stream}-merge-helm':
+          build_script: 'make {subproject}'
+      - '{project-name}-{stream}-update-helm-weekly':
+          files: '**'
+          build_script: 'make all'
