@@ -46,6 +46,57 @@
       "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_3afd3f3c",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2018-05-25T13:30:59Z",
+      "side": 1,
+      "message": "Name of subproject should be \u0027aai\u0027.",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_7aebc778",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2018-05-25T13:30:59Z",
+      "side": 1,
+      "message": "The \u0027config\u0027 dir can be removed. It is obsolete code that will be removed.",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_5ae60bb2",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2018-05-25T13:30:59Z",
+      "side": 1,
+      "message": "This is an artifact of the build process so you can probably remove it as a subproject.",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
