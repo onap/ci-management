@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_251e800e",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-05-25T15:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a93c517_3fd8d17e",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_3afd3f3c",
         "filename": "jjb/oom/oom-helm.yaml",
         "patchSetId": 2
@@ -60,6 +84,24 @@
       "writtenOn": "2018-05-25T13:30:59Z",
       "side": 1,
       "message": "Name of subproject should be \u0027aai\u0027.",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_451b8c1c",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-05-25T15:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a93c517_3afd3f3c",
       "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
@@ -83,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "5a93c517_e51738ed",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-05-25T15:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a93c517_7aebc778",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a93c517_5ae60bb2",
         "filename": "jjb/oom/oom-helm.yaml",
         "patchSetId": 2
@@ -94,6 +154,24 @@
       "writtenOn": "2018-05-25T13:30:59Z",
       "side": 1,
       "message": "This is an artifact of the build process so you can probably remove it as a subproject.",
+      "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_051584e4",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-05-25T15:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a93c517_5ae60bb2",
       "revId": "871762d23a7612939ebb80d82f8f559ee5ed96f9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
