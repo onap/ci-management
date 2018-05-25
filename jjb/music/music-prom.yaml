@@ -1,0 +1,35 @@
+---
+- project:
+    name: music-prom
+    project-name: 'music-prom'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: docker
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'music/prom'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'music-prom-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: music-prom-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'music/prom'
+    project-name: 'music-prom'
+    branch: 'master'
+    mvn-settings: 'music-prom-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
