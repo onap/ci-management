@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_a09fde64",
+        "filename": "jjb/music/music-prom.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-25T21:07:20Z",
+      "side": 1,
+      "message": "music/prom",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 20
+      },
+      "revId": "ee3582001748e21c9e698dbb28050028b20c5081",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_60a9d68f",
+        "filename": "jjb/music/music-prom.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-05-25T21:07:20Z",
+      "side": 1,
+      "message": "music/prom",
+      "range": {
+        "startLine": 29,
+        "startChar": 14,
+        "endLine": 29,
+        "endChar": 24
+      },
+      "revId": "ee3582001748e21c9e698dbb28050028b20c5081",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
