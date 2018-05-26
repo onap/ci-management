@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     functionality:
       - 'sanity':
           trigger_jobs:

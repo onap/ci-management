@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'sdc-jtosca-settings'
     files: '**'
     archive-artifacts: ''
