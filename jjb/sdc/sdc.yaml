@@ -18,6 +18,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
@@ -31,6 +33,19 @@
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
+    mvn-settings: 'sdc-settings'
+    mvn-params: '-Djacoco.skip=false'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: sdc-beijing-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-8c-8g
+    project: 'sdc'
+    project-name: 'sdc'
+    branch: 'beijing'
     mvn-settings: 'sdc-settings'
     mvn-params: '-Djacoco.skip=false'
     mvn-goals: 'clean install'
