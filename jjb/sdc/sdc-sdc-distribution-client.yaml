@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
@@ -25,6 +27,18 @@
     project: 'sdc/sdc-distribution-client'
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'
+    mvn-settings: 'sdc-sdc-distribution-client-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: sdc-sdc-distribution-client-beijing-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/sdc-distribution-client'
+    project-name: 'sdc-sdc-distribution-client'
+    branch: 'beijing'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

@@ -13,6 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
@@ -28,6 +30,18 @@
     project: 'sdc/sdc-workflow-designer'
     project-name: 'sdc-sdc-workflow-designer'
     branch: 'master'
+    mvn-settings: 'sdc-sdc-workflow-designer-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: sdc-sdc-workflow-designer-beijing-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/sdc-workflow-designer'
+    project-name: 'sdc-sdc-workflow-designer'
+    branch: 'beijing'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

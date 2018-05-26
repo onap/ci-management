@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'sdc-sdc-tosca-settings'
     files: '**'
     archive-artifacts: ''
@@ -25,6 +27,18 @@
     project: 'sdc/sdc-tosca'
     project-name: 'sdc-sdc-tosca'
     branch: 'master'
+    mvn-settings: 'sdc-sdc-tosca-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+- project:
+    name: sdc-sdc-tosca-beijing-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/sdc-tosca'
+    project-name: 'sdc-sdc-tosca'
+    branch: 'beijing'
     mvn-settings: 'sdc-sdc-tosca-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
