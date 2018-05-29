@@ -18,3 +18,5 @@
           branch: 'master'
       - amsterdam:
           branch: 'amsterdam'
+      - beijing:
+          branch: 'beijing'

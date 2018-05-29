@@ -42,6 +42,7 @@
           wipe-workspace: true
           submodule:
             recursive: '{submodule-recursive}'
+            timeout: '12'
 
     wrappers:
       - infra-wrappers:
@@ -76,6 +77,8 @@
           pip freeze
           cd $WORKSPACE/{path}
           tox
+          mkdir -p "$WORKSPACE/archives"
+          mv  docs/_build/html "$WORKSPACE/archives/"
 
     publishers:
       - infra-shiplogs:
