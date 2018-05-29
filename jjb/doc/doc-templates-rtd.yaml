@@ -77,6 +77,8 @@
           pip freeze
           cd $WORKSPACE/{path}
           tox
+          mkdir -p "$WORKSPACE/archives"
+          mv  docs/_build/html "$WORKSPACE/archives/"
 
     publishers:
       - infra-shiplogs:
