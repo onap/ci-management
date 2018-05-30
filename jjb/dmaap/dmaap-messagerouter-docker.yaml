@@ -5,9 +5,8 @@
     project-name: 'dmaap-messagerouter-docker'
     jobs:
       - gerrit-maven-clm:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
     project: 'dmaap/messagerouter/messageservice'
