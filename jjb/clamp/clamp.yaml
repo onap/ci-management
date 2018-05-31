@@ -15,19 +15,13 @@
       - '{project-name}-{stream}-release-java-daily-checkstyle':
          setVersion: 'DoSetVersion'
          mvn_properties:
-          - skipDockerBuild=true
-          - skipDockerTag=true
-          - skipDockerPush=true
           - docker.pull.registry=nexus3.onap.org:10001
       - '{project-name}-{stream}-docker-java-properties-daily':
          setVersion: 'DoSetVersion'
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
-         mvn-params: '-X -Dmaven.test.skip=true'
+         mvn-params: '-Dmaven.test.skip=true'
          maven-properties: |
-          skip.docker.build=false
-          skip.docker.tag=false
-          skip.docker.push=false
           clamp.registry=$
 
     project: 'clamp'
