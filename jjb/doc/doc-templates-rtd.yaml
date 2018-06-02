@@ -42,7 +42,7 @@
           wipe-workspace: true
           submodule:
             recursive: '{submodule-recursive}'
-            timeout: '12'
+            timeout: '24'
 
     wrappers:
       - infra-wrappers:
