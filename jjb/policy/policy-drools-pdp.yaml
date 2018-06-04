@@ -17,6 +17,7 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
+          disabled: true
 
     project: 'policy/drools-pdp'
     stream:

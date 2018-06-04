@@ -6,7 +6,8 @@
       - gerrit-maven-clm:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-release-version-java-daily':
+          disabled: true
 
     project: 'policy/drools-applications'
     stream:
