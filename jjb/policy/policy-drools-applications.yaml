@@ -7,11 +7,14 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
+          disabled: true
 
     project: 'policy/drools-applications'
     stream:
       - 'master':
           branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'policy-drools-applications-settings'
     files: '**'
     archive-artifacts: ''
