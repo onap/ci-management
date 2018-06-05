@@ -15,8 +15,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-2.5.3':
-          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''

@@ -13,7 +13,11 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
     project: 'music'
     stream:
-      - 'jar-release-2.5.3':
+      - 'jar-master':
+          branch: 'master'
+      - 'jar-beijing':
+          branch: 'beijing'
+      - 'jar-release-2.5.5':
           branch: 'release-2.5.3'
     mvn-settings: 'music-settings'
     files: '**'
