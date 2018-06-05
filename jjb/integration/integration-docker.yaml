@@ -15,7 +15,6 @@
       - 'sniroemulator':
           pom: 'test/mocks/sniroemulator/pom.xml'
           pattern: 'test/mocks/sniroemulator/**'
-    subproject:
       - 'pnfsimulator':
           pom: 'test/mocks/pnfsimulator/pom.xml'
           pattern: 'test/mocks/pnfsimulator/**'
