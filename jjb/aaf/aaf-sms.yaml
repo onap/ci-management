@@ -8,7 +8,7 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
-      - '{project-name}-{stream}-{subproject}-release-java-daily':
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily':
           pom:
             'sms-client/java/pom.xml'
       - '{project-name}-{stream}-docker-golang-shell-daily':
