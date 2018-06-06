@@ -18,7 +18,7 @@
       - 'jar-beijing':
           branch: 'beijing'
       - 'jar-release-2.5.5':
-          branch: 'release-2.5.3'
+          branch: 'release-2.5.5'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
