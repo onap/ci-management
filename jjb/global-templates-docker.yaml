@@ -349,3 +349,53 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
+
+- job-template:
+    name: '{project-name}-{subproject}-{stream}-release-version-docker-no-sonar'
+    # Job template for Docker final release job
+    #
+    # The purpose of this job template is to run "docker build and docker push"
+    # for projects using this template.
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+    <<: *docker_job_boiler_plate
+
+    docker_registry: '$DOCKER_REGISTRY:10003'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '$GIT_URL/$PROJECT'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: true
+          choosing-strategy: default
+
+    builders:
+      - lf-infra-docker-login:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - shell: '{pre_build_script}'
+      - inject:
+          # Docker registry is purposely not using an '_' so as to not conflict
+          # with the Jenkins global env var
+          properties-content: |
+            DOCKER_ARGS={docker_build_args}
+            DOCKER_NAME={docker_name}
+            DOCKER_ROOT={docker_root}
+            DOCKER_TAG={docker_tag}
+            DOCKERREGISTRY={docker_registry}
+            BUILD_MODE=STAGING
+
+      # Do the docker build
+      - shell: !include-raw: ../shell/snapshot-strip.sh
+      - shell: !include-raw: ../shell/docker-build.sh
+      - inject:
+          # Import the docker image information from the build step
+          properties-file: 'env_inject.txt'
+      # Execute any post build clean-up or testing
+      - shell: '{post_build_script}'
+      # Provided all steps have already passed, push the docker image
+      - shell: !include-raw: ../shell/docker-push.sh
+
