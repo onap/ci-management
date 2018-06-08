@@ -43,6 +43,12 @@
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
           docker_registry: '$DOCKER_REGISTRY:10003'
+#This should only be executed for the release since it uses the release nexus to pull artifacts
+      - '{project-name}-{subproject}-{stream}-real-release-version-docker-daily-no-sonar':
+          docker_build_args: '--build-arg MODE= --build-arg REPO=releases'
+          docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
+          docker_root: '$WORKSPACE/nokiav2/deployment'
+          docker_registry: '$DOCKER_REGISTRY:10003'
     files: 'nokiav2/**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
