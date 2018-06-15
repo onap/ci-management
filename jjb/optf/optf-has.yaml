@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-1.1.1':
-          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
