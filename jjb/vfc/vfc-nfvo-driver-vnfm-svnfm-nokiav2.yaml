@@ -34,11 +34,11 @@
           pom: 'nokiav2/pom.xml'
           pattern: 'nokiav2/**'
     jobs:
-      - '{project-name}-{subproject}-{stream}-merge-docker':
+      - '{project-name}-{subproject}-{stream}-merge-docker-cascade-trigger':
           docker_build_args: '--build-arg MODE=-SNAPSHOT --build-arg REPO=snapshots'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
-      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
+      - '{project-name}-{subproject}-{stream}-release-version-docker-cascade-trigger-no-sonar':
           docker_build_args: '--build-arg MODE= --build-arg REPO=staging'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
