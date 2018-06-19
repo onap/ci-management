@@ -48,3 +48,6 @@
 
     # Jenkins
     jenkins-ssh-credential: onap-jenkins-ssh
+
+    # Default files pattern
+    files: '**'

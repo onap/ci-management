@@ -131,7 +131,7 @@
     # The purpose of this job template is to run a docker build, and potentially
     # test validation of the docker image. This job is triggered by the it's corresponding
     # job that builds the artifacts from which the docker image is built from. Projects
-    # using the {project-name}-{stream}-merge-docker job should move to this job. Because 
+    # using the {project-name}-{stream}-merge-docker job should move to this job. Because
     # the {project-name}-{stream}-merge-docker has no garanties that the docker image is built
     # from merged artifact.
 
