@@ -11,8 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     files: '**'
     archive-artifacts: ''
