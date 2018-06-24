@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_c2042d1a",
+        "filename": "jjb/global-templates-docker.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-06-24T22:35:08Z",
+      "side": 1,
+      "message": "please remove whitespace",
+      "range": {
+        "startLine": 134,
+        "startChar": 89,
+        "endLine": 134,
+        "endChar": 90
+      },
+      "revId": "20873de68da6be28cc67eee4d238b5720d01682c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
