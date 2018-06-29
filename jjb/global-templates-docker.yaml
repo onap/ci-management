@@ -166,7 +166,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-merge-java'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
