@@ -34,15 +34,18 @@
           pom: 'nokiav2/pom.xml'
           pattern: 'nokiav2/**'
     jobs:
-      - '{project-name}-{subproject}-{stream}-merge-docker':
+#missing docker build for verify
+      - '{project-name}-{subproject}-{stream}-merge-docker-cascade-trigger':
           docker_build_args: '--build-arg MODE=-SNAPSHOT --build-arg REPO=snapshots'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
-      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar':
+      - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar-cascade-trigger':
           docker_build_args: '--build-arg MODE= --build-arg REPO=staging'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
           docker_registry: '$DOCKER_REGISTRY:10003'
+#Since the release is moved manually from the staging repo to the release repo this job can not
+#be triggered in a cascade way
       - '{project-name}-{subproject}-{stream}-release-version-docker-no-sonar':
           docker_build_args: '--build-arg MODE= --build-arg REPO=releases'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
