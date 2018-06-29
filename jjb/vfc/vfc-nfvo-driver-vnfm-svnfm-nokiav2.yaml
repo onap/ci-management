@@ -39,11 +39,13 @@
           docker_build_args: '--build-arg MODE=-SNAPSHOT --build-arg REPO=snapshots'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
+          parent_job: '{project-name}-{stream}-drv-vnfm-nokiav2-merge-java'
       - '{project-name}-{subproject}-{stream}-release-version-docker-daily-no-sonar-cascade-trigger':
           docker_build_args: '--build-arg MODE= --build-arg REPO=staging'
           docker_name: 'onap/vfc/nfvo/svnfm/nokiav2'
           docker_root: '$WORKSPACE/nokiav2/deployment'
           docker_registry: '$DOCKER_REGISTRY:10003'
+          parent_job: '{project-name}-{stream}-drv-vnfm-nokiav2-release-version-java-daily'
 #Since the release is moved manually from the staging repo to the release repo this job can not
 #be triggered in a cascade way
       - '{project-name}-{subproject}-{stream}-release-version-docker-no-sonar':

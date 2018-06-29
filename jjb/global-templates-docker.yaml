@@ -166,7 +166,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-merge-java'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -251,7 +251,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-verify-java'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -364,7 +364,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-release-version-java-daily'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -442,7 +442,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-merge-java'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -523,7 +523,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-verify-java'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -636,7 +636,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+            - '{parent_job}'
           result: 'success'
 
 - job-template:
@@ -740,7 +740,7 @@
     triggers:
       - reverse:
           jobs:
-            - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+            - '{parent_job}'
           result: 'success'
 
 
