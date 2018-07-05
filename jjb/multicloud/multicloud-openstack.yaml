@@ -24,6 +24,14 @@
           path: 'ocata'
           pattern: 'share/**'
           pom: 'ocata/pom.xml'
+      - 'pike':
+          path: 'pike'
+          pattern: 'pike/**'
+          pom: 'pike/pom.xml'
+      - 'pike_share':
+          path: 'pike'
+          pattern: 'share/**'
+          pom: 'pike/pom.xml'
       - 'windriver':
           path: 'windriver'
           pattern: 'windriver/**'
