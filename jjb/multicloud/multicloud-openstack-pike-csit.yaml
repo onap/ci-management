@@ -1,0 +1,17 @@
+---
+- project:
+    name: multicloud-openstack-pike-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'multicloud-openstack-pike'
+    stream: 'master'
+    functionality:
+      - 'functionality1':
+          trigger_jobs:
+            - 'multicloud-openstack-master-docker-java-version-shell-daily'
+      - 'hpa-discovery':
+          trigger_jobs:
+            - 'multicloud-openstack-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
