@@ -4,19 +4,11 @@
     jobs:
       - 'lab-{job-name}'
     job-name:
-      - "windriver-beijing-heat-deploy":
-          job-desc: "Heat-based deployment into Wind River lab Integration-Stable tenant"
-      - "windriver-beijing-oom-deploy":
-          job-desc: "OOM-based deployment into Wind River lab Integration-Jenkins tenant"
-      - "tlab-beijing-heat-deploy":
+      - "windriver-heat-daily":
+          job-desc: "Heat-based deployment into Wind River lab Integration-HEAT-Daily tenant"
+      - "windriver-oom-daily":
+          job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Daily tenant"
+      - "tlab-heat-daily":
           job-desc: "Heat-based deployment into AT&T TLAB Integration-HEAT-Test tenant"
-      - "tlab-beijing-oom-deploy":
-          job-desc: "OOM-based deployment into AT&T TLAB Integration-OOM-Test tenant"
-      - "windriver-casablanca-heat-deploy":
-          job-desc: "Heat-based deployment into Wind River lab Integration-Stable tenant"
-      - "windriver-casablanca-oom-deploy":
-          job-desc: "OOM-based deployment into Wind River lab Integration-Jenkins tenant"
-      - "tlab-casablanca-heat-deploy":
-          job-desc: "Heat-based deployment into AT&T TLAB Integration-HEAT-Test tenant"
-      - "tlab-casablanca-oom-deploy":
+      - "tlab-oom-daily":
           job-desc: "OOM-based deployment into AT&T TLAB Integration-OOM-Test tenant"
