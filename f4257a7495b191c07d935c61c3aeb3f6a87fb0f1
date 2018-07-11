@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_d0b5c07e",
+        "filename": "jenkins-config/global-vars-sandbox.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-11T20:52:32Z",
+      "side": 1,
+      "message": "I don\u0027t want the $PROJECT variable to be translated. \n\nIs this the correct syntax or is it best to do:\nssh://ecomp-jobbuilder@gerrit.onap.org:29418//$PROJECT\n\nEscaping the $ sign?",
+      "range": {
+        "startLine": 4,
+        "startChar": 9,
+        "endLine": 4,
+        "endChar": 62
+      },
+      "revId": "f4257a7495b191c07d935c61c3aeb3f6a87fb0f1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
