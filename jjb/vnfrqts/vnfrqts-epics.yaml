@@ -1,0 +1,9 @@
+---
+- project:
+    name: vnfrqts-epics
+    project: 'vnfrqts-epics'
+    jobs:
+      - gerrit-info-yaml-verify
+    project-name: 'vnfrqts-epics'
+    branch: 'master'
+    mvn-settings: 'vnfrqts-epics-settings'

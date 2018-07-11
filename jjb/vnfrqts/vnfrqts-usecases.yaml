@@ -1,0 +1,9 @@
+---
+- project:
+    name: vnfrqts-usecases
+    project: 'vnfrqts-usecases'
+    jobs:
+      - gerrit-info-yaml-verify
+    project-name: 'vnfrqts-usecases'
+    branch: 'master'
+    mvn-settings: 'vnfrqts-usecases-settings'

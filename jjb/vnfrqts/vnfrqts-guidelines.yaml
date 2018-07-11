@@ -1,0 +1,9 @@
+---
+- project:
+    name: vnfrqts-guidelines
+    project: 'vnfrqts-guidelines'
+    jobs:
+      - gerrit-info-yaml-verify
+    project-name: 'vnfrqts-guidelines'
+    branch: 'master'
+    mvn-settings: 'vnfrqts-guidelines-settings'
