@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Trevor Bramwell <tbramwell@linuxfoundation.org>
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Wed, 11 Jul 2018 05:52:29 +0000
+Reviewed-on: https://gerrit.onap.org/r/56147
+Project: ci-management
+Branch: refs/heads/master
