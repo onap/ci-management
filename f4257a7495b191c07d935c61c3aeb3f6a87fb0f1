@@ -22,6 +22,30 @@
       "revId": "f4257a7495b191c07d935c61c3aeb3f6a87fb0f1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_b006f41f",
+        "filename": "jenkins-config/global-vars-sandbox.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-11T21:33:56Z",
+      "side": 1,
+      "message": "Not sure what you mean here but $PROJECT get\u0027s translated at job runtime like if project-verify-master job runs.\n\njenkins-cfg does not replace this.",
+      "parentUuid": "5a93c517_d0b5c07e",
+      "range": {
+        "startLine": 4,
+        "startChar": 9,
+        "endLine": 4,
+        "endChar": 62
+      },
+      "revId": "f4257a7495b191c07d935c61c3aeb3f6a87fb0f1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
