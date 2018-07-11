@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_ea432911",
+        "filename": "jjb/multicloud/multicloud-openstack-pike-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-11T06:06:17Z",
+      "side": 1,
+      "message": "this shoule be \"multicloud-openstack-pike\"?\n\nFor consistency",
+      "range": {
+        "startLine": 7,
+        "startChar": 19,
+        "endLine": 7,
+        "endChar": 34
+      },
+      "revId": "ea25e89d70a2b10704d5cd0a08ea7aff591b1fee",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
