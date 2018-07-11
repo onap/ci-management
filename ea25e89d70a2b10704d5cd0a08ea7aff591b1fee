@@ -45,6 +45,30 @@
       "revId": "ea25e89d70a2b10704d5cd0a08ea7aff591b1fee",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a93c517_8a714579",
+        "filename": "jjb/multicloud/multicloud-openstack-pike-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2363
+      },
+      "writtenOn": "2018-07-11T06:12:47Z",
+      "side": 1,
+      "message": "I think you are right, but I see many multicloud-openstack-*-csit.yaml which project name is multicloud-*.",
+      "parentUuid": "5a93c517_ea432911",
+      "range": {
+        "startLine": 7,
+        "startChar": 19,
+        "endLine": 7,
+        "endChar": 34
+      },
+      "revId": "ea25e89d70a2b10704d5cd0a08ea7aff591b1fee",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
