@@ -89,4 +89,16 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
+- project:
+    name: multicloud-openstack-pike-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-pike'
+    branch: 'master'
+    mvn-params: '-f pike/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
