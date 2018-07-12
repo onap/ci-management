@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a9dcd25_5bff0302",
+        "filename": "jenkins-config/clouds/openstack/cattle/cloud.cfg",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-07-12T01:36:22Z",
+      "side": 1,
+      "message": "You will need KEY_PAIR_NAME set here if the id is not jenkins-ssh",
+      "revId": "37755f797b087a0f4772c2d6fce625a45d53812a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
