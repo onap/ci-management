@@ -11,5 +11,6 @@ LOGS_SERVER=https://logs.onap.org
 NEXUS_URL=https://nexus.onap.org
 NEXUSPROXY=https://nexus.onap.org
 REGISTRY_PORTS=10001 10002 10003 10004
+SIGUL_KEY=onap-test
 SILO=sandbox
 SONAR_URL=https://sonar.onap.org
