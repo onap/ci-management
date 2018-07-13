@@ -1,0 +1,35 @@
+---
+- project:
+    name: dcaegen2-services-pm-mapper
+    # job template iterators
+    project-name: 'dcaegen2-services-pm-mapper'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/services/pm-mapper'
+    mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-verify-java':
+          mvn-goals: 'clean install'
+      - '{project-name}-{stream}-merge-java':
+          mvn-goals: 'clean deploy'
+- project:
+    name: dcaegen2-services-pm-mapper-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/services/pm-mapper'
+    project-name: 'dcaegen2-services-pm-mapper'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
