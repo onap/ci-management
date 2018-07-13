@@ -1,0 +1,35 @@
+---
+- project:
+    name: dcaegen2-collectors-hv-ves
+    # job template iterators
+    project-name: 'dcaegen2-collectors-hv-ves'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/collectors/hv-ves'
+    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-verify-java':
+          mvn-goals: 'clean install'
+      - '{project-name}-{stream}-merge-java':
+          mvn-goals: 'clean deploy'
+- project:
+    name: dcaegen2-collectors-hv-ves-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/collectors/hv-ves'
+    project-name: 'dcaegen2-collectors-hv-ves'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

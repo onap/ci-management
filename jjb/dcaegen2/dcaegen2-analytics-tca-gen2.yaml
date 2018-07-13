@@ -1,0 +1,36 @@
+---
+- project:
+    name: dcaegen2-analytics-tca-gen2
+    # job template iterators
+    project-name: 'dcaegen2-analytics-tca-gen2'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/analytics/tca-gen2'
+    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-verify-java':
+          mvn-goals: 'clean install'
+      - '{project-name}-{stream}-merge-java':
+          mvn-goals: 'clean deploy'
+
+- project:
+    name: dcaegen2-analytics-tca-gen2-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/analytics/tca-gen2'
+    project-name: 'dcaegen2-analytics-tca-gen2'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
