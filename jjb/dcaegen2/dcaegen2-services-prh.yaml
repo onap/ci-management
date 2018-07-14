@@ -22,6 +22,7 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
+
 - project:
     name: dcaegen2-services-prh-sonar
     jobs:
@@ -34,4 +35,3 @@
     mvn-settings: 'dcaegen2-services-prh-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-

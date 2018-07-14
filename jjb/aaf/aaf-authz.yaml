@@ -19,6 +19,7 @@
     mvn-settings: 'aaf-authz-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: aaf-authz-sonar
     jobs:

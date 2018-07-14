@@ -16,6 +16,7 @@
     mvn-settings: 'aai-router-core-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: aai-router-core-sonar
     jobs:

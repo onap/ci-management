@@ -19,6 +19,7 @@
     mvn-settings: 'aai-data-router-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: aai-data-router-sonar
     jobs:

@@ -20,6 +20,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: ccsdk-storage-pgaas-sonar
     jobs:
