@@ -25,6 +25,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: centos7-redis-4c-4g
+
 - project:
     name: vfc-gvnfm-vnflcm-lcm-sonar
     jobs:

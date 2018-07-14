@@ -16,6 +16,7 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
     maven-deploy-properties: -Dbuild.number=$BUILD_NUMBER
+
 - project:
     name: portal-sonar
     jobs:

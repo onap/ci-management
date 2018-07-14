@@ -16,6 +16,7 @@
     mvn-settings: 'aai-rest-client-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: aai-rest-client-sonar
     jobs:

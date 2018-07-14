@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vfc-nfvo-resmanagement
     project: 'vfc/nfvo/resmanagement'
@@ -19,6 +18,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-resmanagement-docker-image.sh'
+
 - project:
     name: vfc-nfvo-resmanagement-sonar
     jobs:

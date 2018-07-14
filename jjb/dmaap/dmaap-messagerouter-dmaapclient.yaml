@@ -14,6 +14,7 @@
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: dmaap-messagerouter-dmaapclient-sonar
     jobs:

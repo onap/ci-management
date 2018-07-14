@@ -14,6 +14,7 @@
     mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: dmaap-messagerouter-mirroragent-sonar
     jobs:

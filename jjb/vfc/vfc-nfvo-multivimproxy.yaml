@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vfc-nfvo-multivimproxy
     project: 'vfc/nfvo/multivimproxy'
@@ -19,6 +18,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-multivimproxy-docker-image.sh'
+
 - project:
     name: vfc-nfvo-multivimproxy-sonar
     jobs:

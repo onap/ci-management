@@ -20,6 +20,7 @@
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
+
 - project:
     name: vvp-image-scanner-sonar
     jobs:

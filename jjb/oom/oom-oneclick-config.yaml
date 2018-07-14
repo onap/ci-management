@@ -17,6 +17,7 @@
      - 'master':
          branch: 'master'
    mvn-settings: 'oom-settings'
+
 - job-template:
     name: '{project}-{stream}-release-config'
     project-type: freestyle

@@ -18,6 +18,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+
 - project:
     name: sdc-sdc-distribution-client-sonar
     jobs:

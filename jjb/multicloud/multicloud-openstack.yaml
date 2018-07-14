@@ -50,6 +50,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-memcached-4c-4g'
+
 - project:
     name: multicloud-openstack-newton-sonar
     jobs:
@@ -63,6 +64,7 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: multicloud-openstack-ocata-sonar
     jobs:
@@ -76,6 +78,7 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: multicloud-openstack-windriver-sonar
     jobs:
@@ -89,6 +92,7 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: multicloud-openstack-pike-sonar
     jobs:

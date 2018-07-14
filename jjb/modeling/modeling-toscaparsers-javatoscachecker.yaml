@@ -28,6 +28,7 @@
           skip.docker.build=false
           skip.docker.tag=false
           skip.docker.push=false
+
 - project:
     name: modeling-toscaparsers-sonar
     jobs:

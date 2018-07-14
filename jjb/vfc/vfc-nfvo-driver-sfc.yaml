@@ -24,6 +24,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vfc-nfvo-driver-sfc-sonar
     jobs:
