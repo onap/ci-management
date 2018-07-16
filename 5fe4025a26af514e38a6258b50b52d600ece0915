@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a9dcd25_d0c0ca2c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-16T20:46:13Z",
+      "side": 1,
+      "message": "Issue-ID should be attached to the footer.",
+      "revId": "5fe4025a26af514e38a6258b50b52d600ece0915",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
