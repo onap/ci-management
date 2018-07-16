@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-zte-java
     project-name: 'vfc-nfvo-driver-vnfm-svnfm-zte'
@@ -21,6 +20,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-zte-sonar
     jobs:

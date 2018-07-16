@@ -19,6 +19,7 @@
     mvn-settings: 'aai-sparky-be-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: aai-sparky-be-sonar
     jobs:

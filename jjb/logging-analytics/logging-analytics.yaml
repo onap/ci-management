@@ -19,6 +19,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: logging-analytics-sonar
     jobs:
@@ -31,6 +32,7 @@
     mvn-settings: 'logging-analytics-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: logging-analytics-pylog
     project-name: 'logging-analytics-pylog'
@@ -55,6 +57,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: logging-analytics-pylog-python
     project-name: 'logging-analytics-pylog'

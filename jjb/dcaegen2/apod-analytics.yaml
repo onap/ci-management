@@ -24,6 +24,7 @@
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
+
 - project:
     name: dcaegen2-analytics-tca-sonar
     jobs:

@@ -21,6 +21,7 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: sdc-sdc-workflow-designer-sonar
     jobs:

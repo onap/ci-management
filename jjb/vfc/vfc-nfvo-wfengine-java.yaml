@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vfc-nfvo-wfengine
     project-name: 'vfc-nfvo-wfengine'
@@ -29,6 +28,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
     jobs:

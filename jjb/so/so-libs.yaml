@@ -19,6 +19,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: so-libs-sonar
     jobs:

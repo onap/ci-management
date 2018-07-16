@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-zte-python
     project-name: 'vfc-nfvo-driver-vnfm-svnfm'

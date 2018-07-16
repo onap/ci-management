@@ -16,6 +16,7 @@
     jobs:
       - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
+
 - project:
     name: vvp-validation-scripts-sonar
     jobs:
@@ -28,4 +29,3 @@
     mvn-settings: 'vvp-validation-scripts-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-

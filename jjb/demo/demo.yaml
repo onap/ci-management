@@ -18,6 +18,7 @@
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: demo-sonar
     jobs:

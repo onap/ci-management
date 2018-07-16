@@ -9,8 +9,6 @@
       - '{project-name}-{stream}-merge-rtd'
 
     project: 'doc'
-
-
     rtdproject: 'onap'
     mvn-settings: 'doc-settings'
     stream:

@@ -24,6 +24,7 @@
     mvn-settings: 'dmaap-buscontroller-settings'
     files: '**'
     archive-artifacts: ''
+
 - project:
     name: dmaap-buscontroller-sonar
     jobs:
