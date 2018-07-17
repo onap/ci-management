@@ -452,3 +452,20 @@
             - 'onap-jenkins-ssh'
       - openstack:
           single-use: true
+
+- wrapper:
+    # This wrapper is required for all jobs as it configures the wrappers
+    # needed by the eCOMP infra.
+    name: infra-wrappers-docker-build
+    wrappers:
+      - timestamps
+      - timeout:
+          type: absolute
+          timeout: '{build-timeout}'
+          timeout-var: 'BUILD_TIMEOUT'
+          fail: true
+      - ssh-agent-credentials:
+          users:
+            - 'onap-jenkins-ssh'
+      - openstack:
+          single-use: false

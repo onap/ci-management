@@ -188,17 +188,8 @@
           checkout-dir: '{checkout-dir3}'
 
     wrappers:
-      - timestamps
-      - timeout:
-          type: absolute
-          timeout: '{build-timeout}'
-          timeout-var: 'BUILD_TIMEOUT'
-          fail: true
-      - ssh-agent-credentials:
-          users:
-            - 'onap-jenkins-ssh'
-      - openstack:
-          single-use: false
+      - infra-wrappers-docker-build:
+          build-timeout: '{build-timeout}'
 
     triggers:
       - timed: '@daily'
