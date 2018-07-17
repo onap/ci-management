@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a9dcd25_7aa190a8",
+        "filename": "jenkins-config/clouds/openstack/cattle/centos7-redis-4c-4g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-07-17T21:32:41Z",
+      "side": 1,
+      "message": "why is this missing ZZCI prefix? Is this correct?",
+      "range": {
+        "startLine": 1,
+        "startChar": 11,
+        "endLine": 1,
+        "endChar": 47
+      },
+      "revId": "3db9f64dec91235cbb6959a0612ebadccfb62861",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
