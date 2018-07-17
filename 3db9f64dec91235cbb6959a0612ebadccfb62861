@@ -22,6 +22,30 @@
       "revId": "3db9f64dec91235cbb6959a0612ebadccfb62861",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a9dcd25_fa94c045",
+        "filename": "jenkins-config/clouds/openstack/cattle/centos7-redis-4c-4g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-17T21:35:28Z",
+      "side": 1,
+      "message": "yes.. this is a new version of the image that we need.. \nI need to fix my packer jobs too so that I can produce new images.\nTested this image in production for VFC",
+      "parentUuid": "1a9dcd25_7aa190a8",
+      "range": {
+        "startLine": 1,
+        "startChar": 11,
+        "endLine": 1,
+        "endChar": 47
+      },
+      "revId": "3db9f64dec91235cbb6959a0612ebadccfb62861",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
