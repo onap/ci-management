@@ -1,7 +1,7 @@
 ---
 - project:
     name: vnfrqts-usecases
-    project: 'vnfrqts-usecases'
+    project: 'vnfrqts/usecases'
     jobs:
       - gerrit-info-yaml-verify
     project-name: 'vnfrqts-usecases'
