@@ -151,7 +151,7 @@
 
     name: '{project-name}-{stream}-3scm-docker-shell-daily'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: 'queue-docker-4c-4g'
 
     properties:
       - infra-properties:
@@ -188,12 +188,20 @@
           checkout-dir: '{checkout-dir3}'
 
     wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      - timestamps
+      - timeout:
+          type: absolute
+          timeout: '{build-timeout}'
+          timeout-var: 'BUILD_TIMEOUT'
+          fail: true
+      - ssh-agent-credentials:
+          users:
+            - 'onap-jenkins-ssh'
+      - openstack:
+          single-use: false
 
     triggers:
-      # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
