@@ -452,3 +452,20 @@
             - 'onap-jenkins-ssh'
       - openstack:
           single-use: true
+
+- wrapper:
+    # This wrapper is used for docker build jobs to use the dedicated docker
+    # build VM and turn off OpenStack single-use
+    name: infra-wrappers-docker-build
+    wrappers:
+      - timestamps
+      - timeout:
+          type: absolute
+          timeout: '{build-timeout}'
+          timeout-var: 'BUILD_TIMEOUT'
+          fail: true
+      - ssh-agent-credentials:
+          users:
+            - 'onap-jenkins-ssh'
+      - openstack:
+          single-use: false
