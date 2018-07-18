@@ -1,0 +1,8 @@
+---
+- project:
+    name: sdc-sdc-pubsub-info
+    project-name: 'sdc-sdc-pubsub'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'sdc/sdc-pubsub'
+    branch: 'master'
