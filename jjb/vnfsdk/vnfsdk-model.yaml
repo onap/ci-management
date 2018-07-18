@@ -1,0 +1,11 @@
+---
+- project:
+    name: vnfsdk-model
+    project: 'vnfsdk/model'
+    jobs:
+      - gerrit-info-yaml-verify
+    project-name: 'vnfsdk-model'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-model-settings'
