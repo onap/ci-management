@@ -20,6 +20,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
+
 - project:
     name: vnfsdk-pkgtools-tox-sonar
     jobs:
@@ -32,3 +33,11 @@
     mvn-settings: 'vnfsdk-pkgtools-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-pkgtools-info
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/pkgtools'
+    project-name: 'vnfsdk-pkgtools'
+    branch: 'master'

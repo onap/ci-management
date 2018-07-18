@@ -14,7 +14,6 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
-
     project: 'vnfsdk/ves-agent'
     stream:
       - 'master':
@@ -23,6 +22,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-ves-agent-sonar
     jobs:
@@ -36,3 +36,11 @@
     mvn-settings: 'vnfsdk-ves-agent-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-ves-agent-info
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/ves-agent'
+    project-name: 'vnfsdk-ves-agent'
+    branch: 'master'
