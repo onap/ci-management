@@ -1,7 +1,7 @@
 ---
 - project:
     name: vnfrqts-guidelines
-    project: 'vnfrqts-guidelines'
+    project: 'vnfrqts/guidelines'
     jobs:
       - gerrit-info-yaml-verify
     project-name: 'vnfrqts-guidelines'

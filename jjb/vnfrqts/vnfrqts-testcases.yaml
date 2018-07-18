@@ -1,7 +1,7 @@
 ---
 - project:
     name: vnfrqts-testcases
-    project: 'vnfrqts-testcases'
+    project: 'vnfrqts/testcases'
     jobs:
       - gerrit-info-yaml-verify
     project-name: 'vnfrqts-testcases'
