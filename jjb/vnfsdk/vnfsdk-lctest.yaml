@@ -5,9 +5,16 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-
     project-name: 'vnfsdk-lctest'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'vnfsdk-lctest-settings'
+
+- project:
+    name: vnfsdk-lctest
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/lctest'
+    project-name: 'vnfsdk-lctest'
+    branch: 'master'

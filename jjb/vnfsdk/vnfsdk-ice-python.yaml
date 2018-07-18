@@ -29,6 +29,7 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
+
 - project:
     name: vnfsdk-ice-docker
     project-name: 'vnfsdk-ice-docker'
@@ -50,6 +51,7 @@
           docker-pom: 'docker/pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+
 - project:
     name: vnfsdk-ice-validation-scripts-tox-sonar
     jobs:
@@ -63,6 +65,7 @@
     mvn-settings: 'vnfsdk-ice-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: vnfsdk-ice-ice-server-tox-sonar
     jobs:
@@ -77,3 +80,10 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
+- project:
+    name: vnfsdk-ice
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/ice'
+    project-name: 'vnfsdk-ice'
+    branch: 'master'

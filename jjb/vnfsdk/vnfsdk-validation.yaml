@@ -3,11 +3,10 @@
     name: vnfsdk-validation
     project-name: 'vnfsdk-validation'
     jobs:
-    - gerrit-maven-clm:
+    - gerrit-maven-clm
     - '{project-name}-{stream}-verify-java'
     - '{project-name}-{stream}-merge-java'
     - '{project-name}-{stream}-release-version-java-daily'
-
     project: 'vnfsdk/validation'
     stream:
       - 'master':
@@ -16,6 +15,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-validation-sonar
     jobs:
@@ -28,3 +28,11 @@
     mvn-settings: 'vnfsdk-validation-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-validation
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/validation'
+    project-name: 'vnfsdk-validation'
+    branch: 'master'

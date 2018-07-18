@@ -3,7 +3,7 @@
     name: vnfsdk-refrepo
     project-name: 'vnfsdk-refrepo'
     jobs:
-      - gerrit-maven-clm:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -15,7 +15,6 @@
           docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-
     project: 'vnfsdk/refrepo'
     stream:
       - 'master':
@@ -24,6 +23,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-refrepo-sonar
     jobs:
@@ -36,3 +36,11 @@
     mvn-settings: 'vnfsdk-refrepo-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-refrepo
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/refrepo'
+    project-name: 'vnfsdk-refrepo'
+    branch: 'master'
