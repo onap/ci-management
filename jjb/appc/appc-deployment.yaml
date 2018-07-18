@@ -8,10 +8,6 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
       - '{project-name}-docker-image-blessing'
 
     project: 'appc/deployment'
@@ -26,3 +22,24 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: appc-deployment-docker
+    project-name: 'appc-deployment'
+    jobs:
+      - 'docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - 'docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'appc/deployment'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
+    mvn-settings: 'appc-deployment-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: queue-docker-4c-4g
