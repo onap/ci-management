@@ -24,11 +24,13 @@
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
+      - gerrit-info-yaml-verify
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
+
 - project:
     name: vnfsdk-ice-docker
     project-name: 'vnfsdk-ice-docker'
@@ -50,6 +52,7 @@
           docker-pom: 'docker/pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+
 - project:
     name: vnfsdk-ice-validation-scripts-tox-sonar
     jobs:
@@ -63,6 +66,7 @@
     mvn-settings: 'vnfsdk-ice-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 - project:
     name: vnfsdk-ice-ice-server-tox-sonar
     jobs:

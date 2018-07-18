@@ -17,6 +17,7 @@
     mvn-settings: 'vnfsdk-dovetail-integration-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
+      - gerrit-info-yaml-verify
       - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
@@ -26,6 +27,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+
 - project:
     name: vnfsdk-dovetail-integration-tox-sonar
     jobs:

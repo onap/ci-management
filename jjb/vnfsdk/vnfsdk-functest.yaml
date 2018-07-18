@@ -3,7 +3,8 @@
     name: vnfsdk-functest
     project-name: 'vnfsdk-functest'
     jobs:
-    - gerrit-maven-clm:
+    - gerrit-info-yaml-verify
+    - gerrit-maven-clm
     - '{project-name}-{stream}-verify-java'
     - '{project-name}-{stream}-merge-java'
     - '{project-name}-{stream}-release-version-java-daily'
@@ -16,6 +17,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-functest-sonar
     jobs:

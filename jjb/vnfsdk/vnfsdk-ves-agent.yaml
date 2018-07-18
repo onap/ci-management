@@ -7,6 +7,7 @@
           pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
           pattern: 'veslibrary/**'
     jobs:
+      - gerrit-info-yaml-verify
       - gerrit-maven-clm:
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
       - '{project-name}-{stream}-verify-java':
@@ -14,7 +15,6 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
-
     project: 'vnfsdk/ves-agent'
     stream:
       - 'master':
@@ -23,6 +23,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-ves-agent-sonar
     jobs:
