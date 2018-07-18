@@ -3,7 +3,7 @@
     name: vnfsdk-functest
     project-name: 'vnfsdk-functest'
     jobs:
-    - gerrit-maven-clm:
+    - gerrit-maven-clm
     - '{project-name}-{stream}-verify-java'
     - '{project-name}-{stream}-merge-java'
     - '{project-name}-{stream}-release-version-java-daily'
@@ -16,6 +16,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
 - project:
     name: vnfsdk-functest-sonar
     jobs:
@@ -28,3 +29,11 @@
     mvn-settings: 'vnfsdk-functest-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-functest-info
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/functest'
+    project-name: 'vnfsdk-functest'
+    branch: 'master'

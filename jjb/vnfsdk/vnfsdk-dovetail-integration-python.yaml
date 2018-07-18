@@ -26,6 +26,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+
 - project:
     name: vnfsdk-dovetail-integration-tox-sonar
     jobs:
@@ -38,3 +39,11 @@
     mvn-settings: 'vnfsdk-dovetail-integration-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-dovetail-integration-info
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'vnfsdk/dovetail-integration'
+    project-name: 'vnfsdk-dovetail-integration'
+    branch: 'master'
