@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_3c179d53",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-19T14:05:42Z",
+      "side": 1,
+      "message": "Issue-ID: needs to be attached to the footer of the commit message. Please remove the new line here.\n\nThe last \"block\" of text in a commit message is the commit message footer and all metadata should be included in the block so that tools that parse commit messages for metadata will correctly pick it up.",
+      "revId": "8ec27ebec0f52ad807f5307c97d51363837f1c09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_fc08452f",
+        "filename": "jjb/aai/aai-spike.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-19T14:05:42Z",
+      "side": 1,
+      "message": "Please add a new line before `- project:\u0027",
+      "revId": "8ec27ebec0f52ad807f5307c97d51363837f1c09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_5fffe301",
+        "filename": "jjb/aai/aai-spike.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-19T14:05:42Z",
+      "side": 1,
+      "message": "According to https://docs.releng.linuxfoundation.org/projects/global-jjb/en/latest/jjb/lf-maven-jobs.html#maven-sonar this job template does not take a \"mvn-goals\" parameter.",
+      "revId": "8ec27ebec0f52ad807f5307c97d51363837f1c09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
