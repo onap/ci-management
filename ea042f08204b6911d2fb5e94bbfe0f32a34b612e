@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_5cd05153",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 971
+      },
+      "writtenOn": "2018-07-19T09:24:24Z",
+      "side": 1,
+      "message": "Perhaps it would be helpful to describe in the commit the microservice that is being updated.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 10
+      },
+      "revId": "ea042f08204b6911d2fb5e94bbfe0f32a34b612e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
