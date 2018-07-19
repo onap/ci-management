@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_025b5055",
+        "filename": "jjb/aai/aai-spike.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-19T21:02:31Z",
+      "side": 1,
+      "message": "Remove trailing spaces",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "89f04074fddf262deebdbbd1a46635b2f7e61c85",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
