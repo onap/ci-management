@@ -8,6 +8,8 @@
           job-desc: "Heat-based deployment into Wind River lab Integration-HEAT-Daily tenant"
       - "windriver-oom-daily":
           job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Daily tenant"
+      - "windriver-heat-staging-daily":
+          job-desc: "Heat-based deployment into Wind River lab Integration-HEAT-Staging-Daily tenant"
       - "windriver-oom-staging-daily":
           job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Staging-Daily tenant"
       - "tlab-heat-daily":
