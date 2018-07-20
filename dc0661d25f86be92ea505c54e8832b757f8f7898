@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_a8da8315",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3479
+      },
+      "writtenOn": "2018-07-20T12:55:30Z",
+      "side": 1,
+      "message": "@Michael O\u0027Brien, do you think we will have a mvn settings specifically for each repo?",
+      "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_08ce0f5b",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3479
+      },
+      "writtenOn": "2018-07-20T12:55:30Z",
+      "side": 1,
+      "message": "I noticed in the logging-analytics.yaml we also include:\n\"mvn-goals: \u0027clean install\u0027\n\nShould we include it here as well?",
+      "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
