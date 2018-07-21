@@ -49,7 +49,6 @@
     build-timeout: 90
 
     platforms:
-      - centos-7
       - ubuntu-16.04
     templates: memcached
 
@@ -67,7 +66,6 @@
 
     platforms:
       - centos-7
-      - ubuntu-16.04
     templates: redis
 
 - project:
@@ -83,7 +81,6 @@
     build-node: centos7-builder-2c-1g
 
     platforms:
-      - centos-7
       - ubuntu-16.04
     templates: helm
 

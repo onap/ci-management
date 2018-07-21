@@ -1,0 +1,14 @@
+---
+- import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+
+  tasks:
+    - name: 'Install Redis'
+      command: "{{ item }}"
+      with_items:
+        - yum install -y redis
+        - systemctl enable redis.service
+      become: true
