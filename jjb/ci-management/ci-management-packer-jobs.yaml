@@ -81,7 +81,6 @@
     build-node: centos7-builder-2c-1g
 
     platforms:
-      - centos-7
       - ubuntu-16.04
     templates: helm
 
