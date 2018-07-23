@@ -16,6 +16,24 @@
       "revId": "0b982808355f98c8e0c7e2c997116e5f9812f41d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_7818b884",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-23T22:24:35Z",
+      "side": 1,
+      "message": "Basically, it loops through the \"whith_items\"\nsection and executes line by line (line 12 and 13)",
+      "parentUuid": "da7095c5_185bbc55",
+      "revId": "0b982808355f98c8e0c7e2c997116e5f9812f41d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
