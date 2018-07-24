@@ -7,11 +7,6 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-
     project: 'ccsdk/distribution'
     stream:
       - 'master':
@@ -24,3 +19,24 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: ccsdk-distribution-docker
+    project-name: 'ccsdk-distribution'
+    jobs:
+      - 'docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - 'docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'ccsdk/distribution'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
+    mvn-settings: 'ccsdk-distribution-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: queue-docker-4c-4g
