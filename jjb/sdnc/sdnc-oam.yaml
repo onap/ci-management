@@ -8,7 +8,22 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-daily':
+    project: 'sdnc/oam'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
+    mvn-settings: 'sdnc-oam-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: sdnc-oam-docker
+    project-name: 'sdnc-oam'
+    jobs:
+      - 'docker-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
@@ -21,4 +36,4 @@
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: queue-docker-4c-4g
