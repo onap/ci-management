@@ -1,0 +1,37 @@
+---
+- project:
+    name: logging-analytics-pomba-pomba-audit-common
+    project-name: logging-analytics-pomba-pomba-audit-common
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    project: logging-analytics/pomba/pomba-audit-common
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-audit-common-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: logging-analytics-pomba-pomba-audit-common-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: logging-analytics/pomba/pomba-audit-common
+    project-name: logging-analytics-pomba-pomba-audit-common
+    branch: master
+    mvn-settings: logging-analytics-pomba-pomba-audit-common-settings
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: logging-analytics-pomba-pomba-audit-common-info
+    project-name: 'logging-analytics-pomba-pomba-audit-common'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'logging-analytics/pomba/pomba-audit-common'
+    branch: 'master'

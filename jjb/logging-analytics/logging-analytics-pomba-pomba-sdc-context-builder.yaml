@@ -1,0 +1,37 @@
+---
+- project:
+    name: logging-analytics-pomba-pomba-sdc-context-builder
+    project-name: logging-analytics-pomba-pomba-sdc-context-builder
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    project: logging-analytics/pomba/pomba-sdc-context-builder
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-sdc-context-builder-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: logging-analytics-pomba-pomba-sdc-context-builder-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: logging-analytics/pomba/pomba-sdc-context-builder
+    project-name: logging-analytics-pomba-pomba-sdc-context-builder
+    branch: master
+    mvn-settings: logging-analytics-pomba-pomba-sdc-context-builder-settings
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: logging-analytics-pomba-pomba-sdc-context-builder-info
+    project-name: 'logging-analytics-pomba-pomba-sdc-context-builder'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'logging-analytics/pomba/pomba-sdc-context-builder'
+    branch: 'master'
