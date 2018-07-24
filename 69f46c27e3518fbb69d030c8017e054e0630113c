@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_b1bbcbc3",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-24T15:56:12Z",
+      "side": 1,
+      "message": "I think you want state: enabled right?\n\nsystemctl enable vs systemctl start",
+      "revId": "69f46c27e3518fbb69d030c8017e054e0630113c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
