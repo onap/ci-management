@@ -8,7 +8,20 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-version-java-daily':
+    project: 'vid'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vid-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: vid-docker
+    project-name: 'vid'
+    jobs:
+      - 'docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
     project: 'vid'
@@ -18,7 +31,7 @@
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: queue-docker-4c-4g
 
 - project:
     name: vid-sonar
