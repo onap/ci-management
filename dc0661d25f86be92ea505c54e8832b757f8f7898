@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "da7095c5_71a45357",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-24T16:52:28Z",
+      "side": 1,
+      "message": "we do. Every repo has its own set of credentials and its own settings file.",
+      "parentUuid": "da7095c5_a8da8315",
+      "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da7095c5_08ce0f5b",
         "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-07-20T12:55:30Z",
       "side": 1,
       "message": "I noticed in the logging-analytics.yaml we also include:\n\"mvn-goals: \u0027clean install\u0027\n\nShould we include it here as well?",
+      "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_11b0778a",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-24T16:52:28Z",
+      "side": 1,
+      "message": "this job is not configured to take maven goals. \nThe sonar job is already configured to do all the proper goals.",
+      "parentUuid": "da7095c5_08ce0f5b",
       "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
