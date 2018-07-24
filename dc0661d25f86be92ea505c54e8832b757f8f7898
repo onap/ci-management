@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "da7095c5_8c31ca0d",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-07-24T20:58:21Z",
+      "side": 1,
+      "message": "Does this node work for the docker jobs?",
+      "revId": "dc0661d25f86be92ea505c54e8832b757f8f7898",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da7095c5_08ce0f5b",
         "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
         "patchSetId": 1
