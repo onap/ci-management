@@ -34,6 +34,29 @@
       "revId": "0b982808355f98c8e0c7e2c997116e5f9812f41d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_715d33e9",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-24T15:15:48Z",
+      "side": 1,
+      "message": "The yum install should be a ansible package module: https://docs.ansible.com/ansible/2.5/modules/package_module.html\n\nThe systemctl enable service should be a service module:\n\nhttps://docs.ansible.com/ansible/latest/modules/service_module.html\n\n\nAvoid using \"command\" unless absolutely necessary. Ansible has modules for most things.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 40
+      },
+      "revId": "0b982808355f98c8e0c7e2c997116e5f9812f41d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
