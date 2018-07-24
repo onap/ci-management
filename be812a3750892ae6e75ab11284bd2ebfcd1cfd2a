@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_d16bdf83",
+        "filename": "packer/provision/memcached.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-07-24T15:16:20Z",
+      "side": 1,
+      "message": "Use the package module to install things\n\nhttps://docs.ansible.com/ansible/2.5/modules/package_module.html",
+      "revId": "be812a3750892ae6e75ab11284bd2ebfcd1cfd2a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
