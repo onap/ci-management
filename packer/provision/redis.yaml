@@ -10,8 +10,10 @@
       package:
         name: redis
         state: present
+      become: true
 
     - name: 'Enable service redis'
       service:
         name: redis
         state: enable
+      become: true
