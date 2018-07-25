@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_1b95ed3f",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-07-25T18:49:01Z",
+      "side": 1,
+      "message": "Prudence found missing mvn settings file in the build section of the jenkins job - but we can\u0027t edit - she will send a screencap",
+      "revId": "a4b4379c5bba3e7ed02e3ced8ff2c0c36df3b746",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da7095c5_1be72d14",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-aai-context-builder.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-07-25T18:49:01Z",
+      "side": 1,
+      "message": "Q: is project here really git repo - as there are slashes but the project names at the root use \"-\" delimiters - A) they look like git repos",
+      "revId": "a4b4379c5bba3e7ed02e3ced8ff2c0c36df3b746",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
