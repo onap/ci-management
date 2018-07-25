@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "da7095c5_e702e0b3",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-07-25T04:13:10Z",
+      "side": 1,
+      "message": "these lines should also be added before service start\n\n- name: Enable redis service\n  service:\n    name: redis\n    enabled: yes\n  become: true",
+      "revId": "7835cf050ee8cf18d0da4ace51a909b0815e7c69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da7095c5_27f9b8c8",
         "filename": "packer/provision/redis.yaml",
         "patchSetId": 1
