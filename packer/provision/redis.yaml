@@ -15,5 +15,11 @@
     - name: 'Enable service redis'
       service:
         name: redis
-        state: enable
+        enabled: yes
+      become: true
+
+    - name: 'Start service redis'
+      service:
+        name: redis
+        state: started
       become: true
