@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da7095c5_27f9b8c8",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-07-25T04:09:32Z",
+      "side": 1,
+      "message": "If you want to have the service started on boot., you should rather be enabling the service rather than starting it",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 19,
+        "endChar": 18
+      },
+      "revId": "7835cf050ee8cf18d0da4ace51a909b0815e7c69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
