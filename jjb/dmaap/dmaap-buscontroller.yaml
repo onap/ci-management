@@ -25,15 +25,6 @@
     files: '**'
     archive-artifacts: ''
 
-- project:
-    name: dmaap-buscontroller-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'dmaap/buscontroller'
-    project-name: 'dmaap-buscontroller'
-    branch: 'master'
-    mvn-settings: 'dmaap-buscontroller-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+# removed sonar job from this template because this repo only builds a docker container
+# and the 0% coverage report from Sonar was causing repeated escalations.

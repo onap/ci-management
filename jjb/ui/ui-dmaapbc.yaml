@@ -19,15 +19,3 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: ui-dmaapbc-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'ui/dmaapbc'
-    project-name: 'ui-dmaapbc'
-    branch: 'master'
-    mvn-settings: 'ui-dmaapbc-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
