@@ -12,8 +12,8 @@
         state: present
       become: true
 
-    - name: 'Enable service redis'
+    - name: 'Start service redis'
       service:
         name: redis
-        state: enable
+        state: started
       become: true
