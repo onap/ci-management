@@ -1,0 +1,38 @@
+- project:
+    name: dmaap-datarouter
+    project-name: 'dmaap-datarouter'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      #
+      # see DMAAP-334 for more details, but
+      #     - '{project-name}-{stream}-docker-java-daily':
+      # doesn't support mvn-goals override, so trying this...
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean package -P docker docker:build -DpushImage'
+          # No-op
+          script: '/bin/true'
+
+    project: 'dmaap/datarouter'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: dmaap-datarouter-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dmaap/datarouter'
+    project-name: 'dmaap-datarouter'
+    branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
