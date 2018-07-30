@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a6a9dd7_9de4a3ad",
+        "filename": "jjb/sdc/sdc-sdc-pubsub.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-30T17:24:30Z",
+      "side": 1,
+      "message": "remove these trailing spaces",
+      "range": {
+        "startLine": 6,
+        "startChar": 9,
+        "endLine": 6,
+        "endChar": 13
+      },
+      "revId": "3ba47f91f2097983f1882bb7ddd018a1cb38fa0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a6a9dd7_7df3cf73",
+        "filename": "jjb/sdc/sdc-sdc-pubsub.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-07-30T17:24:30Z",
+      "side": 1,
+      "message": "This job needs to be left defined in a separate project section since it requires a branch variable and not a stream one. \n\nPlease define this job similar to the sonar one, in a different project block",
+      "range": {
+        "startLine": 7,
+        "startChar": 7,
+        "endLine": 7,
+        "endChar": 31
+      },
+      "revId": "3ba47f91f2097983f1882bb7ddd018a1cb38fa0e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
