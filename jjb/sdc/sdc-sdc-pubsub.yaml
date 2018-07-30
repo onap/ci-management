@@ -1,8 +1,29 @@
 ---
+
 - project:
     name: sdc-sdc-pubsub-info
     project-name: 'sdc-sdc-pubsub'
-    jobs:
+    jobs:    
       - gerrit-info-yaml-verify
+      - gerrit-maven-clm:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
     project: 'sdc/sdc-pubsub'
     branch: 'master'
+    mvn-settings: 'sdc-sdc-pubsub-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+- project:
+    name: sdc-sdc-pubsub-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/sdc-pubsub'
+    project-name: 'sdc-sdc-pubsub'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-pubsub-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
