@@ -1,0 +1,17 @@
+---
+- project:
+    name: dmaap-datarouter-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dmaap-datarouter'
+    stream: 'master'
+    functionality:
+      - 'dr-suite':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
+      - 'sanity-check':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-version-java-daily'
+    robot-options: ''
+    branch: 'master'
