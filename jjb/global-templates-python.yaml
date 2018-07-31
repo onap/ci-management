@@ -197,6 +197,11 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '**'
 
     builders:
       - provide-maven-settings:
