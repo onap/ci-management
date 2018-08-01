@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'aafapi':
-          trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
     branch: 'master'
