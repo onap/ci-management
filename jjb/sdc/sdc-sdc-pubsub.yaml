@@ -11,7 +11,7 @@
     name: sdc-sdc-pubsub
     project-name: 'sdc-sdc-pubsub'
     jobs:
-      - gerrit-maven-clm:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
     project: 'sdc/sdc-pubsub'

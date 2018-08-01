@@ -12,14 +12,11 @@
           branch: 'beijing'
     functionality:
       - 'sanity':
-          trigger_jobs:
-            - '{project-name}-{stream}-sdc-merge-java'
+          trigger_jobs: '{project-name}-{stream}-sdc-merge-java'
       - 'nightly':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
       - 'uiSanity':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
     html-dir: 'archives'

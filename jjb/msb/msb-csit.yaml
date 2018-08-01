@@ -8,16 +8,12 @@
     stream: 'master'
     functionality:
       - 'sanity-check':
-          trigger_jobs:
-            - 'msb-discovery-master-docker-java-version-shell-daily'
+          trigger_jobs: 'msb-discovery-master-docker-java-version-shell-daily'
       - 'rest-service':
-          trigger_jobs:
-            - 'msb-discovery-master-docker-java-version-shell-daily'
+          trigger_jobs: 'msb-discovery-master-docker-java-version-shell-daily'
       - 'tcp-service':
-          trigger_jobs:
-            - 'msb-discovery-master-docker-java-version-shell-daily'
+          trigger_jobs: 'msb-discovery-master-docker-java-version-shell-daily'
       - 'iag-redirect-discovery':
-          trigger_jobs:
-            - 'msb-discovery-master-docker-java-version-shell-daily'
+          trigger_jobs: 'msb-discovery-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'

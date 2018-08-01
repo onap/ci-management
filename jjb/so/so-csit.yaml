@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'integration-testing':
-          trigger_jobs:
-            - 'so-master-docker-version-java-daily'
+          trigger_jobs: 'so-master-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
