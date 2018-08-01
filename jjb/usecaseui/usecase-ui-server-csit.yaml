@@ -7,7 +7,6 @@
     stream: 'master'
     functionality:
       - 'testsuite':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-java-daily'
+          trigger_jobs: '{project-name}-{stream}-docker-java-daily'
     robot-options: ''
     branch: 'master'

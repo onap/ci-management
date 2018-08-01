@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'sanity-check':
-          trigger_jobs:
-           - '{project-name}-{stream}-merge-java'
+          trigger_jobs: '{project-name}-{stream}-merge-java'
     robot-options: ''
     branch: 'master'
