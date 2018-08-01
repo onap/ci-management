@@ -7,7 +7,6 @@
     stream: 'master'
     functionality:
       - 'testsuite':
-          trigger_jobs:
-            - 'portal-docker-{stream}-merge-docker-script'
+          trigger_jobs: 'portal-docker-{stream}-merge-docker-script'
     robot-options: ''
     branch: 'master'
