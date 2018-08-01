@@ -3,7 +3,7 @@
     name: portal
     project-name: 'portal'
     jobs:
-      - gerrit-maven-clm:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-release-java-daily'
     project: 'portal'
     stream:
