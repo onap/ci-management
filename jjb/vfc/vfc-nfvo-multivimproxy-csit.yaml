@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'sanity-check':
-          trigger_jobs:
-            - 'vfc-nfvo-multivimproxy-master-docker-java-version-shell-daily'
+          trigger_jobs: 'vfc-nfvo-multivimproxy-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'

@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'healthCheck':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
     branch: 'master'
