@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'functionality1':
-          trigger_jobs:
-            - '{project-name}-{stream}-multivimbroker-merge-java'
+          trigger_jobs: '{project-name}-{stream}-multivimbroker-merge-java'
     robot-options: ''
     branch: 'master'
