@@ -1,18 +1,30 @@
 - project:
-    name: policy-csit
+    name: policy-health-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     stream: 'master'
     functionality:
-      - 'health':
-          trigger_jobs:
-            - 'policy-engine-{stream}-merge-scm-mvn-script'
-            - 'policy-drools-pdp-{stream}-merge-scm-mvn-script'
-            - 'policy-drools-applications-{stream}-merge-java'
-      - 'apex-pdp':
-          trigger_jobs:
-            - 'policy-apex-pdp-{stream}-merge-scm-mvn-script'
+      - 'health'
+    trigger_jobs:
+      - 'policy-engine-{stream}-merge-scm-mvn-script'
+      - 'policy-drools-pdp-{stream}-merge-scm-mvn-script'
+      - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
     branch: 'master'
+
+- project:
+    name: policy-apex-pdp-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'policy'
+    stream: 'master'
+    functionality:
+      - 'apex-pdp'
+    trigger_jobs:
+      - 'policy-apex-pdp-{stream}-merge-scm-mvn-script'
+    robot-options: ''
+    branch: 'master'
+
