@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'APIs':
-          trigger_jobs:
-            - '{project-name}-{stream}-release-version-java-daily'
+          trigger_jobs: '{project-name}-{stream}-release-version-java-daily'
     robot-options: ''
     branch: 'master'
