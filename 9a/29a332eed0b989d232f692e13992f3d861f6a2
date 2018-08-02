@@ -1,0 +1,7 @@
+Code-Review+2: Thanh Ha <thanh.ha@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 02 Aug 2018 00:01:50 +0000
+Reviewed-on: https://gerrit.onap.org/r/58519
+Project: ci-management
+Branch: refs/heads/master
