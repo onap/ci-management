@@ -20,14 +20,39 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-optf-osdf-docker-image.sh'
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-builder-4c-4g'
+
+- project:
+    name: optf-osdf-docker
+    project-name: 'optf-osdf'
+    project: 'optf/osdf'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'beijing':
+          branch: 'beijing'
+    mvn-settings: 'optf-osdf-settings'
+    subproject:
+      - 'osdf':
+          path: '.'
+          pattern: '**'
+          pom: 'pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-osdf-docker-image.sh'
+      - '{project-name}-{stream}-{subproject}-docker-java-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-osdf-docker-image.sh'
+          build-node: queue-docker-4c-4g
 
 - project:
     name: optf-osdf-sonar
