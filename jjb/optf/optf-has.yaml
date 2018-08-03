@@ -21,7 +21,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+      - '{project-name}-{stream}-{subproject}-docker-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:

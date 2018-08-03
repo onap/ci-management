@@ -20,14 +20,13 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+      - '{project-name}-{stream}-{subproject}-docker-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-optf-osdf-docker-image.sh'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-builder-4c-4g'
 
 - project:
     name: optf-osdf-sonar
