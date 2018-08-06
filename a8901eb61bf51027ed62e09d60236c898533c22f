@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_0b1a836e",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-datafile.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-08-06T05:47:49Z",
+      "side": 1,
+      "message": "Is there a specific reason 4c4g is insufficient and its updated to 8g8c? If yes, please add the details in the commit message with any relevant mailing list discussions.",
+      "range": {
+        "startLine": 15,
+        "startChar": 25,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "a8901eb61bf51027ed62e09d60236c898533c22f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
