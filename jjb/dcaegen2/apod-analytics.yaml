@@ -20,10 +20,9 @@
     jobs:
       - gerrit-maven-clm
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-verify-java-skip-tests':
-          mvn-goals: 'clean install'
-      - '{project-name}-{stream}-merge-java':
-          mvn-goals: 'clean deploy'
+      - '{project-name}-{stream}-verify-java':
+          mvn-params: '-DskipTests=true'
+      - '{project-name}-{stream}-merge-java'
 
 - project:
     name: dcaegen2-analytics-tca-sonar

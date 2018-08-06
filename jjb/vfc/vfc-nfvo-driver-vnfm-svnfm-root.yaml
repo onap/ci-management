@@ -9,7 +9,9 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-profile: rootOnly
     jobs:
-      - '{project-name}-{stream}-verify-profile-java'
+      - '{project-name}-{stream}-verify-java':
+          mvn-params: '-P rootOnly'
+          pattern: 'pom.xml'
       - '{project-name}-{stream}-merge-profile-java':
             build-node: ubuntu1604-docker-8c-8g
       - '{project-name}-{stream}-release-version-profile-java-daily'
