@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_1fd159fb",
+        "filename": "jjb/optf/optf-has.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-06T21:14:25Z",
+      "side": 1,
+      "message": "Do we have this script in place already?\n\nWe already have docker daily jobs that do the needed steps and that all projects should be using rather than creating yet another copy of the same job. \n\nPlease look into {project-name}-{stream}-release-version-docker-daily-no-sonar or other docker daily jobs in ci-management. This one in particular even accepts a script step in case you need it.",
+      "range": {
+        "startLine": 49,
+        "startChar": 16,
+        "endLine": 49,
+        "endChar": 69
+      },
+      "revId": "bb8b507c68f28e3930e4f9fcb8e3489a4a3b5948",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
