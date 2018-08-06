@@ -20,13 +20,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    build-node: centos7-redis-4c-4g
 
 - project:
     name: ccsdk-platform-plugins-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: centos7-redis-4c-4g
     project: 'ccsdk/platform/plugins'
     project-name: 'ccsdk-platform-plugins'
     branch: 'master'
