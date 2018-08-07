@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_a4cff9af",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-07T15:55:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_a16375b0",
+      "range": {
+        "startLine": 8,
+        "startChar": 4,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "59553c00d9478cf65cfca748e88ceb5032effd46",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_615d5de9",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 14
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_44c4e591",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-07T15:55:09Z",
+      "side": 1,
+      "message": "Removed",
+      "parentUuid": "1a76adc5_615d5de9",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 26
+      },
+      "revId": "59553c00d9478cf65cfca748e88ceb5032effd46",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_0172697c",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 14
@@ -59,6 +107,30 @@
       "writtenOn": "2018-08-03T15:38:37Z",
       "side": 1,
       "message": "There\u0027s no parameters below.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 26
+      },
+      "revId": "59553c00d9478cf65cfca748e88ceb5032effd46",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_64c1e17f",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 14
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-07T15:55:09Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "1a76adc5_0172697c",
       "range": {
         "startLine": 120,
         "startChar": 0,
