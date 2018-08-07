@@ -11,6 +11,7 @@
           mvn-goals: 'clean package docker:build -DpushImage'
           # No-op
           script: '/bin/true'
+          build-node: 'ubuntu1604-docker-8c-8g'
     project: 'dcaegen2/services/mapper'
     stream:
       - 'master':

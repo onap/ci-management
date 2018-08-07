@@ -16,6 +16,7 @@
           mvn-goals: 'clean package -P docker docker:build -DpushImage'
           # No-op
           script: '/bin/true'
+          build-node: 'ubuntu1604-docker-8c-8g'
 
     project: 'dmaap/buscontroller'
     stream:
