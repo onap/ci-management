@@ -1,0 +1,37 @@
+---
+- project:
+    name: onap-ui-react-info
+    project-name: 'onap-ui-react'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'sdc/onap-ui-react'
+    branch: 'master'
+
+- project:
+    name: onap-ui-react
+    project-name: 'onap-ui-react'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/onap-ui-react'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'onap-ui-react-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+- project:
+    name: onap-ui-react-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/onap-ui-react'
+    project-name: 'onap-ui-react'
+    branch: 'master'
+    mvn-settings: 'onap-ui-react-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

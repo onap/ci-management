@@ -1,0 +1,37 @@
+---
+- project:
+    name: onap-ui-common-info
+    project-name: 'onap-ui-common'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'sdc/onap-ui-common'
+    branch: 'master'
+
+- project:
+    name: onap-ui-common
+    project-name: 'onap-ui-common'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/onap-ui-common'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'onap-ui-common-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+- project:
+    name: onap-ui-common-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/onap-ui-common'
+    project-name: 'onap-ui-common'
+    branch: 'master'
+    mvn-settings: 'onap-ui-common-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
