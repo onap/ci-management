@@ -24,6 +24,20 @@
           goals: '--version'
 
 - builder:
+    name: maven-set-release-version
+    builders:
+      - maven-target:
+          maven-version: '{maven-version}'
+          pom: '{pom}'
+          goals: 'versions:set versions:update-child-modules versions:commit -B'
+          properties:
+            - 'newVersion=${{release_version}}'
+          settings: '{mvn-settings}'
+          settings-type: cfp
+          global-settings: 'global-settings'
+          global-settings-type: cfp
+
+- builder:
     name: maven-docker-push-release
     builders:
       - maven-target:
