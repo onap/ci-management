@@ -1,0 +1,37 @@
+---
+- project:
+    name: onap-ui-angular-info
+    project-name: 'onap-ui-angular'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'sdc/onap-ui-angular'
+    branch: 'master'
+
+- project:
+    name: onap-ui-angular
+    project-name: 'onap-ui-angular'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/onap-ui-angular'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'onap-ui-angular-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+- project:
+    name: onap-ui-angular-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/onap-ui-angular'
+    project-name: 'onap-ui-angular'
+    branch: 'master'
+    mvn-settings: 'onap-ui-angular-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
