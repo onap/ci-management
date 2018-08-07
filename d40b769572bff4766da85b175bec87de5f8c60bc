@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_1a416739",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-07T02:34:56Z",
+      "side": 1,
+      "message": "Empty variables look not that nice. \n\nCan we set \"pom: pom.xml\" since this variable being empty defaults to that value anyways?\n\nIs this a good idea?",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 17,
+        "endChar": 8
+      },
+      "revId": "d40b769572bff4766da85b175bec87de5f8c60bc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
