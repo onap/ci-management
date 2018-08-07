@@ -12,6 +12,7 @@
           settings: '{mvn-settings}'
           script:
             !include-raw-escape: 'build-aaf-docker-image.sh'
+          build-node: 'ubuntu1604-docker-8c-8g'
     project: 'aaf/authz'
     stream:
       - 'master':
