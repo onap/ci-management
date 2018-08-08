@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_a7729be3",
+        "filename": "jjb/optf/optf-has.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-08T01:06:08Z",
+      "side": 1,
+      "message": "Indent this to match line 54",
+      "range": {
+        "startLine": 56,
+        "startChar": 4,
+        "endLine": 56,
+        "endChar": 34
+      },
+      "revId": "6569aae9c7de9c21c4261908095b77227510e05f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_477707d5",
+        "filename": "jjb/optf/optf-osdf.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-08T01:06:08Z",
+      "side": 1,
+      "message": "Indent this to match line 53",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 34
+      },
+      "revId": "6569aae9c7de9c21c4261908095b77227510e05f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
