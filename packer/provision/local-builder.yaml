@@ -1,2 +1,29 @@
 ---
 - import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+  vars:
+    apt_file: /etc/apt/sources.list.d/google-chrome.list
+
+  tasks:
+
+    - name: Add Google Chrome key
+      shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+      when: google_apt_exists.rc == 1
+      become: true
+
+    - name: Add Google Chrome repo
+      copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
+      when: google_apt_exists.rc == 1
+      become: true
+
+    - name: Update apt cache
+      apt: update_cache=yes
+      when: google_apt_exists.rc == 1
+      become: true
+
+    - name: Install Google Chrome
+      apt: pkg=google-chrome-stable state=installed
+      become: true
