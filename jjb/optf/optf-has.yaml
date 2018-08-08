@@ -47,6 +47,7 @@
           mvn-params: '-Dmaven.test.skip=true'
           script:
             !include-raw-escape: 'build-optf-has-docker-image.sh'
+          build-node: queue-docker-4c-4g
       - '{project-name}-{stream}-{subproject}-docker-java-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
