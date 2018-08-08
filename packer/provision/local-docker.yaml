@@ -32,3 +32,9 @@
         - name: 'Add golang to PATH'
           command: 'echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile'
           become: true
+
+    - name: Install libxml2-utils
+      apt:
+        name: libxml2-utils
+        state: present
+      become: true
