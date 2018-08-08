@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Fiachra Corcoran <fiachra.corcoran@ericsson.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 08 Aug 2018 17:11:55 +0000
+Reviewed-on: https://gerrit.onap.org/r/58257
+Project: ci-management
+Branch: refs/heads/master
