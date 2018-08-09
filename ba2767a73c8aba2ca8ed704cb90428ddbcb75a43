@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a76adc5_3aad3989",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-09T02:17:50Z",
+      "side": 1,
+      "message": "Please don\u0027t use shell. Use:\n\napt_key to add keys: https://docs.ansible.com/ansible/2.5/modules/apt_key_module.html\n\nand if you need to fetch a file get_url:\n https://docs.ansible.com/ansible/2.5/modules/get_url_module.html",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 11
+      },
+      "revId": "ba2767a73c8aba2ca8ed704cb90428ddbcb75a43",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_1a8e3d2f",
         "filename": "packer/provision/local-docker.yaml",
         "patchSetId": 2
