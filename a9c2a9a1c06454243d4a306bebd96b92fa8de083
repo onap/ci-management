@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_a62294b7",
+        "filename": "jjb/logging-analytics/logging-analytics-pomba-pomba-context-aggregator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-08-09T20:05:17Z",
+      "side": 1,
+      "message": "Looks good - same as aai now",
+      "revId": "a9c2a9a1c06454243d4a306bebd96b92fa8de083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
