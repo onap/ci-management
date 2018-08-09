@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_1a8e3d2f",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-08-09T02:09:33Z",
+      "side": 1,
+      "message": "minor nit... change the format to\n\n- name:\n     apt:\n       name: google...\n       state\u003dinstalled\n     ...",
+      "range": {
+        "startLine": 58,
+        "startChar": 6,
+        "endLine": 58,
+        "endChar": 51
+      },
+      "revId": "ba2767a73c8aba2ca8ed704cb90428ddbcb75a43",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
