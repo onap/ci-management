@@ -22,6 +22,30 @@
       "revId": "ba2767a73c8aba2ca8ed704cb90428ddbcb75a43",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_ba994970",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-09T02:12:18Z",
+      "side": 1,
+      "message": "Will this look better if I put it in the same format as line 36?\n\nShall i also update the block in line 52 to the same format as line 36?\n\nThank youuu",
+      "parentUuid": "1a76adc5_1a8e3d2f",
+      "range": {
+        "startLine": 58,
+        "startChar": 6,
+        "endLine": 58,
+        "endChar": 51
+      },
+      "revId": "ba2767a73c8aba2ca8ed704cb90428ddbcb75a43",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
