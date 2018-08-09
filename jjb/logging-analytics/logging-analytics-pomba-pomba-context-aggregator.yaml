@@ -9,7 +9,7 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
           docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+          mvn-goals: 'docker:build'
           mvn-params: '-Dmaven.test.skip=true'
     project: logging-analytics/pomba/pomba-context-aggregator
     stream:
