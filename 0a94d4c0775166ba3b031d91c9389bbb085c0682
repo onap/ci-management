@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_ccca4fa1",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-10T05:11:18Z",
+      "side": 1,
+      "message": "No need to create a var here. You can just pass the list directly\n\n apt:\n   name:\n     - package1\n     - package2\n     - package3\n     - etc...",
+      "range": {
+        "startLine": 62,
+        "startChar": 6,
+        "endLine": 68,
+        "endChar": 13
+      },
+      "revId": "0a94d4c0775166ba3b031d91c9389bbb085c0682",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
