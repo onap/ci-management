@@ -38,3 +38,9 @@
         name: libxml2-utils
         state: present
       become: true
+
+    - name: Install python-tox
+      apt:
+        name: python-tox
+        state: present
+      become: true
