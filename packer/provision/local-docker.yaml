@@ -100,4 +100,5 @@
           - libxslt-devel
           - libffi
           - libffi-devel
+        update_cache: yes
       become: true
