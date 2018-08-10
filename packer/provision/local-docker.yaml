@@ -65,3 +65,39 @@
           - libmysqlclient-dev
           - gcc
       become: true
+
+    - name: Install base packages
+      apt:
+        name:
+          - unzip
+          - xz-utils
+          - libxml-xpath-perl
+          - wget
+          - make
+          - npm
+          - sshuttle
+          - netcat
+          - libssl-dev
+          - libffi-dev
+      become: true
+
+    - name: Install autorelease support packages
+      apt:
+        name:
+          - firefox
+          - xmlstarlet
+          - xvfb
+          - crudini
+          - maven
+          - python-ncclient
+      become: true
+
+    - name: Install python-ncclient support packages
+      apt:
+        name:
+          - libxml2
+          - libxslt
+          - libxslt-devel
+          - libffi
+          - libffi-devel
+      become: true
