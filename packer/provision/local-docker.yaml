@@ -38,25 +38,3 @@
         name: libxml2-utils
         state: present
       become: true
-
-    - name: Add Google Chrome key
-      apt-key:
-        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
-        state: present
-      become: true
-
-    - name: Add Google Chrome repo
-      copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
-      when: google_apt_exists.rc == 1
-      become: true
-
-    - name: Update apt cache
-      apt: update_cache=yes
-      when: google_apt_exists.rc == 1
-      become: true
-
-    - name: Install Google Chrome
-      apt:
-        name: pkg=google-chrome-stable state=installed
-        state: installed
-      become: true
