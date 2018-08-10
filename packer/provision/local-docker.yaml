@@ -91,14 +91,3 @@
           - maven
           - python-ncclient
       become: true
-
-    - name: Install python-ncclient support packages
-      apt:
-        name:
-          - libxml2
-          - libxslt
-          - libxslt-devel
-          - libffi
-          - libffi-devel
-        update_cache: yes
-      become: true
