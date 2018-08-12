@@ -16,6 +16,10 @@
       command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-$(uname -s)-$(uname -m)"
       become: true
 
+    - file:
+        path: /usr/local/bin/docker-compose
+        mode: "+x"
+
     - name: 'Install GoLang {{golang_version}}'
       block:
         - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-amd64.tar.gz'
