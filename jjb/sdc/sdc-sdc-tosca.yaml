@@ -29,5 +29,6 @@
     project-name: 'sdc-sdc-tosca'
     branch: 'master'
     mvn-settings: 'sdc-sdc-tosca-settings'
+    mvn-params: '-Dsonar.branch.name=${GERRIT_BRANCH}'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'

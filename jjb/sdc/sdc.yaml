@@ -35,6 +35,6 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false'
+    mvn-params: '-Djacoco.skip=false -Dsonar.branch.name=${GERRIT_BRANCH}'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'
