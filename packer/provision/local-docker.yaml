@@ -19,6 +19,7 @@
     - file:
         path: /usr/local/bin/docker-compose
         mode: "+x"
+      become: true
 
     - name: 'Install GoLang {{golang_version}}'
       block:
