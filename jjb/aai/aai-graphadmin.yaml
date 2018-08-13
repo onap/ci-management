@@ -1,10 +1,17 @@
 ---
 - project:
-    name: aai-graphadmin
+    name: aai-graphadmin-master
     project-name: 'aai-graphadmin'
     jobs:
       - gerrit-maven-clm
-    project: 'aai/graphadmin'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'aai-graphadmin/pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'aai/traversal'
     stream:
       - 'master':
           branch: 'master'
@@ -12,3 +19,16 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aai-graphadmin-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aai/traversal'
+    project-name: 'aai-graphadmin'
+    branch: 'master'
+    mvn-settings: 'aai-graphadmin-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
