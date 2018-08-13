@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_45736d4d",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 30
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_05957532",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 34
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_a5992170",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 11,
+        "startChar": 10,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c59e9d56",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 12,
+        "startChar": 19,
+        "endLine": 12,
+        "endChar": 34
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_85798531",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "This should be sdc-onap-ui-angular-settings",
+      "range": {
+        "startLine": 21,
+        "startChar": 19,
+        "endLine": 21,
+        "endChar": 43
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_65a3099f",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 27,
+        "startChar": 10,
+        "endLine": 27,
+        "endChar": 31
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_85a0a591",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "I would recommend adding the full name of the repo. \n\nYou missed \"sdc-\"",
+      "range": {
+        "startLine": 33,
+        "startChar": 19,
+        "endLine": 33,
+        "endChar": 34
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_2576713f",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "This should be sdc-onap-ui-angular-settings",
+      "range": {
+        "startLine": 35,
+        "startChar": 19,
+        "endLine": 35,
+        "endChar": 43
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_25ad1189",
+        "filename": "jjb/sdc/sdc-onap-ui-common.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "Same comments as jjb/sdc/sdc-onap-ui-angular.yaml",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 46
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_45aa8d71",
+        "filename": "jjb/sdc/sdc-onap-ui-react.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-13T17:11:14Z",
+      "side": 1,
+      "message": "Same comments as jjb/sdc/sdc-onap-ui-angular.yaml",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 46
+      },
+      "revId": "a33323e757e6a95f8da1e5b54bcbef02429c795c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
