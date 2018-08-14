@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_def663d7",
+        "filename": "jjb/sdc/sdc-jtosca.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-14T18:14:53Z",
+      "side": 1,
+      "message": "This seems to be the problem. \nGERRIT_BRANCH doesn\u0027t get translated here. It does get translate when using in external bash scripts for example. \nFor the purpose of your task, lets try using ${branch}\n\nYou might want to test this in the sandbox just to see if it works as you expect.",
+      "range": {
+        "startLine": 32,
+        "startChar": 39,
+        "endLine": 32,
+        "endChar": 52
+      },
+      "revId": "14abab6d7779f7af2350530c9711092ac7e3f092",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
