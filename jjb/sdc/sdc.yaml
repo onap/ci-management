@@ -4,16 +4,20 @@
     name: sdc
     project-name: 'sdc'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-verify-java':
+          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
       - '{project-name}-{stream}-sdc-merge-java':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-      - '{project-name}-{stream}-release-version-java-daily'
+          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+      - '{project-name}-{stream}-release-version-java-daily':
+          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-          mvn-params: '-DskipTests=true'
-      - gerrit-maven-clm
+          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+      - gerrit-maven-clm:
+          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     project: 'sdc'
     stream:
       - 'master':
@@ -35,6 +39,6 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false'
+    mvn-params: '-Djacoco.skip=false -Dsonar.branch.name=${branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'
