@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_5cb9f62c",
+        "filename": "jjb/aaf/build-sshsm-base-images.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 301
+      },
+      "writtenOn": "2018-08-15T23:48:43Z",
+      "side": 1,
+      "message": "Consider changing the filename to match the other scripts for creating docker images.\nbuild-sshsm-docker-image.sh",
+      "revId": "56af9f9ad330e22f097783e8b7a74713babc96d1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
