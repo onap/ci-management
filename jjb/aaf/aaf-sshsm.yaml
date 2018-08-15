@@ -9,6 +9,9 @@
       - '{project-name}-{stream}-verify-c':
          script:
             !include-raw-escape: 'build-sshsm.sh'
+      - '{project-name}-{stream}-docker-c-shell-daily':
+         script:
+            !include-raw-escape: 'build-sshsm-base-images.sh'
     stream:
       - 'master':
           branch: 'master'
