@@ -7,6 +7,17 @@
     archive-artifacts: ''
     build-node: ubuntu1604-helm-2c-1g
     pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
+    oom_build_script: |
+        #!/bin/bash
+        cd kubernetes/
+        make all'
+    subproject_build_script: |
+        #!/bin/bash
+        cd kubernetes/
+        make common
+        make {subproject}'
+    post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
+
     stream:
       - 'master':
           branch: 'master'
@@ -69,15 +80,25 @@
 
     jobs:
       - '{project-name}-{stream}-verify-helm':
-          build_script: 'cd kubernetes/ && make all'
+          build_script: '{obj:oom_build_script}' 
           files: '**'
       - '{project-name}-{stream}-merge-helm':
-          build_script: 'cd kubernetes/ && make all'
+          build_script: '{obj:oom_build_script}' 
+          post_build_script: '{obj:post_build_script}' 
           files: '**'
+      - '{project-name}-{stream}-stage-helm':
+          build_script: '{obj:oom_build_script}' 
+          post_build_script: '{obj:post_build_script}' 
+          files: '**'
+
+      # Below jobs disabled until future need.
       - '{project-name}-{subproject}-{stream}-verify-helm':
-          build_script: 'cd kubernetes/ && make common && make {subproject}'
+          disabled: true
+          build_script: '{obj:subproject_build_script}'
       - '{project-name}-{subproject}-{stream}-merge-helm':
-          build_script: 'cd kubernetes/ && make common && make {subproject}'
+          disabled: true
+          build_script: '{obj:subproject_build_script}'
       - '{project-name}-{stream}-update-helm-weekly':
+          disabled: true
+          build_script: '{obj:oom_build_script}'
           files: '**'
-          build_script: 'cd kubernetes/ && make all'
