@@ -16,6 +16,24 @@
       "revId": "096164ee7b0e83e0868ca1268392845a0b51ae91",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_a65efd43",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-15T17:30:47Z",
+      "side": 1,
+      "message": "Actually... my next patch is splitting archs... \n\nSince we do not have other than ubuntu, that was not required. \n\nBut for now, I wanted to unblock the team.\n\nI can split arch in my next patch",
+      "parentUuid": "1a76adc5_46504932",
+      "revId": "096164ee7b0e83e0868ca1268392845a0b51ae91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
