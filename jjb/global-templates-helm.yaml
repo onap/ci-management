@@ -14,6 +14,7 @@
 
     # default params for helm jobs
     pre_build_script: ''
+    build_script: ''
     post_build_script: ''
 
     #####################
@@ -42,10 +43,14 @@
     publishers:
       - lf-infra-publish
 
-- helm_verify_boiler_plate: &helm_verify_boiler_plate
-    name: helm_verify_boiler_plate
+#################
+# JOB TEMPLATES #
+#################
+- job-template:
+    name: '{project-name}-{stream}-verify-helm'
+    # Job template for helm verify jobs
 
-    concurrent: true
+    <<: *helm_job_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
@@ -60,9 +65,20 @@
           project: '{project}'
           branch: '{branch}'
           files: '{files}'
+      - gerrit:
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: '^(recheck|reverify)$'
 
-- helm_merge_boiler_plate: &helm_merge_boiler_plate
-    name: helm_merge_boiler_plate
+    builders:
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-merge-helm'
+    # Job template for Helm merge jobs
+
+    <<: *helm_job_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
@@ -78,34 +94,45 @@
           files: '{files}'
       - pollscm:
           cron: ''
-
-#################
-# JOB TEMPLATES #
-#################
-- job-template:
-    name: '{project-name}-{stream}-verify-helm'
-    # Job template for helm verify jobs
-
-    <<: *helm_job_boiler_plate
-    # yamllint disable-line rule:key-duplicates
-    <<: *helm_verify_boiler_plate
+      - gerrit:
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: '^(remerge)$'
 
     builders:
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
+      - inject:
+          properties-content: |
+            BUILD_TYPE=snapshot
       - shell: '{post_build_script}'
 
 - job-template:
-    name: '{project-name}-{stream}-merge-helm'
-    # Job template for Helm merge jobs
+    name: '{project-name}-{stream}-stage-helm'
+    # Job template for Helm stage jobs
 
     <<: *helm_job_boiler_plate
-    # yamllint disable-line rule:key-duplicates
-    <<: *helm_merge_boiler_plate
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - pollscm:
+          cron: '0 22 * * *'
+      - gerrit:
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: '^(stage)$'
 
     builders:
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
+      - inject:
+          properties-content: |
+            BUILD_TYPE=staging
       - shell: '{post_build_script}'
 
 - job-template:
@@ -113,8 +140,6 @@
     # Job template for helm verify jobs
 
     <<: *helm_job_boiler_plate
-    # yamllint disable-line rule:key-duplicates
-    <<: *helm_verify_boiler_plate
 
     builders:
       - shell: '{pre_build_script}'
@@ -126,8 +151,6 @@
     # Job template for helm merge jobs
 
     <<: *helm_job_boiler_plate
-    # yamllint disable-line rule:key-duplicates
-    <<: *helm_merge_boiler_plate
 
     builders:
       - shell: '{pre_build_script}'
