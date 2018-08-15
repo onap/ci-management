@@ -13,7 +13,7 @@
 
   tasks:
     - name: 'Install Docker Compose {{docker_compose_version}}'
-      command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-$(uname -s)-$(uname -m)"
+      command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
       become: true
 
     - file:
