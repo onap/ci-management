@@ -22,6 +22,30 @@
       "revId": "2acfc18a9ab7dc4158c6cf259579ace8d3bb07fc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_26a2edae",
+        "filename": "jjb/sdnc/sdnc-apps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3479
+      },
+      "writtenOn": "2018-08-15T16:08:15Z",
+      "side": 1,
+      "message": "Sure.  No problem.\n\nI did this only because it seems to be working for the pomba repos.",
+      "parentUuid": "1a76adc5_a6e7dd11",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 46
+      },
+      "revId": "2acfc18a9ab7dc4158c6cf259579ace8d3bb07fc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
