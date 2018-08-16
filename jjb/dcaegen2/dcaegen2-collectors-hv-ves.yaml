@@ -16,11 +16,16 @@
     build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-maven-clm
-      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean deploy -DskipDockerPush=false'
+          # No-op
+          script: '/bin/true'
+
 - project:
     name: dcaegen2-collectors-hv-ves-sonar
     jobs:
