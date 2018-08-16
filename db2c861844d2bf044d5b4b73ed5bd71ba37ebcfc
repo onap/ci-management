@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_0102360b",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-16T18:15:30Z",
+      "side": 1,
+      "message": "make all AND make onap.\n\nIn all cases.\nPush everything that\u0027s built + index.\nUse Maven features.",
+      "revId": "db2c861844d2bf044d5b4b73ed5bd71ba37ebcfc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
