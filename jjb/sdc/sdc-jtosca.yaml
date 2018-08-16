@@ -29,6 +29,6 @@
     project-name: 'sdc-jtosca'
     branch: 'master'
     mvn-settings: 'sdc-jtosca-settings'
-    mvn-params: '-Dsonar.branch.name=${branch}'
+    mvn-params: '-Dsonar.branch=${branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

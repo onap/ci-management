@@ -39,6 +39,6 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false -Dsonar.branch.name=${branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    mvn-params: '-Djacoco.skip=false -Dsonar.branch=${branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
