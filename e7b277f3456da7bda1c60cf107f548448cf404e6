@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_41feee39",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T17:25:42Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 7
+      },
+      "revId": "e7b277f3456da7bda1c60cf107f548448cf404e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_2103b243",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T17:25:42Z",
+      "side": 1,
+      "message": "Java",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "e7b277f3456da7bda1c60cf107f548448cf404e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_e1fcda40",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T17:25:42Z",
+      "side": 1,
+      "message": "Change",
+      "range": {
+        "startLine": 11,
+        "startChar": 41,
+        "endLine": 11,
+        "endChar": 47
+      },
+      "revId": "e7b277f3456da7bda1c60cf107f548448cf404e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_61a0ca43",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T17:25:42Z",
+      "side": 1,
+      "message": "Break these 2 lines to make them not longer than 72 characters",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 80
+      },
+      "revId": "e7b277f3456da7bda1c60cf107f548448cf404e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_a196e2ee",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T17:25:42Z",
+      "side": 1,
+      "message": "current",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 17
+      },
+      "revId": "e7b277f3456da7bda1c60cf107f548448cf404e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
