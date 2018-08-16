@@ -16,6 +16,24 @@
       "revId": "56af9f9ad330e22f097783e8b7a74713babc96d1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_bc936aa2",
+        "filename": "jjb/aaf/build-sshsm-base-images.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3087
+      },
+      "writtenOn": "2018-08-16T00:09:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_5cb9f62c",
+      "revId": "56af9f9ad330e22f097783e8b7a74713babc96d1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
