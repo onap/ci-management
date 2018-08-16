@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_b710654f",
+        "filename": "jjb/global-templates-c.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-16T04:49:16Z",
+      "side": 1,
+      "message": "Remove empty lines",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 25
+      },
+      "revId": "6746943b7730d1dedc597a819578f712aa6c2ebb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
