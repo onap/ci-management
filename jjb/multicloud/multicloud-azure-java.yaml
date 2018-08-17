@@ -1,0 +1,41 @@
+---
+- project:
+    name: multicloud-azure-java
+    project-name: 'multicloud-azure'
+    project: 'multicloud/azure'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-azure-settings'
+    subproject:
+      - 'azure':
+          pom: 'azure/pom.xml'
+          pattern: 'azure/**'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-multicloud-azure-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: multicloud-azure-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/azure'
+    project-name: 'multicloud-azure'
+    branch: 'master'
+    mvn-settings: 'multicloud-azure-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
