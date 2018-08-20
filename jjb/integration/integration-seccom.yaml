@@ -2,8 +2,6 @@
 - project:
     name: integration-seccom
     project-name: 'integration-seccom'
-    jobs:
-      - gerrit-maven-clm
     project: 'integration/seccom'
     stream:
       - 'master':
