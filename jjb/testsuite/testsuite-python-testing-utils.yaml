@@ -7,7 +7,6 @@
           path: '.'
           pattern: '**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
 
     project: 'testsuite/python-testing-utils'

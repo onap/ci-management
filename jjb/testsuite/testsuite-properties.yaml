@@ -2,8 +2,6 @@
 - project:
     name: testsuite-properties-master
     project-name: 'testsuite-properties'
-    jobs:
-      - gerrit-maven-clm
     project: 'testsuite/properties'
     stream:
       - 'master':

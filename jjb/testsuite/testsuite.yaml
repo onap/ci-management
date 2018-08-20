@@ -3,7 +3,6 @@
     name: testsuite
     project-name: 'testsuite'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-3scm-docker-shell-daily':
           script:
             !include-raw-escape: 'testsuite-docker.sh'
