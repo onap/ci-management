@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_8dcbcb1d",
+        "filename": "jjb/so/so-chef-repo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-20T22:23:04Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "1a76adc5_6d7aeff2",
+      "revId": "9f14d2d355944fa00e64145b88bfb33a426e755c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_8d7d0bea",
         "filename": "jjb/so/so-docker-config.yaml",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_2dd2b7d2",
+        "filename": "jjb/so/so-docker-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-20T22:23:04Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "1a76adc5_8d7d0bea",
+      "revId": "9f14d2d355944fa00e64145b88bfb33a426e755c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_2d84f7d2",
         "filename": "jjb/so/so-so-config.yaml",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2018-08-20T22:15:23Z",
       "side": 0,
       "message": "same here.",
+      "revId": "9f14d2d355944fa00e64145b88bfb33a426e755c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_4dd5b3b7",
+        "filename": "jjb/so/so-so-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-20T22:23:04Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "1a76adc5_2d84f7d2",
       "revId": "9f14d2d355944fa00e64145b88bfb33a426e755c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
