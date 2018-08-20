@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_0d69fb24",
+        "filename": "jjb/testsuite/testsuite-properties.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-20T22:15:47Z",
+      "side": 0,
+      "message": "probably should just delete this file.",
+      "revId": "9f14d2d355944fa00e64145b88bfb33a426e755c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
