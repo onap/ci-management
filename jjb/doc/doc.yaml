@@ -3,7 +3,6 @@
     name: doc
     project-name: 'doc'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-rtd':
           build-node: centos7-builder-4c-4g
       - '{project-name}-{stream}-merge-rtd'
