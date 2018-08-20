@@ -26,5 +26,6 @@
     project-name: 'sdc-onap-ui'
     branch: 'master'
     mvn-settings: 'sdc-onap-ui-settings'
+    mvn-params: '-Dsonar.branch=${branch}'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'

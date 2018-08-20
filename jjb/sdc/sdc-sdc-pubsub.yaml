@@ -32,5 +32,6 @@
     project-name: 'sdc-sdc-pubsub'
     branch: 'master'
     mvn-settings: 'sdc-sdc-pubsub-settings'
+    mvn-params: '-Dsonar.branch=${branch}'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'
