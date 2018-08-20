@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_cd722311",
+        "filename": "jjb/integration/integration-seccom.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-20T22:16:13Z",
+      "side": 0,
+      "message": "Just delete this file?",
+      "revId": "c317a5fa7cfa84a9baa3d043ee64fa18c2812a94",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
