@@ -2,8 +2,6 @@
 - project:
     name: so-docker-config
     project-name: 'so-docker-config'
-    jobs:
-      - gerrit-maven-clm
     project: 'so/docker-config'
     stream:
       - 'master':

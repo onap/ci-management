@@ -2,8 +2,6 @@
 - project:
     name: so-chef-repo
     project-name: 'so-chef-repo'
-    jobs:
-      - gerrit-maven-clm
     project: 'so/chef-repo'
     stream:
       - 'master':

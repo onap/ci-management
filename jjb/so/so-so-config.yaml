@@ -2,8 +2,6 @@
 - project:
     name: so-so-config
     project-name: 'so-so-config'
-    jobs:
-      - gerrit-maven-clm
     project: 'so/so-config'
     stream:
       - 'master':
