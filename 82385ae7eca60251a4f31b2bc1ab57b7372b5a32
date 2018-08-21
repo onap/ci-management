@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_02ca226e",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-21T19:38:32Z",
+      "side": 1,
+      "message": "I noticed that some teams are using mvn-goals, but the job is hardcoded to use \"sonar:sonar\" as goals\n\nCan we add this parameter as mvn-params rather?",
+      "range": {
+        "startLine": 39,
+        "startChar": 4,
+        "endLine": 39,
+        "endChar": 43
+      },
+      "revId": "82385ae7eca60251a4f31b2bc1ab57b7372b5a32",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
