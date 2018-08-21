@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_c2d66af1",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-21T20:11:00Z",
+      "side": 1,
+      "message": "I love that we are cleaning up :)",
+      "revId": "ba4a03d03c90dcb96bdb40404a1d3c6b5022e3be",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
