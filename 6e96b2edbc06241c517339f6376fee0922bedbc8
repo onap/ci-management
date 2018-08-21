@@ -46,6 +46,30 @@
       "revId": "6e96b2edbc06241c517339f6376fee0922bedbc8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_b6784f90",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-21T21:57:34Z",
+      "side": 1,
+      "message": "apt-get -f install -y with no packages seems like it fixes dependencies by selecting a solution.. but if a package is specified looks like the package needs to be the solution for the dependency. \n\nIn the old packer looks like we might have been having dependency issues since Erlang was installed like this:\n\n    wget https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb\n    dpkg -i esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb\n    apt-get install -y libwxbase3.0-0v5\n    apt-get -f install -y\n\nI want to test this, but i still cannot get past my issues with ansible after getting my network issues magically fixed on Friday.",
+      "parentUuid": "1a76adc5_7624f7ae",
+      "range": {
+        "startLine": 132,
+        "startChar": 6,
+        "endLine": 132,
+        "endChar": 29
+      },
+      "revId": "6e96b2edbc06241c517339f6376fee0922bedbc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
