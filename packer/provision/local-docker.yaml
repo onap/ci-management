@@ -117,3 +117,22 @@
         name: google-chrome-stable
         state: present
       become: true
+
+    - name: Clone rebar3
+      git:
+        repo: 'https://github.com/erlang/rebar3.git'
+        dest: rebar3
+      become: true
+
+    - name: Bootstrap rebar3
+      command: ./bootstrap
+      args:
+        chdir: rebar3
+
+    - name: Move rebar3 to bin
+      command: mv rebar3/rebar3 /usr/bin/rebar3
+
+    - name: Remove unused rebar3 source
+      file:
+        path: rebar3
+        state: absent
