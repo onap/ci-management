@@ -26,6 +26,6 @@
     project-name: 'sdc-dcae-d-dt-be-property'
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

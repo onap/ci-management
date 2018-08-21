@@ -13,14 +13,13 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-sdc-workflow-designer-sonar
@@ -32,6 +31,6 @@
     project-name: 'sdc-sdc-workflow-designer'
     branch: 'master'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
