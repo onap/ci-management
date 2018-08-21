@@ -22,6 +22,30 @@
       "revId": "6e96b2edbc06241c517339f6376fee0922bedbc8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_7624f7ae",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-21T21:46:40Z",
+      "side": 1,
+      "message": "no idea. what\u0027s apt-get install -y without any packages do?",
+      "parentUuid": "1a76adc5_d61dcb67",
+      "range": {
+        "startLine": 132,
+        "startChar": 6,
+        "endLine": 132,
+        "endChar": 29
+      },
+      "revId": "6e96b2edbc06241c517339f6376fee0922bedbc8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
