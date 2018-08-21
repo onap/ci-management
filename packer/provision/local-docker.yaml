@@ -128,9 +128,11 @@
       args:
         chdir: /tmp/rebar3
 
-    - name: Move rebar3 to bin
-      command: mv /tmp/rebar3/rebar3 /usr/bin/rebar3
-      become: true
+    - name: Install rebar3 to bin
+      copy:
+        src: /tmp/rebar3/rebar3
+        dest: /usr/bin/rebar3
+        remote_src: true
 
     - name: Remove unused rebar3 source
       file:
