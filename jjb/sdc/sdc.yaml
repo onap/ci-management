@@ -22,12 +22,11 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-8c-8g
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-sonar
@@ -39,6 +38,6 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false -Dsonar.branch=${branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

@@ -12,12 +12,11 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-sdc-distribution-client-sonar
@@ -29,6 +28,6 @@
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

@@ -15,6 +15,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-onap-ui-sonar
@@ -26,6 +27,6 @@
     project-name: 'sdc-onap-ui'
     branch: 'master'
     mvn-settings: 'sdc-onap-ui-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

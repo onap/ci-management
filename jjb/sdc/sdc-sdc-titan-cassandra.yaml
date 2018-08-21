@@ -16,3 +16,4 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+    maven-version: 'mvn35'

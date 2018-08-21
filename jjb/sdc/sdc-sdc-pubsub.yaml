@@ -21,6 +21,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-sdc-pubsub-sonar
@@ -32,6 +33,6 @@
     project-name: 'sdc-sdc-pubsub'
     branch: 'master'
     mvn-settings: 'sdc-sdc-pubsub-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'

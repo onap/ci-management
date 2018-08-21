@@ -25,6 +25,6 @@
     project-name: 'sdc-dcae-d-tosca-lab'
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
-    mvn-params: '-Dsonar.branch=${branch}'
+    mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
