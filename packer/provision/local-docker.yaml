@@ -118,6 +118,20 @@
         state: present
       become: true
 
+    - name: Install Erlang dependency packages
+      apt:
+        name:
+          - libwxgtk3.0-0v5
+          - libsctp1
+          - libwxbase3.0-0v5
+      become: true
+
+    - name: Install Erlang
+      apt:
+        deb: https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
+      install_recommends: yes
+      become: true
+
     - name: Clone rebar3
       git:
         repo: 'https://github.com/erlang/rebar3.git'
