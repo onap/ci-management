@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_a276ce3c",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-21T19:57:56Z",
+      "side": 1,
+      "message": "Maybe /tmp/rebar3 would be better?\n\n(so that we don\u0027t pollute wherever the workdir is)",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_0278e229",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-21T19:57:56Z",
+      "side": 1,
+      "message": "shouldn\u0027t need root to clone a repo.",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c2718a45",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-08-21T19:57:56Z",
+      "side": 1,
+      "message": "You will need root to move to /usr/bin so \u0027become: true\u0027 here.",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
