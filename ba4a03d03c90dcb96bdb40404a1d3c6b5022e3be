@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a76adc5_822f12f6",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3833
+      },
+      "writtenOn": "2018-08-21T20:21:47Z",
+      "side": 1,
+      "message": "The copy module is preferred over \u0027command: mv\u0027 as it will only run if the file doesn\u0027t already exist, and will allow you to set file attributes at the same time.\n\n\u003e remote_src: true\n\nThis is needed as the default copy module assumes your copying a file from your host to the guest machine.\n\n\u003e - name: Install rebar3\n\u003e   copy:\n\u003e     src: /tmp/rebar3/rebar3\n\u003e     dest: /usr/bin/rebar3\n\u003e     remote_src: true",
+      "range": {
+        "startLine": 131,
+        "startChar": 1,
+        "endLine": 133,
+        "endChar": 18
+      },
+      "revId": "ba4a03d03c90dcb96bdb40404a1d3c6b5022e3be",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_c2d66af1",
         "filename": "packer/provision/local-docker.yaml",
         "patchSetId": 2
