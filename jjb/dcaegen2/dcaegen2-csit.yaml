@@ -16,4 +16,8 @@
           trigger_jobs:
             - 'dcaegen2-master-merge-java'
             - 'dcaegen2-services-prh-master-merge-java'
+      - 'hv-ves-testsuites':
+          trigger_jobs:
+            - 'dcaegen2-collectors-hv-ves-master-merge-java'
+    robot-options: ''
     robot-options: ''
