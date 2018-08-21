@@ -36,5 +36,5 @@
     project-name: 'dcaegen2-collectors-hv-ves'
     branch: 'master'
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
-    mvn-goals: 'clean install'
+    mvn-goals: 'clean install -DskipDocker'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
