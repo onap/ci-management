@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_a2ad6e8a",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-21T20:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_a276ce3c",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_0278e229",
         "filename": "packer/provision/local-docker.yaml",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_c2a8aa79",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-21T20:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_0278e229",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_c2718a45",
         "filename": "packer/provision/local-docker.yaml",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2018-08-21T19:57:56Z",
       "side": 1,
       "message": "You will need root to move to /usr/bin so \u0027become: true\u0027 here.",
+      "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_62b756d9",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-21T20:02:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_c2718a45",
       "revId": "2ccbfa81ba8e8ea1fcee6a35db7c65eb7cf6ece4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
