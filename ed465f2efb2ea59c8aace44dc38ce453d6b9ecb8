@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_a093214e",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1077
+      },
+      "writtenOn": "2018-08-22T20:09:39Z",
+      "side": 1,
+      "message": "this looks good",
+      "revId": "ed465f2efb2ea59c8aace44dc38ce453d6b9ecb8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
