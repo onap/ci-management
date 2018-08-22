@@ -153,3 +153,9 @@
       file:
         path: /tmp/rebar3
         state: absent
+
+    - file:
+        path: /usr/bin/rebar3
+        mode: "+x"
+      become: true
+
