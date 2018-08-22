@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_20fe3139",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-22T21:15:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_8061453b",
+      "range": {
+        "startLine": 71,
+        "startChar": 42,
+        "endLine": 71,
+        "endChar": 53
+      },
+      "revId": "004b7eb26d8dc2caf19371e6ac9bf65126726ac3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_a0648149",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 11
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_e0f7d957",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-22T21:15:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_a0648149",
+      "range": {
+        "startLine": 100,
+        "startChar": 42,
+        "endLine": 100,
+        "endChar": 54
+      },
+      "revId": "004b7eb26d8dc2caf19371e6ac9bf65126726ac3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_405b2d87",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 11
@@ -59,6 +107,30 @@
       "writtenOn": "2018-08-22T21:03:38Z",
       "side": 1,
       "message": "Sorry for changing my mind on this again. \nI think it would be best to follow the global-jjb convention\nand change this to \"stage-helm\"",
+      "range": {
+        "startLine": 130,
+        "startChar": 42,
+        "endLine": 130,
+        "endChar": 52
+      },
+      "revId": "004b7eb26d8dc2caf19371e6ac9bf65126726ac3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_809625ef",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-08-22T21:15:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a76adc5_405b2d87",
       "range": {
         "startLine": 130,
         "startChar": 42,
