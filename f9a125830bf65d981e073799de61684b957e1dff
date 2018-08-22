@@ -46,6 +46,30 @@
       "revId": "f9a125830bf65d981e073799de61684b957e1dff",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_39d750c1",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-08-22T04:00:28Z",
+      "side": 1,
+      "message": "- name: Install rebar3 to bin\n      copy:\n        src: /tmp/rebar3/rebar3\n        dest: /usr/bin/rebar3\n        mode: 0644\n      become: true\n\nThis should work, I see that this is a local dir do you have any reason to use remote_src?",
+      "parentUuid": "1a76adc5_d9497cd1",
+      "range": {
+        "startLine": 146,
+        "startChar": 0,
+        "endLine": 150,
+        "endChar": 18
+      },
+      "revId": "f9a125830bf65d981e073799de61684b957e1dff",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
