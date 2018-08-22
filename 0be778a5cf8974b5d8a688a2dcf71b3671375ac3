@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a76adc5_8032a50e",
+        "filename": "jjb/multicloud/multicloud-k8s.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 991
+      },
+      "writtenOn": "2018-08-22T21:42:07Z",
+      "side": 1,
+      "message": "Yes. I updated the Makefile in the project repo to include deps.",
+      "parentUuid": "1a76adc5_a0ed6127",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 13
+      },
+      "revId": "0be778a5cf8974b5d8a688a2dcf71b3671375ac3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_40a00d43",
         "filename": "jjb/multicloud/multicloud-k8s.yaml",
         "patchSetId": 1
