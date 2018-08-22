@@ -16,6 +16,24 @@
       "revId": "8cc15b628613a6a31fd5ae1c8b1ca7f641779fa4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_85907744",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-22T17:16:16Z",
+      "side": 1,
+      "message": "Correct.. \ndo you want to change it? Or you want me to merge this change for now?",
+      "parentUuid": "1a76adc5_aaf2206d",
+      "revId": "8cc15b628613a6a31fd5ae1c8b1ca7f641779fa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
