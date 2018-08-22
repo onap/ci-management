@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_d91adc16",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu1604-docker-8c-8g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-08-22T02:55:21Z",
+      "side": 1,
+      "message": "Have you checked if \u0027_\u0027 works with image names, with labels there seems to be known issue.",
+      "range": {
+        "startLine": 1,
+        "startChar": 42,
+        "endLine": 1,
+        "endChar": 48
+      },
+      "revId": "c7d0e2eda76aeae86358e8d6a384ae9864b5153c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
