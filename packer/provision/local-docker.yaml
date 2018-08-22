@@ -147,6 +147,7 @@
         src: /tmp/rebar3/rebar3
         dest: /usr/bin/rebar3
         remote_src: true
+      become: true
 
     - name: Remove unused rebar3 source
       file:
