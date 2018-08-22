@@ -146,6 +146,7 @@
       copy:
         src: /tmp/rebar3/rebar3
         dest: /usr/bin/rebar3
+        mode: 0644
         remote_src: true
       become: true
 
