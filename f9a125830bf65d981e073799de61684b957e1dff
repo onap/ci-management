@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_7902a870",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-08-22T03:14:10Z",
+      "side": 1,
+      "message": "Have you tried using mode while coping? that is lesser lines of code\n\n- name: example copying file with owner and permissions\n  copy:\n    src: /srv/myfiles/foo.conf\n    dest: /etc/foo.conf\n    owner: foo\n    group: foo\n    mode: 0644",
+      "range": {
+        "startLine": 146,
+        "startChar": 0,
+        "endLine": 150,
+        "endChar": 18
+      },
+      "revId": "f9a125830bf65d981e073799de61684b957e1dff",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
