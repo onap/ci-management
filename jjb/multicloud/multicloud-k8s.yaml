@@ -2,7 +2,7 @@
 - project:
     name: k8s
     project-name: 'k8s'
-    path: '.'
+    path: 'src/k8splugin'
     jobs:
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
