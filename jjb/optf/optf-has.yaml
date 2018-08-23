@@ -15,7 +15,6 @@
           pattern: 'conductor/**'
           pom: 'pom.xml'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-verify-java'
