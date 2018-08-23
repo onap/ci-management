@@ -3,7 +3,6 @@
     name: policy-api
     project-name: 'policy-api'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
