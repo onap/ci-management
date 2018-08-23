@@ -34,6 +34,24 @@
       "revId": "8cc15b628613a6a31fd5ae1c8b1ca7f641779fa4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_824ce871",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2683
+      },
+      "writtenOn": "2018-08-23T07:13:17Z",
+      "side": 1,
+      "message": "After mail discussion we will probably skip sonar build for this Kotlin-based project.",
+      "parentUuid": "1a76adc5_85907744",
+      "revId": "8cc15b628613a6a31fd5ae1c8b1ca7f641779fa4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
