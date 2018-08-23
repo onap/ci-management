@@ -154,3 +154,11 @@
       file:
         path: /tmp/rebar3
         state: absent
+
+    - name: Download geckodriver
+      unarchive:
+        src: https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+        dest: /usr/bin
+        mode: 0644
+        remote_src: yes
+      become: true
