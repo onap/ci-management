@@ -3,7 +3,6 @@
     name: aaf-luaplugin
     project-name: 'aaf-luaplugin'
     jobs:
-      - gerrit-maven-clm
     project: 'aaf/luaplugin'
     stream:
       - 'master':
