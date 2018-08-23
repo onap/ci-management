@@ -153,6 +153,7 @@
 
     <<: *helm_job_boiler_plate
 
+    disabled: true
     builders:
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
@@ -164,6 +165,7 @@
 
     <<: *helm_job_boiler_plate
 
+    disabled: true
     builders:
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
@@ -177,6 +179,7 @@
     #     branch:    git branch (eg. stable/lithium or master)
     <<: *helm_job_boiler_plate
 
+    disabled: true
     scm:
       - lf-infra-gerrit-scm:
           jenkins-ssh-credential: '{jenkins-ssh-credential}'

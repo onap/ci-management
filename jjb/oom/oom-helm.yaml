@@ -95,12 +95,9 @@
 
       # Below jobs disabled until future need.
       - '{project-name}-{subproject}-{stream}-verify-helm':
-          disabled: true
           build_script: '{subproject_build_script}'
       - '{project-name}-{subproject}-{stream}-merge-helm':
-          disabled: true
           build_script: '{subproject_build_script}'
       - '{project-name}-{stream}-update-helm-weekly':
-          disabled: true
           build_script: '{oom_build_script}'
           files: '**'
