@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_85a072a0",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2683
+      },
+      "writtenOn": "2018-08-23T11:27:03Z",
+      "side": 1,
+      "message": "This should match:\n\n* aggregated coverage report directory, so all files under hv-collector-coverage/target/site/jacoco-aggregate\n\n* and all detekt reports:\n./hv-collector-utils/target/reports/detekt-report.html\n./hv-collector-domain/target/reports/detekt-report.html\n./hv-collector-main/target/reports/detekt-report.html\n./hv-collector-core/target/reports/detekt-report.html\n./hv-collector-health-check/target/reports/detekt-report.html\n./hv-collector-xnf-simulator/target/reports/detekt-report.html\n./hv-collector-ves-message-generator/target/reports/detekt-report.html\n./hv-collector-dcae-app-simulator/target/reports/detekt-report.html\n\nMy question - will this glob match these files?",
+      "revId": "9d2ec1bc189174034d00f9e6cb149d370befe231",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
