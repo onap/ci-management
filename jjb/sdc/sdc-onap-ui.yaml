@@ -4,7 +4,6 @@
     name: sdc-onap-ui
     project-name: 'sdc-onap-ui'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
     project: 'sdc/onap-ui'

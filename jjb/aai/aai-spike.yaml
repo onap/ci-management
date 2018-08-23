@@ -3,7 +3,6 @@
     name: aai-spike
     project-name: 'aai-spike'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'

@@ -13,7 +13,6 @@
           path: '.'
           pattern: '**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'

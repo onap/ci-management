@@ -15,7 +15,6 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
