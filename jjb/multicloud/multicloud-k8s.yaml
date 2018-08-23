@@ -1,0 +1,16 @@
+---
+- project:
+    name: k8s
+    project-name: 'k8s'
+    path: '.'
+    jobs:
+      - '{project-name}-{stream}-verify-golang'
+      - '{project-name}-{stream}-merge-golang'
+    project: 'multicloud/k8s'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'k8s-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
