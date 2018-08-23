@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: James Forsyth <jf2512@att.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+2: Tim Johnson <tijohnson@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 23 Aug 2018 00:38:12 +0000
+Reviewed-on: https://gerrit.onap.org/r/61923
+Project: ci-management
+Branch: refs/heads/master
