@@ -9,8 +9,6 @@
     subproject-name: 'onap-sdk'
 
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f ecomp-sdk/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'

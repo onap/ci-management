@@ -3,7 +3,6 @@
     name: sdnc-plugins
     project-name: 'sdnc-plugins'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-DskipTests=true'
       - '{project-name}-{stream}-merge-java'
