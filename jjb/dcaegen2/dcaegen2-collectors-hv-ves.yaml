@@ -12,7 +12,7 @@
     files: '**'
     maven-deploy-properties: |
       deployAtEnd=true
-    archive-artifacts: ''
+    archive-artifacts: 'hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html'
     build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-maven-clm
@@ -26,16 +26,3 @@
           # No-op
           script: '/bin/true'
 
-- project:
-    name: dcaegen2-collectors-hv-ves-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'dcaegen2/collectors/hv-ves'
-    project-name: 'dcaegen2-collectors-hv-ves'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
-    mvn-goals: 'clean install'
-    mvn-params: '-DskipDocker'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
