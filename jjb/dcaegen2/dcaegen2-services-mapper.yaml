@@ -3,7 +3,6 @@
     name: dcaegen2-services-mapper
     project-name: 'dcaegen2-services-mapper'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'

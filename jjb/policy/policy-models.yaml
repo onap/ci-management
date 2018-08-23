@@ -3,7 +3,6 @@
     name: policy-models
     project-name: 'policy-models'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
