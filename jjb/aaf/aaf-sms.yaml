@@ -5,6 +5,8 @@
     subproject: 'aaf-sms-client'
     path: 'sms-service/src'
     jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f sms-client/java/pom.xml'
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily':

@@ -3,6 +3,7 @@
     name: policy-core
     project-name: 'policy-core'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 

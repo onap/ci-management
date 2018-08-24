@@ -7,6 +7,8 @@
           pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
           pattern: 'veslibrary/**'
     jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'

@@ -4,6 +4,7 @@
     project-name: 'music-distributed-kv-store'
     path: 'src/dkv'
     jobs:
+      - gerrit-python-xc-clm
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
       - '{project-name}-{stream}-docker-golang-shell-daily':

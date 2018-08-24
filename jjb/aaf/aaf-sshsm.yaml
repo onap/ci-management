@@ -5,6 +5,7 @@
     build-timeout: 60
     project: 'aaf/sshsm'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-c':
          script:
             !include-raw-escape: 'build-sshsm.sh'

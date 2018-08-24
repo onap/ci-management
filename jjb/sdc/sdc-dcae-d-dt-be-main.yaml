@@ -3,6 +3,7 @@
     name: sdc-dcae-d-dt-be-main
     project-name: 'sdc-dcae-d-dt-be-main'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'

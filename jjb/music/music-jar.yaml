@@ -7,6 +7,8 @@
           pom: 'jar/pom.xml'
           pattern: 'jar/**'
     jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f jar/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
     project: 'music'
