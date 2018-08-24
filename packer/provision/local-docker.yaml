@@ -146,7 +146,7 @@
       copy:
         src: /tmp/rebar3/rebar3
         dest: /usr/bin/rebar3
-        mode: 0644
+        mode: 0755
         remote_src: true
       become: true
 
@@ -159,6 +159,6 @@
       unarchive:
         src: https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
         dest: /usr/bin
-        mode: 0644
+        mode: 0755
         remote_src: yes
       become: true
