@@ -11,6 +11,7 @@
    submodule-recursive: true
 
    jobs:
+     - gerrit-maven-clm
      - '{project}-{stream}-release-config'
    stream:
      - 'master':

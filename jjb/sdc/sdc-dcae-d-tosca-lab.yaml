@@ -9,6 +9,7 @@
     mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
     build-node: ubuntu1604-docker-8c-8g
     jobs:
+      - gerrit-python-xc-clm
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'

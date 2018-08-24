@@ -12,6 +12,7 @@
           pom: 'vio/pom.xml'
           pattern: 'vio/**'
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-{subproject}-verify-java'

@@ -18,6 +18,7 @@
     build-node: ubuntu1604-builder-4c-4g
 
     jobs:
+      - gerrit-maven-clm
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-DskipTests=true'

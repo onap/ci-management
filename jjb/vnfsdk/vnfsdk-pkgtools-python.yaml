@@ -16,6 +16,7 @@
     mvn-settings: 'vnfsdk-pkgtools-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
+      - gerrit-python-xc-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'

@@ -10,4 +10,5 @@
     mvn-settings: 'vvp-documentation-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
+      - gerrit-python-xc-clm
       - gerrit-tox-verify
