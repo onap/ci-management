@@ -1,0 +1,20 @@
+---
+
+- project:
+    name: dmaap-kafka-docker
+    project-name: 'dmaap-kafka-docker'
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'dmaap/kafkallaaf'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-kafkallaaf-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: 'docker'
+    build-node: ubuntu1604-docker-8c-8g
