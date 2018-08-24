@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_dea07045",
+        "filename": "jjb/dmaap/dmaap-kafka-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-24T17:06:48Z",
+      "side": 1,
+      "message": "This should be kafka11aaf notice the number one rather than a letter \"l\":\nhttps://gerrit.onap.org/r/#/admin/projects/dmaap/kafka11aaf",
+      "range": {
+        "startLine": 11,
+        "startChar": 20,
+        "endLine": 11,
+        "endChar": 30
+      },
+      "revId": "4e6301d2ecf67b3953962de5648cd2668f913b4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1e97c8ed",
+        "filename": "jjb/dmaap/dmaap-kafka-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-24T17:06:48Z",
+      "side": 1,
+      "message": "This should be kafka11aaf notice the number one rather than a letter \"l\":\nhttps://gerrit.onap.org/r/#/admin/projects/dmaap/kafka11aaf",
+      "range": {
+        "startLine": 15,
+        "startChar": 25,
+        "endLine": 15,
+        "endChar": 35
+      },
+      "revId": "4e6301d2ecf67b3953962de5648cd2668f913b4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
