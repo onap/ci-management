@@ -59,16 +59,12 @@
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
-      - gerrit-trigger-patch-submitted:
+      - gerrit-trigger-helm-patch-submitted:
           status-context: '{project}-Helm-Verify'
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
           files: '{files}'
-      - gerrit:
-          trigger-on:
-            - comment-added-contains-event:
-                comment-contains-value: '^verify-helm$'
 
     builders:
       - shell: '{obj:pre_build_script}'
@@ -87,17 +83,11 @@
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
-      - gerrit-trigger-patch-merged:
+      - gerrit-trigger-helm-patch-merged:
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
           files: '{files}'
-      - pollscm:
-          cron: ''
-      - gerrit:
-          trigger-on:
-            - comment-added-contains-event:
-                comment-contains-value: '^remerge-helm$'
 
     builders:
       - lf-provide-maven-settings:
