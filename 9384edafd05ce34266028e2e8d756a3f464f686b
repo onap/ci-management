@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_0ecc6834",
+        "filename": "jjb/sdc/sdc-dcae-d-dt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-08-28T19:08:50Z",
+      "side": 1,
+      "message": "let me test this..",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 38
+      },
+      "revId": "9384edafd05ce34266028e2e8d756a3f464f686b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
