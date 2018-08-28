@@ -3,7 +3,6 @@
     name: doc-tools
     project-name: 'doc-tools'
     jobs:
-      - gerrit-maven-clm
     project: 'doc/tools'
     mvn-settings: 'doc-tools-settings'
     stream:
