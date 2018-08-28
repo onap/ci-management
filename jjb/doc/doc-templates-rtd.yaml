@@ -74,6 +74,7 @@
           source $WORKSPACE/venv-tox/bin/activate
           pip install --upgrade pip
           pip install --upgrade tox argparse
+          pip install sphinx_rtd_theme
           pip freeze
           cd $WORKSPACE/{path}
           tox
