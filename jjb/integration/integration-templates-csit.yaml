@@ -39,7 +39,7 @@
           server: '{server-name}'
           project: 'integration'
           branch: '{branch}'
-          files: 'test/csit/**/{project-name}/{functionality}/**'
+          files: 'test/csit/**/{project-name}/**'
 
     builders:
       - integration-install-robotframework
@@ -97,7 +97,7 @@
           server: '{server-name}'
           project: 'integration'
           branch: '{branch}'
-          files: 'test/csit/**/{project-name}/{functionality}/**'
+          files: 'test/csit/**/{project-name}/**'
 
     builders:
       - integration-install-robotframework
@@ -169,7 +169,7 @@
           server: '{server-name}'
           project: 'integration'
           branch: '{branch}'
-          files: 'test/csit/**/{project-name}/{functionality}/**'
+          files: 'test/csit/**/{project-name}/**'
       - timed: '@daily'
       - reverse:
           jobs: '{obj:trigger_jobs}'
@@ -230,7 +230,7 @@
           server: '{server-name}'
           project: 'integration'
           branch: '{branch}'
-          files: 'test/csit/**/{project-name}/{functionality}/**'
+          files: 'test/csit/**/{project-name}/**'
       - timed: '@daily'
       - reverse:
           jobs: '{obj:trigger_jobs}'
