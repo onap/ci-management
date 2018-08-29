@@ -55,7 +55,7 @@
     scm:
       - gerrit-trigger-scm:
           refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'default'
+          choosing-strategy: 'gerrit'
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
