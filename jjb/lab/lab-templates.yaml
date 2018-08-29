@@ -31,6 +31,6 @@
 
     publishers:
       - integration-robot:
-          unstable-if: 75.0
+          unstable-if: 60.0
           pass-if: 100.0
       - lf-infra-publish
