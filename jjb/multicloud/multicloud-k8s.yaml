@@ -4,6 +4,7 @@
     project-name: 'multicloud-k8s'
     path: 'src/k8splugin'
     jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
     project: 'multicloud/k8s'
