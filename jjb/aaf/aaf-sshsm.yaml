@@ -2,7 +2,7 @@
 - project:
     name: aaf-sshsm
     project-name: 'aaf-sshsm'
-    build-timeout: 60
+    build-timeout: 120
     project: 'aaf/sshsm'
     jobs:
       - '{project-name}-{stream}-verify-c':
