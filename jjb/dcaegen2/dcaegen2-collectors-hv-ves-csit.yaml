@@ -1,0 +1,14 @@
+- project:
+    name: dcaegen2-collectors-hv-ves-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-collectors-hv-ves'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - 'dcaegen2-collectors-hv-ves-master-merge-java'
+    robot-options: ''
