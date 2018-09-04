@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Michal Dziedzic <michal.1.dziedzic@nokia.com>
+Code-Review+1: Piotr Bochenski <piotr.bochenski@nokia.com>
+Code-Review+2: Thanh Ha (zxiiro) <thanh.ha@linuxfoundation.org>
+Submitted-by: Thanh Ha (zxiiro) <thanh.ha@linuxfoundation.org>
+Submitted-at: Tue, 04 Sep 2018 15:40:08 +0000
+Reviewed-on: https://gerrit.onap.org/r/64401
+Project: ci-management
+Branch: refs/heads/master
