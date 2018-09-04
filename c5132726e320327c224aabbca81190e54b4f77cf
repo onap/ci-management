@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_b77ec917",
+        "filename": "jjb/sdc/sdc-onap-ui-angular.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-04T19:46:43Z",
+      "side": 1,
+      "message": "Line 3 and line 11 conflict since the \"name\" needs to be unique. \n\nLet\u0027s change this line to:\nname: sdc-onap-ui-angular-yaml",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 29
+      },
+      "revId": "c5132726e320327c224aabbca81190e54b4f77cf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
