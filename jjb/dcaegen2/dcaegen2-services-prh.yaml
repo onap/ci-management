@@ -7,11 +7,6 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean package docker:build -DpushImage'
-          # No-op
-          script: '/bin/true'
-          build-node: 'ubuntu1604-docker-8c-8g'
 
     project: 'dcaegen2/services/prh'
     stream:
@@ -29,7 +24,7 @@
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/services/prh'
     project-name: 'dcaegen2-services-prh'
     branch: 'master'
