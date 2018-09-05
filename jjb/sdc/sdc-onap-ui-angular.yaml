@@ -1,0 +1,38 @@
+---
+- project:
+    name: sdc-onap-ui-angular-info
+    project-name: 'sdc-onap-ui-angular'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'sdc/onap-ui-angular'
+    branch: 'master'
+
+- project:
+    name: sdc-onap-ui-angular
+    project-name: 'sdc-onap-ui-angular'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/onap-ui-angular'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-onap-ui-angular-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+    maven-version: 'mvn35'
+
+- project:
+    name: sdc-onap-ui-angular-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/onap-ui-angular'
+    project-name: 'sdc-onap-ui-angular'
+    branch: 'master'
+    mvn-settings: 'sdc-onap-ui-angular-settings'
+    mvn-params: '-Dsonar.branch={branch}'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m'
