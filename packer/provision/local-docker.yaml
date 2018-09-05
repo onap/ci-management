@@ -35,8 +35,11 @@
             dest: /usr/local
             remote_src: true
           become: true
-        - name: 'Add golang to PATH'
-          command: 'echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile'
+        - name: Create symbolic link to go bin
+          file:
+            src: "/usr/local/go/bin/go"
+            dest: "/usr/bin/go"
+            state: link
           become: true
 
     - name: Install libxml2-utils
