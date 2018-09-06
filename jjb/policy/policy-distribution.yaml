@@ -6,6 +6,13 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+	  disabled: true
 
     project: 'policy/distribution'
     stream:
