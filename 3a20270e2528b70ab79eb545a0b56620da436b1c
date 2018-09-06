@@ -22,6 +22,30 @@
       "revId": "3a20270e2528b70ab79eb545a0b56620da436b1c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_21d02ef5",
+        "filename": "jjb/policy/policy-distribution.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2018-09-06T12:33:47Z",
+      "side": 1,
+      "message": "Yes. When we start releasing artifacts we go back and enable it. The job will fail until because the repo references SNAPSHOT artifacts (eg. common, parent).",
+      "parentUuid": "1a76adc5_a18f5e29",
+      "range": {
+        "startLine": 15,
+        "startChar": 10,
+        "endLine": 15,
+        "endChar": 24
+      },
+      "revId": "3a20270e2528b70ab79eb545a0b56620da436b1c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
