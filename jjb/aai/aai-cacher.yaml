@@ -1,0 +1,34 @@
+---
+- project:
+    name: aai-cacher-master
+    project-name: 'aai-cacher'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'aai/cacher'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-cacher-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aai-cacher-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aai/cacher'
+    project-name: 'aai-cacher'
+    branch: 'master'
+    mvn-settings: 'aai-cacher-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
