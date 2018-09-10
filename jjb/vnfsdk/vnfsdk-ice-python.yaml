@@ -57,33 +57,10 @@
     jobs:
       - gerrit-tox-sonar
     cron: 'H 11 * * *'
-    mvn-params: '-f validation-scripts/pom.xml'
     build-node: ubuntu1604-builder-4c-4g
-    project: 'vnfsdk/ice'
-    project-name: 'vnfsdk-ice-validation-scripts'
-    branch: 'master'
-    mvn-settings: 'vnfsdk-ice-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: vnfsdk-ice-ice-server-tox-sonar
-    jobs:
-      - gerrit-tox-sonar
-    cron: 'H 11 * * *'
-    mvn-params: '-f ice-server/pom.xml'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'vnfsdk/ice'
-    project-name: 'vnfsdk-ice-ice-server'
-    branch: 'master'
-    mvn-settings: 'vnfsdk-ice-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: vnfsdk-ice-info
-    jobs:
-      - gerrit-info-yaml-verify
     project: 'vnfsdk/ice'
     project-name: 'vnfsdk-ice'
     branch: 'master'
+    mvn-settings: 'vnfsdk-ice-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
