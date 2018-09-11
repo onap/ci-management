@@ -11,5 +11,8 @@
             - 'policy-engine-{stream}-merge-scm-mvn-script'
             - 'policy-drools-pdp-{stream}-merge-scm-mvn-script'
             - 'policy-drools-applications-{stream}-merge-java'
+      - 'apex-pdp':
+          trigger_jobs:
+            - 'policy-apex-pdp-{stream}-merge-scm-mvn-script'
     robot-options: ''
     branch: 'master'
