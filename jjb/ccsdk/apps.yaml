@@ -34,3 +34,22 @@
     mvn-settings: 'ccsdk-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: ccsdk-apps-docker
+    project-name: 'ccsdk-apps'
+    jobs:
+      - 'docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - 'docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'ccsdk/apps'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'ccsdk-apps-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: queue-docker-4c-4g
