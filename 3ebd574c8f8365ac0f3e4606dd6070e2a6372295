@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_6b7b49be",
+        "filename": "jjb/vnfsdk/vnfsdk-ice-python.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-11T22:19:54Z",
+      "side": 0,
+      "message": "Why are we removing this job?",
+      "range": {
+        "startLine": 84,
+        "startChar": 1,
+        "endLine": 84,
+        "endChar": 25
+      },
+      "revId": "3ebd574c8f8365ac0f3e4606dd6070e2a6372295",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
