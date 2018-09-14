@@ -20,6 +20,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+    maven-version: 'mvn35'
 
 - project:
     name: logging-analytics-pomba-pomba-context-aggregator-sonar
@@ -32,6 +33,7 @@
     branch: master
     mvn-settings: logging-analytics-pomba-pomba-context-aggregator-settings
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    maven-version: 'mvn35'
 
 - project:
     name: logging-analytics-pomba-pomba-context-aggregator-info
