@@ -7,7 +7,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
           docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+          mvn-params: '-P docker'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'

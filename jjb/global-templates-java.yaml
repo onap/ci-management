@@ -561,6 +561,7 @@
     pattern: '**'
     pom:
     mvn_properties: []
+    mvn-params: ''
 
     properties:
       - infra-properties:
@@ -599,7 +600,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{obj:pom}'
-          goals: 'clean deploy -B
+          goals: 'clean deploy -B {mvn-params}
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           settings: '{mvn-settings}'
           settings-type: cfp
