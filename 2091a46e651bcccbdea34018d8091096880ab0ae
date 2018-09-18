@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_048f0076",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-datafile.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-18T16:43:07Z",
+      "side": 0,
+      "message": "These lines are being removed and replaced by line 5 and 6 on the right side of the diff\n\nCompare the left side diff vs the right side and you will notice all the lines being removed. Also, in the patch you can notice it states +9, -31 total diff lines. \nYou need to make a new file called \"dcaegen2-collectors-datafile-csit.yaml\" that contains the csit jobs in it and keep the dcaegen2-collectors-datafile.yaml file unmodified",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 35
+      },
+      "revId": "2091a46e651bcccbdea34018d8091096880ab0ae",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c4eca82c",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-datafile.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-18T16:43:07Z",
+      "side": 0,
+      "message": "This part of the diff shows the removal of the sonar job",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 26
+      },
+      "revId": "2091a46e651bcccbdea34018d8091096880ab0ae",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
