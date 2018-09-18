@@ -20,16 +20,3 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: usecase-ui-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-8c-8g
-    project: 'usecase-ui'
-    project-name: 'usecase-ui'
-    branch: 'master'
-    mvn-settings: 'usecase-ui-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
