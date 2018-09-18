@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_bb31865b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-18T20:56:20Z",
+      "side": 1,
+      "message": "Remove this line, it should be ok with the one in line 15",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 57
+      },
+      "revId": "88b50ea2fe9e768ff68211b3c7426a6597f3cd0a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_7b376e4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-18T20:56:20Z",
+      "side": 1,
+      "message": "Change this block to:\n\nIssue-ID: AAI-1634\nChange-Id: I09b026b1bd5f4bfd268e3739812fbbcc62e110d0\nSigned-off-by: Gildas Lanilis \u003cgildas.lanilis@huawei.com\u003e",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 57
+      },
+      "revId": "88b50ea2fe9e768ff68211b3c7426a6597f3cd0a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
