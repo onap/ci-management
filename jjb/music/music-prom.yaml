@@ -20,16 +20,3 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: music-prom-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'music/prom'
-    project-name: 'music-prom'
-    branch: 'master'
-    mvn-settings: 'music-prom-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
