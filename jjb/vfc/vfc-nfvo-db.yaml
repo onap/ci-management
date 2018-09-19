@@ -18,16 +18,3 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-db-docker-image.sh'
-
-- project:
-    name: vfc-nfvo-db-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'vfc/nfvo/db'
-    project-name: 'vfc-nfvo-db'
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-db-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
