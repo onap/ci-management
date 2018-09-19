@@ -19,16 +19,3 @@
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
-
-- project:
-    name: vvp-jenkins-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-docker-8c-8g
-    project: 'vvp/jenkins'
-    project-name: 'vvp-jenkins'
-    branch: 'master'
-    mvn-settings: 'vvp-jenkins-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

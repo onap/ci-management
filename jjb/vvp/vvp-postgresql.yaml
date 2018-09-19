@@ -19,16 +19,3 @@
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
-
-- project:
-    name: vvp-postgresql-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    build-node: ubuntu1604-docker-8c-8g
-    project: 'vvp/postgresql'
-    project-name: 'vvp-postgresql'
-    branch: 'master'
-    mvn-settings: 'vvp-postgresql-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
