@@ -63,6 +63,24 @@
       "revId": "edb26a4d26835464f4d2a9d03bd37bf4b0bd999d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_95d9ee58",
+        "filename": "jjb/aai/aai-gallifrey.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-19T23:38:49Z",
+      "side": 1,
+      "message": "If you change the node name here, it will take effect for all jobs... but adding it as a parameter of \"docker-java-daily\" will only affect that particular job. \n\nI think only \"docker-java-daily\" needs the docker node, if i recall correctly",
+      "parentUuid": "1a76adc5_c7182020",
+      "revId": "edb26a4d26835464f4d2a9d03bd37bf4b0bd999d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
