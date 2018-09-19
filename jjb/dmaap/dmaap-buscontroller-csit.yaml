@@ -1,0 +1,20 @@
+---
+- project:
+    name: dmaap-buscontroller-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dmaap-buscontroller'
+    stream: 'master'
+    functionality:
+      - 'ssl':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
+      - 'with_mr':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
+      - 'with_dr':
+          trigger_jobs:
+            - '{project-name}-{stream}-release-java-daily-checkstyle'
+    robot-options: ''
+    branch: 'master'
