@@ -46,6 +46,23 @@
       "revId": "edb26a4d26835464f4d2a9d03bd37bf4b0bd999d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_c7182020",
+        "filename": "jjb/aai/aai-gallifrey.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 347
+      },
+      "writtenOn": "2018-09-19T19:04:04Z",
+      "side": 1,
+      "message": "Re: the above comment.  Should this line go, or is it unrelated?",
+      "revId": "edb26a4d26835464f4d2a9d03bd37bf4b0bd999d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
