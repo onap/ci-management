@@ -18,6 +18,7 @@
       - 'beijing':
           branch: 'beijing'
     mvn-settings: 'aai-resources-settings'
+    mvn-version: 'mvn35'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
@@ -34,3 +35,4 @@
     mvn-settings: 'aai-resources-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
