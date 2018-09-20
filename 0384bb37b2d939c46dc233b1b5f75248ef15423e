@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1a76adc5_5e504e0a",
+        "filename": "jjb/aaf/aaf-cadi.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T18:36:15Z",
+      "side": 1,
+      "message": "Fix this blank spaces",
+      "range": {
+        "startLine": 57,
+        "startChar": 43,
+        "endLine": 57,
+        "endChar": 47
+      },
+      "revId": "0384bb37b2d939c46dc233b1b5f75248ef15423e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a76adc5_1e1f365c",
         "filename": "jjb/global-templates-java.yaml",
         "patchSetId": 1
