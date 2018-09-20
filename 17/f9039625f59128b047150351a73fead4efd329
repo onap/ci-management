@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Przemyslaw Wasala <przemyslaw.wasala@nokia.com>
+Code-Review+1: Marcin Migdal <marcin.migdal@nokia.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 20 Sep 2018 18:06:38 +0000
+Reviewed-on: https://gerrit.onap.org/r/68015
+Project: ci-management
+Branch: refs/heads/master
