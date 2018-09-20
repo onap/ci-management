@@ -16,7 +16,7 @@
     archive-artifacts: ''
 
 - project:
-    name: aaf-cadi-sonar
+    name: aaf-cadi-shiro-sonar
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
@@ -24,6 +24,80 @@
     project: 'aaf/cadi'
     project-name: 'aaf-cadi'
     branch: 'master'
-    mvn-settings: 'aaf-cadi-settings'
+    mvn-params: '-f shiro/pom.xml'
+    mvn-settings: 'aaf-cadi-shiro-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+# Though the below docker jobs have "aai" in the name, there is no aai code involved.
+- project:
+    name: aaf-cadi-fproxy
+    project-name: 'aaf-cadi-fproxy'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/fproxy/pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aaf/cadi'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-fproxy-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: aaf-cadi-fproxy-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aaf/cadi'
+    project-name: 'aaf-cadi-fproxy'
+    branch: 'master'
+    mvn-params: '-f sidecar/fproxy/pom.xml'
+    mvn-settings: 'aaf-cadi-fproxy-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aaf-cadi-rproxy
+    project-name: 'aaf-cadi-rproxy'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/rproxy/pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aaf/cadi'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-rproxy-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: aaf-cadi-rproxy-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aaf/cadi'
+    project-name: 'aaf-cadi-rproxy'
+    branch: 'master'
+    mvn-params: '-f sidecar/rproxy/pom.xml'
+    mvn-settings: 'aaf-cadi-rproxy-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aaf-cadi-tproxy-config
+    project-name: 'aaf-cadi-tproxy-config'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/tproxy-config/pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aaf/cadi'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-tproxy-config-settings'
+    files: '**'
+    archive-artifacts: ''
