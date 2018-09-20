@@ -1,0 +1,25 @@
+---
+- project:
+    name: dmaap-kafka
+    project-name: 'dmaap-kafka'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'dmaap/messagerouter/msgrtr'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap/kafka11aaf'
+
+- project:
+    name: dmaap-kafka-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dmaap/kafka11aaf'
+    project-name: 'dmaap-kafka'
+    branch: 'master'
+    mvn-settings: 'dmaap-kafka'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
