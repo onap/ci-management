@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_1e1f365c",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1329,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T18:35:50Z",
+      "side": 1,
+      "message": "Please use the same convention we are using for other templates for subprojects:\n\n{stream}-{subproject} \n\nnot\n\n{submodule}-{stream}",
+      "range": {
+        "startLine": 1329,
+        "startChar": 4,
+        "endLine": 1329,
+        "endChar": 65
+      },
+      "revId": "0384bb37b2d939c46dc233b1b5f75248ef15423e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
