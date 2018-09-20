@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_bec1624f",
+        "filename": "jjb/dmaap/dmaap-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T19:21:18Z",
+      "side": 1,
+      "message": "dmaap/kafka11aaf",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 40
+      },
+      "revId": "deba059d0eb34a52bfb9cb43630aad4465307c18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_1eb3b60a",
+        "filename": "jjb/dmaap/dmaap-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T19:21:18Z",
+      "side": 1,
+      "message": "dmaap-kafka11aaf-settings",
+      "range": {
+        "startLine": 12,
+        "startChar": 19,
+        "endLine": 12,
+        "endChar": 35
+      },
+      "revId": "deba059d0eb34a52bfb9cb43630aad4465307c18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3eb6b2f9",
+        "filename": "jjb/dmaap/dmaap-kafka.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T19:21:18Z",
+      "side": 1,
+      "message": "dmaap-kafka11aaf-settings",
+      "range": {
+        "startLine": 23,
+        "startChar": 19,
+        "endLine": 23,
+        "endChar": 31
+      },
+      "revId": "deba059d0eb34a52bfb9cb43630aad4465307c18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
