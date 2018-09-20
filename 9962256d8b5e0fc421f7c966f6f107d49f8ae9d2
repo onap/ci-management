@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a76adc5_f9f614d6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-20T20:58:26Z",
+      "side": 1,
+      "message": "No need to add this link, \nIt will become obsolete once the job is removed from the log and it is longer than the commit texts should allow.. \n\nLets just remove this line, the explanation above it makes it clear.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 110
+      },
+      "revId": "9962256d8b5e0fc421f7c966f6f107d49f8ae9d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
