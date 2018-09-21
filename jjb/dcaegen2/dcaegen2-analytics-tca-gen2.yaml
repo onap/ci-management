@@ -19,7 +19,7 @@
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
       - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean deploy'
+          mvn-goals: 'clean deploy docker:build -DpushImage'
           # No-op
           script: '/bin/true'
 
