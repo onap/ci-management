@@ -12,13 +12,10 @@
           branch: beijing
     functionality:
       - 'resources':
-          trigger_jobs:
-            - 'aai-resources-{stream}-aai-docker-java-daily'
+          trigger_jobs: 'aai-resources-{stream}-aai-docker-java-daily'
       - 'traversal':
-          trigger_jobs:
-            - 'aai-traversal-{stream}-aai-docker-java-daily'
+          trigger_jobs: 'aai-traversal-{stream}-aai-docker-java-daily'
       - 'esr-server':
-          trigger_jobs:
-            - 'aai-esr-server-{stream}-docker-java-daily'
+          trigger_jobs: 'aai-esr-server-{stream}-docker-java-daily'
     robot-options: ''
 
