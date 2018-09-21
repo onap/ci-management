@@ -16,6 +16,24 @@
       "revId": "3c42e088e4dba2b3de547023269fe550d4b3a620",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_3c13150f",
+        "filename": "jjb/vfc/vfc-nfvo-wfengine-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-21T21:38:22Z",
+      "side": 1,
+      "message": "Confirmed this is the right way to write these params:\n\nhttps://jenkins.onap.org/sandbox/job/vfc-nfvo-wfengine-master-csit-sanity-check/configure\n\nThanks!",
+      "parentUuid": "1a76adc5_39ba476f",
+      "revId": "3c42e088e4dba2b3de547023269fe550d4b3a620",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
