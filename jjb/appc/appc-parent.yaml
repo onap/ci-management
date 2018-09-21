@@ -1,0 +1,15 @@
+---
+- project:
+    name: appc-parent
+    project-name: 'appc-parent'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'appc/parent'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'appc-settings'
+    build-node: ubuntu1604-builder-2c-1g
