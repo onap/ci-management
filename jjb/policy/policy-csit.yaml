@@ -28,3 +28,16 @@
     robot-options: ''
     branch: 'master'
 
+- project:
+    name: policy-distribution-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'policy'
+    stream: 'master'
+    functionality:
+      - 'distribution'
+    trigger_jobs:
+      - 'policy-distribution-{stream}-merge-java'
+    robot-options: ''
+    branch: 'master'
