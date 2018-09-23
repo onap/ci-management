@@ -18,8 +18,9 @@
       - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
+          mvn-goals: 'clean install'
       - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean deploy docker:build -DpushImage'
+          mvn-goals: 'clean deploy'
           # No-op
           script: '/bin/true'
 
