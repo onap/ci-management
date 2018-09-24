@@ -7,9 +7,9 @@
     project-name: 'vfc-nfvo-wfengine'
     stream: 'master'
     functionality:
-      - 'sanity-check':
-          trigger_jobs:
-            - 'vfc-nfvo-wfengine-master-engine-activiti-extension-docker-java-version-shell-daily'
-            - 'vfc-nfvo-wfengine-master-engine-mgr-service-docker-java-version-shell-daily'
+      - 'sanity-check'
+    trigger_jobs:
+      - 'vfc-nfvo-wfengine-master-engine-activiti-extension-docker-java-version-shell-daily'
+      - 'vfc-nfvo-wfengine-master-engine-mgr-service-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
