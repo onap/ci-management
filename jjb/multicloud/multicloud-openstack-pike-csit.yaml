@@ -8,7 +8,6 @@
     stream: 'master'
     functionality:
       - 'functionality1':
-          trigger_jobs:
-            - 'multicloud-openstack-master-docker-java-version-shell-daily'
+          trigger_jobs: 'multicloud-openstack-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
