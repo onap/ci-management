@@ -1,0 +1,9 @@
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Bharath Balasubramanian <bharathb@research.att.com>
+Code-Review+1: Bin Yang <bin.yang@windriver.com>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 24 Sep 2018 17:27:03 +0000
+Reviewed-on: https://gerrit.onap.org/r/58487
+Project: ci-management
+Branch: refs/heads/master
