@@ -165,10 +165,16 @@
         remote_src: yes
       become: true
 
+    - file:
+        path: /usr/bin/firefox-bin
+        state: directory
+        mode: 0755
+      become: true
+
     - name: Download Firefox version 55.0.3
       unarchive:
         src: https://download-installer.cdn.mozilla.net/pub/firefox/releases/55.0.3/linux-x86_64/en-US/firefox-55.0.3.tar.bz2
-        dest: /tmp
+        dest: /usr/bin/firefox-bin
         mode: 0755
         remote_src: yes
       become: true
