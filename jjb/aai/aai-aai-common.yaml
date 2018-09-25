@@ -3,7 +3,6 @@
     name: aai-aai-common-master
     project-name: 'aai-aai-common'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -31,4 +30,14 @@
     mvn-settings: 'aai-aai-common-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
+
+- project:
+    name: aai-aai-common-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/aai-common'
+    project-name: 'aai-aai-common'
+    branch: 'master'
+    mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'

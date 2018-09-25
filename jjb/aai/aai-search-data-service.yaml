@@ -3,7 +3,6 @@
     name: aai-search-data-service-master
     project-name: 'aai-search-data-service'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -32,3 +31,12 @@
     mvn-settings: 'aai-search-data-service-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aai-search-data-service-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/search-data-service'
+    project-name: 'aai-search-data-service'
+    branch: 'master'
+    mvn-settings: 'aai-search-data-service-settings'

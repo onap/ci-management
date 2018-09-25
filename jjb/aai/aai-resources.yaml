@@ -3,7 +3,6 @@
     name: aai-resources
     project-name: 'aai-resources'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -35,4 +34,14 @@
     mvn-settings: 'aai-resources-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
+
+- project:
+    name: aai-resources-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/resources'
+    project-name: 'aai-resources'
+    branch: 'master'
+    mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
