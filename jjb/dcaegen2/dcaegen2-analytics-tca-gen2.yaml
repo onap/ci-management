@@ -20,9 +20,10 @@
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean deploy'
+          mvn-goals: 'clean deploy docker:build -DpushImage'
           # No-op
           script: '/bin/true'
+          build-node: 'ubuntu1604-docker-8c-8g'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-sonar
