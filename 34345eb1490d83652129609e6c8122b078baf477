@@ -46,6 +46,30 @@
       "revId": "34345eb1490d83652129609e6c8122b078baf477",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_cbc25034",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-09-25T16:32:57Z",
+      "side": 1,
+      "message": "Got it.. yea.. I\u0027ll go for your 2nd suggestion... \nThe issue that we found is that the firefox bin needs to be preserved in the same directory as the rest of the content that comes with it. But your 2nd suggestion should work",
+      "parentUuid": "1a76adc5_f05059d6",
+      "range": {
+        "startLine": 177,
+        "startChar": 14,
+        "endLine": 177,
+        "endChar": 34
+      },
+      "revId": "34345eb1490d83652129609e6c8122b078baf477",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
