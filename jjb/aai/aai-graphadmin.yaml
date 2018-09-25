@@ -3,7 +3,6 @@
     name: aai-graphadmin-master
     project-name: 'aai-graphadmin'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,4 +32,14 @@
     mvn-settings: 'aai-graphadmin-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
+
+- project:
+    name: aai-graphadmin-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/graphadmin'
+    project-name: 'aai-graphadmin'
+    branch: 'master'
+    mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'

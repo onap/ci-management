@@ -3,7 +3,6 @@
     name: aai-cacher-master
     project-name: 'aai-cacher'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,14 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-cacher-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/cacher'
+    project-name: 'aai-cacher'
+    branch: 'master'
+    mvn-settings: 'aai-cacher-settings'
+    mvn-version: 'mvn35'
+

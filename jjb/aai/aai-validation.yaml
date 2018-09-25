@@ -3,7 +3,6 @@
     name: aai-validation
     project-name: 'aai-validation'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -31,3 +30,12 @@
     mvn-settings: 'aai-validation-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aai-validation-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/validation'
+    project-name: 'aai-validation'
+    branch: 'master'
+    mvn-settings: 'aai-validation-settings'

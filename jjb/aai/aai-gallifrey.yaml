@@ -3,7 +3,6 @@
     name: aai-gallifrey
     project-name: 'aai-gallifrey'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -18,3 +17,12 @@
     mvn-settings: 'aai-gallifrey-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aai-gallifrey-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/gallifrey'
+    project-name: 'aai-gallifrey'
+    branch: 'master'
+    mvn-settings: 'aai-gallifrey-settings'

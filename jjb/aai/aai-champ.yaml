@@ -3,7 +3,6 @@
     name: aai-champ
     project-name: 'aai-champ'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,3 +32,12 @@
     mvn-settings: 'aai-champ-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aai-champ-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aai/champ'
+    project-name: 'aai-champ'
+    branch: 'master'
+    mvn-settings: 'aai-champ-settings'
