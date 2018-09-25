@@ -70,6 +70,54 @@
       "revId": "34345eb1490d83652129609e6c8122b078baf477",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_7013e90d",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2018-09-25T17:16:32Z",
+      "side": 1,
+      "message": "/usr/local since it is locally installed from source.\nThis patch is ok I think, but my opinion is to store firefox under /usr/local or /opt, and possible link binary to /usr/bin /usr/local/bin",
+      "parentUuid": "1a76adc5_f05059d6",
+      "range": {
+        "startLine": 177,
+        "startChar": 14,
+        "endLine": 177,
+        "endChar": 34
+      },
+      "revId": "34345eb1490d83652129609e6c8122b078baf477",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a76adc5_d2ed25b9",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2018-09-25T17:16:32Z",
+      "side": 1,
+      "message": "isn\u0027t /usr/bin/firefox-bin a directory? And the symlink is linking from firefox-bin/..... to /usr/bin/firefox?",
+      "parentUuid": "1a76adc5_bf1e32ba",
+      "range": {
+        "startLine": 177,
+        "startChar": 14,
+        "endLine": 177,
+        "endChar": 34
+      },
+      "revId": "34345eb1490d83652129609e6c8122b078baf477",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
