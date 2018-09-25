@@ -168,14 +168,14 @@
     - name: Download Firefox version 55.0.3
       unarchive:
         src: https://download-installer.cdn.mozilla.net/pub/firefox/releases/55.0.3/linux-x86_64/en-US/firefox-55.0.3.tar.bz2
-        dest: /tmp
+        dest: /opt
         mode: 0755
         remote_src: yes
       become: true
 
     - name: Create symbolic link to firefox bin
       file:
-        src: "/usr/bin/firefox-bin/firefox/firefox"
+        src: "/opt/firefox/firefox"
         dest: "/usr/bin/firefox"
         state: link
       become: true
