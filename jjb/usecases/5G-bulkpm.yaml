@@ -1,0 +1,14 @@
+---
+- project:
+    name: usecases-5G-bulkpm-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'usecases'
+    stream: 'master'
+    functionality:
+      - '5G-bulkpm':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+    branch: 'master'
