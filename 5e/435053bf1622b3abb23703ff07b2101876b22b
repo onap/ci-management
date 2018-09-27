@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Rajendra Jaiswal <rajendra.jaiswal@ericsson.com>
+Code-Review+1: Gary Wu <gary.i.wu@huawei.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 27 Sep 2018 17:49:26 +0000
+Reviewed-on: https://gerrit.onap.org/r/69361
+Project: ci-management
+Branch: refs/heads/master
