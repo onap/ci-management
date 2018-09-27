@@ -12,8 +12,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'appc-cdt-settings'
     files: '**'
     archive-artifacts: ''
