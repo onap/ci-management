@@ -41,7 +41,7 @@
 - builder:
     name: integration-run-test
     builders:
-      - shell: "${WORKSPACE}/test/csit/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+      - shell: "${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
 
 - builder:
     name: integration-autorelease-fix-relativepaths
