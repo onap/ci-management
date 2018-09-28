@@ -8,8 +8,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     functionality:
       - 'functionality1':
           trigger_jobs:
