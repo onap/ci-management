@@ -8,8 +8,6 @@
     stream:
       - 'master':
           branch: master
-      - 'beijing':
-          branch: beijing
     functionality:
       - 'resources':
           trigger_jobs: 'aai-resources-{stream}-aai-docker-java-daily'
