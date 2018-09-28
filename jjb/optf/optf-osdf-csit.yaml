@@ -8,8 +8,6 @@
      stream:
        - 'master':
            branch: master
-       - 'beijing':
-           branch: beijing
      functionality:
        - 'osdf':
            trigger_jobs: 'optf-osdf-master-osdf-docker-java-version-shell-daily'

@@ -8,8 +8,6 @@
      stream:
        - 'master':
            branch: master
-       - 'beijing':
-           branch: beijing
      functionality:
        - 'has':
            trigger_jobs: 'optf-has-master-conductor-docker-java-version-shell-daily'
