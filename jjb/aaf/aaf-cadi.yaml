@@ -37,6 +37,7 @@
           pom: 'sidecar/fproxy/pom.xml'
           mvn-goals: 'docker:build'
     project: 'aaf/cadi'
+    docker-image-name: 'onap/fproxy'
     stream:
       - 'master':
           branch: 'master'
@@ -66,6 +67,7 @@
           pom: 'sidecar/rproxy/pom.xml'
           mvn-goals: 'docker:build'
     project: 'aaf/cadi'
+    docker-image-name: 'onap/rproxy'
     stream:
       - 'master':
           branch: 'master'
@@ -95,6 +97,7 @@
           pom: 'sidecar/tproxy-config/pom.xml'
           mvn-goals: 'docker:build'
     project: 'aaf/cadi'
+    docker-image-name: 'onap/tproxy-config'
     stream:
       - 'master':
           branch: 'master'
