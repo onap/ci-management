@@ -11,8 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'aai-sparky-fe-settings'
     files: '**'
     archive-artifacts: ''

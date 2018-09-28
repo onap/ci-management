@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'aai-model-loader-settings'
     files: '**'
     archive-artifacts: ''

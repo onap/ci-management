@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'aai-gizmo-settings'
     files: '**'
     archive-artifacts: ''

@@ -14,8 +14,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
     files: '**'
