@@ -24,7 +24,7 @@
     name: sdc-dcae-ci-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/dcae-d/ci'
     project-name: 'sdc-dcae-d-ci'

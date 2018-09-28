@@ -152,7 +152,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'

@@ -25,7 +25,7 @@
     name: logging-analytics-pomba-pomba-network-discovery-context-builder-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: logging-analytics/pomba/pomba-network-discovery-context-builder
     project-name: logging-analytics-pomba-pomba-network-discovery-context-builder

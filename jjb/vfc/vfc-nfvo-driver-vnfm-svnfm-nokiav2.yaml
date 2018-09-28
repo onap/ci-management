@@ -65,7 +65,7 @@
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     project-name: 'vfc-nfvo-driver-vnfm-svnfm-nokiav2'
-    cron: 'H 11 * * *'
+    cron: '@daily'
     branch: 'master'
     mvn-params: '-f nokiav2/pom.xml'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'

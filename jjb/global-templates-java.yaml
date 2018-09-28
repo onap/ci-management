@@ -143,7 +143,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -211,7 +211,7 @@
           build-timeout: '{build-timeout}'
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -286,7 +286,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H H(10-17) * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -360,7 +360,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -437,7 +437,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -510,7 +510,7 @@
 
     triggers:
       # 11 AM UTC
-      - timed: 'H 11 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -717,7 +717,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -803,7 +803,7 @@
           build-timeout: '{build-timeout}'
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -876,7 +876,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -944,7 +944,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -1014,7 +1014,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -1092,7 +1092,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -1173,7 +1173,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'
@@ -1271,7 +1271,7 @@
 
     triggers:
       # 12 AM UTC
-      - timed: 'H 12 * * *'
+      - timed: '@daily'
       - gerrit-trigger-release-manually:
           server: '{server-name}'
           project: '{project}'

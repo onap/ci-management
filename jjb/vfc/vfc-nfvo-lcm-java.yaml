@@ -25,7 +25,7 @@
     name: vfc-nfvo-lcm-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: centos7-redis-4c-4g
     project: 'vfc/nfvo/lcm'
     project-name: 'vfc-nfvo-lcm'

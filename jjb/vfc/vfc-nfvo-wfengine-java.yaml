@@ -34,7 +34,7 @@
     jobs:
       - gerrit-maven-sonar
     mvn-params: '-f wfenginemgrservice/pom.xml'
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-wfenginemgrservice'
@@ -47,7 +47,7 @@
     jobs:
       - gerrit-maven-sonar
     mvn-params: '-f activiti-extension/pom.xml'
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-activiti-extension'

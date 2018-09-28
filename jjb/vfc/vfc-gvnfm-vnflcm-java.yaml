@@ -30,7 +30,7 @@
     name: vfc-gvnfm-vnflcm-lcm-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     mvn-params: '-f lcm/pom.xml'
     build-node: centos7-redis-4c-4g
     project: 'vfc/gvnfm/vnflcm'

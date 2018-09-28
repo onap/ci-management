@@ -26,7 +26,7 @@
     name: ccsdk-platform-plugins-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: centos7-redis-4c-4g
     project: 'ccsdk/platform/plugins'
     project-name: 'ccsdk-platform-plugins'

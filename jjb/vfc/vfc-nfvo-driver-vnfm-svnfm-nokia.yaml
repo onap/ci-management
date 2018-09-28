@@ -25,7 +25,7 @@
     name: vfc-nfvo-driver-vnfm-svnfm-nokia-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     mvn-params: '-f nokia/vnfmdriver/pom.xml'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vfc/nfvo/driver/vnfm/svnfm'

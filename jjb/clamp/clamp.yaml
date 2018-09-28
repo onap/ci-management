@@ -38,7 +38,7 @@
     jobs:
       - gerrit-maven-sonar:
           mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
     project: 'clamp'
     project-name: 'clamp'

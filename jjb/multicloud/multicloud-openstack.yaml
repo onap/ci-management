@@ -55,7 +55,7 @@
     name: multicloud-openstack-newton-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-newton'
@@ -69,7 +69,7 @@
     name: multicloud-openstack-ocata-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-ocata'
@@ -83,7 +83,7 @@
     name: multicloud-openstack-windriver-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-windriver'
@@ -97,7 +97,7 @@
     name: multicloud-openstack-pike-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-pike'

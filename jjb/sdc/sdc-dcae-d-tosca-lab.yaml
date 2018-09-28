@@ -18,7 +18,7 @@
     name: sdc-dcae-d-tosca-lab-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
     project: 'sdc/dcae-d/tosca-lab'
     project-name: 'sdc-dcae-d-tosca-lab'

@@ -24,7 +24,7 @@
     name: vvp-cms-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
     project: 'vvp/cms'
     project-name: 'vvp-cms'

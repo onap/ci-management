@@ -20,7 +20,7 @@
     name: aai-router-core-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/router-core'
     project-name: 'aai-router-core'

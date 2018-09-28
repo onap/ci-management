@@ -25,7 +25,7 @@
     name: msb-discovery-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'msb/discovery'
     project-name: 'msb-discovery'

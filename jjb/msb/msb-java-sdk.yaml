@@ -20,7 +20,7 @@
     name: msb-java-sdk-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'msb/java-sdk'
     project-name: 'msb-java-sdk'

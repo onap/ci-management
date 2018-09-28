@@ -32,7 +32,7 @@
     name: sdc-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-8c-8g
     project: 'sdc'
     project-name: 'sdc'

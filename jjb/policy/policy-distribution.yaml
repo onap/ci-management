@@ -29,7 +29,7 @@
     name: policy-distribution-sonar
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
+    cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'policy/distribution'
     project-name: 'policy-distribution'
