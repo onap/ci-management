@@ -33,11 +33,3 @@
     mvn-settings: logging-analytics-pomba-pomba-network-discovery-context-builder-settings
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     maven-version: 'mvn35'
-
-- project:
-    name: logging-analytics-pomba-pomba-network-discovery-context-builder-info
-    project-name: 'logging-analytics-pomba-pomba-network-discovery-context-builder'
-    jobs:
-      - gerrit-info-yaml-verify
-    project: 'logging-analytics/pomba/pomba-network-discovery-context-builder'
-    branch: 'master'
