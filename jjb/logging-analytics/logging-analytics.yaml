@@ -73,3 +73,11 @@
           pattern: 'pylog/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
+
+- project:
+    name: logging-analytics-info
+    project-name: 'logging-analytics'
+    jobs:
+      - gerrit-info-yaml-verify
+    project: 'logging-analytics'
+    branch: 'master'
