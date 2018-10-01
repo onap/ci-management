@@ -1,0 +1,64 @@
+---
+- project:
+    name: optf-cmso
+    project-name: 'optf-cmso'
+    project: 'optf/cmso'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'optf-cmso-settings'
+    subproject:
+      - 'cmso':
+          path: '.'
+          pattern: '**'
+          pom: 'pom.xml'
+    jobs:
+      - gerrit-maven-clm
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-builder-4c-4g'
+
+- project:
+    name: optf-cmso-docker
+    project-name: 'optf-cmso'
+    project: 'optf/cmso'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'optf-cmso-settings'
+    subproject:
+      - 'cmso':
+          path: '.'
+          pattern: '**'
+          pom: 'pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-cmso-docker-image.sh'
+          build-node: queue-docker-4c-4g
+      - '{project-name}-{stream}-{subproject}-docker-java-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-cmso-docker-image.sh'
+          build-node: queue-docker-4c-4g
+
+- project:
+    name: optf-cmso-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'optf/cmso'
+    project-name: 'optf-cmso'
+    branch: 'master'
+    mvn-settings: 'optf-cmso-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
