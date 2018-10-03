@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     functionality:
       - 'functionality1':
           trigger_jobs:
