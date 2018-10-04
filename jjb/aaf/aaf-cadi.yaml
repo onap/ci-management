@@ -22,7 +22,7 @@
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aaf/cadi'
-    project-name: 'aaf-cadi'
+    project-name: 'aaf-cadi-shiro'
     branch: 'master'
     mvn-params: '-f shiro/pom.xml'
     mvn-settings: 'aaf-cadi-settings'
