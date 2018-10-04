@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Tian Lee <TianL@amdocs.com>
+Code-Review+1: Gabriel Sanchez <gabriel.sanchez@amdocs.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 04 Oct 2018 20:41:27 +0000
+Reviewed-on: https://gerrit.onap.org/r/69722
+Project: ci-management
+Branch: refs/heads/master
