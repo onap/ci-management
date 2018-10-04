@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'Dublin-dev':
+          branch: 'Dublin-dev'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
