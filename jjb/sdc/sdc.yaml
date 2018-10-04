@@ -17,6 +17,7 @@
           mvn-profile: 'docker'
           mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
       - gerrit-maven-clm:
+          build-timeout: 120
           mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     project: 'sdc'
     stream:
