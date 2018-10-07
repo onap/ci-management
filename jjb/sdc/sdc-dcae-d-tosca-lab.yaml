@@ -6,9 +6,14 @@
     stream:
       - 'master':
           branch: 'master'
+    subproject:
+    - dcae-d-tosca-lab:
+        path: '.'
+        pattern: '**'
     mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
     build-node: ubuntu1604-docker-8c-8g
     jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
