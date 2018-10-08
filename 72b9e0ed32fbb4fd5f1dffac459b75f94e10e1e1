@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bada0100_9f5f8a72",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-10-08T16:06:37Z",
+      "side": 1,
+      "message": "Remove this \":\"\n\nNot sure why it was not flagged, but this extra character can cause some weird behavior since there are no specific parameters for this job.",
+      "range": {
+        "startLine": 9,
+        "startChar": 60,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "72b9e0ed32fbb4fd5f1dffac459b75f94e10e1e1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
