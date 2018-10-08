@@ -12,8 +12,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -31,8 +29,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
