@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -28,7 +30,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/traversal'
     project-name: 'aai-traversal'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-traversal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -40,6 +42,6 @@
       - gerrit-maven-clm
     project: 'aai/traversal'
     project-name: 'aai-traversal'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
