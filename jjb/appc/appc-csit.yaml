@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: master
+      - 'casablanca':
+          branch: 'casablanca'
     functionality:
       - 'healthcheck':
           trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
