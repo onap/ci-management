@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
     files: '**'
