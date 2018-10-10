@@ -27,6 +27,8 @@
     jobs:
       - 'docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
+      - 'docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
     project: 'appc/deployment'
     stream:
       - 'master':
