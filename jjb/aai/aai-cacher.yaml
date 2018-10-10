@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -28,7 +30,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/cacher'
     project-name: 'aai-cacher'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-cacher-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -40,7 +42,7 @@
       - gerrit-maven-clm
     project: 'aai/cacher'
     project-name: 'aai-cacher'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

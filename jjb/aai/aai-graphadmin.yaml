@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -28,7 +30,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -40,6 +42,6 @@
       - gerrit-maven-clm
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
