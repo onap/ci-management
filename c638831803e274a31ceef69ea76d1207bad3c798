@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bada0100_823e3fb7",
+        "filename": "jenkins-config/global-vars-production.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-10-11T20:04:53Z",
+      "side": 1,
+      "message": "This probably needs to be updated to use the git protocol and mirror as well.",
+      "revId": "c638831803e274a31ceef69ea76d1207bad3c798",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bada0100_c25c4728",
+        "filename": "jenkins-config/global-vars-sandbox.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-10-11T20:04:53Z",
+      "side": 1,
+      "message": "This probably needs to be updated to use the git protocol and mirror as well.",
+      "revId": "c638831803e274a31ceef69ea76d1207bad3c798",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
