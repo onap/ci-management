@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
@@ -22,14 +24,14 @@
     name: ccsdk-distribution-docker
     project-name: 'ccsdk-distribution'
     jobs:
-      - 'docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
       - 'docker-version-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
     project: 'ccsdk/distribution'
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
