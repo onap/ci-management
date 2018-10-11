@@ -14,12 +14,3 @@
     mvn-settings: 'aai-sparky-fe-settings'
     files: '**'
     archive-artifacts: ''
-
-- project:
-    name: aai-sparky-fe-clm
-    jobs:
-      - gerrit-maven-clm
-    project: 'aai/sparky-fe'
-    project-name: 'aai-sparky-fe'
-    branch: 'master'
-    mvn-settings: 'aai-sparky-fe-settings'
