@@ -1,9 +1,9 @@
 DOCKER_REGISTRY=nexus3.onap.org
 DOCKERHUB_REGISTRY=docker.io
 GERRIT_URL=https://gerrit.onap.org/r
-GIT_BASE=ssh://ecomp-jobbuilder@gerrit.onap.org:29418/$PROJECT
-GIT_NO_PROJECT=ssh://ecomp-jobbuilder@gerrit.onap.org:29418
-GIT_URL=ssh://ecomp-jobbuilder@gerrit.onap.org:29418
+GIT_BASE=git://cloud.onap.org/mirror/$PROJECT.git
+GIT_NO_PROJECT=git://cloud.onap.org/mirror
+GIT_URL=git://cloud.onap.org/mirror
 JENKINS_HOSTNAME=vex-yul-ecomp-jenkins-1
 JIRA_URL=https://jira.onap.org
 LOGS_REPO_URL=https://nexus.onap.org/service/local/repositories/logs
