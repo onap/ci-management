@@ -1,0 +1,12 @@
+---
+- project:
+    name: multicloud-azure-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'multicloud-azure'
+    stream: 'master'
+    functionality:
+      - 'functionality1':
+          trigger_jobs: 'multicloud-azure-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
