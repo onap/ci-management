@@ -3,7 +3,6 @@
     name: externalapi-nbi
     project-name: 'externalapi-nbi'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -21,6 +20,15 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: externalapi-nbi-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'externalapi/nbi'
+    project-name: 'externalapi-nbi'
+    branch: 'master'
+    mvn-settings: 'externalapi-nbi-settings
 
 - project:
     name: externalapi-nbi-sonar
