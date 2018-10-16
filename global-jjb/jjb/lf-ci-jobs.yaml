@@ -1,0 +1,1274 @@
+---
+- job-group:
+    name: '{project-name}-ci-jobs'
+
+    jobs:
+      - gerrit-jenkins-cfg-merge
+      - gerrit-jenkins-sandbox-cleanup
+      - gerrit-jjb-deploy-job
+      - gerrit-jjb-merge
+      - gerrit-jjb-verify
+
+- job-group:
+    name: '{project-name}-github-ci-jobs'
+
+    jobs:
+      - github-jenkins-cfg-merge
+      - github-jenkins-sandbox-cleanup
+      - github-jjb-deploy-job
+      - github-jjb-merge
+      - github-jjb-verify
+
+- job-group:
+    name: '{project-name}-info-yaml-jobs'
+
+    jobs:
+      - gerrit-info-yaml-verify
+
+- job-group:
+    name: '{project-name}-github-info-yaml-jobs'
+
+    jobs:
+      - github-info-yaml-verify
+
+- job-group:
+    name: '{project-name}-packer-jobs'
+
+    jobs:
+      - gerrit-packer-merge
+      - gerrit-packer-verify
+
+- job-group:
+    name: '{project-name}-github-packer-jobs'
+
+    jobs:
+      - github-packer-merge
+      - github-packer-verify
+
+####################
+# COMMON FUNCTIONS #
+####################
+
+- builder:
+    name: lf-infra-jjbini
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: jjbini
+              target: '$HOME/.config/jenkins_jobs/jenkins_jobs.ini'
+
+- builder:
+    name: lf-infra-jjbini-sandbox
+    # TODO: Consolidate this into jjbini when JJB2.0 is available.
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: jjbini-sandbox
+              target: '$HOME/.config/jenkins_jobs/jenkins_jobs.ini'
+
+- lf_packer: &lf_packer_common
+    name: lf-packer-common
+    # Provide configuration common in packer jobs.
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    build-timeout: 90
+    cron: '@monthly'
+    github-url: 'https://github.com'
+    stream: master
+    submodule-recursive: true
+    packer-cloud-settings: packer-cloud-env
+    packer-version: 1.2.3
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+          lftools-version: '{lftools-version}'
+      - lf-packer-parameters:
+          packer-version: '{packer-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    publishers:
+      - lf-infra-publish
+
+- parameter:
+    name: lf-infra-jjb-parameters
+    parameters:
+      - string:
+          name: JJB_VERSION
+          default: '{jjb-version}'
+          description: Jenkins Job Builder version to download and install.
+
+- parameter:
+    name: lf-packer-parameters
+    parameters:
+      - string:
+          name: PACKER_VERSION
+          default: '{packer-version}'
+          description: Packer version to download and install.
+
+- lf_jjb_common: &lf_jjb_common
+    name: lf-jjb-common
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    build-timeout: 10
+    github-url: 'https://github.com'
+    jjb-version: 2.2.1
+    stream: master
+    submodule-recursive: true
+
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '.*\.groovy'
+      - compare-type: REG_EXP
+        pattern: '.*\.sh'
+      - compare-type: REG_EXP
+        pattern: '.*\.bat'
+      - compare-type: REG_EXP
+        pattern: '.*\.ps1'
+      - compare-type: REG_EXP
+        pattern: '.*\.(yaml|yml)'
+      - compare-type: REG_EXP
+        pattern: '.*\/global-jjb'
+
+    # github_included_regions MUST match gerrit_trigger_file_paths
+    github_included_regions:
+      - '.*\.groovy'
+      - '.*\.sh'
+      - '.*\.bat'
+      - '.*\.ps1'
+      - '.*\.(yaml|yml)'
+      - '.*\/global-jjb'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+          lftools-version: '{lftools-version}'
+      - lf-infra-jjb-parameters:
+          jjb-version: '{jjb-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    publishers:
+      - lf-infra-publish
+
+######################
+# Gerrit Branch Lock #
+######################
+
+- job-template:
+    name: '{project-name}-gerrit-branch-lock-{stream}'
+    id: gerrit-branch-lock
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+    stream: master
+    gerrit_merge_triggers:
+      - comment-added-contains-event:
+          comment-contains-value: (un)?lock branch$
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 1
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: 5
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: ''
+          branch: '{branch}'
+          submodule-recursive: false
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_merge_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+
+    builders:
+      - shell: !include-raw-escape: ../shell/gerrit-branch-lock.sh
+
+
+    publishers:
+      - lf-infra-publish
+
+##########################################
+# Jenkins Configuration Management Merge #
+##########################################
+
+- builder:
+    name: lf-jenkins-cfg-clouds
+    builders:
+      - lf-infra-jjbini
+      - inject:
+          properties-content: 'jenkins_silos={jenkins-silos}'
+      - shell: !include-raw-escape: ../shell/jenkins-configure-clouds.sh
+      - shell: rm "$HOME/.config/jenkins_jobs/jenkins_jobs.ini"
+
+- builder:
+    name: lf-jenkins-cfg-global-vars
+    builders:
+      - lf-infra-jjbini
+      - inject:
+          properties-content: 'jenkins_silos={jenkins-silos}'
+      - shell: !include-raw-escape: ../shell/jenkins-configure-global-vars.sh
+      - shell: rm "$HOME/.config/jenkins_jobs/jenkins_jobs.ini"
+
+- lf_jenkins_configuration: &lf_jenkins_cfg_merge
+    name: lf-jenkins-cfg-merge
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    cron: '@daily'
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+    github-url: 'https://github.com'
+    jenkins-silos: production sandbox
+
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
+
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'jenkins-config\/.*'
+
+    # github_included_regions MUST match gerrit_trigger_file_paths
+    github_included_regions:
+      - 'jenkins-config\/.*'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: false
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 1
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: ''
+          branch: master
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: 10
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - shell: !include-raw-escape:
+          - ../shell/lftools-install.sh
+      - lf-jenkins-cfg-global-vars:
+          jenkins-silos: '{jenkins-silos}'
+      - lf-jenkins-cfg-clouds:
+          jenkins-silos: '{jenkins-silos}'
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
+    name: '{project-name}-jenkins-cfg-merge'
+    id: gerrit-jenkins-cfg-merge
+    <<: *lf_jenkins_cfg_merge
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: 'refs/heads/{branch}'
+          branch: '{branch}'
+          submodule-recursive: true
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - timed: '{obj:cron}'
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_merge_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
+- job-template:
+    name: '{project-name}-jenkins-cfg-merge'
+    id: github-jenkins-cfg-merge
+    <<: *lf_jenkins_cfg_merge
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 1
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: ''
+          branch: 'refs/heads/{branch}'
+          submodule-recursive: true
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - timed: '{obj:cron}'
+      - github
+      - pollscm:
+          cron: ''
+      - github-pull-request:
+          trigger-phrase: '^remerge$'
+          only-trigger-phrase: true
+          status-context: 'Jenkins CFG Merge'
+          permit-all: false
+          github-hooks: true
+          org-list:
+            - '{github-org}'
+          white-list: '{obj:github_pr_whitelist}'
+          admin-list: '{obj:github_pr_admin_list}'
+          included-regions: '{obj:github_included_regions}'
+          white-list-target-branches:
+            - '{branch}'
+
+
+###########################
+# JENKINS SANDBOX CLEANUP #
+###########################
+
+- lf_jenkins_sandbox_cleanup: &lf_jenkins_sandbox_cleanup
+    name: lf-jenkins-sandbox-cleanup
+
+    ######################
+    # Default parameters #
+    ######################
+
+    build-timeout: 30
+    # Run every Saturday at 08:00 UTC
+    cron: '0 8 * * 6'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    parameters:
+      - lf-infra-jjb-parameters:
+          jjb-version: '{jjb-version}'
+
+    triggers:
+      - timed: '{obj:cron}'
+
+    builders:
+      - lf-infra-jjbini
+      - shell: !include-raw-escape:
+          - ../shell/jjb-install.sh
+          - ../shell/jenkins-sandbox-cleanup.sh
+          - ../shell/jjb-cleanup.sh
+
+- job-template:
+    name: '{project-name}-jenkins-sandbox-cleanup'
+    id: gerrit-jenkins-sandbox-cleanup
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jenkins_sandbox_cleanup
+
+- job-template:
+    name: '{project-name}-jenkins-sandbox-cleanup'
+    id: github-jenkins-sandbox-cleanup
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jenkins_sandbox_cleanup
+
+
+##################
+# JJB DEPLOY JOB #
+##################
+
+- lf_jjb_deploy_job: &lf_jjb_deploy_job
+    name: lf-jjb-deploy-job
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    # jjb-deploy should always clone $PROJECT regardless of what
+    # $GERRIT_PROJECT triggered the job.
+    git-url: '$GIT_URL/$PROJECT'
+    github-url: 'https://github.com'
+    stream: master
+    gerrit_jjb_deploy_job_triggers:
+      - comment-added-contains-event:
+          comment-contains-value: 'jjb-deploy[:]* (?!\*+$).+$'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 1
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: 5
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - lf-pip-install:
+          pip-packages: jenkins-job-builder
+      - lf-infra-jjbini-sandbox
+      - shell: !include-raw-escape: ../shell/jjb-deploy-job.sh
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
+    name: '{project-name}-jjb-deploy-job'
+    id: gerrit-jjb-deploy-job
+    <<: *lf_jjb_deploy_job
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: 'refs/heads/{branch}'
+          branch: '{branch}'
+          submodule-recursive: true
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_jjb_deploy_job_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '**'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**'
+          skip-vote:
+            success: true
+            failed: true
+            unstable: true
+            notbuilt: true
+
+- job-template:
+    name: '{project-name}-jjb-deploy-job'
+    id: github-jjb-deploy-job
+    <<: *lf_jjb_deploy_job
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 1
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          submodule-recursive: true
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^jjb-deploy (?!\*+$).+$'
+          only-trigger-phrase: true
+          status-context: 'JJB Deploy Job'
+          permit-all: true
+          github-hooks: true
+          white-list-target-branches:
+            - '{branch}'
+
+#############
+# JJB Merge #
+#############
+
+- lf_jjb_merge: &lf_jjb_merge
+    name: lf-jjb-merge
+
+    ######################
+    # Default parameters #
+    ######################
+
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    builders:
+      - lf-infra-jjbini
+      - shell: !include-raw-escape:
+          - ../shell/jjb-install.sh
+          - ../shell/jjb-merge-job.sh
+          - ../shell/jjb-cleanup.sh
+
+- job-template:
+    name: '{project-name}-jjb-merge'
+    id: gerrit-jjb-merge
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jjb_merge
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: ''
+          branch: '{branch}'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_merge_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
+- job-template:
+    name: '{project-name}-jjb-merge'
+    id: github-jjb-merge
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jjb_merge
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: ''
+          branch: 'refs/heads/{branch}'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github
+      - pollscm:
+          cron: ''
+      - github-pull-request:
+          trigger-phrase: '^remerge$'
+          only-trigger-phrase: true
+          status-context: 'JJB Merge'
+          permit-all: false
+          github-hooks: true
+          org-list:
+            - '{github-org}'
+          white-list: '{obj:github_pr_whitelist}'
+          admin-list: '{obj:github_pr_admin_list}'
+          included-regions: '{obj:github_included_regions}'
+          white-list-target-branches:
+            - '{branch}'
+
+##############
+# JJB Verify #
+##############
+
+- lf_jjb_verify: &lf_jjb_verify
+    name: lf-jjb-verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    gerrit_verify_triggers:
+      - patchset-created-event:
+          exclude-drafts: true
+          exclude-trivial-rebase: false
+          exclude-no-code-change: false
+      - draft-published-event
+      - comment-added-contains-event:
+          comment-contains-value: '^Patch Set[ ]+[0-9]+:([ ]+|[\n]+)(recheck|reverify)$'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    concurrent: true
+
+    builders:
+      - lf-infra-jjbini
+      - shell: !include-raw-escape:
+          - ../shell/git-validate-jira-urls.sh
+          - ../shell/jjb-install.sh
+          - ../shell/jjb-verify-job.sh
+          - ../shell/jjb-check-unicode.sh
+          - ../shell/jjb-cleanup.sh
+      - lf-infra-gpg-verify-git-signature
+
+- job-template:
+    name: '{project-name}-jjb-verify'
+    id: gerrit-jjb-verify
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jjb_verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: gerrit
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_verify_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
+- job-template:
+    name: '{project-name}-jjb-verify'
+    id: github-jjb-verify
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_jjb_verify
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^(recheck|reverify)$'
+          only-trigger-phrase: false
+          status-context: 'JJB Verify'
+          permit-all: true
+          github-hooks: true
+          included-regions: '{obj:github_included_regions}'
+          white-list-target-branches:
+            - '{branch}'
+
+#################
+# License Check #
+#################
+
+- lf_license_check: &lf_license_check
+    name: lf-license-check
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    build-days-to-keep: 7
+    build-timeout: 15
+    file-patterns: >
+        *.go
+        *.groovy
+        *.java
+        *.py
+        *.sh
+    git-url: '$GIT_URL/$PROJECT'
+    github-url: 'https://github.com'
+    lhc-version: 0.2.0
+    license-exclude-paths: ''
+    licenses-allowed: Apache-2.0,EPL-1.0,MIT
+    project-pattern: '**'
+    spdx-disable: false
+    stream: master
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+    concurrent: true
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - lf-license-check:
+          file-patterns: '{file-patterns}'
+          spdx-disable: '{spdx-disable}'
+          lhc-version: '{lhc-version}'
+          license-exclude-paths: '{license-exclude-paths}'
+          licenses-allowed: '{licenses-allowed}'
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
+    name: '{project-name}-license-check'
+    id: gerrit-license-check
+    <<: *lf_license_check
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          # Submodules are out of the project's control
+          submodule-recursive: false
+          choosing-strategy: gerrit
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          # Trigger should not be overridable as we want to always run
+          trigger-on:
+            - patchset-created-event:
+                exclude-drafts: false
+                exclude-trivial-rebase: false
+                exclude-no-code-change: false
+            - draft-published-event
+            - comment-added-contains-event:
+                comment-contains-value: recheck$
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project-pattern}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**'
+
+- job-template:
+    name: '{project-name}-license-check'
+    id: github-license-check
+    <<: *lf_license_check
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          # Submodules are out of the project's control
+          submodule-recursive: false
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^recheck$'
+          only-trigger-phrase: false
+          status-context: 'License Check'
+          permit-all: true
+          github-hooks: true
+          white-list-target-branches:
+            - '{branch}'
+
+####################
+# Info YAML Verify #
+####################
+
+- lf_info_yaml_verify: &lf_info_yaml_verify
+    name: lf-info-yaml-verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    gerrit_verify_triggers:
+      - patchset-created-event:
+          exclude-drafts: true
+          exclude-trivial-rebase: false
+          exclude-no-code-change: false
+      - draft-published-event
+      - comment-added-contains-event:
+          comment-contains-value: '^Patch Set[ ]+[0-9]+:([ ]+|[\n]+)(recheck|reverify)$'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    concurrent: true
+
+    builders:
+      - shell: !include-raw-escape:
+          - ../shell/git-validate-info-yaml.sh
+          - ../shell/info-file-validate.sh
+
+- job-template:
+    name: '{project-name}-info-yaml-verify'
+    id: gerrit-info-yaml-verify
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_info_yaml_verify
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: gerrit
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_verify_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: REG_EXP
+                  pattern: 'INFO.yaml'
+
+- job-template:
+    name: '{project-name}-info-yaml-verify'
+    id: github-info-yaml-verify
+    <<: *lf_jjb_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_info_yaml_verify
+
+    github-url: 'https://github.com'
+    properties:
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^(recheck|reverify)$'
+          only-trigger-phrase: false
+          status-context: 'INFO File Verify'
+          permit-all: true
+          github-hooks: true
+          # included-regions MUST match gerrit file-paths
+          included-regions: 'INFO.yaml'
+          white-list-target-branches:
+            - '{branch}'
+
+################
+# Packer Merge #
+################
+
+- lf_packer_merge: &lf_packer_merge
+    name: lf-packer-merge
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    builders:
+      - lf-infra-packer-build:
+          packer-cloud-settings: '{packer-cloud-settings}'
+          packer-version: '{packer-version}'
+          platform: '{platforms}'
+          template: '{templates}'
+
+- job-template:
+    name: '{project-name}-packer-merge-{platforms}-{templates}'
+    id: gerrit-packer-merge
+    <<: *lf_packer_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_packer_merge
+
+    ######################
+    # Default parameters #
+    ######################
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: gerrit
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - timed: '{obj:cron}'
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_merge_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: REG_EXP
+                  pattern: 'packer\/provision\/.*\.sh'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/provision\/.*\.bat'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/provision\/.*\.ps1'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/provision\/{templates}\.yaml'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/provision\/local-{templates}\.yaml'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/templates\/{templates}\.json'
+                - compare-type: REG_EXP
+                  pattern: 'packer\/vars\/{platforms}\.json'
+
+- job-template:
+    name: '{project-name}-packer-merge-{platforms}-{templates}'
+    id: github-packer-merge
+    <<: *lf_packer_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_packer_merge
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: ''
+          branch: 'refs/heads/{branch}'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - timed: '{obj:cron}'
+      - github
+      - pollscm:
+          cron: ''
+
+      - github-pull-request:
+          trigger-phrase: '^remerge$'
+          only-trigger-phrase: true
+          status-context: 'Packer {platforms}-{templates} Merge'
+          permit-all: false
+          github-hooks: true
+          org-list:
+            - '{github-org}'
+          white-list: '{obj:github_pr_whitelist}'
+          admin-list: '{obj:github_pr_admin_list}'
+          # included-regions MUST match Gerrit Trigger file-paths
+          included-regions:
+            - 'packer\/provision\/.*\.sh'
+            - 'packer\/provision\/.*\.bat'
+            - 'packer\/provision\/.*\.ps1'
+            - 'packer\/provision\/{templates}\.yaml'
+            - 'packer\/provision\/local-{templates}\.yaml'
+            - 'packer\/templates\/{templates}\.json'
+            - 'packer\/vars\/{platforms}\.json'
+          white-list-target-branches:
+            - '{branch}'
+
+#################
+# Packer Verify #
+#################
+
+- lf_packer_verify: &lf_packer_verify
+    name: lf-packer-verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    build-timeout: 10
+
+    gerrit_verify_triggers:
+      - patchset-created-event:
+          exclude-drafts: true
+          exclude-trivial-rebase: false
+          exclude-no-code-change: false
+      - draft-published-event
+      - comment-added-contains-event:
+          comment-contains-value: '^Patch Set[ ]+[0-9]+:([ ]+|[\n]+)(recheck|reverify)$'
+
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'packer\/.*'
+
+    # github_included_regions MUST match gerrit_trigger_file_paths
+    github_included_regions:
+      - 'packer\/.*'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    concurrent: true
+
+    builders:
+      - lf-infra-packer-validate:
+          packer-cloud-settings: '{packer-cloud-settings}'
+          packer-version: '{packer-version}'
+
+- job-template:
+    name: '{project-name}-packer-verify'
+    id: gerrit-packer-verify
+    <<: *lf_packer_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_packer_verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    git-url: '$GIT_URL/$GERRIT_PROJECT'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    scm:
+      - lf-infra-gerrit-scm:
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: gerrit
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_verify_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
+- job-template:
+    name: '{project-name}-packer-verify'
+    id: github-packer-verify
+    <<: *lf_packer_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *lf_packer_verify
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: 7
+      - github:
+          url: '{github-url}/{github-org}/{project}'
+
+    scm:
+      - lf-infra-github-scm:
+          url: '{git-clone-url}{github-org}/{project}'
+          refspec: '+refs/pull/*:refs/remotes/origin/pr/*'
+          branch: '$sha1'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    triggers:
+      - github-pull-request:
+          trigger-phrase: '^(recheck|reverify)$'
+          only-trigger-phrase: false
+          status-context: 'Packer Verify'
+          permit-all: true
+          github-hooks: true
+          included-regions: '{obj:github_included_regions}'
+          white-list-target-branches:
+            - '{branch}'

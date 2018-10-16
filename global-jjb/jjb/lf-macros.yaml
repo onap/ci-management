@@ -1,0 +1,549 @@
+---
+############
+# BUILDERS #
+############
+
+- builder:
+    name: lf-fetch-dependent-patches
+    builders:
+      - shell: !include-raw: ../shell/gerrit-fetch-dependencies.sh
+      - inject:
+          properties-file: $WORKSPACE/.dependency.properties
+
+- builder:
+    name: lf-license-check
+    builders:
+      - inject:
+          properties-content: |
+              FILE_PATTERNS={file-patterns}
+              SPDX_DISABLE={spdx-disable}
+              LHC_VERSION={lhc-version}
+              LICENSE_EXCLUDE_PATHS={license-exclude-paths}
+              LICENSES_ALLOWED={licenses-allowed}
+      - shell: !include-raw-escape:
+          - ../shell/license-check.sh
+
+- builder:
+    name: lf-infra-create-netrc
+    builders:
+      - inject:
+          properties-content: 'SERVER_ID={server-id}'
+      - shell: !include-raw-escape: ../shell/create-netrc.sh
+
+- builder:
+    name: lf-infra-docker-login
+    builders:
+      - lf-provide-maven-settings:
+          global-settings-file: '{global-settings-file}'
+          settings-file: '{settings-file}'
+      - shell: !include-raw-escape: ../shell/docker-login.sh
+      - lf-provide-maven-settings-cleanup
+
+- builder:
+    name: lf-infra-gpg-verify-git-signature
+    # TODO: Verify signature after downloading users public key from a locally
+    # created repository instead of the public keymesh. This requires a process
+    # in place to get ODL developers public keys into a local repository without
+    # increasing the job thoughput.
+    builders:
+      - shell: !include-raw: ../shell/gpg-verify-git-signature.sh
+
+- builder:
+    name: lf-infra-ship-logs
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: 'jenkins-log-archives-settings'
+              variable: 'SETTINGS_FILE'
+      - lf-infra-create-netrc:
+          server-id: logs
+      - shell: !include-raw:
+          - ../shell/lftools-install.sh
+          - ../shell/logs-deploy.sh
+      - shell: !include-raw:
+          - ../shell/logs-clear-credentials.sh
+      - description-setter:
+          regexp: '^Build logs: .*'
+
+- builder:
+    name: lf-infra-package-listing
+    builders:
+      - shell: !include-raw:
+          - ../shell/package-listing.sh
+
+- builder:
+    name: lf-infra-packer-build
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: '{packer-cloud-settings}'
+              variable: CLOUDENV
+      - inject:
+          properties-content: |
+              PACKER_PLATFORM={platform}
+              PACKER_TEMPLATE={template}
+              PACKER_VERSION={packer-version}
+      - shell: !include-raw-escape:
+          - ../shell/packer-install.sh
+          - ../shell/packer-build.sh
+      - shell: !include-raw:
+          - ../shell/packer-clear-credentials.sh
+
+- builder:
+    name: lf-infra-packer-validate
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: '{packer-cloud-settings}'
+              variable: 'CLOUDENV'
+      - inject:
+          properties-content: |
+              PACKER_VERSION={packer-version}
+      - shell: !include-raw-escape:
+          - ../shell/packer-install.sh
+          - ../shell/packer-validate.sh
+      - shell: !include-raw:
+          - ../shell/packer-clear-credentials.sh
+
+- builder:
+    name: lf-infra-push-gerrit-patch
+    builders:
+      - inject:
+          properties-content: |
+              PROJECT={project}
+              GERRIT_COMMIT_MESSAGE={gerrit-commit-message}
+              GERRIT_HOST={gerrit-host}
+              GERRIT_TOPIC={gerrit-topic}
+              GERRIT_USER={gerrit-user}
+              REVIEWERS_EMAIL={reviewers-email}
+      - shell: !include-raw-escape: ../shell/gerrit-push-patch.sh
+
+- builder:
+    name: lf-infra-sysstat
+    builders:
+      - shell: !include-raw:
+          - ../shell/sysstat.sh
+
+- builder:
+    name: lf-jacoco-nojava-workaround
+    builders:
+      - shell: 'mkdir -p $WORKSPACE/target/classes $WORKSPACE/jacoco/classes'
+
+- builder:
+    name: lf-infra-deploy-maven-file
+    builders:
+      - lf-maven-install:
+          mvn-version: '{mvn-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: '{global-settings-file}'
+          settings-file: '{settings-file}'
+      - inject:
+          properties-content: |
+              MAVEN_REPO_URL={maven-repo-url}
+              REPO_ID={repo-id}
+              GROUP_ID={group-id}
+              UPLOAD_FILES_PATH={upload-files-dir}
+      - shell: !include-raw-escape:
+          - ../shell/lftools-install.sh
+          - ../shell/common-variables.sh
+          - ../shell/deploy-maven-file.sh
+      - lf-provide-maven-settings-cleanup
+
+- builder:
+    name: lf-maven-install
+    builders:
+      # Create a $HOME/.wgetrc to make the Maven download quiet.
+      - shell: 'echo "quiet=on" > "$HOME/.wgetrc"'
+      - maven-target:
+          maven-version: '{mvn-version}'
+          goals: '--version'
+      - shell: 'rm "$HOME/.wgetrc"'
+
+- builder:
+    name: lf-provide-maven-settings
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: '{global-settings-file}'
+              variable: 'GLOBAL_SETTINGS_FILE'
+            - file-id: '{settings-file}'
+              variable: 'SETTINGS_FILE'
+
+- builder:
+    name: lf-provide-sigul-configuration
+    # Push configuration files to interact with sigul
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: sigul-config
+              variable: SIGUL_CONFIG
+            - file-id: sigul-password
+              variable: SIGUL_PASSWORD
+            - file-id: sigul-pki
+              variable: SIGUL_PKI
+      - shell: !include-raw-escape: ../shell/sigul-configuration.sh
+
+- builder:
+    name: lf-pip-install
+    builders:
+      - inject:
+          properties-content: PIP_PACKAGES={pip-packages}
+      - shell: !include-raw-escape: ../shell/pip-install.sh
+
+- builder:
+    name: lf-provide-maven-settings-cleanup
+    builders:
+      - shell: |
+          #!/bin/bash
+          set +e  # DO NOT cause build failure if any of the rm calls fail.
+
+          rm -f "$GLOBAL_SETTINGS_FILE" "$SETTINGS_FILE"
+
+          # In some cases we use the lf-provide-maven-settings macro to produce
+          # a "$HOME/.netrc" file containing credentials. Remove that file here
+          # too if it exists.
+          rm -f "$HOME/.netrc"
+
+          # DO NOT fail build if any of the above lines fail.
+          exit 0
+
+- builder:
+    name: lf-provide-sigul-configuration-cleanup
+    # Clear sigul configuration files after we're done using them
+    builders:
+      - shell: !include-raw-escape: ../shell/sigul-configuration-cleanup.sh
+
+- builder:
+    name: lf-rtd-trigger-build
+    builders:
+      - inject:
+          properties-content: |
+            RTD_BUILD_URL={rtd-build-url}
+            RTD_TOKEN={rtd-token}
+      - shell: !include-raw-escape: ../shell/rtd-trigger-build.sh
+
+- builder:
+    name: lf-rtd-verify
+    builders:
+      - inject:
+          properties-content: DOC_DIR={doc-dir}
+      - shell: !include-raw-escape:
+          - ../shell/tox-install.sh
+          - ../shell/rtd-verify.sh
+
+- builder:
+    name: lf-sigul-install
+    # Requires that Jenkins be configured with SIGUL_BRIDGE_IP as a global
+    # Environment variable
+    builder:
+      - shell: !include-raw-escape: ../shell/sigul-install.sh
+
+- builder:
+    name: lf-infra-provide-docker-cleanup
+    builders:
+      - shell: |
+          #!/bin/bash
+          set +e  # DO NOT cause build failure if docker rmi fails
+          docker rmi -f $(docker images -a -q)
+          exit 0
+
+
+##############
+# PARAMETERS #
+##############
+
+- parameter:
+    name: lf-clm-parameters
+    parameters:
+      - string:
+          name: NEXUS_IQ_STAGE
+          default: '{nexus-iq-stage}'
+          description: |
+              Stage the policy evaluation will be run against on the Nexus IQ Server.
+
+- parameter:
+    name: lf-cmake-parameters
+    # Parameters useful in CMake builds.
+    parameters:
+      - string:
+          name: BUILD_DIR
+          default: '{build-dir}'
+          description: 'Directory to build the project in.'
+      - string:
+          name: CMAKE_OPTS
+          default: '{cmake-opts}'
+          description: |
+              Options to pass to CMAKE.
+              Example: -DCMAKE_INSTALL_PREFIX=$WORKSPACE/target/output
+      - string:
+          name: INSTALL_PREFIX
+          default: '{install-prefix}'
+          description: 'Install prefix for C/C++ builds. Example: /usr/local'
+      - string:
+          name: MAKE_OPTS
+          default: '{make-opts}'
+          description: 'Options to pass to make. Example: -j8'
+
+- parameter:
+    name: lf-infra-maven-parameters
+    parameters:
+      - string:
+          name: M2_HOME
+          # Sets an env var for shell scripts to be able to call the dynamically
+          # installed maven without having to calculate the M2_HOME themselves.
+          default: '/w/tools/hudson.tasks.Maven_MavenInstallation/{mvn-version}'
+          description: 'Maven selector to be used by shell scripts'
+      - string:
+          name: MAVEN_OPTS
+          default: '{mvn-opts}'
+          description: |
+              Maven Java opts. Example: -Xmx1024m -XX:MaxPermSize=256m
+      - string:
+          name: MAVEN_PARAMS
+          default: '{mvn-params}'
+          description: |
+              Maven parameters to pass to the mvn command.
+      - string:
+          name: MVN
+          # Sets an env var for shell scripts to be able to call the dynamically
+          # installed maven without having to calculate the path themselves.
+          # yamllint disable-line rule:line-length
+          default: '/w/tools/hudson.tasks.Maven_MavenInstallation/{mvn-version}/bin/mvn'
+          description: 'Maven selector to be used by shell scripts'
+      - string:
+          name: STAGING_PROFILE_ID
+          default: '{staging-profile-id}'
+          description: |
+              Nexus staging profile ID.
+
+
+- parameter:
+    name: lf-infra-openstack-parameters
+    parameters:
+      - string:
+          name: OS_CLOUD
+          default: '{os-cloud}'
+          description: |
+              The name of a cloud configuration in clouds.yaml. OS_CLOUD is a
+              variable name that is significant to openstack client as a
+              environment variable. Please refer to the documentation for
+              further details.
+              https://docs.openstack.org/developer/python-openstackclient/
+
+
+- parameter:
+    name: lf-infra-parameters
+    # Standard parameters used in the LF CI environments. Gerrit variables are
+    # not used by GitHub projects, but defining them isn't harmful.
+    parameters:
+      - string:
+          name: PROJECT
+          default: '{project}'
+          description: |
+              Parameter to identify a SCM project to build. This is typically
+              the project repo path. For example: ofextensions/circuitsw
+      - string:
+          name: STREAM
+          default: '{stream}'
+          description: |
+              Stream is often set to the same name as 'branch' but can
+              sometimes be used as a name representing a project's release code
+              name.
+      - string:
+          name: GERRIT_PROJECT
+          default: '{project}'
+          description: |
+              Gerrit Trigger provided parameter to identify Gerrit project that
+              triggered the build. This is typically the project repo path as
+              exists in Gerrit. For example: ofextensions/circuitsw
+
+              If using Gerrit, in a manual build this should match the PROJECT
+              parameter above.
+      - string:
+          name: GERRIT_BRANCH
+          default: '{branch}'
+          description: |
+              Gerrit Trigger provided parameter to identify a Gerrit branch.
+
+              If using Gerrit, in a manual build override with the branch to
+              build against.
+      - string:
+          name: GERRIT_REFSPEC
+          default: 'refs/heads/{branch}'
+          description: |
+              Gerrit Trigger provided parameter to identify a refspec to fetch
+              from Gerrit.
+
+              If using Gerrit, in a manual build override with a refspec.
+              https://git-scm.com/book/en/v2/Git-Internals-The-Refspec
+              For example: 'refs/heads/master'
+      - string:
+          name: sha1
+          default: 'origin/{branch}'
+          description: |
+              GitHub PR Trigger provided parameter for specifying the commit
+              to checkout.
+
+              If using GitHub, in a manual build override with a branch path or
+              sha1 hash to a specific commit. For example: 'origin/master'
+      # Tools
+      - string:
+          name: LFTOOLS_VERSION
+          default: '{lftools-version}'
+          description: |
+              Version of lftools to install. Can be a specific version like
+              '0.6.0' or a PEP-440 definition.
+              https://www.python.org/dev/peps/pep-0440/
+              For example '<1.0.0' or '>=1.0.0,<2.0.0'.
+
+- parameter:
+    name: lf-infra-node-parameters
+    parameters:
+      - string:
+          name: NODE_DIR
+          default: '{node-dir}'
+          description: Path to a Node project directory.
+      - string:
+          name: NODE_VERSION
+          default: '{node-version}'
+          description: Version of NodeJS to install.
+
+- parameter:
+    name: lf-infra-tox-parameters
+    parameters:
+      - string:
+          name: TOX_DIR
+          default: '{tox-dir}'
+          description: |
+              Path to directory containing tox.ini file.
+      - string:
+          name: TOX_ENVS
+          default: '{tox-envs}'
+          description: |
+              Tox environments to run build against.
+              Example: docs,py2,py3
+
+##############
+# PROPERTIES #
+##############
+
+- property:
+    name: lf-infra-properties
+    properties:
+      - build-discarder:
+          # Allow build data to be stored at a length configured by the
+          # downstream project.
+          days-to-keep: '{build-days-to-keep}'
+          # Do not allow artifacts to be stored in Jenkins.
+          artifact-num-to-keep: 0
+
+##############
+# PUBLISHERS #
+##############
+
+- publisher:
+    name: lf-jacoco-report
+    publishers:
+      - jacoco:
+          exec-pattern: "**/**.exec"
+          class-pattern: "**/classes"
+          source-pattern: "**/src/main/java"
+          # yamllint disable-line rule:line-length
+          exclusion-pattern: "**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**"
+          status-update: true
+          targets:
+            - branch:
+                healthy: 10
+                unhealthy: 20
+            - method:
+                healthy: 50
+                unhealthy: 40
+
+- publisher:
+    name: lf-infra-publish
+    # lf-infra macro to finish up a build.
+    #
+    # Handles the following:
+    #   - Shipping logs to Nexus logs site repository
+    #   - Cleanup workspace
+    publishers:
+      - postbuildscript:
+          builders:
+            - role: BOTH
+              build-on:
+                - ABORTED
+                - FAILURE
+                - NOT_BUILT
+                - SUCCESS
+                - UNSTABLE
+              build-steps:
+                - lf-infra-sysstat
+                - lf-infra-package-listing
+                - lf-infra-ship-logs
+          mark-unstable-if-failed: true
+      - workspace-cleanup:
+          exclude:
+            # Do not clean up *.jenkins-trigger files for jobs that use a
+            # properties file as input for triggering another build.
+            - '**/*.jenkins-trigger'
+          fail-build: false
+
+#######
+# SCM #
+#######
+
+- scm:
+    name: lf-infra-gerrit-scm
+    scm:
+      - git:
+          credentials-id: '{jenkins-ssh-credential}'
+          url: '{git-url}'
+          refspec: '{refspec}'
+          branches:
+            - 'refs/heads/{branch}'
+          skip-tag: true
+          wipe-workspace: true
+          submodule:
+            recursive: '{submodule-recursive}'
+          choosing-strategy: '{choosing-strategy}'
+
+- scm:
+    name: lf-infra-github-scm
+    scm:
+      - git:
+          credentials-id: '{jenkins-ssh-credential}'
+          url: '{url}'
+          refspec: '{refspec}'
+          branches:
+            - '{branch}'
+          skip-tag: true
+          wipe-workspace: true
+          submodule:
+            recursive: '{submodule-recursive}'
+          choosing-strategy: '{choosing-strategy}'
+
+############
+# WRAPPERS #
+############
+
+- wrapper:
+    name: lf-infra-wrappers
+    wrappers:
+      - mask-passwords
+      - timeout:
+          type: absolute
+          timeout: '{build-timeout}'
+          timeout-var: 'BUILD_TIMEOUT'
+          fail: true
+      - timestamps
+      - ssh-agent-credentials:
+          users:
+            - '{jenkins-ssh-credential}'
+      - openstack:
+          single-use: true
+      - config-file-provider:
+          files:
+            - file-id: npmrc
+              target: '$HOME/.npmrc'
+            - file-id: pipconf
+              target: '$HOME/.config/pip/pip.conf'
