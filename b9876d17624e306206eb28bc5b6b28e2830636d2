@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bada0100_bbc7e244",
+        "filename": "global-jjb",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-10-16T19:51:06Z",
+      "side": 1,
+      "message": "Just need to update the actual submodule here",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "b9876d17624e306206eb28bc5b6b28e2830636d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
