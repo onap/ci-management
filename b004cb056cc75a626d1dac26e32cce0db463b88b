@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bada0100_680d2b37",
+        "filename": "jjb/optf/optf-cmso.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2923
+      },
+      "writtenOn": "2018-10-17T21:36:44Z",
+      "side": 1,
+      "message": "Change this to gerrit-maven-clm",
+      "range": {
+        "startLine": 7,
+        "startChar": 20,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "b004cb056cc75a626d1dac26e32cce0db463b88b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
