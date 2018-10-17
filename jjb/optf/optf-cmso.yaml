@@ -1,29 +1,29 @@
 ---
+
 - project:
     name: optf-cmso
     project-name: 'optf-cmso'
-    project: 'optf/cmso'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'optf-cmso-settings'
-    subproject:
-      - 'cmso':
-          path: '.'
-          pattern: '**'
-          pom: 'pom.xml'
     jobs:
-      - gerrit-maven-clm
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1604-builder-4c-4g'
+      - gerrit-maven-cmso:
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+      - '{project-name}-{stream}-verify-java-checkstyle':
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+      - '{project-name}-{stream}-merge-properties-java':
+         mvn_properties:
+            - docker.pull.registry=nexus3.onap.org:10001
+            - docker.push.registry=nexus3.onap.org:10003
+      - '{project-name}-{stream}-release-java-daily-checkstyle':
+         setVersion: 'DoSetVersion'
+         mvn_properties:
+          - docker.pull.registry=nexus3.onap.org:10001
+      - '{project-name}-{stream}-docker-java-properties-daily':
+         setVersion: 'DoSetVersion'
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
+         mvn-params: '-Dmaven.test.skip=true'
+         maven-properties: |
+          cmso.registry=$
 
-- project:
-    name: optf-cmso-docker
-    project-name: 'optf-cmso'
     project: 'optf/cmso'
     stream:
       - 'master':
@@ -34,21 +34,6 @@
           path: '.'
           pattern: '**'
           pom: 'pom.xml'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          mvn-params: '-Dmaven.test.skip=true'
-          script:
-            !include-raw-escape: 'build-optf-cmso-docker-image.sh'
-          build-node: queue-docker-4c-4g
-      - '{project-name}-{stream}-{subproject}-docker-java-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          mvn-params: '-Dmaven.test.skip=true'
-          script:
-            !include-raw-escape: 'build-optf-cmso-docker-image.sh'
-          build-node: queue-docker-4c-4g
 
 - project:
     name: optf-cmso-sonar
