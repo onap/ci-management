@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-apps-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -39,14 +41,14 @@
     name: ccsdk-apps-docker
     project-name: 'ccsdk-apps'
     jobs:
-      - 'docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
       - 'docker-version-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
     project: 'ccsdk/apps'
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-apps-settings'
     files: '**'
     archive-artifacts: ''
