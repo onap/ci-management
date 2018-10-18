@@ -24,6 +24,7 @@
          maven-properties: |
           cmso.registry=$
 
+    build-node: ubuntu1604-docker-8c-8g
     project: 'optf/cmso'
     stream:
       - 'master':
