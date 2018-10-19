@@ -3,7 +3,6 @@
     name: policy-drools-applications
     project-name: 'policy-drools-applications'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
@@ -30,3 +29,12 @@
     mvn-settings: 'policy-drools-applications-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-drools-applications-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/drools-applications
+    project-name: 'policy-drools-applications'
+    branch: 'master'
+    mvn-settings: 'policy-drools-applications-settings'

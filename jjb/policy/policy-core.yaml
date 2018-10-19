@@ -3,7 +3,6 @@
     name: policy-core
     project-name: 'policy-core'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
@@ -28,3 +27,12 @@
     mvn-settings: 'policy-core-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-core-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/core
+    project-name: 'policy-core'
+    branch: 'master'
+    mvn-settings: 'policy-core-settings'

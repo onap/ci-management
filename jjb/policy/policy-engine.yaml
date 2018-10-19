@@ -3,8 +3,6 @@
     name: policy-engine
     project-name: 'policy-engine'
     jobs:
-      - gerrit-maven-clm:
-          build-timeout: 30
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-scm-mvn-script':
           mvn-goals: 'clean deploy -B
@@ -40,3 +38,13 @@
     mvn-settings: 'policy-engine-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-engine-clm
+    jobs:
+      - gerrit-maven-clm:
+         build-timeout: 30
+    project: policy/engine
+    project-name: 'policy-engine'
+    branch: 'master'
+    mvn-settings: 'policy-engine-settings'
