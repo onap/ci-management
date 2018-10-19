@@ -15,7 +15,6 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean install'
@@ -37,3 +36,13 @@
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-analytics-tca-gen2-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dcaegen2/analytics/tca-gen2
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-analytics-tca-gen2'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'

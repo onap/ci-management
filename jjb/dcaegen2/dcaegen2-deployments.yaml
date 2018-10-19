@@ -3,7 +3,6 @@
     name: dcaegen2-deployments
     project-name: 'dcaegen2-deployments'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -22,3 +21,13 @@
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
     build-timeout: 180
+
+- project:
+    name: dcaegen2-deployments-clm
+    jobs:
+      - gerrit-maven-clm
+    build-node: ubuntu1604-docker-8c-8g
+    project: dcaegen2/deployments
+    project-name: 'dcaegen2-deployments'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-deployments-settings'
