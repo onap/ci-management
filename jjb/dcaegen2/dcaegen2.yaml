@@ -3,7 +3,6 @@
     name: dcaegen2
     project-name: 'dcaegen2'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -22,3 +21,12 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: dcaegen2-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'dcaegen2'
+    project-name: 'dcaegen2'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-settings'
