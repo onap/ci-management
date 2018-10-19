@@ -3,8 +3,6 @@
     name: policy-drools-pdp
     project-name: 'policy-drools-pdp'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-DskipTests'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-scm-mvn-script':
           mvn-goals: 'clean deploy -B
@@ -40,3 +38,13 @@
     mvn-settings: 'policy-drools-pdp-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-drools-pdp-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-DskipTests'
+    project: policy/drools-pdp
+    project-name: 'policy-drools-pdp'
+    branch: 'master'
+    mvn-settings: 'policy-drools-pdp-settings'
