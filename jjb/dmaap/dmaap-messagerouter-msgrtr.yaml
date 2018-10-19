@@ -3,7 +3,6 @@
     name: dmaap-messagerouter-msgrtr
     project-name: 'dmaap-messagerouter-msgrtr'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -27,3 +26,12 @@
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dmaap-messagerouter-msgrtr-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dmaap/messagerouter/msgrtr
+    project-name: 'dmaap-messagerouter-msgrtr'
+    branch: 'master'
+    mvn-settings: 'dmaap-messagerouter-msgrtr-settings'

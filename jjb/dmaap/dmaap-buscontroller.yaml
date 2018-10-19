@@ -4,7 +4,6 @@
     name: dmaap-buscontroller
     project-name: 'dmaap-buscontroller'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -29,3 +28,12 @@
 
 # removed sonar job from this template because this repo only builds a docker container
 # and the 0% coverage report from Sonar was causing repeated escalations.
+
+- project:
+    name: dmaap-buscontroller-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dmaap/buscontroller
+    project-name: 'dmaap-buscontroller'
+    branch: 'master'
+    mvn-settings: 'dmaap-buscontroller-settings'
