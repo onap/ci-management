@@ -15,7 +15,6 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
@@ -31,3 +30,13 @@
     mvn-settings: 'dcaegen2-analytics-pnda-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-analytics-pnda-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dcaegen2/analytics/pnda
+    build-node: ubuntu1604-builder-4c-4g
+    project-name: 'dcaegen2-analytics-pnda'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-analytics-pnda-settings'

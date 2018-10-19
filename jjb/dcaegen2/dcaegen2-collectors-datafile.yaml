@@ -15,7 +15,6 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
@@ -34,3 +33,13 @@
     mvn-settings: 'dcaegen2-collectors-datafile-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-collectors-datafile-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dcaegen2/collectors/datafile
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-collectors-datafile'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-collectors-datafile-settings'
