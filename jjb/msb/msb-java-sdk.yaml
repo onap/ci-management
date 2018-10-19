@@ -3,7 +3,6 @@
     name: msb-java-sdk
     project-name: 'msb-java-sdk'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -28,3 +27,12 @@
     mvn-settings: 'msb-java-sdk-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: msb-java-sdk-clm
+    jobs:
+      - gerrit-maven-clm
+    project: msb/java-sdk
+    project-name: 'msb-java-sdk'
+    branch: 'master'
+    mvn-settings: 'msb-java-sdk-settings'
