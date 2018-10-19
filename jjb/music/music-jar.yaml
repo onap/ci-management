@@ -7,8 +7,6 @@
           pom: 'jar/pom.xml'
           pattern: 'jar/**'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f jar/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
     project: 'music'
@@ -24,3 +22,13 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
+
+- project:
+    name: music-jar-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f jar/pom.xml'
+    project: music
+    project-name: 'music'
+    branch: 'master'
+    mvn-settings: 'music-settings'

@@ -7,8 +7,6 @@
           pom: 'musictrigger/pom.xml'
           pattern: 'musictrigger/**'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f musictrigger/pom.xml assembly:single'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
     project: 'music'
@@ -20,3 +18,13 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
+
+- project:
+    name: music-trigger-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f musictrigger/pom.xml assembly:single'
+    project: music
+    project-name: 'music'
+    branch: 'master'
+    mvn-settings: 'music-settings'
