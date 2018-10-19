@@ -3,8 +3,6 @@
     name: integration
     project-name: 'integration'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f version-manifest/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -20,3 +18,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: integration-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f version-manifest/pom.xml'
+    project: integration
+    project-name: 'integration'
+    branch: 'master'
+    mvn-settings: 'integration-settings'
