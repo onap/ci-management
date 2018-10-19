@@ -3,7 +3,6 @@
     name: portal
     project-name: 'portal'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-release-java-daily'
     project: 'portal'
     stream:
@@ -29,3 +28,12 @@
     mvn-settings: 'portal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: portal-clm
+    jobs:
+      - gerrit-maven-clm
+    project: portal
+    project-name: 'portal'
+    branch: 'master'
+    mvn-settings: 'portal-settings'
