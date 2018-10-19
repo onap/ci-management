@@ -37,7 +37,6 @@
           pattern: 'windriver/**'
           pom: 'windriver/pom.xml'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
@@ -106,3 +105,13 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-openstack-clm
+    jobs:
+      - gerrit-maven-clm
+    project: multicloud/openstack
+    project-name: 'multicloud-openstack'
+    build-node: ubuntu1604-memcached-4c-4g
+    branch: 'master'
+    mvn-settings: 'multicloud-openstack-settings'

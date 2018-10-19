@@ -12,7 +12,6 @@
           pom: 'azure/pom.xml'
           pattern: 'azure/**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -39,3 +38,12 @@
     mvn-settings: 'multicloud-azure-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-azure-java-clm
+    jobs:
+      - gerrit-maven-clm
+    project: multicloud/azure
+    project-name: 'multicloud-azure'
+    branch: 'master'
+    mvn-settings: 'multicloud-azure-settings'
