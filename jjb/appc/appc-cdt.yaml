@@ -3,7 +3,6 @@
     name: appc-cdt
     project-name: 'appc-cdt'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -16,3 +15,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: appc-cdt-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'appc/cdt'
+    project-name: 'appc-cdt'
+    branch: 'master'
+    mvn-settings: 'appc-cdt-settings'
+
