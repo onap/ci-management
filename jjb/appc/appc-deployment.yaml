@@ -4,7 +4,6 @@
     name: appc-deployment
     project-name: 'appc-deployment'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -39,3 +38,13 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: queue-docker-4c-4g
+
+- project:
+    name: appc-deployment-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'appc/deployment'
+    project-name: 'appc-deployment'
+    branch: 'master'
+    mvn-settings: 'appc-deployment-settings'
+
