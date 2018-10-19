@@ -12,7 +12,6 @@
           pom: 'vio/pom.xml'
           pattern: 'vio/**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -39,3 +38,12 @@
     mvn-settings: 'multicloud-openstack-vmware-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-openstack-vmware-java-clm
+    jobs:
+      - gerrit-maven-clm
+    project: multicloud/openstack/vmware
+    project-name: 'multicloud-openstack-vmware'
+    branch: 'master'
+    mvn-settings: 'multicloud-openstack-vmware-settings'
