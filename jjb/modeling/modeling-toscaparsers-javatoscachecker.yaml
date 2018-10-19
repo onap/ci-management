@@ -14,8 +14,6 @@
           pattern: 'javatoscachecker/**'
           pom: 'javatoscachecker/pom.xml'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f javatoscachecker/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -42,3 +40,14 @@
     mvn-settings: 'modeling-toscaparsers-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: modeling-toscaparsers-javatoscachecker-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f javatoscachecker/pom.xml'
+    project: modeling/toscaparsers
+    project-name: 'modeling-toscaparsers-javatoscachecker'
+    build-node: ubuntu1604-docker-8c-8g
+    branch: 'master'
+    mvn-settings: 'modeling-toscaparsers-settings'
