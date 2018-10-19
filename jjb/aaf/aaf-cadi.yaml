@@ -3,7 +3,6 @@
     name: aaf-cadi
     project-name: 'aaf-cadi'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -104,3 +103,12 @@
     mvn-settings: 'aaf-cadi-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aaf-cadi-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aaf/cadi'
+    project-name: 'aaf-cadi'
+    branch: 'master'
+    mvn-settings: 'aaf-cadi-settings'

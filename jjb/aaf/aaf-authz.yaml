@@ -3,7 +3,6 @@
     name: aaf-authz
     project-name: 'aaf-authz'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,3 +32,12 @@
     mvn-settings: 'aaf-authz-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: aaf-authz-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'aaf/authz'
+    project-name: 'aaf-authz'
+    branch: 'master'
+    mvn-settings: 'aaf-authz-settings'
