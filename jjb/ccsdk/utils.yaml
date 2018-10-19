@@ -3,7 +3,6 @@
     name: ccsdk-utils
     project-name: 'ccsdk-utils'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -22,3 +21,13 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: ccsdk-utils-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'ccsdk/utils'
+    project-name: 'ccsdk-utils'
+    branch: 'master'
+    mvn-settings: 'ccsdk-utils-settings'
+
