@@ -9,8 +9,6 @@
     subproject-name: 'onap-sdk'
 
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f ecomp-sdk/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
@@ -38,3 +36,13 @@
     mvn-settings: 'portal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: portal-sdk-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f ecomp-sdk/pom.xml'
+    project: portal/sdk
+    project-name: 'portal-sdk'
+    branch: 'master'
+    mvn-settings: 'portal-sdk-settings'
