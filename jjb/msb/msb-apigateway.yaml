@@ -3,7 +3,6 @@
     name: msb-apigateway
     project-name: 'msb-apigateway'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,12 @@
     mvn-settings: 'msb-apigateway-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: msb-apigateway-clm
+    jobs:
+      - gerrit-maven-clm
+    project: msb/apigateway
+    project-name: 'msb-apigateway'
+    branch: 'master'
+    mvn-settings: 'msb-apigateway-settings'
