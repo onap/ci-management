@@ -15,7 +15,6 @@
           pattern: '**'
           pom: 'pom.xml'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
@@ -67,3 +66,12 @@
     mvn-settings: 'optf-osdf-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: optf-osdf-clm
+    jobs:
+      - gerrit-maven-clm
+    project: optf/osdf
+    project-name: 'optf-osdf'
+    branch: 'master'
+    mvn-settings: 'optf-osdf-settings'

@@ -4,8 +4,6 @@
     name: optf-cmso
     project-name: 'optf-cmso'
     jobs:
-      - gerrit-maven-clm:
-         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-verify-java-checkstyle':
          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
@@ -48,3 +46,14 @@
     mvn-settings: 'optf-cmso-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: optf-cmso-clm
+    jobs:
+      - gerrit-maven-clm:
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+    project: optf/cmso
+    project-name: 'optf-cmso'
+    build-node: ubuntu1604-docker-8c-8g
+    branch: 'master'
+    mvn-settings: 'optf-cmso-settings'

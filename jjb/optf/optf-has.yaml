@@ -15,7 +15,6 @@
           pattern: 'conductor/**'
           pom: 'pom.xml'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-verify-java'
@@ -68,3 +67,12 @@
     mvn-settings: 'optf-has-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: optf-has-clm
+    jobs:
+      - gerrit-maven-clm
+    project: optf/has
+    project-name: 'optf-has'
+    branch: 'master'
+    mvn-settings: 'optf-has-settings'
