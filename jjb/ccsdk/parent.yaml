@@ -3,7 +3,6 @@
     name: ccsdk-parent
     project-name: 'ccsdk-parent'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -22,3 +21,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: ccsdk-parent-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'ccsdk/parent'
+    project-name: 'ccsdk-parent'
+    branch: 'master'
+    mvn-settings: 'ccsdk-parent-settings'
+    build-node: ubuntu1604-builder-4c-4g
+
