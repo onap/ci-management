@@ -3,7 +3,6 @@
     name: ccsdk-distribution
     project-name: 'ccsdk-distribution'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -38,3 +37,14 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: queue-docker-4c-4g
+
+- project:
+    name: ccsdk-distribution-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'ccsdk/distribution'
+    project-name: 'ccsdk-distribution'
+    branch: 'master'
+    mvn-settings: 'ccsdk-distribution-settings'
+    build-node: ubuntu1604-docker-8c-8g
+
