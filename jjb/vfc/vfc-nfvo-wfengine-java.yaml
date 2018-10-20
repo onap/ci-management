@@ -19,7 +19,6 @@
           script:
             !include-raw-escape: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -55,3 +54,13 @@
     mvn-settings: 'vfc-nfvo-wfengine-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vfc-nfvo-wfengine-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vfc/nfvo/wfengine
+    project-name: 'vfc-nfvo-wfengine'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-wfengine-settings'
