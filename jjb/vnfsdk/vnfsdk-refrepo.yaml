@@ -3,7 +3,6 @@
     name: vnfsdk-refrepo
     project-name: 'vnfsdk-refrepo'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -44,3 +43,13 @@
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'
+
+- project:
+    name: vnfsdk-refrepo-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vnfsdk/refrepo
+    project-name: 'vnfsdk-refrepo'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vnfsdk-refrepo-settings'

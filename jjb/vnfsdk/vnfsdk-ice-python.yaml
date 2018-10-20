@@ -24,7 +24,6 @@
     mvn-settings: 'vnfsdk-ice-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
@@ -74,3 +73,13 @@
     mvn-settings: 'vnfsdk-ice-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vnfsdk-ice-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vnfsdk/ice
+    project-name: 'vnfsdk-ice'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vnfsdk-ice-settings'

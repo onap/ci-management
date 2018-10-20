@@ -3,7 +3,6 @@
     name: vnfsdk-functest
     project-name: 'vnfsdk-functest'
     jobs:
-    - gerrit-maven-clm
     - '{project-name}-{stream}-verify-java'
     - '{project-name}-{stream}-merge-java'
     - '{project-name}-{stream}-release-version-java-daily'
@@ -37,3 +36,13 @@
     project: 'vnfsdk/functest'
     project-name: 'vnfsdk-functest'
     branch: 'master'
+
+- project:
+    name: vnfsdk-functest-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vnfsdk/functest
+    project-name: 'vnfsdk-functest'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vnfsdk-functest-settings'
