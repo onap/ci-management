@@ -17,7 +17,6 @@
     mvn-settings: 'vnfsdk-dovetail-integration-settings'
     build-node: ubuntu1604-builder-4c-4g
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{subproject}-python-staging-{stream}'
@@ -47,3 +46,13 @@
     project: 'vnfsdk/dovetail-integration'
     project-name: 'vnfsdk-dovetail-integration'
     branch: 'master'
+
+- project:
+    name: vnfsdk-dovetail-integration-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vnfsdk/dovetail-integration
+    project-name: 'vnfsdk-dovetail-integration'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vnfsdk-dovetail-integration-settings'
