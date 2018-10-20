@@ -3,7 +3,6 @@
     name: so-libs
     project-name: 'so-libs'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,12 @@
     mvn-settings: 'so-libs-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: so-libs-clm
+    jobs:
+      - gerrit-maven-clm
+    project: so/libs
+    project-name: 'so-libs'
+    branch: 'master'
+    mvn-settings: 'so-libs-settings'
