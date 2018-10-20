@@ -4,7 +4,6 @@
     name: sdc-jtosca
     project-name: 'sdc-jtosca'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
@@ -31,3 +30,12 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-jtosca-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdc/jtosca
+    project-name: 'sdc-jtosca'
+    branch: 'master'
+    mvn-settings: 'sdc-jtosca-settings'
