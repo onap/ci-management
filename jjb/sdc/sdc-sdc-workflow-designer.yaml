@@ -3,7 +3,6 @@
     name: sdc-sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,13 @@
     mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-sdc-workflow-designer-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdc/sdc-workflow-designer
+    project-name: 'sdc-sdc-workflow-designer'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-workflow-designer-settings'
