@@ -4,7 +4,6 @@
     name: sdc-sdc-tosca
     project-name: 'sdc-sdc-tosca'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
@@ -31,3 +30,12 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-sdc-tosca-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdc/sdc-tosca
+    project-name: 'sdc-sdc-tosca'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-tosca-settings'

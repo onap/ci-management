@@ -16,9 +16,6 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
-      - gerrit-maven-clm:
-          build-timeout: 120
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     project: 'sdc'
     stream:
       - 'master':
@@ -42,3 +39,15 @@
     mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-clm
+    jobs:
+      - gerrit-maven-clm:
+          build-timeout: 120
+          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    project: sdc
+    project-name: 'sdc'
+    build-node: ubuntu1604-docker-8c-8g
+    branch: 'master'
+    mvn-settings: 'sdc-settings'
