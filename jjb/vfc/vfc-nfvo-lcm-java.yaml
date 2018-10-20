@@ -8,7 +8,6 @@
           branch: 'master'
     mvn-settings: 'vfc-nfvo-lcm-settings'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,3 +32,13 @@
     mvn-settings: 'vfc-nfvo-lcm-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vfc-nfvo-lcm-java-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vfc/nfvo/lcm
+    project-name: 'vfc-nfvo-lcm'
+    build-node: centos7-redis-4c-4g
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-lcm-settings'

@@ -12,8 +12,6 @@
           pom: 'zte/vmanager/pom.xml'
           pattern: 'zte/vmanager/**'
     jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f zte/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
@@ -34,3 +32,14 @@
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-zte-java-clm
+    jobs:
+      - gerrit-maven-clm:
+          mvn-params: '-f zte/pom.xml'
+    project: vfc/nfvo/driver/vnfm/svnfm
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm-zte'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
