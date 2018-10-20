@@ -3,7 +3,6 @@
     name: vid
     project-name: 'vid'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
@@ -45,3 +44,13 @@
     mvn-settings: 'vid-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vid-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vid
+    project-name: 'vid'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vid-settings'
