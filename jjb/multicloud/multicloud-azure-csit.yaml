@@ -2,6 +2,7 @@
 - project:
     name: multicloud-azure-csit
     jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-azure'
     stream: 'master'
