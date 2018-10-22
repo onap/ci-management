@@ -49,6 +49,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: 10
           choosing-strategy: default
 
     wrappers:
