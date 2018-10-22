@@ -24,6 +24,7 @@
     # Default to LF standard 'snapshots' docker registry
     docker_registry: '$DOCKER_REGISTRY:10003'
     docker_tag: 'latest'
+    submodule-timeout: 10
 
     #####################
     # Job Configuration #
@@ -274,6 +275,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
@@ -332,6 +334,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
@@ -546,6 +549,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
@@ -604,6 +608,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
@@ -659,6 +664,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
@@ -709,6 +715,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:

@@ -16,6 +16,7 @@
     pre_build_script: ''
     build_script: ''
     post_build_script: ''
+    submodule-timeout: 10
 
     #####################
     # Job Configuration #
@@ -177,6 +178,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
     builders:
