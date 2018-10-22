@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Gary Wu <gary.i.wu@huawei.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Mon, 22 Oct 2018 17:58:11 +0000
+Reviewed-on: https://gerrit.onap.org/r/70965
+Project: ci-management
+Branch: refs/heads/master
