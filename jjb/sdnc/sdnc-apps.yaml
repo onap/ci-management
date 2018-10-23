@@ -3,7 +3,6 @@
     name: sdnc-apps
     project-name: 'sdnc-apps'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -57,3 +56,13 @@
     archive-artifacts: ''
     build-node: queue-docker-4c-4g
 
+
+- project:
+    name: sdnc-apps-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdnc/apps
+    project-name: 'sdnc-apps'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'sdnc-apps-settings'

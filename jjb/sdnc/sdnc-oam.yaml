@@ -4,7 +4,6 @@
     name: sdnc-oam
     project-name: 'sdnc-oam'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -37,3 +36,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: queue-docker-4c-4g
+
+- project:
+    name: sdnc-oam-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdnc/oam
+    project-name: 'sdnc-oam'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'sdnc-oam-settings'
