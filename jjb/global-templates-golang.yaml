@@ -33,7 +33,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang
+      - golang110
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -93,7 +93,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang
+      - golang110
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -148,7 +148,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang
+      - golang110
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 

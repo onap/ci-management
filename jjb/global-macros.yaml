@@ -469,12 +469,21 @@
           fail: true
 
 - wrapper:
-    name: golang
+    name: golang110
     wrappers:
       - raw:
           xml: |
             <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
             <goVersion>Golang 1.10</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang111
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.11</goVersion>
             </org.jenkinsci.plugins.golang.GolangBuildWrapper>
 
 - wrapper:
