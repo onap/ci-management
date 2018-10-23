@@ -3,7 +3,6 @@
     name: logging-analytics
     project-name: 'logging-analytics'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -81,3 +80,12 @@
       - gerrit-info-yaml-verify
     project: 'logging-analytics'
     branch: 'master'
+
+- project:
+    name: logging-analytics-clm
+    jobs:
+      - gerrit-maven-clm
+    project: logging-analytics
+    project-name: 'logging-analytics'
+    branch: 'master'
+    mvn-settings: 'logging-analytics-settings'

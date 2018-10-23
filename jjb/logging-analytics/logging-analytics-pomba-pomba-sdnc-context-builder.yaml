@@ -3,7 +3,6 @@
     name: logging-analytics-pomba-pomba-sdnc-context-builder
     project-name: logging-analytics-pomba-pomba-sdnc-context-builder
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -39,3 +38,12 @@
       - gerrit-info-yaml-verify
     project: 'logging-analytics/pomba/pomba-sdnc-context-builder'
     branch: 'master'
+
+- project:
+    name: logging-analytics-pomba-pomba-sdnc-context-builder-clm
+    jobs:
+      - gerrit-maven-clm
+    project: logging-analytics/pomba/pomba-sdnc-context-builder
+    project-name: logging-analytics-pomba-pomba-sdnc-context-builder
+    branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-sdnc-context-builder-settings

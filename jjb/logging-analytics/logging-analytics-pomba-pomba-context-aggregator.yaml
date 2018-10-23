@@ -3,7 +3,6 @@
     name: logging-analytics-pomba-pomba-context-aggregator
     project-name: logging-analytics-pomba-pomba-context-aggregator
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -42,3 +41,12 @@
       - gerrit-info-yaml-verify
     project: 'logging-analytics/pomba/pomba-context-aggregator'
     branch: 'master'
+
+- project:
+    name: logging-analytics-pomba-pomba-context-aggregator-clm
+    jobs:
+      - gerrit-maven-clm
+    project: logging-analytics/pomba/pomba-context-aggregator
+    project-name: logging-analytics-pomba-pomba-context-aggregator
+    branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-context-aggregator-settings

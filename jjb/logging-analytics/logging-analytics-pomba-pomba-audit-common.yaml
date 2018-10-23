@@ -3,7 +3,6 @@
     name: logging-analytics-pomba-pomba-audit-common
     project-name: logging-analytics-pomba-pomba-audit-common
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -35,3 +34,12 @@
       - gerrit-info-yaml-verify
     project: 'logging-analytics/pomba/pomba-audit-common'
     branch: 'master'
+
+- project:
+    name: logging-analytics-pomba-pomba-audit-common-clm
+    jobs:
+      - gerrit-maven-clm
+    project: logging-analytics/pomba/pomba-audit-common
+    project-name: logging-analytics-pomba-pomba-audit-common
+    branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-audit-common-settings
