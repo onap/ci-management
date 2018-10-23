@@ -3,7 +3,6 @@
     name: vnfsdk-validation
     project-name: 'vnfsdk-validation'
     jobs:
-    - gerrit-maven-clm
     - '{project-name}-{stream}-verify-java'
     - '{project-name}-{stream}-merge-java'
     - '{project-name}-{stream}-release-version-java-daily'
@@ -36,3 +35,13 @@
     project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'
+
+- project:
+    name: vnfsdk-validation-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vnfsdk/validation
+    project-name: 'vnfsdk-validation'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'vnfsdk-validation-settings'
