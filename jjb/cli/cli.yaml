@@ -4,7 +4,6 @@
     name: cli
     project-name: 'cli'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,13 @@
     mvn-settings: 'cli-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: cli-clm
+    jobs:
+      - gerrit-maven-clm
+    project: 'cli'
+    project-name: 'cli'
+    branch: 'master'
+    mvn-settings: 'cli-settings'
+    build-node: ubuntu1604-builder-4c-4g
