@@ -3,7 +3,6 @@
     name: holmes-dsa
     project-name: 'holmes-dsa'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,3 +32,12 @@
     mvn-settings: 'holmes-dsa-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: holmes-dsa-clm
+    jobs:
+      - gerrit-maven-clm
+    project: holmes/dsa
+    project-name: 'holmes-dsa'
+    branch: 'master'
+    mvn-settings: 'holmes-dsa-settings'
