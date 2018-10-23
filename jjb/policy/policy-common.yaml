@@ -3,7 +3,6 @@
     name: policy-common
     project-name: 'policy-common'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
@@ -30,3 +29,12 @@
     mvn-settings: 'policy-common-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-common-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/common
+    project-name: 'policy-common'
+    branch: 'master'
+    mvn-settings: 'policy-common-settings'

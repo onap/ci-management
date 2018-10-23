@@ -3,7 +3,6 @@
     name: policy-pdp
     project-name: 'policy-pdp'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
@@ -28,3 +27,12 @@
     mvn-settings: 'policy-pdp-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-pdp-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/pdp
+    project-name: 'policy-pdp'
+    branch: 'master'
+    mvn-settings: 'policy-pdp-settings'

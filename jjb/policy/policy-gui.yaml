@@ -3,7 +3,6 @@
     name: policy-gui
     project-name: 'policy-gui'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
 
@@ -28,3 +27,12 @@
     mvn-settings: 'policy-gui-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-gui-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/gui
+    project-name: 'policy-gui'
+    branch: 'master'
+    mvn-settings: 'policy-gui-settings'

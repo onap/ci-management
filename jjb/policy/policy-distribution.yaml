@@ -3,7 +3,6 @@
     name: policy-distribution
     project-name: 'policy-distribution'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
           docker-pom: 'pom.xml'
@@ -37,3 +36,12 @@
     mvn-settings: 'policy-distribution-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-distribution-clm
+    jobs:
+      - gerrit-maven-clm
+    project: policy/distribution
+    project-name: 'policy-distribution'
+    branch: 'master'
+    mvn-settings: 'policy-distribution-settings'
