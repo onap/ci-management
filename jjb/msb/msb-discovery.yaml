@@ -3,7 +3,6 @@
     name: msb-discovery
     project-name: 'msb-discovery'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -33,3 +32,12 @@
     mvn-settings: 'msb-discovery-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: msb-discovery-clm
+    jobs:
+      - gerrit-maven-clm
+    project: msb/discovery
+    project-name: 'msb-discovery'
+    branch: 'master'
+    mvn-settings: 'msb-discovery-settings'
