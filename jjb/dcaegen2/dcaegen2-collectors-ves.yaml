@@ -3,7 +3,6 @@
     name: dcaegen2-collectors-ves
     project-name: 'dcaegen2-collectors-ves'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -34,3 +33,13 @@
     mvn-settings: 'dcaegen2-collectors-ves-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-collectors-ves-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dcaegen2/collectors/ves
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-collectors-ves'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-collectors-ves-settings'

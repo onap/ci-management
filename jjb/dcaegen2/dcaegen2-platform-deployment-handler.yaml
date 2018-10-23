@@ -3,7 +3,6 @@
     name: dcaegen2-platform-deployment-handler
     project-name: 'dcaegen2-platform-deployment-handler'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
@@ -21,3 +20,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
+
+- project:
+    name: dcaegen2-platform-deployment-handler-clm
+    jobs:
+      - gerrit-maven-clm
+    project: dcaegen2/platform/deployment-handler
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-platform-deployment-handler'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-platform-deployment-handler-settings'
