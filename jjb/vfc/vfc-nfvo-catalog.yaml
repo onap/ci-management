@@ -13,7 +13,6 @@
           path: '.'
           pattern: '**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -39,3 +38,13 @@
     mvn-settings: 'vfc-nfvo-catalog-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vfc-nfvo-catalog-clm
+    jobs:
+      - gerrit-maven-clm
+    project: vfc/nfvo/catalog
+    project-name: 'vfc-nfvo-catalog'
+    build-node: centos7-redis-4c-4g
+    branch: 'master'
+    mvn-settings: 'vfc-nfvo-catalog-settings'
