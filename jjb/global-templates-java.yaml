@@ -49,6 +49,7 @@
           files: '{obj:pattern}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -150,6 +151,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -217,6 +219,7 @@
           project: '{project}'
           branch: '{branch}'
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -293,6 +296,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -367,6 +371,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -444,6 +449,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -517,6 +523,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -594,6 +601,7 @@
           files: '{pattern}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -640,6 +648,7 @@
     name: '{project-name}-{stream}-merge-profile-java'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -724,7 +733,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -809,6 +818,7 @@
           project: '{project}'
           branch: '{branch}'
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -883,7 +893,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -951,7 +961,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1021,7 +1031,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1099,7 +1109,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1180,7 +1190,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1278,7 +1288,7 @@
           branch: '{branch}'
 
     builders:
-
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1330,6 +1340,7 @@
     build-timeout: 120
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'

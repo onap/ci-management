@@ -68,6 +68,7 @@
           files: '{files}'
 
     builders:
+      - lf-infra-pre-build
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
 
@@ -91,6 +92,7 @@
           files: '{files}'
 
     builders:
+      - lf-infra-pre-build
       - lf-provide-maven-settings:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
@@ -125,6 +127,7 @@
                 comment-contains-value: '^stage-helm$'
 
     builders:
+      - lf-infra-pre-build
       - lf-provide-maven-settings:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
@@ -146,6 +149,7 @@
 
     disabled: true
     builders:
+      - lf-infra-pre-build
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - shell: '{post_build_script}'
@@ -158,6 +162,7 @@
 
     disabled: true
     builders:
+      - lf-infra-pre-build
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - shell: '{post_build_script}'
@@ -182,6 +187,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - shell: '{post_build_script}'

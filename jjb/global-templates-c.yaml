@@ -44,6 +44,7 @@
           files: '**'
 
     builders:
+      - lf-infra-pre-build
       - shell: '{script}'
 
     publishers:
@@ -93,6 +94,7 @@
           branch: '{branch}'
 
     builders:
+      - lf-infra-pre-build
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
