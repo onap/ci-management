@@ -3,7 +3,6 @@
     name: sdc-dcae-d-dt-be-main
     project-name: 'sdc-dcae-d-dt-be-main'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
@@ -33,3 +32,12 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-dcae-d-dt-be-main-clm
+    jobs:
+      - gerrit-maven-clm
+    project: sdc/dcae-d/dt-be-main
+    project-name: 'sdc-dcae-d-dt-be-main'
+    branch: 'master'
+    mvn-settings: 'sdc-dcae-d-dt-be-main-settings'
