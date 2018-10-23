@@ -100,6 +100,7 @@
     <<: *docker_merge_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -140,6 +141,7 @@
     <<: *docker_merge_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -185,6 +187,7 @@
     <<: *docker_verify_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -227,6 +230,7 @@
     <<: *docker_verify_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -277,6 +281,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -335,6 +340,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -379,6 +385,7 @@
     <<: *docker_merge_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -416,6 +423,7 @@
     <<: *docker_merge_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -461,6 +469,7 @@
     <<: *docker_verify_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -499,6 +508,7 @@
     <<: *docker_verify_boiler_plate
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -549,6 +559,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -607,6 +618,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -662,6 +674,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -712,6 +725,7 @@
           choosing-strategy: default
 
     builders:
+      - lf-infra-pre-build
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
