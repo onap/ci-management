@@ -7,7 +7,6 @@
           path: '.'
           pattern: '**'
     jobs:
-      - gerrit-maven-clm
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
     project: 'testsuite/heatbridge'
@@ -18,3 +17,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: testsuite-heatbridge-master-clm
+    jobs:
+      - gerrit-maven-clm
+    project: testsuite/heatbridge
+    project-name: 'testsuite-heatbridge'
+    build-node: ubuntu1604-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'testsuite-heatbridge-settings'
