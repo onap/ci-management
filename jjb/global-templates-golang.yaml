@@ -5,11 +5,16 @@
     # The purpose of this job template is to run:
     # 1. make build
     #
+    # golangver can be set to golang110 or golang111
+    # depending on what version is needed by the project
+    # default is golang110
+    #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
 
     name: '{project-name}-{stream}-verify-golang'
     path: '$WORKSPACE'
+    golangver: 'golang110'
 
     project-type: freestyle
     concurrent: true
@@ -33,7 +38,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang110
+      - '{golangver}'
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -64,11 +69,16 @@
     # The purpose of this job template is to run:
     # 1. make deploy
     #
+    # golangver can be set to golang110 or golang111
+    # depending on what version is needed by the project
+    # default is golang110
+    #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
 
     name: '{project-name}-{stream}-merge-golang'
     path: $WORKSPACE
+    golangver: 'golang110'
 
     project-type: freestyle
     node: '{build-node}'
@@ -93,7 +103,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang110
+      - '{golangver}'
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
@@ -121,12 +131,17 @@
 - job-template:
     # Job template for building & pushing docker images
     #
+    # golangver can be set to golang110 or golang111
+    # depending on what version is needed by the project
+    # default is golang110
+    #
     # The purpose of this job template is to run:
     #  1. login to the docker registry
     #  2. run a specified shell builder
     #
 
     name: '{project-name}-{stream}-docker-golang-shell-daily'
+    golangver: 'golang110'
     project-type: freestyle
     node: 'ubuntu1604-docker-8c-8g'
     disabled: false
@@ -148,7 +163,7 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - golang110
+      - '{golangver}'
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
