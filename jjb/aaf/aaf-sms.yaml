@@ -4,6 +4,7 @@
     project-name: 'aaf-sms'
     subproject: 'aaf-sms-client'
     path: 'sms-service/src'
+    golangver: 'golang111'
     jobs:
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
