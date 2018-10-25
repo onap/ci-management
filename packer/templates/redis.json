@@ -15,7 +15,7 @@
   "builders": [
     {
       "name": "vexxhost",
-      "image_name": "{{user `distro`}} - redis - {{user `arch`}} - {{isotime \"20060102-150405.000\"}}",
+      "image_name": "{{user `distro`}} - redis - {{user `arch`}} - {{isotime \"20180101-1003\"}}",
       "source_image_name": "{{user `base_image`}}",
       "type": "openstack",
       "identity_endpoint": "{{user `cloud_auth_url`}}",
