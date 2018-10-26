@@ -48,3 +48,4 @@
     project-name: 'policy-engine'
     branch: 'master'
     mvn-settings: 'policy-engine-settings'
+    build-node: 'ubuntu1604-builder-4c-4g'
