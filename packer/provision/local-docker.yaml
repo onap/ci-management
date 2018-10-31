@@ -105,10 +105,12 @@
         url: https://dl-ssl.google.com/linux/linux_signing_key.pub
         state: present
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Add Google Chrome repo
       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Update apt cache
       apt: update_cache=yes
@@ -119,6 +121,7 @@
         name: google-chrome-stable
         state: present
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Install Erlang dependency packages
       apt:
@@ -127,22 +130,26 @@
           - libsctp1
           - libwxbase3.0-0v5
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Install Erlang
       apt:
         deb: https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
       install_recommends: yes
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Clone rebar3
       git:
         repo: 'https://github.com/erlang/rebar3.git'
         dest: /tmp/rebar3
+      when: "'x86_64' in ansible_architecture"
 
     - name: Bootstrap rebar3
       command: ./bootstrap
       args:
         chdir: /tmp/rebar3
+      when: "'x86_64' in ansible_architecture"
 
     - name: Install rebar3 to bin
       copy:
@@ -151,11 +158,13 @@
         mode: 0755
         remote_src: true
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Remove unused rebar3 source
       file:
         path: /tmp/rebar3
         state: absent
+      when: "'x86_64' in ansible_architecture"
 
     - name: Download geckodriver
       unarchive:
@@ -164,6 +173,7 @@
         mode: 0755
         remote_src: yes
       become: true
+      when: "'x86_64' in ansible_architecture"
 
     - name: Download Firefox version 55.0.3
       unarchive:
@@ -171,6 +181,7 @@
         dest: /opt
         mode: 0755
         remote_src: yes
+      when: "'x86_64' in ansible_architecture"
       become: true
 
     - name: Create symbolic link to firefox bin
@@ -178,4 +189,5 @@
         src: "/opt/firefox/firefox"
         dest: "/usr/bin/firefox"
         state: link
+      when: "'x86_64' in ansible_architecture"
       become: true
