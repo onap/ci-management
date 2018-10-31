@@ -4,7 +4,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: master
+      - 'casablanca':
+          branch: casablanca
     functionality:
       - 'health'
     trigger_jobs:
@@ -20,7 +24,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: master
+      - 'casablanca':
+          branch: casablanca
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -34,7 +42,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: master
+      - 'casablanca':
+          branch: casablanca
     functionality:
       - 'distribution'
     trigger_jobs:
