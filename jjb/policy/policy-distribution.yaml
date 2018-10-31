@@ -12,13 +12,38 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-          disabled: false
+          disabled: true
           build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/distribution'
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-distribution-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: policy-distribution
+    project-name: 'policy-distribution'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker'
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: false
+          build-node: ubuntu1604-docker-8c-8g
+
+    project: 'policy/distribution'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'policy-distribution-settings'
     files: '**'
     archive-artifacts: ''
