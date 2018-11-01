@@ -17,3 +17,5 @@
           branch: 'amsterdam'
       - beijing:
           branch: 'beijing'
+      - casablanca:
+          branch: 'casablanca'
