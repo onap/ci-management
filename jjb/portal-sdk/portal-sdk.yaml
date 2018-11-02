@@ -42,6 +42,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f ecomp-sdk/pom.xml'
+    build-node: ubuntu1604-builder-4c-4g
     project: portal/sdk
     project-name: 'portal-sdk'
     branch: 'master'
