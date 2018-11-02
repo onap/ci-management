@@ -8,6 +8,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/logging-service'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-logging-service-settings'
@@ -33,5 +35,5 @@
       - gerrit-maven-clm
     project: 'aai/logging-service'
     project-name: 'aai-logging-service'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-logging-service-settings'

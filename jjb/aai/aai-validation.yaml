@@ -11,6 +11,8 @@
           mvn-goals: 'docker:build'
     project: 'aai/validation'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-validation-settings'
@@ -26,7 +28,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/validation'
     project-name: 'aai-validation'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-validation-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -37,5 +39,5 @@
       - gerrit-maven-clm
     project: 'aai/validation'
     project-name: 'aai-validation'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-validation-settings'

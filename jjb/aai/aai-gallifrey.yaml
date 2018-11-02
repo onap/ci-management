@@ -12,6 +12,8 @@
           build-node: 'ubuntu1604-docker-8c-8g'
     project: 'aai/gallifrey'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-gallifrey-settings'
@@ -24,5 +26,5 @@
       - gerrit-maven-clm
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-gallifrey-settings'

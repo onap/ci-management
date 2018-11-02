@@ -8,6 +8,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/event-client'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-event-client-settings'
@@ -33,5 +35,5 @@
       - gerrit-maven-clm
     project: 'aai/event-client'
     project-name: 'aai-event-client'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-event-client-settings'

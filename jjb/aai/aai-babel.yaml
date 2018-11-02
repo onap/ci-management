@@ -11,6 +11,8 @@
           mvn-goals: 'docker:build'
     project: 'aai/babel'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-babel-settings'
@@ -26,7 +28,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/babel'
     project-name: 'aai-babel'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-babel-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -37,7 +39,7 @@
       - gerrit-maven-clm
     project: 'aai/babel'
     project-name: 'aai-babel'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-babel-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 

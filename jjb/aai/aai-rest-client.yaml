@@ -8,6 +8,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/rest-client'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-rest-client-settings'
@@ -33,5 +35,5 @@
       - gerrit-maven-clm
     project: 'aai/rest-client'
     project-name: 'aai-rest-client'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-rest-client-settings'

@@ -8,6 +8,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/router-core'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-router-core-settings'
@@ -33,5 +35,5 @@
       - gerrit-maven-clm
     project: 'aai/router-core'
     project-name: 'aai-router-core'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-router-core-settings'

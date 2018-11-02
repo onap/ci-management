@@ -11,6 +11,8 @@
           mvn-goals: 'docker:build'
     project: 'aai/spike'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-spike-settings'
@@ -26,7 +28,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/spike'
     project-name: 'aai-spike'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-spike-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -36,5 +38,5 @@
       - gerrit-maven-clm
     project: 'aai/spike'
     project-name: 'aai-spike'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-spike-settings'

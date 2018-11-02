@@ -9,6 +9,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/sparky-fe'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-sparky-fe-settings'

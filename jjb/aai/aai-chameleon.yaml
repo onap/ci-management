@@ -11,6 +11,8 @@
           mvn-goals: 'clean package dockerfile:build dockerfile:push'
     project: 'aai/chameleon'
     stream:
+      - 'casablanca':
+          branch: 'casablanca'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-chameleon-settings'
@@ -24,5 +26,5 @@
       - gerrit-maven-clm
     project: 'aai/chameleon'
     project-name: 'aai-chameleon'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-chameleon-settings'
