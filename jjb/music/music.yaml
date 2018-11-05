@@ -16,6 +16,8 @@
           branch: 'master'
       - 'beijing':
           branch: 'beijing'
+      - 'dev-cassandra-only':
+          branch: 'dev-cassandra-only'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
