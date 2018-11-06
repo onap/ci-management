@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     functionality:
       - 'testsuites'
     trigger_jobs:
