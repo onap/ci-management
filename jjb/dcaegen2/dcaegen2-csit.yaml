@@ -22,9 +22,11 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     functionality:
       - 'prh-testsuites'
     trigger_jobs:
       - 'dcaegen2-master-merge-java'
-      - 'dcaegen2-services-prh-master-merge-java'
+      - '{project-name}-{stream}-merge-java'
     robot-options: ''
