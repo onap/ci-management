@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aai-babel-project-view
+    project: aai-babel
+    project-name: aai-babel
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aai-babel repo'
+    views:
+      - common-view
+
+- project:
     name: aai-babel
     project-name: 'aai-babel'
     jobs:

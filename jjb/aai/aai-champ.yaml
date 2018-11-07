@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aai-champ-project-view
+    project: aai-champ
+    project-name: aai-champ
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aai-champ repo'
+    views:
+      - common-view
+
+- project:
     name: aai-champ
     project-name: 'aai-champ'
     jobs:
