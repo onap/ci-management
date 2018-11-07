@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aaf-project-view
+    project: aaf
+    project-name: aaf
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aaf repo'
+    views:
+      - common-view
+
+- project:
     name: aaf-authz
     project-name: 'aaf-authz'
     jobs:

@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aai-chameleon-project-view
+    project: aai-chameleon
+    project-name: aai-chameleon
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aai-chameleon repo'
+    views:
+      - common-view
+
+- project:
     name: aai-chameleon
     project-name: 'aai-chameleon'
     jobs:

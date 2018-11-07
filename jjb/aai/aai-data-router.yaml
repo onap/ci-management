@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aai-data-router-project-view
+    project: aai-data-router
+    project-name: aai-data-router
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aai-data-router repo'
+    views:
+      - common-view
+
+- project:
     name: aai-data-router-master
     project-name: 'aai-data-router'
     jobs:

@@ -1,5 +1,14 @@
 ---
 - project:
+    name: aai-aai-common-project-view
+    project: aai-aai-common
+    project-name: aai-aai-common
+    view-regex: '^{project-name}-.*'
+    view-description: 'Jenkins jobs for aai-aai-common repo'
+    views:
+      - common-view
+
+- project:
     name: aai-aai-common-master
     project-name: 'aai-aai-common'
     jobs:
