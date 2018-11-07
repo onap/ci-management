@@ -46,6 +46,23 @@
     archive-artifacts: ''
 
 - project:
+    name: aaf-cadi-fproxy-arm64
+    project-name: 'aaf-cadi-fproxy-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/fproxy/pom.xml'
+          mvn-goals: 'docker:build'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aaf/cadi'
+    docker-image-name: 'onap/fproxy'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: aaf-cadi-fproxy-sonar
     jobs:
       - gerrit-maven-sonar
@@ -75,6 +92,25 @@
     mvn-settings: 'aaf-cadi-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aaf-cadi-rproxy-arm64
+    project-name: 'aaf-cadi-rproxy-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/rproxy/pom.xml'
+          mvn-goals: 'docker:build'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aaf/cadi'
+    project: 'aaf/cadi'
+    docker-image-name: 'onap/rproxy'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-settings'
+    files: '**'
+    archive-artifacts: ''
+
 
 - project:
     name: aaf-cadi-rproxy-sonar
@@ -108,6 +144,24 @@
     archive-artifacts: ''
 
 - project:
+    name: aaf-cadi-tproxy-config-arm64
+    project-name: 'aaf-cadi-tproxy-config-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'sidecar/tproxy-config/pom.xml'
+          mvn-goals: 'docker:build'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aaf/cadi'
+    project: 'aaf/cadi'
+    docker-image-name: 'onap/tproxy-config'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-cadi-settings'
+    files: '**'
+    archive-artifacts: ''
+
+ project:
     name: aaf-cadi-clm
     jobs:
       - gerrit-maven-clm
