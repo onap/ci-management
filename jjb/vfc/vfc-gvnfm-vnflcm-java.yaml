@@ -21,6 +21,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-gvnfm-vnflcm-docker-image.sh'
+          build-node: ubuntu1604-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: centos7-redis-4c-4g
