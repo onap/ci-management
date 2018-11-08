@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_345ebf46",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-11-08T22:11:47Z",
+      "side": 1,
+      "message": "The change in general looks ok, the commit text let\u0027s change it to something more specific to AAF. For example:\n\nAdd arm64 docker build for AAF\n\nAdd arm64 docker-java-shell-daily job for\naaf-authz",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "e690833c2a13c58cc58aff6d99f5093070bee71a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
