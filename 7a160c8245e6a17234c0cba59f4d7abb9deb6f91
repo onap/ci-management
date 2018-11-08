@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_99e24402",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-11-08T17:32:09Z",
+      "side": 1,
+      "message": "Use present-tense, imperative-style for the 1st line of a commit message. Followed by a blank line. The blank line ensures that the commit message is appropriately parsed for the summary line.\n\nPersonally I think a commit message like this would be better:\n\n Add Casablanca release for sonar \u0026 clm\n\nI\u0027d recommend getting familiar with the 7 rules of well formed commit messages:\n\nhttps://chris.beams.io/posts/git-commit/#seven-rules",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 5
+      },
+      "revId": "7a160c8245e6a17234c0cba59f4d7abb9deb6f91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
