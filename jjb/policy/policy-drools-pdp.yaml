@@ -16,7 +16,7 @@
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
           disabled: true
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'policy/drools-pdp'
     stream:
       - 'master':
@@ -43,7 +43,7 @@
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
           disabled: true
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'policy/drools-pdp'
     stream:
       - 'casablanca':

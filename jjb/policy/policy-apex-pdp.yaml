@@ -22,7 +22,7 @@
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
           disabled: true
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'policy/apex-pdp'
     stream:
       - 'master':
@@ -49,7 +49,7 @@
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
           disabled: true
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'policy/apex-pdp'
     stream:
       - 'casablanca':

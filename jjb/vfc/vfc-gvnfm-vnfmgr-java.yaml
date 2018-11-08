@@ -20,6 +20,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-gvnfm-vnfmgr-docker-image.sh'
+          build-node: ubuntu1604-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g

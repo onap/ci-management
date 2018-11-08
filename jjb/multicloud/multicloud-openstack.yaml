@@ -52,6 +52,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-multicloud-openstack-docker-image.sh'
+          build-node: ubuntu1604-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-memcached-4c-4g'
