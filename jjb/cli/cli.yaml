@@ -11,6 +11,7 @@
           pom: 'deployment/docker/pom.xml'
           mvn-goals: 'docker:build'
           docker-image-name: 'onap/cli'
+          build-node: ubuntu1604-docker-8c-8g
 
     project: 'cli'
     stream:

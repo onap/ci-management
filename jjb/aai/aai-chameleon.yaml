@@ -9,6 +9,7 @@
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'clean package dockerfile:build dockerfile:push'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'aai/chameleon'
     stream:
       - 'casablanca':
