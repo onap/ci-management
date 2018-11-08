@@ -28,7 +28,11 @@
     build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/services/prh'
     project-name: 'dcaegen2-services-prh'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'dcaegen2-services-prh-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -40,5 +44,9 @@
     project: dcaegen2/services/prh
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-services-prh'
-    branch: 'master'
+    stream:
+        - 'master':
+            branch: 'master'
+        - 'casablanca':
+            branch: 'casablanca'
     mvn-settings: 'dcaegen2-services-prh-settings'
