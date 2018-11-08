@@ -11,7 +11,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-apigateway-docker-image.sh'
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'msb/apigateway'
     stream:
       - 'master':
