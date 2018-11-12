@@ -5,10 +5,13 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'usecases'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     functionality:
       - '5G-bulkpm':
           trigger_jobs:
             - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
-    branch: 'master'
