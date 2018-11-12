@@ -20,23 +20,24 @@
     files: '**'
     archive-artifacts: ''
 
-- project:
-    name: aaf-authz-arm64
-    project-name: 'aaf-authz-arm64'
-    jobs:
-      - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean install'
-          settings: '{mvn-settings}'
-          script:
-            !include-raw-escape: 'build-aaf-docker-image.sh'
-          build-node: 'ubuntu1604-docker-arm64-4c-2g'
-    project: 'aaf/authz'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'aaf-authz-settings'
-    files: '**'
-    archive-artifacts: ''
+# This was not cleared with PTL, nor is it appropriate to add for CasaBlanca  See PTL before adding this kind of thing
+#- project:
+#    name: aaf-authz-arm64
+#    project-name: 'aaf-authz-arm64'
+#    jobs:
+#      - '{project-name}-{stream}-docker-java-shell-daily':
+#          mvn-goals: 'clean install'
+#          settings: '{mvn-settings}'
+#          script:
+#            !include-raw-escape: 'build-aaf-docker-image.sh'
+#          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#    project: 'aaf/authz'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'aaf-authz-settings'
+#    files: '**'
+#    archive-artifacts: ''
 
 - project:
     name: aaf-authz-sonar
