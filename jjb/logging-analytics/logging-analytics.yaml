@@ -1,5 +1,11 @@
 ---
 - project:
+    name: logging-analytics-project-view
+    project-name: logging-analytics
+    views:
+      - project-view
+
+- project:
     name: logging-analytics
     project-name: 'logging-analytics'
     jobs:

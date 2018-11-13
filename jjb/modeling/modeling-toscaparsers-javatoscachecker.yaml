@@ -1,4 +1,9 @@
 ---
+- project:
+    name: modeling-project-view
+    project-name: modeling
+    views:
+      - project-view
 
 - project:
     name: modeling-toscaparsers-javatoscachecker

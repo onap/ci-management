@@ -1,5 +1,11 @@
 ---
 - project:
+    name: multicloud-project-view
+    project-name: multicloud
+    views:
+      - project-view
+
+- project:
     name: multicloud-openstack
     project-name: 'multicloud-openstack'
     project: 'multicloud/openstack'

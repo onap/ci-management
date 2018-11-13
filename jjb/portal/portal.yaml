@@ -1,5 +1,11 @@
 ---
 - project:
+    name: portal-project-view
+    project-name: portal
+    views:
+      - project-view
+
+- project:
     name: portal
     project-name: 'portal'
     jobs:

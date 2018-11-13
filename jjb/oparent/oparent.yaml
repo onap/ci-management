@@ -1,5 +1,11 @@
 ---
 - project:
+    name: oparent-project-view
+    project-name: oparent
+    views:
+      - project-view
+
+- project:
     name: oparent
     project-name: 'oparent'
     jobs:
