@@ -1,5 +1,11 @@
 ---
 - project:
+    name: sdnc-project-view
+    project-name: sdnc
+    views:
+      - project-view
+
+- project:
     name: sdnc-apps
     project-name: 'sdnc-apps'
     jobs:

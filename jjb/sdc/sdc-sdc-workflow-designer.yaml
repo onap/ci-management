@@ -1,5 +1,11 @@
 ---
 - project:
+    name: sdc-sdc-workflow-project-view
+    project-name: sdc-sdc-workflow
+    views:
+      - project-view
+
+- project:
     name: sdc-sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     jobs:

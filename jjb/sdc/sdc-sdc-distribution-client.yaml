@@ -1,4 +1,9 @@
 ---
+- project:
+    name: sdc-sdc-distribution-project-view
+    project-name: sdc-sdc-distribution
+    views:
+      - project-view
 
 - project:
     name: sdc-sdc-distribution-client
