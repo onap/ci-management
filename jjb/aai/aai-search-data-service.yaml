@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-search-data-service-project-view
+    project-name: aai-search-data-service
+    views:
+      - project-view
+
+- project:
     name: aai-search-data-service-master
     project-name: 'aai-search-data-service'
     jobs:

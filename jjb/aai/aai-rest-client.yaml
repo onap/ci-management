@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-rest-client-project-view
+    project-name: aai-rest-client
+    views:
+      - project-view
+
+- project:
     name: aai-rest-client-master
     project-name: 'aai-rest-client'
     jobs:
