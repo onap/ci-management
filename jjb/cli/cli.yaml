@@ -1,4 +1,9 @@
 ---
+- project:
+    name: cli-project-view
+    project-name: cli
+    views:
+      - project-view
 
 - project:
     name: cli
