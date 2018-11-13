@@ -1,4 +1,9 @@
 ---
+- project:
+    name: vfc-project-view
+    project-name: vfc
+    views:
+      - project-view
 
 - project:
     name: vfc-gvnfm-vnflcm-java

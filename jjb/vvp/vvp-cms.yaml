@@ -1,4 +1,9 @@
 ---
+- project:
+    name: vvp-project-view
+    project-name: vvp
+    views:
+      - project-view
 
 - project:
     name: vvp-cms

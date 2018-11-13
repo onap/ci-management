@@ -1,4 +1,9 @@
 ---
+- project:
+    name: usecase-ui-project-view
+    project-name: usecase-ui
+    views:
+      - project-view
 
 - project:
     name: usecase-ui

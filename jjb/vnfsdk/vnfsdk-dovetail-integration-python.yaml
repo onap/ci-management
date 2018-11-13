@@ -1,5 +1,11 @@
 ---
 - project:
+    name: vnfsdk-project-view
+    project-name: vnfsdk
+    views:
+      - project-view
+
+- project:
     name: vnfsdk-dovetail-integration
     project-name: 'vnfsdk-dovetail-integration'
     subproject:

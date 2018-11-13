@@ -1,5 +1,11 @@
 ---
 - project:
+    name: vnfrqts-project-view
+    project-name: vnfrqts
+    views:
+      - project-view
+
+- project:
     name: vnfrqts-epics
     project: 'vnfrqts/epics'
     jobs:
