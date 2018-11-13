@@ -1,5 +1,11 @@
 ---
 - project:
+    name: appc-project-view
+    project-name: appc
+    views:
+      - project-view
+
+- project:
     name: appc-parent
     project-name: 'appc-parent'
     jobs:

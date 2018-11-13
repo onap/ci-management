@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-esr-gui-project-view
+    project-name: aai-esr-gui
+    views:
+      - project-view
+
+- project:
     name: aai-esr-gui
     project-name: 'aai-esr-gui'
     jobs:

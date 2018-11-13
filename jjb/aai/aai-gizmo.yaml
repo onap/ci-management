@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-gizmo-project-view
+    project-name: aai-gizmo
+    views:
+      - project-view
+
+- project:
     name: aai-gizmo
     project-name: 'aai-gizmo'
     jobs:

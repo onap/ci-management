@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-router-project-view
+    project-name: aai-router
+    views:
+      - project-view
+
+- project:
     name: aai-router-core-master
     project-name: 'aai-router-core'
     jobs:

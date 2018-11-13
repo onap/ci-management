@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-model-loader-project-view
+    project-name: aai-model-loader
+    views:
+      - project-view
+
+- project:
     name: aai-model-loader-master
     project-name: 'aai-model-loader'
     jobs:

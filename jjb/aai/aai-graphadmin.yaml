@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-graphadmin-project-view
+    project-name: aai-graphadmin
+    views:
+      - project-view
+
+- project:
     name: aai-graphadmin-master
     project-name: 'aai-graphadmin'
     jobs:

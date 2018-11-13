@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-spike-project-view
+    project-name: aai-spike
+    views:
+      - project-view
+
+- project:
     name: aai-spike
     project-name: 'aai-spike'
     jobs:

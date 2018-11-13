@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-data-router-project-view
+    project-name: aai-data-router
+    views:
+      - project-view
+
+- project:
     name: aai-data-router-master
     project-name: 'aai-data-router'
     jobs:

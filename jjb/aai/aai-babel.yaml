@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-babel-project-view
+    project-name: aai-babel
+    views:
+      - project-view
+
+- project:
     name: aai-babel
     project-name: 'aai-babel'
     jobs:
