@@ -1,5 +1,11 @@
 ---
 - project:
+    name: ccsdk-project-view
+    project-name: ccsdk
+    views:
+      - project-view
+
+- project:
     name: ccsdk-apps
     project-name: 'ccsdk-apps'
     jobs:

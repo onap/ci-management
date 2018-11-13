@@ -1,5 +1,11 @@
 ---
 - project:
+    name: integration-project-view
+    project-name: integration
+    views:
+      - project-view
+
+- project:
     name: integration
     project-name: 'integration'
     jobs:

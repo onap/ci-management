@@ -1,5 +1,11 @@
 ---
 - project:
+    name: doc-project-view
+    project-name: doc
+    views:
+      - project-view
+
+- project:
     name: doc
     project-name: 'doc'
     jobs:

@@ -1,5 +1,11 @@
 ---
 - project:
+    name: externalapi-project-view
+    project-name: externalapi
+    views:
+      - project-view
+
+- project:
     name: externalapi-nbi
     project-name: 'externalapi-nbi'
     jobs:

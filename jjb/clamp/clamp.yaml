@@ -1,4 +1,9 @@
 ---
+- project:
+    name: clamp-project-view
+    project-name: clamp
+    views:
+      - project-view
 
 - project:
     name: clamp
