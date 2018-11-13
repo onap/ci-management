@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-chameleon-project-view
+    project-name: aai-chameleon
+    views:
+      - project-view
+
+- project:
     name: aai-chameleon
     project-name: 'aai-chameleon'
     jobs:

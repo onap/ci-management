@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-resources-project-view
+    project-name: aai-resources
+    views:
+      - project-view
+
+- project:
     name: aai-resources
     project-name: 'aai-resources'
     jobs:

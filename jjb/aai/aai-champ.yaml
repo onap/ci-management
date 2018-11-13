@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-champ-project-view
+    project-name: aai-champ
+    views:
+      - project-view
+
+- project:
     name: aai-champ
     project-name: 'aai-champ'
     jobs:

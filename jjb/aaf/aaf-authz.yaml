@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aaf-project-view
+    project-name: aaf
+    views:
+      - project-view
+
+- project:
     name: aaf-authz
     project-name: 'aaf-authz'
     jobs:

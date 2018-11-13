@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-traversal-project-view
+    project-name: aai-traversal
+    views:
+      - project-view
+
+- project:
     name: aai-traversal-master
     project-name: 'aai-traversal'
     jobs:

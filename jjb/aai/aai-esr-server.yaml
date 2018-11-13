@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-esr-server-project-view
+    project-name: aai-esr-server
+    views:
+      - project-view
+
+- project:
     name: aai-esr-server-master
     project-name: 'aai-esr-server'
     jobs:

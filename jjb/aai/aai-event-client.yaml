@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-event-client-project-view
+    project-name: aai-event-client
+    views:
+      - project-view
+
+- project:
     name: aai-event-client-master
     project-name: 'aai-event-client'
     jobs:

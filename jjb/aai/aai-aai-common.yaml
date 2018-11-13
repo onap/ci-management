@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-aai-common-project-view
+    project-name: aai-aai-common
+    views:
+      - project-view
+
+- project:
     name: aai-aai-common-master
     project-name: 'aai-aai-common'
     jobs:
