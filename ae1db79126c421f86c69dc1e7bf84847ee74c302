@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_43005daa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-11-13T21:57:10Z",
+      "side": 1,
+      "message": "No need to indent this text. Let\u0027s align it with the title.\n\nAlso instead of \"Increased\" use \"Increase\" as we prefer using imperative mood.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 51
+      },
+      "revId": "ae1db79126c421f86c69dc1e7bf84847ee74c302",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
