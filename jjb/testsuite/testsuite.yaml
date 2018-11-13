@@ -1,5 +1,11 @@
 ---
 - project:
+    name: testsuite-project-view
+    project-name: testsuite
+    views:
+      - project-view
+
+- project:
     name: testsuite
     project-name: 'testsuite'
     jobs:
