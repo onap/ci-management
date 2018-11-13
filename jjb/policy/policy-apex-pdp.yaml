@@ -1,5 +1,11 @@
 ---
 - project:
+    name: policy-project-view
+    project-name: policy
+    views:
+      - project-view
+
+- project:
     name: policy-apex-pdp
     project-name: 'policy-apex-pdp'
     jobs:

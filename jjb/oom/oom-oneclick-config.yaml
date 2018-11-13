@@ -1,5 +1,11 @@
 ---
 - project:
+    name: oom-project-view
+    project-name: oom
+    views:
+      - project-view
+
+- project:
    name: oomconfig
    project-name: 'oomconfig'
    project: 'oom'
