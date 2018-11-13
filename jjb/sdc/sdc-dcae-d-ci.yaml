@@ -1,5 +1,11 @@
 ---
 - project:
+    name: sdc-dcae-d-project-view
+    project-name: sdc-dcae-d
+    views:
+      - project-view
+
+- project:
     name: sdc-dcae-d-ci
     project-name: 'sdc-dcae-d-ci'
     jobs:

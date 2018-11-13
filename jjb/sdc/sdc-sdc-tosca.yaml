@@ -1,4 +1,9 @@
 ---
+- project:
+    name: sdc-sdc-tosca-project-view
+    project-name: sdc-sdc-tosca
+    views:
+      - project-view
 
 - project:
     name: sdc-sdc-tosca
