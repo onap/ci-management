@@ -1,4 +1,9 @@
 ---
+- project:
+    name: sdc-master-project-view
+    project-name: sdc-master
+    views:
+      - project-view
 
 - project:
     name: sdc

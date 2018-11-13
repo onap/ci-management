@@ -1,4 +1,9 @@
 ---
+- project:
+    name: sdc-sdc-titan-project-view
+    project-name: sdc-sdc-titan
+    views:
+      - project-view
 
 - project:
     name: sdc-sdc-titan-cassandra
