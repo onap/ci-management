@@ -1,4 +1,9 @@
 ---
+- project:
+    name: sdc-jtosca-project-view
+    project-name: sdc-jtosca
+    views:
+      - project-view
 
 - project:
     name: sdc-jtosca
