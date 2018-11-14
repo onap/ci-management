@@ -1,4 +1,27 @@
 ---
+- project:
+    name: sdc-master-project-view
+    project-name: sdc-master
+    views:
+      - project-view
+
+- project:
+    name: sdc-sdc-docker-project-view
+    project-name: sdc-sdc-docker
+    views:
+      - project-view
+
+- project:
+    name: sdc-maven-project-view
+    project-name: sdc-maven
+    views:
+      - project-view
+
+- project:
+    name: sdc-clm-project-view
+    project-name: sdc-clm
+    views:
+      - project-view
 
 - project:
     name: sdc

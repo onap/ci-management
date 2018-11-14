@@ -1,5 +1,11 @@
 ---
 - project:
+    name: sdc-onap-ui-project-view
+    project-name: sdc-onap-ui
+    views:
+      - project-view
+
+- project:
     name: sdc-onap-ui-angular-info
     project-name: 'sdc-onap-ui-angular'
     jobs:
