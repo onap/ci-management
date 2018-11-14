@@ -13,8 +13,8 @@
     stream:
       - 'jar-master':
           branch: 'master'
-      - 'jar-beijing':
-          branch: 'beijing'
+      - 'jar-casablanca':
+          branch: 'casablanca'
       - 'jar-release-2.5.5':
           branch: 'release-2.5.5'
     mvn-settings: 'music-settings'

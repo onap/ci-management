@@ -20,8 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
       - 'dev-cassandra-only':
           branch: 'dev-cassandra-only'
     mvn-settings: 'music-settings'
