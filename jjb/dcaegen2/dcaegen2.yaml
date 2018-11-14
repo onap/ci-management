@@ -1,5 +1,11 @@
 ---
 - project:
+    name: dcaegen2-project-view
+    project-name: dcaegen2
+    views:
+      - project-view
+
+- project:
     name: dcaegen2
     project-name: 'dcaegen2'
     jobs:

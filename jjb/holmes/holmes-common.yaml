@@ -1,5 +1,11 @@
 ---
 - project:
+    name: holmes-project-view
+    project-name: holmes
+    views:
+      - project-view
+
+- project:
     name: holmes-common
     project-name: 'holmes-common'
     jobs:

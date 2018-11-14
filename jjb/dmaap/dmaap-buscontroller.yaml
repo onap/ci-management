@@ -1,4 +1,9 @@
 ---
+- project:
+    name: dmaap-project-view
+    project-name: dmaap
+    views:
+      - project-view
 
 - project:
     name: dmaap-buscontroller

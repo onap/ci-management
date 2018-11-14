@@ -1,4 +1,9 @@
 ---
+- project:
+    name: demo-project-view
+    project-name: demo
+    views:
+      - project-view
 
 - project:
     name: demo
