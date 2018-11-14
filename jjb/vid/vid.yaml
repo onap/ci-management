@@ -1,5 +1,11 @@
 ---
 - project:
+    name: vid-project-view
+    project-name: vid
+    views:
+      - project-view
+
+- project:
     name: vid
     project-name: 'vid'
     jobs:
