@@ -1,4 +1,9 @@
 ---
+- project:
+    name: optf-project-view
+    project-name: optf
+    views:
+      - project-view
 
 - project:
     name: optf-cmso

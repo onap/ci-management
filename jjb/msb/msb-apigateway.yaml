@@ -1,5 +1,11 @@
 ---
 - project:
+    name: msb-project-view
+    project-name: msb
+    views:
+      - project-view
+
+- project:
     name: msb-apigateway
     project-name: 'msb-apigateway'
     jobs:

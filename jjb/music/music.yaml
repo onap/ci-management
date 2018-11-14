@@ -1,5 +1,11 @@
 ---
 - project:
+    name: music-project-view
+    project-name: music
+    views:
+      - project-view
+
+- project:
     name: music
     project-name: 'music'
     jobs:
