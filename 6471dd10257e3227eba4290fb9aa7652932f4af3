@@ -16,6 +16,24 @@
       "revId": "6471dd10257e3227eba4290fb9aa7652932f4af3",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_40bb6ee5",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 139
+      },
+      "writtenOn": "2018-11-14T19:45:34Z",
+      "side": 1,
+      "message": "Note that you can also trigger a sonar run by commenting\nrun-sonar\non a gerrit patch.",
+      "parentUuid": "9adffdf1_b9cff6af",
+      "revId": "6471dd10257e3227eba4290fb9aa7652932f4af3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
