@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_de82e051",
+        "filename": "jjb/ci-management/ci-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2018-11-14T03:39:17Z",
+      "side": 1,
+      "message": "Maybe we should use a short name like ciman so that the tab is not so large.",
+      "range": {
+        "startLine": 4,
+        "startChar": 18,
+        "endLine": 4,
+        "endChar": 31
+      },
+      "revId": "aa2e0093e84dfed9d37200001e37b85c6d69158e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
