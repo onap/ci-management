@@ -28,6 +28,22 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-gizmo-arm64
+    project-name: 'aai-gizmo-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/gizmo'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-gizmo-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: aai-gizmo-sonar
     jobs:
       - gerrit-maven-sonar
