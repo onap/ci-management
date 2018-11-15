@@ -16,6 +16,9 @@
     stream:
       - 'master':
           branch: 'master'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-sdc-tosca-settings'
     files: '**'
     archive-artifacts: ''
@@ -30,7 +33,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/sdc-tosca'
     project-name: 'sdc-sdc-tosca'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-sdc-tosca-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -42,5 +45,5 @@
       - gerrit-maven-clm
     project: sdc/sdc-tosca
     project-name: 'sdc-sdc-tosca'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-sdc-tosca-settings'

@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-jtosca-settings'
     files: '**'
     archive-artifacts: ''
@@ -30,7 +32,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/jtosca'
     project-name: 'sdc-jtosca'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-jtosca-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -42,5 +44,5 @@
       - gerrit-maven-clm
     project: sdc/jtosca
     project-name: 'sdc-jtosca'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-jtosca-settings'
