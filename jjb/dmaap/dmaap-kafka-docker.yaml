@@ -18,3 +18,22 @@
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
     build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: dmaap-kafka-docker-arm64
+    project-name: 'dmaap-kafka-docker-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'dmaap/kafka11aaf'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-kafka11aaf-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: 'docker'
+    build-node: ubuntu1604-docker-arm64-4c-2g
