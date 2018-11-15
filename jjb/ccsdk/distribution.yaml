@@ -39,6 +39,23 @@
     build-node: queue-docker-4c-4g
 
 - project:
+    name: ccsdk-distribution-arm64-docker
+    project-name: 'ccsdk-distribution-arm64'
+    jobs:
+      - 'docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'ccsdk/distribution'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'ccsdk-distribution-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: ccsdk-distribution-clm
     jobs:
       - gerrit-maven-clm
