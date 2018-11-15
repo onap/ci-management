@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-champ-settings'
     files: '**'
     archive-artifacts: ''
@@ -32,7 +34,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/champ'
     project-name: 'aai-champ'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-champ-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -43,5 +45,5 @@
       - gerrit-maven-clm
     project: 'aai/champ'
     project-name: 'aai-champ'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-champ-settings'
