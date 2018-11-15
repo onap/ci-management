@@ -34,6 +34,24 @@
       "revId": "6471dd10257e3227eba4290fb9aa7652932f4af3",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_637f9ce1",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2813
+      },
+      "writtenOn": "2018-11-15T06:34:18Z",
+      "side": 1,
+      "message": "Yes sure, that\u0027s right. From my experience \nI know that usually developers forget about this option in gerrit.\nI have added this option because you know, just to be on the safe side :)",
+      "parentUuid": "9adffdf1_40bb6ee5",
+      "revId": "6471dd10257e3227eba4290fb9aa7652932f4af3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
