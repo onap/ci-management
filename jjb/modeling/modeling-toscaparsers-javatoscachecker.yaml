@@ -33,6 +33,30 @@
           skip.docker.push=false
 
 - project:
+    name: modeling-toscaparsers-javatoscachecker-arm64
+    project-name: 'modeling-toscaparsers-javatoscachecker-arm64'
+    project: 'modeling/toscaparsers'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'modeling-toscaparsers-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    subproject:
+      - 'javatoscachecker':
+          pattern: 'javatoscachecker/**'
+          pom: 'javatoscachecker/pom.xml'
+    jobs:
+      - '{project-name}-{stream}-docker-java-properties-daily':
+         setVersion: 'DontSetVersion'
+         docker-pom: 'javatoscachecker/pom.xml'
+         mvn-profile: 'docker'
+         mvn-params: '-Dmaven.test.skip=true'
+         maven-properties: |
+          skip.docker.build=false
+          skip.docker.tag=false
+          skip.docker.push=false
+
+- project:
     name: modeling-toscaparsers-sonar
     jobs:
       - gerrit-maven-sonar
