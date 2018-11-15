@@ -28,6 +28,27 @@
           script: '/bin/true'
 
 - project:
+    name: dcaegen2-collectors-hv-ves-arm64
+    # job template iterators
+    project-name: 'dcaegen2-collectors-hv-ves-arm64'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/collectors/hv-ves'
+    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: 'hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean deploy -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
+          # No-op
+          script: '/bin/true'
+
+-- project:
     name: dcaegen2-collectors-hv-ves-clm
     jobs:
       - gerrit-maven-clm
