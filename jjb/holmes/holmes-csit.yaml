@@ -8,6 +8,8 @@
     stream: 'master'
     functionality:
       - 'sanity-check':
-          trigger_jobs: 'holmes-rule-management-master-docker-java-daily'
+          trigger_jobs: 
+            - 'holmes-rule-management-master-docker-java-daily'
+            - 'holmes-rule-management-arm64-master-docker-java-daily'
     robot-options: ''
     branch: 'master'
