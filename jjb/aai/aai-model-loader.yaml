@@ -28,6 +28,21 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-model-loader-arm64-master
+    project-name: 'aai-model-loader-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aai/model-loader'
+    stream:
+          branch: 'master'
+    mvn-settings: 'aai-model-loader-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: aai-model-loader-sonar
     jobs:
       - gerrit-maven-sonar
