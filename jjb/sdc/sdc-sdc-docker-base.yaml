@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-sdc-docker-base-settings'
     files: '**'
     archive-artifacts: ''
