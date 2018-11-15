@@ -21,6 +21,22 @@
     archive-artifacts: ''
 
 - project:
+    name: aai-gallifrey-arm64
+    project-name: 'aai-gallifrey-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'clean package dockerfile:build dockerfile:push'
+          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+    project: 'aai/gallifrey'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-gallifrey-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: aai-gallifrey-clm
     jobs:
       - gerrit-maven-clm
