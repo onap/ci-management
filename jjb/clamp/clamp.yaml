@@ -37,6 +37,27 @@
     build-node: ubuntu1604-docker-8c-8g
 
 - project:
+    name: clamp-arm64
+    project-name: 'clamp-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-java-properties-daily':
+         setVersion: 'DoSetVersion'
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
+         mvn-params: '-Dmaven.test.skip=true'
+         maven-properties: |
+          clamp.registry=$
+
+    project: 'clamp-arm64'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'clamp-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: clamp-sonar
     jobs:
       - gerrit-maven-sonar:
