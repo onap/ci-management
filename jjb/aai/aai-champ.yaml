@@ -28,6 +28,22 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-champ-arm64
+    project-name: 'aai-champ-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'champ-service/pom.xml'
+          mvn-goals: 'docker:build'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aai/champ'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-champ-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: aai-champ-sonar
     jobs:
       - gerrit-maven-sonar

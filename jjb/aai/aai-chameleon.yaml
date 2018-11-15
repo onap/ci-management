@@ -28,6 +28,24 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-chameleon-arm64
+    project-name: 'aai-chameleon-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'clean package dockerfile:build dockerfile:push'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aai/chameleon'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-chameleon-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: aai-chameleon-clm
     jobs:
       - gerrit-maven-clm
