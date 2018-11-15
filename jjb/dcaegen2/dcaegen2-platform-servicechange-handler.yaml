@@ -29,6 +29,29 @@
     build-node: 'ubuntu1604-docker-8c-8g'
 
 - project:
+    name: dcaegen2-platform-servicechange-handler-arm64
+    project-name: 'dcaegen2-platform-servicechange-handler-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean package docker:build -DpushImage'
+          # No-op
+          script: '/bin/true'
+
+    project: 'dcaegen2/platform/servicechange-handler-arm64'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
+    # due to a strange macro / variable translation problem this needs
+    # to be passed as a string block to properly get the properties
+    # correctly defined in the job
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-arm64-4c-2g'
+
+-- project:
     name: dcaegen2-platform-servicechange-handler-clm
     jobs:
       - gerrit-maven-clm
