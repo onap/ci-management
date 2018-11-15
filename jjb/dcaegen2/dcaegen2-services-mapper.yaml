@@ -23,6 +23,25 @@
       deployAtEnd=true
 
 - project:
+    name: dcaegen2-services-mapper-arm64
+    project-name: 'dcaegen2-services-mapper-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean package docker:build -DpushImage'
+          # No-op
+          script: '/bin/true'
+    project: 'dcaegen2/services/mapper'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-services-mapper-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-arm64-4c-2g'
+    maven-deploy-properties: |
+      deployAtEnd=true
+
+- project:
     name: dcaegen2-services-mapper-sonar
     jobs:
       - gerrit-maven-sonar
