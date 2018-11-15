@@ -10,10 +10,16 @@
           branch: master
     functionality:
       - 'resources':
-          trigger_jobs: 'aai-resources-{stream}-aai-docker-java-daily'
+          trigger_jobs:
+            - 'aai-resources-{stream}-aai-docker-java-daily'
+            - 'aai-resources-arm64-{stream}-aai-docker-java-daily'
       - 'traversal':
-          trigger_jobs: 'aai-traversal-{stream}-aai-docker-java-daily'
+          trigger_jobs:
+            - 'aai-traversal-{stream}-aai-docker-java-daily'
+            - 'aai-traversal-arm64-{stream}-aai-docker-java-daily'
       - 'esr-server':
-          trigger_jobs: 'aai-esr-server-{stream}-docker-java-daily'
+          trigger_jobs:
+            - 'aai-esr-server-{stream}-docker-java-daily'
+            - 'aai-esr-server-arm64-{stream}-docker-java-daily'
     robot-options: ''
 
