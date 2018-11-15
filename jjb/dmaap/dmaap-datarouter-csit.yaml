@@ -15,3 +15,18 @@
           trigger_jobs:
             - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
+    branch: 'master'
+
+- project:
+    name: dmaap-datarouter-csit-arm64
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dmaap-datarouter-arm64'
+    stream: 'master'
+    functionality:
+      - 'dr-suite':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+    branch: 'master'
