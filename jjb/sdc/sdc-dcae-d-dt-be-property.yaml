@@ -10,6 +10,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'
     files: '**'
     archive-artifacts: ''
@@ -23,7 +25,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/dcae-d/dt-be-property'
     project-name: 'sdc-dcae-d-dt-be-property'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -35,5 +37,5 @@
       - gerrit-maven-clm
     project: sdc/dcae-d/dt-be-property
     project-name: 'sdc-dcae-d-dt-be-property'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'

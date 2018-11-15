@@ -15,6 +15,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-settings'
     files: '**'
     archive-artifacts: ''
@@ -28,7 +30,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/dcae-d/dt'
     project-name: 'sdc-dcae-d-dt'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -41,5 +43,5 @@
     project: sdc/dcae-d/dt
     project-name: 'sdc-dcae-d-dt'
     build-node: ubuntu1604-builder-4c-2g
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-dt-settings'

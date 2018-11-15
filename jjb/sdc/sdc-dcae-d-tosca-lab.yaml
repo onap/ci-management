@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     subproject:
     - dcae-d-tosca-lab:
         path: '.'
@@ -27,7 +29,7 @@
     build-node: ubuntu1604-docker-8c-8g
     project: 'sdc/dcae-d/tosca-lab'
     project-name: 'sdc-dcae-d-tosca-lab'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
