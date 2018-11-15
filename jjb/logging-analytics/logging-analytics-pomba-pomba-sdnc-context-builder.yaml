@@ -22,6 +22,23 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: logging-analytics-pomba-pomba-arm64-sdnc-context-builder
+    project-name: logging-analytics-pomba-pomba-arm64-sdnc-context-builder
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+    project: logging-analytics/pomba/pomba-sdnc-context-builder
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: logging-analytics-pomba-pomba-sdnc-context-builder-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: logging-analytics-pomba-pomba-sdnc-context-builder-sonar
     jobs:
       - gerrit-maven-sonar

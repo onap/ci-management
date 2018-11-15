@@ -28,6 +28,25 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: logging-analytics-arm64
+    project-name: 'logging-analytics-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'logging-analytics'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
+    mvn-settings: 'logging-analytics-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: logging-analytics-sonar
     jobs:
       - gerrit-maven-sonar
