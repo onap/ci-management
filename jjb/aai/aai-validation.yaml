@@ -22,6 +22,22 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-validation-arm64
+    project-name: 'aai-validation-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+    project: 'aai/validation'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-validation-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: aai-validation-sonar
     jobs:
       - gerrit-maven-sonar
