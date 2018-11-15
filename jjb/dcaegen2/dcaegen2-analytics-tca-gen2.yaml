@@ -25,6 +25,27 @@
           build-node: 'ubuntu1604-docker-8c-8g'
 
 - project:
+    name: dcaegen2-analytics-tca-gen2-arm64
+    # job template iterators
+    project-name: 'dcaegen2-analytics-tca-gen2-arm64'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/analytics/tca-gen2'
+    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean deploy docker:build -DpushImage'
+          # No-op
+          script: '/bin/true'
+
+-- project:
     name: dcaegen2-analytics-tca-gen2-sonar
     jobs:
       - gerrit-maven-sonar
