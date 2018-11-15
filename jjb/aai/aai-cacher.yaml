@@ -23,6 +23,26 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: aai-cacher-arm64-master
+    project-name: 'aai-cacher-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'aai/cacher'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
+    mvn-settings: 'aai-cacher-settings'
+    mvn-version: 'mvn35'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+ project:
     name: aai-cacher-sonar
     jobs:
       - gerrit-maven-sonar
