@@ -14,6 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'music-prom-settings'
     files: '**'
     archive-artifacts: ''
