@@ -30,6 +30,27 @@
     files: '**'
     archive-artifacts: ''
 
+- project:
+    name: dmaap-buscontroller-arm64
+    project-name: 'dmaap-buscontroller-arm64'
+    jobs:
+# see DMAAP-334 for more details, but
+#     - '{project-name}-{stream}-docker-java-daily':
+# doesn't support mvn-goals override, so trying this...
+      - '{project-name}-{stream}-docker-java-shell-daily':
+          mvn-goals: 'clean package -P docker docker:build -DpushImage'
+          # No-op
+          script: '/bin/true'
+          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+
+    project: 'dmaap/buscontroller'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-buscontroller-settings'
+    files: '**'
+    archive-artifacts: ''
+
 
 # removed sonar job from this template because this repo only builds a docker container
 # and the 0% coverage report from Sonar was causing repeated escalations.
