@@ -27,6 +27,24 @@
     archive-artifacts: ''
 
 - project:
+    name: aai-data-router-arm64-master
+    project-name: 'aai-data-router-arm64'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'pom.xml'
+          mvn-goals: 'docker:build'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+    project: 'aai/data-router'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-data-router-settings'
+    files: '**'
+    archive-artifacts: ''
+
+ project:
     name: aai-data-router-sonar
     jobs:
       - gerrit-maven-sonar
