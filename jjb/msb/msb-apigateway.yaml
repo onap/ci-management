@@ -28,6 +28,25 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: msb-apigateway-arm64
+    project-name: 'msb-apigateway-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-apigateway-docker-image.sh'
+
+    project: 'msb/apigateway'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'msb-apigateway-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: msb-apigateway-sonar
     jobs:
       - gerrit-maven-sonar
