@@ -8,7 +8,9 @@
      stream: 'master'
      functionality:
        - 'music-test-plan':
-           trigger_jobs: 'music-master-docker-version-java-daily'
+           trigger_jobs:
+             - 'music-master-docker-version-java-daily'
+             - 'music-arm64-master-docker-version-java-daily'
      robot-options: ''
      branch: 'master'
 
