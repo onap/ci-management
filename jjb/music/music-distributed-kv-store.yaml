@@ -17,3 +17,20 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: music-distributed-kv-store-arm64
+    project-name: 'music-distributed-kv-store-arm64'
+    path: 'src/dkv'
+    jobs:
+      - '{project-name}-{stream}-docker-golang-shell-daily':
+          script:
+            !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
+    project: 'music/distributed-kv-store'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'music-distributed-kv-store-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
