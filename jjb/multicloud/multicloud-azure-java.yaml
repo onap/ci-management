@@ -27,6 +27,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: multicloud-azure-arm64-java
+    project-name: 'multicloud-azure-arm64'
+    project: 'multicloud/azure'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-azure-settings'
+    subproject:
+      - 'azure':
+          pom: 'azure/pom.xml'
+          pattern: 'azure/**'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-multicloud-azure-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: multicloud-azure-sonar
     jobs:
       - gerrit-maven-sonar
