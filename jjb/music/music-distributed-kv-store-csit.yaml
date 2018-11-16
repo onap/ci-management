@@ -8,6 +8,8 @@
     stream: 'master'
     functionality:
       - 'music-distributed-kv-store-test-plan':
-          trigger_jobs: 'music-distributed-kv-store-master-docker-golang-shell-daily'
+          trigger_jobs: 
+            - 'music-distributed-kv-store-master-docker-golang-shell-daily'
+            - 'music-distributed-kv-store-arm64-master-docker-golang-shell-daily'
     robot-options: ''
     branch: 'master'
