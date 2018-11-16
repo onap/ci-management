@@ -58,6 +58,23 @@
     build-node: 'ubuntu1604-memcached-4c-4g'
 
 - project:
+    name: multicloud-openstack-arm64
+    project-name: 'multicloud-openstack-arm64'
+    project: 'multicloud/openstack'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'multicloud-openstack-settings'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-multicloud-openstack-docker-image.sh'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+    files: '**'
+    archive-artifacts: ''
+
+- project:
     name: multicloud-openstack-newton-sonar
     jobs:
       - gerrit-maven-sonar
