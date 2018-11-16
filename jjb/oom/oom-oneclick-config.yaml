@@ -23,6 +23,24 @@
          branch: 'master'
    mvn-settings: 'oom-settings'
 
+- project:
+   name: oomconfig-arm64
+   project-name: 'oomconfig-arm64'
+   project: 'oom'
+
+   files: '**'
+   archive-artifacts: ''
+   build-timeout: 60
+   build-node: ubuntu1604-docker-arm64-4c-2g
+   submodule-recursive: true
+
+   jobs:
+     - '{project}-{stream}-release-config'
+   stream:
+     - 'master':
+         branch: 'master'
+   mvn-settings: 'oom-settings'
+
 - job-template:
     name: '{project}-{stream}-release-config'
     project-type: freestyle
