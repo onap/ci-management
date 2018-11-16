@@ -32,4 +32,6 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'testsuite-settings'

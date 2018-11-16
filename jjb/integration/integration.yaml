@@ -20,6 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
