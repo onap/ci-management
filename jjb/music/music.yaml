@@ -30,6 +30,25 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: music-arm64
+    project-name: 'music-arm64'
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: docker
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'music'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'dev-cassandra-only':
+          branch: 'dev-cassandra-only'
+    mvn-settings: 'music-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: music-sonar
     jobs:
       - gerrit-maven-sonar
