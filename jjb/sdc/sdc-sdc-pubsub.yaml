@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'sdc-sdc-pubsub-settings'
     files: '**'
     archive-artifacts: ''
@@ -31,7 +33,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/sdc-pubsub'
     project-name: 'sdc-sdc-pubsub'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'sdc-sdc-pubsub-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
