@@ -1,0 +1,12 @@
+---
+- project:
+    name: dmaap-zookeeper
+    project-name: 'dmaap-zookeeper'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'dmaap/zookeeper'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-zookeeper-settings'
