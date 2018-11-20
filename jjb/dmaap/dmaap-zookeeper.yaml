@@ -1,0 +1,30 @@
+---
+- project:
+    name: dmaap-zookeeper
+    project-name: 'dmaap-zookeeper'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'dmaap/zookeeper'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-zookeeper-settings' 
+- project:
+    name: dmaap-zookeeper-docker
+    project-name: 'dmaap-zookeeper-docker'
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    project: 'dmaap/zookeeper'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dmaap-zookeeper-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: 'docker'
+    build-node: ubuntu1604-docker-8c-8g
