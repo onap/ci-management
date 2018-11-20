@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_81d5c6ba",
+        "filename": "jjb/dmaap/dmaap-zookeeper.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-11-20T21:36:39Z",
+      "side": 1,
+      "message": "1 more needs to be removed :( sorry",
+      "range": {
+        "startLine": 12,
+        "startChar": 44,
+        "endLine": 12,
+        "endChar": 45
+      },
+      "revId": "ab5782cef16c112489e2ddd264054b76f25f1e64",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
