@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Jorge Hernandez <jorge.hernandez-herrero@att.com>
+Code-Review+1: Liam Fallon <liam.fallon@ericsson.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 20 Nov 2018 16:34:30 +0000
+Reviewed-on: https://gerrit.onap.org/r/73142
+Project: ci-management
+Branch: refs/heads/master
