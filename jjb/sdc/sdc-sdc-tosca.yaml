@@ -16,7 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-    stream:
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'sdc-sdc-tosca-settings'
