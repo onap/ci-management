@@ -55,6 +55,35 @@
           build-node: queue-docker-4c-4g
 
 - project:
+    name: optf-osdf-docker-arm64
+    project-name: 'optf-osdf-arm64'
+    project: 'optf/osdf'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'optf-osdf-settings'
+    subproject:
+      - 'osdf':
+          path: '.'
+          pattern: '**'
+          pom: 'pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-osdf-docker-image.sh'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+      - '{project-name}-{stream}-{subproject}-docker-java-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          mvn-params: '-Dmaven.test.skip=true'
+          script:
+            !include-raw-escape: 'build-optf-osdf-docker-image.sh'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: optf-osdf-sonar
     jobs:
       - gerrit-maven-sonar

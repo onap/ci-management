@@ -10,6 +10,8 @@
            branch: master
      functionality:
        - 'has':
-           trigger_jobs: 'optf-has-master-conductor-docker-java-version-shell-daily'
+           trigger_jobs:
+             -  'optf-has-master-conductor-docker-java-version-shell-daily'
+             -  'optf-has-arm64-master-conductor-docker-java-version-shell-daily'
      robot-options: ''
      branch: 'master'
