@@ -21,3 +21,24 @@
     branch: 'master'
     html-dir: 'archives'
     html-files: 'SDC_CI_Extent_Report.html'
+
+- project:
+    name: sdc-csit-arm64
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}-testng'
+      - '{project-name}-{stream}-csit-{functionality}-testng'
+    project-name: 'sdc-arm64'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'sanity':
+          trigger_jobs: '{project-name}-{stream}-sdc-merge-java'
+      - 'nightly':
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+      - 'uiSanity':
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+    robot-options: ''
+    branch: 'master'
+    html-dir: 'archives'
+    html-files: 'SDC_CI_Extent_Report.html'
