@@ -27,6 +27,23 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: usecase-ui-arm64
+    project-name: 'usecase-ui-arm64'
+    project: 'usecase-ui'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'usecase-ui-settings'
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: usecase-ui-clm
     jobs:
       - gerrit-maven-clm
