@@ -33,6 +33,32 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: policy-apex-pdp-arm64
+    project-name: 'policy-apex-pdp-arm64'
+    jobs:
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+          mvn-goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          script:
+            !include-raw-escape: 'include-raw-docker-merge.sh'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          script:
+            !include-raw-escape: 'include-raw-docker-release.sh'
+          disabled: true
+
+    project: 'policy/apex-pdp'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-apex-pdp-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: policy-apex-pdp-casablanca
     project-name: 'policy-apex-pdp-casablanca'
     jobs:
