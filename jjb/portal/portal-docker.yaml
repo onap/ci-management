@@ -27,3 +27,31 @@
     extra-branch: '{branch}'
     extra-refspec: 'refs/heads/{branch}'
     checkout-dir: 'sdk'
+
+- project:
+    name: portal-docker-arm64
+    project-name: 'portal-docker-arm64'
+    jobs:
+      - '{project-name}-{stream}-two-scm-verify-script':
+          script:
+            !include-raw-escape: 'docker-build-deploy.sh'
+      - '{project-name}-{stream}-two-scm-merge-docker-script':
+          script:
+            !include-raw-escape: 'docker-build-push.sh'
+      - '{project-name}-{stream}-two-scm-release-docker-script-manual':
+          script:
+            !include-raw-escape: 'docker-build-release.sh'
+    project: 'portal'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'release-2.2.0':
+          branch: 'release-2.2.0'
+    mvn-settings: 'portal-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    extra-project: 'portal/sdk'
+    extra-branch: '{branch}'
+    extra-refspec: 'refs/heads/{branch}'
+    checkout-dir: 'sdk'
