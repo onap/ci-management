@@ -23,6 +23,24 @@
     build-timeout: 60
 
 - project:
+    name: sdc-dcae-d-fe-arm64
+    project-name: 'sdc-dcae-d-fe-arm64'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-DskipTests=true'
+    project: 'sdc/dcae-d/fe'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-dcae-d-fe-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+
+-- project:
     name: sdc-dcae-d-fe-sonar
     jobs:
       - gerrit-maven-sonar
