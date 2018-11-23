@@ -22,6 +22,25 @@
     mvn-profile: 'default'
 
 - project:
+    name: sdc-dcae-d-tosca-lab-arm64
+    project-name: 'sdc-dcae-d-tosca-lab-arm64'
+    project: 'sdc/dcae-d/tosca-lab'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+    - dcae-d-tosca-lab:
+        path: '.'
+        pattern: '**'
+    mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
+
+-- project:
     name: sdc-dcae-d-tosca-lab-sonar
     jobs:
       - gerrit-maven-sonar
