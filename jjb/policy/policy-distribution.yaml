@@ -25,6 +25,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: policy-distribution-arm64
+    project-name: 'policy-distribution-arm64'
+    jobs:
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: true
+
+    project: 'policy/distribution'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-distribution-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: policy-distribution-casablanca
     project-name: 'policy-distribution-casablanca'
     jobs:
