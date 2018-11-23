@@ -35,3 +35,33 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'testsuite-settings'
+
+- project:
+    name: testsuite-arm64
+    project-name: 'testsuite-arm64'
+    jobs:
+      - '{project-name}-{stream}-3scm-docker-shell-daily':
+          script:
+            !include-raw-escape: 'testsuite-docker.sh'
+
+    project: 'testsuite'
+    extra-project1: 'testsuite/python-testing-utils'
+    extra-branch1: 'master'
+    extra-refspec1: 'refs/heads/{branch}'
+    checkout-dir1: 'testsuite/eteutils'
+
+    extra-project2: 'testsuite/heatbridge'
+    extra-branch2: 'master'
+    extra-refspec2: 'refs/heads/{branch}'
+    checkout-dir2: 'testsuite/heatbridge'
+
+    extra-project3: 'demo'
+    extra-branch3: 'master'
+    extra-refspec3: 'refs/heads/{branch}'
+    checkout-dir3: 'demo'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'testsuite-settings'
