@@ -19,3 +19,18 @@
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
+
+- project:
+    name: vvp-jenkins-arm64
+    project-name: 'vvp-jenkins-arm64'
+    project: 'vvp/jenkins'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vvp-jenkins-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
