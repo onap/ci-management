@@ -52,6 +52,28 @@
           mvn-params: '-Dmaven.test.skip=true'
 
 - project:
+    name: vnfsdk-ice-docker-arm64
+    project-name: 'vnfsdk-ice-docker-arm64'
+    project: 'vnfsdk/ice'
+    pom: 'pom.xml'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - 'docker':
+          path: 'docker'
+          pattern: 'docker/**'
+          pom: 'docker/pom.xml'
+    mvn-settings: 'vnfsdk-ice-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'docker/pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+
+- project:
     name: vnfsdk-ice-validation-scripts-tox-sonar
     jobs:
       - gerrit-tox-sonar
