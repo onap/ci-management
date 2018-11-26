@@ -26,6 +26,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-nfvo-driver-ems-java-arm64
+    project-name: 'vfc-nfvo-driver-ems-arm64'
+    project: 'vfc/nfvo/driver/ems'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-ems-settings'
+    subproject:
+      - 'drv-ems-boco':
+          pom: 'ems/pom.xml'
+          pattern: 'ems/**'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-driver-ems-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: vfc-nfvo-driver-ems-sonar
     jobs:
       - gerrit-maven-sonar

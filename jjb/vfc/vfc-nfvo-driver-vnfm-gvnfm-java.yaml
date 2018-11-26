@@ -26,6 +26,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-nfvo-driver-vnfm-gvnfm-java-arm64
+    project-name: 'vfc-nfvo-driver-vnfm-gvnfm-arm64'
+    project: 'vfc/nfvo/driver/vnfm/gvnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+    subproject:
+      - 'gvnfmadapter':
+          pom: 'gvnfmadapter/pom.xml'
+          pattern: 'gvnfmadapter/**'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-gvnfm-driver-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: vfc-nfvo-driver-vnfm-gvnfm-gvnfmadapter-sonar
     jobs:
       - gerrit-maven-sonar
