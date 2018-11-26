@@ -21,6 +21,21 @@
     mvn-profile: 'default'
 
 - project:
+    name: vvp-engagementmgr-arm64
+    project-name: 'vvp-engagementmgr-arm64'
+    project: 'vvp/engagementmgr'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vvp-engagementmgr-settings'
+    build-node: ubuntu1604-docker-8c-8g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
+
+-- project:
     name: vvp-engagementmgr-sonar
     jobs:
       - gerrit-maven-sonar
