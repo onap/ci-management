@@ -26,6 +26,21 @@
     mvn-profile: 'default'
 
 - project:
+    name: vvp-cms-arm64
+    project-name: 'vvp-cms-arm64'
+    project: 'vvp/cms'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vvp-cms-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
+
+- project:
     name: vvp-cms-sonar
     jobs:
       - gerrit-maven-sonar
