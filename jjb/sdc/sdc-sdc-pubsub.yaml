@@ -38,3 +38,20 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-sdc-pubsub-npm
+    project-name: 'sdc-sdc-pubsub'
+    jobs:
+      - '{project-name}-{stream}-npm-publish':
+          credential-id: sdc-npm-token
+          variable: sdc-token
+    project: 'sdc/sdc-pubsub'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-sdc-pubsub-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+    maven-version: 'mvn35'
