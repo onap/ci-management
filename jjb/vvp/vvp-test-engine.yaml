@@ -19,3 +19,22 @@
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
+
+- project:
+    name: vvp-test-engine-arm64
+    project-name: 'vvp-engine-arm64'
+    project: 'vvp/test-engine'
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - validation-scripts:
+          path: '.'
+          pattern: '**'
+    mvn-settings: 'vvp-test-engine-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+    docker-pom: 'pom.xml'
+    mvn-profile: 'default'
