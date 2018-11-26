@@ -33,6 +33,25 @@
           mvn-params: '-Dmaven.test.skip=true'
           build-node: ubuntu1604-docker-8c-8g
 - project:
+    name: vnfsdk-dovetail-integration-arm64
+    project-name: 'vnfsdk-dovetail-integration-arm64'
+    project: 'vnfsdk/dovetail-integration'
+    pom: 'pom.xml'
+    python-version: python2.7
+    tox-dir: '.'
+    tox-envs: ''
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vnfsdk-dovetail-integration-settings'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+
+-- project:
     name: vnfsdk-dovetail-integration-tox-sonar
     jobs:
       - gerrit-tox-sonar
