@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Paul-Ionut Vaduva <paul.vaduva@enea.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 27 Nov 2018 20:19:48 +0000
+Reviewed-on: https://gerrit.onap.org/r/72247
+Project: ci-management
+Branch: refs/heads/master
