@@ -1251,7 +1251,7 @@
 
     name: '{project-name}-{stream}-aai-docker-java-daily'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: '{build-node}'
     docker-image-name: ''
     disabled: '{disabled}'
     properties:

@@ -15,6 +15,7 @@
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'pom.xml'
           mvn-goals: 'docker:build'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'aai/babel'
     stream:
       - 'casablanca':
