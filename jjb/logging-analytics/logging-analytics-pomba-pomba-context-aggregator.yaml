@@ -11,6 +11,7 @@
           mvn-goals: 'docker:build'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+          build-node: ubuntu1604-docker-8c-8g
     project: logging-analytics/pomba/pomba-context-aggregator
     stream:
       - 'master':

@@ -10,6 +10,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'aai/cacher'
     stream:
       - 'master':

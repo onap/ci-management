@@ -8,7 +8,7 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
-
+          build-node: ubuntu1604-docker-8c-8g
     project: 'holmes/rule-management'
     stream:
       - 'master':
