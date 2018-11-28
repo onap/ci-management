@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -31,8 +31,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
