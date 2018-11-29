@@ -17,12 +17,14 @@
         #!/bin/bash
         cd kubernetes/
         make common
-        make {subproject}'
+        make {subproject}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
 
     stream:
       - 'master':
           branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
 
     subproject:
       - 'aaf':
