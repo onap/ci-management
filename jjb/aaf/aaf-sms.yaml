@@ -22,3 +22,22 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aaf-sms-arm64
+    project-name: 'arm64-aaf-sms'
+    subproject: 'aaf-sms-client'
+    path: 'sms-service/src'
+    golangver: 'golang111'
+    jobs:
+      - '{project-name}-{stream}-docker-golang-shell-daily':
+          script:
+            !include-raw-escape: 'build-sms-docker-image.sh'
+    project: 'aaf/sms'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aaf-sms-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
