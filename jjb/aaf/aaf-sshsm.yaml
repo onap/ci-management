@@ -19,3 +19,24 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aaf-sshsm-arm64
+    project-name: 'aaf-sshsm-arm64'
+    build-timeout: 120
+    project: 'aaf/sshsm'
+    jobs:
+      - '{project-name}-{stream}-verify-c':
+         script:
+            !include-raw-escape: 'build-sshsm.sh'
+      - '{project-name}-{stream}-docker-c-shell-daily':
+         script:
+            !include-raw-escape: 'build-sshsm-docker-images.sh'
+    stream:
+      - 'master':
+          branch: 'master'
+
+    mvn-settings: 'aaf-sshsm-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
