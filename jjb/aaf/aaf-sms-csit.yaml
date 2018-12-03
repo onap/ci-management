@@ -8,6 +8,8 @@
       stream: 'master'
       functionality:
         - 'sms-test-plan':
-            trigger_jobs: 'aaf-sms-master-docker-golang-shell-daily'
+            trigger_jobs:
+              - 'aaf-sms-master-docker-golang-shell-daily'
+              - 'arm64-aaf-sms-master-docker-golang-shell-daily'
       robot-options: ''
       branch: 'master'
