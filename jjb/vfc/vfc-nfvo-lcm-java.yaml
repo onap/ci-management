@@ -22,6 +22,24 @@
     build-node: centos7-redis-4c-4g
 
 - project:
+    name: vfc-nfvo-lcm-java-arm64
+    project-name: 'vfc-nfvo-lcm-arm64'
+    project: 'vfc/nfvo/lcm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-lcm-settings'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-lcm-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: vfc-nfvo-lcm-sonar
     jobs:
       - gerrit-maven-sonar
