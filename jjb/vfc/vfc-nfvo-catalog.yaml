@@ -28,6 +28,24 @@
     build-node: centos7-redis-4c-4g
 
 - project:
+    name: vfc-nfvo-catalog-arm64
+    project-name: 'vfc-nfvo-catalog-arm64'
+    project: 'vfc/nfvo/catalog'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-catalog-settings'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-catalog-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: vfc-nfvo-catalog-sonar
     jobs:
       - gerrit-maven-sonar

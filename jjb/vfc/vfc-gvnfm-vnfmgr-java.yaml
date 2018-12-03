@@ -26,6 +26,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-gvnfm-vnfmgr-java-arm64
+    project-name: 'vfc-gvnfm-vnfmgr-arm64'
+    project: 'vfc/gvnfm/vnfmgr'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
+    subproject:
+      - 'mgr':
+          pom: 'mgr/pom.xml'
+          pattern: 'mgr/**'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-gvnfm-vnfmgr-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: vfc-gvnfm-vnfmgr-mgr-sonar
     jobs:
       - gerrit-maven-sonar
