@@ -1,13 +1,13 @@
 ---
 - project:
-    name: vfc-gvnfm-vnflcm-csit
+    name: vfc-gvnfm-vnflcm-csit-arm64
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'vfc-gvnfm-vnflcm'
+    project-name: 'vfc-gvnfm-vnflcm-arm64'
     stream: 'master'
     functionality:
       - 'sanity-check':
-          trigger_jobs: 'vfc-gvnfm-vnflcm-master-docker-java-version-shell-daily'
+          trigger_jobs: 'vfc-gvnfm-vnflcm-arm64-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
