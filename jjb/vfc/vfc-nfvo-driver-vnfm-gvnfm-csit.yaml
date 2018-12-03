@@ -11,3 +11,16 @@
           trigger_jobs: 'vfc-nfvo-driver-vnfm-gvnfm-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
+
+- project:
+    name: vfc-nfvo-driver-vnfm-gvnfm-csit-arm64
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'vfc-nfvo-driver-vnfm-gvnfm-arm64'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs: 'vfc-nfvo-driver-vnfm-gvnfm-arm64-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'

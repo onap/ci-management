@@ -19,6 +19,22 @@
             !include-raw-escape: 'build-nfvo-multivimproxy-docker-image.sh'
           build-node: ubuntu1604-docker-8c-8g
 - project:
+    name: vfc-nfvo-multivimproxy-arm64
+    project: 'vfc/nfvo/multivimproxy-arm64'
+    project-name: 'vfc-nfvo-multivimproxy'
+    mvn-settings: 'vfc-nfvo-multivimproxy-settings'
+    stream:
+      - 'master':
+          branch: 'master'
+    build-node: ubuntu1604-docker-arm64-4c-2g
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-multivimproxy-docker-image.sh'
+
+-- project:
     name: vfc-nfvo-multivimproxy-sonar
     jobs:
       - gerrit-maven-sonar

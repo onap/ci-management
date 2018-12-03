@@ -27,6 +27,24 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-gvnfm-vnfres-java-arm64
+    project-name: 'vfc-gvnfm-vnfres-arm64'
+    project: 'vfc/gvnfm/vnfres'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-gvnfm-vnfres-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+-- project:
     name: vfc-gvnfm-vnfres-res-sonar
     jobs:
       - gerrit-maven-sonar
