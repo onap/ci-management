@@ -39,6 +39,7 @@
     name: portal-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: portal
     project-name: 'portal'
     branch: 'master'

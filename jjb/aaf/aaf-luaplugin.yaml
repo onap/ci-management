@@ -4,6 +4,7 @@
     project-name: 'aaf-luaplugin'
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aaf/luaplugin'
     branch: 'master'
     mvn-settings: 'aaf-luaplugin-settings'

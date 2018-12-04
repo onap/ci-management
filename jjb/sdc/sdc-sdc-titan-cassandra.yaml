@@ -26,6 +26,7 @@
     name: sdc-sdc-titan-cassandra-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdc/sdc-titan-cassandra
     project-name: 'sdc-sdc-titan-cassandra'
     branch: 'master'

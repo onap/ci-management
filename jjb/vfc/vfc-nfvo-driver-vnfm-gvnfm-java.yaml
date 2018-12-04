@@ -44,6 +44,7 @@
     name: vfc-nfvo-driver-vnfm-gvnfm-java-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/driver/vnfm/gvnfm
     project-name: 'vfc-nfvo-driver-vnfm-gvnfm'
     build-node: ubuntu1604-builder-4c-4g

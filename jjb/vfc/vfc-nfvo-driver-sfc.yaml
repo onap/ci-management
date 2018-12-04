@@ -43,6 +43,7 @@
     name: vfc-nfvo-driver-sfc-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/driver/sfc
     project-name: 'vfc-nfvo-driver-sfc'
     build-node: ubuntu1604-builder-4c-4g

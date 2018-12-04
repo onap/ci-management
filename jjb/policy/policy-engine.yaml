@@ -71,6 +71,7 @@
     jobs:
       - gerrit-maven-clm:
          build-timeout: 30
+    nexus-iq-namespace: 'onap-'
     project: policy/engine
     project-name: 'policy-engine'
     branch: 'master'

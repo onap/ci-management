@@ -31,6 +31,7 @@
     name: dmaap-messagerouter-mirroragent-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dmaap/messagerouter/mirroragent
     project-name: 'dmaap-messagerouter-mirroragent'
     branch: 'master'

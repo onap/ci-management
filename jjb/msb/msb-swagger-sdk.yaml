@@ -32,6 +32,7 @@
     name: msb-swagger-sdk-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: msb/swagger-sdk
     project-name: 'msb-swagger-sdk'
     branch: 'master'

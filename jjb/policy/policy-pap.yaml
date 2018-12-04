@@ -32,6 +32,7 @@
     name: policy-pap-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/pap
     project-name: 'policy-pap'
     branch: 'master'

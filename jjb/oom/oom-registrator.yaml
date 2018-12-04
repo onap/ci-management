@@ -25,6 +25,7 @@
     name: oom-registrator-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: oom/registrator
     project-name: 'oom-registrator'
     branch: 'master'

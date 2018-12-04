@@ -40,6 +40,7 @@
     name: ccsdk-sli-core-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'ccsdk/sli/core'
     project-name: 'ccsdk-sli-core'
     branch: 'master'

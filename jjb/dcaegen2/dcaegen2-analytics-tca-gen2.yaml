@@ -41,6 +41,7 @@
     name: dcaegen2-analytics-tca-gen2-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dcaegen2/analytics/tca-gen2
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-analytics-tca-gen2'

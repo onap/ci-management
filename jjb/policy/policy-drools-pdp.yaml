@@ -71,6 +71,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-DskipTests'
+    nexus-iq-namespace: 'onap-'
     project: policy/drools-pdp
     project-name: 'policy-drools-pdp'
     branch: 'master'

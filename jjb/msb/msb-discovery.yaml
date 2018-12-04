@@ -38,6 +38,7 @@
     name: msb-discovery-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: msb/discovery
     project-name: 'msb-discovery'
     branch: 'master'

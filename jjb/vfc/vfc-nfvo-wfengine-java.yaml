@@ -59,6 +59,7 @@
     name: vfc-nfvo-wfengine-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/wfengine
     project-name: 'vfc-nfvo-wfengine'
     build-node: ubuntu1604-builder-4c-4g

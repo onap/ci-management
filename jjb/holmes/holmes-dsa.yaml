@@ -37,6 +37,7 @@
     name: holmes-dsa-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: holmes/dsa
     project-name: 'holmes-dsa'
     branch: 'master'

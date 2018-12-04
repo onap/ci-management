@@ -40,6 +40,7 @@
     name: dcaegen2-platform-policy-handler-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dcaegen2/platform/policy-handler
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-platform-policy-handler'

@@ -76,6 +76,7 @@
     name: policy-apex-pdp-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/apex-pdp
     project-name: 'policy-apex-pdp'
     branch: 'master'

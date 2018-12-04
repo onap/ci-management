@@ -43,6 +43,7 @@
     name: aai-esr-server-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/esr-server'
     project-name: 'aai-esr-server'
     branch: 'master'

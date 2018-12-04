@@ -38,6 +38,7 @@
     name: aai-validation-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/validation'
     project-name: 'aai-validation'
     branch: 'casablanca'

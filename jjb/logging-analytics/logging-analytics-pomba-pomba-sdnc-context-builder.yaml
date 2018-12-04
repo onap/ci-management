@@ -46,6 +46,7 @@
     name: logging-analytics-pomba-pomba-sdnc-context-builder-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: logging-analytics/pomba/pomba-sdnc-context-builder
     project-name: logging-analytics-pomba-pomba-sdnc-context-builder
     branch: 'master'

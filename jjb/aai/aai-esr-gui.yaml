@@ -30,6 +30,7 @@
     name: aai-esr-gui-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'
     branch: 'master'

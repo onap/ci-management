@@ -44,6 +44,7 @@
     name: multicloud-openstack-vmware-java-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: multicloud/openstack/vmware
     project-name: 'multicloud-openstack-vmware'
     branch: 'master'

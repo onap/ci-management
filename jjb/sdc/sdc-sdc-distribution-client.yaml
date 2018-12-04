@@ -40,6 +40,7 @@
     name: sdc-sdc-distribution-client-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdc/sdc-distribution-client
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'

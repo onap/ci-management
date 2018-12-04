@@ -32,6 +32,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f version-manifest/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: integration
     project-name: 'integration'
     branch: 'master'

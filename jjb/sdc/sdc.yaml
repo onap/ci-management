@@ -72,6 +72,7 @@
           build-timeout: 120
           submodule-timeout: 30
           mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc'
     build-node: ubuntu1604-docker-8c-8g

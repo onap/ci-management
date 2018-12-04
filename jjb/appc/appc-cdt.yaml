@@ -22,6 +22,7 @@
     name: appc-cdt-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'appc/cdt'
     project-name: 'appc-cdt'
     branch: 'master'

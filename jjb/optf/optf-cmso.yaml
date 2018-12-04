@@ -58,6 +58,7 @@
     jobs:
       - gerrit-maven-clm:
          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+    nexus-iq-namespace: 'onap-'
     project: optf/cmso
     project-name: 'optf-cmso'
     build-node: ubuntu1604-docker-8c-8g

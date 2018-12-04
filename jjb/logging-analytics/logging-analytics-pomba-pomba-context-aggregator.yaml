@@ -49,6 +49,7 @@
     name: logging-analytics-pomba-pomba-context-aggregator-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: logging-analytics/pomba/pomba-context-aggregator
     project-name: logging-analytics-pomba-pomba-context-aggregator
     branch: 'master'

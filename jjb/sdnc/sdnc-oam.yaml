@@ -41,6 +41,7 @@
     name: sdnc-oam-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdnc/oam
     project-name: 'sdnc-oam'
     build-node: ubuntu1604-builder-4c-4g

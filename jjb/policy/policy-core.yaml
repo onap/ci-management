@@ -32,6 +32,7 @@
     name: policy-core-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/core
     project-name: 'policy-core'
     branch: 'master'

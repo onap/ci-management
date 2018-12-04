@@ -32,6 +32,7 @@
     name: policy-gui-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/gui
     project-name: 'policy-gui'
     branch: 'master'

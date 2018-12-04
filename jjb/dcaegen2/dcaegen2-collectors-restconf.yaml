@@ -38,6 +38,7 @@
     name: dcaegen2-collectors-restconf-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dcaegen2/collectors/restconf
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-collectors-restconf'

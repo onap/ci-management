@@ -38,6 +38,7 @@
     name: usecase-ui-server-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: usecase-ui/server
     project-name: 'usecase-ui-server'
     build-node: ubuntu1604-builder-4c-4g

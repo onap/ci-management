@@ -42,6 +42,7 @@
     name: aai-aai-common-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'

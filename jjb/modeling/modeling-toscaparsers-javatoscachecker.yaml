@@ -51,6 +51,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f javatoscachecker/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: modeling/toscaparsers
     project-name: 'modeling-toscaparsers-javatoscachecker'
     build-node: ubuntu1604-docker-8c-8g

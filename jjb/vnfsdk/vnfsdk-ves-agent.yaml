@@ -48,6 +48,7 @@
     jobs:
       - gerrit-maven-clm:
          mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: vnfsdk/ves-agent
     project-name: 'vnfsdk-ves-agent'
     build-node: ubuntu1604-builder-4c-4g

@@ -38,6 +38,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f nfvparser/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: modeling/toscaparsers
     project-name: 'modeling-toscaparsers-nfvparser'
     branch: 'master'

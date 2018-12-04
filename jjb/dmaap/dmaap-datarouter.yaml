@@ -42,6 +42,7 @@
     name: dmaap-datarouter-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dmaap/datarouter
     project-name: 'dmaap-datarouter'
     branch: 'master'

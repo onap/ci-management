@@ -57,6 +57,7 @@
     name: vnfsdk-dovetail-integration-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vnfsdk/dovetail-integration
     project-name: 'vnfsdk-dovetail-integration'
     build-node: ubuntu1604-builder-4c-4g

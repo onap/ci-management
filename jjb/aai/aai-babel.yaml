@@ -44,6 +44,7 @@
     name: aai-babel-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/babel'
     project-name: 'aai-babel'
     branch: 'casablanca'

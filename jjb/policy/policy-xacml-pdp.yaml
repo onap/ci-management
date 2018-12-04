@@ -32,6 +32,7 @@
     name: policy-xacml-pdp-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/xacml-pdp
     project-name: 'policy-xacml-pdp'
     branch: 'master'

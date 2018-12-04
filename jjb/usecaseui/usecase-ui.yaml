@@ -30,6 +30,7 @@
     name: usecase-ui-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: usecase-ui
     project-name: 'usecase-ui'
     build-node: ubuntu1604-builder-4c-4g

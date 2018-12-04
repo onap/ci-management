@@ -43,6 +43,7 @@
     name: aai-search-data-service-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/search-data-service'
     project-name: 'aai-search-data-service'
     branch: 'casablanca'

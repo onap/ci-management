@@ -117,6 +117,7 @@
     name: multicloud-openstack-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: multicloud/openstack
     project-name: 'multicloud-openstack'
     build-node: ubuntu1604-memcached-4c-4g

@@ -38,6 +38,7 @@
     name: dmaap-buscontroller-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dmaap/buscontroller
     project-name: 'dmaap-buscontroller'
     branch: 'master'

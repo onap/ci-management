@@ -71,6 +71,7 @@
     name: optf-osdf-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: optf/osdf
     project-name: 'optf-osdf'
     branch: 'master'

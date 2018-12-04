@@ -40,6 +40,7 @@
     name: dcaegen2-collectors-datafile-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: dcaegen2/collectors/datafile
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-collectors-datafile'

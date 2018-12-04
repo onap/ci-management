@@ -37,6 +37,7 @@
     name: holmes-engine-management-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: holmes/engine-management
     project-name: 'holmes-engine-management'
     branch: 'master'

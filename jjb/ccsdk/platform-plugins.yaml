@@ -40,6 +40,7 @@
     name: ccsdk-platform-plugins-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'ccsdk/platform/plugins'
     project-name: 'ccsdk-platform-plugins'
     branch: 'master'

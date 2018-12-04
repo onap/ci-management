@@ -40,6 +40,7 @@
     name: dcaegen2-analytics-tca-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'dcaegen2/analytics/tca'
     project-name: 'dcaegen2-analytics-tca'
     branch: 'master'

@@ -47,6 +47,7 @@
     name: aai-graphadmin-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
     branch: 'casablanca'

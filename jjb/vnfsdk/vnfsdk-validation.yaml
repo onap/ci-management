@@ -40,6 +40,7 @@
     name: vnfsdk-validation-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vnfsdk/validation
     project-name: 'vnfsdk-validation'
     build-node: ubuntu1604-builder-4c-4g

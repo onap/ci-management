@@ -37,6 +37,7 @@
     name: holmes-rule-management-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: holmes/rule-management
     project-name: 'holmes-rule-management'
     branch: 'master'

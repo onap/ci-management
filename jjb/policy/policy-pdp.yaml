@@ -32,6 +32,7 @@
     name: policy-pdp-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/pdp
     project-name: 'policy-pdp'
     branch: 'master'

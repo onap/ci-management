@@ -111,6 +111,7 @@
     name: aaf-cadi-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aaf/cadi'
     project-name: 'aaf-cadi'
     branch: 'master'

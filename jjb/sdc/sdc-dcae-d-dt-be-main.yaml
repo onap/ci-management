@@ -39,6 +39,7 @@
     name: sdc-dcae-d-dt-be-main-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdc/dcae-d/dt-be-main
     project-name: 'sdc-dcae-d-dt-be-main'
     branch: 'casablanca'

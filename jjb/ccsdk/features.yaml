@@ -40,6 +40,7 @@
     name: ccsdk-features-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'ccsdk/features'
     project-name: 'ccsdk-features'
     branch: 'master'

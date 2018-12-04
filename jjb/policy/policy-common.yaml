@@ -52,6 +52,7 @@
     name: policy-common-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/common
     project-name: 'policy-common'
     branch: 'master'

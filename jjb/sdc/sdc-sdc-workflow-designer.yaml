@@ -47,6 +47,7 @@
     name: sdc-sdc-workflow-designer-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdc/sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     build-node: ubuntu1604-builder-4c-4g

@@ -44,6 +44,7 @@
     name: aai-model-loader-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
     branch: 'casablanca'

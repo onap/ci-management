@@ -24,6 +24,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f musictrigger/pom.xml assembly:single'
+    nexus-iq-namespace: 'onap-'
     project: music
     project-name: 'music-trigger'
     branch: 'master'

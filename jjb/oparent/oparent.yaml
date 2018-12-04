@@ -27,6 +27,7 @@
     name: oparent-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: oparent
     project-name: 'oparent'
     branch: 'master'

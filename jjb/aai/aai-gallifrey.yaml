@@ -24,6 +24,7 @@
     name: aai-gallifrey-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
     branch: 'casablanca'

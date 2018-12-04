@@ -31,6 +31,7 @@
     name: externalapi-nbi-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'externalapi/nbi'
     project-name: 'externalapi-nbi'
     branch: 'master'

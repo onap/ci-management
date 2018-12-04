@@ -22,6 +22,7 @@
     name: testsuite-heatbridge-master-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: testsuite/heatbridge
     project-name: 'testsuite-heatbridge'
     build-node: ubuntu1604-builder-4c-4g

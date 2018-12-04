@@ -78,6 +78,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f nokiav2/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/driver/vnfm/svnfm
     project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
     build-node: ubuntu1604-builder-4c-4g

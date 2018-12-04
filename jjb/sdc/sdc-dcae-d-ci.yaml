@@ -45,6 +45,7 @@
     name: sdc-dcae-d-ci-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: sdc/dcae-d/ci
     project-name: 'sdc-dcae-d-ci'
     branch: 'casablanca'

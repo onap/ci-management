@@ -38,6 +38,7 @@
     name: so-libs-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: so/libs
     project-name: 'so-libs'
     branch: 'master'

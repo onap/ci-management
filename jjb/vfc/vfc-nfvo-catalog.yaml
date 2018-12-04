@@ -44,6 +44,7 @@
     name: vfc-nfvo-catalog-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/catalog
     project-name: 'vfc-nfvo-catalog'
     build-node: centos7-redis-4c-4g

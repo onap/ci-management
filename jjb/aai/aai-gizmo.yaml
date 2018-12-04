@@ -44,6 +44,7 @@
     name: aai-gizmo-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/gizmo'
     project-name: 'aai-gizmo'
     branch: 'casablanca'

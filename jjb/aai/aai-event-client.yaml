@@ -39,6 +39,7 @@
     name: aai-event-client-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/event-client'
     project-name: 'aai-event-client'
     branch: 'casablanca'

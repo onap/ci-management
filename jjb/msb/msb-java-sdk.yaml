@@ -32,6 +32,7 @@
     name: msb-java-sdk-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: msb/java-sdk
     project-name: 'msb-java-sdk'
     branch: 'master'

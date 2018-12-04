@@ -72,6 +72,7 @@
     name: optf-has-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: optf/has
     project-name: 'optf-has'
     branch: 'master'

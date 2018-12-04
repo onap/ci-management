@@ -41,6 +41,7 @@
           mvn-params: '-DskipTests'
           build-timeout: 30
           build-node: ubuntu1604-builder-8c-8g
+    nexus-iq-namespace: 'onap-'
     project: 'appc'
     project-name: 'appc'
     branch: 'master'

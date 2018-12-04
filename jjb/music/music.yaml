@@ -47,6 +47,7 @@
     name: music-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: music
     project-name: 'music'
     branch: 'master'

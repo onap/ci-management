@@ -41,6 +41,7 @@
     name: logging-analytics-pomba-pomba-audit-common-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: logging-analytics/pomba/pomba-audit-common
     project-name: logging-analytics-pomba-pomba-audit-common
     branch: 'master'

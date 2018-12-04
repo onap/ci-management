@@ -28,6 +28,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f jar/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: music
     project-name: 'music-jar'
     branch: 'master'

@@ -26,6 +26,7 @@
     name: ccsdk-utils-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'ccsdk/utils'
     project-name: 'ccsdk-utils'
     branch: 'master'

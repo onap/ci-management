@@ -32,6 +32,7 @@
     name: policy-models-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/models
     project-name: 'policy-models'
     branch: 'master'

@@ -35,6 +35,7 @@
     name: vfc-nfvo-multivimproxy-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/multivimproxy
     project-name: 'vfc-nfvo-multivimproxy'
     build-node: ubuntu1604-builder-4c-4g

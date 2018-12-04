@@ -44,6 +44,7 @@
     name: msb-apigateway-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: msb/apigateway
     project-name: 'msb-apigateway'
     branch: 'master'

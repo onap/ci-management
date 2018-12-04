@@ -43,6 +43,7 @@
     name: aai-spike-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aai/spike'
     project-name: 'aai-spike'
     branch: 'casablanca'

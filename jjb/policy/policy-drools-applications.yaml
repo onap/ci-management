@@ -52,6 +52,7 @@
     name: policy-drools-applications-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: policy/drools-applications
     project-name: 'policy-drools-applications'
     branch: 'master'

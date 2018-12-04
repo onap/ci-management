@@ -20,6 +20,7 @@
     name: music-mdbc-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: music/mdbc
     project-name: 'music-mdbc'
     branch: 'master'

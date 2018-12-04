@@ -38,6 +38,7 @@
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f huawei/pom.xml'
+    nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/driver/vnfm/svnfm
     project-name: 'vfc-nfvo-driver-svnfm-huawei'
     build-node: ubuntu1604-builder-4c-4g

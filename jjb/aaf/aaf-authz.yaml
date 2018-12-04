@@ -62,6 +62,7 @@
     name: aaf-authz-clm
     jobs:
       - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
     project: 'aaf/authz'
     project-name: 'aaf-authz'
     branch: 'master'
