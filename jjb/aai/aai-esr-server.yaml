@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'master':
+          branch: 'casablanca'
     mvn-settings: 'aai-esr-server-settings'
     files: '**'
     archive-artifacts: ''
@@ -46,5 +48,5 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/esr-server'
     project-name: 'aai-esr-server'
-    branch: 'master'
+    branch: 'casablanca'
     mvn-settings: 'aai-esr-server-settings'
