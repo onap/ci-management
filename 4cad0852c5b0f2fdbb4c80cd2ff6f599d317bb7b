@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_3eae4786",
+        "filename": "jjb/aaf/aaf-sms-csit.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2018-12-04T03:06:37Z",
+      "side": 1,
+      "message": "Clean this trailing space",
+      "range": {
+        "startLine": 11,
+        "startChar": 25,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "4cad0852c5b0f2fdbb4c80cd2ff6f599d317bb7b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
