@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_17ab211e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 947
+      },
+      "writtenOn": "2018-12-06T18:23:47Z",
+      "side": 1,
+      "message": "nit: I\u0027d prefer a better description for this commit message",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 49
+      },
+      "revId": "0401ac54303cf269fb2453af0e2237bc65472396",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_37a66554",
+        "filename": "jjb/multicloud/multicloud-azure-java.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 947
+      },
+      "writtenOn": "2018-12-06T18:23:47Z",
+      "side": 1,
+      "message": "Maybe we should consider to change this build node for someone which requires less memory resources ubuntu1604-builder-4c-2g",
+      "range": {
+        "startLine": 28,
+        "startChar": 16,
+        "endLine": 28,
+        "endChar": 40
+      },
+      "revId": "0401ac54303cf269fb2453af0e2237bc65472396",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
