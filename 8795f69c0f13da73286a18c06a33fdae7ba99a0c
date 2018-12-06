@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_b4e1f3ff",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4341
+      },
+      "writtenOn": "2018-12-06T05:27:49Z",
+      "side": 1,
+      "message": "I know this one was unchanged from earlier version, but experience has shown that some validation errors are not picked up unless the tests are run.",
+      "range": {
+        "startLine": 18,
+        "startChar": 10,
+        "endLine": 18,
+        "endChar": 46
+      },
+      "revId": "8795f69c0f13da73286a18c06a33fdae7ba99a0c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_54e8c7e1",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4341
+      },
+      "writtenOn": "2018-12-06T05:27:49Z",
+      "side": 1,
+      "message": "I know this one is copied from above, but experience has shown that some validation errors are not picked up unless the tests are run.",
+      "range": {
+        "startLine": 39,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 46
+      },
+      "revId": "8795f69c0f13da73286a18c06a33fdae7ba99a0c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_74e38b05",
+        "filename": "jjb/aai/aai-traversal.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4341
+      },
+      "writtenOn": "2018-12-06T05:27:49Z",
+      "side": 1,
+      "message": "I know this one was unchanged from earlier version, but experience has shown that some validation errors are not picked up unless the tests are run.",
+      "range": {
+        "startLine": 18,
+        "startChar": 10,
+        "endLine": 18,
+        "endChar": 46
+      },
+      "revId": "8795f69c0f13da73286a18c06a33fdae7ba99a0c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_14f23fd2",
+        "filename": "jjb/aai/aai-traversal.yaml",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4341
+      },
+      "writtenOn": "2018-12-06T05:27:49Z",
+      "side": 1,
+      "message": "I know this one is copied from above, but experience has shown that some validation errors are not picked up unless the tests are run.",
+      "range": {
+        "startLine": 39,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 46
+      },
+      "revId": "8795f69c0f13da73286a18c06a33fdae7ba99a0c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
