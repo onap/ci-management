@@ -18,3 +18,21 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: vfc-nfvo-driver-vnfm-svnfm-docker-arm64
+    project-name: 'vfc-nfvo-driver-vnfm-svnfm-arm64'
+    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-nfvo-svnfm-driver-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g

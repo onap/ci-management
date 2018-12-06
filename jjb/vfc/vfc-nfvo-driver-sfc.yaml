@@ -26,6 +26,28 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-nfvo-driver-sfc-arm64
+    project-name: 'vfc-nfvo-driver-sfc-arm64'
+    project: 'vfc/nfvo/driver/sfc'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-driver-sfc-settings'
+    subproject:
+      - 'driver-sfc-zte':
+          pom: 'zte/sfc-driver/pom.xml'
+          pattern: 'zte/sfc-driver/**'
+    jobs:
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-driver-zte-sfc-docker-image.sh'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
     name: vfc-nfvo-driver-sfc-sonar
     jobs:
       - gerrit-maven-sonar
