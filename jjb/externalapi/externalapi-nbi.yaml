@@ -20,8 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'externalapi-nbi-settings'
     files: '**'
     archive-artifacts: ''
@@ -53,6 +53,18 @@
     project-name: 'externalapi-nbi'
     branch: 'master'
     mvn-settings: 'externalapi-nbi-settings'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'    
+
+- project:
+    name: externalapi-nbi-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'externalapi/nbi'
+    project-name: 'externalapi-nbi'
+    branch: 'casablanca'
+    mvn-settings: 'externalapi-nbi-settings'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'        
 
 - project:
     name: externalapi-nbi-sonar
@@ -66,3 +78,16 @@
     mvn-settings: 'externalapi-nbi-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: externalapi-nbi-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'externalapi/nbi'
+    project-name: 'externalapi-nbi'
+    branch: 'casablanca'
+    mvn-settings: 'externalapi-nbi-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'    
