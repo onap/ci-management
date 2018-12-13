@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_8b56005b",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-12-13T22:35:42Z",
+      "side": 1,
+      "message": "minor: its good to have a desc for each of these params along with the example inputs.",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 41
+      },
+      "revId": "335bc75f73de89a078ab2b19385eac958ad6c443",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_ab53c469",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-12-13T22:35:42Z",
+      "side": 1,
+      "message": "minor: its good to have a desc for each of these params along with the example inputs.",
+      "range": {
+        "startLine": 129,
+        "startChar": 0,
+        "endLine": 136,
+        "endChar": 36
+      },
+      "revId": "335bc75f73de89a078ab2b19385eac958ad6c443",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_4b4c98c8",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-12-13T22:35:42Z",
+      "side": 1,
+      "message": "minor: its good to have a desc for each of these params along with the example inputs.",
+      "range": {
+        "startLine": 338,
+        "startChar": 0,
+        "endLine": 341,
+        "endChar": 41
+      },
+      "revId": "335bc75f73de89a078ab2b19385eac958ad6c443",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_6b495cb6",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2018-12-13T22:35:42Z",
+      "side": 1,
+      "message": "minor: its good to have a desc for each of these params along with the example inputs.",
+      "range": {
+        "startLine": 474,
+        "startChar": 0,
+        "endLine": 481,
+        "endChar": 36
+      },
+      "revId": "335bc75f73de89a078ab2b19385eac958ad6c443",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
