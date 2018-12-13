@@ -47,5 +47,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/gizmo'
     project-name: 'aai-gizmo'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-gizmo-settings'

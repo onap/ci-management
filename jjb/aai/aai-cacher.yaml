@@ -44,7 +44,9 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/cacher'
     project-name: 'aai-cacher'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

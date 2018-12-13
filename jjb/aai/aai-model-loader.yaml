@@ -47,5 +47,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-model-loader-settings'

@@ -27,5 +27,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-gallifrey-settings'

@@ -50,6 +50,8 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/traversal'
     project-name: 'aai-traversal'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'

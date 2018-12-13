@@ -46,5 +46,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/data-router'
     project-name: 'aai-data-router'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-data-router-settings'

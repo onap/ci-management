@@ -42,5 +42,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/logging-service'
     project-name: 'aai-logging-service'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-logging-service-settings'

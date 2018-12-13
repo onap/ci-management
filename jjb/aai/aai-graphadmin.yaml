@@ -50,6 +50,8 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'

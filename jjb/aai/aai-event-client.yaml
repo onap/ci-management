@@ -42,5 +42,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/event-client'
     project-name: 'aai-event-client'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-event-client-settings'
