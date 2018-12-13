@@ -49,7 +49,11 @@
     nexus-iq-namespace: 'onap-'
     project: 'ccsdk/apps'
     project-name: 'ccsdk-apps'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-apps-settings'
     build-node: ubuntu1604-builder-4c-4g
 
