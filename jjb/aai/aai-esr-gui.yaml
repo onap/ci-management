@@ -35,5 +35,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-esr-gui-settings'

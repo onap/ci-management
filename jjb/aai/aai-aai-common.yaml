@@ -46,6 +46,8 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'

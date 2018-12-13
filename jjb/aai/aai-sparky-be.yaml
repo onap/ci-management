@@ -46,5 +46,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-sparky-be-settings'

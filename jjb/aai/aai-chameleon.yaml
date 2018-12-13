@@ -34,5 +34,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/chameleon'
     project-name: 'aai-chameleon'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-chameleon-settings'

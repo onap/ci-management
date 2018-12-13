@@ -46,5 +46,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/spike'
     project-name: 'aai-spike'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-spike-settings'

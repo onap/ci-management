@@ -41,5 +41,8 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/validation'
     project-name: 'aai-validation'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-validation-settings'
+

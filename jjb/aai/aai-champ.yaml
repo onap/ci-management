@@ -47,5 +47,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/champ'
     project-name: 'aai-champ'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-champ-settings'

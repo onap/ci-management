@@ -42,5 +42,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/rest-client'
     project-name: 'aai-rest-client'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-rest-client-settings'

@@ -50,6 +50,8 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/resources'
     project-name: 'aai-resources'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
