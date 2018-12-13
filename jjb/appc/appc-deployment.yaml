@@ -43,13 +43,3 @@
     mvn-profile: docker
     build-node: queue-docker-4c-4g
 
-- project:
-    name: appc-deployment-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'appc/deployment'
-    project-name: 'appc-deployment'
-    branch: 'master'
-    mvn-settings: 'appc-deployment-settings'
-
