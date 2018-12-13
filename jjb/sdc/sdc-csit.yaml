@@ -25,9 +25,9 @@
 - project:
     name: sdc-csit-arm64
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}-testng'
-      - '{project-name}-{stream}-csit-{functionality}-testng'
-    project-name: 'sdc-arm64'
+      - '{project-name}-arm64-{stream}-verify-csit-{functionality}-testng'
+      - '{project-name}-arm64-{stream}-csit-{functionality}-testng'
+    project-name: 'sdc'
     stream:
       - 'master':
           branch: 'master'

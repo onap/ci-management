@@ -15,9 +15,9 @@
 - project:
     name: vfc-nfvo-lcm-csit-arm64
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'vfc-nfvo-lcm-arm64'
+      - '{project-name}-arm64-{stream}-verify-csit-{functionality}'
+      - '{project-name}-arm64-{stream}-csit-{functionality}'
+    project-name: 'vfc-nfvo-lcm'
     stream: 'master'
     functionality:
       - 'sanity-check':
