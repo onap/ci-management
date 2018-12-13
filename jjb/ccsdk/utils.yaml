@@ -29,6 +29,10 @@
     nexus-iq-namespace: 'onap-'
     project: 'ccsdk/utils'
     project-name: 'ccsdk-utils'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-utils-settings'
 

@@ -42,6 +42,10 @@
     nexus-iq-namespace: 'onap-'
     project: 'ccsdk/sli/plugins'
     project-name: 'ccsdk-sli-plugins'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'ccsdk-sli-plugins-settings'
 
