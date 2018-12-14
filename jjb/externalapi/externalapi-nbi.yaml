@@ -51,7 +51,9 @@
     nexus-iq-namespace: 'onap-'
     project: 'externalapi/nbi'
     project-name: 'externalapi-nbi'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'externalapi-nbi-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -63,7 +65,9 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'externalapi/nbi'
     project-name: 'externalapi-nbi'
-    branch: 'casablanca'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'externalapi-nbi-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
