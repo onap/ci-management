@@ -16,6 +16,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+          build-node: 'ubuntu1604-docker-8c-8g'
     project: 'externalapi/nbi'
     stream:
       - 'master':
@@ -35,6 +36,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
+          build-node: 'ubuntu1604-docker-arm64-4c-2g'
     project: 'externalapi/nbi'
     stream:
       - 'master':
@@ -42,7 +44,6 @@
     mvn-settings: 'externalapi-nbi-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
 
 - project:
     name: externalapi-nbi-clm

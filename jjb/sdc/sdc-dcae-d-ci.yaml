@@ -13,6 +13,7 @@
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-docker-version-java-daily':
+         build-node: 'ubuntu1604-docker-8c-8g'
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          mvn-params: '-DskipTests=true'
@@ -35,12 +36,12 @@
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          mvn-params: '-DskipTests=true'
+         build-node: 'ubuntu1604-docker-arm64-4c-2g'
     project: 'sdc/dcae-d/ci'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'sdc-dcae-d-ci-settings'
-    build-node: ubuntu1604-docker-arm64-4c-2g
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
