@@ -143,7 +143,7 @@
     name: '{project-name}-{stream}-docker-golang-shell-daily'
     golangver: 'golang110'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: '{build-node}'
     disabled: false
     properties:
       - infra-properties:
