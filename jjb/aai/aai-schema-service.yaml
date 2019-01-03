@@ -1,0 +1,55 @@
+---
+- project:
+    name: aai-schema-service-project-view
+    project-name: aai-schema-service
+    views:
+      - project-view
+
+- project:
+    name: aai-schema-service
+    project-name: 'aai-schema-service'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-daily':
+          docker-pom: 'aai-schema-service/pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          build-node: ubuntu1604-docker-8c-8g
+    project: 'aai/schema-service'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-schema-service-settings'
+    mvn-version: 'mvn35'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aai-schema-service-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aai/resources'
+    project-name: 'aai-schema-service'
+    branch: 'casablanca'
+    mvn-settings: 'aai-schema-service-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
+
+- project:
+    name: aai-schema-service-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'aai/resources'
+    project-name: 'aai-schema-service'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-schema-service-settings'
+    mvn-version: 'mvn35'
