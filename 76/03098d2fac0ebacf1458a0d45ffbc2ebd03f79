@@ -1,0 +1,9 @@
+Code-Review+1: Yan Yang <yangyanyj@chinamobile.com>
+Code-Review+1: Seshu Kumar M <seshu.kumar.m@huawei.com>
+Code-Review+2: Jeremy Phelps <jphelps@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Fri, 04 Jan 2019 20:05:14 +0000
+Reviewed-on: https://gerrit.onap.org/r/75259
+Project: ci-management
+Branch: refs/heads/master
