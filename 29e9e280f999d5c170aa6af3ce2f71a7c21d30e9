@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_21f7de8c",
+        "filename": "jjb/oom/oom-registrator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2019-01-04T12:33:54Z",
+      "side": 1,
+      "message": "that project doesn\u0027t have a casablanca branch. Not sure if it\u0027s intended or not, but there is no point of creating CI for a branch that doesn\u0027t exist.",
+      "range": {
+        "startLine": 30,
+        "startChar": 19,
+        "endLine": 30,
+        "endChar": 33
+      },
+      "revId": "29e9e280f999d5c170aa6af3ce2f71a7c21d30e9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
