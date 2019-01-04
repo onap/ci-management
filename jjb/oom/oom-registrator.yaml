@@ -28,5 +28,9 @@
     nexus-iq-namespace: 'onap-'
     project: oom/registrator
     project-name: 'oom-registrator'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'oom-registrator-settings'
