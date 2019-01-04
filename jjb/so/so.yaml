@@ -49,5 +49,9 @@
     project: so
     project-name: 'so'
     build-node: ubuntu1604-builder-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'so-settings'
