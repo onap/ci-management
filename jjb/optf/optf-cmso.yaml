@@ -62,5 +62,9 @@
     project: optf/cmso
     project-name: 'optf-cmso'
     build-node: ubuntu1604-docker-8c-8g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'optf-cmso-settings'
