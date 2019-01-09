@@ -134,6 +134,10 @@
     wrappers:
       - infra-wrappers:
           build-timeout: '{build-timeout}'
+      - credentials-binding:
+          - text:
+             credential-id: docs-token
+             variable: DOCS_RTD_TOKEN
 
     triggers:
       - gerrit:

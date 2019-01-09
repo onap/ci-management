@@ -6,4 +6,7 @@ else
 fi
 
 # shellcheck disable=SC1083
-curl -X POST --data "version_slug=$RTD_BUILD_VERSION" https://readthedocs.org/build/{rtdproject}
+curl -X POST \
+    -d "branches=$RTD_BUILD_VERSION" \
+    -d "token=$DOCS_RTD_TOKEN"  \
+    https://readthedocs.org/api/v2/webhook/{rtdproject}
