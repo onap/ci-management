@@ -14,7 +14,8 @@
       - '{project-name}-{stream}-merge-rtd'
 
     project: 'doc'
-    rtdproject: 'onap'
+    rtdproject: 'onap/58810/'
+    rtdtoken: '885ac10ffc59c32659d23ebdab371401a38e6fd3'
     mvn-settings: 'doc-settings'
     stream:
       - master:
