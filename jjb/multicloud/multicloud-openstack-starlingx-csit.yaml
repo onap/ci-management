@@ -1,0 +1,12 @@
+---
+- project:
+    name: multicloud-openstack-starlingx-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'multicloud-starlingx'
+    stream: 'master'
+    functionality:
+      - 'functionality1':
+          trigger_jobs: 'multicloud-openstack-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
