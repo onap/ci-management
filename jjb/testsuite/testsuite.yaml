@@ -14,18 +14,19 @@
             !include-raw-escape: 'testsuite-docker.sh'
 
     project: 'testsuite'
+
     extra-project1: 'testsuite/python-testing-utils'
     extra-branch1: 'master'
-    extra-refspec1: 'refs/heads/{branch}'
+    extra-refspec1: 'refs/heads/master'
     checkout-dir1: 'testsuite/eteutils'
 
     extra-project2: 'testsuite/heatbridge'
     extra-branch2: 'master'
-    extra-refspec2: 'refs/heads/{branch}'
+    extra-refspec2: 'refs/heads/master'
     checkout-dir2: 'testsuite/heatbridge'
 
     extra-project3: 'demo'
-    extra-branch3: 'master'
+    extra-branch3: '{branch}'
     extra-refspec3: 'refs/heads/{branch}'
     checkout-dir3: 'demo'
 
