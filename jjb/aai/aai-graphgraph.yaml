@@ -1,0 +1,20 @@
+---
+- project:
+    name: aai-graphgraph
+    project-name: aai-graphgraph
+    views:
+      - project-view
+
+- project:
+    name: aai-graphgraph-master
+    project-name: 'aai-graphgraph'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+    project: 'aai/graphgraph'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-graphgraph-settings'
+    files: '**'
+    archive-artifacts: ''
