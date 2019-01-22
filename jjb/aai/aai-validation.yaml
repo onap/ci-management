@@ -1,5 +1,11 @@
 ---
 - project:
+    name: aai-validation-project-view
+    project-name: aai-validation
+    views:
+      - project-view
+
+- project:
     name: aai-validation
     project-name: 'aai-validation'
     jobs:
