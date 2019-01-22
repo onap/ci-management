@@ -29,32 +29,6 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
-    name: vfc-nfvo-wfengine-arm64
-    project-name: 'vfc-nfvo-wfengine-arm64'
-    project: 'vfc/nfvo/wfengine'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-nfvo-wfengine-settings'
-    subproject:
-      - 'engine-mgr-service':
-          pom: 'wfenginemgrservice/pom.xml'
-          pattern: 'wfenginemgrservice/**'
-          script:
-            !include-raw-escape: 'build-nfvo-wfengine-engine-mgr-service-docker-image.sh'
-      - 'engine-activiti-extension':
-          pom: 'activiti-extension/pom.xml'
-          pattern: 'activiti-extension/**'
-          script:
-            !include-raw-escape: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily':
-          mvn-goals: 'clean'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
-
-- project:
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
     jobs:
       - gerrit-maven-sonar

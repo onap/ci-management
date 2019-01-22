@@ -19,18 +19,3 @@
             !include-raw-escape: 'build-nfvo-db-docker-image.sh'
           build-node: ubuntu1604-docker-8c-8g
 
-- project:
-    name: vfc-nfvo-db-arm64
-    project: 'vfc/nfvo/db'
-    project-name: 'vfc-nfvo-db-arm64'
-    mvn-settings: 'vfc-nfvo-db-settings'
-    stream:
-      - 'master':
-          branch: 'master'
-    build-node: ubuntu1604-docker-arm64-4c-2g
-    jobs:
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-nfvo-db-docker-image.sh'
