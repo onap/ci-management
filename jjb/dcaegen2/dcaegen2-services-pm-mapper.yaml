@@ -1,0 +1,46 @@
+---
+- project:
+    name: dcaegen2-services-datafile
+    # job template iterators
+    project-name: 'dcaegen2-services-pm-mapper'
+    stream:
+      - 'master':
+          branch: 'master'
+    # apply to all jobs
+    project: 'dcaegen2/services/pm-mapper'
+    mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-8c-8g
+    jobs:
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-verify-java':
+        mvn-goals: 'clean install'
+      - '{project-name}-{stream}-merge-java':
+        mvn-goals: 'clean deploy'
+
+- project:
+    name: dcaegen2-services-pm-mapper-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-docker-8c-8g
+    project: 'dcaegen2/services/pm-mapper'
+    project-name: 'dcaegen2-services-pm-mapper'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-services-pm-mapper-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: dcaegen2/services/pm-mapper
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-services-pm-mapper'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-pm-mapper-settings'
