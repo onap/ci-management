@@ -22,6 +22,30 @@
       "revId": "8d024a04a3b3baa3fa23d1135ed6b55a804361cc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9adffdf1_d499c5c4",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-mapper.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4023
+      },
+      "writtenOn": "2019-01-22T18:50:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9adffdf1_d416a54b",
+      "range": {
+        "startLine": 19,
+        "startChar": 45,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "8d024a04a3b3baa3fa23d1135ed6b55a804361cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
