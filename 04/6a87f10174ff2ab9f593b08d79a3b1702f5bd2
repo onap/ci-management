@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Vijay Venkatesh Kumar <vv770d@att.com>
+Code-Review+1: T M <tobias.mole@ericsson.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 23 Jan 2019 19:48:53 +0000
+Reviewed-on: https://gerrit.onap.org/r/76138
+Project: ci-management
+Branch: refs/heads/master
