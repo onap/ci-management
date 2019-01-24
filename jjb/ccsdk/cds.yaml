@@ -11,8 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'ccsdk-cds-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -46,8 +44,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'ccsdk-cds-settings'
     build-node: ubuntu1604-builder-4c-4g
 
@@ -61,8 +57,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'ccsdk-cds-settings'
     files: '**'
     archive-artifacts: ''
