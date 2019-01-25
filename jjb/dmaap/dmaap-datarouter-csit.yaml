@@ -14,4 +14,7 @@
       - 'dr-suite':
           trigger_jobs:
             - '{project-name}-{stream}-docker-java-shell-daily'
+      - 'ssl-dr-suite':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
