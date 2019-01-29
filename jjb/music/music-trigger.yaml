@@ -11,8 +11,8 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
     project: 'music'
     stream:
-      - 'trigger-master':
-          branch: 'master'
+      - 'trigger-casablanca':
+          branch: 'casablanca'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
