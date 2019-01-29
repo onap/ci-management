@@ -1,17 +1,11 @@
 ---
 - project:
-    name: multicloud-project-view
-    project-name: multicloud
-    views:
-      - project-view
-
-- project:
-    name: multicloud-openstack
-    project-name: 'multicloud-openstack'
+    name: multicloud-openstack-casablanca
+    project-name: 'multicloud-openstack-casablanca'
     project: 'multicloud/openstack'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
       - 'newton':
@@ -38,14 +32,6 @@
           path: 'pike'
           pattern: 'share/**'
           pom: 'pike/pom.xml'
-      - 'starlingx':
-          path: 'starlingx'
-          pattern: 'starlingx/**'
-          pom: 'starlingx/pom.xml'
-      - 'starlingx_share':
-          path: 'starlingx'
-          pattern: 'share/**'
-          pom: 'starlingx/pom.xml'
       - 'windriver':
           path: 'windriver'
           pattern: 'windriver/**'
@@ -139,19 +125,6 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
-- project:
-    name: multicloud-openstack-starlingx-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-starlingx'
-    branch: 'master'
-    mvn-params: '-f starlingx/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
     name: multicloud-openstack-clm
