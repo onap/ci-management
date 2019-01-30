@@ -20,6 +20,10 @@
         mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
         mvn-goals: 'clean deploy'
+      - '{project-name}-{stream}-docker-java-shell-daily':
+        mvn-goals: 'clean package dockerfile:build dockerfile:push'
+        build-node: 'ubuntu1604-docker-8c-8g'
+        script: '/bin/true'
 
 - project:
     name: dcaegen2-services-pm-mapper-sonar
