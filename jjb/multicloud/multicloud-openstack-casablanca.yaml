@@ -1,0 +1,54 @@
+---
+- project:
+    name: multicloud-openstack-casablanca
+    project-name: 'multicloud-openstack-casablanca'
+    project: 'multicloud/openstack'
+    stream:
+      - 'casablanca':
+          branch: 'casablanca'
+    mvn-settings: 'multicloud-openstack-settings'
+    subproject:
+      - 'newton':
+          path: 'newton'
+          pattern: 'newton/**'
+          pom: 'newton/pom.xml'
+      - 'newton_share':
+          path: 'newton'
+          pattern: 'share/**'
+          pom: 'newton/pom.xml'
+      - 'ocata':
+          path: 'ocata'
+          pattern: 'ocata/**'
+          pom: 'ocata/pom.xml'
+      - 'ocata_share':
+          path: 'ocata'
+          pattern: 'share/**'
+          pom: 'ocata/pom.xml'
+      - 'pike':
+          path: 'pike'
+          pattern: 'pike/**'
+          pom: 'pike/pom.xml'
+      - 'pike_share':
+          path: 'pike'
+          pattern: 'share/**'
+          pom: 'pike/pom.xml'
+      - 'windriver':
+          path: 'windriver'
+          pattern: 'windriver/**'
+          pom: 'windriver/pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'install'
+          script:
+            !include-raw-escape: 'build-multicloud-openstack-docker-image.sh'
+          build-node: ubuntu1604-docker-8c-8g
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-memcached-4c-4g'
+
+
