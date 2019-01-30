@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9adffdf1_1948cfb1",
+        "filename": "jjb/multicloud/multicloud-openstack-casablanca.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-01-30T05:15:33Z",
+      "side": 1,
+      "message": "ERROR:jenkins_jobs.parser:Duplicate entry found in \u0027/w/workspace/ci-management-jjb-verify/jjb/multicloud/multicloud-openstack.yaml: \u0027multicloud-openstack\u0027 already defined\n\nWe might want to rename this one",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 30
+      },
+      "revId": "a0821308fb9478e53d95bea933c0d1c0313406dd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
