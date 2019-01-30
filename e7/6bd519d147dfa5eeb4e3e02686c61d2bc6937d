@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Gerard Hickey <gerard.hickey@ericsson.com>
+Code-Review+1: Rajendra Jaiswal <rajendra.jaiswal@ericsson.com>
+Code-Review+1: David Farrelly <david.farrelly@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 30 Jan 2019 17:18:14 +0000
+Reviewed-on: https://gerrit.onap.org/r/77523
+Project: ci-management
+Branch: refs/heads/master
