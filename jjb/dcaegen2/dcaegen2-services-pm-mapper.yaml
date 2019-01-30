@@ -1,6 +1,6 @@
 ---
 - project:
-    name: dcaegen2-services-datafile
+    name: dcaegen2-services-pm-mapper
     # job template iterators
     project-name: 'dcaegen2-services-pm-mapper'
     stream:
@@ -20,6 +20,11 @@
         mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
         mvn-goals: 'clean deploy'
+      - '{project-name}-{stream}-docker-java-shell-daily':
+        mvn-goals: 'clean deploy -DskipNexusStagingDeployMojo=true -Ddockerfile.skip=false'
+        # No-op
+        build-node: 'ubuntu1604-docker-8c-8g'
+        script: '/bin/true'
 
 - project:
     name: dcaegen2-services-pm-mapper-sonar
