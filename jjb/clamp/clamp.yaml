@@ -9,6 +9,10 @@
     name: clamp
     project-name: 'clamp'
     jobs:
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
       - '{project-name}-{stream}-verify-java-checkstyle':
          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
