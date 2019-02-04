@@ -16,6 +16,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
