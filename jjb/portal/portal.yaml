@@ -9,6 +9,7 @@
     name: portal
     project-name: 'portal'
     jobs:
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-java-daily'
     project: 'portal'
     stream:
