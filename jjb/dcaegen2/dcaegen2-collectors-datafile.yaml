@@ -17,6 +17,7 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     jobs:
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
