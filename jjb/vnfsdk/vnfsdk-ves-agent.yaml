@@ -12,6 +12,13 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          mvn-pom: 'veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
+          pattern: 'veslibrary/**'
     project: 'vnfsdk/ves-agent'
     stream:
       - 'master':
