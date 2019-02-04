@@ -7,6 +7,7 @@
           build-node: ubuntu1604-builder-8c-8g
       - '{project-name}-{stream}-merge-java':
           build-node: ubuntu1604-builder-8c-8g
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily':
           build-node: ubuntu1604-builder-8c-8g
 
