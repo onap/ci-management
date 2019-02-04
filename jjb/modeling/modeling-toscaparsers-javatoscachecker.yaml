@@ -21,7 +21,11 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-f javatoscachecker/pom.xml'
       - '{project-name}-{stream}-docker-java-properties-daily':
          setVersion: 'DontSetVersion'
          docker-pom: 'javatoscachecker/pom.xml'
