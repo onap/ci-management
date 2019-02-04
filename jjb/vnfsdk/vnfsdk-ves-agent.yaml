@@ -12,6 +12,7 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-java-daily'
+      - gerrit-maven-stage
     project: 'vnfsdk/ves-agent'
     stream:
       - 'master':
