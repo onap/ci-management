@@ -5,6 +5,7 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'music/mdbc'
     stream:
