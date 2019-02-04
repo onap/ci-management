@@ -15,6 +15,7 @@
       - '{project-name}-{stream}-merge-profile-java':
           build-node: ubuntu1604-docker-8c-8g
           pattern: 'pom.xml'
+      - gerrit-maven-stage      
       - '{project-name}-{stream}-release-version-profile-java-daily'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
