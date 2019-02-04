@@ -5,6 +5,7 @@
     build-node: ubuntu1604-builder-4c-2g
     jobs:
       - '{project-name}-{stream}-verify-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-docker-version-java-daily':

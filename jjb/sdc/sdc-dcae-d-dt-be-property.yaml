@@ -4,6 +4,7 @@
     project-name: 'sdc-dcae-d-dt-be-property'
     jobs:
       - '{project-name}-{stream}-verify-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
     project: 'sdc/dcae-d/dt-be-property'
