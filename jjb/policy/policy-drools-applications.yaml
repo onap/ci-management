@@ -12,6 +12,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-P docker'
+      - gerrit-maven-stage
           disabled: true
 
     project: 'policy/drools-applications'
@@ -39,6 +40,7 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'drools-apps-docker-release.sh'
+      - gerrit-maven-stage
           disabled: false
           build-node: ubuntu1604-docker-8c-8g
 
