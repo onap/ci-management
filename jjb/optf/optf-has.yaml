@@ -19,6 +19,7 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
     files: '**'
     archive-artifacts: ''
