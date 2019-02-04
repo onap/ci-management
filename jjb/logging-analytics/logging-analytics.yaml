@@ -11,6 +11,7 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-version-java-daily':
           docker-pom: 'pom.xml'
@@ -79,6 +80,7 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+      - gerrit-maven-stage
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
     files: '**'
