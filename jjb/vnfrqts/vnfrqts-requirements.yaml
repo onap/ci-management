@@ -7,3 +7,13 @@
     project-name: 'vnfrqts-requirements'
     branch: 'master'
     mvn-settings: 'vnfrqts-requirements-settings'
+
+- project:
+    name: vnfrqts-requirements
+    project: 'vnfrqts/requirements'
+    project-name: 'vnfrqts-requirements'
+    stream:
+      - 'master':
+          branch: 'master'
+    jobs:
+      - '{project-name}-{stream}-upload-json-to-nexus'
