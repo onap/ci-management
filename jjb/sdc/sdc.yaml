@@ -56,11 +56,6 @@
     name: sdc-arm64
     project-name: 'sdc-arm64'
     jobs:
-      - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1604-docker-arm64-4c-2g'
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
       - '{project-name}-{stream}-docker-version-java-daily':
           build-node: 'ubuntu1604-docker-arm64-4c-2g'
           docker-pom: 'pom.xml'
