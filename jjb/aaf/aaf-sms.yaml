@@ -8,6 +8,7 @@
     jobs:
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-{subproject}-release-version-java-daily':
           pom:
             'sms-client/java/pom.xml'
