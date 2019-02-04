@@ -33,6 +33,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily':
           mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
       - '{project-name}-{stream}-docker-version-java-daily':

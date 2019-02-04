@@ -10,6 +10,7 @@
     project-name: 'sdc-sdc-distribution-client'
     jobs:
       - '{project-name}-{stream}-verify-java'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
     project: 'sdc/sdc-distribution-client'
