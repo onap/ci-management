@@ -32,3 +32,15 @@
     mvn-settings: 'vvp-validation-scripts-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: vvp-validation-scripts-tracability-matrix
+    project: 'vvp/validation-scripts'
+    project-name: 'vvp-validation-scripts'
+    stream:
+      - 'master':
+          branch: 'master'
+    jobs:
+      - '{project-name}-{stream}-build-and-upload':
+          script:
+              !include-raw-escape: 'build-csv.sh'
