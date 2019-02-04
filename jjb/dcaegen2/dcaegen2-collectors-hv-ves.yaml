@@ -21,6 +21,7 @@
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
+      - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-shell-daily':
           mvn-goals: 'clean deploy -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
