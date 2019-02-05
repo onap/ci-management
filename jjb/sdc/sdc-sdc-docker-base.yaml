@@ -7,6 +7,7 @@
       - '{project-name}-{stream}-sdc-merge-java':
           docker-pom: 'pom.xml'
           mvn-profile: 'default'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'sdc/sdc-docker-base'
     stream:
       - 'master':
