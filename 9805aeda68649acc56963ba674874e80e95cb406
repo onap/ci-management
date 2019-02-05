@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "90d108d6_55219b5b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3271
+      },
+      "writtenOn": "2019-02-05T00:23:44Z",
+      "side": 1,
+      "message": "Will fix with amend.",
+      "parentUuid": "8f11d8e1_41a987cb",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "55205dea_f81452af",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "10bf9580_fec5d14f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3271
+      },
+      "writtenOn": "2019-02-05T00:23:44Z",
+      "side": 1,
+      "message": "Will fix with amend.",
+      "parentUuid": "55205dea_f81452af",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 62
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "664acfa7_bc45cef5",
         "filename": "jjb/vvp/vvp-validation-matrix.yaml",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2019-02-05T00:15:08Z",
       "side": 1,
       "message": "Have we tested this in the sandbox?",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 35
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a28ee34b_3c8cb8ad",
+        "filename": "jjb/vvp/vvp-validation-matrix.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3271
+      },
+      "writtenOn": "2019-02-05T00:23:44Z",
+      "side": 1,
+      "message": "Yup, I tested it last week and added it earlier today as well to make sure. \n\nhttps://jenkins.onap.org/sandbox/job/vvp-validation-scripts-master-upload-csv-to-nexus/",
+      "parentUuid": "664acfa7_bc45cef5",
       "range": {
         "startLine": 49,
         "startChar": 0,
