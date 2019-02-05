@@ -7,3 +7,15 @@
     project-name: 'vnfrqts-requirements'
     branch: 'master'
     mvn-settings: 'vnfrqts-requirements-settings'
+
+- project:
+    name: vnfrqts-requirements-upload-json
+    project: 'vnfrqts/requirements'
+    project-name: 'vnfrqts-requirements'
+    stream:
+      - 'master':
+          branch: 'master'
+    jobs:
+      - '{project-name}-{stream}-build-and-upload':
+          script:
+              !include-raw-escape: 'build-needs.sh'
