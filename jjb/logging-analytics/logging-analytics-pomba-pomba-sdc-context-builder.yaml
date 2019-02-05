@@ -23,24 +23,24 @@
     build-node: ubuntu1604-builder-4c-4g
     maven-version: 'mvn35'
 
-- project:
-    name: logging-analytics-pomba-pomba-arm64-sdc-context-builder
-    project-name: logging-analytics-pomba-pomba-arm64-sdc-context-builder
-    jobs:
-      - '{project-name}-{stream}-docker-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
-    project: logging-analytics/pomba/pomba-sdc-context-builder
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: logging-analytics-pomba-pomba-sdc-context-builder-settings
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
-    maven-version: 'mvn35'
-
+#- project:
+#    name: logging-analytics-pomba-pomba-arm64-sdc-context-builder
+#    project-name: logging-analytics-pomba-pomba-arm64-sdc-context-builder
+#    jobs:
+#      - '{project-name}-{stream}-docker-java-daily':
+#          docker-pom: 'pom.xml'
+#          mvn-profile: 'docker'
+#          mvn-params: '-Dmaven.test.skip=true'
+#    project: logging-analytics/pomba/pomba-sdc-context-builder
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: logging-analytics-pomba-pomba-sdc-context-builder-settings
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
+#    maven-version: 'mvn35'
+#
 - project:
     name: logging-analytics-pomba-pomba-sdc-context-builder-sonar
     jobs:
