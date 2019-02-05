@@ -25,27 +25,27 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: vnfsdk-refrepo-arm64
-    project-name: 'vnfsdk-refrepo-arm64'
-    jobs:
-      - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
-          mvn-goals: 'docker:build'
-          docker-image-name: 'onap/vnfsdk/refrepo'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'vnfsdk/refrepo'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vnfsdk-refrepo-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
-
+#- project:
+#    name: vnfsdk-refrepo-arm64
+#    project-name: 'vnfsdk-refrepo-arm64'
+#    jobs:
+#      - '{project-name}-{stream}-aai-docker-java-daily':
+#          pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
+#          mvn-goals: 'docker:build'
+#          docker-image-name: 'onap/vnfsdk/refrepo'
+#      - '{project-name}-{stream}-docker-version-java-daily':
+#          docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
+#          mvn-profile: 'docker'
+#          mvn-params: '-Dmaven.test.skip=true'
+#    project: 'vnfsdk/refrepo'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'vnfsdk-refrepo-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
+#
 - project:
     name: vnfsdk-refrepo-sonar
     jobs:
