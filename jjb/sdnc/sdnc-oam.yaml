@@ -36,23 +36,23 @@
     files: '**'
     archive-artifacts: ''
     build-node: queue-docker-4c-4g
-
-- project:
-    name: sdnc-oam-docker-arm64
-    project-name: 'sdnc-oam-arm64'
-    jobs:
-      - 'docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'sdnc/oam'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdnc-oam-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
+#
+#- project:
+#    name: sdnc-oam-docker-arm64
+#    project-name: 'sdnc-oam-arm64'
+#    jobs:
+#      - 'docker-version-java-daily':
+#          docker-pom: 'pom.xml'
+#          mvn-profile: 'docker'
+#          mvn-params: '-Dmaven.test.skip=true'
+#    project: 'sdnc/oam'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'sdnc-oam-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
 
 - project:
     name: sdnc-oam-clm
