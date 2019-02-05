@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e06a183_b9f22252",
+        "filename": "jjb/vvp/vvp-validation-matrix.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:34:33Z",
+      "side": 1,
+      "message": "This is not needed",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 42
+      },
+      "revId": "513f8d0f79edb8c5363bf295567147c99966e085",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8716dfa7_de57f115",
+        "filename": "jjb/vvp/vvp-validation-matrix.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:34:33Z",
+      "side": 1,
+      "message": "This builder is just running the tests is it? We might have already a template in place that does this. \n\nThis template does the same thing as https://gerrit.onap.org/r/#/c/77844/2/jjb/vnfrqts/vnfrqts-upload-needs.yaml except for the fact that they run a different bash script. \n\nPlease generalize this template to accept a shell file like this:\nhttps://github.com/onap/ci-management/blob/master/jjb/global-templates-java.yaml#L911\n\nThis template should have a more generic name and should be able to be re-used in your other gerrit 77844",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 35
+      },
+      "revId": "513f8d0f79edb8c5363bf295567147c99966e085",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0cf62732_a8ce1da9",
+        "filename": "jjb/vvp/vvp-validation-matrix.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:34:33Z",
+      "side": 1,
+      "message": "We need to add the missing publishers to save the logs of the job",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 0
+      },
+      "revId": "513f8d0f79edb8c5363bf295567147c99966e085",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
