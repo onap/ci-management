@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72e3f581_29a9d0be",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:10:41Z",
+      "side": 1,
+      "message": "Remove empty line #12\nThis should be a full footer block",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 62
+      },
+      "revId": "6f7d57ebd70648bef241c5ea90418dd30720df60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff22e75c_db80a8eb",
+        "filename": "jjb/vnfrqts/vnfrqts-requirements.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:10:41Z",
+      "side": 1,
+      "message": "This name conflicts with the one in line #3. \nYou could either rename this or add line #19 to the block of jobs after line #6",
+      "range": {
+        "startLine": 12,
+        "startChar": 4,
+        "endLine": 12,
+        "endChar": 30
+      },
+      "revId": "6f7d57ebd70648bef241c5ea90418dd30720df60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2768eca_f84741bb",
+        "filename": "jjb/vnfrqts/vnfrqts-upload-needs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:10:41Z",
+      "side": 1,
+      "message": "Is there another job that will require this file that is being generated? Have you tested this in the sandbox?",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 21
+      },
+      "revId": "6f7d57ebd70648bef241c5ea90418dd30720df60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
