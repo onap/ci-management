@@ -5,6 +5,7 @@
     project-name: 'sdc-sdc-docker-base'
     jobs:
       - '{project-name}-{stream}-sdc-merge-java':
+          build-node: 'ubuntu1604-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'default'
     project: 'sdc/sdc-docker-base'
@@ -24,6 +25,7 @@
     project-name: 'sdc-sdc-docker-base-arm64'
     jobs:
       - '{project-name}-{stream}-sdc-merge-java':
+          build-node: 'ubuntu1604-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'default'
     project: 'sdc/sdc-docker-base'
