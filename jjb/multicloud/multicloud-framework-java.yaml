@@ -27,28 +27,28 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: multicloud-framework-arm64-java
-    project-name: 'multicloud-framework-arm64'
-    project: 'multicloud/framework'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-framework-settings'
-    subproject:
-      - 'multivimbroker':
-          pom: 'multivimbroker/pom.xml'
-          pattern: 'multivimbroker/**'
-    jobs:
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-multicloud-framework-docker-image.sh'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
-
+#- project:
+#    name: multicloud-framework-arm64-java
+#    project-name: 'multicloud-framework-arm64'
+#    project: 'multicloud/framework'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'multicloud-framework-settings'
+#    subproject:
+#      - 'multivimbroker':
+#          pom: 'multivimbroker/pom.xml'
+#          pattern: 'multivimbroker/**'
+#    jobs:
+#      - '{project-name}-{stream}-docker-java-version-shell-daily':
+#          docker-pom: 'pom.xml'
+#          mvn-goals: 'install'
+#          script:
+#            !include-raw-escape: 'build-multicloud-framework-docker-image.sh'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
+#
 - project:
     name: multicloud-framework-sonar
     jobs:
