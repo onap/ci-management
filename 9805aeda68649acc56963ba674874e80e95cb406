@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f11d8e1_41a987cb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:15:08Z",
+      "side": 1,
+      "message": "Break this line\nAlso, use imperative mood \"Create\" instead of \"Creating\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 86
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "55205dea_f81452af",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:15:08Z",
+      "side": 1,
+      "message": "Remove empty line 12. \nThese 3 lines should be all part of the footer",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 62
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "664acfa7_bc45cef5",
+        "filename": "jjb/vvp/vvp-validation-matrix.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-05T00:15:08Z",
+      "side": 1,
+      "message": "Have we tested this in the sandbox?",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 35
+      },
+      "revId": "9805aeda68649acc56963ba674874e80e95cb406",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
