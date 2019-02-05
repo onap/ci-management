@@ -92,6 +92,30 @@
       "revId": "6f7d57ebd70648bef241c5ea90418dd30720df60",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6949bf0e_021f3277",
+        "filename": "jjb/vnfrqts/vnfrqts-upload-needs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3271
+      },
+      "writtenOn": "2019-02-05T00:26:31Z",
+      "side": 1,
+      "message": "Yea I got up to here working in the sandbox, the next step I was going to try was to upload the generated json file to nexus as a RAW artifact.\n\nhttps://jenkins.onap.org/sandbox/job/vnfrqts-requirements-master-upload-json-to-nexus/",
+      "parentUuid": "d2768eca_f84741bb",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 21
+      },
+      "revId": "6f7d57ebd70648bef241c5ea90418dd30720df60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
