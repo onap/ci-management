@@ -1,0 +1,13 @@
+- project:
+    name: dcae-bulkpm-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-pmmapper'
+    stream: 'master'
+    functionality:
+      - 'pmmapper':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+    branch: 'master'
