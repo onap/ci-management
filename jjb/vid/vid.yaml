@@ -42,22 +42,22 @@
     archive-artifacts: ''
     build-node: queue-docker-4c-4g
 
-- project:
-    name: vid-docker-arm64
-    project-name: 'vid-arm64'
-    jobs:
-      - 'docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-    project: 'vid'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vid-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
-
+#- project:
+#    name: vid-docker-arm64
+#    project-name: 'vid-arm64'
+#    jobs:
+#      - 'docker-version-java-daily':
+#          docker-pom: 'pom.xml'
+#          mvn-profile: 'docker'
+#    project: 'vid'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'vid-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
+#
 - project:
     name: vid-sonar
     jobs:
