@@ -24,24 +24,24 @@
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: multicloud-k8s-arm64
-    project-name: 'multicloud-k8s-arm64'
-    path: 'src/k8splugin'
-    golangver: 'golang111'
-    jobs:
-      - '{project-name}-{stream}-docker-golang-shell-daily':
-          script:
-            !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
-    project: 'multicloud/k8s'
-    subproject:
-      - validation-scripts:
-          path: '.'
-          pattern: '**'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-k8s-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-arm64-4c-2g
+#- project:
+#    name: multicloud-k8s-arm64
+#    project-name: 'multicloud-k8s-arm64'
+#    path: 'src/k8splugin'
+#    golangver: 'golang111'
+#    jobs:
+#      - '{project-name}-{stream}-docker-golang-shell-daily':
+#          script:
+#            !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
+#    project: 'multicloud/k8s'
+#    subproject:
+#      - validation-scripts:
+#          path: '.'
+#          pattern: '**'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'multicloud-k8s-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-node: ubuntu1604-docker-arm64-4c-2g
