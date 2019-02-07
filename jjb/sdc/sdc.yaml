@@ -53,24 +53,24 @@
     build-node: ubuntu1604-builder-8c-8g
     maven-version: 'mvn35'
 
-- project:
-    name: sdc-arm64
-    project-name: 'sdc-arm64'
-    jobs:
-      - '{project-name}-{stream}-docker-version-java-daily':
-          build-node: 'ubuntu1604-docker-arm64-4c-2g'
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
-    project: 'sdc'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdc-settings'
-    files: '**'
-    archive-artifacts: ''
-    maven-version: 'mvn35'
-
+#- project:
+#    name: sdc-arm64
+#    project-name: 'sdc-arm64'
+#    jobs:
+#      - '{project-name}-{stream}-docker-version-java-daily':
+#          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#          docker-pom: 'pom.xml'
+#          mvn-profile: 'docker'
+#          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+#    project: 'sdc'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'sdc-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    maven-version: 'mvn35'
+#
 - project:
     name: sdc-sonar
     jobs:

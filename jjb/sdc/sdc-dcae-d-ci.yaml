@@ -28,24 +28,24 @@
     archive-artifacts: ''
     build-timeout: 60
 
-- project:
-    name: sdc-dcae-d-ci-arm64
-    project-name: 'sdc-dcae-d-ci-arm64'
-    jobs:
-      - '{project-name}-{stream}-docker-version-java-daily':
-         docker-pom: 'pom.xml'
-         mvn-profile: 'docker'
-         mvn-params: '-DskipTests=true'
-         build-node: 'ubuntu1604-docker-arm64-4c-2g'
-    project: 'sdc/dcae-d/ci'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdc-dcae-d-ci-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-timeout: 60
-
+#- project:
+#    name: sdc-dcae-d-ci-arm64
+#    project-name: 'sdc-dcae-d-ci-arm64'
+#    jobs:
+#      - '{project-name}-{stream}-docker-version-java-daily':
+#         docker-pom: 'pom.xml'
+#         mvn-profile: 'docker'
+#         mvn-params: '-DskipTests=true'
+#         build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#    project: 'sdc/dcae-d/ci'
+#    stream:
+#      - 'master':
+#          branch: 'master'
+#    mvn-settings: 'sdc-dcae-d-ci-settings'
+#    files: '**'
+#    archive-artifacts: ''
+#    build-timeout: 60
+#
 - project:
     name: sdc-dcae-ci-sonar
     jobs:
