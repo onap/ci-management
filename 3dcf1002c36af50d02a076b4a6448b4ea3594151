@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bfaedef_aad83302",
+        "filename": "jjb/dcaegen2/dcaegen2-services-son-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-02-08T23:30:08Z",
+      "side": 1,
+      "message": "This should be removed as there is no Casablanca branc",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 30
+      },
+      "revId": "3dcf1002c36af50d02a076b4a6448b4ea3594151",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
