@@ -1,0 +1,45 @@
+---
+- project:
+    name: dcaegen2-services-son-handler
+    project-name: 'dcaegen2-services-son-handler'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+
+    project: 'dcaegen2/services/son-handler'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'casablanca':
+          branch: 'casablanca'
+    mvn-settings: 'dcaegen2-services-son-handler-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
+    maven-deploy-properties: |
+      deployAtEnd=true
+
+- project:
+    name: dcaegen2-services-son-handler-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-docker-8c-8g
+    project: 'dcaegen2/services/son-handler'
+    project-name: 'dcaegen2-services-son-handler'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-son-handler-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-services-son-handler-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: dcaegen2/services/son-handler
+    build-node: ubuntu1604-docker-8c-8g
+    project-name: 'dcaegen2-services-son-handler'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-son-handler-settings'
