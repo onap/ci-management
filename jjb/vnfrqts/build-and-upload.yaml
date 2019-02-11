@@ -43,7 +43,13 @@
       - timed: 'H H * * *'
 
     builders:
-      - shell: '{script}'
+      - shell: '{obj:pre_script}'
+      - lf-infra-create-netrc:
+          server-id: onap-staging
+      - inject:
+          properties-content: |
+            ARTIFACT_NAME=docs/data/needs.json
+      - shell: '{obj:post_script}'
 
     publishers:
       - infra-shiplogs:
