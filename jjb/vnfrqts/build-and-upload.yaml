@@ -43,7 +43,13 @@
       - timed: 'H H * * *'
 
     builders:
-      - shell: '{script}'
+      - shell: '{obj:pre-script}'
+      - lf-infra-create-netrc:
+          server-id: onap-staging
+      - inject:
+          properties-content: 'ARTIFACT_NAME={artifact-name}'
+      - shell: '{obj:post-script}'
+      - lf-provide-maven-settings-cleanup
 
     publishers:
       - infra-shiplogs:
