@@ -44,6 +44,12 @@
 
     builders:
       - shell: '{script}'
+      - lf-infra-create-netrc:
+          server-id: onap-staging
+      - inject:
+          properties-content: |
+            ARTIFACT_NAME=docs/data/needs.json
+
 
     publishers:
       - infra-shiplogs:
