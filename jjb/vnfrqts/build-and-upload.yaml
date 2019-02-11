@@ -44,6 +44,10 @@
 
     builders:
       - shell: '{script}'
+      - lf-infra-create-netrc:
+          server-id: onap-staging
+      - shell: '{script}'
+      - lf-provide-maven-settings-cleanup
 
     publishers:
       - infra-shiplogs:
