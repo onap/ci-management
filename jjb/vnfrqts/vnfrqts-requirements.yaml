@@ -17,5 +17,6 @@
           branch: 'master'
     jobs:
       - '{project-name}-{stream}-build-and-upload':
-          script:
-              !include-raw-escape: 'build-needs.sh'
+          pre-script: !include-raw-escape: 'build-needs.sh'
+          artifact-name: 'docs/data/needs.json'
+          post-script: !include-raw-escape: 'upload-artifact.sh'
