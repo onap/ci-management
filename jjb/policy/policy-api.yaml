@@ -4,12 +4,46 @@
     project-name: 'policy-api'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker'
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: true
+          build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/api'
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-api-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: policy-api-dublin
+    project-name: 'policy-api-dublin'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker'
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: true
+          build-node: ubuntu1604-docker-8c-8g
+
+    project: 'policy/api'
+    stream:
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-api-settings'
     files: '**'
     archive-artifacts: ''
