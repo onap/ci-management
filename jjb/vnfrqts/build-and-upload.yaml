@@ -6,6 +6,10 @@
 
     name: '{project-name}-{stream}-build-and-upload'
 
+    pre_script: ''
+    post_script: ''
+    artifact_name: ''
+
     project-type: freestyle
     concurrent: true
     node: '{build-node}'
@@ -43,7 +47,14 @@
       - timed: 'H H * * *'
 
     builders:
-      - shell: '{script}'
+      - shell: '{obj:pre_script}'
+      - lf-infra-create-netrc:
+          server-id: ecomp-raw
+      - inject:
+          properties-content: |
+            ARTIFACT_NAME={artifact_name}
+      - shell: '{obj:post_script}'
+      - lf-provide-maven-settings-cleanup
 
     publishers:
       - infra-shiplogs:
