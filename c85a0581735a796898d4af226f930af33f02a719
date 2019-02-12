@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "febbc7a4_5ef2b055",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-12T23:19:23Z",
+      "side": 1,
+      "message": "remove this space",
+      "range": {
+        "startLine": 67,
+        "startChar": 24,
+        "endLine": 67,
+        "endChar": 25
+      },
+      "revId": "c85a0581735a796898d4af226f930af33f02a719",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
