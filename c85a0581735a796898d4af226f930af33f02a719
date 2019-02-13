@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "a4a52fa5_18c3c3f8",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-02-13T13:03:22Z",
+      "side": 1,
+      "message": "There is no dublin branch right now - please remove this. When that branch is created in May we will bring this in.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 10
+      },
+      "revId": "c85a0581735a796898d4af226f930af33f02a719",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "febbc7a4_5ef2b055",
         "filename": "jjb/policy/policy-csit.yaml",
         "patchSetId": 1
@@ -16,6 +39,29 @@
       "range": {
         "startLine": 67,
         "startChar": 24,
+        "endLine": 67,
+        "endChar": 25
+      },
+      "revId": "c85a0581735a796898d4af226f930af33f02a719",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "17da8c14_5b19b4da",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-02-13T13:03:22Z",
+      "side": 1,
+      "message": "And remove dublin branch",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
         "endLine": 67,
         "endChar": 25
       },
