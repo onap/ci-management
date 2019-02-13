@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -30,8 +30,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'beijing':
-          branch: 'beijing'
+      - 'casablanca':
+          branch: 'casablanca'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
