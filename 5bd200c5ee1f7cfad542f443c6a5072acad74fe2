@@ -22,6 +22,30 @@
       "revId": "5bd200c5ee1f7cfad542f443c6a5072acad74fe2",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80ff3c3d_5b9a4a91",
+        "filename": "jjb/vnfrqts/build-and-upload.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3271
+      },
+      "writtenOn": "2019-02-14T23:49:48Z",
+      "side": 1,
+      "message": "I tried to do this originally, but when I tested the job locally using jjb, it wasn\u0027t working.",
+      "parentUuid": "6baff557_f1bcbb28",
+      "range": {
+        "startLine": 52,
+        "startChar": 25,
+        "endLine": 52,
+        "endChar": 54
+      },
+      "revId": "5bd200c5ee1f7cfad542f443c6a5072acad74fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
