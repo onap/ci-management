@@ -12,6 +12,7 @@
     name: vnfrqts-requirements-upload-json
     project: 'vnfrqts/requirements'
     project-name: 'vnfrqts-requirements'
+    mvn-settings: 'vnfrqts-requirements-settings'
     stream:
       - 'master':
           branch: 'master'
