@@ -47,6 +47,9 @@
       - timed: 'H H * * *'
 
     builders:
+      - lf-provide-maven-settings:
+          global-settings-file: global-settings
+          settings-file: vnfrqts-requirements-settings
       - shell: '{obj:pre_script}'
       - lf-infra-create-netrc:
           server-id: ecomp-raw
