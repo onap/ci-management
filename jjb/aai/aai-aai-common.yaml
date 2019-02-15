@@ -32,7 +32,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-aai-common-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -47,7 +47,7 @@
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'

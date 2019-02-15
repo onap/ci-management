@@ -28,6 +28,6 @@
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-gallifrey-settings'

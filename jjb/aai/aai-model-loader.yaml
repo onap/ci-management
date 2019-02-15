@@ -35,7 +35,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-model-loader-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -48,6 +48,6 @@
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-model-loader-settings'

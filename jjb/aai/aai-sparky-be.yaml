@@ -34,7 +34,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-sparky-be-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -47,6 +47,6 @@
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-sparky-be-settings'

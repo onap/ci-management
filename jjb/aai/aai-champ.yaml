@@ -35,7 +35,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/champ'
     project-name: 'aai-champ'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-champ-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -48,6 +48,6 @@
     project: 'aai/champ'
     project-name: 'aai-champ'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-champ-settings'

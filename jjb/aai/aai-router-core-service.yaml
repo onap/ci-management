@@ -43,6 +43,6 @@
     project: 'aai/router-core'
     project-name: 'aai-router-core'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-router-core-settings'

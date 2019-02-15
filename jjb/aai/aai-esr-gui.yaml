@@ -36,6 +36,6 @@
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-esr-gui-settings'

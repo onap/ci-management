@@ -43,6 +43,6 @@
     project: 'aai/event-client'
     project-name: 'aai-event-client'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-event-client-settings'

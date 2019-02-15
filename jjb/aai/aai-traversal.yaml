@@ -37,7 +37,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/traversal'
     project-name: 'aai-traversal'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-traversal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -51,7 +51,7 @@
     project: 'aai/traversal'
     project-name: 'aai-traversal'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'

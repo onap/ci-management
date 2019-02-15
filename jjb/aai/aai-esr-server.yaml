@@ -49,6 +49,6 @@
     project: 'aai/esr-server'
     project-name: 'aai-esr-server'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-esr-server-settings'

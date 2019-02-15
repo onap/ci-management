@@ -31,7 +31,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'aai/cacher'
     project-name: 'aai-cacher'
-    branch: 'casablanca'
+    branch: 'master'
     mvn-settings: 'aai-cacher-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -45,8 +45,8 @@
     project: 'aai/cacher'
     project-name: 'aai-cacher'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

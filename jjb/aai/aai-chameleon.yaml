@@ -35,6 +35,6 @@
     project: 'aai/chameleon'
     project-name: 'aai-chameleon'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-chameleon-settings'

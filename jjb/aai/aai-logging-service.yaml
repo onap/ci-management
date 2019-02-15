@@ -43,6 +43,6 @@
     project: 'aai/logging-service'
     project-name: 'aai-logging-service'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-logging-service-settings'
