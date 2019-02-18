@@ -51,7 +51,7 @@ jenkins-jobs test --recursive jjb/
 
 Backup the jenkins.ini.example to jenkins.ini
 
-`cp jenkins.ini.example jenkins.ini`
+`cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini`
 
 After copying the jenkins.ini.example, modify `jenkins.ini` with your
 **Jenkins LFID username**, **API token** and **ONAP jenkins sandbox URL**
@@ -83,9 +83,9 @@ update or delete jobs in your sandbox environment.
 After you modify or create jobs in the above environment, it's good practice
 to test the job in sandbox environment before you submit this job to production CI environment.
 
-`jenkins-jobs --conf jenkins.ini test jjb/ <job-name>`
+`jenkins-jobs test jjb/ <job-name>`
 
-**Example:** `jenkins-jobs --conf jenkins.ini test jjb/ sdc-master-verify-java`
+**Example:** `jenkins-jobs test jjb/ sdc-master-verify-java`
 
 If the job you’d like to test is a template with variables in its name, it must be
 manually expanded before use. For example, the commonly used template `sdc-{stream}-verify-java`
@@ -96,7 +96,7 @@ specified JJB job name.
 
 Execute the following command to pipe-out to a directory:
 
-`jenkins-jobs --conf jenkins.ini test jjb/ <job-name> -o <directoryname>`
+`jenkins-jobs test jjb/ <job-name> -o <directoryname>`
 
 The output directory will contain files with the XML configurations.
 
@@ -107,9 +107,9 @@ outputting valid XML descriptions of Jenkins jobs. Upon successful
 verification, execute the following command to update the job to the
 Jenkins sandbox.
 
-`jenkins-jobs --conf jenkins.ini update jjb/ <job-name>`
+`jenkins-jobs update jjb/ <job-name>`
 
-**Example:** `jenkins-jobs --conf jenkins.ini update jjb/ sdc-master-verify-java`
+**Example:** `jenkins-jobs update jjb/ sdc-master-verify-java`
 
 ## Trigger jobs from Jenkins Sandbox:
 
@@ -132,9 +132,9 @@ details and the console output.
 
 Execute the following command to Delete a job from Sandbox:
 
-`jenkins-jobs --conf jenkins.ini delete jjb/ <job-name>`
+`jenkins-jobs delete jjb/ <job-name>`
 
-**Example:** `jenkins-jobs --conf jenkins.ini delete jjb/ sdc-master-verify-java`
+**Example:** `jenkins-jobs delete jjb/ sdc-master-verify-java`
 
 The above command would delete the `sdc-master-verify-java` job.
 
