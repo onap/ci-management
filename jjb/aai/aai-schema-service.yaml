@@ -33,7 +33,7 @@
       - gerrit-maven-sonar
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
-    project: 'aai/resources'
+    project: 'aai/schema-service'
     project-name: 'aai-schema-service'
     branch: 'master'
     mvn-settings: 'aai-schema-service-settings'
@@ -46,7 +46,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
-    project: 'aai/resources'
+    project: 'aai/schema-service'
     project-name: 'aai-schema-service'
     stream:
       - 'master':
