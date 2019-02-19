@@ -3,11 +3,7 @@
     name: vvp-documentation
     project-name: 'vvp-documentation'
     project: 'vvp/documentation'
-    rtdproject: 'onap'
-    stream:
-      - 'master':
-          branch: 'master'
     mvn-settings: 'vvp-documentation-settings'
-    build-node: ubuntu1604-builder-4c-4g
+    branch: master
     jobs:
-      - gerrit-tox-verify
+      - gerrit-info-yaml-verify
