@@ -8,14 +8,6 @@
           branch: 'casablanca'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
-      - 'newton':
-          path: 'newton'
-          pattern: 'newton/**'
-          pom: 'newton/pom.xml'
-      - 'newton_share':
-          path: 'newton'
-          pattern: 'share/**'
-          pom: 'newton/pom.xml'
       - 'ocata':
           path: 'ocata'
           pattern: 'ocata/**'
@@ -45,7 +37,7 @@
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:
-            !include-raw-escape: 'build-multicloud-openstack-docker-image.sh'
+            !include-raw-escape: 'build-multicloud-openstack-casablanca-docker-image.sh'
           build-node: ubuntu1604-docker-8c-8g
     files: '**'
     archive-artifacts: ''
