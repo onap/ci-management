@@ -14,14 +14,6 @@
           branch: 'master'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
-      - 'newton':
-          path: 'newton'
-          pattern: 'newton/**'
-          pom: 'newton/pom.xml'
-      - 'newton_share':
-          path: 'newton'
-          pattern: 'share/**'
-          pom: 'newton/pom.xml'
       - 'ocata':
           path: 'ocata'
           pattern: 'ocata/**'
@@ -49,6 +41,10 @@
       - 'windriver':
           path: 'windriver'
           pattern: 'windriver/**'
+          pom: 'windriver/pom.xml'
+      - 'windriver_share':
+          path: 'windriver'
+          pattern: 'share/**'
           pom: 'windriver/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
@@ -83,20 +79,6 @@
 #    files: '**'
 #    archive-artifacts: ''
 #
-- project:
-    name: multicloud-openstack-newton-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-newton'
-    branch: 'master'
-    mvn-params: '-f newton/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
 - project:
     name: multicloud-openstack-ocata-sonar
     jobs:
