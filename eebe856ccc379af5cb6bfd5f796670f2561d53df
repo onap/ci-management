@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "31be7f00_38594553",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-21T05:29:38Z",
+      "side": 1,
+      "message": "use imperative mood \"Remove\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 2,
+        "endLine": 9,
+        "endChar": 10
+      },
+      "revId": "eebe856ccc379af5cb6bfd5f796670f2561d53df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14e97a1e_c0ea99c5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-21T05:29:38Z",
+      "side": 1,
+      "message": "use imperative mood \"Rename\"",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 10
+      },
+      "revId": "eebe856ccc379af5cb6bfd5f796670f2561d53df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c0f56c57_75baa74f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-21T05:29:38Z",
+      "side": 1,
+      "message": "use imperative mood \"Disable\"",
+      "range": {
+        "startLine": 11,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 11
+      },
+      "revId": "eebe856ccc379af5cb6bfd5f796670f2561d53df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b526e20e_773f46bd",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-cdapbroker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-21T05:29:38Z",
+      "side": 1,
+      "message": "Do we need this file at all?\nIs all commented with no jobs",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 58
+      },
+      "revId": "eebe856ccc379af5cb6bfd5f796670f2561d53df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1764030_68945fa4",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-servicechange-handler.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-21T05:29:38Z",
+      "side": 1,
+      "message": "Remove instead of commenting",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 31
+      },
+      "revId": "eebe856ccc379af5cb6bfd5f796670f2561d53df",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
