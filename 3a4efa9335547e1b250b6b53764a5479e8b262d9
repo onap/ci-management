@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e59af8f4_40b97e5c",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 3239
+      },
+      "writtenOn": "2019-02-21T13:16:46Z",
+      "side": 1,
+      "message": "May be failing because of the extra spaces in yaml.",
+      "range": {
+        "startLine": 72,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 4
+      },
+      "revId": "3a4efa9335547e1b250b6b53764a5479e8b262d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "33814487_b4d049ff",
+        "filename": "jjb/policy/policy-xacml-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3239
+      },
+      "writtenOn": "2019-02-21T13:16:46Z",
+      "side": 1,
+      "message": "Here as well.",
+      "range": {
+        "startLine": 16,
+        "startChar": 45,
+        "endLine": 17,
+        "endChar": 10
+      },
+      "revId": "3a4efa9335547e1b250b6b53764a5479e8b262d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
