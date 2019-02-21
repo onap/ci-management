@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fc905f0_6d5da11b",
+        "filename": "jjb/policy/policy-xacml-pdp.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3239
+      },
+      "writtenOn": "2019-02-21T14:28:04Z",
+      "side": 1,
+      "message": "You are missing a : at the end",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "363fe59d25a2344800aa739e533985e49be986bf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
