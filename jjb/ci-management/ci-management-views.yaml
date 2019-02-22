@@ -1,0 +1,121 @@
+---
+- releng_view: &releng_view_common
+    name: releng-view-common
+    view-type: list
+    filter-executors: false
+    filter-queue: false
+    columns:
+      - status
+      - weather
+      - job
+      - last-success
+      - last-failure
+      - last-duration
+      - build-button
+      - jacoco
+      - find-bugs
+      - robot-list
+    recurse: false
+
+- project:
+    name: '00-Empty View'
+    views:
+      - common-view
+    view-name: '00-Empty View'
+    view-description: >
+      Empty job view. This is used as the default landing view to keep the
+      Jenkins UI responding better while a) under high load and b) when there
+      are a lot of jobs defined in the system
+    view-regex: ''
+
+- view:
+    name: 01-Recent
+    regex: '.*'
+    description: 'List of most recent jobs'
+    job-filters:
+      most-recent:
+        max-to-include: 25
+        check-start-time: true
+    <<: *releng_view_common
+
+- project:
+    name: All-Sonar
+    views:
+      - common-view
+    view-name: All-Sonar
+    view-regex: '^(?=.*-sonar)(?!.*-no-sonar).*'
+    view-description: 'List of Sonar jobs'
+
+- view:
+    name: CLM
+    description: 'List of CLM jobs'
+    regex: '.*-clm-.*'
+    view-type: list
+    filter-executors: false
+    filter-queue: false
+    columns:
+      - status
+      - weather
+      - job
+      - last-success
+      - last-failure
+      - last-duration
+      - build-button
+      - policy-violations
+    recurse: false
+
+- project:
+    name: CSIT
+    views:
+      - csit-view
+    view-name: CSIT
+    view-description: 'List of CSIT jobs'
+    view-regex: '^.*-csit-.*'
+
+- project:
+    name: CSIT-Verify
+    views:
+      - csit-view
+    view-name: CSIT-Verify
+    view-description: 'List of CSIT Verify jobs'
+    view-regex: '^.*-csit-verify.*'
+
+- view:
+    name: Daily-Jobs
+    views:
+      - csit-view
+    view-name: Daily-Jobs
+    view-description: 'List of Daily Jobs'
+    view-regex: '.*-daily'
+
+- view:
+    name: External-Labs
+    views:
+      - csit-view
+    view-name: External-Labs
+    view-description: 'List of External Labs jobs'
+    view-regex: '^lab-.*'
+
+- project:
+    name: Merge-Jobs
+    views:
+      - common-view
+    view-name: Merge-Jobs
+    view-description: 'List of Merge jobs'
+    view-regex: '.*-merge-.*'
+
+- project:
+    name: Thirdparty
+    views:
+      - common-view
+    view-name: Thirdparty
+    view-description: 'List of Nexus Thirdparty dependencies jobs'
+    view-regex: '.*-thirdparty-.*'
+
+- project:
+    name: Verify-Jobs
+    views:
+      - common-view
+    view-name: Verify-Jobs
+    view-description: 'List of Verify jobs'
+    view-regex: '^.*-verify-.*'
