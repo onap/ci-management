@@ -22,8 +22,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     functionality:
       - 'prh-testsuites'
     trigger_jobs:
