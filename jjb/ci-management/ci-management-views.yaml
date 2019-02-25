@@ -78,12 +78,12 @@
       - csit-view
     view-name: CSIT-Verify
     view-description: 'List of CSIT Verify jobs'
-    view-regex: '^.*-csit-verify.*'
+    view-regex: '^.*-verify-csit.*'
 
 - view:
     name: Daily-Jobs
     views:
-      - csit-view
+      - common-view
     view-name: Daily-Jobs
     view-description: 'List of Daily Jobs'
     view-regex: '.*-daily'
@@ -91,7 +91,7 @@
 - view:
     name: External-Labs
     views:
-      - csit-view
+      - common-view
     view-name: External-Labs
     view-description: 'List of External Labs jobs'
     view-regex: '^lab-.*'
