@@ -46,6 +46,10 @@
           path: 'windriver'
           pattern: 'share/**'
           pom: 'windriver/pom.xml'
+      - 'fcaps':
+          path: 'fcaps'
+          pattern: 'fcaps/**'
+          pom: 'fcaps/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -145,3 +149,17 @@
     build-node: ubuntu1604-memcached-4c-4g
     branch: 'master'
     mvn-settings: 'multicloud-openstack-settings'
+
+- project:
+    name: multicloud-openstack-fcaps-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-fcaps'
+    branch: 'master'
+    mvn-params: '-f fcaps/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
