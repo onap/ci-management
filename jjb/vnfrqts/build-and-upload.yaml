@@ -9,6 +9,7 @@
     pre_script: ''
     post_script: ''
     artifact_name: ''
+    project_id: ''
 
     project-type: freestyle
     concurrent: true
@@ -56,6 +57,7 @@
       - inject:
           properties-content: |
             ARTIFACT_NAME={artifact_name}
+            PROJECT_ID={project_id}
       - shell: '{obj:post_script}'
       - lf-provide-maven-settings-cleanup
 
