@@ -31,3 +31,11 @@
     project-name: 'dcaegen2-platform-deployment-handler'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-deployment-handler-settings'
+
+- project:
+    name: dcaegen2-platform-deployment-handler-info
+    project-name: dcaegen2-platform-deployment-handler
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/deployment-handler
+    branch: master

@@ -35,3 +35,11 @@
     branch: 'master'
     build-node: ubuntu1604-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
+
+- project:
+    name: dcaegen2-collectors-hv-ves-info
+    project-name: dcaegen2-collectors-hv-ves
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors/hv-ves
+    branch: master

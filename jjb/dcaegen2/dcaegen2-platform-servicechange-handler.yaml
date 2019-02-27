@@ -36,3 +36,11 @@
     project-name: 'dcaegen2-platform-servicechange-handler'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
+
+- project:
+    name: dcaegen2-platform-servicechange-handler-info
+    project-name: dcaegen2-platform-servicechange-handler
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/servicechange-handler
+    branch: master

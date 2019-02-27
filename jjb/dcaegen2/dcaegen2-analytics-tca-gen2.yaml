@@ -47,3 +47,11 @@
     project-name: 'dcaegen2-analytics-tca-gen2'
     branch: 'master'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+
+- project:
+    name: dcaegen2-analytics-tca-gen2-info
+    project-name: dcaegen2-analytics-tca-gen2
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/analytics/tca-gen2
+    branch: master

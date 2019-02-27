@@ -35,3 +35,11 @@
     project-name: 'dcaegen2'
     branch: 'master'
     mvn-settings: 'dcaegen2-settings'
+
+- project:
+    name: dcaegen2-info
+    project-name: dcaegen2
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2
+    branch: master

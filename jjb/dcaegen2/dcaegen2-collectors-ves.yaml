@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-collectors-ves'
     branch: 'master'
     mvn-settings: 'dcaegen2-collectors-ves-settings'
+
+- project:
+    name: dcaegen2-collectors-ves-info
+    project-name: dcaegen2-collectors-ves
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors/ves
+    branch: master

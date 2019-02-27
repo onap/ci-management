@@ -45,3 +45,11 @@
     project-name: 'dcaegen2-services-mapper'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-mapper-settings'
+
+- project:
+    name: dcaegen2-services-mapper-info
+    project-name: dcaegen2-services-mapper
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/services/mapper
+    branch: master

@@ -47,3 +47,11 @@
     project-name: 'dcaegen2-services-pm-mapper'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+
+- project:
+    name: dcaegen2-services-pm-mapper-info
+    project-name: dcaegen2-services-pm-mapper
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/services/pm-mapper
+    branch: master

@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-services-heartbeat'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-heartbeat-settings'
+
+- project:
+    name: dcaegen2-services-heartbeat-info
+    project-name: dcaegen2-services-heartbeat
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/services/heartbeat
+    branch: master

@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-collectors-restconf'
     branch: 'master'
     mvn-settings: 'dcaegen2-collectors-restconf-settings'
+
+- project:
+    name: dcaegen2-collectors-restconf-info
+    project-name: dcaegen2-collectors-restconf
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors/restconf
+    branch: master

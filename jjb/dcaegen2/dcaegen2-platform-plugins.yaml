@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-platform-plugins'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-plugins-settings'
+
+- project:
+    name: dcaegen2-platform-plugins-info
+    project-name: dcaegen2-platform-plugins
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/plugins
+    branch: master

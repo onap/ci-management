@@ -46,3 +46,11 @@
     branch: 'master'
     build-node: ubuntu1604-builder-4c-4g
     mvn-settings: 'dcaegen2-analytics-tca-settings'
+
+- project:
+    name: dcaegen2-analytics-tca-info
+    project-name: dcaegen2-analytics-tca
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/analytics/tca
+    branch: master
