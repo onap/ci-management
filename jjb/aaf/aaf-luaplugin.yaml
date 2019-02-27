@@ -8,3 +8,11 @@
     project: 'aaf/luaplugin'
     branch: 'master'
     mvn-settings: 'aaf-luaplugin-settings'
+
+- project:
+    name: aaf-luaplugin-info
+    project-name: aaf-luaplugin
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aaf/luaplugin
+    branch: master

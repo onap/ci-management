@@ -116,3 +116,11 @@
     project-name: 'aaf-cadi'
     branch: 'master'
     mvn-settings: 'aaf-cadi-settings'
+
+- project:
+    name: aaf-cadi-info
+    project-name: aaf-cadi
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aaf/cadi
+    branch: master
