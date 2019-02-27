@@ -41,3 +41,11 @@
     project-name: 'dcaegen2-services-sdk'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-sdk-settings'
+
+- project:
+    name: dcaegen2-services-sdk-info
+    project-name: dcaegen2-services-sdk
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/services/sdk
+    branch: master

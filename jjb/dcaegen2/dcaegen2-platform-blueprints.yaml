@@ -31,3 +31,11 @@
     project-name: 'dcaegen2-platform-blueprints'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-blueprints-settings'
+
+- project:
+    name: dcaegen2-platform-blueprints-info
+    project-name: dcaegen2-platform-blueprints
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/blueprints
+    branch: master

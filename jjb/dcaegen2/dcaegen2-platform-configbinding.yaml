@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-platform-configbinding'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-configbinding-settings'
+
+- project:
+    name: dcaegen2-platform-configbinding-info
+    project-name: dcaegen2-platform-configbinding
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/configbinding
+    branch: master

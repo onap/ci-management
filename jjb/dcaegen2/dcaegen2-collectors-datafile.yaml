@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-collectors-datafile'
     branch: 'master'
     mvn-settings: 'dcaegen2-collectors-datafile-settings'
+
+- project:
+    name: dcaegen2-collectors-datafile-info
+    project-name: dcaegen2-collectors-datafile
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors/datafile
+    branch: master

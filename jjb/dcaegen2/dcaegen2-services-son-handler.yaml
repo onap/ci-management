@@ -41,3 +41,11 @@
     project-name: 'dcaegen2-services-son-handler'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-son-handler-settings'
+
+- project:
+    name: dcaegen2-services-son-handler-info
+    project-name: dcaegen2-services-son-handler
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/services/son-handler
+    branch: master

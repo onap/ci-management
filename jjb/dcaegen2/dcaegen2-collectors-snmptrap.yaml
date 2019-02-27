@@ -44,3 +44,11 @@
     project-name: 'dcaegen2-collectors-snmptrap'
     branch: 'master'
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
+
+- project:
+    name: dcaegen2-collectors-snmptrap-info
+    project-name: dcaegen2-collectors-snmptrap
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors/snmptrap
+    branch: master

@@ -49,3 +49,11 @@
     project-name: 'dcaegen2-platform-inventory-api'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-inventory-api-settings'
+
+- project:
+    name: dcaegen2-platform-inventory-api-info
+    project-name: dcaegen2-platform-inventory-api
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform/inventory-api
+    branch: master
