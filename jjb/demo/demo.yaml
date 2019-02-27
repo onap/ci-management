@@ -35,3 +35,11 @@
     mvn-settings: 'demo-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: demo-info
+    project-name: demo
+    jobs:
+      - gerrit-info-yaml-verify
+    project: demo
+    branch: master
