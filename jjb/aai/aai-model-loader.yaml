@@ -51,3 +51,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-model-loader-settings'
+
+- project:
+    name: aai-model-loader-info
+    project-name: aai-model-loader
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/model-loader
+    branch: master

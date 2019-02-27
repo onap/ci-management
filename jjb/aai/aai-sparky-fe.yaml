@@ -16,3 +16,11 @@
     mvn-settings: 'aai-sparky-fe-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aai-sparky-fe-info
+    project-name: aai-sparky-fe
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/sparky-fe
+    branch: master

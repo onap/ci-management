@@ -18,3 +18,11 @@
     mvn-settings: 'aai-graphgraph-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: aai-graphgraph-info
+    project-name: aai-graphgraph
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/graphgraph
+    branch: master

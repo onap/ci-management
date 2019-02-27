@@ -50,3 +50,11 @@
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 
+
+- project:
+    name: aai-cacher-info
+    project-name: aai-cacher
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/cacher
+    branch: master

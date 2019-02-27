@@ -52,3 +52,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-esr-server-settings'
+
+- project:
+    name: aai-esr-server-info
+    project-name: aai-esr-server
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/esr-server
+    branch: master

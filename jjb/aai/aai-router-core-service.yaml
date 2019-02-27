@@ -46,3 +46,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-router-core-settings'
+
+- project:
+    name: aai-router-core-info
+    project-name: aai-router-core
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/router-core
+    branch: master

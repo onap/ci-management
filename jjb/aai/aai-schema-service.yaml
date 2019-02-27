@@ -53,3 +53,11 @@
           branch: 'master'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-schema-service-info
+    project-name: aai-schema-service
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/schema-service
+    branch: master

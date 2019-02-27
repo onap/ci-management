@@ -39,3 +39,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-esr-gui-settings'
+
+- project:
+    name: aai-esr-gui-info
+    project-name: aai-esr-gui
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/esr-gui
+    branch: master
