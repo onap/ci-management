@@ -44,3 +44,11 @@
     project-name: 'policy-parent'
     branch: 'master'
     mvn-settings: 'policy-parent-settings'
+
+- project:
+    name: policy-parent-info
+    project-name: policy-parent
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/parent
+    branch: master

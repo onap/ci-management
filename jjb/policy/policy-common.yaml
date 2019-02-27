@@ -57,3 +57,11 @@
     project-name: 'policy-common'
     branch: 'master'
     mvn-settings: 'policy-common-settings'
+
+- project:
+    name: policy-common-info
+    project-name: policy-common
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/common
+    branch: master

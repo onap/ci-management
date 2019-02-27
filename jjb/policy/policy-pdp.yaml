@@ -37,3 +37,11 @@
     project-name: 'policy-pdp'
     branch: 'master'
     mvn-settings: 'policy-pdp-settings'
+
+- project:
+    name: policy-pdp-info
+    project-name: policy-pdp
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/pdp
+    branch: master

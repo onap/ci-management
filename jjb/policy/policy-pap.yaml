@@ -46,3 +46,11 @@
     project-name: 'policy-pap'
     branch: 'master'
     mvn-settings: 'policy-pap-settings'
+
+- project:
+    name: policy-pap-info
+    project-name: policy-pap
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/pap
+    branch: master

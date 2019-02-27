@@ -37,3 +37,11 @@
     project-name: 'policy-models'
     branch: 'master'
     mvn-settings: 'policy-models-settings'
+
+- project:
+    name: policy-models-info
+    project-name: policy-models
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/models
+    branch: master

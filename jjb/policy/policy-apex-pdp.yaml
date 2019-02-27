@@ -81,3 +81,11 @@
     project-name: 'policy-apex-pdp'
     branch: 'master'
     mvn-settings: 'policy-apex-pdp-settings'
+
+- project:
+    name: policy-apex-pdp-info
+    project-name: policy-apex-pdp
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/apex-pdp
+    branch: master

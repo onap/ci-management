@@ -77,3 +77,11 @@
     branch: 'master'
     mvn-settings: 'policy-engine-settings'
     build-node: 'ubuntu1604-builder-4c-4g'
+
+- project:
+    name: policy-engine-info
+    project-name: policy-engine
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/engine
+    branch: master
