@@ -55,3 +55,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'so-settings'
+
+- project:
+    name: so-info
+    project-name: so
+    jobs:
+      - gerrit-info-yaml-verify
+    project: so
+    branch: master
