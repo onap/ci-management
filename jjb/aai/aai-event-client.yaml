@@ -46,3 +46,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-event-client-settings'
+
+- project:
+    name: aai-event-client-info
+    project-name: aai-event-client
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/event-client
+    branch: master

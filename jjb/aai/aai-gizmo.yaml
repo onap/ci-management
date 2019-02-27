@@ -51,3 +51,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-gizmo-settings'
+
+- project:
+    name: aai-gizmo-info
+    project-name: aai-gizmo
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/gizmo
+    branch: master

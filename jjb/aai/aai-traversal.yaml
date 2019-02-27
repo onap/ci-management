@@ -55,3 +55,11 @@
           branch: 'master'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-traversal-info
+    project-name: aai-traversal
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/traversal
+    branch: master

@@ -51,3 +51,11 @@
           branch: 'master'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-aai-common-info
+    project-name: aai-aai-common
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/aai-common
+    branch: master

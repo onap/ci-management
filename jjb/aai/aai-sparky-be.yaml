@@ -50,3 +50,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-sparky-be-settings'
+
+- project:
+    name: aai-sparky-be-info
+    project-name: aai-sparky-be
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/sparky-be
+    branch: master

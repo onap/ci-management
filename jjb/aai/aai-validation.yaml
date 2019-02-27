@@ -52,3 +52,11 @@
           branch: 'master'
     mvn-settings: 'aai-validation-settings'
 
+
+- project:
+    name: aai-validation-info
+    project-name: aai-validation
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/validation
+    branch: master

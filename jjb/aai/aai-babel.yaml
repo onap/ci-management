@@ -53,3 +53,11 @@
     mvn-settings: 'aai-babel-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
+
+- project:
+    name: aai-babel-info
+    project-name: aai-babel
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/babel
+    branch: master

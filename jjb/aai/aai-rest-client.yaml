@@ -46,3 +46,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-rest-client-settings'
+
+- project:
+    name: aai-rest-client-info
+    project-name: aai-rest-client
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/rest-client
+    branch: master

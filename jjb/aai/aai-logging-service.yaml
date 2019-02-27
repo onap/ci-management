@@ -46,3 +46,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-logging-service-settings'
+
+- project:
+    name: aai-logging-service-info
+    project-name: aai-logging-service
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/logging-service
+    branch: master
