@@ -45,3 +45,11 @@
     project-name: 'sdc-jtosca'
     branch: 'master'
     mvn-settings: 'sdc-jtosca-settings'
+
+- project:
+    name: sdc-jtosca-info
+    project-name: sdc-jtosca
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/jtosca
+    branch: master
