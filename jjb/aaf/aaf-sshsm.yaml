@@ -19,3 +19,11 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: aaf-sshsm-info
+    project-name: aaf-sshsm
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aaf/sshsm
+    branch: master
