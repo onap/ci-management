@@ -32,3 +32,11 @@
     project-name: 'oparent'
     branch: 'master'
     mvn-settings: 'oparent-settings'
+
+- project:
+    name: oparent-info
+    project-name: oparent
+    jobs:
+      - gerrit-info-yaml-verify
+    project: oparent
+    branch: master
