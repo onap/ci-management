@@ -62,3 +62,11 @@
     mvn-settings: 'clamp-settings'
     build-node: ubuntu1604-docker-8c-8g
     build-timeout: 120
+
+- project:
+    name: clamp-info
+    project-name: clamp
+    jobs:
+      - gerrit-info-yaml-verify
+    project: clamp
+    branch: master
