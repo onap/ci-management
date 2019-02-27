@@ -81,3 +81,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vid-settings'
+
+- project:
+    name: vid-info
+    project-name: vid
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vid
+    branch: master
