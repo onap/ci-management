@@ -92,3 +92,11 @@
 #    docker-pom: 'pom.xml'
 #    mvn-profile: docker
 #    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
+    name: ccsdk-apps-info
+    project-name: ccsdk-apps
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/apps
+    branch: master

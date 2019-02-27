@@ -51,3 +51,11 @@
     mvn-settings: 'ccsdk-sli-core-settings'
     build-node: ubuntu1604-builder-4c-4g
 
+
+- project:
+    name: ccsdk-sli-core-info
+    project-name: ccsdk-sli-core
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/sli/core
+    branch: master

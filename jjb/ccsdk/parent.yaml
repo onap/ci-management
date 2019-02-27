@@ -37,3 +37,11 @@
     mvn-settings: 'ccsdk-parent-settings'
     build-node: ubuntu1604-builder-4c-4g
 
+
+- project:
+    name: ccsdk-parent-info
+    project-name: ccsdk-parent
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/parent
+    branch: master

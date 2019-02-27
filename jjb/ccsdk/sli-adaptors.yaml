@@ -51,3 +51,11 @@
     mvn-settings: 'ccsdk-sli-adaptors-settings'
     build-node: ubuntu1604-builder-4c-4g
 
+
+- project:
+    name: ccsdk-sli-adaptors-info
+    project-name: ccsdk-sli-adaptors
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/sli/adaptors
+    branch: master

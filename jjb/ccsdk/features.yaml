@@ -50,3 +50,11 @@
           branch: 'casablanca'
     mvn-settings: 'ccsdk-features-settings'
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: ccsdk-features-info
+    project-name: ccsdk-features
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/features
+    branch: master
