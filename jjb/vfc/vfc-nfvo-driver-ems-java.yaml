@@ -49,3 +49,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-ems-settings'
+
+- project:
+    name: vfc-nfvo-driver-ems-info
+    project-name: vfc-nfvo-driver-ems
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/driver/ems
+    branch: master

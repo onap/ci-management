@@ -42,3 +42,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-resmanagement-settings'
+
+- project:
+    name: vfc-nfvo-resmanagement-info
+    project-name: vfc-nfvo-resmanagement
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/resmanagement
+    branch: master
