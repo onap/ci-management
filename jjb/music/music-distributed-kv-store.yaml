@@ -17,3 +17,11 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: music-distributed-kv-store-info
+    project-name: music-distributed-kv-store
+    jobs:
+      - gerrit-info-yaml-verify
+    project: music/distributed-kv-store
+    branch: master
