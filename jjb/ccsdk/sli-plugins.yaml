@@ -50,3 +50,11 @@
           branch: 'casablanca'
     mvn-settings: 'ccsdk-sli-plugins-settings'
 
+
+- project:
+    name: ccsdk-sli-plugins-info
+    project-name: ccsdk-sli-plugins
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/sli/plugins
+    branch: master

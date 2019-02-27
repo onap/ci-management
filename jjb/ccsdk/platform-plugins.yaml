@@ -52,3 +52,11 @@
     mvn-settings: 'ccsdk-platform-plugins-settings'
     build-node: centos7-redis-4c-4g
 
+
+- project:
+    name: ccsdk-platform-plugins-info
+    project-name: ccsdk-platform-plugins
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/platform/plugins
+    branch: master
