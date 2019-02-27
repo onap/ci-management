@@ -65,3 +65,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-wfengine-settings'
+
+- project:
+    name: vfc-nfvo-wfengine-info
+    project-name: vfc-nfvo-wfengine
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/wfengine
+    branch: master

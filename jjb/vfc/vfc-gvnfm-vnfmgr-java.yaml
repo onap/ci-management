@@ -49,3 +49,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
+
+- project:
+    name: vfc-gvnfm-vnfmgr-info
+    project-name: vfc-gvnfm-vnfmgr
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/gvnfm/vnfmgr
+    branch: master

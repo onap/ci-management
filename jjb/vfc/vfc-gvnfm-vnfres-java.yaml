@@ -50,3 +50,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfres-settings'
+
+- project:
+    name: vfc-gvnfm-vnfres-info
+    project-name: vfc-gvnfm-vnfres
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/gvnfm/vnfres
+    branch: master

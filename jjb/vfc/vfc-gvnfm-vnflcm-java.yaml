@@ -55,3 +55,11 @@
     build-node: centos7-redis-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnflcm-settings'
+
+- project:
+    name: vfc-gvnfm-vnflcm-info
+    project-name: vfc-gvnfm-vnflcm
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/gvnfm/vnflcm
+    branch: master

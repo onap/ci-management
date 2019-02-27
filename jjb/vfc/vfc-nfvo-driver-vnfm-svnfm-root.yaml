@@ -18,3 +18,11 @@
       - '{project-name}-{stream}-release-version-profile-java-daily'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: vfc-nfvo-driver-svnfm-root-info
+    project-name: vfc-nfvo-driver-svnfm-root
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/driver/vnfm/svnfm
+    branch: master
