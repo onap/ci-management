@@ -47,3 +47,11 @@
       - shell: !include-raw-escape: oneclick-config-make-tar.sh
       - shell: !include-raw-escape: oneclick-config-build-docker-image.sh
       - shell: !include-raw-escape: ../include-docker-push.sh
+
+- project:
+    name: oomconfig-info
+    project-name: oomconfig
+    jobs:
+      - gerrit-info-yaml-verify
+    project: oom
+    branch: master
