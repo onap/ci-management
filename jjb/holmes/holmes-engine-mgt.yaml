@@ -42,3 +42,11 @@
     project-name: 'holmes-engine-management'
     branch: 'master'
     mvn-settings: 'holmes-engine-management-settings'
+
+- project:
+    name: holmes-engine-management-info
+    project-name: holmes-engine-management
+    jobs:
+      - gerrit-info-yaml-verify
+    project: holmes/engine-management
+    branch: master
