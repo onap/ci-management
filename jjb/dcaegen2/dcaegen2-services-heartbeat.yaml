@@ -38,9 +38,12 @@
     name: dcaegen2-services-heartbeat-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    cron: '@daily'
+#    nexus-iq-namespace: 'onap-'
     project: dcaegen2/services/heartbeat
     build-node: ubuntu1604-docker-8c-8g
     project-name: 'dcaegen2-services-heartbeat'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-heartbeat-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
