@@ -25,3 +25,11 @@
           branch: 'beijing'
       - casablanca:
           branch: 'casablanca'
+
+- project:
+    name: doc-info
+    project-name: doc
+    jobs:
+      - gerrit-info-yaml-verify
+    project: doc
+    branch: master
