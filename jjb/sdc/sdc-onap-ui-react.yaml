@@ -36,3 +36,11 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-onap-ui-react-info
+    project-name: sdc-onap-ui-react
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/onap-ui-react
+    branch: master

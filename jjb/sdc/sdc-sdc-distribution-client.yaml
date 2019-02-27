@@ -45,3 +45,11 @@
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
+
+- project:
+    name: sdc-sdc-distribution-client-info
+    project-name: sdc-sdc-distribution-client
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-distribution-client
+    branch: master

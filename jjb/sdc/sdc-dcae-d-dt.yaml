@@ -64,3 +64,11 @@
     build-node: ubuntu1604-builder-4c-2g
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-dt-settings'
+
+- project:
+    name: sdc-dcae-d-dt-info
+    project-name: sdc-dcae-d-dt
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/dcae-d/dt
+    branch: master

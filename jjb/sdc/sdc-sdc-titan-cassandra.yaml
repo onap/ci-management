@@ -31,3 +31,11 @@
     project-name: 'sdc-sdc-titan-cassandra'
     branch: 'master'
     mvn-settings: 'sdc-sdc-titan-cassandra-settings'
+
+- project:
+    name: sdc-sdc-titan-cassandra-info
+    project-name: sdc-sdc-titan-cassandra
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-titan-cassandra
+    branch: master
