@@ -36,3 +36,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'usecase-ui-settings'
+
+- project:
+    name: usecase-ui-info
+    project-name: usecase-ui
+    jobs:
+      - gerrit-info-yaml-verify
+    project: usecase-ui
+    branch: master
