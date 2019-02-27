@@ -44,3 +44,11 @@
     project-name: 'appc'
     branch: 'master'
     mvn-settings: 'appc-settings'
+
+- project:
+    name: appc-info
+    project-name: appc
+    jobs:
+      - gerrit-info-yaml-verify
+    project: appc
+    branch: master

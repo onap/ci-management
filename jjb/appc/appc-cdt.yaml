@@ -26,3 +26,11 @@
     branch: 'master'
     mvn-settings: 'appc-cdt-settings'
 
+
+- project:
+    name: appc-cdt-info
+    project-name: appc-cdt
+    jobs:
+      - gerrit-info-yaml-verify
+    project: appc/cdt
+    branch: master

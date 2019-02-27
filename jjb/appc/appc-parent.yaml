@@ -19,3 +19,11 @@
           branch: 'master'
     mvn-settings: 'appc-parent-settings'
     build-node: ubuntu1604-builder-2c-1g
+
+- project:
+    name: appc-parent-info
+    project-name: appc-parent
+    jobs:
+      - gerrit-info-yaml-verify
+    project: appc/parent
+    branch: master
