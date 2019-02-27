@@ -20,5 +20,6 @@
     jobs:
       - '{project-name}-{stream}-build-and-upload':
           pre_script: !include-raw-escape: pre-build-needs.sh
-          artifact_name: docs/data/needs.json
+          artifact_name: needs.json
+          project_id: org.onap.vnfrqts.requirements
           post_script: !include-raw-escape: post-upload-artifact.sh
