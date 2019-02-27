@@ -68,3 +68,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'sdnc-oam-settings'
+
+- project:
+    name: sdnc-oam-info
+    project-name: sdnc-oam
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdnc/oam
+    branch: master

@@ -93,3 +93,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'sdnc-apps-settings'
+
+- project:
+    name: sdnc-apps-info
+    project-name: sdnc-apps
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdnc/apps
+    branch: master
