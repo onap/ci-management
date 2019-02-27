@@ -47,3 +47,11 @@
     project-name: 'dmaap-datarouter'
     branch: 'master'
     mvn-settings: 'dmaap-datarouter-settings'
+
+- project:
+    name: dmaap-datarouter-info
+    project-name: dmaap-datarouter
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/datarouter
+    branch: master

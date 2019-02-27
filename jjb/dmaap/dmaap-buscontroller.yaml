@@ -43,3 +43,11 @@
     project-name: 'dmaap-buscontroller'
     branch: 'master'
     mvn-settings: 'dmaap-buscontroller-settings'
+
+- project:
+    name: dmaap-buscontroller-info
+    project-name: dmaap-buscontroller
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/buscontroller
+    branch: master

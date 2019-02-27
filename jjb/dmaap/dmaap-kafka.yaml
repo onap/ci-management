@@ -23,3 +23,11 @@
     mvn-settings: 'dmaap-kafka11aaf-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dmaap-kafka-info
+    project-name: dmaap-kafka
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/kafka11aaf
+    branch: master
