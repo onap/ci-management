@@ -69,3 +69,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
+
+- project:
+    name: sdc-sdc-workflow-designer-info
+    project-name: sdc-sdc-workflow-designer
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-workflow-designer
+    branch: master
