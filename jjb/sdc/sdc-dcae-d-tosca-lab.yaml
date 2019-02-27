@@ -51,3 +51,11 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-dcae-d-tosca-lab-info
+    project-name: sdc-dcae-d-tosca-lab
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/dcae-d/tosca-lab
+    branch: master

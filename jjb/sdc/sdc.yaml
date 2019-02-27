@@ -96,3 +96,11 @@
     build-node: ubuntu1604-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
+
+- project:
+    name: sdc-info
+    project-name: sdc
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc
+    branch: master

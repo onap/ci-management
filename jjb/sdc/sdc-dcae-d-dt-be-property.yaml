@@ -38,3 +38,11 @@
     project-name: 'sdc-dcae-d-dt-be-property'
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'
+
+- project:
+    name: sdc-dcae-d-dt-be-property-info
+    project-name: sdc-dcae-d-dt-be-property
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/dcae-d/dt-be-property
+    branch: master
