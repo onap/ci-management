@@ -45,3 +45,11 @@
 #    files: '**'
 #    archive-artifacts: ''
 #    build-node: ubuntu1604-docker-arm64-4c-2g
+
+- project:
+    name: multicloud-k8s-info
+    project-name: multicloud-k8s
+    jobs:
+      - gerrit-info-yaml-verify
+    project: multicloud/k8s
+    branch: master

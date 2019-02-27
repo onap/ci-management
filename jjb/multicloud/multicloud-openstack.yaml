@@ -185,3 +185,11 @@
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-openstack-info
+    project-name: multicloud-openstack
+    jobs:
+      - gerrit-info-yaml-verify
+    project: multicloud/openstack
+    branch: master

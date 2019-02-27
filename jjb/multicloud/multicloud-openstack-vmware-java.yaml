@@ -71,3 +71,11 @@
     project-name: 'multicloud-openstack-vmware'
     branch: 'master'
     mvn-settings: 'multicloud-openstack-vmware-settings'
+
+- project:
+    name: multicloud-openstack-vmware-info
+    project-name: multicloud-openstack-vmware
+    jobs:
+      - gerrit-info-yaml-verify
+    project: multicloud/openstack/vmware
+    branch: master
