@@ -35,3 +35,11 @@
 #    archive-artifacts: ''
 #    build-node: ubuntu1604-docker-arm64-4c-2g
 #    maven-version: 'mvn35'
+
+- project:
+    name: sdc-sdc-docker-base-info
+    project-name: sdc-sdc-docker-base
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-docker-base
+    branch: master

@@ -36,3 +36,11 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-sdc-pubsub-info
+    project-name: sdc-sdc-pubsub
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-pubsub
+    branch: master

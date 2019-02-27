@@ -62,3 +62,11 @@
     project-name: 'sdc-dcae-d-dt-be-main'
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-dt-be-main-settings'
+
+- project:
+    name: sdc-dcae-d-dt-be-main-info
+    project-name: sdc-dcae-d-dt-be-main
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/dcae-d/dt-be-main
+    branch: master
