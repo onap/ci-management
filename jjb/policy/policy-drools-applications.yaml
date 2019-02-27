@@ -67,3 +67,11 @@
     project-name: 'policy-drools-applications'
     branch: 'master'
     mvn-settings: 'policy-drools-applications-settings'
+
+- project:
+    name: policy-drools-applications-info
+    project-name: policy-drools-applications
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/drools-applications
+    branch: master

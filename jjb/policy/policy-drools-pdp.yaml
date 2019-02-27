@@ -76,3 +76,11 @@
     project-name: 'policy-drools-pdp'
     branch: 'master'
     mvn-settings: 'policy-drools-pdp-settings'
+
+- project:
+    name: policy-drools-pdp-info
+    project-name: policy-drools-pdp
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/drools-pdp
+    branch: master

@@ -46,3 +46,11 @@
     project-name: 'policy-api'
     branch: 'master'
     mvn-settings: 'policy-api-settings'
+
+- project:
+    name: policy-api-info
+    project-name: policy-api
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/api
+    branch: master
