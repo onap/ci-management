@@ -61,3 +61,11 @@
     project-name: 'msb-discovery'
     branch: 'master'
     mvn-settings: 'msb-discovery-settings'
+
+- project:
+    name: msb-discovery-info
+    project-name: msb-discovery
+    jobs:
+      - gerrit-info-yaml-verify
+    project: msb/discovery
+    branch: master
