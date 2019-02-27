@@ -44,3 +44,11 @@
     project-name: 'holmes-common'
     branch: 'master'
     mvn-settings: 'holmes-common-settings'
+
+- project:
+    name: holmes-common-info
+    project-name: holmes-common
+    jobs:
+      - gerrit-info-yaml-verify
+    project: holmes/common
+    branch: master
