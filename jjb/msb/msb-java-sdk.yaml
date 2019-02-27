@@ -37,3 +37,11 @@
     project-name: 'msb-java-sdk'
     branch: 'master'
     mvn-settings: 'msb-java-sdk-settings'
+
+- project:
+    name: msb-java-sdk-info
+    project-name: msb-java-sdk
+    jobs:
+      - gerrit-info-yaml-verify
+    project: msb/java-sdk
+    branch: master

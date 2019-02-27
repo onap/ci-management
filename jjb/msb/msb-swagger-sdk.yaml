@@ -37,3 +37,11 @@
     project-name: 'msb-swagger-sdk'
     branch: 'master'
     mvn-settings: 'msb-swagger-sdk-settings'
+
+- project:
+    name: msb-swagger-sdk-info
+    project-name: msb-swagger-sdk
+    jobs:
+      - gerrit-info-yaml-verify
+    project: msb/swagger-sdk
+    branch: master

@@ -68,3 +68,11 @@
     project-name: 'msb-apigateway'
     branch: 'master'
     mvn-settings: 'msb-apigateway-settings'
+
+- project:
+    name: msb-apigateway-info
+    project-name: msb-apigateway
+    jobs:
+      - gerrit-info-yaml-verify
+    project: msb/apigateway
+    branch: master
