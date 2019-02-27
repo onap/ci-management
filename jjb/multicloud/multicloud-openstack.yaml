@@ -145,3 +145,11 @@
     build-node: ubuntu1604-memcached-4c-4g
     branch: 'master'
     mvn-settings: 'multicloud-openstack-settings'
+
+- project:
+    name: multicloud-openstack-info
+    project-name: multicloud-openstack
+    jobs:
+      - gerrit-info-yaml-verify
+    project: multicloud/openstack
+    branch: master
