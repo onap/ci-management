@@ -57,3 +57,11 @@
     build-node: ubuntu1604-docker-8c-8g
     branch: 'master'
     mvn-settings: 'modeling-toscaparsers-settings'
+
+- project:
+    name: modeling-toscaparsers-javatoscachecker-info
+    project-name: modeling-toscaparsers-javatoscachecker
+    jobs:
+      - gerrit-info-yaml-verify
+    project: modeling/toscaparsers
+    branch: master
