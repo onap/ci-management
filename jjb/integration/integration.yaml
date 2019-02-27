@@ -41,3 +41,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'integration-settings'
+
+- project:
+    name: integration-info
+    project-name: integration
+    jobs:
+      - gerrit-info-yaml-verify
+    project: integration
+    branch: master

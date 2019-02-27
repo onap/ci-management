@@ -14,3 +14,11 @@
           branch: 'master'
     mvn-settings: 'integration-devtool-settings'
     build-node: ubuntu1604-builder-2c-1g
+
+- project:
+    name: integration-devtool-info
+    project-name: integration-devtool
+    jobs:
+      - gerrit-info-yaml-verify
+    project: integration/devtool
+    branch: master
