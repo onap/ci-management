@@ -15,3 +15,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'testsuite-python-testing-utils-settings'
+
+- project:
+    name: testsuite-python-testing-utils-info
+    project-name: testsuite-python-testing-utils
+    jobs:
+      - gerrit-info-yaml-verify
+    project: testsuite/python-testing-utils
+    branch: master
