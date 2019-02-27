@@ -80,3 +80,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'optf-osdf-settings'
+
+- project:
+    name: optf-osdf-info
+    project-name: optf-osdf
+    jobs:
+      - gerrit-info-yaml-verify
+    project: optf/osdf
+    branch: master
