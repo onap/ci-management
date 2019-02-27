@@ -42,3 +42,11 @@
     project-name: 'holmes-rule-management'
     branch: 'master'
     mvn-settings: 'holmes-rule-management-settings'
+
+- project:
+    name: holmes-rule-management-info
+    project-name: holmes-rule-management
+    jobs:
+      - gerrit-info-yaml-verify
+    project: holmes/rule-management
+    branch: master

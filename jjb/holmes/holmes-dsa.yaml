@@ -42,3 +42,11 @@
     project-name: 'holmes-dsa'
     branch: 'master'
     mvn-settings: 'holmes-dsa-settings'
+
+- project:
+    name: holmes-dsa-info
+    project-name: holmes-dsa
+    jobs:
+      - gerrit-info-yaml-verify
+    project: holmes/dsa
+    branch: master
