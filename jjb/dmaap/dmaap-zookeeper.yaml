@@ -28,3 +28,11 @@
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
     build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: dmaap-zookeeper-info
+    project-name: dmaap-zookeeper
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/zookeeper
+    branch: master
