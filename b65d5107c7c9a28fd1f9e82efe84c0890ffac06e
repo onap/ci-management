@@ -22,6 +22,30 @@
       "revId": "b65d5107c7c9a28fd1f9e82efe84c0890ffac06e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2eff7c1_944a9415",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-02-28T21:56:24Z",
+      "side": 1,
+      "message": "No, unfortunatelly. The CLM job will run on the root of the project. \nYou can try specifying the pom.xml file location with mvn-params in case that location has its own pom.xml\nI believe is something like this:\n\nmvn-params: -f otherPomFile-location.xml",
+      "parentUuid": "dc6a4df3_3451d11e",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 60
+      },
+      "revId": "b65d5107c7c9a28fd1f9e82efe84c0890ffac06e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
