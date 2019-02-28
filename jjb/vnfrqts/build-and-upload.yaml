@@ -46,6 +46,10 @@
 
     triggers:
       - timed: 'H H * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
 
     builders:
       - lf-provide-maven-settings:
