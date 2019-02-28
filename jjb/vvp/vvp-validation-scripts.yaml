@@ -44,5 +44,7 @@
           branch: 'master'
     jobs:
       - '{project-name}-{stream}-build-and-upload':
-          script:
-              !include-raw-escape: 'build-csv.sh'
+          pre_script: !include-raw-escape: pre-build-csv.sh
+          artifact_name: tracability.csv rst.csv
+          project_id: org.onap.vvp.validation.scripts
+          post_script: !include-raw-escape: ../vnfrqts/post-upload-artifact.sh
