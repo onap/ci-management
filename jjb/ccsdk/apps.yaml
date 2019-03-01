@@ -3,7 +3,9 @@
     name: ccsdk-project-view
     project-name: ccsdk
     views:
-      - project-view
+      - common-view
+    view-name: ccsdk
+    view-regex: '(?!.*-maven-stage-)(ccsdk-.*)$'
 
 - project:
     name: ccsdk-apps
