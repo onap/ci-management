@@ -50,3 +50,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-spike-settings'
+
+- project:
+    name: aai-spike-info
+    project-name: aai-spike
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/spike
+    branch: master

@@ -50,3 +50,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-data-router-settings'
+
+- project:
+    name: aai-data-router-info
+    project-name: aai-data-router
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/data-router
+    branch: master

@@ -55,3 +55,11 @@
           branch: 'master'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-graphadmin-info
+    project-name: aai-graphadmin
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/graphadmin
+    branch: master

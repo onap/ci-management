@@ -55,3 +55,11 @@
           branch: 'master'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
+
+- project:
+    name: aai-resources-info
+    project-name: aai-resources
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/resources
+    branch: master

@@ -38,3 +38,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-chameleon-settings'
+
+- project:
+    name: aai-chameleon-info
+    project-name: aai-chameleon
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/chameleon
+    branch: master

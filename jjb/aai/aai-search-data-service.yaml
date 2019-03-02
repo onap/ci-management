@@ -50,3 +50,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-search-data-service-settings'
+
+- project:
+    name: aai-search-data-service-info
+    project-name: aai-search-data-service
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/search-data-service
+    branch: master

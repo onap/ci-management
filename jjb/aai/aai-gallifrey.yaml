@@ -31,3 +31,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-gallifrey-settings'
+
+- project:
+    name: aai-gallifrey-info
+    project-name: aai-gallifrey
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/gallifrey
+    branch: master

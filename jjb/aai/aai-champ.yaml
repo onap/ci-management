@@ -51,3 +51,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-champ-settings'
+
+- project:
+    name: aai-champ-info
+    project-name: aai-champ
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aai/champ
+    branch: master
