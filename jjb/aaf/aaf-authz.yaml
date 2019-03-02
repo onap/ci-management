@@ -67,3 +67,11 @@
     project-name: 'aaf-authz'
     branch: 'master'
     mvn-settings: 'aaf-authz-settings'
+
+- project:
+    name: aaf-authz-info
+    project-name: aaf-authz
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aaf/authz
+    branch: master
