@@ -46,5 +46,5 @@
       - '{project-name}-{stream}-build-and-upload':
           pre_script: !include-raw-escape: pre-build-csv.sh
           artifact_name: traceability.csv rst.csv
-          project_id: org.onap.vvp.validation.scripts
+          project_id: org.onap.vvp.validation-scripts
           post_script: !include-raw-escape: ../vnfrqts/post-upload-artifact.sh
