@@ -50,6 +50,14 @@
           path: 'fcaps'
           pattern: 'fcaps/**'
           pom: 'fcaps/pom.xml'
+      - 'lenovo':
+          path: 'lenovo'
+          pattern: 'lenovo/**'
+          pom: 'lenovo/pom.xml'
+      - 'lenovo_share':
+          path: 'lenovo'
+          pattern: 'lenovo/**'
+          pom: 'lenovo/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -160,6 +168,20 @@
     project-name: 'multicloud-openstack-fcaps'
     branch: 'master'
     mvn-params: '-f fcaps/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-openstack-lenovo-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-lenovo'
+    branch: 'master'
+    mvn-params: '-f lenovo/pom.xml'
     mvn-settings: 'multicloud-openstack-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
