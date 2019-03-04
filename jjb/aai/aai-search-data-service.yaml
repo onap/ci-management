@@ -13,13 +13,31 @@
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'pom.xml'
+          pom: 'search-data-service-app/pom.xml'
           mvn-goals: 'docker:build'
           build-node: ubuntu1604-docker-8c-8g
     project: 'aai/search-data-service'
+    docker-image-name: 'onap/search-data-service'
     stream:
       - 'casablanca':
           branch: 'casablanca'
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-search-data-service-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: aai-search-data-service-searchguard
+    project-name: 'aai-search-data-service-searchguard'
+    jobs:
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'elasticsearch-sg/pom.xml'
+          mvn-goals: 'docker:build'
+          build-node: ubuntu1604-docker-8c-8g
+    project: 'aai/search-data-service'
+    docker-image-name: 'onap/elasticsearch-sg'
+    stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-search-data-service-settings'
