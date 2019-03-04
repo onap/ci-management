@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Bin Yang <bin.yang@windriver.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 04 Mar 2019 17:25:48 +0000
+Reviewed-on: https://gerrit.onap.org/r/79595
+Project: ci-management
+Branch: refs/heads/master
