@@ -56,7 +56,7 @@
           pom: 'lenovo/pom.xml'
       - 'lenovo_share':
           path: 'lenovo'
-          pattern: 'lenovo/**'
+          pattern: 'share/**'
           pom: 'lenovo/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
