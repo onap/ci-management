@@ -68,3 +68,11 @@
     branch: 'master'
     mvn-settings: 'cli-settings'
     build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: cli-info
+    project-name: cli
+    jobs:
+      - gerrit-info-yaml-verify
+    project: cli
+    branch: master
