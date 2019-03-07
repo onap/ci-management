@@ -37,3 +37,11 @@
           branch: 'casablanca'
     mvn-settings: 'ccsdk-utils-settings'
 
+
+- project:
+    name: ccsdk-utils-info
+    project-name: ccsdk-utils
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/utils
+    branch: master

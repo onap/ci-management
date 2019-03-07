@@ -71,3 +71,11 @@
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: ubuntu1604-docker-8c-8g
 
+
+- project:
+    name: ccsdk-distribution-info
+    project-name: ccsdk-distribution
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/distribution
+    branch: master
