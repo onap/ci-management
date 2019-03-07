@@ -29,3 +29,11 @@
     build-node: ubuntu1604-docker-8c-8g
     branch: 'master'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
+
+- project:
+    name: dmaap-messagerouter-docker-info
+    project-name: dmaap-messagerouter-docker
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/messagerouter/messageservice
+    branch: master

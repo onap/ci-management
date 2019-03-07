@@ -36,3 +36,11 @@
     project-name: 'dmaap-messagerouter-mirroragent'
     branch: 'master'
     mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
+
+- project:
+    name: dmaap-messagerouter-mirroragent-info
+    project-name: dmaap-messagerouter-mirroragent
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/messagerouter/mirroragent
+    branch: master

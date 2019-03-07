@@ -36,3 +36,11 @@
     project-name: 'dmaap-messagerouter-messageservice'
     branch: 'master'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
+
+- project:
+    name: dmaap-messagerouter-messageservice-info
+    project-name: dmaap-messagerouter-messageservice
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dmaap/messagerouter/messageservice
+    branch: master
