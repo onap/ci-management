@@ -48,3 +48,11 @@
     project-name: 'portal-sdk'
     branch: 'master'
     mvn-settings: 'portal-sdk-settings'
+
+- project:
+    name: portal-sdk-info
+    project-name: portal-sdk
+    jobs:
+      - gerrit-info-yaml-verify
+    project: portal/sdk
+    branch: master
