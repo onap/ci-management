@@ -43,3 +43,11 @@
     project-name: 'so-libs'
     branch: 'master'
     mvn-settings: 'so-libs-settings'
+
+- project:
+    name: so-libs-info
+    project-name: so-libs
+    jobs:
+      - gerrit-info-yaml-verify
+    project: so/libs
+    branch: master
