@@ -1,0 +1,13 @@
+- project:
+    name: dcaegen2-collectors-datafile-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-collectors-datafile'
+    stream: 'master'
+    functionality:
+      - 'ManagementInterface-suite':
+          trigger_jobs:
+           - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+    branch: 'master'
