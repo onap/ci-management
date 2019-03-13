@@ -1,0 +1,13 @@
+---
+- project:
+    name: multicloud-k8s-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'multicloud-k8s'
+    stream: 'master'
+    functionality:
+      - 'functionality1':
+          trigger_jobs: 'multicloud-k8s-master-docker-golang-shell-daily'
+    robot-options: ''
+    branch: 'master'
