@@ -8,6 +8,7 @@
       - gerrit-maven-stage
       - '{project-name}-{stream}-release-version-java-daily'
 
+    sign-artifacts: true
     project: 'ccsdk/parent'
     stream:
       - 'master':
