@@ -50,3 +50,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+
+- project:
+    name: vfc-nfvo-driver-vnfm-gvnfm-info
+    project-name: vfc-nfvo-driver-vnfm-gvnfm
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/driver/vnfm/gvnfm
+    branch: master

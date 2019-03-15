@@ -49,3 +49,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-sfc-settings'
+
+- project:
+    name: vfc-nfvo-driver-sfc-info
+    project-name: vfc-nfvo-driver-sfc
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/driver/sfc
+    branch: master

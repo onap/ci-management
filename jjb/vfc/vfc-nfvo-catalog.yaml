@@ -50,3 +50,11 @@
     build-node: centos7-redis-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-catalog-settings'
+
+- project:
+    name: vfc-nfvo-catalog-info
+    project-name: vfc-nfvo-catalog
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/catalog
+    branch: master

@@ -42,3 +42,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-multivimproxy-settings'
+
+- project:
+    name: vfc-nfvo-multivimproxy-info
+    project-name: vfc-nfvo-multivimproxy
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/multivimproxy
+    branch: master

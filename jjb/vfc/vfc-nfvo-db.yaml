@@ -19,3 +19,11 @@
             !include-raw-escape: 'build-nfvo-db-docker-image.sh'
           build-node: ubuntu1604-docker-8c-8g
 
+
+- project:
+    name: vfc-nfvo-db-info
+    project-name: vfc-nfvo-db
+    jobs:
+      - gerrit-info-yaml-verify
+    project: vfc/nfvo/db
+    branch: master
