@@ -1,0 +1,53 @@
+---
+- project:
+    name: offline-installer
+    project-name: 'oom/offline-installer'
+    build-node: centos7-builder-2c-1g
+    build_script: |
+        #!/bin/bash
+        # setting-up bash flags
+        set -x -e -o pipefail
+        # remove old ansible - current centos build minion
+        # is quite old and using incompatible ansible 2.4.x
+        sudo yum -y remove ansible
+        sudo pip install ansible ansible-lint
+        # perform check
+        ansible --version
+        ansible-lint --version
+        ansible-lint ./ansible/site.yml -vvv
+
+    stream:
+      - 'master':
+          branch: 'master'
+      # casablanca not yet in separated branch
+      #- 'casablanca':
+      #    branch: 'casablanca'
+
+    jobs:
+      - '{name}-{stream}-yaml-lint':
+        build_script: '{build_script}'
+
+
+- job-template:
+    name: '{name}-{stream}-yaml-lint'
+    node: '{build-node}'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project-name}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    type: freestyle
+    build_script: ''
+    builders:
+      - shell: '{obj:build_script}'
+    publishers:
+      - lf-infra-publish
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: 'refs/heads/master'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
