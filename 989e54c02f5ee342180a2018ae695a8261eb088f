@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ea2b4a7_c5435731",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-15T17:26:23Z",
+      "side": 1,
+      "message": "We keep scripts separate from the job definition (makes it easier to read the job)... you can see an example here:\nhttps://github.com/onap/ci-management/blob/master/jjb/global-templates-java.yaml#L1321",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 44
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fce47608_80600f5d",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-15T17:26:23Z",
+      "side": 1,
+      "message": "Avoid comments, lets just remove these lines.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "318b21f5_c2d346f3",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-15T17:26:23Z",
+      "side": 1,
+      "message": "{project-name} instead of {name}",
+      "range": {
+        "startLine": 32,
+        "startChar": 12,
+        "endLine": 32,
+        "endChar": 16
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d308c01b_20959bc2",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-15T17:26:23Z",
+      "side": 1,
+      "message": "Move the scm block after parameters",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5666143e_5bc40a33",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-15T17:26:23Z",
+      "side": 1,
+      "message": "Add this job template separate from the oom-offline.yaml project file. \n\nMaybe a file called oom-jobs.yaml",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
