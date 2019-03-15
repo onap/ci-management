@@ -52,3 +52,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'sdnc-northbound-settings'
+
+- project:
+    name: sdnc-northbound-info
+    project-name: sdnc-northbound
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdnc/northbound
+    branch: master
