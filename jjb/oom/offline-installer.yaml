@@ -1,0 +1,14 @@
+---
+- project:
+    name: offline-installer
+    project-name: 'offline-installer'
+    build-node: centos7-builder-2c-1g
+    build_script: !include-raw-escape: include-yaml-check.sh
+
+    stream:
+      - 'master':
+          branch: 'master'
+
+    jobs:
+      - '{project-name}-{stream}-yaml-lint':
+          build_script: '{build_script}'
