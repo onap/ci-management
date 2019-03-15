@@ -36,3 +36,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'testsuite-settings'
+
+- project:
+    name: testsuite-info
+    project-name: testsuite
+    jobs:
+      - gerrit-info-yaml-verify
+    project: testsuite
+    branch: master

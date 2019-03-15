@@ -28,3 +28,11 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'testsuite-heatbridge-settings'
+
+- project:
+    name: testsuite-heatbridge-info
+    project-name: testsuite-heatbridge
+    jobs:
+      - gerrit-info-yaml-verify
+    project: testsuite/heatbridge
+    branch: master
