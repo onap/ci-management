@@ -53,3 +53,11 @@
     project-name: 'music'
     branch: 'master'
     mvn-settings: 'music-settings'
+
+- project:
+    name: music-info
+    project-name: music
+    jobs:
+      - gerrit-info-yaml-verify
+    project: music
+    branch: master

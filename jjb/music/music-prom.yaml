@@ -32,3 +32,11 @@
     project-name: 'music-prom'
     branch: 'master'
     mvn-settings: 'music-prom-settings'
+
+- project:
+    name: music-prom-info
+    project-name: music-prom
+    jobs:
+      - gerrit-info-yaml-verify
+    project: music/prom
+    branch: master
