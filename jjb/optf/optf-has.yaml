@@ -81,3 +81,11 @@
       - 'casablanca':
           branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
+
+- project:
+    name: optf-has-info
+    project-name: optf-has
+    jobs:
+      - gerrit-info-yaml-verify
+    project: optf/has
+    branch: master
