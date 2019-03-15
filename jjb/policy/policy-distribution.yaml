@@ -71,3 +71,11 @@
     project-name: 'policy-distribution'
     branch: 'master'
     mvn-settings: 'policy-distribution-settings'
+
+- project:
+    name: policy-distribution-info
+    project-name: policy-distribution
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/distribution
+    branch: master
