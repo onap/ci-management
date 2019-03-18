@@ -29,8 +29,10 @@
 
     project: 'clamp'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'casablanca':
+              branch: 'casablanca'
     mvn-settings: 'clamp-settings'
     files: '**'
     archive-artifacts: ''
