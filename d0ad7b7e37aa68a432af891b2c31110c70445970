@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7b2b9da_b8b674c0",
+        "filename": "jjb/dcaegen2/dcaegen2-services-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-18T16:36:44Z",
+      "side": 1,
+      "message": "missing a colon hence yaml validation failed as reported by verify job",
+      "range": {
+        "startLine": 11,
+        "startChar": 8,
+        "endLine": 11,
+        "endChar": 29
+      },
+      "revId": "d0ad7b7e37aa68a432af891b2c31110c70445970",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22c3cbdd_ed0b7c53",
+        "filename": "jjb/dcaegen2/dcaegen2-services-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-18T16:36:44Z",
+      "side": 1,
+      "message": "should be changed to ubuntu1604-docker-8c-8g for docker build",
+      "range": {
+        "startLine": 22,
+        "startChar": 17,
+        "endLine": 22,
+        "endChar": 40
+      },
+      "revId": "d0ad7b7e37aa68a432af891b2c31110c70445970",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c0bdedf_560522f7",
+        "filename": "jjb/dcaegen2/dcaegen2-services-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-18T16:36:44Z",
+      "side": 1,
+      "message": "would separate this job and retained under dcaegen2-services-java.yaml which will apply for all sub-project by default (as clm doesn\u0027t support sub-project)",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 46
+      },
+      "revId": "d0ad7b7e37aa68a432af891b2c31110c70445970",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
