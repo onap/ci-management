@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6605927f_8707f542",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-03-18T06:39:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ea2b4a7_c5435731",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 44
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fce47608_80600f5d",
         "filename": "jjb/oom/oom-offline.yaml",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "aaa37853_817a7e3b",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-03-18T06:39:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fce47608_80600f5d",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "318b21f5_c2d346f3",
         "filename": "jjb/oom/oom-offline.yaml",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2019-03-15T17:26:23Z",
       "side": 1,
       "message": "{project-name} instead of {name}",
+      "range": {
+        "startLine": 32,
+        "startChar": 12,
+        "endLine": 32,
+        "endChar": 16
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "357a93f6_18b5b9a0",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-03-18T06:39:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "318b21f5_c2d346f3",
       "range": {
         "startLine": 32,
         "startChar": 12,
@@ -107,6 +179,54 @@
       "message": "Add this job template separate from the oom-offline.yaml project file. \n\nMaybe a file called oom-jobs.yaml",
       "range": {
         "startLine": 31,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8423da20_71158b51",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-03-18T06:39:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5666143e_5bc40a33",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 54
+      },
+      "revId": "989e54c02f5ee342180a2018ae695a8261eb088f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "481931e9_56f5f7cd",
+        "filename": "jjb/oom/oom-offline.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-03-18T06:39:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d308c01b_20959bc2",
+      "range": {
+        "startLine": 49,
         "startChar": 0,
         "endLine": 53,
         "endChar": 54
