@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53fd0e12_3b1b3a92",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T17:18:10Z",
+      "side": 1,
+      "message": "Remove empty line #13",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 62
+      },
+      "revId": "28ae7b6272fdcfb5a19bf59b975aafbbb997b827",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea36d07e_f961a669",
+        "filename": "jjb/dcaegen2/dcaegen2-services-bbs-eventprocessor-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T17:18:10Z",
+      "side": 1,
+      "message": "Remove empty space",
+      "range": {
+        "startLine": 4,
+        "startChar": 31,
+        "endLine": 4,
+        "endChar": 33
+      },
+      "revId": "28ae7b6272fdcfb5a19bf59b975aafbbb997b827",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44ee3ae7_d8e8604b",
+        "filename": "jjb/dcaegen2/dcaegen2-services-bbs-eventprocessor-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T17:18:10Z",
+      "side": 1,
+      "message": "Remove empty space",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 1
+      },
+      "revId": "28ae7b6272fdcfb5a19bf59b975aafbbb997b827",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
