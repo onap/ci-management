@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09dd5daf_d0e0c94c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T23:43:33Z",
+      "side": 1,
+      "message": "Remove this.. i will create dcaegen2-services-settings",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 27
+      },
+      "revId": "f260b06292542731f79222cc8d5385c05b65b96e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a00e2d42_d57ebe8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T23:43:33Z",
+      "side": 1,
+      "message": "bad sentence.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 51
+      },
+      "revId": "f260b06292542731f79222cc8d5385c05b65b96e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8ef1456_38a3c610",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T23:43:33Z",
+      "side": 1,
+      "message": "Remove empty line #18",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 53
+      },
+      "revId": "f260b06292542731f79222cc8d5385c05b65b96e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "569b7848_66457fd0",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T23:43:33Z",
+      "side": 1,
+      "message": "use dcaegen2-services-settings",
+      "range": {
+        "startLine": 18,
+        "startChar": 19,
+        "endLine": 18,
+        "endChar": 45
+      },
+      "revId": "f260b06292542731f79222cc8d5385c05b65b96e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f5287cf_5c7e6d72",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T23:43:33Z",
+      "side": 1,
+      "message": "use dcaegen2-services-settings",
+      "range": {
+        "startLine": 39,
+        "startChar": 17,
+        "endLine": 39,
+        "endChar": 46
+      },
+      "revId": "f260b06292542731f79222cc8d5385c05b65b96e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
