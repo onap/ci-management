@@ -1,0 +1,36 @@
+---
+- project:
+    name: dcaegen2-services
+    project: 'dcaegen2/services' 
+    project-name: 'dcaegen2-services'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
+    subproject:
+      - 'bbs-event-processor':
+          pom: 'components/bbs-event-processor/pom.xml'
+          pattern: 'components/bbs-event-processor/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-services-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
+ 
+- project:
+    name: dcaegen2-services-bbs-event-processor-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services-bbs-event-processor'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-settings'
+    mvn-params: '-f components/bbs-event-processor/pom.xml'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
