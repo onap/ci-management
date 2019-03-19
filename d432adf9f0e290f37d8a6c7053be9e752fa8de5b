@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4a0916a0_a55cf580",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-19T22:58:46Z",
+      "side": 1,
+      "message": "dcaegen2-services-settings",
+      "range": {
+        "startLine": 18,
+        "startChar": 19,
+        "endLine": 18,
+        "endChar": 45
+      },
+      "revId": "d432adf9f0e290f37d8a6c7053be9e752fa8de5b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "414cd69c_40046cd1",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-19T22:58:46Z",
+      "side": 1,
+      "message": "This can be removed as CLM does not support sub-project; separate job template is defined part of https://gerrit.onap.org/r/#/c/82642/",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 46
+      },
+      "revId": "d432adf9f0e290f37d8a6c7053be9e752fa8de5b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5fcedc7c_36764dbc",
+        "filename": "jjb/dcaegen2/dcaegen2-services-heartbeat.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-19T22:58:46Z",
+      "side": 1,
+      "message": "why is this change being done?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 32
+      },
+      "revId": "d432adf9f0e290f37d8a6c7053be9e752fa8de5b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1637314_64696a5c",
+        "filename": "jjb/dcaegen2/dcaegen2-services-heartbeat.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-19T22:58:46Z",
+      "side": 1,
+      "message": "why is this template being updated? These changes should be reverted.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 46
+      },
+      "revId": "d432adf9f0e290f37d8a6c7053be9e752fa8de5b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
