@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "f71ec268_83939ca7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:33:11Z",
+      "side": 1,
+      "message": "This is not a good commit message. Please explain what these changes are trying to add into Jenkins",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 121
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2616b7a6_f6e434c5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:33:11Z",
+      "side": 1,
+      "message": "Remove empty line #13",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 53
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "79e499c1_16b8304a",
         "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml-",
         "patchSetId": 3
