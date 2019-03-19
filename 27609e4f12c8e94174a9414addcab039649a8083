@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79e499c1_16b8304a",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml-",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:32:20Z",
+      "side": 1,
+      "message": "This is not a git project. The current dcaegen2 projects are:\nhttps://gerrit.onap.org/r/#/admin/projects/?filter\u003ddcaegen2",
+      "range": {
+        "startLine": 15,
+        "startChar": 13,
+        "endLine": 15,
+        "endChar": 60
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ae693dc_27dfd711",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml-",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:32:20Z",
+      "side": 1,
+      "message": "This file does not exist in Jenkins as each settings file matches the .git project and there is no project \ndcaegen2/services/components/datalake-handler.git",
+      "range": {
+        "startLine": 19,
+        "startChar": 18,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4ee3839_2eda3e44",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml-",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:32:20Z",
+      "side": 1,
+      "message": "Same as above.. project does not exisit",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 63
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96c87b6a_ff69777d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml-",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-19T16:32:20Z",
+      "side": 1,
+      "message": "Same as above.. project does not exisit",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 63
+      },
+      "revId": "27609e4f12c8e94174a9414addcab039649a8083",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
