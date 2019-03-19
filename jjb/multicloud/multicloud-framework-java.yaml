@@ -11,6 +11,9 @@
       - 'multivimbroker':
           pom: 'multivimbroker/pom.xml'
           pattern: 'multivimbroker/**'
+      - 'artifactbroker':
+          pom: 'artifactbroker/pom.xml'
+          pattern: 'artifactbroker/**'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -50,24 +53,51 @@
 #    build-node: ubuntu1604-docker-arm64-4c-2g
 #
 - project:
-    name: multicloud-framework-sonar
+    name: multicloud-framework-multivimbroker-sonar
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/framework'
-    project-name: 'multicloud-framework'
+    project-name: 'multicloud-framework-multivimbroker'
     branch: 'master'
+    mvn-params: '-f multivimbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
-    name: multicloud-framework-java-clm
+    name: multicloud-framework-multivimbroker-clm
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: multicloud/framework
     project-name: 'multicloud-framework'
     branch: 'master'
+    mvn-params: '-f multivimbroker/pom.xml'
+    mvn-settings: 'multicloud-framework-settings'
+
+- project:
+    name: multicloud-framework-artifactbroker-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/framework'
+    project-name: 'multicloud-framework-artifactbroker'
+    branch: 'master'
+    mvn-params: '-f artifactbroker/pom.xml'
+    mvn-settings: 'multicloud-framework-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-framework-artifactbroker-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: multicloud/framework
+    project-name: 'multicloud-framework'
+    branch: 'master'
+    mvn-params: '-f artifactbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
