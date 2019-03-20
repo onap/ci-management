@@ -14,7 +14,7 @@
       deployAtEnd=true
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-v1-8c-8g'
-    build-timeout: 180
+    build-timeout: 300
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
