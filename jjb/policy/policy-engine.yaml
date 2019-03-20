@@ -42,7 +42,7 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
-          disabled: true
+          disabled: false
           build-node: ubuntu1604-docker-8c-8g
     project: 'policy/engine'
     stream:
