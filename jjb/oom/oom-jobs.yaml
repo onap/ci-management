@@ -1,0 +1,34 @@
+---
+- job-template:
+    name: '{project-name}-{stream}-yaml-lint'
+    node: '{build-node}'
+    type: freestyle
+    build_script: ''
+    pattern: '**'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: 'oom/{project-name}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: 'gerrit'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: 'oom/{project-name}'
+          branch: '{branch}'
+          files: '{obj:pattern}'
+
+    builders:
+      - shell: '{obj:build_script}'
+
+    publishers:
+      - lf-infra-publish
+
