@@ -10,7 +10,7 @@
       #     - '{project-name}-{stream}-docker-java-daily':
       # doesn't support mvn-goals override, so trying this...
       - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean package -P docker docker:build -DpushImage'
+          mvn-goals: 'clean package -P docker docker:build docker:push'
           # No-op
           script: '/bin/true'
           build-node: 'ubuntu1604-docker-8c-8g'
