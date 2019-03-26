@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "88f1756f_8a4bf81f",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-26T18:49:22Z",
+      "side": 1,
+      "message": "This project name already exist",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "2c8247ef1426bd84622bedad37a52ed3733bd082",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83b7a7ab_862e152a",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-03-26T18:49:22Z",
+      "side": 1,
+      "message": "change to ubuntu1604-docker-8c-8g\nSeems like this CLM job was not starting because the 4c-4g node does not exisit",
+      "range": {
+        "startLine": 29,
+        "startChar": 16,
+        "endLine": 29,
+        "endChar": 40
+      },
+      "revId": "2c8247ef1426bd84622bedad37a52ed3733bd082",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
