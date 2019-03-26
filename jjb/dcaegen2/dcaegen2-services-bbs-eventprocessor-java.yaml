@@ -1,6 +1,6 @@
 ---
 - project:
-    name: dcaegen2-services
+    name: dcaegen2-services-bbs-event-processor
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services'
     jobs:
@@ -40,7 +40,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
-    build-node: ubuntu1604-docker-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-bbs-event-processor-clm'
     mvn-params: '-f components/bbs-event-processor/pom.xml'
