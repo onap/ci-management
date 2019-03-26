@@ -22,6 +22,30 @@
       "revId": "5f2d8e2c170fb8384970e855c57a8a559a75c467",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbde5bcd_27e90122",
+        "filename": "jjb/dcaegen2/dcaegen2-services-bbs-eventprocessor-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-03-26T22:20:34Z",
+      "side": 1,
+      "message": "submitted update on https://gerrit.onap.org/r/83420",
+      "parentUuid": "202113e7_2cce3319",
+      "range": {
+        "startLine": 43,
+        "startChar": 16,
+        "endLine": 43,
+        "endChar": 39
+      },
+      "revId": "5f2d8e2c170fb8384970e855c57a8a559a75c467",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
