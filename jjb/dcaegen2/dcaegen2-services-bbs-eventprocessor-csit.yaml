@@ -1,0 +1,14 @@
+- project:
+    name: dcaegen2-bbs-event-processor-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-bbs-event-processor'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - '{project-name}-{stream}-merge-java'
+    robot-options: ''
