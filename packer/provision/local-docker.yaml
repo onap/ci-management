@@ -9,10 +9,21 @@
     docker_compose_version: 1.17.1
     glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
     glide_version: v0.13.1
-    golang_checksum: sha256:07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7
     golang_version: 1.9.1
 
   tasks:
+    - name: "Checking for x86_64"
+      set_fact:
+        host_arch: "amd64"
+        golang_checksum: sha256:07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7
+      when: "'x86_64' in ansible_architecture"
+
+    - name: "Checking for aarch64"
+      set_fact:
+        host_arch: "arm64"
+        golang_checksum: sha256:d31ecae36efea5197af271ccce86ccc2baf10d2e04f20d0fb75556ecf0614dad
+      when: "'aarch64' in ansible_architecture"
+
     - name: 'Install Docker Compose {{docker_compose_version}}'
       command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
       become: true
@@ -24,14 +35,14 @@
 
     - name: 'Install GoLang {{golang_version}}'
       block:
-        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-amd64.tar.gz'
+        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
           get_url:
-            url: 'https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz'
-            dest: '/tmp/go{{golang_version}}.linux-amd64.tar.gz'
+            url: 'https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
+            dest: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
             checksum: '{{golang_checksum}}'
         - name: 'Install golang {{golang_version}} to /usr/local'
           unarchive:
-            src: '/tmp/go{{golang_version}}.linux-amd64.tar.gz'
+            src: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
             dest: /usr/local
             remote_src: true
           become: true
