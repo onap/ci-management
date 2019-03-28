@@ -1,5 +1,5 @@
 - project:
-    name: dcaegen2-testsuites-csit
+    name: dcaegen2-collectors-ves-testsuites-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
@@ -10,7 +10,6 @@
     functionality:
       - 'testsuites'
     trigger_jobs:
-      - 'dcaegen2-master-merge-java'
       - 'dcaegen2-collectors-ves-master-merge-java'
     robot-options: ''
 - project:
@@ -25,6 +24,5 @@
     functionality:
       - 'prh-testsuites'
     trigger_jobs:
-      - 'dcaegen2-{stream}-merge-java'
-      - '{project-name}-{stream}-merge-java'
+      - 'dcaegen2-services-prh-master-merge-java'
     robot-options: ''
