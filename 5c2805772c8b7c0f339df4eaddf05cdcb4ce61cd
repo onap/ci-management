@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae708c3c_f1b7cfc0",
+        "filename": "jenkins-scripts/nexus3_port_forwarding.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-02T16:13:47Z",
+      "side": 1,
+      "message": "Done\n\nMy bad..I have made the IP correction now",
+      "parentUuid": "a5c0ad43_372d41d2",
+      "revId": "5c2805772c8b7c0f339df4eaddf05cdcb4ce61cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "00bc3b3e_36ee62fc",
         "filename": "jenkins-scripts/nexus3_port_forwarding.sh",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2019-04-02T07:47:58Z",
       "side": 1,
       "message": "Ports 11001, 11002 and 11003 are not configured (yet?) at nexus3.onap.org.\n\nIn case that ARM specific registers (mirroring x86 registers configured at ports 10001, 10002 and 10003) are configured at different port numbers, than these numbers should be used in DNAT rules.",
+      "range": {
+        "startLine": 22,
+        "startChar": 101,
+        "endLine": 22,
+        "endChar": 106
+      },
+      "revId": "5c2805772c8b7c0f339df4eaddf05cdcb4ce61cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "420605a3_58f70205",
+        "filename": "jenkins-scripts/nexus3_port_forwarding.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-02T16:13:47Z",
+      "side": 1,
+      "message": "Need to work on this in Nexus3.. will do so",
+      "parentUuid": "00bc3b3e_36ee62fc",
       "range": {
         "startLine": 22,
         "startChar": 101,
