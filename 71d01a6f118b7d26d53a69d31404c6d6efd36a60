@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c05460e_eb9fb797",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-02T15:49:29Z",
+      "side": 1,
+      "message": "This line is too long... \n\nPlease make sure the title of the commit is no longer than 50 char. Everything else, put it in a description paragraph with 80 chars in each line.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 209
+      },
+      "revId": "71d01a6f118b7d26d53a69d31404c6d6efd36a60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "93a9d332_bb17502c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-02T15:49:29Z",
+      "side": 1,
+      "message": "Remove empty line 10",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 51
+      },
+      "revId": "71d01a6f118b7d26d53a69d31404c6d6efd36a60",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
