@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a5c0ad43_372d41d2",
+        "filename": "jenkins-scripts/nexus3_port_forwarding.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5065
+      },
+      "writtenOn": "2019-04-02T05:31:34Z",
+      "side": 1,
+      "message": "We have to perform a destination port translation for all packets with destination of NEXUS3 IP address. Thus I would suggest:\n\n1) rename NODE_IP to NEXUS3_IP to make it obvious\n\n2) store NEXUS3 IP address instead of local NODE IP, e.g. by:\nhost nexus3.onap.org | awk \u0027/has address/ { print $4 ; exit }\u0027",
+      "revId": "5c2805772c8b7c0f339df4eaddf05cdcb4ce61cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b27ad43c_05d28260",
+        "filename": "jenkins-scripts/nexus3_port_forwarding.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5065
+      },
+      "writtenOn": "2019-04-02T05:31:34Z",
+      "side": 1,
+      "message": "change NODE_IP to NEXUS3_IP (or something similar) for better readability",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 106
+      },
+      "revId": "5c2805772c8b7c0f339df4eaddf05cdcb4ce61cd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
