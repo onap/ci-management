@@ -25,3 +25,6 @@ fi
 # Create the jenkins user last so that hopefully we don't have to deal with
 # guard files
 ./create_jenkins_user.sh
+
+# Nexus3 port forwarding rules for ARM64
+./nexus3_port_forwarding.sh
