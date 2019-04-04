@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea7010d_5352c9f3",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-04T21:03:55Z",
+      "side": 1,
+      "message": "The clone to ci-management needs to be using SSH. \nThe reason being, many teams will use this cloned code to make changes and push them into Gerrit which will fail if their remotes are HTTP. Although that can be fixed with extra steps, cloning SSH from the start makes things easier. \n\nI would suggest we add the instructions like:\n\nClone ci-management:\n   git clone ssh://\u003cLFID\u003e@gerrit.onap.org:29418/ci-management\nFetch the gerrit hooks:\n   gitdir\u003d$(git rev-parse --git-dir); scp -p -P 29418 \u003cLFID\u003e@gerrit.onap.org:hooks/commit-msg ${gitdir}/hooks/",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "b04737e9629ca35111046d605fd51cb8d694d8e8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
