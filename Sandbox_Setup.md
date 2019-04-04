@@ -25,8 +25,9 @@ please send email to helpdesk@onap.org (LF helpdesk team)
 To download **ci-management**, execute the following command to clone the
 **ci-managment** repository.
 
-`git clone ssh://<LFID>@gerrit.onap.org:29418/ci-management --recursive && scp -p -P 29418 \
-<LFID>@gerrit.onap.org:hooks/commit-msg ci-management/.git/hooks/`
+`git clone https://gerrit.onap.org/r/ci-management && (cd ci-management && curl -Lo \
+$(git rev-parse --git-dir)/hooks/commit-msg https://gerrit.onap.org/r/tools/hooks/commit-msg; \
+chmod +x $(git rev-parse --git-dir)/hooks/commit-msg)`
 
 Make sure to sync global-jjb submodule using:
 
@@ -72,7 +73,9 @@ ignore_cache=True
 ```
 ### How to retrieve API token?
 Login to the [Jenkins Sandbox](https://jenkins.onap.org/sandbox/), go to your user
-page by clicking on your username. Click **Configure** and then click **Show API Token**.
+page by clicking on your username. Click **Configure** and then click **Add new Token**.
+After that specify a token name (optional) and click on **Generate** to generate and show
+new token. Please note down your token and store it securely.
 
 To work on existing jobs or create new jobs, navigate to the `/jjb` directory where you
 will find all job templates for the project.  Follow the below commands to test,
