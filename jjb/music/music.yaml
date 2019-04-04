@@ -23,8 +23,6 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
-      - 'dev-cassandra-only':
-          branch: 'dev-cassandra-only'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
