@@ -490,6 +490,7 @@
     project-type: freestyle
     node: '{build-node}'
     disabled: '{disabled}'
+    version-properties: 'version.properties'
     maven-deploy-properties:
     properties:
       - infra-properties:
@@ -529,7 +530,7 @@
           settings-file: '{mvn-settings}'
 
       - inject:
-          properties-file: version.properties
+          properties-file: '{version-properties}'
       - maven-set-release-version:
           maven-version: '{maven-version}'
           mvn-settings: '{mvn-settings}'
