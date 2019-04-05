@@ -22,6 +22,30 @@
       "revId": "b04737e9629ca35111046d605fd51cb8d694d8e8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "326881a7_3c31be53",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 5065
+      },
+      "writtenOn": "2019-04-05T06:33:22Z",
+      "side": 1,
+      "message": "Hi Jess,\n\nI can\u0027t see any problem with pushing changes to gerrit over HTTPS protocol. That\u0027s exactly how I and my colleges are working on OPNFV (over 3 years) and on ONAP projects. BTW, I\u0027ve used exactly the same https clone command to prepare this patch.\n\nAs I\u0027ve mentioned in the commit message - this is exactly the format, which you\u0027ll get (anonymous https is a default) as a hint in gerrit GUI at https://gerrit.onap.org/r/#/admin/projects/ci-management - under link \"Clone with commit-msg hook\".\n\nI can see following advantages:\n\n* works over proxies and firewalls\n* can be used without modifications, just cut\u0026paste from docs to console (no need to specify lfid like in previous ssh case)\n* suitable for both non-LF members (inspect code anonymously) and LF members (modify \u0026 push)\n\nPlease advise,\nMartin",
+      "parentUuid": "4ea7010d_5352c9f3",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "b04737e9629ca35111046d605fd51cb8d694d8e8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
