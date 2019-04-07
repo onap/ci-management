@@ -46,6 +46,30 @@
       "revId": "b04737e9629ca35111046d605fd51cb8d694d8e8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6001fff5_73974023",
+        "filename": "Sandbox_Setup.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2019-04-07T12:21:36Z",
+      "side": 1,
+      "message": "I agree, in docs I typically prefer the http clone method as it can be cloned anonymously without an account.\n\nIf using git-review (which I highly recommend) the hook install step could be shorted to simply:\n\n git review -s\n\nThis setups up a 2nd remote \"gerrit\" for pushing and installs the git hook. This is a handy setup because we can do 2 things:\n\n1) Git fetches via anonymous http\n2) Git pushes via gerrit remote `git push gerrit ...`",
+      "parentUuid": "326881a7_3c31be53",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 54
+      },
+      "revId": "b04737e9629ca35111046d605fd51cb8d694d8e8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
