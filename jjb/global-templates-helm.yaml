@@ -13,9 +13,11 @@
     submodule-recursive: true
 
     # default params for helm jobs
-    pre_build_script: ''
     build_script: ''
+    git-url: '$GIT_URL/$PROJECT'
     post_build_script: ''
+    pre_build_script: ''
+    submodule-recursive: true
     submodule-timeout: 10
 
     #####################
@@ -105,6 +107,45 @@
             BUILD_TYPE=snapshot
       - shell: '{obj:post_build_script}'
       - lf-provide-maven-settings-cleanup
+
+- job-template:
+    name: '{project-name}-{stream}-verify-external-helm'
+    # Job template for helm verify jobs
+
+    <<: *helm_job_boiler_plate
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: 'oom'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_BRANCH'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          submodule-timeout: '{submodule-timeout}'
+          choosing-strategy: default
+
+    triggers:
+      - gerrit-trigger-helm-patch-submitted:
+          status-context: '{project}-Helm-Verify'
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_MODULE={helm-module}'
+      - shell: !include-raw-escape: shell/apply-submodule-patch-oom.sh
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
 
 - job-template:
     name: '{project-name}-{stream}-stage-helm'
