@@ -1,0 +1,36 @@
+---
+- project:
+    name: aai-oom-project-view
+    project-name: aai-oom
+    views:
+      - project-view
+
+- project:
+    name: aai-oom
+    helm-module: 'aai'
+    project-name: 'aai-oom'
+    project: 'aai/oom'
+    jobs:
+      - '{project-name}-{stream}-verify-external-helm'
+    stream:
+      - 'code-transfer':
+          branch: 'code-transfer'
+    mvn-settings: 'aai-oom-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-helm-2c-1g
+    pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
+    oom_build_script: |
+        #!/bin/bash
+        set -e -o pipefail
+        cd kubernetes/
+        make all
+    subproject_build_script: |
+        #!/bin/bash
+        cd kubernetes/
+        make common
+        make {subproject}
+    oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
+    subproject:
+      - 'aai':
+          files: 'kubernetes/aai/**'
