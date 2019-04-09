@@ -14,10 +14,8 @@
 
     platforms:
       - centos-7
-      - centos-7-arm64
       - ubuntu-16.04
       - ubuntu-16.04-arm64
-      - ubuntu-18.04-arm64
     templates: builder
 
 - project:
@@ -36,7 +34,6 @@
     platforms:
       - ubuntu-16.04
       - ubuntu-16.04-arm64
-      - ubuntu-18.04-arm64
     templates: docker
 
 - project:
