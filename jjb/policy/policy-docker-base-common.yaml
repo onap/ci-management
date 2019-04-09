@@ -1,0 +1,56 @@
+---
+- project:
+    name: policy-docker-base-common
+    project-name: 'policy-docker'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: "-Dmaven.test.skip=true"
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: true
+          build-node: ubuntu1604-docker-8c-8g
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'policy-docker-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: policy-docker-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'policy/docker'
+    project-name: 'policy-docker'
+    branch: 'master'
+    mvn-settings: 'policy-docker-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: policy-docker-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: policy/docker
+    project-name: 'policy-docker'
+    branch: 'master'
+    mvn-settings: 'policy-docker-settings'
+
+- project:
+    name: policy-docker-info
+    project-name: policy-docker
+    jobs:
+      - gerrit-info-yaml-verify
+    project: policy/docker
+    branch: master
