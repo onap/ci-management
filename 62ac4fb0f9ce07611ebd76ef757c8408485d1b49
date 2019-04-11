@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2b9e3c40_f17927b9",
+        "filename": "jjb/policy/policy-docker-base-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-04-11T16:13:52Z",
+      "side": 1,
+      "message": "Dmitry - please also in your next review that you fix the -P, set this to enabled so we can release the image to test the other reviews. Thanks!",
+      "range": {
+        "startLine": 16,
+        "startChar": 10,
+        "endLine": 16,
+        "endChar": 24
+      },
+      "revId": "62ac4fb0f9ce07611ebd76ef757c8408485d1b49",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
