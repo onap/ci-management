@@ -12,6 +12,10 @@
     project: 'aai/oom'
     jobs:
       - '{project-name}-{stream}-verify-external-helm'
+      - '{project-name}-{stream}-merge-external-helm':
+          build_script: '{oom_build_script}'
+          post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
+          files: '**'
     stream:
       - 'master':
           branch: 'master'

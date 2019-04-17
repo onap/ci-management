@@ -148,6 +148,53 @@
       - shell: '{obj:build_script}'
 
 - job-template:
+    name: '{project-name}-{stream}-merge-external-helm'
+    # Job template for Helm merge jobs
+
+    <<: *helm_job_boiler_plate
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: 'oom'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_BRANCH'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          submodule-timeout: '{submodule-timeout}'
+          choosing-strategy: default
+
+    triggers:
+      - gerrit-trigger-helm-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_MODULE={helm-module}'
+      - lf-provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+      - lf-infra-create-netrc:
+          server-id: oom-helm
+      - inject:
+          properties-content: |
+            BUILD_TYPE=snapshot
+      - shell: '{obj:post_build_script}'
+      - lf-provide-maven-settings-cleanup
+
+- job-template:
     name: '{project-name}-{stream}-stage-helm'
     # Job template for Helm stage jobs
 
