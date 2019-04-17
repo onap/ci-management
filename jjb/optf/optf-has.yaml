@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -31,8 +29,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -78,8 +74,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'optf-has-settings'
 
 - project:
