@@ -25,7 +25,7 @@
         set -e -o pipefail
         cd kubernetes/
         make all
-    subproject_build_script: |
+    build_script: |
         #!/bin/bash
         cd kubernetes/
         make common
