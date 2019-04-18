@@ -50,7 +50,7 @@
     project-name: 'optf-cmso'
     branch: 'master'
     mvn-settings: 'optf-cmso-settings'
-    mvn-goals: 'clean install'
+    mvn-goals: 'clean install -DskipIntegrationTests=false'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
@@ -65,8 +65,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'optf-cmso-settings'
 
 - project:
