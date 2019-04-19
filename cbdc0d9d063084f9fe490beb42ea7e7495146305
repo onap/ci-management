@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f59b3a37_fbadc15e",
+        "filename": "jjb/optf/optf-cmso.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-19T20:53:06Z",
+      "side": 1,
+      "message": "The previous way works.. no need to put this in a list",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 43
+      },
+      "revId": "cbdc0d9d063084f9fe490beb42ea7e7495146305",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08302e85_b4e37667",
+        "filename": "jjb/optf/optf-cmso.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-19T20:53:06Z",
+      "side": 1,
+      "message": "This should not go in mvn-opts but in mvn-params.",
+      "range": {
+        "startLine": 56,
+        "startChar": 4,
+        "endLine": 56,
+        "endChar": 44
+      },
+      "revId": "cbdc0d9d063084f9fe490beb42ea7e7495146305",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
