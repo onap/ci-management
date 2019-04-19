@@ -43,14 +43,14 @@
     name: optf-cmso-sonar
     jobs:
       - gerrit-maven-sonar:
-          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001  -DskipIntegrationTests=false'
     cron: 'H 11 * * *'
     build-node: ubuntu1604-docker-8c-8g
     project: 'optf/cmso'
     project-name: 'optf-cmso'
     branch: 'master'
     mvn-settings: 'optf-cmso-settings'
-    mvn-goals: 'clean install -DskipIntegrationTests=false'
+    mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
