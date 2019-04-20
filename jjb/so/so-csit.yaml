@@ -8,8 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'Dublin':
+          branch: 'dublin'
     functionality:
       - 'integration-testing':
           trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
