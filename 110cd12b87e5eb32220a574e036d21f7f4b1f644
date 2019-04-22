@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9bb2075d_cfc93e15",
+        "filename": "jjb/modeling/modeling-toscaparsers-genericparser.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-22T17:42:02Z",
+      "side": 1,
+      "message": "modeling-genericparser-settings",
+      "range": {
+        "startLine": 10,
+        "startChar": 19,
+        "endLine": 10,
+        "endChar": 63
+      },
+      "revId": "110cd12b87e5eb32220a574e036d21f7f4b1f644",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d3cf3255_61f00609",
+        "filename": "jjb/modeling/modeling-toscaparsers-genericparser.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-22T17:42:02Z",
+      "side": 1,
+      "message": "modeling-genericparser-settings",
+      "range": {
+        "startLine": 39,
+        "startChar": 19,
+        "endLine": 39,
+        "endChar": 63
+      },
+      "revId": "110cd12b87e5eb32220a574e036d21f7f4b1f644",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ec2472c_3fe53fe4",
+        "filename": "jjb/modeling/modeling-toscaparsers-genericparser.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-04-22T17:42:02Z",
+      "side": 1,
+      "message": "modeling-genericparser-settings",
+      "range": {
+        "startLine": 52,
+        "startChar": 19,
+        "endLine": 52,
+        "endChar": 63
+      },
+      "revId": "110cd12b87e5eb32220a574e036d21f7f4b1f644",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
