@@ -1,0 +1,13 @@
+---
+- project:
+    name: modeling-toscaparsers-genericparser-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'modeling-toscaparsers-genericparser'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs: 'modeling-toscaparsers-genericparser-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
