@@ -23,6 +23,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
