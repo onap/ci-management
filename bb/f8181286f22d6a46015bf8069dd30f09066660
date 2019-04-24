@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Henrik Andersson <henrik.b.andersson@est.tech>
+Code-Review+1: Tamas Bakai <tamas.bakai@est.tech>
+Code-Review+1: Muhammad Rehan Raza <muhammad.rehan.raza@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 24 Apr 2019 17:06:09 +0000
+Reviewed-on: https://gerrit.onap.org/r/86138
+Project: ci-management
+Branch: refs/heads/master
