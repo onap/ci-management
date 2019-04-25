@@ -2,20 +2,27 @@
 - project:
     name: testsuite-python-testing-utils
     project-name: 'testsuite-python-testing-utils'
+    python-version: python2
     subproject:
       - python-testing-utils:
           path: '.'
           pattern: '**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-{subproject}-python-release-{stream}'
     project: 'testsuite/python-testing-utils'
+    subproject:
+      - 'robotframework-onap':
+          tox-dir: robotframework-onap/
+          tox-envs: ''
 
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'testsuite-python-testing-utils-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-4c-4g'
 
 - project:
     name: testsuite-python-testing-utils-master-clm
