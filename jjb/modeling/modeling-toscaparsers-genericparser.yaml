@@ -9,7 +9,7 @@
           branch: 'master'
     mvn-settings: 'modeling-genericparser-settings'
     subproject:
-      - 'catalog':
+      - 'genericparser':
           path: '.'
           pattern: '**'
     jobs:
