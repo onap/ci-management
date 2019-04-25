@@ -1,15 +1,15 @@
 ---
 
 - project:
-    name: modeling-toscaparsers-genericparser
-    project-name: 'modeling-toscaparsers-genericparser'
+    name: modeling-genericparser
+    project-name: 'modeling-genericparser'
     project: 'modeling/genericparser'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'modeling-genericparser-settings'
     subproject:
-      - 'catalog':
+      - 'genericparser':
           path: '.'
           pattern: '**'
     jobs:
@@ -28,32 +28,32 @@
     build-node: centos7-redis-4c-4g
 
 - project:
-    name: modeling-toscaparsers-genericparser-sonar
+    name: modeling-genericparser-sonar
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
     build-node: centos7-redis-4c-4g
     project: 'modeling/genericparser'
-    project-name: 'modeling-toscaparsers-genericparser'
+    project-name: 'modeling-genericparser'
     branch: 'master'
     mvn-settings: 'modeling-genericparser-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
-    name: modeling-toscaparsers-genericparser-clm
+    name: modeling-genericparser-clm
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: modeling/genericparser
-    project-name: 'modeling-toscaparsers-genericparser'
+    project-name: 'modeling-genericparser'
     build-node: centos7-redis-4c-4g
     branch: 'master'
     mvn-settings: 'modeling-genericparser-settings'
 
 - project:
-    name: modeling-toscaparsers-genericparser-info
-    project-name: modeling-toscaparsers-genericparser
+    name: modeling-genericparser-info
+    project-name: modeling-genericparser
     jobs:
       - gerrit-info-yaml-verify
     project: modeling/genericparser
