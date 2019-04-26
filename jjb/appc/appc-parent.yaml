@@ -18,6 +18,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'appc-parent-settings'
     build-node: ubuntu1604-builder-2c-1g
 
