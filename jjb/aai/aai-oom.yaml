@@ -33,8 +33,5 @@
         #!/bin/bash
         cd kubernetes/
         make common
-        make {subproject}
+        make {helm-module}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
-    subproject:
-      - 'aai':
-          files: 'kubernetes/aai/**'
