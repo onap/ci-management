@@ -5,12 +5,16 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          build-node: centos7-builder-4c-4g
       - '{project-name}-{stream}-release-version-java-daily'
 
     project: 'ccsdk/dashboard'
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-dashboard-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -44,6 +48,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-dashboard-settings'
     build-node: centos7-redis-4c-4g
 
@@ -57,6 +63,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-dashboard-settings'
     files: '**'
     archive-artifacts: ''
