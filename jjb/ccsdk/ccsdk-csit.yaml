@@ -10,6 +10,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     functionality:
       - 'healthcheck':
           trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'

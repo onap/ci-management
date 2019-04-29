@@ -15,6 +15,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
@@ -34,6 +36,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
@@ -70,6 +74,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: ubuntu1604-docker-8c-8g
 
