@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: master
-      - 'casablanca':
-          branch: casablanca
     functionality:
       - 'health'
     trigger_jobs:
@@ -16,6 +14,7 @@
       - 'policy-drools-pdp-{stream}-merge-scm-mvn-script'
       - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
+    build-timeout: 40
     branch: 'master'
 
 - project:
@@ -27,8 +26,6 @@
     stream:
       - 'master':
           branch: master
-      - 'casablanca':
-          branch: casablanca
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -45,8 +42,6 @@
     stream:
       - 'master':
           branch: master
-      - 'casablanca':
-          branch: casablanca
     functionality:
       - 'distribution'
     trigger_jobs:
