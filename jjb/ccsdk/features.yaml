@@ -16,6 +16,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-features-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -51,6 +53,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'ccsdk-features-settings'
     build-node: ubuntu1604-builder-4c-4g
 
