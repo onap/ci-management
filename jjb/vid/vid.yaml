@@ -17,8 +17,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
@@ -35,8 +33,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
