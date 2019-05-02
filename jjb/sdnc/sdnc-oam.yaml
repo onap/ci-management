@@ -14,6 +14,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -33,6 +35,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -68,6 +72,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
 
 - project:
