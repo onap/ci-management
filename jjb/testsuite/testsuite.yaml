@@ -33,6 +33,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'testsuite-settings'
 
 - project:
