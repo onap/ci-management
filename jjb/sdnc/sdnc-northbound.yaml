@@ -14,6 +14,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdnc-northbound-settings'
 
     # due to a strange macro / variable translation problem this needs to be
@@ -51,6 +53,8 @@
           branch: 'master'
       - 'casablanca':
           branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdnc-northbound-settings'
 
 - project:
