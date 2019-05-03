@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'

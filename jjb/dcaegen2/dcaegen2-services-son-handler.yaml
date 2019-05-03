@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'dcaegen2-services-son-handler-settings'
     files: '**'
     archive-artifacts: ''
