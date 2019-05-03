@@ -32,6 +32,7 @@
     build-timeout: 90
 
     platforms:
+      - centos-7
       - ubuntu-16.04
       - ubuntu-16.04-arm64
     templates: docker
