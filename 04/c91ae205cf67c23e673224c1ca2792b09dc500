@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Prudence Au <prudence.au@amdocs.com>
+Code-Review+1: Michael O'Brien <frank.obrien@amdocs.com>
+Code-Review+2: suresh channamallu <schannamallu@linuxfoundation.org>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Fri, 03 May 2019 17:41:36 +0000
+Reviewed-on: https://gerrit.onap.org/r/77812
+Project: ci-management
+Branch: refs/heads/master
