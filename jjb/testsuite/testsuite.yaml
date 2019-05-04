@@ -26,8 +26,8 @@
     checkout-dir2: 'testsuite/heatbridge'
 
     extra-project3: 'demo'
-    extra-branch3: '{branch}'
-    extra-refspec3: 'refs/heads/{branch}'
+    extra-branch3: 'master'
+    extra-refspec3: 'refs/heads/master'
     checkout-dir3: 'demo'
 
     stream:
