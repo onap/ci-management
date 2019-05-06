@@ -12,5 +12,5 @@
     functionality:
       - 'bbs-testsuites':
           trigger_jobs:
-            - 'dcaegen2-services-master-bbs-event-processor-merge-java'
+            - 'dcaegen2-services-{stream}-bbs-event-processor-merge-java'
     robot-options: ''
