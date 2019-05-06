@@ -1,8 +1,8 @@
 ---
 - job-template:
-    name: '{project-name}-{stream}-yaml-lint'
+    name: '{project-name}-{stream}-review'
     node: '{build-node}'
-    type: freestyle
+    project-type: freestyle
     build_script: ''
     pattern: '**'
 
