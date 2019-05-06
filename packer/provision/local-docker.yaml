@@ -58,6 +58,7 @@
         name: libxml2-utils
         state: present
       become: true
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
     - name: Install python-tox
       apt:
