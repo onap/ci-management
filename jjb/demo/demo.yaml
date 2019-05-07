@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
