@@ -8,7 +8,9 @@
       - '{project-name}-{stream}-merge-java':
           build-node: ubuntu1604-builder-8c-8g
       - gerrit-maven-stage:
-          build-node: ubuntu1604-builder-8c-8g
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
       - '{project-name}-{stream}-release-version-java-daily':
           build-node: ubuntu1604-builder-8c-8g
 
