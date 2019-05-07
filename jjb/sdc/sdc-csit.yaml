@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     functionality:
       - 'sanity':
           trigger_jobs: '{project-name}-{stream}-sdc-merge-java'

@@ -45,6 +45,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
@@ -77,7 +79,7 @@
     build-node: ubuntu1604-builder-8c-8g
     project: 'sdc'
     project-name: 'sdc'
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-settings'
     mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     mvn-goals: 'clean install'
@@ -94,7 +96,7 @@
     project: sdc
     project-name: 'sdc'
     build-node: ubuntu1604-docker-8c-8g
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-settings'
 
 - project:

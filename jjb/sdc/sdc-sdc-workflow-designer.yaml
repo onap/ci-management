@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
@@ -53,7 +55,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/sdc-workflow-designer'
     project-name: 'sdc-sdc-workflow-designer'
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -67,7 +69,7 @@
     project: sdc/sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     build-node: ubuntu1604-builder-4c-4g
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
 
 - project:

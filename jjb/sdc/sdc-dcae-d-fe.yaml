@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'sdc-dcae-d-fe-settings'
     files: '**'
     archive-artifacts: ''
@@ -47,7 +49,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/dcae-d/fe'
     project-name: 'sdc-dcae-d-fe'
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-dcae-d-fe-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -61,7 +63,7 @@
     project: sdc/dcae-d/fe
     project-name: 'sdc-dcae-d-fe'
     build-node: ubuntu1604-builder-4c-2g
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'sdc-dcae-d-fe-settings'
 
 - project:
