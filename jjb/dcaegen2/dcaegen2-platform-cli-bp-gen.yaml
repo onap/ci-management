@@ -1,0 +1,23 @@
+---
+- project:
+    name: dcaegen2-platform-cli-bp-gen
+    project: 'dcaegen2/platform/cli'
+    project-name: 'dcaegen2-platform-cli'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily':
+            version-properties: 'blueprint-generator/version.properties'
+    subproject:
+      - 'blueprint-gen':
+          pom: 'blueprint-generator/pom.xml'
+          pattern: 'blueprint-generator/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-platform-cli-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
