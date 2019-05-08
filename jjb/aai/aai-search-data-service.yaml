@@ -19,8 +19,8 @@
     project: 'aai/search-data-service'
     docker-image-name: 'onap/search-data-service'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-search-data-service-settings'
