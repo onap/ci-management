@@ -16,8 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
     files: '**'

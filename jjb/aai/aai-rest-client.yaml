@@ -14,8 +14,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/rest-client'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-rest-client-settings'

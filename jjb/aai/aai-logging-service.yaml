@@ -14,8 +14,8 @@
       - '{project-name}-{stream}-release-version-java-daily'
     project: 'aai/logging-service'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-logging-service-settings'
