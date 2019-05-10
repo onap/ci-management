@@ -17,7 +17,6 @@
           maven-versions-plugin: true
           pom: 'version-manifest/pom.xml'
           mvn-params: '-f version-manifest/pom.xml'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
     project: 'integration'
     subproject:
       - 'version-manifest':
