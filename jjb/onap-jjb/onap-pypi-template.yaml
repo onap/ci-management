@@ -20,6 +20,7 @@
       - compare-type: ANT
         pattern: '**'
 
+    submodule-disable: false
     submodule-timeout: 10
 
     #####################
@@ -52,6 +53,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     wrappers:

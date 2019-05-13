@@ -17,6 +17,7 @@
     git-url: '$GIT_URL/$PROJECT'
     post_build_script: ''
     pre_build_script: ''
+    submodule-disable: false
     submodule-recursive: true
     submodule-timeout: 10
 
@@ -129,6 +130,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     triggers:
@@ -168,6 +170,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     triggers:
@@ -272,6 +275,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:

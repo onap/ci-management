@@ -24,6 +24,7 @@
     # Default to LF standard 'snapshots' docker registry
     docker_registry: '$DOCKER_REGISTRY:10003'
     docker_tag: 'latest'
+    submodule-disable: false
     submodule-timeout: 10
 
     #####################
@@ -280,6 +281,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
@@ -340,6 +342,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
@@ -560,6 +563,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
@@ -620,6 +624,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
@@ -677,6 +682,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
@@ -729,6 +735,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
           choosing-strategy: default
 
     builders:
