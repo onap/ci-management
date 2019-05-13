@@ -17,6 +17,7 @@
     git-url: '$GIT_URL/$PROJECT'
     post_build_script: ''
     pre_build_script: ''
+    submodule-disable: false
     submodule-recursive: true
     submodule-timeout: 10
 

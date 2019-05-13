@@ -24,6 +24,7 @@
     # Default to LF standard 'snapshots' docker registry
     docker_registry: '$DOCKER_REGISTRY:10003'
     docker_tag: 'latest'
+    submodule-disable: false
     submodule-timeout: 10
 
     #####################
