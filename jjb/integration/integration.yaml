@@ -15,7 +15,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-          pom: 'version-manifest/pom.xml'
+          mvn-pom: 'version-manifest/pom.xml'
           mvn-params: '-f version-manifest/pom.xml'
     project: 'integration'
     subproject:
