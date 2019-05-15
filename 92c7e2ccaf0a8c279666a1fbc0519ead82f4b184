@@ -22,6 +22,30 @@
       "revId": "92c7e2ccaf0a8c279666a1fbc0519ead82f4b184",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90389ab7_914264e0",
+        "filename": "jjb/aai/aai-graphgraph.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2381
+      },
+      "writtenOn": "2019-05-15T08:04:06Z",
+      "side": 1,
+      "message": "Hi Jessica :) ,\n\nno it was not tested, how can I test it in a sandbox? The build-node value was copied and is the same as in most other aai jjb scripts.\n\nThe issue that is being fixed is the wrong value of \"ubuntu1604-docker-2c-4g\" which does not exist and thus the jenkins job does not run.",
+      "parentUuid": "1c1235ca_b0a4e581",
+      "range": {
+        "startLine": 19,
+        "startChar": 10,
+        "endLine": 19,
+        "endChar": 46
+      },
+      "revId": "92c7e2ccaf0a8c279666a1fbc0519ead82f4b184",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
