@@ -5,10 +5,10 @@
     build-timeout: 120
     project: 'aaf/sshsm'
     jobs:
-      - '{project-name}-{stream}-verify-c':
+      - gerrit-verify-c:
          script:
             !include-raw-escape: 'build-sshsm.sh'
-      - '{project-name}-{stream}-docker-c-shell-daily':
+      - gerrit-docker-c-shell-daily:
          script:
             !include-raw-escape: 'build-sshsm-docker-images.sh'
     stream:
