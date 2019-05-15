@@ -12,6 +12,7 @@
 
     branch: master
     submodule-recursive: true
+    submodule-disable: false
     submodule-timeout: 10
 
     #####################
@@ -39,6 +40,7 @@
           refspec: '$GERRIT_REFSPEC'
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
+          submodule-disable: '{submodule-disable}'
           submodule-timeout: '{submodule-timeout}'
           choosing-strategy: default
 
