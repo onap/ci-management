@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''
