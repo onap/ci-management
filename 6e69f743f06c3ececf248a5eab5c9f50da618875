@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8bed18e0_1a2b32c5",
+        "filename": "jenkins-config/clouds/openstack/cattle/centos7-redis-4c-4g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-05-18T00:01:47Z",
+      "side": 1,
+      "message": "Looks like you have an extra space here.",
+      "range": {
+        "startLine": 1,
+        "startChar": 29,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "6e69f743f06c3ececf248a5eab5c9f50da618875",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "72c00bb9_2cc90cff",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu1604-helm-2c-1g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-05-18T00:01:47Z",
+      "side": 1,
+      "message": "Extra space here too.",
+      "range": {
+        "startLine": 1,
+        "startChar": 39,
+        "endLine": 1,
+        "endChar": 41
+      },
+      "revId": "6e69f743f06c3ececf248a5eab5c9f50da618875",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e1318bd_fc41bb4c",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu1604-memcached-4c-4g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-05-18T00:01:47Z",
+      "side": 1,
+      "message": "Extra space here too.",
+      "range": {
+        "startLine": 1,
+        "startChar": 37,
+        "endLine": 1,
+        "endChar": 39
+      },
+      "revId": "6e69f743f06c3ececf248a5eab5c9f50da618875",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
