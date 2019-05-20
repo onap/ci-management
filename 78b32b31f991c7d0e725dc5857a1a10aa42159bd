@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b03aa1d5_c9a2bcff",
+        "filename": "jjb/multicloud/multicloud-k8s-aio.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-20T18:44:47Z",
+      "side": 1,
+      "message": "would rename this file and name here to -kud-deployment",
+      "range": {
+        "startLine": 3,
+        "startChar": 25,
+        "endLine": 3,
+        "endChar": 28
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "babef8de_4cfae78c",
+        "filename": "jjb/multicloud/multicloud-k8s-aio.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-20T18:44:47Z",
+      "side": 1,
+      "message": "kud-deployment.sh would be better?",
+      "range": {
+        "startLine": 6,
+        "startChar": 43,
+        "endLine": 7,
+        "endChar": 0
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec8101cc_20c6a2be",
+        "filename": "jjb/multicloud/multicloud-k8s-aio.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-20T18:44:47Z",
+      "side": 1,
+      "message": "kud-deployment",
+      "range": {
+        "startLine": 14,
+        "startChar": 26,
+        "endLine": 14,
+        "endChar": 29
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "75ec6575_1721069c",
+        "filename": "jjb/multicloud/run-aio.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-20T18:44:47Z",
+      "side": 1,
+      "message": "file name kud-deployment.sh",
+      "range": {
+        "startLine": 1,
+        "startChar": 10,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08f7d067_5e73a053",
+        "filename": "jjb/multicloud/run-aio.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-20T18:44:47Z",
+      "side": 1,
+      "message": "would do wrapper script as this part will change.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 13
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
