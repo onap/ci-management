@@ -49,8 +49,8 @@
     project: 'aai/schema-service'
     project-name: 'aai-schema-service'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn35'
 

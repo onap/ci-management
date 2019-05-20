@@ -43,8 +43,8 @@
     project: 'aai/router-core'
     project-name: 'aai-router-core'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-router-core-settings'
 
 - project:

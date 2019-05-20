@@ -48,8 +48,8 @@
     project: 'aai/gizmo'
     project-name: 'aai-gizmo'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-gizmo-settings'
 
 - project:

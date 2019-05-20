@@ -47,8 +47,8 @@
     project: 'aai/data-router'
     project-name: 'aai-data-router'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-data-router-settings'
 
 - project:

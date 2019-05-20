@@ -49,8 +49,8 @@
     project: 'aai/esr-server'
     project-name: 'aai-esr-server'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-esr-server-settings'
 
 - project:

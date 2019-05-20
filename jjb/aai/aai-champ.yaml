@@ -48,8 +48,8 @@
     project: 'aai/champ'
     project-name: 'aai-champ'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-champ-settings'
 
 - project:

@@ -47,8 +47,8 @@
     project: 'aai/spike'
     project-name: 'aai-spike'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-spike-settings'
 
 - project:

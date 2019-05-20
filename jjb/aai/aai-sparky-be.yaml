@@ -47,8 +47,8 @@
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-sparky-be-settings'
 
 - project:

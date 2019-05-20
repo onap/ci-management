@@ -65,8 +65,8 @@
     project: 'aai/search-data-service'
     project-name: 'aai-search-data-service'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-search-data-service-settings'
 
 - project:

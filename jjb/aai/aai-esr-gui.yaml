@@ -36,8 +36,8 @@
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-esr-gui-settings'
 
 - project:

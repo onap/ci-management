@@ -43,8 +43,8 @@
     project: 'aai/logging-service'
     project-name: 'aai-logging-service'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-logging-service-settings'
 
 - project:
