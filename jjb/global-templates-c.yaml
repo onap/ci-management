@@ -52,10 +52,6 @@
     publishers:
       - lf-infra-publish
 
-#################
-# JOB TEMPLATES #
-#################
-
 - job-template:
     #
     # job template for build C/C++ project
@@ -105,3 +101,22 @@
           settings-file: '{mvn-settings}'
       - docker-login
       - shell: '{script}'
+
+- job-template:
+    #
+    # job template for build project executed every 6hrs
+    #
+    # Required Variables:
+    #   script:         build script to execute
+    name: '{name}-{stream}-shell-6hrs'
+    node: '{build-node}'
+    type: freestyle
+
+    triggers:
+      - timed: '00 */6 * * *'
+
+    builders:
+      - shell: '{script}'
+
+    publishers:
+      - lf-infra-publish
