@@ -1,0 +1,33 @@
+--
+- job-template:
+    name: '{name}-{stream}'
+    node: '{build-node}'
+    type: freestyle
+    build_script: ''
+    pattern: '**'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: 'gerrit'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{obj:pattern}'
+
+    builders:
+      - shell: '{obj:build_script}'
+
+    publishers:
+      - lf-infra-publish
