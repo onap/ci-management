@@ -45,8 +45,8 @@
     project: 'aai/cacher'
     project-name: 'aai-cacher'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

@@ -28,8 +28,8 @@
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-gallifrey-settings'
 
 - project:

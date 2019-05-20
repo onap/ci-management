@@ -51,8 +51,8 @@
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
 

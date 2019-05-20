@@ -51,8 +51,8 @@
     project: 'aai/traversal'
     project-name: 'aai-traversal'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
 

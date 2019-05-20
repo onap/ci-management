@@ -48,8 +48,8 @@
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-model-loader-settings'
 
 - project:

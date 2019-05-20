@@ -48,8 +48,8 @@
     project: 'aai/validation'
     project-name: 'aai-validation'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-validation-settings'
 
 

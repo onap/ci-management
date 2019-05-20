@@ -43,8 +43,8 @@
     project: 'aai/rest-client'
     project-name: 'aai-rest-client'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-rest-client-settings'
 
 - project:

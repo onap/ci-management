@@ -51,8 +51,8 @@
     project: 'aai/resources'
     project-name: 'aai-resources'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
 
