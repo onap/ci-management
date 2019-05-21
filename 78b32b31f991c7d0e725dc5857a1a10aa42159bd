@@ -138,6 +138,30 @@
       "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31800b10_1ed6b6a2",
+        "filename": "jjb/multicloud/run-aio.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-05-21T16:16:16Z",
+      "side": 1,
+      "message": "Yes I can.\nSame way as we did in offline-installer. I.e. create shell script in the repo e.g. k8s-ci.sh that is called here. In that way we don\u0027t need to change this repo when we want to change the functionality to be called.\nE.g. for now we can start with aio.sh but we could change it to vagrant deployment.",
+      "parentUuid": "1a4e7344_0e6ffcbb",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 13
+      },
+      "revId": "78b32b31f991c7d0e725dc5857a1a10aa42159bd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
