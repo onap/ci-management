@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d55a4e1_df08eb78",
+        "filename": "jjb/global-templates-c.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 301
+      },
+      "writtenOn": "2019-05-24T21:06:12Z",
+      "side": 1,
+      "message": "Heading not needed. It is already under JOB TEMPLATES",
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4054fe3_87e32427",
+        "filename": "jjb/global-templates-c.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 301
+      },
+      "writtenOn": "2019-05-24T21:06:12Z",
+      "side": 1,
+      "message": "Do we need an id for the job to refer to from the job?",
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "643e0b5a_b5528b5f",
+        "filename": "jjb/multicloud/multicloud-k8s-kud-deployment.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 301
+      },
+      "writtenOn": "2019-05-24T21:06:12Z",
+      "side": 1,
+      "message": "Should we have an ID in the job definition that we can refer to here or does this work?",
+      "range": {
+        "startLine": 13,
+        "startChar": 9,
+        "endLine": 13,
+        "endChar": 37
+      },
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
