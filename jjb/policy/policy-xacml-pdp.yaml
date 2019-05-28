@@ -12,13 +12,38 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-          disabled: false
+          disabled: true
           build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/xacml-pdp'
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'policy-xacml-pdp-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: policy-xacml-pdp-dublin
+    project-name: 'policy-xacml-pdp-dublin'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker'
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-docker-version-java-daily':
+          docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
+          mvn-params: '-Dmaven.test.skip=true'
+          disabled: false
+          build-node: ubuntu1604-docker-8c-8g
+
+    project: 'policy/xacml-pdp'
+    stream:
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-xacml-pdp-settings'
     files: '**'
     archive-artifacts: ''

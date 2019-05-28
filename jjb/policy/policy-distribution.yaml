@@ -12,7 +12,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-          disabled: false
+          disabled: true
           build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/distribution'
@@ -25,8 +25,8 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
-    name: policy-distribution-casablanca
-    project-name: 'policy-distribution-casablanca'
+    name: policy-distribution-dublin
+    project-name: 'policy-distribution-dublin'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
@@ -37,13 +37,13 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-          disabled: true
+          disabled: false
           build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/distribution'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-distribution-settings'
     files: '**'
     archive-artifacts: ''
