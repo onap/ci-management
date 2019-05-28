@@ -9,7 +9,7 @@
         - 'master':
               branch: 'master'
         - 'casablanca':
-              branch: 'casablanca'
+              branch: 'dublin'
     functionality:
       - 'APIs':
           trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'

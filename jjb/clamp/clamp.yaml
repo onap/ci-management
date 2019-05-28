@@ -36,7 +36,7 @@
         - 'master':
               branch: 'master'
         - 'casablanca':
-              branch: 'casablanca'
+              branch: 'dublin'
     mvn-settings: 'clamp-settings'
     files: '**'
     archive-artifacts: ''
