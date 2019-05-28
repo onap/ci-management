@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'health'
     trigger_jobs:
@@ -15,7 +17,6 @@
       - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
     build-timeout: 40
-    branch: 'master'
 
 - project:
     name: policy-apex-pdp-csit
@@ -26,12 +27,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'apex-pdp'
     trigger_jobs:
       - 'policy-apex-pdp-{stream}-merge-scm-mvn-script'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-distribution-csit
@@ -42,12 +44,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'distribution'
     trigger_jobs:
       - 'policy-distribution-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-api-csit
@@ -58,12 +61,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'api'
     trigger_jobs:
       - 'policy-api-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-xacml-pdp-csit
@@ -74,12 +78,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'xacml-pdp'
     trigger_jobs:
       - 'policy-xacml-pdp-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-pap-csit
@@ -90,12 +95,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'pap'
     trigger_jobs:
       - 'policy-pap-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-drools-pdp-csit
@@ -106,12 +112,13 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'drools-pdp'
     trigger_jobs:
       - 'policy-drools-pdp-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 
 - project:
     name: policy-drools-applications-csit
@@ -122,10 +129,11 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'drools-applications'
     trigger_jobs:
       - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
-    branch: 'master'
 

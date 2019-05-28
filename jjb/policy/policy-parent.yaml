@@ -6,7 +6,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
-          disabled: false
+          disabled: true
 
     project: 'policy/parent'
     stream:
@@ -18,18 +18,18 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
-    name: policy-parent-casablanca
-    project-name: 'policy-parent-casablanca'
+    name: policy-parent-dublin
+    project-name: 'policy-parent-dublin'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
-          disabled: true
+          disabled: false
 
     project: 'policy/parent'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-parent-settings'
     files: '**'
     archive-artifacts: ''
