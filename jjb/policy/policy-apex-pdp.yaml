@@ -21,7 +21,7 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
-          disabled: false
+          disabled: true
           build-node: ubuntu1604-docker-8c-8g
     project: 'policy/apex-pdp'
     stream:
@@ -33,8 +33,8 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
-    name: policy-apex-pdp-casablanca
-    project-name: 'policy-apex-pdp-casablanca'
+    name: policy-apex-pdp-dublin
+    project-name: 'policy-apex-pdp-dublin'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-scm-mvn-script':
@@ -48,12 +48,12 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
-          disabled: true
+          disabled: false
           build-node: ubuntu1604-docker-8c-8g
     project: 'policy/apex-pdp'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-apex-pdp-settings'
     files: '**'
     archive-artifacts: ''
