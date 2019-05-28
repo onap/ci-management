@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fdc3df23_11793513",
+        "filename": "jjb/policy/policy-common.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-05-28T18:19:03Z",
+      "side": 1,
+      "message": "Just making sure, this should be false no?",
+      "range": {
+        "startLine": 27,
+        "startChar": 10,
+        "endLine": 27,
+        "endChar": 24
+      },
+      "revId": "79a6764ff71f6f1083f113337d674a09d03446c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8c3e1ea8_f8487a79",
+        "filename": "jjb/policy/policy-models.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-05-28T18:19:03Z",
+      "side": 1,
+      "message": "Is this meant to be false?",
+      "range": {
+        "startLine": 27,
+        "startChar": 10,
+        "endLine": 27,
+        "endChar": 24
+      },
+      "revId": "79a6764ff71f6f1083f113337d674a09d03446c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
