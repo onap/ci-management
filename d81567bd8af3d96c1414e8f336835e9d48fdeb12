@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "35d0bad9_23d96092",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-05-28T17:03:23Z",
+      "side": 1,
+      "message": "I\u0027m not sure this file is correct.",
+      "revId": "d81567bd8af3d96c1414e8f336835e9d48fdeb12",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4c64c8a_0f9ad57d",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-05-28T17:03:23Z",
+      "side": 1,
+      "message": "This is confusing - would these always operate against the master branch?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 20
+      },
+      "revId": "d81567bd8af3d96c1414e8f336835e9d48fdeb12",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
