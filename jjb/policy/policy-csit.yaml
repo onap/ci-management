@@ -7,6 +7,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'health'
     trigger_jobs:
@@ -26,6 +28,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -42,6 +46,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'distribution'
     trigger_jobs:
@@ -58,6 +64,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'api'
     trigger_jobs:
@@ -74,6 +82,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'xacml-pdp'
     trigger_jobs:
@@ -90,6 +100,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'pap'
     trigger_jobs:
@@ -106,6 +118,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'drools-pdp'
     trigger_jobs:
@@ -122,6 +136,8 @@
     stream:
       - 'master':
           branch: master
+      - 'dublin':
+          branch: dublin
     functionality:
       - 'drools-applications'
     trigger_jobs:

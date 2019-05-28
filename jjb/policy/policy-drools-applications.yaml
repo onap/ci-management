@@ -15,7 +15,7 @@
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           script:
             !include-raw-escape: 'drools-apps-docker-release.sh'
-          disabled: false
+          disabled: true
           build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/drools-applications'
@@ -28,18 +28,18 @@
     build-node: 'ubuntu1604-builder-4c-4g'
 
 - project:
-    name: policy-drools-applications-casablanca
-    project-name: 'policy-drools-applications-casablanca'
+    name: policy-drools-applications-dublin
+    project-name: 'policy-drools-applications-dublin'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily':
-          disabled: true
+          disabled: false
 
     project: 'policy/drools-applications'
     stream:
-      - 'casablanca':
-          branch: 'casablanca'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'policy-drools-applications-settings'
     files: '**'
     archive-artifacts: ''
