@@ -39,6 +39,30 @@
       "revId": "d81567bd8af3d96c1414e8f336835e9d48fdeb12",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1b7ba77_3fd91842",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-05-28T17:52:02Z",
+      "side": 1,
+      "message": "yes.. this needs to be removed as it will overwrite what is on line 10",
+      "parentUuid": "a4c64c8a_0f9ad57d",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 20
+      },
+      "revId": "d81567bd8af3d96c1414e8f336835e9d48fdeb12",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
