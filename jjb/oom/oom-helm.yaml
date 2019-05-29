@@ -12,10 +12,18 @@
         #!/bin/bash
         set -e -o pipefail
         cd kubernetes/
+        if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
+          echo "[ERROR] Only release images are allowed in helm charts."
+          exit 1
+        fi
         make all
     subproject_build_script: |
         #!/bin/bash
         cd kubernetes/
+        if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
+          echo "[ERROR] Only release images are allowed in helm charts."
+          exit 1
+        fi
         make common
         make {subproject}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
