@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "18c06963_b460352c",
+        "filename": "jjb/global-templates-c.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-05-29T10:29:54Z",
+      "side": 1,
+      "message": "ok, will remove. thx",
+      "parentUuid": "2d55a4e1_df08eb78",
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e4054fe3_87e32427",
         "filename": "jjb/global-templates-c.yaml",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "9ae2b31f_279e0dde",
+        "filename": "jjb/global-templates-c.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-05-29T10:29:54Z",
+      "side": 1,
+      "message": "it should work, see other comment",
+      "parentUuid": "e4054fe3_87e32427",
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "643e0b5a_b5528b5f",
         "filename": "jjb/multicloud/multicloud-k8s-kud-deployment.yaml",
         "patchSetId": 3
@@ -47,6 +83,30 @@
       "writtenOn": "2019-05-24T21:06:12Z",
       "side": 1,
       "message": "Should we have an ID in the job definition that we can refer to here or does this work?",
+      "range": {
+        "startLine": 13,
+        "startChar": 9,
+        "endLine": 13,
+        "endChar": 37
+      },
+      "revId": "957f6eba9ce63398e95aeb5c58db7315e2f8de09",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad6b7c6a_147493ea",
+        "filename": "jjb/multicloud/multicloud-k8s-kud-deployment.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-05-29T10:29:54Z",
+      "side": 1,
+      "message": "this one is matching job template and was verified on sandbox https://jenkins.onap.org/sandbox/job/multicloud-k8s-kud-deployment-master-shell-6hrs/",
+      "parentUuid": "643e0b5a_b5528b5f",
       "range": {
         "startLine": 13,
         "startChar": 9,
