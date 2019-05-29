@@ -1,0 +1,55 @@
+---
+- project:
+    name: sdc-sdc-be-common-project-view
+    project-name: sdc-sdc-be-common
+    views:
+      - project-view
+
+- project:
+    name: sdc-sdc-be-common
+    project-name: 'sdc-sdc-be-common'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-merge-java'
+    project: 'sdc/sdc-be-common'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-sdc-be-common-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+    maven-version: 'mvn35'
+
+- project:
+    name: sdc-sdc-be-common-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/sdc-be-common'
+    project-name: 'sdc-sdc-be-common'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-be-common-settings'
+    mvn-params: '-Dsonar.branch={branch}'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-sdc-be-common-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: sdc/sdc-be-common
+    project-name: 'sdc-sdc-be-common'
+    branch: 'master'
+    mvn-settings: 'sdc-sdc-be-common-settings'
+
+- project:
+    name: sdc-sdc-be-common-info
+    project-name: sdc-sdc-be-common
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/sdc-be-common
+    branch: master
