@@ -39,7 +39,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'music'
     project-name: 'music'
-    branch: 'master'
+    branch: 'dublin'
     mvn-settings: 'music-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
