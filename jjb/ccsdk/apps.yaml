@@ -20,8 +20,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-apps-settings'
@@ -57,8 +55,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-apps-settings'
@@ -74,8 +70,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'casablanca':
-          branch: 'casablanca'
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-apps-settings'
