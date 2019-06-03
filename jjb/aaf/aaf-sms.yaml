@@ -14,9 +14,6 @@
           maven-versions-plugin: true
           mvn-pom: 'sms-client/java/pom.xml'
           mvn-params: '-f sms-client/java/pom.xml'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily':
-          pom:
-            'sms-client/java/pom.xml'
       - '{project-name}-{stream}-docker-golang-shell-daily':
           script:
             !include-raw-escape: 'build-sms-docker-image.sh'
