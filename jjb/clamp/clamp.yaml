@@ -42,7 +42,7 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'casablanca':
+        - 'dublin':
               branch: 'dublin'
     mvn-settings: 'clamp-settings'
     files: '**'
