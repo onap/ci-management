@@ -53,7 +53,7 @@
           server: '{server-name}'
           project: '**'
           branch: '{branch}'
-          files: 'docs/**/*.rst'
+          files: '**.rst'
       - timed: 'H H * * *'
 
     builders:
@@ -154,7 +154,7 @@
                   branch-pattern: '**/{branch}'
               file-paths:
                 - compare-type: ANT
-                  pattern: docs/**/*.rst
+                  pattern: '**.rst'
 
     builders:
       - shell: !include-raw: doc-post-rtd.sh
@@ -162,4 +162,3 @@
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
-
