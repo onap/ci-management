@@ -9,11 +9,12 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: docker
-          mvn-params: '-Dmaven.test.skip=true'
-          build-node: 'ubuntu1604-docker-8c-8g'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-Dmaven.test.skip=true -P docker'
     project: 'music/prom'
     stream:
       - 'master':
