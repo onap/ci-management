@@ -16,7 +16,6 @@
           script:
             !include-raw-escape: 'include-raw-docker-release.sh'
           disabled: true
-          build-node: ubuntu1604-docker-8c-8g
     project: 'policy/drools-pdp'
     stream:
       - 'master':
@@ -24,7 +23,7 @@
     mvn-settings: 'policy-drools-pdp-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-builder-4c-4g'
+    build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: policy-drools-pdp-dublin
