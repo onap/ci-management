@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d5f828f2_9f43616b",
+        "filename": "jjb/policy/policy-drools-applications.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-05T18:31:32Z",
+      "side": 1,
+      "message": "probably will also make it easier to move to global-jjb when you guys are ready ;)",
+      "parentUuid": "864b1796_daac8896",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 0
+      },
+      "revId": "49ccacde1829e1a511fe968210c3ad4b0510bcf5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "30bceb64_f822e994",
         "filename": "jjb/policy/policy-drools-pdp.yaml",
         "patchSetId": 1
