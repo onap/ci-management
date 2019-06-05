@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3157201e_b706a60c",
+        "filename": "jjb/sdnc/sdnc-northbound.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-05T20:36:12Z",
+      "side": 1,
+      "message": "add \":\" at the end of the line to make it look like this:\n\ngerrit-maven-stage:",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 8,
+        "endChar": 26
+      },
+      "revId": "b6a78891ba7c534f8fb739146256425f6e3fdb5d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b3e7b57_240e2a6e",
+        "filename": "jjb/sdnc/sdnc-northbound.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-05T20:36:12Z",
+      "side": 1,
+      "message": "Add 1 more variable after this \nsign-artifacts: true",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "b6a78891ba7c534f8fb739146256425f6e3fdb5d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
