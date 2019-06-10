@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "123930ba_257a7b28",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5443
+      },
+      "writtenOn": "2019-06-10T16:46:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "822520b3_ab18985a",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "b53438928916d32498256b8ac490086318eaa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b411ba1d_4d928c45",
         "filename": "jjb/ci-management/ci-management-coverity.yaml",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "b53438928916d32498256b8ac490086318eaa076",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7e5a2e59_85755289",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5443
+      },
+      "writtenOn": "2019-06-10T16:46:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b411ba1d_4d928c45",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 14
+      },
+      "revId": "b53438928916d32498256b8ac490086318eaa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
