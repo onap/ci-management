@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "822520b3_ab18985a",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2019-06-10T16:15:51Z",
+      "side": 1,
+      "message": "Do not namespace into \u0027lf-infra\u0027 that is reserved for global-jjb based macros and templates. Custom macros and templates should be namespaced to the project. In this case \u0027onap\u0027",
+      "range": {
+        "startLine": 5,
+        "startChar": 10,
+        "endLine": 5,
+        "endChar": 18
+      },
+      "revId": "b53438928916d32498256b8ac490086318eaa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b411ba1d_4d928c45",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2019-06-10T16:15:51Z",
+      "side": 1,
+      "message": "\u0027gerrit\u0027 and \u0027github\u0027 namespaces are reserved for global-jjb. For onap yous should namespace to onap-gerrit or onap-github (if you were to produce a github version of a template)",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 14
+      },
+      "revId": "b53438928916d32498256b8ac490086318eaa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
