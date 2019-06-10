@@ -46,6 +46,14 @@
     view-regex: '^(?=.*-sonar)(?!.*-no-sonar).*'
     view-description: 'List of Sonar jobs'
 
+- project:
+    name: All-Coverity
+    views:
+      - common-view
+    view-name: All-Coverity
+    view-regex: '.*-coverity'
+    view-description: 'List of Coverity jobs'
+
 - view:
     name: CLM
     description: 'List of CLM jobs'
