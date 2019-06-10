@@ -1,6 +1,0 @@
-{
-  "base_image": "ZZCI - CentOS 7 - builder - 20180328-1726",
-  "ssh_user": "centos",
-  "distro": "CentOS 7",
-  "cloud_user_data": "provision/rh-user_data.sh"
-}
