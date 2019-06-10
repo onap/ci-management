@@ -1,0 +1,114 @@
+---
+# Coverity Scan static analysis
+
+- builder:
+    name: lf-infra-maven-coverity
+    builders:
+      - lf-maven-install:
+          mvn-version: '{mvn-version}'
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: global-settings
+          settings-file: '{mvn-settings}'
+      - shell: !include-raw-escape:
+          - ../../global-jjb/shell/common-variables.sh
+          - ../../shell/maven-coverity.sh
+      - lf-provide-maven-settings-cleanup
+
+- job-template:
+    name: '{project-name}-coverity'
+    id: gerrit-maven-coverity
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    branch: master
+    build-days-to-keep: 7
+    build-timeout: 60
+    cron: '@daily'
+    disable-job: false
+    git-url: '$GIT_URL/$PROJECT'
+    java-version: openjdk8
+    mvn-global-settings: global-settings
+    mvn-opts: ''
+    mvn-params: ''
+    mvn-version: mvn35
+    coverity-project-name: ''
+    coverity-token: ''
+    coverity-user-email: ''
+    stream: master
+    submodule-recursive: true
+    submodule-timeout: 10
+    submodule-disable: false
+    archive-artifacts: >
+      **/*.log
+      **/hs_err_*.log
+      **/target/**/feature.xml
+      **/target/failsafe-reports/failsafe-summary.xml
+      **/target/surefire-reports/*-output.txt
+
+    disabled: '{disable-job}'
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+      - lf-infra-maven-parameters:
+          mvn-opts: '{mvn-opts}'
+          mvn-params: '{mvn-params}'
+          mvn-version: '{mvn-version}'
+      - string:
+          name: ARCHIVE_ARTIFACTS
+          default: '{archive-artifacts}'
+          description: Artifacts to archive to the logs server.
+      - string:
+          name: COVERITY_PROJECT_NAME
+          default: '{coverity-project-name}'
+          description: |
+              Project name in Coverity Scan service.
+      - string:
+          name: COVERITY_TOKEN
+          default: '{coverity-token}'
+          description: |
+              Project token in Coverity Scan service.
+      - string:
+          name: COVERITY_USER_EMAIL
+          default: '{coverity-user-email}'
+          description: |
+              Email of registered user in Coverity Scan service who initiated
+              the submittion.
+
+    triggers:
+      - timed: '{obj:cron}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - lf-infra-pre-build
+      - lf-infra-maven-coverity:
+          java-version: '{java-version}'
+          mvn-settings: '{mvn-settings}'
+          mvn-version: '{mvn-version}'
+
+    publishers:
+      - lf-infra-publish
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: $GERRIT_REFSPEC
+          branch: $GERRIT_BRANCH
+          submodule-recursive: '{submodule-recursive}'
+          submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
+          choosing-strategy: default
