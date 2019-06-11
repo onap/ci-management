@@ -4,10 +4,26 @@
 - job-template:
     name: '{project-name}-coverity'
     id: onap-gerrit-maven-coverity
+    description: >
+      <hr/>
+      <h2>How to access Coverity Scan static analysis results</h2>
+      <ol>
+        <li>Visit <a href="https://scan.coverity.com/projects/{coverity-project-name}">Coverity Scan
+          project page</a>.</li>
+        <li>If you have not been added to the project on Coverity Scan service yet:
+          <ol>
+            <li>Click on <a href="https://scan.coverity.com/memberships/new?project_id={coverity-project-name}">
+              Add me to project</a>.</li>
+            <li>Wait till the project administrators grant you appropriate permissions.</li>
+          </ol>
+        <li>Click on <a href="https://scan.coverity.com/projects/{coverity-project-name}/view_defects">
+          View Defects</a>.</li>
+      </ol>
+      <p>Please note that processing data takes some time. You will get an email when it's done.</p>
+      <hr/>
 
     project-type: freestyle
     node: '{build-node}'
-
     branch: master
     build-days-to-keep: 7
     build-timeout: 60
