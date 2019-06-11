@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79292ccd_81c786e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-11T16:31:29Z",
+      "side": 1,
+      "message": "Please remove the empty line #12\n\nThese 3 lines should be part of the same footer",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 52
+      },
+      "revId": "6e068446b9f3fb55bfbd4124494b5fef77a4a4e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
