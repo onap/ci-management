@@ -59,6 +59,19 @@
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
+      - choice:
+          name: MVN_TESTS
+          choices:
+            - job-default
+            - disable-build
+            - disable-run
+            - enable
+          description: >
+            How to deal with Maven tests:<ul>
+            <li>'job-default' - use default value for the job (<b>"{mvn-tests}"</b>)
+            <li>'disable-build' - don't build tests,</li>
+            <li>'disable-run' - build but don't run (can produce lots of extra defect reports),</li>
+            <li>'enable' - build (extra detected defects) and run (takes extra time to complete).</li></ul>
 
     triggers:
       - timed: '{obj:cron}'
@@ -82,6 +95,7 @@
             COVERITY_PROJECT_NAME={coverity-project-name}
             COVERITY_TOKEN={coverity-token}
             COVERITY_USER_EMAIL={coverity-user-email}
+            JOB_MVN_TESTS={mvn-tests}
       - shell: !include-raw-escape:
           - ../../global-jjb/shell/common-variables.sh
           - ../../shell/maven-coverity.sh

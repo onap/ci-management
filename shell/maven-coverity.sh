@@ -19,6 +19,24 @@ PS4='+['$(readlink -f "$0")' ${FUNCNAME[0]%main}#$LINENO] '
 
 echo '---> maven-coverity.sh'
 
+test x"${MVN_TESTS}" == x'job-default' \
+  && MVN_TESTS="${JOB_MVN_TESTS}"
+
+case "${MVN_TESTS}" in
+  'disable-build')
+    MAVEN_TEST_OPTS='-Dmaven.test.skip=true'
+    ;;
+  'disable-run')
+    MAVEN_TEST_OPTS='-DskipTests=true'
+    ;;
+  'enable')
+    MAVEN_TEST_OPTS=''
+    ;;
+  *)
+    echo "Unknown MVN_TESTS mode (${MVN_TESTS}): 'disable-build', 'disable-run' or 'enable' expected." >&2
+    exit 1
+esac
+
 #-----------------------------------------------------------------------------
 # Check if we are allowed to submit results to Coverity Scan service
 # and have not exceeded our upload quota limits
@@ -103,6 +121,7 @@ cov-build \
     --global-settings "${GLOBAL_SETTINGS_FILE}" \
     --settings "${SETTINGS_FILE}" \
     ${MAVEN_OPTIONS:=} \
+    ${MAVEN_TEST_OPTS} \
     ${MAVEN_PARAMS:=}
 
 cov-import-scm \
