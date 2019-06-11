@@ -1,21 +1,6 @@
 ---
 # Coverity Scan static analysis
 
-- builder:
-    name: onap-maven-coverity
-    builders:
-      - lf-maven-install:
-          mvn-version: '{mvn-version}'
-      - lf-update-java-alternatives:
-          java-version: '{java-version}'
-      - lf-provide-maven-settings:
-          global-settings-file: global-settings
-          settings-file: '{mvn-settings}'
-      - shell: !include-raw-escape:
-          - ../../global-jjb/shell/common-variables.sh
-          - ../../shell/maven-coverity.sh
-      - lf-provide-maven-settings-cleanup
-
 - job-template:
     name: '{project-name}-coverity'
     id: onap-gerrit-maven-coverity
@@ -27,7 +12,7 @@
     build-days-to-keep: 7
     build-timeout: 60
     cron: '@daily'
-    disable-job: false
+    disabled: false
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
@@ -47,8 +32,6 @@
       **/target/**/feature.xml
       **/target/failsafe-reports/failsafe-summary.xml
       **/target/surefire-reports/*-output.txt
-
-    disabled: '{disable-job}'
 
     properties:
       - lf-infra-properties:
@@ -94,10 +77,17 @@
 
     builders:
       - lf-infra-pre-build
-      - onap-maven-coverity:
-          java-version: '{java-version}'
-          mvn-settings: '{mvn-settings}'
+      - lf-maven-install:
           mvn-version: '{mvn-version}'
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: global-settings
+          settings-file: '{mvn-settings}'
+      - shell: !include-raw-escape:
+          - ../../global-jjb/shell/common-variables.sh
+          - ../../shell/maven-coverity.sh
+      - lf-provide-maven-settings-cleanup
 
     publishers:
       - lf-infra-publish
