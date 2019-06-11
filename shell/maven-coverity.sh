@@ -20,6 +20,31 @@ PS4='+['$(readlink -f "$0")' ${FUNCNAME[0]%main}#$LINENO] '
 echo '---> maven-coverity.sh'
 
 #-----------------------------------------------------------------------------
+# Check if we are allowed to submit results to Coverity Scan service
+# and have not exceeded our upload quota limits
+# See also: https://scan.coverity.com/faq#frequency
+
+CURL_OUTPUT=$(
+  curl \
+    --verbose \
+    --silent \
+    --show-error \
+    --fail \
+    --form "project=${COVERITY_PROJECT_NAME}" \
+    --form "token=${COVERITY_TOKEN}" \
+    'https://scan.coverity.com/api/upload_permitted'
+)
+
+IS_COVERITY_UPLOAD_PERMITTED=$(
+  echo "${CURL_OUTPUT}" \
+  | jq '.upload_permitted'
+)
+if [ x"${IS_COVERITY_UPLOAD_PERMITTED}" != x'true' ]; then
+  echo "Upload quota reached. Next upload permitted at "$(echo "${CURL_OUTPUT}" | jq '.next_upload_permitted_at') >&2
+  exit 1
+fi
+
+#-----------------------------------------------------------------------------
 # Get Coverity Scan build tool
 
 curl \
