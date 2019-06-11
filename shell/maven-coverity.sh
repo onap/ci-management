@@ -57,6 +57,20 @@ curl \
   --output 'coverity_tool.tgz' \
   'https://scan.coverity.com/download/linux64'
 
+curl \
+  --verbose \
+  --silent \
+  --show-error \
+  --fail \
+  --form "project=${COVERITY_PROJECT_NAME}" \
+  --form "token=${COVERITY_TOKEN}" \
+  --form 'md5=1' \
+  --output 'coverity_tool.md5' \
+  'https://scan.coverity.com/download/linux64'
+
+echo -n ' coverity_tool.tgz' >> 'coverity_tool.md5'
+md5sum --check 'coverity_tool.md5'
+
 tar \
   --extract \
   --gunzip \
