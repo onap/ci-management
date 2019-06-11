@@ -50,22 +50,6 @@
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
-      - string:
-          name: COVERITY_PROJECT_NAME
-          default: '{coverity-project-name}'
-          description: |
-              Project name in Coverity Scan service.
-      - string:
-          name: COVERITY_TOKEN
-          default: '{coverity-token}'
-          description: |
-              Project token in Coverity Scan service.
-      - string:
-          name: COVERITY_USER_EMAIL
-          default: '{coverity-user-email}'
-          description: |
-              Email of registered user in Coverity Scan service who initiated
-              the submittion.
 
     triggers:
       - timed: '{obj:cron}'
@@ -84,6 +68,11 @@
       - lf-provide-maven-settings:
           global-settings-file: global-settings
           settings-file: '{mvn-settings}'
+      - inject:
+          properties-content: |
+            COVERITY_PROJECT_NAME={coverity-project-name}
+            COVERITY_TOKEN={coverity-token}
+            COVERITY_USER_EMAIL={coverity-user-email}
       - shell: !include-raw-escape:
           - ../../global-jjb/shell/common-variables.sh
           - ../../shell/maven-coverity.sh
