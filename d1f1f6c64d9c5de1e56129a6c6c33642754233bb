@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "575caf01_b34200b6",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-11T20:45:35Z",
+      "side": 1,
+      "message": "I think rather than doing this, we can do the same thing we do in other maven jobs which is passing the right test option using mvn-params. \nfor example: https://github.com/onap/ci-management/blob/master/jjb/so/so.yaml#L19\n\nIf they dont define it, it would be the same as the default value:\nmvn-params: \u0027\u0027",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 31
+      },
+      "revId": "d1f1f6c64d9c5de1e56129a6c6c33642754233bb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
