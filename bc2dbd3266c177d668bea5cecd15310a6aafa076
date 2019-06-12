@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11baef68_194b5751",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-12T00:09:36Z",
+      "side": 1,
+      "message": "Please break these sentences into smaller ones. \nThese lines are too long\nThe sentence talking about the permissions can be broken down\ninto steps rather than a long sentence.\n\nEverything looks good otherwise",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 1
+      },
+      "revId": "bc2dbd3266c177d668bea5cecd15310a6aafa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
