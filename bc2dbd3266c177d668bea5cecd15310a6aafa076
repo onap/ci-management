@@ -22,6 +22,30 @@
       "revId": "bc2dbd3266c177d668bea5cecd15310a6aafa076",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82d68d9e_07bfc73d",
+        "filename": "jjb/ci-management/ci-management-coverity.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 5443
+      },
+      "writtenOn": "2019-06-12T00:34:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11baef68_194b5751",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 1
+      },
+      "revId": "bc2dbd3266c177d668bea5cecd15310a6aafa076",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
