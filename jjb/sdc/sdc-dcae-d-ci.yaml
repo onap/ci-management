@@ -54,7 +54,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/dcae-d/ci'
     project-name: 'sdc-dcae-d-ci'
-    branch: 'dublin'
+    branch: 'master'
     mvn-settings: 'sdc-dcae-d-ci-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -67,7 +67,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/dcae-d/ci
     project-name: 'sdc-dcae-d-ci'
-    branch: 'dublin'
+    branch: 'master'
     mvn-settings: 'sdc-dcae-d-ci-settings'
 
 - project:

@@ -32,7 +32,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/sdc-tosca'
     project-name: 'sdc-sdc-tosca'
-    branch: 'dublin'
+    branch: 'master'
     mvn-settings: 'sdc-sdc-tosca-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
@@ -45,7 +45,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/sdc-tosca
     project-name: 'sdc-sdc-tosca'
-    branch: 'dublin'
+    branch: 'master'
     mvn-settings: 'sdc-sdc-tosca-settings'
 
 - project:

@@ -33,7 +33,7 @@
     build-node: ubuntu1604-builder-4c-4g
     project: 'sdc/sdc-pubsub'
     project-name: 'sdc-sdc-pubsub'
-    branch: 'dublin'
+    branch: 'master'
     mvn-settings: 'sdc-sdc-pubsub-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
