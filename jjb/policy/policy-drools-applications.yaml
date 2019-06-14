@@ -28,9 +28,19 @@
     project-name: 'policy-drools-applications-dublin'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily':
-          disabled: false
+      - '{project-name}-{stream}-merge-scm-mvn-script':
+          mvn-goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          script:
+            !include-raw-escape: 'drools-apps-docker-merge.sh'
+      - '{project-name}-{stream}-docker-java-version-shell-daily':
+          docker-pom: 'pom.xml'
+          mvn-goals: 'clean deploy -B
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          script:
+            !include-raw-escape: 'drools-apps-docker-release.sh'
+          disabled: true
+          build-node: ubuntu1604-docker-8c-8g
 
     project: 'policy/drools-applications'
     stream:
