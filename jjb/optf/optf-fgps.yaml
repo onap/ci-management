@@ -12,6 +12,10 @@
           path: 'valetapi'
           pattern: 'valetapi/**'
           pom: 'pom.xml'
+      - 'engine':
+          path: 'engine'
+          pattern: 'engine/**'
+          pom: 'pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
