@@ -29,6 +29,58 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
+    name: vfc-nfvo-wfengine-engine-mgr-service-stage
+    project-name: 'vfc-nfvo-wfengine-engine-mgr-service'
+    project: 'vfc/nfvo/wfengine'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-wfengine-settings'
+    subproject:
+      - 'engine-mgr-service':
+          pom: 'wfenginemgrservice/pom.xml'
+          pattern: 'wfenginemgrservice/**'
+          script:
+            !include-raw-escape: 'build-nfvo-wfengine-engine-mgr-service-docker-image.sh'
+    jobs:
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          mvn-pom: 'wfenginemgrservice/pom.xml'
+          mvn-params: '-f wfenginemgrservice/pom.xml'
+
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
+    name: vfc-nfvo-wfengine-engine-activiti-extension-stage
+    project-name: 'vfc-nfvo-wfengine-engine-activiti-extension'
+    project: 'vfc/nfvo/wfengine'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'vfc-nfvo-wfengine-settings'
+    subproject:
+      - 'engine-activiti-extension':
+          pom: 'activiti-extension/pom.xml'
+          pattern: 'activiti-extension/**'
+          script:
+            !include-raw-escape: 'build-nfvo-wfengine-engine-activiti-extension-docker-image.sh'
+    jobs:
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          mvn-pom: 'activiti-extension/pom.xml'
+          mvn-params: '-f activiti-extension/pom.xml'
+
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-4c-4g
+
+- project:
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
     jobs:
       - gerrit-maven-sonar
