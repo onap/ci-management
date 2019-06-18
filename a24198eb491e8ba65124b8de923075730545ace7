@@ -22,6 +22,30 @@
       "revId": "a24198eb491e8ba65124b8de923075730545ace7",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e8b0530_24e5c4bb",
+        "filename": "jjb/vfc/vfc-nfvo-driver-ems-java.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-18T17:38:58Z",
+      "side": 1,
+      "message": "Only for the verify and merge. Since only these 2 jobs are using the subprojects. \nBut notice that the release-version-java-daily (which is replaced by gerrit-maven-stage) does not uses the subproject variables. Which means, they are using root pom.xml\nYou can see the reference in \nhttps://jenkins.onap.org/view/vfc/job/vfc-nfvo-driver-ems-master-release-version-java-daily/configure\nNotice this job uses root pom. \n\nIf this release job would have been the {subproject} one, then yes, what you said would have to be done.",
+      "parentUuid": "af690915_53501553",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 14,
+        "endChar": 27
+      },
+      "revId": "a24198eb491e8ba65124b8de923075730545ace7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
