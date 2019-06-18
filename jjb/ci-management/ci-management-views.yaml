@@ -127,3 +127,11 @@
     view-name: Verify-Jobs
     view-description: 'List of Verify jobs'
     view-regex: '^.*-verify-.*'
+
+- view:
+    name: WhiteSource
+    views:
+      - common-view
+    view-name: WhiteSource
+    view-description: 'List of WhiteSource jobs'
+    view-regex: '.*-whitesource-.*'
