@@ -19,6 +19,9 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
+
     mvn-settings: 'aai-oom-settings'
     files: '**'
     archive-artifacts: ''
