@@ -22,6 +22,30 @@
       "revId": "be9fe3fe84438eb61505f2e3f82a29b39843f1d9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71ea3647_3c06cc08",
+        "filename": "jjb/policy/policy-drools-applications.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-19T18:24:30Z",
+      "side": 1,
+      "message": "ONAP does not really uses the actual staging repo \"10004\"\nthey use \"10003\" for both snapshot and staging images",
+      "parentUuid": "7b1d99e9_42ca099b",
+      "range": {
+        "startLine": 26,
+        "startChar": 55,
+        "endLine": 26,
+        "endChar": 60
+      },
+      "revId": "be9fe3fe84438eb61505f2e3f82a29b39843f1d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
