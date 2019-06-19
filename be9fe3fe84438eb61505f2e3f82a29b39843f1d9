@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b1d99e9_42ca099b",
+        "filename": "jjb/policy/policy-drools-applications.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-06-19T16:48:34Z",
+      "side": 1,
+      "message": "This is the snapshot repo, not staging. Is this a mistake, or are you just using the snapshot repo in place of \"staging\" for this job?",
+      "range": {
+        "startLine": 26,
+        "startChar": 55,
+        "endLine": 26,
+        "endChar": 60
+      },
+      "revId": "be9fe3fe84438eb61505f2e3f82a29b39843f1d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
