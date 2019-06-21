@@ -8,6 +8,14 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - '{project-name}-{stream}-{subproject}-release-version-java-daily':
             version-properties: 'blueprint-generator/version.properties'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          version-properties-file: 'blueprint-generator/version.properties'
+          mvn-pom: 'blueprint-generator/pom.xml'
+          mvn-params: '-f blueprint-generator/pom.xml'
+          pattern: 'blueprint-generator/**'
     subproject:
       - 'blueprint-gen':
           pom: 'blueprint-generator/pom.xml'
