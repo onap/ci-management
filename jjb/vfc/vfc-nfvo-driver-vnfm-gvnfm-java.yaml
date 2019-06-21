@@ -21,7 +21,6 @@
           maven-versions-plugin: true
           mvn-pom: 'gvnfmadapter/pom.xml'
           mvn-params: '-f gvnfmadapter/pom.xml'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
       - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
           mvn-goals: 'install'

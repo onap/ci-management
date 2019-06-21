@@ -20,7 +20,6 @@
           maven-versions-plugin: true
           mvn-pom: 'zte/vmanager/pom.xml'
           mvn-params: '-f zte/vmanager/pom.xml'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g

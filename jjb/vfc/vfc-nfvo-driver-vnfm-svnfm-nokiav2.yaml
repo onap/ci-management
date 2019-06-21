@@ -20,7 +20,6 @@
           maven-versions-plugin: true
           mvn-pom: 'nokiav2/pom.xml'
           mvn-params: '-f nokiav2/pom.xml'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
     files: 'nokiav2/**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
