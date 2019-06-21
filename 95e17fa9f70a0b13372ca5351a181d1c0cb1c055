@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "194b118e_5dcd0a2d",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-cli.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-06-21T21:31:54Z",
+      "side": 1,
+      "message": "There is no nexus2 artifacts from this build; possibly not required?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "95e17fa9f70a0b13372ca5351a181d1c0cb1c055",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
