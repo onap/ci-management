@@ -112,6 +112,19 @@
     node: '{build-node}'
     type: freestyle
 
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: 'gerrit'
+
     triggers:
       - timed: '00 */6 * * *'
 
