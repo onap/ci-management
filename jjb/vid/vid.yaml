@@ -18,6 +18,7 @@
       - gerrit-maven-docker-stage:
           build-node: queue-docker-4c-4g
           maven-versions-plugin: true
+          mvn-params: '-P docker'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-{stream}-release-version-java-daily':
