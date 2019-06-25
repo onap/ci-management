@@ -128,7 +128,7 @@
     view-description: 'List of Verify jobs'
     view-regex: '^.*-verify-.*'
 
-- view:
+- project:
     name: WhiteSource
     views:
       - common-view
