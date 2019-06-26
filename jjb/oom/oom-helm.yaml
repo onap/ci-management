@@ -12,17 +12,21 @@
         #!/bin/bash
         set -e -o pipefail
         cd kubernetes/
-        if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
-          echo "[ERROR] Only release images are allowed in helm charts."
-          exit 1
+        if [ "$GERRIT_BRANCH" != "staging" ]; then
+          if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
+            echo "[ERROR] Only release images are allowed in helm charts."
+            exit 1
+          fi
         fi
         make all
     subproject_build_script: |
         #!/bin/bash
         cd kubernetes/
-        if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
-          echo "[ERROR] Only release images are allowed in helm charts."
-          exit 1
+        if [ "$GERRIT_BRANCH" != "staging" ]; then
+          if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
+            echo "[ERROR] Only release images are allowed in helm charts."
+            exit 1
+          fi
         fi
         make common
         make {subproject}
