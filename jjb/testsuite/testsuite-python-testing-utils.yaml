@@ -9,9 +9,8 @@
     project: 'testsuite/python-testing-utils'
     subproject:
       - 'robotframework-onap':
-          tox-dir: robotframework-onap/
-          tox-envs: ''
-
+          path: 'robotframework-onap'
+          pattern: 'robotframework-onap/**'
     stream:
       - 'master':
           branch: 'master'
@@ -21,6 +20,24 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-builder-4c-4g'
+
+- project:
+    name: testsuite-python-testing-utils-verify
+    project-name: 'testsuite-python-testing-utils'
+    project: 'testsuite/python-testing-utils'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
+    mvn-settings: 'testsuite-python-testing-utils-settings'
+    build-node: 'ubuntu1604-builder-4c-4g'
+    subproject:
+      - 'robotframework-onap':
+          tox-dir: robotframework-onap/
+          tox-envs: ''
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
 
 - project:
     name: testsuite-python-testing-utils-master-clm
