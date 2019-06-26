@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e139907c_b74f8132",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-26T23:37:35Z",
+      "side": 1,
+      "message": "This can be removed too as maven-docker-stage will produce your docker images",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 52
+      },
+      "revId": "37cf40d281bfef679eb4d7ab3466d195362922c6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d6ee7fa_5847cf15",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-26T23:37:35Z",
+      "side": 1,
+      "message": "Do we use the root pom.xml for both jobs?\nIf not, we need to add \n\n          mvn-pom: \u0027aai-schema-service/pom.xml\u0027\n          mvn-params: \u0027-f aai-schema-service/pom.xml\u0027",
+      "range": {
+        "startLine": 23,
+        "startChar": 8,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "37cf40d281bfef679eb4d7ab3466d195362922c6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01490dbf_8f34a4b6",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-26T23:37:35Z",
+      "side": 1,
+      "message": "Do we need to add -Dmaven.test.skip\u003dtrue also?\n\u0027-P docker -Dmaven.test.skip\u003dtrue\u0027",
+      "range": {
+        "startLine": 26,
+        "startChar": 23,
+        "endLine": 26,
+        "endChar": 32
+      },
+      "revId": "37cf40d281bfef679eb4d7ab3466d195362922c6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
