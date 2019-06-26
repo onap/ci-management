@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50a20c4a_5d58d15c",
+        "filename": "jjb/multicloud/kud-deployment.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4009
+      },
+      "writtenOn": "2019-06-26T15:24:17Z",
+      "side": 1,
+      "message": "I think adding sudo would be enough, the other changes are counter-productive (removing comments and hardcoding bash folder in shebang)",
+      "revId": "fb4d88a313d8fb559a826f55e4d18d28455069fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
