@@ -6,44 +6,6 @@
       - project-view
 
 - project:
-    name: integration
-    project-name: 'integration'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
-          mvn-pom: 'version-manifest/pom.xml'
-          mvn-params: '-f version-manifest/pom.xml'
-    project: 'integration'
-    subproject:
-      - 'version-manifest':
-          pom: 'version-manifest/pom.xml'
-          pattern: 'version-manifest/**'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: integration-clm
-    jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f version-manifest/pom.xml'
-    nexus-iq-namespace: 'onap-'
-    project: integration
-    project-name: 'integration'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-settings'
-
-- project:
     name: integration-info
     project-name: integration
     jobs:

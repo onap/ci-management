@@ -6,7 +6,7 @@ that can be used before pushing job templates to the production
 
 It is configured similar to the ONAP [ci-management] production instance;
 however, it cannot publish artifacts or vote in Gerrit. Be aware that this is a
-test environment, and as such there a limited allotment of minions to test on
+test environment, and as such there is a limited allotment of minions to test on
 before pushing code to the ONAP repos.
 Keep the following points in mind prior to beginning work on ONAP Jenkins Sandbox
 environment:
@@ -19,11 +19,12 @@ environment:
   these VMs directly.
 
 Before you proceed further, ensure you have a Linux Foundation ID (LFID), which is
-required to access Gerrit & Jenkins. Also, to get an access to Sandbox environment
-please send email to helpdesk@onap.org (LF helpdesk team)
+required to access Gerrit & Jenkins. Also, to extend your permissions for uploading
+Jenkins configurations to Sandbox environment, you must raise a ticket to
+[Linux Foundation Help Center](https://support.linuxfoundation.org)
 
 To download **ci-management**, execute the following command to clone the
-**ci-managment** repository.
+**ci-management** repository.
 
 `git clone https://gerrit.onap.org/r/ci-management && (cd ci-management && curl -Lo \
 $(git rev-parse --git-dir)/hooks/commit-msg https://gerrit.onap.org/r/tools/hooks/commit-msg; \
@@ -48,28 +49,28 @@ jenkins-jobs --version
 jenkins-jobs test --recursive jjb/
 ```
 
-### Make a copy of the example JJB config file (in the builder/ directory)
+### Make a copy of the example JJB config file (in the ci-management/ directory)
 
 Backup the jenkins.ini.example to jenkins.ini
 
 `cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini`
 
 After copying the jenkins.ini.example, modify `jenkins.ini` with your
-**Jenkins LFID username**, **API token** and **ONAP jenkins sandbox URL**
+**Jenkins LFID username** and **API token**
 
 ```
 [job_builder]
 ignore_cache=True
 keep_descriptions=False
-include_path=.:scripts:~/git/
+include_path=.
 recursive=True
+retain_anchors=True
 
 [jenkins]
 user=jwagantall <Provide your Jenkins Sandbox username>
 password= <Refer below steps to get API token>
 url=https://jenkins.onap.org/sandbox
-This is deprecated, use job_builder section instead
-ignore_cache=True
+query_plugins_info=False
 ```
 ### How to retrieve API token?
 Login to the [Jenkins Sandbox](https://jenkins.onap.org/sandbox/), go to your user
@@ -77,7 +78,7 @@ page by clicking on your username. Click **Configure** and then click **Add new 
 After that specify a token name (optional) and click on **Generate** to generate and show
 new token. Please note down your token and store it securely.
 
-To work on existing jobs or create new jobs, navigate to the `/jjb` directory where you
+To work on existing jobs or create new jobs, navigate to the `ci-management/jjb/` directory where you
 will find all job templates for the project.  Follow the below commands to test,
 update or delete jobs in your sandbox environment.
 
@@ -105,7 +106,7 @@ The output directory will contain files with the XML configurations.
 
 ## To Update a job:
 
-Ensure you’ve configured your `jenkins.ini` and verified it by
+Ensure you’ve configured your `jenkins_jobs.ini` and verified it by
 outputting valid XML descriptions of Jenkins jobs. Upon successful
 verification, execute the following command to update the job to the
 Jenkins sandbox.
@@ -113,6 +114,9 @@ Jenkins sandbox.
 `jenkins-jobs update jjb/ <job-name>`
 
 **Example:** `jenkins-jobs update jjb/ sdc-master-verify-java`
+
+Note that there will be some 403 errors along the way for failed view creation attempts even
+when the job creation succeeds.
 
 ## Trigger jobs from Jenkins Sandbox:
 
