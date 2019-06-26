@@ -21,8 +21,6 @@
           mvn-params: '-P docker'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-{stream}-release-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
     project: 'vid'
     stream:
       - 'master':
@@ -33,24 +31,6 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: vid-docker
-    project-name: 'vid'
-    jobs:
-      - 'docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-    project: 'vid'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'vid-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: queue-docker-4c-4g
 
 #- project:
 #    name: vid-docker-arm64
