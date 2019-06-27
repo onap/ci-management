@@ -34,6 +34,24 @@
       "revId": "fb4d88a313d8fb559a826f55e4d18d28455069fe",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89098209_03022815",
+        "filename": "jjb/multicloud/kud-deployment.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5550
+      },
+      "writtenOn": "2019-06-27T07:13:31Z",
+      "side": 1,
+      "message": "Well, both \"env\" and \"bash\" binaries have their path in system quite strongly set up over the years. I think, that the probability of \"bash\" not being in \"/bin\" is as low as probability of \"env\" not being in \"/usr/bin\".\nFrom my point of view, both approaches should `always` work, so I wouldn\u0027t call it a hardcode.",
+      "parentUuid": "2a9b44fe_1a1a0285",
+      "revId": "fb4d88a313d8fb559a826f55e4d18d28455069fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
