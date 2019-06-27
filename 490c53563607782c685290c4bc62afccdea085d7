@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bca73c0b_a12ec570",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-27T21:04:41Z",
+      "side": 1,
+      "message": "We can remove this so that it works for centos too right?",
+      "range": {
+        "startLine": 218,
+        "startChar": 49,
+        "endLine": 218,
+        "endChar": 81
+      },
+      "revId": "490c53563607782c685290c4bc62afccdea085d7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
