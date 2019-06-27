@@ -22,6 +22,30 @@
       "revId": "42f8101f589dde591f20825def0fc9b8de6c0b61",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "525ba4e9_d0c4717d",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 135
+      },
+      "writtenOn": "2019-06-27T21:56:58Z",
+      "side": 1,
+      "message": "You were that\u0027s my mistake.",
+      "parentUuid": "446a70c7_54b47531",
+      "range": {
+        "startLine": 212,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 18
+      },
+      "revId": "42f8101f589dde591f20825def0fc9b8de6c0b61",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
