@@ -18,6 +18,12 @@
           mvn-params: '-Dmaven.test.skip=true'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          mvn-goals: '-Dmaven.test.skip=true'
+          maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/zookeeper'
     stream:
       - 'master':
