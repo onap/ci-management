@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06f22b80_cda3a901",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-27T16:13:17Z",
+      "side": 1,
+      "message": "We do not have a builder-8c-8g node, \nPlease use centos7-docker-8c-8g",
+      "range": {
+        "startLine": 18,
+        "startChar": 22,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "bbd42a188c17b6e736ff8d1cc1325f8c1a24fd18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
