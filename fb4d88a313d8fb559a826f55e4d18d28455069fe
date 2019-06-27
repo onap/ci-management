@@ -52,6 +52,24 @@
       "revId": "fb4d88a313d8fb559a826f55e4d18d28455069fe",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1799bef_bccedfc6",
+        "filename": "jjb/multicloud/kud-deployment.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3957
+      },
+      "writtenOn": "2019-06-27T07:40:06Z",
+      "side": 1,
+      "message": "nothing so deep in this. Just removed the tabular from that line. In vim editor it looked like this \n#!/usr/bin/env\u003e-bash",
+      "parentUuid": "89098209_03022815",
+      "revId": "fb4d88a313d8fb559a826f55e4d18d28455069fe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
