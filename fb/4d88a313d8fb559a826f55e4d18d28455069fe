@@ -1,0 +1,9 @@
+Code-Review+1: Konrad Bańka <k.banka@samsung.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Kiran Kamineni <kiran.k.kamineni@intel.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 27 Jun 2019 17:32:02 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/90514
+Project: ci-management
+Branch: refs/heads/master
