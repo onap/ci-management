@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dominic Lunanuova <dgl@research.att.com>
+Code-Review+1: Tim Johnson <tijohnson@linuxfoundation.org>
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 27 Jun 2019 20:37:21 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/77813
+Project: ci-management
+Branch: refs/heads/master
