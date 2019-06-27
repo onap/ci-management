@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "446a70c7_54b47531",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-27T21:28:49Z",
+      "side": 1,
+      "message": "Sorry I was not explicit... \n\nWe will still need \"when: ansible_architecture \u003d\u003d \u0027x86_64\u0027\" \njust not the ubuntu check.. \n\nthanks!",
+      "range": {
+        "startLine": 212,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 18
+      },
+      "revId": "42f8101f589dde591f20825def0fc9b8de6c0b61",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
