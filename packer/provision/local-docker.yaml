@@ -208,3 +208,11 @@
         state: link
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+    - name: Install jinja2
+      pip:
+        name: jinja2
+        state: present
+      become: true
+      # yamllint disable-line rule:line-length
+      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
