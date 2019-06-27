@@ -48,8 +48,10 @@
       **/target/**/feature.xml
       **/target/failsafe-reports/failsafe-summary.xml
       **/target/surefire-reports/*-output.txt
+      **/cov-int/BUILD.metrics.xml
       **/cov-int/build-log.txt
       **/cov-int/build-timings.txt
+      **/cov-int/java-security-da-whitelist.dat
 
     properties:
       - lf-infra-properties:

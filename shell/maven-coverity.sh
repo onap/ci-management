@@ -109,6 +109,16 @@ cov-import-scm \
   --dir 'cov-int' \
   --scm 'git'
 
+cov-manage-emit \
+  --dir cov-int \
+  list \
+| grep \
+  --invert-match \
+  '^Translation unit:$' \
+| sed \
+  's!^[[:digit:]]\+ -> !!' \
+> 'coverity-scan-analysed-files.log'
+
 #-----------------------------------------------------------------------------
 # Submit results to Coverity service
 
