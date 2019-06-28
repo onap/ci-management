@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba710502_6fed1aee",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-28T18:01:58Z",
+      "side": 1,
+      "message": "this job will be using the root pom.xml right?\nIn that case, lets remove this line since the job will try to look into $WORKSPACE/aai-shema-service/pom.xml which is not right.",
+      "range": {
+        "startLine": 19,
+        "startChar": 10,
+        "endLine": 19,
+        "endChar": 47
+      },
+      "revId": "654cb653d2234cb23535966ffefaf54a1e65357f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4631da77_55d90c46",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-28T18:01:58Z",
+      "side": 1,
+      "message": "we dont need to do the -f since the job is already configured to look for the root pom.xml\nThe only mnv-param you need is :\n\n-Dmaven.test.skip\u003dtrue\n\nSince your docker-java-daily had it",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 20,
+        "endChar": 53
+      },
+      "revId": "654cb653d2234cb23535966ffefaf54a1e65357f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2cf3f8f_52b42ea7",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-28T18:01:58Z",
+      "side": 1,
+      "message": "Do we need to run versions plugin in docker builds?\nI dont think the docker-java-daily job does this \nWe can remove this",
+      "range": {
+        "startLine": 22,
+        "startChar": 10,
+        "endLine": 22,
+        "endChar": 37
+      },
+      "revId": "654cb653d2234cb23535966ffefaf54a1e65357f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a41dcaf1_59eedb19",
+        "filename": "jjb/aai/aai-schema-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-06-28T18:01:58Z",
+      "side": 1,
+      "message": "Repeated param..",
+      "range": {
+        "startLine": 23,
+        "startChar": 3,
+        "endLine": 23,
+        "endChar": 56
+      },
+      "revId": "654cb653d2234cb23535966ffefaf54a1e65357f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
