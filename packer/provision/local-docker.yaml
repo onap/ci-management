@@ -152,7 +152,7 @@
 
     - name: Install Erlang
       apt:
-        deb: https://packages.erlang-solutions.com/erlang/esl-erlang/FLAVOUR_1_general/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
+        deb: https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_19.3.6-1~ubuntu~trusty_amd64.deb
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
