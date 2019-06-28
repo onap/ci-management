@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10de0080_f7f8d2fc",
+        "filename": "jjb/policy/policy-docker-base-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2019-06-28T21:45:31Z",
+      "side": 1,
+      "message": "I actually don\u0027t think we need this - as it doesn\u0027t produce java artifacts.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 0
+      },
+      "revId": "1063b97250f3bbc2c1c3b99636097b5513e9fff2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
