@@ -5,8 +5,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily':
-          disabled: true
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
@@ -16,24 +14,6 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'policy-models-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: policy-models-dublin
-    project-name: 'policy-models-dublin'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily':
-          disabled: false
-
-    project: 'policy/models'
-    stream:
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'policy-models-settings'
     files: '**'
     archive-artifacts: ''
