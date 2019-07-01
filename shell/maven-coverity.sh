@@ -20,6 +20,25 @@ PS4='+['$(readlink -f "$0")' ${FUNCNAME[0]%main}#$LINENO] '
 echo '---> maven-coverity.sh'
 
 #-----------------------------------------------------------------------------
+# Process parameters for JS/PHP/Ruby files analysis
+
+FS_CAPTURE_SEARCH_PARAMS=''
+if [ -n "${SEARCH_PATHS:=}" ]; then
+  for SEARCH_PATH in ${SEARCH_PATHS}; do
+    if [ -d "${SEARCH_PATH}" ]; then
+      FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS} --fs-capture-search '${SEARCH_PATH}'"
+    else
+      echo "'${SEARCH_PATH}' from \$SEARCH_PATHS is not an existing directory." >&2
+      exit 1
+    fi
+  done
+fi
+
+for EXCLUDE_REGEX in ${SEARCH_EXCLUDE_REGEXS:=}; do
+  FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS} --fs-capture-search-exclude-regex '${EXCLUDE_REGEX}'"
+done
+
+#-----------------------------------------------------------------------------
 # Check if we are allowed to submit results to Coverity Scan service
 # and have not exceeded our upload quota limits
 # See also: https://scan.coverity.com/faq#frequency
@@ -96,8 +115,9 @@ rm 'coverity_tool.tgz'
 
 export MAVEN_OPTS
 
-cov-build \
+eval cov-build \
   --dir 'cov-int' \
+  ${FS_CAPTURE_SEARCH_PARAMS} \
   "${MVN}" clean install \
     --errors \
     --global-settings "${GLOBAL_SETTINGS_FILE}" \

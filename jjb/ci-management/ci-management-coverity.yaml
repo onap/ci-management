@@ -38,18 +38,20 @@
     coverity-project-name: ''
     coverity-token: ''
     coverity-user-email: ''
+    coverity-search-paths: ''
+    coverity-search-exclude-regexs: ''
     stream: master
     submodule-recursive: true
     submodule-timeout: 10
     submodule-disable: false
     archive-artifacts: >
       **/*.log
+      **/*-log.txt
       **/hs_err_*.log
       **/target/**/feature.xml
       **/target/failsafe-reports/failsafe-summary.xml
       **/target/surefire-reports/*-output.txt
       **/cov-int/BUILD.metrics.xml
-      **/cov-int/build-log.txt
       **/cov-int/build-timings.txt
       **/cov-int/java-security-da-whitelist.dat
 
@@ -93,6 +95,8 @@
             COVERITY_PROJECT_NAME={coverity-project-name}
             COVERITY_TOKEN={coverity-token}
             COVERITY_USER_EMAIL={coverity-user-email}
+            SEARCH_PATHS={coverity-search-paths}
+            SEARCH_EXCLUDE_REGEXS={coverity-search-exclude-regexs}
       - shell: !include-raw-escape:
           - ../../global-jjb/shell/common-variables.sh
           - ../../shell/maven-coverity.sh
