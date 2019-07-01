@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8b54516_95a21290",
+        "filename": "jjb/aai/aai-logging-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-01T17:09:43Z",
+      "side": 1,
+      "message": "Add \nmaven-versions-plugin: true",
+      "range": {
+        "startLine": 14,
+        "startChar": 7,
+        "endLine": 14,
+        "endChar": 27
+      },
+      "revId": "708d415b42cf63cb27f398c1b109867b531a26a7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
