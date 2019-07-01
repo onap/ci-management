@@ -9,31 +9,11 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-release-version-java-daily':
-          disabled: true
 
     project: 'policy/common'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'policy-common-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: policy-common-dublin
-    project-name: 'policy-common-dublin'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily':
-          disabled: false
-
-    project: 'policy/common'
-    stream:
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'policy-common-settings'
     files: '**'
     archive-artifacts: ''
