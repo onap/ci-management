@@ -8,11 +8,6 @@
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          mvn-params: "-P docker"
-      - '{project-name}-{stream}-docker-version-java-daily':
-         docker-pom: 'pom.xml'
-         mvn-profile: 'docker'
-         mvn-params: '-P docker'
-         disabled: true
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -32,33 +27,6 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
-
-- project:
-    name: policy-engine-dublin
-    project-name: 'policy-engine-dublin'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-scm-mvn-script':
-          mvn-goals: 'clean deploy -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          script:
-            !include-raw-escape: 'include-raw-docker-merge.sh'
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'clean deploy -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          script:
-            !include-raw-escape: 'include-raw-docker-release.sh'
-          disabled: false
-          build-node: ubuntu1604-docker-8c-8g
-    project: 'policy/engine'
-    stream:
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'policy-engine-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1604-builder-4c-4g'
 
 - project:
     name: policy-engine-sonar

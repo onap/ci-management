@@ -25,31 +25,6 @@
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
-    name: policy-docker-base-common-dublin
-    project-name: 'policy-docker-dublin'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: "-P docker"
-          build-node: ubuntu1604-docker-8c-8g
-      - '{project-name}-{stream}-docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-P docker'
-          disabled: false
-          build-node: ubuntu1604-docker-8c-8g
-    project: 'policy/docker'
-    stream:
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'policy-docker-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
-
-- project:
     name: policy-docker-sonar
     jobs:
       - gerrit-maven-sonar
