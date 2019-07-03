@@ -22,6 +22,30 @@
       "revId": "5b04633673505c1c25ac68a0fceb5aa2ff1db914",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b7ae7f4_f4e16521",
+        "filename": "jjb/dmaap/dmaap-datarouter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-03T19:39:53Z",
+      "side": 1,
+      "message": "Yes... docker-java-daily should be removed and also release-version-java-daily since they are replaced by gerrit-maven-stage and gerrit-maven-docker-stage. \n\nI wanted to make sure the new jobs worked before we remove the old ones. Please submit a new gerrit removing them whenever you guys are ready.",
+      "parentUuid": "0215f4d6_c31ca00d",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 47
+      },
+      "revId": "5b04633673505c1c25ac68a0fceb5aa2ff1db914",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
