@@ -24,6 +24,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
 
 - project:
     name: ccsdk-sli-plugins-sonar
@@ -37,6 +38,7 @@
     mvn-settings: 'ccsdk-sli-plugins-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    maven-version: "mvn35"
 
 - project:
     name: ccsdk-sli-plugins-clm
@@ -51,6 +53,7 @@
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-sli-plugins-settings'
+    maven-version: "mvn35"
 
 
 - project:

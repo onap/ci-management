@@ -24,6 +24,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
 
 - project:
     name: ccsdk-parent-clm
@@ -38,6 +39,7 @@
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-parent-settings'
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 

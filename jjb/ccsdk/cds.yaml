@@ -24,6 +24,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
@@ -38,6 +39,7 @@
     mvn-settings: 'ccsdk-cds-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    maven-version: "mvn35"
 
 - project:
     name: ccsdk-cds-clm
@@ -52,6 +54,7 @@
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'ccsdk-cds-settings'
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
@@ -71,6 +74,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
+    maven-version: "mvn35"
     build-node: queue-docker-4c-4g
 
 - project:
