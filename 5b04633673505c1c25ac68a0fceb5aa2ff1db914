@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0215f4d6_c31ca00d",
+        "filename": "jjb/dmaap/dmaap-datarouter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-07-03T10:11:01Z",
+      "side": 1,
+      "message": "@Jessica\nCan some of these jobs be deleted and if so which ones?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 47
+      },
+      "revId": "5b04633673505c1c25ac68a0fceb5aa2ff1db914",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
