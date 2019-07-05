@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -32,6 +34,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -77,6 +81,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-has-settings'
 
 - project:

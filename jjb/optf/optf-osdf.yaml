@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -31,6 +33,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -76,6 +80,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
     mvn-settings: 'optf-osdf-settings'
 
 - project:

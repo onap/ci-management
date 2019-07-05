@@ -8,6 +8,8 @@
      stream:
        - 'master':
            branch: master
+       - 'dublin':
+           branch: dublin
      functionality:
        - 'has':
            trigger_jobs: 'optf-has-master-conductor-docker-java-version-shell-daily'
