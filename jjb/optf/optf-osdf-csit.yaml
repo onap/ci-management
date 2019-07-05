@@ -8,6 +8,8 @@
      stream:
        - 'master':
            branch: master
+       - 'dublin':
+           branch: dublin
      functionality:
        - 'osdf':
            trigger_jobs: 'optf-osdf-master-osdf-docker-java-version-shell-daily'
