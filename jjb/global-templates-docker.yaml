@@ -771,4 +771,83 @@
             - '{parent_job}'
           result: 'success'
 
+- job-template:
+    name: '{project-name}-docker-{stream}-manifest'
+    <<: *docker_job_boiler_plate
+    node: '{build-node}'
+    build-timeout: 15
+
+    parameters:
+      - manifest-job-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+
+    disabled: '{obj:disabled}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: 'https://github.com/pvaduva/policy-docker.git'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: true
+          submodule-disable: '{submodule-disable}'
+          submodule-timeout: '{submodule-timeout}'
+          choosing-strategy: default
+
+
+    builders:
+      - shell: |
+          #!/bin/bash -ex
+          docker login -u onapmulti -p Secret1234
+          ./docker_push_manifest.sh '{branch}'
+
+# parameter macro
+- parameter:
+    name: manifest-job-parameters
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+
+- job-template:
+    name: '{project-name}-docker-{stream}'
+    node: '{build-node}'
+    project-type: multijob
+    disabled: '{obj:disabled}'
+    build-timeout: 15
+
+    parameters:
+      - manifest-job-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+
+    disabled: '{obj:disabled}'
+
+    properties:
+      - throttle:
+          max-per-node: 1
+          option: 'project'
+      - build-blocker:
+          use-build-blocker: true
+          blocking-jobs:
+            - '{project-name}-.*-docker-.*'
+          blocking-level: 'NODE'
+
+    builders:
+      - multijob:
+          name: 'build docker images'
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-amd64-maven-docker-stage-{stream}'
+            - name: '{project-name}-arm64-maven-docker-stage-{stream}'
+      - multijob:
+          name: 'publish docker manifest'
+          condition: SUCCESSFUL
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-docker-{stream}-manifest'
 
