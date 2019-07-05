@@ -613,6 +613,9 @@
 
     builders:
       - lf-infra-pre-build
+      - lf-infra-docker-login:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -1369,3 +1372,79 @@
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
           mvn-params: ''
+
+- job-template:
+    # Job template for Java merge jobs on multiple architectures
+    #
+    # The purpose of this job template is to:
+    # 1. Run parallel {project-name}-{stream}-verify-java jobs for each supported architecture
+    # 2. Build and push a docker manifest list for the images created by
+    #    the previous jobs
+
+    name: '{project-name}-multiarch-{stream}-merge-java'
+    node: '{build-node}'
+    project-type: multijob
+    disabled: '{obj:disabled}'
+    pattern: '**'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+      - string:
+          name: DOCKER_REGISTRY
+          default: 'none'
+      - string:
+          name: DOCKERHUB_REGISTRY
+          default: 'registry-1.docker.io'
+
+    properties:
+      - throttle:
+          max-per-node: 1
+          option: 'project'
+      - build-blocker:
+          use-build-blocker: true
+          blocking-jobs:
+            - '{project-name}-.*-merge-.*'
+          blocking-level: 'NODE'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{pattern}'
+
+    builders:
+      - multijob:
+          name: 'build docker images'
+          condition: ALWAYS
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-amd64-{stream}-merge-java'
+              kill-phase-on: FAILURE
+              current-parameters: true
+            - name: '{project-name}-arm64-{stream}-merge-java'
+              kill-phase-on: NEVER
+              current-parameters: true
+      - multijob:
+          name: 'publish docker manifest'
+          condition: SUCCESSFUL
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-docker-manifest-{stream}'
+              current-parameters: true
+              predefined-parameters: |
+                PARENT_JOB_NAME=$JOB_NAME
+                DOCKERHUB_REGISTRY=docker.io
