@@ -771,4 +771,100 @@
             - '{parent_job}'
           result: 'success'
 
+- job-template:
+    # Job template for creating a docker manifest list
+    #
+    # The purpose of this job template is to run:
+    # 1. docker_push_manifest.sh script (which needs to exist in the
+    #    project implementation repo)
 
+    name: '{project-name}-docker-manifest-{stream}'
+    <<: *docker_job_boiler_plate
+    node: '{build-node}'
+    build-timeout: 15
+
+    parameters:
+      - manifest-job-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+
+    disabled: '{obj:disabled}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '$GIT_URL/$PROJECT'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: true
+          submodule-disable: '{submodule-disable}'
+          submodule-timeout: '{submodule-timeout}'
+          choosing-strategy: default
+
+
+    builders:
+      - lf-infra-docker-login:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - shell: |
+          #!/bin/bash -ex
+          ./docker_push_manifest.sh
+
+# parameter macro
+- parameter:
+    name: manifest-job-parameters
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+
+- job-template:
+    # Job template for staging jobs on multiple architectures
+    #
+    # The purpose of this job template is to:
+    # 1. Run parallel maven-docker-stage jobs for each supported architecure
+    # 2. Build and push a docker manifest list for the images created by
+    #    the previous jobs
+
+    name: '{project-name}-multiarch-docker-stage-{stream}'
+    node: '{build-node}'
+    project-type: multijob
+    disabled: '{obj:disabled}'
+    build-timeout: 15
+
+    parameters:
+      - manifest-job-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+
+    disabled: '{obj:disabled}'
+
+    properties:
+      - throttle:
+          max-per-node: 1
+          option: 'project'
+      - build-blocker:
+          use-build-blocker: true
+          blocking-jobs:
+            - '{project-name}-.*-docker-.*'
+          blocking-level: 'NODE'
+
+    builders:
+      - multijob:
+          name: 'build docker images'
+          condition: ALWAYS
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-amd64-maven-docker-stage-{stream}'
+              kill-phase-on: FAILURE
+            - name: '{project-name}-arm64-maven-docker-stage-{stream}'
+              kill-phase-on: NEVER
+      - multijob:
+          name: 'publish docker manifest'
+          condition: SUCCESSFUL
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-docker-{stream}-manifest'

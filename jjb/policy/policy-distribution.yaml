@@ -5,19 +5,37 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
+          project-name: 'policy-docker-amd64'
           docker-pom: 'pom.xml'
           mvn-params: '-P docker'
           build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-{stream}-merge-java':
+          project-name: 'policy-docker-arm64'
+          docker-pom: 'pom.xml'
+          mvn-params: "-P docker"
+          build-node: ubuntu1604-docker-arm64-4c-2g
+      - '{project-name}-multiarch-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
+          project-name: 'policy-distribution-amd64'
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+      - gerrit-maven-docker-stage:
+          project-name: 'policy-distribution-arm64'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+      - '{project-name}-docker-manifest-{stream}':
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-multiarch-docker-stage-{stream}'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-builder-4c-4g
 
