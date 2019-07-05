@@ -13,11 +13,22 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
+          project-name: 'policy-drools-pdp-arm64'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+      - gerrit-maven-docker-stage:
+          project-name: 'policy-drools-pdp-amd64'
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+      - '{project-name}-docker-{stream}-manifest':
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-docker-{stream}'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-builder-4c-4g
 
