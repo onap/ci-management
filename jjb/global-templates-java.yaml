@@ -1195,7 +1195,6 @@
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
-
       - inject:
           properties-file: version.properties
       - maven-set-release-version:
@@ -1237,6 +1236,25 @@
     wrappers:
       - infra-wrappers-docker-build:
           build-timeout: '{build-timeout}'
+
+- job-template:
+    # Job template for building & pushing docker images
+    #
+    # The purpose of this job template is to run:
+    #  1. login to the docker registry
+    #  2. inject a version.properties file and set versions
+    #  3. run a docker push
+    #
+    # Required Variables:
+    #     pom:       name/location of the pom.xml file relative to the workspace
+    #     profile:   the docker profile defined in the pom
+    #     maven-properties: properties passed to maven
+
+    name: '{project-name}-{arch_tag}-maven-docker-stage-{stream}'
+    id: 'arch-maven-docker-stage'
+    node: '{build-node}'
+    builders:
+      - gerrit-maven-docker-stage
 
 - job-template:
     # Job template for building & pushing docker images for AAI specific repos
