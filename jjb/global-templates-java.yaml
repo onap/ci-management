@@ -1355,3 +1355,51 @@
           # use default as mvn-profile if profile is not needed
           mvn-profile: '{mvn-profile}'
           mvn-params: ''
+
+- job-template:
+    # Job template for Java merge jobs on multiple architectures
+    #
+    # The purpose of this job template is to:
+    # 1. Run parallel {project-name}-{stream}-verify-java jobs for each supported architecture
+    # 2. Build and push a docker manifest list for the images created by
+    #    the previous jobs
+
+    name: '{project-name}-multiarch-{stream}-merge-java'
+    node: '{build-node}'
+    project-type: multijob
+    disabled: '{obj:disabled}'
+
+    parameters:
+      - manifest-job-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+
+    disabled: '{obj:disabled}'
+
+    properties:
+      - throttle:
+          max-per-node: 1
+          option: 'project'
+      - build-blocker:
+          use-build-blocker: true
+          blocking-jobs:
+            - '{project-name}-.*-merge-.*'
+          blocking-level: 'NODE'
+
+    builders:
+      - multijob:
+          name: 'build docker images'
+          condition: ALWAYS
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-amd64-{stream}-merge-java'
+              kill-phase-on: FAILURE
+            - name: '{project-name}-arm64-{stream}-merge-java'
+              kill-phase-on: NEVER
+      - multijob:
+          name: 'publish docker manifest'
+          condition: SUCCESSFUL
+          execution-type: PARALLEL
+          projects:
+            - name: '{project-name}-docker-{stream}-manifest'
