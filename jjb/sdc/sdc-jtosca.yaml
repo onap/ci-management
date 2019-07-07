@@ -16,8 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdc-jtosca-settings'
     files: '**'
     archive-artifacts: ''

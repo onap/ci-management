@@ -45,8 +45,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
