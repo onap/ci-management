@@ -8,8 +8,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'integration-testing':
           trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
