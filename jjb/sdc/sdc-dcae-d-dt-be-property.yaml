@@ -10,8 +10,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdc-dcae-d-dt-be-property-settings'
     files: '**'
     archive-artifacts: ''

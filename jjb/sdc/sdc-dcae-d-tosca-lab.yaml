@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     subproject:
     - dcae-d-tosca-lab:
         path: '.'
