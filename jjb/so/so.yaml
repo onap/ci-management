@@ -31,8 +31,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
