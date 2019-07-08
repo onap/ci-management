@@ -22,6 +22,30 @@
       "revId": "af108d9e65fcde0d2e44b2696cf91b98aa47bb91",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d8a9997_d3c1dc16",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-08T17:23:45Z",
+      "side": 1,
+      "message": "gerrit-maven-docker-stage calls \"lf_maven_stage\" block in global jjb which has defined the default goals as \"clean deploy\":\nhttps://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-maven-jobs.yaml#L821\n\nThe rest that I added here are mvn-params not goals.",
+      "parentUuid": "439d1d3f_5cf9cbc1",
+      "range": {
+        "startLine": 38,
+        "startChar": 10,
+        "endLine": 38,
+        "endChar": 80
+      },
+      "revId": "af108d9e65fcde0d2e44b2696cf91b98aa47bb91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
