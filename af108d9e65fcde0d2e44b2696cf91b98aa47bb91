@@ -46,6 +46,30 @@
       "revId": "af108d9e65fcde0d2e44b2696cf91b98aa47bb91",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d92c570c_eedf0580",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-07-08T17:28:23Z",
+      "side": 1,
+      "message": "okay, thanks for the clarification.",
+      "parentUuid": "9d8a9997_d3c1dc16",
+      "range": {
+        "startLine": 38,
+        "startChar": 10,
+        "endLine": 38,
+        "endChar": 80
+      },
+      "revId": "af108d9e65fcde0d2e44b2696cf91b98aa47bb91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
