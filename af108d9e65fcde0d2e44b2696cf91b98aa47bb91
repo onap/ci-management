@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "439d1d3f_5cf9cbc1",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-07-08T17:08:32Z",
+      "side": 1,
+      "message": "Not matching current docker-java-shell-daily (mvn-goals: \u0027clean deploy -DskipNexusStagingDeployMojo\u003dtrue -DskipDockerPush\u003dfalse\u0027)",
+      "range": {
+        "startLine": 38,
+        "startChar": 10,
+        "endLine": 38,
+        "endChar": 80
+      },
+      "revId": "af108d9e65fcde0d2e44b2696cf91b98aa47bb91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
