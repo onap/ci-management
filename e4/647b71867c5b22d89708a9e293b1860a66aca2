@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Catherine Lefevre <cl664y@att.com>
+Code-Review+2: suresh channamallu <schannamallu@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 08 Jul 2019 19:56:12 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/91038
+Project: ci-management
+Branch: refs/heads/master
