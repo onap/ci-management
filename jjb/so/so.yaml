@@ -21,12 +21,6 @@
           mvn-params: '-Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          build-node: 'ubuntu1604-docker-8c-8g'
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
     project: 'so'
     stream:
       - 'master':
