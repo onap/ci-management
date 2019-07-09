@@ -7,7 +7,6 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
-      - '{project-name}-{stream}-release-version-java-daily'
 
     sign-artifacts: true
     project: 'ccsdk/sli/plugins'
