@@ -4,10 +4,6 @@
     name: dmaap-messagerouter-docker
     project-name: 'dmaap-messagerouter-docker'
     jobs:
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           mvn-params: '-P docker -Dmaven.test.skip=true'

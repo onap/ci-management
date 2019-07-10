@@ -4,16 +4,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      #
-      # see DMAAP-334 for more details, but
-      #     - '{project-name}-{stream}-docker-java-daily':
-      # doesn't support mvn-goals override, so trying this...
-      - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean package -P docker docker:build docker:push'
-          # No-op
-          script: '/bin/true'
-          build-node: 'ubuntu1604-docker-8c-8g'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g

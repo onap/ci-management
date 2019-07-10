@@ -4,10 +4,6 @@
     name: dmaap-kafka-docker
     project-name: 'dmaap-kafka-docker'
     jobs:
-      - '{project-name}-{stream}-docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-{stream}-docker-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
