@@ -16,6 +16,24 @@
       "revId": "b0f2a6c753f8a54dc7af7f03ea0347c9eef8e75e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a61c686c_ca2046bc",
+        "filename": "jjb/optf/optf-fgps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-10T16:16:10Z",
+      "side": 1,
+      "message": "If there are more directories other than valetapi/**\u0027 and engine/**\u0027 that you guys need to verify, then yes. \nOtherwise, we can remove it.",
+      "parentUuid": "f7960ac5_e9e7e137",
+      "revId": "b0f2a6c753f8a54dc7af7f03ea0347c9eef8e75e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
