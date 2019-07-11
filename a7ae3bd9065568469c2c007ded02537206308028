@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ac8473d_76ed8755",
+        "filename": "jjb/multicloud/multicloud-azure-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-11T17:05:57Z",
+      "side": 0,
+      "message": "We will need to also remove this old job \"docker-java-version-shell-daily\" Docker release candidate builds have been replaced by global-jjb\u0027s gerrit-maven-docker-stage\nLet me know if you want to remove it in this patch or want to submit a patch to remove it later.",
+      "range": {
+        "startLine": 24,
+        "startChar": 7,
+        "endLine": 24,
+        "endChar": 66
+      },
+      "revId": "a7ae3bd9065568469c2c007ded02537206308028",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
