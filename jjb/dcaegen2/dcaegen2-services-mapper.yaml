@@ -5,12 +5,16 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-shell-daily':
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
           mvn-goals: 'clean package docker:build -DpushImage'
-          # No-op
-          script: '/bin/true'
-          build-node: 'ubuntu1604-docker-8c-8g'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+
     project: 'dcaegen2/services/mapper'
     stream:
       - 'master':
