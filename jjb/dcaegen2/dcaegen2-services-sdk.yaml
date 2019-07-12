@@ -5,7 +5,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g

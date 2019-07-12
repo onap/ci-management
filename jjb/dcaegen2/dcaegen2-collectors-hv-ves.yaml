@@ -21,18 +21,12 @@
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-shell-daily':
-          mvn-goals: 'clean deploy -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
-          # No-op
-          script: '/bin/true'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          sign-artifacts: true
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
