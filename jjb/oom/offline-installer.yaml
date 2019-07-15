@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'dublin':
+          branch: 'dublin'
 
     jobs:
       - '{project-name}-{stream}-review':
