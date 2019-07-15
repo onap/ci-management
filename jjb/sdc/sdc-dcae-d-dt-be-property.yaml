@@ -4,8 +4,11 @@
     project-name: 'sdc-dcae-d-dt-be-property'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
     project: 'sdc/dcae-d/dt-be-property'
     stream:
       - 'master':
