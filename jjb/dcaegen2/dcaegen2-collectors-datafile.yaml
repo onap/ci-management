@@ -17,7 +17,10 @@
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-release-version-java-daily'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':

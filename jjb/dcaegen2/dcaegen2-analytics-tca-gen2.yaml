@@ -18,11 +18,11 @@
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean install'
-      - '{project-name}-{stream}-docker-java-shell-daily':
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
           mvn-goals: 'clean deploy docker:build -DpushImage'
-          # No-op
-          script: '/bin/true'
-          build-node: 'ubuntu1604-docker-8c-8g'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-sonar
