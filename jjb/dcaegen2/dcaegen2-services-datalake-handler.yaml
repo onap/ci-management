@@ -6,12 +6,40 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily':
-            version-properties: 'components/datalake-handler/version.properties'
     subproject:
       - 'datalake-handler':
           pom: 'components/datalake-handler/pom.xml'
           pattern: 'components/datalake-handler/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-services-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
+
+- project:
+    name: dcaegen2-services-datalake-handler-release
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services-datalake-handler'
+    jobs:
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          mvn-pom: 'components/datalake-handler/pom.xml'
+          mvn-params: '-f components/datalake-handler/pom.xml'
+          version-properties-file: 'components/datalake-handler/version.properties'
+          pattern: 'components/datalake-handler/**'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          mvn-goals: 'clean package docker:build -DpushImage -f components/datalake-handler/pom.xml'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+          pattern: 'components/datalake-handler/**'
+
     stream:
       - 'master':
           branch: 'master'
