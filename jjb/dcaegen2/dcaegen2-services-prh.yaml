@@ -7,15 +7,13 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
 
     project: 'dcaegen2/services/prh'
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'dcaegen2-services-prh-settings'
     files: '**'
     archive-artifacts: ''

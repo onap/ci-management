@@ -7,9 +7,6 @@
       - 'master':
           branch: 'master'
           mvn-goals: 'clean install dockerfile:build dockerfile:tag@tag-version dockerfile:push@push-latest dockerfile:push@push-version'
-      - 'dublin':
-          branch: 'dublin'
-          mvn-goals: 'clean install dockerfile:build dockerfile:tag@tag-version dockerfile:push@push-version'
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'

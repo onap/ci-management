@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     # apply to all jobs
     project: 'dcaegen2/analytics/tca'
     mvn-settings: 'dcaegen2-analytics-tca-settings'
@@ -19,7 +17,6 @@
     build-node: ubuntu1604-builder-4c-4g
 
     jobs:
-      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-DskipTests=true'
       - '{project-name}-{stream}-merge-java'
