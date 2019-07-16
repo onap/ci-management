@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     # apply to all jobs
     project: 'dcaegen2/collectors/hv-ves'
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
