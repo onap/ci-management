@@ -22,6 +22,30 @@
       "revId": "38d21dbc4878fb4df4aff6ae4c889f2a37800f1c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71bcc6c7_b9dbee30",
+        "filename": "jjb/aai/aai-champ.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 453
+      },
+      "writtenOn": "2019-07-16T19:38:02Z",
+      "side": 1,
+      "message": "It works with or without a space (I tried locally).  If this is a code style objection, I can make the change.  Let me know.",
+      "parentUuid": "eac13eac_fe7616d6",
+      "range": {
+        "startLine": 19,
+        "startChar": 23,
+        "endLine": 19,
+        "endChar": 31
+      },
+      "revId": "38d21dbc4878fb4df4aff6ae4c889f2a37800f1c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
