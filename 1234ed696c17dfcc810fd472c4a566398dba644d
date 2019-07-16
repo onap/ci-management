@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54a8f356_b518822e",
+        "filename": "jjb/dcaegen2/dcaegen2-services-bbs-eventprocessor-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-07-16T23:24:31Z",
+      "side": 1,
+      "message": "Just to be sure, you don\u0027t want this to match the project-name from the other project, dcaegen2-services?",
+      "range": {
+        "startLine": 28,
+        "startChar": 18,
+        "endLine": 28,
+        "endChar": 57
+      },
+      "revId": "1234ed696c17dfcc810fd472c4a566398dba644d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
