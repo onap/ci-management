@@ -46,6 +46,30 @@
       "revId": "38d21dbc4878fb4df4aff6ae4c889f2a37800f1c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b2f6bb7_a8b7a36d",
+        "filename": "jjb/aai/aai-champ.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-16T20:03:04Z",
+      "side": 1,
+      "message": "Oh.. i didn\u0027t knew it works.. thanks! Learnt something new :)",
+      "parentUuid": "71bcc6c7_b9dbee30",
+      "range": {
+        "startLine": 19,
+        "startChar": 23,
+        "endLine": 19,
+        "endChar": 31
+      },
+      "revId": "38d21dbc4878fb4df4aff6ae4c889f2a37800f1c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
