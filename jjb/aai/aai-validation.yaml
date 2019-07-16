@@ -22,8 +22,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'aai/validation'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-validation-settings'
@@ -52,8 +52,8 @@
     project: 'aai/validation'
     project-name: 'aai-validation'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-validation-settings'
 
 

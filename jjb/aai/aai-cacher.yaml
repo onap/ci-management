@@ -19,8 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -49,8 +49,8 @@
     project: 'aai/cacher'
     project-name: 'aai-cacher'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

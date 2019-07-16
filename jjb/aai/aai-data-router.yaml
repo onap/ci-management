@@ -22,8 +22,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'aai/data-router'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-data-router-settings'
@@ -51,8 +51,8 @@
     project: 'aai/data-router'
     project-name: 'aai-data-router'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-data-router-settings'
 
 - project:

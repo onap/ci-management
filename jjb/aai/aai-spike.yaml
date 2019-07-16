@@ -22,8 +22,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'aai/spike'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-spike-settings'
@@ -51,8 +51,8 @@
     project: 'aai/spike'
     project-name: 'aai-spike'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-spike-settings'
 
 - project:

@@ -17,8 +17,8 @@
           maven-versions-plugin: true
     project: 'aai/event-client'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-event-client-settings'
@@ -46,8 +46,8 @@
     project: 'aai/event-client'
     project-name: 'aai-event-client'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-event-client-settings'
 
 - project:

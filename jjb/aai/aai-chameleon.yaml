@@ -23,8 +23,8 @@
 
     project: 'aai/chameleon'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-chameleon-settings'
@@ -40,8 +40,8 @@
     project: 'aai/chameleon'
     project-name: 'aai-chameleon'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-chameleon-settings'
 
 - project:

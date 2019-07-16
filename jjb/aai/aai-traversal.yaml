@@ -24,8 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -54,8 +54,8 @@
     project: 'aai/traversal'
     project-name: 'aai-traversal'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
 

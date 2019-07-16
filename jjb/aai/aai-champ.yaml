@@ -24,8 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-champ-settings'
     files: '**'
     archive-artifacts: ''
@@ -52,8 +52,8 @@
     project: 'aai/champ'
     project-name: 'aai-champ'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-champ-settings'
 
 - project:
