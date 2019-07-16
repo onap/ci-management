@@ -22,8 +22,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'aai/gizmo'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-gizmo-settings'
@@ -52,8 +52,8 @@
     project: 'aai/gizmo'
     project-name: 'aai-gizmo'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-gizmo-settings'
 
 - project:

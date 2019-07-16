@@ -24,8 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-esr-server-settings'
     files: '**'
     archive-artifacts: ''
@@ -54,8 +54,8 @@
     project: 'aai/esr-server'
     project-name: 'aai-esr-server'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-esr-server-settings'
 
 - project:

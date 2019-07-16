@@ -12,8 +12,8 @@
           maven-versions-plugin: true
     project: 'aai/sparky-fe'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-sparky-fe-settings'

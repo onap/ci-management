@@ -25,8 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -55,8 +55,8 @@
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
 

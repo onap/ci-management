@@ -19,8 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -50,8 +50,8 @@
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
 

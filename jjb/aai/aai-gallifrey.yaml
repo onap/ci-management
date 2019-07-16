@@ -16,8 +16,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'aai/gallifrey'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-gallifrey-settings'
@@ -32,8 +32,8 @@
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-gallifrey-settings'
 
 - project:

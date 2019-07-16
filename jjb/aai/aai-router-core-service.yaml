@@ -17,8 +17,8 @@
           maven-versions-plugin: true
     project: 'aai/router-core'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-router-core-settings'
@@ -46,8 +46,8 @@
     project: 'aai/router-core'
     project-name: 'aai-router-core'
     stream:
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'aai-router-core-settings'
 
 - project:
