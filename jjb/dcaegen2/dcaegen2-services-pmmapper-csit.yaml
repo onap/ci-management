@@ -7,9 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-
     functionality:
       - 'pmmapper':
           trigger_jobs:

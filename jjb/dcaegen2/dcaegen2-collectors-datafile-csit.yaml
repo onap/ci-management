@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'ManagementInterface-suite':
           trigger_jobs:

@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'bbs-testsuites':
           trigger_jobs:
