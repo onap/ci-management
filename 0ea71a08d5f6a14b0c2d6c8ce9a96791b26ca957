@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74a70007_e2256700",
+        "filename": "jjb/multicloud/multicloud-openstack-vmware-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-17T18:29:43Z",
+      "side": 1,
+      "message": "I noticed these 2 jobs take the {project-name} variable to name the job in Jenkins which is \"multicloud-openstack-vmware\". I wonder if you guys are ok with this, or would like to add these 2 jobs in a new project block where {project-name} is \"multicloud-openstack-vmware-vio\" instead.\nFor example: https://gerrit.onap.org/r/#/c/ci-management/+/91562/2/jjb/dcaegen2/dcaegen2-services-bbs-eventprocessor-java.yaml",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 34
+      },
+      "revId": "0ea71a08d5f6a14b0c2d6c8ce9a96791b26ca957",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
