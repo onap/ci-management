@@ -12,21 +12,21 @@
           pom: 'vio/pom.xml'
           pattern: 'vio/**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-{subproject}-release-version-java-daily'
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-multicloud-openstack-vmware-docker-image.sh'
+      - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
+          maven-goals: install
+          mvn-params: '-P docker'
+          maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
