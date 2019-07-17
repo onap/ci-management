@@ -19,8 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'dublin':
+          branch: 'dublin'
 
     mvn-settings: 'aai-oom-settings'
     files: '**'
