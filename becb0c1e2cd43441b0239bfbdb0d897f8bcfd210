@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0ea0c5d_5a32580c",
+        "filename": "jjb/msb/msb-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4091
+      },
+      "writtenOn": "2019-07-17T07:45:34Z",
+      "side": 1,
+      "message": "What job should be used for csit trigger?",
+      "revId": "becb0c1e2cd43441b0239bfbdb0d897f8bcfd210",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
