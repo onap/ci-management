@@ -4,13 +4,17 @@
     project-name: 'sdc-dcae-d-dt-be-main'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-docker-version-java-daily':
-          build-node: 'ubuntu1604-docker-8c-8g'
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-DskipTests=true'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -DskipTests=true'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
     project: 'sdc/dcae-d/dt-be-main'
     stream:
       - 'master':
