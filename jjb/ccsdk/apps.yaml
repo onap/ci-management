@@ -13,6 +13,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
+          sign-artifacts: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
@@ -20,7 +21,6 @@
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-version: "mvn35"
 
-    sign-artifacts: true
     project: 'ccsdk/apps'
     stream:
       - 'master':

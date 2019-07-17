@@ -7,8 +7,8 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
+          sign-artifacts: true
 
-    sign-artifacts: true
     project: 'ccsdk/sli/adaptors'
     stream:
       - 'master':
