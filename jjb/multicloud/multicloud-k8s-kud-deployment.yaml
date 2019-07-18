@@ -10,6 +10,5 @@
           branch: 'master'
 
     jobs:
-      - '{name}-{stream}-shell-6hrs':
+      - '{name}-{stream}-verification':
           script: '{kud_build_script}'
-

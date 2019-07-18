@@ -1,0 +1,31 @@
+---
+- job-template:
+    name: '{name}-{stream}-verification'
+    node: '{build-node}'
+    project-type: freestyle
+
+    parameters:
+        - lf-infra-parameters:
+            branch: '{branch}'
+            project: '{project}'
+            stream: '{stream}'
+            lftools-version: '{lftools-version}'
+
+    scm:
+        - gerrit-trigger-scm:
+            refspec: '$GERRIT_REFSPEC'
+            submodule-recursive: '{submodule-recursive}'
+            choosing-strategy: 'gerrit'
+
+    triggers:
+        - gerrit-trigger-patch-submitted:
+            server: '{server-name}' #FIXME
+            project: '{project}'
+            branch: '{branch}'
+            files: '**'
+
+    builders:
+        - shell: '{script}'
+
+    publishers:
+        - lf-infra-publish
