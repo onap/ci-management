@@ -27,24 +27,6 @@
     mvn-profile: docker
     build-node: ubuntu1604-docker-8c-8g
 
-- project:
-    name: ccsdk-distribution-docker
-    project-name: 'ccsdk-distribution'
-    jobs:
-      - 'docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'ccsdk/distribution'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'ccsdk-distribution-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: docker
-    build-node: queue-docker-4c-4g
 
 #- project:
 #    name: ccsdk-distribution-arm64-docker
