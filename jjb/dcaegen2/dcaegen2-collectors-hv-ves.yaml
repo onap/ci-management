@@ -20,7 +20,6 @@
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
       - gerrit-maven-stage:
-          sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
@@ -28,6 +27,7 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
+          mvn-goals: 'clean install docker:build docker:push'
 
 - project:
     name: dcaegen2-collectors-hv-ves-clm
