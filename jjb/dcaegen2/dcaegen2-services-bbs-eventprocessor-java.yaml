@@ -27,7 +27,7 @@
     jobs:
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           version-properties-file: 'components/bbs-event-processor/version.properties'
           mvn-pom: 'components/bbs-event-processor/pom.xml'
@@ -35,7 +35,7 @@
           pattern: 'components/bbs-event-processor/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
-          mvn-goals: 'clean package docker:build -DpushImage -f components/bbs-event-processor/pom.xml'
+          mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/bbs-event-processor/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           pattern: 'components/bbs-event-processor/**'
