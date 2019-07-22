@@ -7,10 +7,10 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImage'
@@ -19,8 +19,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'dcaegen2-platform-inventory-api-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
