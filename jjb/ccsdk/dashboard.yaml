@@ -52,21 +52,3 @@
     mvn-settings: 'ccsdk-dashboard-settings'
     build-node: centos7-redis-4c-4g
 
-- project:
-    name: ccsdk-dashboard-docker
-    project-name: 'ccsdk-dashboard'
-    jobs:
-      - 'docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'ccsdk/dashboard'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'ccsdk-dashboard-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: docker
-    build-node: queue-docker-4c-4g

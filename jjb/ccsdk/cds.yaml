@@ -62,25 +62,6 @@
     maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: ccsdk-cds-docker
-    project-name: 'ccsdk-cds'
-    jobs:
-      - 'docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'ccsdk/cds'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'ccsdk-cds-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: docker
-    maven-version: "mvn35"
-    build-node: queue-docker-4c-4g
 
 - project:
     name: ccsdk-cds-info

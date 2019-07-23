@@ -68,26 +68,6 @@
     maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: ccsdk-apps-docker
-    project-name: 'ccsdk-apps'
-    jobs:
-      - 'docker-version-java-daily':
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'ccsdk/apps'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-    mvn-settings: 'ccsdk-apps-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: docker
-    maven-version: "mvn35"
-    build-node: queue-docker-4c-4g
-#
 #- project:
 #    name: ccsdk-apps-arm64-docker
 #    project-name: 'ccsdk-apps-arm64'
