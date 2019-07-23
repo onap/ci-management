@@ -23,12 +23,6 @@
           mvn-pom: 'deployment/docker/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'deployment/docker/pom.xml'
-          mvn-goals: 'docker:build'
-          docker-image-name: 'onap/cli'
-          build-node: ubuntu1604-docker-8c-8g
 
     project: 'cli'
     stream:
