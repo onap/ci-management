@@ -6,7 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-          mvn-goals: 'clean install dockerfile:build dockerfile:tag@tag-version dockerfile:push@push-latest dockerfile:push@push-version'
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
@@ -17,7 +16,7 @@
     build-node: ubuntu1604-docker-8c-8g
     jobs:
       - '{project-name}-{stream}-verify-java':
-        mvn-goals: 'clean install'
+        mvn-goals: 'clean install docker:build'
       - '{project-name}-{stream}-merge-java':
         mvn-goals: 'clean deploy'
       - gerrit-maven-stage:
@@ -28,7 +27,7 @@
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-goals: 'clean install dockerfile:build dockerfile:tag@tag-version dockerfile:push@push-latest dockerfile:push@push-version'
+          mvn-goals: 'clean install docker:build docker:push'
 
 - project:
     name: dcaegen2-services-pm-mapper-sonar
