@@ -76,6 +76,7 @@
     project-name: ccsdk-distribution
     jobs:
       - gerrit-whitesource-scan
+    build-node: ubuntu1604-docker-8c-8g
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true
