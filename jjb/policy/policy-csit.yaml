@@ -28,7 +28,7 @@
     functionality:
       - 'apex-pdp'
     trigger_jobs:
-      - 'policy-apex-pdp-{stream}-merge-scm-mvn-script'
+      - 'policy-apex-pdp-{stream}-merge-java'
     robot-options: ''
 
 - project:
