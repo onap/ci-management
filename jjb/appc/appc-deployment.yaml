@@ -17,8 +17,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'appc-deployment-settings'
     files: '**'
     archive-artifacts: ''

@@ -14,8 +14,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'appc-cdt-settings'
     files: '**'
     archive-artifacts: ''
