@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8841240_30f1a014",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-07-30T21:10:09Z",
+      "side": 1,
+      "message": "This will prevent self releases... but we can make manual releases meanwhile..",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 45
+      },
+      "revId": "42bf9aff0e8750111a75877e17fd2235c556a0f9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
