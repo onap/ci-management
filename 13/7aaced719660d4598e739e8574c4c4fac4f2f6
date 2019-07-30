@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Venkata Harish Kajur <vk250x@att.com>
+Code-Review+1: James Forsyth <jf2512@att.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 30 Jul 2019 17:48:21 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/92174
+Project: ci-management
+Branch: refs/heads/master
