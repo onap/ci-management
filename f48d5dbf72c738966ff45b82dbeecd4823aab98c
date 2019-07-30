@@ -16,6 +16,24 @@
       "revId": "f48d5dbf72c738966ff45b82dbeecd4823aab98c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aaefc8f4_662a8c7e",
+        "filename": "jjb/aai/aai-aai-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 5065
+      },
+      "writtenOn": "2019-07-30T05:41:50Z",
+      "side": 1,
+      "message": "Good catch - thank you! I\u0027ll update my patch accordingly.",
+      "parentUuid": "0c6bb7da_edbf7ceb",
+      "revId": "f48d5dbf72c738966ff45b82dbeecd4823aab98c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
