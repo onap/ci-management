@@ -22,6 +22,30 @@
       "revId": "9861749ff24a5ddc0a2f11b76f2debffafa3ae6d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2869a530_ef0ee637",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-hv-ves.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-07-30T21:16:24Z",
+      "side": 0,
+      "message": "good catch.. Moved this to Ubuntu earlier and then reverted back to centos; missed to add sign-artifacts. Will fix it.",
+      "parentUuid": "f1c1b522_724a6a52",
+      "range": {
+        "startLine": 23,
+        "startChar": 2,
+        "endLine": 23,
+        "endChar": 30
+      },
+      "revId": "9861749ff24a5ddc0a2f11b76f2debffafa3ae6d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
