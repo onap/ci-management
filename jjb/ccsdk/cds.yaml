@@ -16,6 +16,7 @@
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-version: "mvn35"
           maven-versions-plugin: true
+      - '{project-name}-gerrit-release-jobs'
 
     project: 'ccsdk/cds'
     stream:

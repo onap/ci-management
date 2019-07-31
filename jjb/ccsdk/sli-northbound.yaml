@@ -7,6 +7,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
+      - '{project-name}-gerrit-release-jobs'
 
     sign-artifacts: true
     project: 'ccsdk/sli/northbound'
