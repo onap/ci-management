@@ -23,7 +23,7 @@
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-goals: 'clean package docker:build -DpushImage'
+          mvn-goals: 'clean package docker:build -DpushImageTag`
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
