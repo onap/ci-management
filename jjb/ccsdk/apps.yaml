@@ -20,6 +20,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-version: "mvn35"
+      - '{project-name}-gerrit-release-jobs'
 
     project: 'ccsdk/apps'
     stream:
