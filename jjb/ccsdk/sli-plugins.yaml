@@ -59,3 +59,14 @@
       - gerrit-info-yaml-verify
     project: ccsdk/sli/plugins
     branch: master
+
+- project:
+    name: ccsdk-sli-plugins-whitesource
+    project-name: ccsdk-sli-plugins
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-sli-plugins-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/sli/plugins
+    branch: master
