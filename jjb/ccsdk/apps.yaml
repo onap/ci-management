@@ -89,3 +89,14 @@
       - gerrit-info-yaml-verify
     project: ccsdk/apps
     branch: master
+
+- project:
+    name: ccsdk-apps-whitesource
+    project-name: ccsdk-apps
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-apps-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/apps
+    branch: master

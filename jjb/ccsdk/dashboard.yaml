@@ -49,3 +49,13 @@
     mvn-settings: 'ccsdk-dashboard-settings'
     build-node: centos7-redis-4c-4g
 
+- project:
+    name: ccsdk-dashboard-whitesource
+    project-name: ccsdk-dashboard
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-dashboard-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/dashboard
+    branch: master
