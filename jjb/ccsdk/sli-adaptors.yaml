@@ -61,3 +61,14 @@
       - gerrit-info-yaml-verify
     project: ccsdk/sli/adaptors
     branch: master
+P
+- project:
+    name: ccsdk-sli-adaptors-whitesource
+    project-name: ccsdk-sli-adaptors
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-sli-adaptors-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/sli/adaptors
+    branch: master

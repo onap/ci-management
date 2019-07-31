@@ -69,3 +69,14 @@
       - gerrit-info-yaml-verify
     project: ccsdk/cds
     branch: master
+
+- project:
+    name: ccsdk-cds-whitesource
+    project-name: ccsdk-cds
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-cds-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/cds
+    branch: master

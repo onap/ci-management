@@ -61,3 +61,14 @@
       - gerrit-info-yaml-verify
     project: ccsdk/sli/northbound
     branch: master
+
+- project:
+    name: ccsdk-sli-northbound-whitesource
+    project-name: ccsdk-sli-northbound
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'ccsdk-sli-northbound-settings'
+    wss-product-name: ccsdk
+    mvn-clean-install: true
+    project: ccsdk/sli/northbound
+    branch: master
