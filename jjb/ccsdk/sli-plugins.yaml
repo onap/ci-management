@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'ccsdk-sli-plugins-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -49,8 +47,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'ccsdk-sli-plugins-settings'
     maven-version: "mvn35"
 

@@ -21,8 +21,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -40,8 +38,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -75,8 +71,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdnc-oam-settings'
 
 - project:

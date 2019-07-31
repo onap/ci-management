@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdnc-northbound-settings'
 
     # due to a strange macro / variable translation problem this needs to be
@@ -50,8 +48,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'sdnc-northbound-settings'
 
 - project:

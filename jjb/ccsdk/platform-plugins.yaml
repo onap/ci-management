@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'ccsdk-platform-plugins-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -48,8 +46,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'ccsdk-platform-plugins-settings'
     build-node: centos7-redis-4c-4g
 
