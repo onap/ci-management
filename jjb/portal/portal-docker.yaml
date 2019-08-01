@@ -17,8 +17,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-2.2.0':
-          branch: 'release-2.2.0'
     mvn-settings: 'portal-settings'
     files: '**'
     archive-artifacts: ''
