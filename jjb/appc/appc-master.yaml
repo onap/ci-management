@@ -13,6 +13,7 @@
           maven-versions-plugin: true
       - '{project-name}-{stream}-release-version-java-daily':
           build-node: ubuntu1604-builder-8c-8g
+      - '{project-name}-gerrit-release-jobs'
 
     project: 'appc'
     stream:
