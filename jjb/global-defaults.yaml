@@ -50,4 +50,5 @@
     submodule-disable: false
 
     # Jenkins
-    jenkins-ssh-credential: onap-jenkins-ssh
+    jenkins-ssh-credential: 'onap-jenkins-ssh'
+    jenkins-ssh-release-credential: 'jenkins-release'
