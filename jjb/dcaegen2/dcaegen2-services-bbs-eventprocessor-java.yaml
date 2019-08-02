@@ -32,7 +32,7 @@
           version-properties-file: 'components/bbs-event-processor/version.properties'
           mvn-pom: 'components/bbs-event-processor/pom.xml'
           mvn-params: '-f components/bbs-event-processor/pom.xml'
-          mvn-goals: 'clean package -Ddockerfile.skip -f components/bbs-event-processor/pom.xml'
+          mvn-goals: 'clean deploy -Ddockerfile.skip -f components/bbs-event-processor/pom.xml'
           pattern: 'components/bbs-event-processor/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g

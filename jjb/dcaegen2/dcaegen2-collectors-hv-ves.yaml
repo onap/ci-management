@@ -23,7 +23,7 @@
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
-          mvn-goals: 'clean install -Ddocker.skip'
+          mvn-goals: 'clean deploy -Ddocker.skip'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
