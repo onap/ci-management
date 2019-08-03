@@ -22,6 +22,8 @@
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-builder-4c-4g'
@@ -76,6 +78,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: optf/osdf
+    build-node: ubuntu1604-builder-4c-4g
     project-name: 'optf-osdf'
     stream:
       - 'master':
