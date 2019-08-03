@@ -23,7 +23,7 @@
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-builder-4c-4g
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-builder-4c-4g'
