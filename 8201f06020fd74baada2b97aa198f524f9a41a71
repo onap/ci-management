@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c251ddd1_aa5a16ed",
+        "filename": "jjb/global-templates-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 846,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-05T20:56:11Z",
+      "side": 1,
+      "message": "To use the global-jjb docker jobs, you will need to not call this template  \u0027{project-name}-{arch_tag}-{stream}-docker-version-java-daily\u0027\nBut rather call:\n\"{project-name}-maven-docker-stage-{stream}\" which is the new equivalent. \nProject-name will need to be defined as \"policy-amd64\" or \"policy-arm64\" depending on the arch. \nIf you have the changes in jjb/policy files I can help you define review those",
+      "range": {
+        "startLine": 845,
+        "startChar": 0,
+        "endLine": 846,
+        "endChar": 77
+      },
+      "revId": "8201f06020fd74baada2b97aa198f524f9a41a71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
