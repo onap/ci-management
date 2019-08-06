@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96a83b6f_94b10609",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1257,
+      "author": {
+        "id": 3621
+      },
+      "writtenOn": "2019-08-06T14:31:08Z",
+      "side": 1,
+      "message": "I would like to call here the global-jjb template gerrit-maven-docker-stage",
+      "revId": "3445123a309a9b0912e87cc12299c653b5fdff31",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
