@@ -22,6 +22,30 @@
       "revId": "8201f06020fd74baada2b97aa198f524f9a41a71",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dc134fc8_084401b9",
+        "filename": "jjb/global-templates-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 846,
+      "author": {
+        "id": 5109
+      },
+      "writtenOn": "2019-08-06T11:05:16Z",
+      "side": 1,
+      "message": "Renaming the project name to \"policy-amd64\" or \"policy-arm64\" means changing it for the master job and manifest too. This results in duplicating them as well, and we don\u0027t want that. Only the build jobs should be duplicated. Can we call \"{project-name}-maven-docker-stage-{stream}\" with a different value for project-name? Something like {project-name-arch}-maven-docker-stage-{stream}?",
+      "parentUuid": "c251ddd1_aa5a16ed",
+      "range": {
+        "startLine": 845,
+        "startChar": 0,
+        "endLine": 846,
+        "endChar": 77
+      },
+      "revId": "8201f06020fd74baada2b97aa198f524f9a41a71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
