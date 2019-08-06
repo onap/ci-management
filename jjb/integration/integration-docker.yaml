@@ -14,8 +14,11 @@
           pom: 'test/mocks/sniroemulator/pom.xml'
           pattern: 'test/mocks/sniroemulator/**'
       - 'pnfsimulator':
-          pom: 'test/mocks/pnfsimulator/pom.xml'
-          pattern: 'test/mocks/pnfsimulator/**'
+          pom: 'test/mocks/pnfsimulator/pnfsimulator/pom.xml'
+          pattern: 'test/mocks/pnfsimulator/pnfsimulator/**'
+      - 'netconfsimulator':
+          pom: 'test/mocks/pnfsimulator/netconfsimulator/pom.xml'
+          pattern: 'test/mocks/pnfsimulator/netconfsimulator/**'
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
