@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Wojciech Sliwka <wojciech.sliwka@nokia.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 06 Aug 2019 18:59:55 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/92783
+Project: ci-management
+Branch: refs/heads/master
