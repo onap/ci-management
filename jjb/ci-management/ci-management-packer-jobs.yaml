@@ -51,6 +51,7 @@
     build-timeout: 90
 
     platforms:
+      - centos-7
       - ubuntu-16.04
     templates: memcached
 
@@ -85,4 +86,3 @@
     platforms:
       - ubuntu-16.04
     templates: helm
-
