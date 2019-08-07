@@ -18,6 +18,8 @@
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean install'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-builder-4c-4g
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           mvn-goals: 'clean deploy docker:build -DpushImage'
