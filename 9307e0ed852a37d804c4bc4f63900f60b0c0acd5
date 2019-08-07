@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1790272_5a211654",
+        "filename": "jjb/aai/aai-aai-common.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2019-08-07T18:33:01Z",
+      "side": 1,
+      "message": "Helpdesk is unwilling (unable?) to release my artifacts and insists on self-release so I\u0027m going to try to fix the test that\u0027s failing with a suggestion from Dmitry to change a setup class.",
+      "revId": "9307e0ed852a37d804c4bc4f63900f60b0c0acd5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
