@@ -2,7 +2,7 @@
 - project:
     name: multicloud-k8s
     project-name: 'multicloud-k8s'
-    path: 'src/k8splugin'
+    path: 'src'
     golangver: 'golang112'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
