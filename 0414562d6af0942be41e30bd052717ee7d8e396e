@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "162d4263_eeb46027",
+        "filename": "jjb/aai/aai-sparky-fe.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-07T18:17:04Z",
+      "side": 1,
+      "message": "SIGUL will fail in ubuntu. \nLet\u0027s remove this line",
+      "range": {
+        "startLine": 10,
+        "startChar": 11,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "0414562d6af0942be41e30bd052717ee7d8e396e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
