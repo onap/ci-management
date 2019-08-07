@@ -66,3 +66,14 @@
       - gerrit-info-yaml-verify
     project: aai/resources
     branch: master
+
+- project:
+    name: 'aai-resources-whitesource'
+    project-name: 'aai-resources'
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'aai-resources-settings'
+    wss-product-name: 'aai'
+    mvn-clean-install: true
+    project: 'aai/resources'
+    branch: master

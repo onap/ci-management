@@ -84,3 +84,14 @@
     mvn-version: 'mvn35'
     files: 'Dockerfiles/aai-common/**'
     build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: 'aai-aai-common-whitesource'
+    project-name: 'aai-aai-common'
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'aai-aai-common-settings'
+    wss-product-name: 'aai'
+    mvn-clean-install: true
+    project: 'aai/aai-common'
+    branch: master

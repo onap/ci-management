@@ -63,3 +63,14 @@
       - gerrit-info-yaml-verify
     project: aai/model-loader
     branch: master
+
+- project:
+    name: 'aai-model-loader-whitesource'
+    project-name: 'aai-model-loader'
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'aai-model-loader-settings'
+    wss-product-name: 'aai'
+    mvn-clean-install: true
+    project: 'aai/model-loader'
+    branch: master
