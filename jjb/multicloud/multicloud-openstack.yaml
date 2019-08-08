@@ -75,7 +75,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-memcached-4c-4g'
+    build-node: 'centos7-memcached-4c-4g'
 
 #- project:
 #    name: multicloud-openstack-arm64
