@@ -66,6 +66,7 @@
 - project:
     name: 'aai-sparky-be-whitesource'
     project-name: 'aai-sparky-be'
+    build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-sparky-be-settings'

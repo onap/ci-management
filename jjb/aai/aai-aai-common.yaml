@@ -92,6 +92,7 @@
 - project:
     name: 'aai-aai-common-whitesource'
     project-name: 'aai-aai-common'
+    build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-aai-common-settings'

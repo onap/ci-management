@@ -70,6 +70,7 @@
 - project:
     name: 'aai-resources-whitesource'
     project-name: 'aai-resources'
+    build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-resources-settings'

@@ -85,6 +85,7 @@
 - project:
     name: 'aai-search-data-service-whitesource'
     project-name: 'aai-search-data-service'
+    build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-search-data-service-settings'

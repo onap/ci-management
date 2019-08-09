@@ -67,6 +67,7 @@
 - project:
     name: 'aai-model-loader-whitesource'
     project-name: 'aai-model-loader'
+    build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-model-loader-settings'
