@@ -27,7 +27,8 @@
     branch: master
     build-days-to-keep: 7
     build-timeout: 240
-    cron: '@daily'
+#    cron: '@daily'
+    cron: ''
     disabled: false
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
@@ -45,15 +46,17 @@
     submodule-timeout: 10
     submodule-disable: false
     archive-artifacts: >
-      **/*.log
-      **/*-log.txt
-      **/hs_err_*.log
-      **/target/**/feature.xml
-      **/target/failsafe-reports/failsafe-summary.xml
-      **/target/surefire-reports/*-output.txt
-      **/cov-int/BUILD.metrics.xml
-      **/cov-int/build-timings.txt
-      **/cov-int/java-security-da-whitelist.dat
+      cov-int/BUILD.metrics.xml
+      cov-int/build-log.txt
+      cov-int/build-timings.txt
+      cov-int/cov-import-scm-timings.txt
+      cov-int/failed_jsp/*
+      cov-int/java-security-da-input.dat
+      cov-int/java-security-da-whitelist.dat
+      cov-int/jsp-compilation-log.txt
+      cov-int/jsp-debug-log.txt
+      cov-int/security.log
+      coverity-scan-analysed-files.log
 
     properties:
       - lf-infra-properties:
