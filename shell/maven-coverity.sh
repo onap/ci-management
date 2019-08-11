@@ -23,23 +23,29 @@ SUBMISSION_ATTEMPTS=5
 SUBMISSION_INITIAL_REST_INTERVAL=30 # seconds, will be doubled after each attempt
 
 #-----------------------------------------------------------------------------
-# Process parameters for JS/PHP/Ruby files analysis
+# Process parameters for JS/TS/Python/Ruby/PHP files analysis
 
-FS_CAPTURE_SEARCH_PARAMS=''
 if [ -n "${SEARCH_PATHS:=}" ]; then
   for SEARCH_PATH in ${SEARCH_PATHS}; do
     if [ -d "${SEARCH_PATH}" ]; then
-      FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS} --fs-capture-search '${SEARCH_PATH}'"
+      FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS:=} --fs-capture-search '${SEARCH_PATH}'"
     else
       echo "'${SEARCH_PATH}' from \$SEARCH_PATHS is not an existing directory." >&2
       exit 1
     fi
   done
-fi
 
-for EXCLUDE_REGEX in ${SEARCH_EXCLUDE_REGEXS:=}; do
-  FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS} --fs-capture-search-exclude-regex '${EXCLUDE_REGEX}'"
-done
+  for EXCLUDE_REGEX in ${SEARCH_EXCLUDE_REGEXS:=}; do
+    EXCLUDE_REGEX=${EXCLUDE_REGEX//\'/\'\\\'\'} # escape single quote "'"
+    FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS} --fs-capture-search-exclude-regex '${EXCLUDE_REGEX}'"
+
+    # FIXME: a hack to deal with temporary(?) non-functional filter to ignore
+    # specific source code parts by Coverity Scan ("--fs-capture-search-exclude-regex"
+    # CLI parameter for "cov-build" tool). The hack can be removed when this CLI
+    # parameter is fixed on Coverity side.
+    FS_CAPTURE_SEARCH_EXCLUDE_HACK_PARAMS="${FS_CAPTURE_SEARCH_EXCLUDE_HACK_PARAMS:=} --tu-pattern 'file('\\''${EXCLUDE_REGEX}'\\'')'"
+  done
+fi
 
 #-----------------------------------------------------------------------------
 # Check if we are allowed to submit results to Coverity Scan service
@@ -120,7 +126,8 @@ export MAVEN_OPTS
 
 eval cov-build \
   --dir 'cov-int' \
-  ${FS_CAPTURE_SEARCH_PARAMS} \
+  --append-log \
+  ${FS_CAPTURE_SEARCH_PARAMS:=} \
   "${MVN}" clean install \
     --errors \
     --global-settings "${GLOBAL_SETTINGS_FILE}" \
@@ -128,10 +135,23 @@ eval cov-build \
     ${MAVEN_OPTIONS:=} \
     ${MAVEN_PARAMS:=}
 
+# FIXME: a hack to deal with temporary(?) non-functional filter to ignore
+# specific source code parts by Coverity Scan ("--fs-capture-search-exclude-regex"
+# CLI parameter for "cov-build" tool). The hack can be removed when this CLI
+# parameter is fixed on Coverity side.
+if [ -n "${FS_CAPTURE_SEARCH_EXCLUDE_HACK_PARAMS:=}" ]; then
+  eval cov-manage-emit \
+    --dir 'cov-int' \
+    ${FS_CAPTURE_SEARCH_EXCLUDE_HACK_PARAMS} \
+    delete
+fi
+
+# Extract git data for analysed files
 cov-import-scm \
   --dir 'cov-int' \
   --scm 'git'
 
+# List all analysed files from the project
 cov-manage-emit \
   --dir cov-int \
   list \
@@ -140,6 +160,7 @@ cov-manage-emit \
   '^Translation unit:$' \
 | sed \
   's!^[[:digit:]]\+ -> !!' \
+| sort \
 > 'coverity-scan-analysed-files.log'
 
 #-----------------------------------------------------------------------------
