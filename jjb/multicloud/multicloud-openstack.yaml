@@ -50,14 +50,14 @@
           path: 'fcaps'
           pattern: 'fcaps/**'
           pom: 'fcaps/pom.xml'
-      - 'lenovo':
-          path: 'lenovo'
-          pattern: 'lenovo/**'
-          pom: 'lenovo/pom.xml'
-      - 'lenovo_share':
-          path: 'lenovo'
-          pattern: 'share/**'
-          pom: 'lenovo/pom.xml'
+#      - 'lenovo':
+#          path: 'lenovo'
+#          pattern: 'lenovo/**'
+#          pom: 'lenovo/pom.xml'
+#      - 'lenovo_share':
+#          path: 'lenovo'
+#          pattern: 'share/**'
+#          pom: 'lenovo/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -73,6 +73,8 @@
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-gerrit-release-jobs':
+            build-node: centos7-builder-4c-4g
     files: '**'
     archive-artifacts: ''
     build-node: 'centos7-memcached-4c-4g'
@@ -176,19 +178,19 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
-- project:
-    name: multicloud-openstack-lenovo-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-lenovo'
-    branch: 'master'
-    mvn-params: '-f lenovo/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+#- project:
+#    name: multicloud-openstack-lenovo-sonar
+#    jobs:
+#      - gerrit-maven-sonar
+#    cron: '@daily'
+#    build-node: ubuntu1604-builder-4c-4g
+#    project: 'multicloud/openstack'
+#    project-name: 'multicloud-openstack-lenovo'
+#    branch: 'master'
+#    mvn-params: '-f lenovo/pom.xml'
+#    mvn-settings: 'multicloud-openstack-settings'
+#    mvn-goals: 'clean install'
+#    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
     name: multicloud-openstack-info

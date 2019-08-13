@@ -1,13 +1,13 @@
 ---
-- project:
-    name: multicloud-openstack-lenovo-csit
-    jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'multicloud-lenovo'
-    stream: 'master'
-    functionality:
-      - 'functionality1':
-          trigger_jobs: 'multicloud-openstack-master-docker-java-version-shell-daily'
-    robot-options: ''
-    branch: 'master'
+#- project:
+#    name: multicloud-openstack-lenovo-csit
+#    jobs:
+#      - '{project-name}-{stream}-verify-csit-{functionality}'
+#      - '{project-name}-{stream}-csit-{functionality}'
+#    project-name: 'multicloud-lenovo'
+#    stream: 'master'
+#    functionality:
+#      - 'functionality1':
+#          trigger_jobs: 'multicloud-openstack-master-docker-java-version-shell-daily'
+#    robot-options: ''
+#    branch: 'master'
