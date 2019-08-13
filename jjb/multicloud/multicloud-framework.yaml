@@ -1,0 +1,7 @@
+- project:
+    name: multicloud-framework-info
+    project-name: multicloud-framework
+    jobs:
+      - gerrit-info-yaml-verify
+    project: multicloud/framework
+    branch: master
