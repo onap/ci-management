@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c484218_dcc5f4ff",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3621
+      },
+      "writtenOn": "2019-08-14T14:58:59Z",
+      "side": 1,
+      "message": "this will have to becomme the dockerhub stagging registry will it be onap ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 39,
+        "endLine": 21,
+        "endChar": 48
+      },
+      "revId": "a24c4680c149e0b4c791010d443c38cda2718dba",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62f58efd_284d32e6",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3621
+      },
+      "writtenOn": "2019-08-14T14:58:59Z",
+      "side": 1,
+      "message": "Same as previous",
+      "range": {
+        "startLine": 28,
+        "startChar": 39,
+        "endLine": 28,
+        "endChar": 48
+      },
+      "revId": "a24c4680c149e0b4c791010d443c38cda2718dba",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
