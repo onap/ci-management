@@ -68,7 +68,7 @@
       - '{project-name}-{stream}-verify-docker'
       - '{project-name}-{stream}-merge-docker'
       - gerrit-maven-docker-stage:
-          mvn-params: '-P docker -Dmaven.test.skip=true'
+          mvn-params: '-Dmaven.test.skip=true'
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
