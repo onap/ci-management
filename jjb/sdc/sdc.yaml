@@ -109,3 +109,15 @@
       - gerrit-info-yaml-verify
     project: sdc
     branch: master
+
+- project:
+    name: 'sdc-whitesource'
+    project-name: 'sdc'
+    build-node: ubuntu1604-docker-8c-8g
+    jobs:
+      - gerrit-whitesource-scan
+    mvn-settings: 'sdc-settings'
+    wss-product-name: 'sdc'
+    mvn-clean-install: true
+    project: 'sdc'
+    branch: master
