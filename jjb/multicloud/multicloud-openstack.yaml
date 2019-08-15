@@ -77,7 +77,7 @@
             build-node: centos7-builder-4c-4g
     files: '**'
     archive-artifacts: ''
-    build-node: 'centos7-memcached-4c-4g'
+    build-node: 'ubuntu1604-memcached-4c-4g'
 
 #- project:
 #    name: multicloud-openstack-arm64
