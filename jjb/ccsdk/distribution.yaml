@@ -25,6 +25,7 @@
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1604-docker-8c-8g
