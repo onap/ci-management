@@ -159,9 +159,20 @@ cov-manage-emit \
   --invert-match \
   '^Translation unit:$' \
 | sed \
-  's!^[[:digit:]]\+ -> !!' \
+  --regexp-extended \
+  's!^[[:digit:]]+ -> !!' \
 | sort \
-> 'coverity-scan-analysed-files.log'
+> 'cov-int/coverity-scan-analysed-files.txt'
+
+# List all analyzed files that are not tracked by SCM repository
+cov-manage-emit \
+  --dir cov-int \
+  list-scm-unknown \
+| sed \
+  --regexp-extended \
+  's!^[^ ]+ !!' \
+| sort \
+> 'cov-int/scm-untracked-files.txt'
 
 #-----------------------------------------------------------------------------
 # Submit results to Coverity service

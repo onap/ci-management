@@ -49,13 +49,14 @@
       cov-int/build-log.txt
       cov-int/build-timings.txt
       cov-int/cov-import-scm-timings.txt
+      cov-int/coverity-scan-analysed-files.txt
+      cov-int/scm-untracked-files.txt
       cov-int/failed_jsp/*
       cov-int/java-security-da-input.dat
       cov-int/java-security-da-whitelist.dat
       cov-int/jsp-compilation-log.txt
       cov-int/jsp-debug-log.txt
       cov-int/security.log
-      coverity-scan-analysed-files.log
 
     properties:
       - lf-infra-properties:
