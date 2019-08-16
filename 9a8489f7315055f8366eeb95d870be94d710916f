@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f9cdb80_ec6cc059",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-configbinding.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-08-16T20:14:43Z",
+      "side": 1,
+      "message": "CLM jobs should be retained",
+      "revId": "9a8489f7315055f8366eeb95d870be94d710916f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fb11888_0046b1fa",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-configbinding.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-08-16T20:14:43Z",
+      "side": 1,
+      "message": "will these be switched to python job part of subsequent change?\n{project-name}-{subproject}-python-staging-{stream}\n{project-name}-{subproject}-python-release-{stream}",
+      "range": {
+        "startLine": 22,
+        "startChar": 5,
+        "endLine": 23,
+        "endChar": 60
+      },
+      "revId": "9a8489f7315055f8366eeb95d870be94d710916f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
