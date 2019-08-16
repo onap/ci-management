@@ -1,19 +1,12 @@
 ---
 - project:
     name: dcaegen2-platform-configbinding
-    project-name: 'dcaegen2-platform-configbinding'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-
-    project: 'dcaegen2/platform/configbinding'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'el-alto':
-          branch: 'el-alto'
-    mvn-settings: 'dcaegen2-platform-configbinding-settings'
+    # git repo
+    project: dcaegen2/platform/configbinding
+    # jenkins job prefix
+    project-name: dcaegen2-platform-configbinding
+    # push credentials
+    mvn-settings: dcaegen2-platform-configbinding-settings
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
     # correctly defined in the job
@@ -21,36 +14,37 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: ubuntu1604-docker-8c-8g
+    jobs:
+      # clm and tox
+      - '{project-name}-python-jobs'
+      # build docker image
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    stream:
+      - master:
+          branch: master
+      - el-alto:
+          branch: el-alto
 
 - project:
     name: dcaegen2-platform-configbinding-sonar
-    jobs:
-      - gerrit-maven-sonar
+    project: dcaegen2/platform/configbinding
+    project-name: dcaegen2-platform-configbinding
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
-    project: 'dcaegen2/platform/configbinding'
-    project-name: 'dcaegen2-platform-configbinding'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-platform-configbinding-settings'
+    mvn-settings: dcaegen2-platform-configbinding-settings
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: dcaegen2-platform-configbinding-clm
+    branch: master
     jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: dcaegen2/platform/configbinding
-    build-node: ubuntu1604-docker-8c-8g
-    project-name: 'dcaegen2-platform-configbinding'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-platform-configbinding-settings'
+      # Sonar jobs require maven, even for Python
+      - gerrit-maven-sonar
 
 - project:
     name: dcaegen2-platform-configbinding-info
+    project: dcaegen2/platform/configbinding
     project-name: dcaegen2-platform-configbinding
+    branch: master
     jobs:
       - gerrit-info-yaml-verify
-    project: dcaegen2/platform/configbinding
-    branch: master
