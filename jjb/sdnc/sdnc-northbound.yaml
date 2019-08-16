@@ -24,6 +24,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
@@ -37,6 +38,7 @@
     branch: 'master'
     mvn-settings: 'sdnc-northbound-settings'
     mvn-goals: 'clean install'
+    maven-version: "mvn35"
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
