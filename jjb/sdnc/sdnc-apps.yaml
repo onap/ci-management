@@ -36,6 +36,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
@@ -50,23 +51,8 @@
     mvn-settings: 'sdnc-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    maven-version: "mvn35"
 
-- project:
-    name: sdnc-apps-docker
-    project-name: 'sdnc-apps'
-    jobs:
-      - 'docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'sdnc/apps'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdnc-apps-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: queue-docker-4c-4g
 #
 #- project:
 #    name: sdnc-apps-docker-arm64

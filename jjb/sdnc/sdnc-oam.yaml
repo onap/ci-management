@@ -24,26 +24,11 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'sdnc-oam-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
 
-- project:
-    name: sdnc-oam-docker
-    project-name: 'sdnc-oam'
-    jobs:
-      - 'docker-version-java-daily':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dmaven.test.skip=true'
-    project: 'sdnc/oam'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdnc-oam-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: queue-docker-4c-4g
 #
 #- project:
 #    name: sdnc-oam-docker-arm64
