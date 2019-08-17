@@ -76,6 +76,27 @@
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
+      - string:
+          name: SEARCH_PATHS
+          default: '{coverity-search-paths}'
+          description: >
+            Additional directories to search for files to analyse by Coverity
+            Scan service (space separated).
+      - string:
+          name: SEARCH_EXCLUDE_REGEXS
+          default: '{coverity-search-exclude-regexs}'
+          description: >
+            File path patterns to exclude from analysis by Coverity Scan
+            service (e.g. 3rd-party or auto-generated sources, space
+            separated).
+      - string:
+          name: COVERITY_USER_EMAIL
+          default: '{coverity-user-email}'
+          description: >
+            E-mail address to receive analysis status report after submittion.
+            It must be a registered user on Coverity Scan service added as a
+            member to appropriate Coverity Scan project with "Maintainer/Owner"
+            role.
       - bool:
           name: DRY_RUN
           default: '{dry-run}'
@@ -102,9 +123,6 @@
           properties-content: |
             COVERITY_PROJECT_NAME={coverity-project-name}
             COVERITY_TOKEN={coverity-token}
-            COVERITY_USER_EMAIL={coverity-user-email}
-            SEARCH_PATHS={coverity-search-paths}
-            SEARCH_EXCLUDE_REGEXS={coverity-search-exclude-regexs}
       - shell: !include-raw-escape:
           - ../../global-jjb/shell/common-variables.sh
           - ../../shell/maven-coverity.sh

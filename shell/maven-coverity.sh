@@ -176,6 +176,13 @@ cov-manage-emit \
 | sort \
 > 'cov-int/scm-untracked-files.txt'
 
+if [ -s 'cov-int/scm-untracked-files.txt' ]; then
+  echo '[WARNING] There are some files analysed but not tracked by SCM repository.' \
+    'There might be 3rd-party or auto-generated sources. See details in' \
+    '"cov-int/scm-untracked-files.txt" file.' \
+    >&2
+fi
+
 #-----------------------------------------------------------------------------
 # Submit results to Coverity service
 
