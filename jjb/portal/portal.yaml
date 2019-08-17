@@ -38,6 +38,40 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    name: 'portal-coverity'
+    jobs:
+      - onap-gerrit-maven-coverity
+    cron: '@daily'
+    build-node: 'ubuntu1604-builder-4c-4g'
+    project: 'portal'
+    project-name: 'portal'
+    branch: 'master'
+    mvn-settings: 'portal-settings'
+    # FIXME: it does not build without building tests at the moment
+    #mvn-params: '-Dmaven.test.skip=true'
+    mvn-params: '-DskipTests'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    coverity-project-name: 'onap-portal'
+    coverity-token: 'ViM5eI953g1mE2vb8MiHtA'
+    coverity-user-email: 'A.Naluzhnyy@samsung.com'
+    coverity-search-paths: >
+      ecomp-portal-FE-os/client
+      ecomp-portal-FE-os/mock
+      ecomp-portal-FE-os/server
+      ecomp-portal-widget-ms
+      ecomp-portal-FE-common/client/app
+    coverity-search-exclude-regexs: >
+      /cov-int/
+      /cov-analysis-
+      ^/usr/
+      ^/home/
+      /node_modules/
+      /bower_components/
+      /bower_components_external/
+      /src/test/
+      /__test__/
+
+- project:
     name: portal-clm
     jobs:
       - gerrit-maven-clm
