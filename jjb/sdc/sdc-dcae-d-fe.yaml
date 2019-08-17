@@ -59,6 +59,35 @@
     mvn-opts: '-Xmx1024m'
 
 - project:
+    name: 'sdc-dcae-d-fe-coverity'
+    jobs:
+      - 'onap-gerrit-maven-coverity'
+    cron: '@daily'
+    build-node: 'ubuntu1604-builder-4c-4g'
+    project: 'sdc/dcae-d/fe'
+    project-name: 'sdc-dcae-d-fe'
+    branch: 'master'
+    mvn-settings: 'sdc-dcae-d-fe-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m'
+    mvn-params: '-Dmaven.test.skip=true'
+    coverity-project-name: 'onap-sdc-dcae-d-fe'
+    coverity-token: 'RcQWPbYX8bi1uyhhQI40wg'
+    coverity-user-email: 'A.Naluzhnyy@samsung.com'
+    coverity-search-paths: >
+      public/src
+    coverity-search-exclude-regexs: >
+      /cov-int/
+      /cov-analysis-
+      ^/usr/
+      ^/home/
+      /node_modules/
+      /bower_components/
+      /bower_components_external/
+      /src/test/
+      /__test__/
+
+- project:
     name: sdc-dcae-d-fe-clm
     jobs:
       - gerrit-maven-clm
