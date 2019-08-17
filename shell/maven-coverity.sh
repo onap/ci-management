@@ -52,24 +52,26 @@ fi
 # and have not exceeded our upload quota limits
 # See also: https://scan.coverity.com/faq#frequency
 
-CURL_OUTPUT=$(
-  curl \
-    --verbose \
-    --silent \
-    --show-error \
-    --fail \
-    --form "project=${COVERITY_PROJECT_NAME}" \
-    --form "token=${COVERITY_TOKEN}" \
-    'https://scan.coverity.com/api/upload_permitted'
-)
+if [ "${DRY_RUN}" != 'true' ]; then
+  CURL_OUTPUT=$(
+    curl \
+      --verbose \
+      --silent \
+      --show-error \
+      --fail \
+      --form "project=${COVERITY_PROJECT_NAME}" \
+      --form "token=${COVERITY_TOKEN}" \
+      'https://scan.coverity.com/api/upload_permitted'
+  )
 
-IS_COVERITY_UPLOAD_PERMITTED=$(
-  echo "${CURL_OUTPUT}" \
-  | jq '.upload_permitted'
-)
-if [ x"${IS_COVERITY_UPLOAD_PERMITTED}" != x'true' ]; then
-  echo "Upload quota reached. Next upload permitted at "$(echo "${CURL_OUTPUT}" | jq '.next_upload_permitted_at') >&2
-  exit 1
+  IS_COVERITY_UPLOAD_PERMITTED=$(
+    echo "${CURL_OUTPUT}" \
+    | jq '.upload_permitted'
+  )
+  if [ x"${IS_COVERITY_UPLOAD_PERMITTED}" != x'true' ]; then
+    echo "Upload quota reached. Next upload permitted at "$(echo "${CURL_OUTPUT}" | jq '.next_upload_permitted_at') >&2
+    exit 1
+  fi
 fi
 
 #-----------------------------------------------------------------------------
@@ -177,41 +179,43 @@ cov-manage-emit \
 #-----------------------------------------------------------------------------
 # Submit results to Coverity service
 
-tar \
-  --create \
-  --gzip \
-  --file='results.tgz' \
-  'cov-int'
+if [ "${DRY_RUN}" != 'true' ]; then
+  tar \
+    --create \
+    --gzip \
+    --file='results.tgz' \
+    'cov-int'
 
-for (( ATTEMPT=1; ATTEMPT<=SUBMISSION_ATTEMPTS; ATTEMPT++ )); do
-  CURL_OUTPUT=$(
-    curl \
-      --verbose \
-      --silent \
-      --show-error \
-      --fail \
-      --write-out '\n%{http_code}' \
-      --form "project=${COVERITY_PROJECT_NAME}" \
-      --form "email=${COVERITY_USER_EMAIL}" \
-      --form "token=${COVERITY_TOKEN}" \
-      --form 'file=@results.tgz' \
-      --form "version=${GIT_COMMIT:0:7}" \
-      --form "description=${GIT_BRANCH}" \
-      'https://scan.coverity.com/builds'
-  )
-  HTTP_RESPONSE_CODE=$(echo -n "${CURL_OUTPUT}" | tail -1)
-  test x"${HTTP_RESPONSE_CODE}" = x"200" \
-    && break
+  for (( ATTEMPT=1; ATTEMPT<=SUBMISSION_ATTEMPTS; ATTEMPT++ )); do
+    CURL_OUTPUT=$(
+      curl \
+        --verbose \
+        --silent \
+        --show-error \
+        --fail \
+        --write-out '\n%{http_code}' \
+        --form "project=${COVERITY_PROJECT_NAME}" \
+        --form "email=${COVERITY_USER_EMAIL}" \
+        --form "token=${COVERITY_TOKEN}" \
+        --form 'file=@results.tgz' \
+        --form "version=${GIT_COMMIT:0:7}" \
+        --form "description=${GIT_BRANCH}" \
+        'https://scan.coverity.com/builds'
+    )
+    HTTP_RESPONSE_CODE=$(echo -n "${CURL_OUTPUT}" | tail -1)
+    test x"${HTTP_RESPONSE_CODE}" = x"200" \
+      && break
 
-  sleep "${SUBMISSION_REST_INTERVAL:-$SUBMISSION_INITIAL_REST_INTERVAL}"
+    sleep "${SUBMISSION_REST_INTERVAL:-$SUBMISSION_INITIAL_REST_INTERVAL}"
 
-  SUBMISSION_REST_INTERVAL=$(( ${SUBMISSION_REST_INTERVAL:-$SUBMISSION_INITIAL_REST_INTERVAL} * 2 ))
-done
+    SUBMISSION_REST_INTERVAL=$(( ${SUBMISSION_REST_INTERVAL:-$SUBMISSION_INITIAL_REST_INTERVAL} * 2 ))
+  done
 
-HTTP_RESPONSE=$(echo -n "${CURL_OUTPUT}" | head -n -1 | tr -d '\n')
-if [ x"${HTTP_RESPONSE}" != x"Build successfully submitted." ]; then
-  echo "Coverity Scan service responded with '${HTTP_RESPONSE}' while 'Build successfully submitted.' expected." >&2
-  exit 1
+  HTTP_RESPONSE=$(echo -n "${CURL_OUTPUT}" | head -n -1 | tr -d '\n')
+  if [ x"${HTTP_RESPONSE}" != x"Build successfully submitted." ]; then
+    echo "Coverity Scan service responded with '${HTTP_RESPONSE}' while 'Build successfully submitted.' expected." >&2
+    exit 1
+  fi
 fi
 
 #-----------------------------------------------------------------------------

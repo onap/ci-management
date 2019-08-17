@@ -29,6 +29,7 @@
     build-timeout: 240
     cron: '@daily'
     disabled: false
+    dry-run: false
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
@@ -75,6 +76,10 @@
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
+      - bool:
+          name: DRY_RUN
+          default: '{dry-run}'
+          description: Do not submit results to Coverity Scan server at the end of the build.
 
     triggers:
       - timed: '{obj:cron}'
