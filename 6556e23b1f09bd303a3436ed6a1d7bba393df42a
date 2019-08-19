@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90be63a8_8e3b4e8f",
+        "filename": "jjb/ccsdk/parent.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-19T18:43:42Z",
+      "side": 1,
+      "message": "Looks like the global-jjb version already is design to run daily:\nhttps://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-maven-jobs.yaml#L559\n\nLet me quickly see how this looks in the sandbox...",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "6556e23b1f09bd303a3436ed6a1d7bba393df42a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
