@@ -3,8 +3,8 @@
     name: ccsdk-parent
     project-name: 'ccsdk-parent'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
           cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
@@ -13,6 +13,8 @@
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-builder-4c-4g
 
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'ecomp-snapshots'
     project: 'ccsdk/parent'
     stream:
       - 'master':
