@@ -22,6 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto-ed':
+          branch: 'elalto-ed'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
