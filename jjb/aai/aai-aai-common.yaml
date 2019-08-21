@@ -77,12 +77,9 @@
     project-name: 'aai-aai-common'
     project: 'aai/aai-common'
     stream:
-      - 'master-alpine':
+      - 'master':
           branch: 'master'
           distro: 'alpine'
-      - 'master-ubuntu':
-          branch: 'master'
-          distro: 'ubuntu'
     docker_name: 'onap/aai-common-{distro}'
     docker_build_args: '-f ./Dockerfile.{distro}'
     docker_root: '$WORKSPACE/Dockerfiles/aai-common/'
