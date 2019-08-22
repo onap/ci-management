@@ -22,6 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto-fluorine':
+          branch: 'elalto-fluorine'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
