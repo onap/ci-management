@@ -14,14 +14,6 @@
           branch: 'master'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
-      - 'ocata':
-          path: 'ocata'
-          pattern: 'ocata/**'
-          pom: 'ocata/pom.xml'
-      - 'ocata_share':
-          path: 'ocata'
-          pattern: 'share/**'
-          pom: 'ocata/pom.xml'
       - 'pike':
           path: 'pike'
           pattern: 'pike/**'
@@ -97,19 +89,6 @@
 #    files: '**'
 #    archive-artifacts: ''
 #
-- project:
-    name: multicloud-openstack-ocata-sonar
-    jobs:
-      - gerrit-maven-sonar
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-ocata'
-    branch: 'master'
-    mvn-params: '-f ocata/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
     name: multicloud-openstack-windriver-sonar
