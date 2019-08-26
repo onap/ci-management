@@ -26,6 +26,7 @@
     files: '**'
     archive-artifacts: ''
     maven-version: "mvn35"
+    build-node: ubuntu1604-builder-4c-4g
 
 - project:
     name: ccsdk-sli-plugins-sonar
