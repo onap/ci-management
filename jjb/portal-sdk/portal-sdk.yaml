@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'release-2.6.0':
+          branch: 'release-2.6.0'
     mvn-settings: 'portal-sdk-settings'
     files: '**'
     archive-artifacts: ''
