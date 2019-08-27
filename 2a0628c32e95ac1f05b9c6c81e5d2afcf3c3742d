@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "46046e7e_88b033ea",
+        "filename": "jjb/policy/policy-drools-applications.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5695
+      },
+      "writtenOn": "2019-08-27T14:52:03Z",
+      "side": 1,
+      "message": "I think the mvn-params should remain unchaged here (i.e. rm this part).",
+      "range": {
+        "startLine": 26,
+        "startChar": 32,
+        "endLine": 26,
+        "endChar": 55
+      },
+      "revId": "2a0628c32e95ac1f05b9c6c81e5d2afcf3c3742d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02a07d4d_18828346",
+        "filename": "jjb/policy/policy-drools-pdp.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 5695
+      },
+      "writtenOn": "2019-08-27T14:52:03Z",
+      "side": 1,
+      "message": "ditto for this file and the rest of the occurences",
+      "range": {
+        "startLine": 26,
+        "startChar": 32,
+        "endLine": 26,
+        "endChar": 55
+      },
+      "revId": "2a0628c32e95ac1f05b9c6c81e5d2afcf3c3742d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
