@@ -10,8 +10,8 @@
     functionality:
       - 'health'
     trigger_jobs:
-      - 'policy-engine-{stream}-merge-scm-mvn-script'
-      - 'policy-drools-pdp-{stream}-merge-scm-mvn-script'
+      - 'policy-engine-{stream}-merge-java'
+      - 'policy-drools-pdp-{stream}-merge-java'
       - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
     build-timeout: 40
