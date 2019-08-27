@@ -27,6 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto-fluorine':
+          branch: 'elalto-fluorine'
     mvn-settings: 'sdnc-apps-settings'
 
     # due to a strange macro / variable translation problem this needs to be
