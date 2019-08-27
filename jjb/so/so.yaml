@@ -21,6 +21,8 @@
           mvn-params: '-P docker -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-builder-4c-4g
     project: 'so'
     stream:
       - 'master':
