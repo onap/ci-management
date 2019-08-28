@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1242295f_5af3d4cb",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-28T16:35:23Z",
+      "side": 1,
+      "message": "This is overwrite other properties in the  verify/merge and stage jobs. Where are we wanting to use this?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 54
+      },
+      "revId": "6553d0794f4b7ac497e2e479d45ddff95a2a577d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
