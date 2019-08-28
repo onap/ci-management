@@ -15,6 +15,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+      - '{project-name}-gerrit-release-jobs'
 
     project: 'sdc/jtosca'
     stream:
