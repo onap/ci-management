@@ -37,6 +37,7 @@
     name: vvp-validation-scripts-tracability-matrix
     project: 'vvp/validation-scripts'
     project-name: 'vvp-validation-scripts'
+    build-node: ubuntu1604-docker-8c-8g
     mvn-settings: 'vvp-validation-scripts-settings'
     mvn-global-settings: 'global-settings'
     stream:
