@@ -22,6 +22,30 @@
       "revId": "6553d0794f4b7ac497e2e479d45ddff95a2a577d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "215b6c6f_336e0364",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-28T16:42:31Z",
+      "side": 1,
+      "message": "I just read your email,  this variable is needed to fix the staging job. In this case, we cannot just add a bool property since it will replace all properties that were designed for this job. Your best bet is to add this in the version.properties file of your repo since the job injects all its contents as environment variables. That\u0027s the easiest way without overwriting exisiting job parameters.",
+      "parentUuid": "1242295f_5af3d4cb",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 54
+      },
+      "revId": "6553d0794f4b7ac497e2e479d45ddff95a2a577d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
