@@ -19,6 +19,12 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
+    properties:
+      - bool:
+          name: TESTCONTAINERS_RYUK_DISABLED
+          default: true
+          description: Run testcontainers without Ryuk
+
 
 - project:
     name: dcaegen2-services-sdk-sonar
