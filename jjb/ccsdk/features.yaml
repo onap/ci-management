@@ -6,10 +6,10 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           sign-artifacts: true
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
 
     project: 'ccsdk/features'
     stream:
@@ -24,14 +24,14 @@
     files: '**'
     archive-artifacts: ''
     maven-version: "mvn35"
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: ccsdk-features-sonar
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     project: 'ccsdk/features'
     project-name: 'ccsdk-features'
     branch: 'master'
@@ -52,7 +52,7 @@
           branch: 'master'
     mvn-settings: 'ccsdk-features-settings'
     maven-version: "mvn35"
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: ccsdk-features-info
