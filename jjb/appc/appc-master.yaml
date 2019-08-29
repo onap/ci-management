@@ -4,7 +4,7 @@
     project-name: 'appc'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          mvn-params: '-Xmx512m -XX:MaxPermSize=128m'
+          mvn-params: '-DMAVEN_OPTS=-Xmx1024m -XX:MaxPermSize=256m'
           build-node: ubuntu1604-builder-8c-8g
       - '{project-name}-{stream}-merge-java':
           build-node: ubuntu1604-builder-8c-8g
