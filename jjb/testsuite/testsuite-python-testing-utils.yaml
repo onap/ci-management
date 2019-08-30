@@ -9,8 +9,8 @@
     project: 'testsuite/python-testing-utils'
     subproject:
       - 'robotframework-onap':
-          tox-dir: robotframework-onap/
-          tox-envs: ''
+          path: 'robotframework-onap'
+          pattern: 'robotframework-onap/**'
     stream:
       - 'master':
           branch: 'master'
