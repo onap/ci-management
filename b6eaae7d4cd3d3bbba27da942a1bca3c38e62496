@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "40c5d5c3_50cac17c",
+        "filename": "jjb/testsuite/testsuite-python-testing-utils.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-08-30T17:35:37Z",
+      "side": 1,
+      "message": "tox-dir needs to be defined",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "b6eaae7d4cd3d3bbba27da942a1bca3c38e62496",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
