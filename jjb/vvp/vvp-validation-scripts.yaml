@@ -14,8 +14,10 @@
     mvn-settings: 'vvp-validation-scripts-settings'
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{stream}-{subproject}-verify-python':
+          pre_script: !include-raw-escape: install-tkinter.sh
       - '{project-name}-{stream}-docker-java-daily':
+          pre_script: !include-raw-escape: install-tkinter.sh
           mvn-params: '-Dmaven.test.skip=true'
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
@@ -23,7 +25,8 @@
 - project:
     name: vvp-validation-scripts-sonar
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-maven-sonar:
+          pre_script: !include-raw-escape: install-tkinter.sh
     cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
     project: 'vvp/validation-scripts'
