@@ -3,7 +3,8 @@
     name: dcaegen2-services-sdk
     project-name: 'dcaegen2-services-sdk'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-verify-java':
+          build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           build-node: ubuntu1604-docker-8c-8g
