@@ -4,8 +4,9 @@
     project-name: 'appc'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          mvn-params: '-DMAVEN_OPTS=-Xmx1024m -XX:MaxPermSize=256m'
           build-node: ubuntu1604-builder-8c-8g
+          mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
+          java-opts: "-Xmx4000m -XX:MaxPermSize=256m"
       - '{project-name}-{stream}-merge-java':
           build-node: ubuntu1604-builder-8c-8g
       - gerrit-maven-stage:
