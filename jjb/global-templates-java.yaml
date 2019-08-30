@@ -15,6 +15,8 @@
     node: '{build-node}'
     pattern: '**'
     pom:
+    java-version: openjdk8
+
 
     properties:
       - infra-properties:
@@ -62,6 +64,8 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
 
     publishers:
       - infra-shiplogs:

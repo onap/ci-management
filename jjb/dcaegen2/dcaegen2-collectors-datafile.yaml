@@ -30,8 +30,10 @@
           mvn-goals: 'clean package docker:build -DpushImageTag'
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
+          java-version: openjdk12
       - '{project-name}-{stream}-merge-java':
           mvn-goals: 'clean deploy'
+          java-version: openjdk12
 
 - project:
     name: dcaegen2-collectors-datafile-sonar
