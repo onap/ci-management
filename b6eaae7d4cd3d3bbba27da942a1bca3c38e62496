@@ -22,6 +22,30 @@
       "revId": "b6eaae7d4cd3d3bbba27da942a1bca3c38e62496",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a032cd86_35de6e17",
+        "filename": "jjb/testsuite/testsuite-python-testing-utils.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2019-08-31T14:30:41Z",
+      "side": 1,
+      "message": "ok but I am missing something\nin https://gerrit.onap.org/r/c/testsuite/python-testing-utils/+/94588\nthe verify job is OK, all targets are executed included the py27\ntox is executed according to the requirements indicated\ntarget python is using the correct version of more-itertools.\n\nbut the staging job (testsuite-python-testing-utils-robotframework-onap-python-staging-master) is failing due to this lib.\nthe versions indicated in the repo seem not taken into account.\nthe itertools version is set to more-itertools\u003d\u003d7.2.0 (in test-requirements used in tox setenv, it is precised more-itertools~\u003d5.0.0)\nThe jobs look very similar, what is teh difference between the 2 jobs?",
+      "parentUuid": "40c5d5c3_50cac17c",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "b6eaae7d4cd3d3bbba27da942a1bca3c38e62496",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
