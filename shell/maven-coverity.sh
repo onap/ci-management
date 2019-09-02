@@ -111,7 +111,7 @@ curl \
   --fail \
   --form "project=${COVERITY_PROJECT_NAME}" \
   --form "token=${COVERITY_TOKEN}" \
-  --output 'coverity_tool.tgz' \
+  --output '/tmp/coverity_tool.tgz' \
   'https://scan.coverity.com/download/linux64'
 
 curl \
@@ -122,23 +122,24 @@ curl \
   --form "project=${COVERITY_PROJECT_NAME}" \
   --form "token=${COVERITY_TOKEN}" \
   --form 'md5=1' \
-  --output 'coverity_tool.md5' \
+  --output '/tmp/coverity_tool.md5' \
   'https://scan.coverity.com/download/linux64'
 
-echo -n ' coverity_tool.tgz' >> 'coverity_tool.md5'
-md5sum --check 'coverity_tool.md5'
+echo -n ' /tmp/coverity_tool.tgz' >> '/tmp/coverity_tool.md5'
+md5sum --check '/tmp/coverity_tool.md5'
 
 tar \
   --extract \
   --gunzip \
-  --file='coverity_tool.tgz'
+  --file='/tmp/coverity_tool.tgz' \
+  --directory='/tmp'
 
-COVERITY_BUILD_TOOL_DIRECTORY=$(
+COVERITY_BUILD_TOOL_DIRECTORY='/tmp/'$(
   head -1 <( \
     tar \
       --list \
       --gunzip \
-      --file='coverity_tool.tgz'
+      --file='/tmp/coverity_tool.tgz'
   )
 )
 COVERITY_BINARY_DIRECTORY="${COVERITY_BUILD_TOOL_DIRECTORY}bin"
@@ -146,7 +147,7 @@ test -d "${COVERITY_BINARY_DIRECTORY}" \
   || exit 1
 export PATH="${PATH}:${COVERITY_BINARY_DIRECTORY}"
 
-rm 'coverity_tool.tgz'
+rm '/tmp/coverity_tool.tgz'
 
 #-----------------------------------------------------------------------------
 # Build
