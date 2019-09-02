@@ -23,6 +23,29 @@ SUBMISSION_ATTEMPTS=5
 SUBMISSION_INITIAL_REST_INTERVAL=30 # seconds, will be doubled after each attempt
 
 #-----------------------------------------------------------------------------
+# Check for git repo changes within the last $MAX_GIT_REPO_AGE_HOURS hours
+#
+# It makes sense to set the value twice the 'cron' interval for the job (e.g.
+# if 'cron: @daily', then MAX_GIT_REPO_AGE_HOURS=48)
+
+if ! [[ "${MAX_GIT_REPO_AGE_HOURS:=0}" =~ ^[0-9]+$ ]]; then
+  echo '[ERROR] MAX_GIT_REPO_AGE_HOURS must be non-negative integer.' \
+    >&2
+  exit 1
+fi
+
+if [ ${MAX_GIT_REPO_AGE_HOURS:=0} -ne 0 ]; then
+  LAST_COMMIT_AGE=$(( $(date +%s) - $(git log -1 --pretty=format:%ct) ))
+
+  if [ $LAST_COMMIT_AGE -le $(( MAX_GIT_REPO_AGE_HOURS *60*60 )) ]; then
+    echo '[NOTICE] Git repository did not have any commits last' \
+      "${MAX_GIT_REPO_AGE_HOURS} hours - no need to re-analyse it." \
+      >&2
+    exit 0
+  fi
+fi
+
+#-----------------------------------------------------------------------------
 # Process parameters for JS/TS/Python/Ruby/PHP files analysis
 
 if [ -n "${SEARCH_PATHS:=}" ]; then
@@ -30,7 +53,9 @@ if [ -n "${SEARCH_PATHS:=}" ]; then
     if [ -d "${SEARCH_PATH}" ]; then
       FS_CAPTURE_SEARCH_PARAMS="${FS_CAPTURE_SEARCH_PARAMS:=} --fs-capture-search '${SEARCH_PATH}'"
     else
-      echo "'${SEARCH_PATH}' from \$SEARCH_PATHS is not an existing directory." >&2
+      echo "[ERROR] '${SEARCH_PATH}' from \$SEARCH_PATHS is not an" \
+        "existing directory." \
+        >&2
       exit 1
     fi
   done
@@ -69,7 +94,9 @@ if [ "${DRY_RUN}" != 'true' ]; then
     | jq '.upload_permitted'
   )
   if [ x"${IS_COVERITY_UPLOAD_PERMITTED}" != x'true' ]; then
-    echo "Upload quota reached. Next upload permitted at "$(echo "${CURL_OUTPUT}" | jq '.next_upload_permitted_at') >&2
+    echo "[WARNING] Upload quota reached. Next upload permitted at" \
+      $(echo "${CURL_OUTPUT}" | jq '.next_upload_permitted_at') \
+      >&2
     exit 1
   fi
 fi
@@ -220,11 +247,14 @@ if [ "${DRY_RUN}" != 'true' ]; then
 
   HTTP_RESPONSE=$(echo -n "${CURL_OUTPUT}" | head -n -1 | tr -d '\n')
   if [ x"${HTTP_RESPONSE}" != x"Build successfully submitted." ]; then
-    echo "Coverity Scan service responded with '${HTTP_RESPONSE}' while 'Build successfully submitted.' expected." >&2
+    echo "[ERROR] Coverity Scan service responded with '${HTTP_RESPONSE}'" \
+      "while 'Build successfully submitted.' expected." \
+      >&2
     exit 1
   fi
+
+  echo "[INFO] Build successfully submitted to Coverity Scan server." >&2
 fi
 
 #-----------------------------------------------------------------------------
-
 exit 0
