@@ -41,6 +41,7 @@
     coverity-user-email: ''
     coverity-search-paths: ''
     coverity-search-exclude-regexs: ''
+    max-git-repo-age-hours: 0
     stream: master
     submodule-recursive: true
     submodule-timeout: 10
@@ -101,6 +102,14 @@
           name: DRY_RUN
           default: '{dry-run}'
           description: Do not submit results to Coverity Scan server at the end of the build.
+      - string:
+          name: 'MAX_GIT_REPO_AGE_HOURS'
+          default: '{max-git-repo-age-hours}'
+          description: >
+            If set to non-zero run the code scan only if there were no git
+            repository commits last MAX_GIT_REPO_AGE_HOURS hours.
+            It makes sense to set the value twice the 'cron' interval for the
+            job (e.g. if 'cron: @daily', then MAX_GIT_REPO_AGE_HOURS=48)
 
     triggers:
       - timed: '{obj:cron}'
