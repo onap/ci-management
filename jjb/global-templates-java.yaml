@@ -578,6 +578,8 @@
     pom:
     mvn_properties: []
     mvn-params: ''
+    mvn-opts: ''
+    java-opts: ''
 
     properties:
       - infra-properties:
@@ -619,6 +621,10 @@
           pom: '{obj:pom}'
           goals: 'clean deploy -B {mvn-params}
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          properties:
+            - MAVEN_OPTS='{mvn-opts}'
+          java-opts:
+            - "{java-opts}"
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
