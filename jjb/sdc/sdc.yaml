@@ -89,15 +89,29 @@
     mvn-opts: '-Xmx1024m'
 
 - project:
-    name: sdc-clm
+    name: sdc-clm-catalog
     jobs:
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-P catalog -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
     nexus-iq-namespace: 'onap-'
     project: sdc
-    project-name: 'sdc'
+    project-name: 'sdc-catalog'
+    build-node: ubuntu1604-docker-8c-8g
+    branch: 'master'
+    mvn-settings: 'sdc-settings'
+
+- project:
+    name: sdc-clm-onboarding
+    jobs:
+      - gerrit-maven-clm:
+          build-timeout: 120
+          submodule-timeout: 30
+          mvn-params: '-P onboarding -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    nexus-iq-namespace: 'onap-'
+    project: sdc
+    project-name: 'sdc-onboarding'
     build-node: ubuntu1604-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
