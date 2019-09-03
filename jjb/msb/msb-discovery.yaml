@@ -14,8 +14,8 @@
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-pom: 'distributions/msb-apigateway/pom.xml'
-          mvn-params: '-f distributions/msb-apigateway/pom.xml -Dmaven.test.skip=true -P linux,docker'
+          mvn-pom: 'distributions/msb-discovery/pom.xml'
+          mvn-params: '-f distributions/msb-discovery/pom.xml -Dmaven.test.skip=true -P linux,docker'
     project: 'msb/discovery'
     stream:
       - 'master':
