@@ -46,6 +46,30 @@
       "revId": "b6eaae7d4cd3d3bbba27da942a1bca3c38e62496",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab74e152_284c5250",
+        "filename": "jjb/testsuite/testsuite-python-testing-utils.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-04T18:38:34Z",
+      "side": 1,
+      "message": "The jobs seem to take different parameters. \nrelease does seem to explicitly ask for tox dir:\nhttps://github.com/onap/ci-management/blob/master/jjb/onap-jjb/onap-pypi-template.yaml\nThis is so that it can be used in the publish script\nhttps://github.com/onap/ci-management/blob/master/shell/pypi-publish.sh\nI dont think the verify requests it but it assumes it given the path of the project\nhttps://github.com/onap/ci-management/blob/master/jjb/onap-jjb/onap-pypi-template.yaml",
+      "parentUuid": "a032cd86_35de6e17",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "b6eaae7d4cd3d3bbba27da942a1bca3c38e62496",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
