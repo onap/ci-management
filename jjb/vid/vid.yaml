@@ -60,7 +60,6 @@
     mvn-settings: 'vid-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-params: '-Dskip.npm'
 
 - project:
     name: vid-clm
@@ -72,7 +71,6 @@
     build-node: ubuntu1604-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vid-settings'
-    mvn-params: '-Dskip.npm'
 
 - project:
     name: vid-info
