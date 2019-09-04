@@ -16,7 +16,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          mvn-params: 'docker:build -B -Dmaven.test.skip=true'
+          mvn-params: '-Pdocker -B -Dmaven.test.skip=true'
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -38,7 +38,7 @@
     project-name: 'aai-search-data-service-searchguard'
     jobs:
       - gerrit-maven-docker-stage:
-          mvn-params: 'docker:build -B -Dmaven.test.skip=true'
+          mvn-params: '-Pdocker -B -Dmaven.test.skip=true'
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
