@@ -1,15 +1,15 @@
 ---
 
 - project:
-    name: modeling-genericparser
-    project-name: 'modeling-genericparser'
-    project: 'modeling/genericparser'
+    name: modeling-etsicatalog
+    project-name: 'modeling-etsicatalog'
+    project: 'modeling/etsicatalog'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'modeling-genericparser-settings'
+    mvn-settings: 'modeling-etsicatalog-settings'
     subproject:
-      - 'genericparser':
+      - 'etsicatalog':
           path: '.'
           pattern: '**'
     jobs:
@@ -24,40 +24,40 @@
           docker-pom: 'pom.xml'
           mvn-goals: 'install'
           script:
-            !include-raw-escape: 'build-modeling-genericparser-docker-image.sh'
+            !include-raw-escape: 'build-modeling-etsicatalog-docker-image.sh'
           build-node: ubuntu1604-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: centos7-redis-4c-4g
 
 - project:
-    name: modeling-genericparser-sonar
+    name: modeling-etsicatalog-sonar
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
     build-node: centos7-redis-4c-4g
-    project: 'modeling/genericparser'
-    project-name: 'modeling-genericparser'
+    project: 'modeling/etsicatalog'
+    project-name: 'modeling-etsicatalog'
     branch: 'master'
-    mvn-settings: 'modeling-genericparser-settings'
+    mvn-settings: 'modeling-etsicatalog-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
-    name: modeling-genericparser-clm
+    name: modeling-etsicatalog-clm
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
-    project: modeling/genericparser
-    project-name: 'modeling-genericparser'
+    project: modeling/etsicatalog
+    project-name: 'modeling-etsicatalog'
     build-node: centos7-redis-4c-4g
     branch: 'master'
-    mvn-settings: 'modeling-genericparser-settings'
+    mvn-settings: 'modeling-etsicatalog-settings'
 
 - project:
-    name: modeling-genericparser-info
-    project-name: modeling-genericparser
+    name: modeling-etsicatalog-info
+    project-name: modeling-etsicatalog
     jobs:
       - gerrit-info-yaml-verify
-    project: modeling/genericparser
+    project: modeling/etsicatalog
     branch: master
