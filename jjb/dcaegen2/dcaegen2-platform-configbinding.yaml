@@ -32,7 +32,7 @@
     project: dcaegen2/platform/configbinding
     project-name: dcaegen2-platform-configbinding
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     # Sonar jobs use maven to push report
     mvn-settings: dcaegen2-platform-configbinding-settings
     mvn-goals: 'clean test'
