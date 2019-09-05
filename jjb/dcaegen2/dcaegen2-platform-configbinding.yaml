@@ -33,13 +33,13 @@
     project-name: dcaegen2-platform-configbinding
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
+    # Sonar jobs use maven to push report
     mvn-settings: dcaegen2-platform-configbinding-settings
-    mvn-goals: 'clean install'
+    mvn-goals: 'clean test'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     branch: master
     jobs:
-      # Sonar jobs require maven, even for Python
-      - gerrit-maven-sonar
+      - gerrit-tox-sonar
 
 - project:
     name: dcaegen2-platform-configbinding-info
