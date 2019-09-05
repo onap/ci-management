@@ -6,6 +6,7 @@
         - '{project-name}-{stream}-csit-{functionality}'
       project-name: 'aaf'
       stream: 'master'
+      disabled: true
       functionality:
         - 'sms-test-plan':
             trigger_jobs: 'aaf-sms-master-docker-golang-shell-daily'
