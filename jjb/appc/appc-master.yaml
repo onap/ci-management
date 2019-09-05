@@ -49,6 +49,7 @@
           mvn-params: '-DskipTests'
           build-timeout: 60
           build-node: ubuntu1604-builder-8c-8g
+          mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
     nexus-iq-namespace: 'onap-'
     project: 'appc'
     project-name: 'appc'
