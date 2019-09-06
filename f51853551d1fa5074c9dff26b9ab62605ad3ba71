@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3b26c20_ff8c5ea1",
+        "filename": "jjb/ccsdk/ccsdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-06T17:19:33Z",
+      "side": 1,
+      "message": "I dont think we need this file since ccsdk is just a parent with no code right?",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 18
+      },
+      "revId": "f51853551d1fa5074c9dff26b9ab62605ad3ba71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
