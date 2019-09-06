@@ -1,0 +1,8 @@
+---
+- project:
+    name: ccsdk-info
+    project-name: ccsdk
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk
+    branch: master
