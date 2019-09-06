@@ -1,7 +1,7 @@
 ---
 - job-template:
     name: '{project-name}-{stream}-verify-csit-{functionality}'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
@@ -261,7 +261,7 @@
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
