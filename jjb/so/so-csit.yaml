@@ -11,4 +11,6 @@
     functionality:
       - 'integration-testing':
           trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+      - 'integration-etsi-testing':
+          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
     robot-options: ''
