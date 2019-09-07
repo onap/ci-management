@@ -22,6 +22,30 @@
       "revId": "f51853551d1fa5074c9dff26b9ab62605ad3ba71",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0bf81c7b_178c7065",
+        "filename": "jjb/ccsdk/ccsdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2019-09-07T20:01:39Z",
+      "side": 1,
+      "message": "I didn’t think so either, but Bengt raised it as a concern so I thought maybe it was needed for some reason. I’d just as soon not have it",
+      "parentUuid": "b3b26c20_ff8c5ea1",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 18
+      },
+      "revId": "f51853551d1fa5074c9dff26b9ab62605ad3ba71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
