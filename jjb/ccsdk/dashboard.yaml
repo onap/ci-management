@@ -51,6 +51,14 @@
     build-node: centos7-redis-4c-4g
 
 - project:
+    name: ccsdk-dashboard-info
+    project-name: ccsdk-dashboard
+    jobs:
+      - gerrit-info-yaml-verify
+    project: ccsdk/dashboard
+    branch: master
+
+- project:
     name: ccsdk-dashboard-whitesource
     project-name: ccsdk-dashboard
     jobs:
