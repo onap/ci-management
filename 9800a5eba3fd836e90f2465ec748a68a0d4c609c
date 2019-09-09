@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65875b8a_f518654a",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-09T18:42:49Z",
+      "side": 1,
+      "message": "You will need these vars too:\n          mvn-pom: \u0027ecomp-sdk/pom.xml\u0027\n          mvn-params: \u0027-f ecomp-sdk/pom.xml\u0027\n          pattern: \u0027ecomp-sdk/**\u0027\n\nIf the pom for this job still is located in there",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 37
+      },
+      "revId": "9800a5eba3fd836e90f2465ec748a68a0d4c609c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79744434_00f75d63",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-09T18:42:49Z",
+      "side": 1,
+      "message": "Remove this job as this will become unusable after",
+      "range": {
+        "startLine": 18,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 65
+      },
+      "revId": "9800a5eba3fd836e90f2465ec748a68a0d4c609c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
