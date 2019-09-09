@@ -15,6 +15,8 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
+    # used by tox-install.sh to specify the interpreter used to install tox
+    python-version: python3
     jobs:
       # clm and tox
       - '{project-name}-python-jobs'
@@ -38,6 +40,8 @@
     mvn-goals: 'clean test'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     branch: master
+    # used by tox-install.sh to specify the interpreter used to install tox
+    python-version: python3
     jobs:
       - gerrit-tox-sonar
 
