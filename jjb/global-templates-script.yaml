@@ -2,6 +2,52 @@
 # vim: sw=2 ts=2 sts=2 et :
 
 - job-template:
+    #
+    # job template for verifying gerrit changeset by shell script
+    #
+    # Required Variables:
+    #   project-name:   name of project
+    #   area:           area of project covered with this verification job
+    #   project:        name of scm repository to work on
+    #   stream:         name of stream used (set the same as branch if you're not sure)
+    #   branch:         git branch to work on
+    #   script:         build script to execute
+    # Optional Variables:
+    #   pattern:          trigger job only if modification covered file in pattern
+    #   build-node:     label(flavor) of jenkins slave
+    name: '{project-name}-{stream}-{area}-verify-shell'
+    node: '{build-node}'
+    type: freestyle
+
+    pattern: '**'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: 'gerrit'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - shell: '{script}'
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
     # Job template for merging a submission.  triggered on
     # gerrit-trigger-patch-merged, does scm, mvn with passed-in goals, then
     # run script
