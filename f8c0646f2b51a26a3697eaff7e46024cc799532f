@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b42c2612_cabb1686",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu1604-docker-8c-8g.cfg",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-09T19:55:51Z",
+      "side": 1,
+      "message": "I think you are adding the arm image rather than the x86 one since the arm image was named \"Ubuntu 16.04 - docker - arm64 - 20190905-215538.077\"\nMake sure you are adding the non arm one.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 70
+      },
+      "revId": "f8c0646f2b51a26a3697eaff7e46024cc799532f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
