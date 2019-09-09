@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae8fe3d4_95d7e306",
+        "filename": "jjb/music/music-jar.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-09T18:44:02Z",
+      "side": 1,
+      "message": "You will need these vars too:\n\n          mvn-pom: \u0027jar/pom.xml\u0027\n          mvn-params: \u0027-f jar/pom.xml\u0027\n          pattern: \u0027jar/**\u0027\n\nIf this is still the correct pom location",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 36
+      },
+      "revId": "643216f9099add82ffc3776d75935f28991fac9d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
