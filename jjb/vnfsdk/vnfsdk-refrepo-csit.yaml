@@ -6,6 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'vnfsdk-refrepo'
     stream: 'master'
+    disabled: true
     functionality:
       - 'sanity-check':
           trigger_jobs: '{project-name}-{stream}-merge-java'
