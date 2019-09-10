@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b24e0aa0_aa3971be",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-09-10T20:35:48Z",
+      "side": 1,
+      "message": "This breaks all java jobs that do not have docker credentials configured (which is quite a few, based on the number of reported merge failures). If you need a docker-compatible java merge job, I think it may be better to add a new job under a different name.\n\nJessica, since you\u0027re the most familiar with ONAP, could you provide some input?",
+      "range": {
+        "startLine": 616,
+        "startChar": 6,
+        "endLine": 618,
+        "endChar": 41
+      },
+      "revId": "1515daad6b0940f06740b4e6514fa7b595157be9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
