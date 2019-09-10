@@ -5,6 +5,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'aai'
+    disabled: true
     stream:
       - 'master':
           branch: master
@@ -16,4 +17,3 @@
       - 'esr-server':
           trigger_jobs: 'aai-esr-server-{stream}-docker-java-daily'
     robot-options: ''
-

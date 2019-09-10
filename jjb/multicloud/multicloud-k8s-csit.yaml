@@ -6,6 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-k8s'
     stream: 'master'
+    disabled: true
     functionality:
       - 'functionality1':
           trigger_jobs: 'multicloud-k8s-master-docker-golang-shell-daily'

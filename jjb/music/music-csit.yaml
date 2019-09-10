@@ -5,11 +5,10 @@
        - '{project-name}-{stream}-verify-csit-{functionality}'
        - '{project-name}-{stream}-csit-{functionality}'
      project-name: 'music'
+    disabled: true
      stream: 'master'
      functionality:
        - 'music-test-plan':
            trigger_jobs: 'music-master-docker-version-java-daily'
      robot-options: ''
      branch: 'master'
-
-
