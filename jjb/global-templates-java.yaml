@@ -613,9 +613,6 @@
 
     builders:
       - lf-infra-pre-build
-      - lf-infra-docker-login:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
