@@ -1,0 +1,10 @@
+Code-Review+1: Alexandru Avadanii <Alexandru.Avadanii@enea.com>
+Code-Review+1: Cristina Pauna <cristina.pauna@enea.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Code-Review+2: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Tue, 10 Sep 2019 12:53:37 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/95345
+Project: ci-management
+Branch: refs/heads/master
