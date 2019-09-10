@@ -5,6 +5,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-windriver'
     stream: 'master'
+    disabled: true
     functionality:
       - 'functionality1':
           trigger_jobs: 'multicloud-openstack-master-docker-java-version-shell-daily'
