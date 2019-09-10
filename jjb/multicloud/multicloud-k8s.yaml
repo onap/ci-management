@@ -11,6 +11,11 @@
       - '{project-name}-{stream}-docker-golang-shell-daily':
           script:
             !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
+      - '{project-name}-{stream}-{area}-verify-shell':
+          area: kud-deployment
+          script:
+            !include-raw-escape: 'kud-deployment.sh'
+          build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/k8s'
     subproject:
       - validation-scripts:
