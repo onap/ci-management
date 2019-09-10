@@ -40,19 +40,6 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
 
 - project:
-    name: testsuite-python-testing-utils-master-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: testsuite/python-testing-utils
-    project-name: 'testsuite-python-testing-utils'
-    build-node: 'ubuntu1604-builder-4c-4g'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'testsuite-python-testing-utils-settings'
-
-- project:
     name: testsuite-python-testing-utils-info
     project-name: testsuite-python-testing-utils
     jobs:
