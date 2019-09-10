@@ -25,6 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'policy-pap-settings'
     files: '**'
     archive-artifacts: ''
