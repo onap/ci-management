@@ -24,7 +24,8 @@
          mvn-params: '-Dmaven.test.skip=true'
          maven-properties: |
           cmso.registry=$
-
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-builder-4c-4g
     build-node: ubuntu1604-docker-8c-8g
     project: 'optf/cmso'
     stream:
