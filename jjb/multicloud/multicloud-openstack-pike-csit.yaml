@@ -6,6 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-pike'
     stream: 'master'
+    disabled: true
     functionality:
       - 'functionality1':
           trigger_jobs:

@@ -6,6 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'msb'
     stream: 'master'
+    disabled: true
     functionality:
       - 'sanity-check':
           trigger_jobs:

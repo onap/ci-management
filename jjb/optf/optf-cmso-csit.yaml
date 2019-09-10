@@ -8,8 +8,6 @@
      stream:
        - 'master':
            branch: master
-       - 'dublin':
-           branch: dublin
      functionality:
        - 'cmso':
            trigger_jobs: 'optf-cmso-master-docker-java-version-shell-daily'
