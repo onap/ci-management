@@ -6,6 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'holmes-rule-management'
     stream: 'master'
+    disabled: true
     functionality:
       - 'sanity-check':
           trigger_jobs: 'holmes-rule-management-master-docker-java-daily'
