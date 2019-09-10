@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e74ee65b_74cd2128",
+        "filename": "jjb/dcaegen2/dcaegen2-services-prh.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-09-10T13:07:10Z",
+      "side": 1,
+      "message": "This has to be centos node for self-release to work. Pls check Nexus2 releases migration notes under https://wiki.onap.org/display/DW/global-jjb+Migration+Tracker",
+      "range": {
+        "startLine": 10,
+        "startChar": 22,
+        "endLine": 10,
+        "endChar": 45
+      },
+      "revId": "e7b987fe0b463a8dbb3c81bb173e24263f8eee91",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
