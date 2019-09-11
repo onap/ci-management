@@ -613,6 +613,12 @@
 
     builders:
       - lf-infra-pre-build
+      - conditional-step:
+          condition-kind: regex-match
+          regex: .*(amd64|arm64).*
+          label: '{project-name}'
+          steps:
+            - shell: !include-raw-escape: global-jjb/shell/docker-login.sh
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
