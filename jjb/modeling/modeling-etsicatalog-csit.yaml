@@ -1,0 +1,13 @@
+---
+- project:
+    name: modeling-etsicatalog-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'modeling-etsicatalog'
+    stream: 'master'
+    functionality:
+      - 'sanity-check':
+          trigger_jobs: 'modeling-etsicatalog-master-docker-java-version-shell-daily'
+    robot-options: ''
+    branch: 'master'
