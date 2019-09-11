@@ -75,6 +75,7 @@
     nexus-iq-namespace: 'onap-'
     project: multicloud/openstack/vmware
     project-name: 'multicloud-openstack-vmware'
+    build-node: 'ubuntu1604-builder-4c-4g'
     branch: 'master'
     mvn-settings: 'multicloud-openstack-vmware-settings'
 
