@@ -45,6 +45,30 @@
       "revId": "1515daad6b0940f06740b4e6514fa7b595157be9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5167fdd9_048132dc",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 5109
+      },
+      "writtenOn": "2019-09-11T07:18:33Z",
+      "side": 1,
+      "message": "The docker login part cannot be fully tested in Sandbox because it lacks credentials to login to dockerhub. I am sorry for the disruption. Let\u0027s sync on what the best method to implement and test this functionality would be.",
+      "parentUuid": "00f8d4ef_fa840025",
+      "range": {
+        "startLine": 616,
+        "startChar": 0,
+        "endLine": 618,
+        "endChar": 41
+      },
+      "revId": "1515daad6b0940f06740b4e6514fa7b595157be9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
