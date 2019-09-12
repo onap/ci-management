@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b36ea50a_7be65521",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-12T18:11:21Z",
+      "side": 1,
+      "message": "I think maybe it makes more sense to put this conditional step after lines 626-628 \nThat way we don\u0027t have to provide the files twice.",
+      "range": {
+        "startLine": 616,
+        "startChar": 0,
+        "endLine": 625,
+        "endChar": 47
+      },
+      "revId": "fe34a3f2b1cdd507cd2fd1bad386dfe9ee4ac0d6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
