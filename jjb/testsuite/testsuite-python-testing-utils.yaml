@@ -10,7 +10,7 @@
     subproject:
       - 'robotframework-onap':
           tox-dir: './robotframework-onap/'
-          tox-envs: 'py27'
+          tox-envs: 'py3'
     stream:
       - 'master':
           branch: 'master'
