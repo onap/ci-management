@@ -618,7 +618,11 @@
           regex: .*(amd64|arm64).*
           label: '{project-name}'
           steps:
+            - lf-provide-maven-settings:
+                global-settings-file: 'global-settings'
+                settings-file: '{mvn-settings}'
             - shell: !include-raw-escape: global-jjb/shell/docker-login.sh
+            - lf-provide-maven-settings-cleanup
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
