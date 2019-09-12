@@ -1,3 +1,5 @@
+CONTAINER_PULL_REGISTRY=nexus3.onap.org:10003
+CONTAINER_PUSH_REGISTRY=nexus3.onap.org:10002
 DOCKER_REGISTRY=nexus3.onap.org
 DOCKERHUB_REGISTRY=docker.io
 GERRIT_URL=https://gerrit.onap.org/r
