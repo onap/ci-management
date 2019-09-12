@@ -18,6 +18,8 @@
           pattern: 'ecomp-sdk/**'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-builder-4c-4g
     project: 'portal/sdk'
     stream:
       - 'master':
