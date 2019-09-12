@@ -2,7 +2,7 @@
 - project:
     name: testsuite-python-testing-utils
     project-name: 'testsuite-python-testing-utils'
-    python-version: python2
+    python-version: python3
     jobs:
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
@@ -10,7 +10,7 @@
     subproject:
       - 'robotframework-onap':
           tox-dir: './robotframework-onap/'
-          tox-envs: 'py27'
+          tox-envs: 'py3'
     stream:
       - 'master':
           branch: 'master'
