@@ -78,7 +78,8 @@
     name: ccsdk-distribution-whitesource
     project-name: ccsdk-distribution
     jobs:
-      - gerrit-whitesource-scan
+      - gerrit-whitesource-scan:
+    java-opts: '-Xmx4000m -XX:MaxPermSize=256m'
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true
