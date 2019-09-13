@@ -55,7 +55,9 @@
 - project:
     name: ccsdk-distribution-clm
     jobs:
-      - gerrit-maven-clm
+      - gerrit-maven-clm:
+          mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
+          java-opts: "-Xmx4000m -XX:MaxPermSize=256m"
     nexus-iq-namespace: 'onap-'
     project: 'ccsdk/distribution'
     project-name: 'ccsdk-distribution'
@@ -77,6 +79,7 @@
 - project:
     name: ccsdk-distribution-whitesource
     project-name: ccsdk-distribution
+    build-node: ubuntu1604-builder-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'ccsdk-distribution-settings'
