@@ -31,7 +31,7 @@
       - 'dublin':
           branch: 'dublin'
     mvn-settings: 'testsuite-python-testing-utils-settings'
-    build-node: 'ubuntu1604-builder-4c-4g'
+    build-node: 'centos7-builder-4c-4g'
     subproject:
       - 'robotframework-onap':
           path: 'robotframework-onap'
