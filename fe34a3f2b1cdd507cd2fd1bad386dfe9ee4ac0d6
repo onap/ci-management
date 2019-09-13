@@ -22,6 +22,30 @@
       "revId": "fe34a3f2b1cdd507cd2fd1bad386dfe9ee4ac0d6",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f46c8689_1f902225",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 5109
+      },
+      "writtenOn": "2019-09-13T10:31:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b36ea50a_7be65521",
+      "range": {
+        "startLine": 616,
+        "startChar": 0,
+        "endLine": 625,
+        "endChar": 47
+      },
+      "revId": "fe34a3f2b1cdd507cd2fd1bad386dfe9ee4ac0d6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
