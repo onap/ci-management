@@ -69,6 +69,7 @@
 
 - project:
     name: ccsdk-sli-adaptors-whitesource
+    build-node: ubuntu1604-builder-8c-8g
     project-name: ccsdk-sli-adaptors
     jobs:
       - gerrit-whitesource-scan

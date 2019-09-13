@@ -66,6 +66,7 @@
 
 - project:
     name: ccsdk-features-whitesource
+    build-node: ubuntu1604-builder-8c-8g
     project-name: ccsdk-features
     jobs:
       - gerrit-whitesource-scan
