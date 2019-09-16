@@ -25,7 +25,7 @@
             - docker.pull.registry=nexus3.onap.org:10001
             - docker.push.registry=nexus3.onap.org:10003
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
 
     project: 'clamp'
     stream:
