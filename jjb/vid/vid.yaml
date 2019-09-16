@@ -25,8 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
