@@ -11,7 +11,7 @@
           sign-artifacts: true
           cron: ''
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
 
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
