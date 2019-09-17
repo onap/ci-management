@@ -35,6 +35,8 @@
           branch: 'master'
       - 'dublin':
           branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'testsuite-settings'
 
 - project:
