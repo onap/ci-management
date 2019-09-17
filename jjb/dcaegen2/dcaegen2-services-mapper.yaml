@@ -21,6 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'dcaegen2-services-mapper-settings'
     files: '**'
     archive-artifacts: ''

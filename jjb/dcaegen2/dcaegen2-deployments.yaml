@@ -11,8 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'el-alto':
-          branch: 'el-alto'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'dcaegen2-deployments-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

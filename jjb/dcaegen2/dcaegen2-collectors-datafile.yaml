@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'el-alto':
-          branch: 'el-alto'
+      - 'elalto':
+          branch: 'elalto'
     # apply to all jobs
     project: 'dcaegen2/collectors/datafile'
     mvn-settings: 'dcaegen2-collectors-datafile-settings'
