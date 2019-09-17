@@ -23,6 +23,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
       - 'elalto-fluorine':
           branch: 'elalto-fluorine'
     mvn-settings: 'sdnc-oam-settings'
