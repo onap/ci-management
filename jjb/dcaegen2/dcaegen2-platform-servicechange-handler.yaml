@@ -21,8 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'el-alto':
-          branch: 'el-alto'
+      - 'elalto':
+          branch: 'elalto'
 
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
     # due to a strange macro / variable translation problem this needs

@@ -20,6 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'dcaegen2-services-prh-settings'
     files: '**'
     archive-artifacts: ''

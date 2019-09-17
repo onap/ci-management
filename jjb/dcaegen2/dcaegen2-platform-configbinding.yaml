@@ -26,8 +26,8 @@
     stream:
       - master:
           branch: master
-      - el-alto:
-          branch: el-alto
+      - elalto:
+          branch: elalto
 
 - project:
     name: dcaegen2-platform-configbinding-sonar
