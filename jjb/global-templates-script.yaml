@@ -35,11 +35,13 @@
           choosing-strategy: 'gerrit'
 
     triggers:
-      - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{pattern}'
+      - timed: 'H * * * *'
+
+    wrappers:
+    - timeout:
+        timeout: 50
+        abort: true
+        type: absolute
 
     builders:
       - shell: '{script}'
