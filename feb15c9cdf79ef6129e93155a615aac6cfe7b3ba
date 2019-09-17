@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0ad18a3_50c39c29",
+        "filename": "jjb/vnfsdk/vnfsdk-ves-agent-cpp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-17T17:44:42Z",
+      "side": 1,
+      "message": "Please remove this trailing space",
+      "range": {
+        "startLine": 61,
+        "startChar": 100,
+        "endLine": 61,
+        "endChar": 101
+      },
+      "revId": "feb15c9cdf79ef6129e93155a615aac6cfe7b3ba",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fddaa9b_03bd474d",
+        "filename": "jjb/vnfsdk/vnfsdk-ves-agent-cpp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-09-17T17:44:42Z",
+      "side": 1,
+      "message": "Please remove this trailing space",
+      "range": {
+        "startLine": 64,
+        "startChar": 37,
+        "endLine": 64,
+        "endChar": 38
+      },
+      "revId": "feb15c9cdf79ef6129e93155a615aac6cfe7b3ba",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
