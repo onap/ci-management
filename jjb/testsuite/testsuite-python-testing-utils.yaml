@@ -16,6 +16,8 @@
           branch: 'master'
       - 'dublin':
           branch: 'dublin'
+      - 'el-alto':
+          branch: 'elalto'
     mvn-settings: 'testsuite-python-testing-utils-settings'
     files: '**'
     archive-artifacts: ''
@@ -30,6 +32,8 @@
           branch: 'master'
       - 'dublin':
           branch: 'dublin'
+      - 'el-alto':
+          branch: 'elalto'
     mvn-settings: 'testsuite-python-testing-utils-settings'
     build-node: 'centos7-builder-4c-4g'
     subproject:
