@@ -11,6 +11,12 @@
           mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
+      - 'gerrit-cmake-verify':
+          build-timeout: 30
+          pre-build: !include-raw-escape: ./vnfsdk-ves-agent-cpp.sh
+          build-dir: $WORKSPACE/veslibrary/ves_cpplibrary/src/build
+          make-opts: -j6
+          build-node: centos7-builder-4c-4g
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
@@ -31,6 +37,17 @@
     name: vnfsdk-ves-agent-sonar
     jobs:
       - gerrit-maven-sonar
+      - gerrit-cmake-sonar:
+          build-timeout: 60
+          pre-build: !include-raw-escape: ./vnfsdk-ves-agent-cpp.sh
+          build-dir: $WORKSPACE/veslibrary/ves_cpplibrary/src/build
+          cmake-opts: '-DENABLE_COVERAGE=on -DCOVERAGE_DIR=coverage'
+          sonarcloud-api-token: 35a499f7050cdc8df24bcee4eb205f64e0d8c42a
+          sonarcloud-organization: vnfsdk-ves-agent-vescpplibrary
+          sonarcloud-project-key: org.onap.vnfsdk.ves-agent:cpplib
+          make-opts: -j6
+          stream: master
+          build-node: centos7-builder-4c-4g
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'vnfsdk/ves-agent'
