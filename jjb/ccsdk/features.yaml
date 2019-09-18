@@ -17,6 +17,8 @@
           branch: 'master'
       - 'elalto':
           branch: 'elalto'
+      - 'elalto-fluorine':
+          branch: 'elalto-fluorine'
     mvn-settings: 'ccsdk-features-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -26,6 +28,7 @@
     files: '**'
     archive-artifacts: ''
     maven-version: "mvn35"
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
