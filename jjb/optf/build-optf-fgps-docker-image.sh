@@ -6,5 +6,5 @@ CURRENTDIR="$(pwd)"
 echo $CURRENTDIR
 
 chmod 755 ./*.*
-
+cd ./valetapi
 ./build-dockers.sh
