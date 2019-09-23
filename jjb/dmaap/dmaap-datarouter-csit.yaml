@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
       - 'dublin':
           branch: 'dublin'
     functionality:
@@ -25,6 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
       - 'dublin':
           branch: 'dublin'
     functionality:
