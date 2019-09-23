@@ -28,21 +28,21 @@
     project-name: 'sdc'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - '{project-name}-{stream}-sdc-merge-java':
           build-node: 'ubuntu1604-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
 
@@ -84,7 +84,7 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+    mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
@@ -94,7 +94,7 @@
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P catalog -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-P catalog -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc-catalog'
@@ -108,7 +108,7 @@
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P onboarding -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'
+          mvn-params: '-P onboarding -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc-onboarding'
