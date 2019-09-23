@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Mon, 23 Sep 2019 16:45:46 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/96134
+Project: ci-management
+Branch: refs/heads/master
