@@ -52,3 +52,7 @@
     # Jenkins
     jenkins-ssh-credential: 'onap-jenkins-ssh'
     jenkins-ssh-release-credential: 'jenkins-release'
+
+    # SonarCloud
+    sonarcloud_project_organization: onap
+    sonarcloud_api_token: da97604dfdc36ec82488a97ebea96ad01f7b10ff
