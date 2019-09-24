@@ -92,7 +92,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: optf/fgps
-    project-name: 'optf-fgps'
+    project-name: 'fgps'
     stream:
       - 'master':
           branch: 'master'
