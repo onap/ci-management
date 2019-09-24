@@ -79,7 +79,8 @@
     project-name: ccsdk-distribution
     build-node: ubuntu1604-builder-8c-8g
     jobs:
-      - gerrit-whitesource-scan
+      - gerrit-whitesource-scan:
+          java-opts: '-Xmx2048m'
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

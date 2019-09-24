@@ -129,7 +129,10 @@
     project-name: 'sdc'
     build-node: ubuntu1604-docker-8c-8g
     jobs:
-      - gerrit-whitesource-scan
+      - gerrit-whitesource-scan:
+          build-timeout: 120
+          submodule-timeout: 30
+          java-opts: '-Xmx2048m'
     mvn-settings: 'sdc-settings'
     wss-product-name: 'sdc'
     mvn-clean-install: true
