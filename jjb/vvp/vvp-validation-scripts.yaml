@@ -17,6 +17,8 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: ubuntu1604-docker-8c-8g
     docker-pom: 'pom.xml'
     mvn-profile: 'default'
 
