@@ -6,7 +6,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dmaap-buscontroller'
     stream: 'master'
-    disabled: true
+    disabled: false
     functionality:
       - 'ssl':
           trigger_jobs:
