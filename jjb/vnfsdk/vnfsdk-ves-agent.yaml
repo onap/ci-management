@@ -42,9 +42,9 @@
           pre-build: !include-raw-escape: ./vnfsdk-ves-agent-cpp.sh
           build-dir: $WORKSPACE/veslibrary/ves_cpplibrary/src/build
           cmake-opts: '-DENABLE_COVERAGE=on -DCOVERAGE_DIR=coverage'
-          sonarcloud-api-token: 35a499f7050cdc8df24bcee4eb205f64e0d8c42a
-          sonarcloud-organization: vnfsdk-ves-agent-vescpplibrary
-          sonarcloud-project-key: org.onap.vnfsdk.ves-agent:cpplib
+          sonarcloud-api-token: '{sonarcloud_api_token}'
+          sonarcloud-organization: '{sonarcloud_project_organization}'
+          sonarcloud-project-key: '{sonarcloud_project_organization}_vnfsdk-ves-agent'
           make-opts: -j6
           stream: master
           build-node: centos7-builder-4c-4g
