@@ -1,0 +1,15 @@
+---
+- project:
+    name: pnfusecase-config-over-netconf-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'pnfusecase'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'config-over-netconf':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
