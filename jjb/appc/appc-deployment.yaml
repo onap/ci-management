@@ -43,6 +43,8 @@
           mvn-params: '-Dmaven.test.skip=true'
       - 'docker-version-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     project: 'appc/deployment'
     stream:
       - 'master':
