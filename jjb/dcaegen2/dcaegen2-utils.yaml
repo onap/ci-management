@@ -54,3 +54,19 @@
       - gerrit-info-yaml-verify
     project: dcaegen2/utils
     branch: master
+
+- project:
+    name: dcaegen2-platform-cbs-client
+    # jenkins job prefix
+    project-name: '{name}'
+    # git repo
+    project: dcaegen2/utils
+    # push credentials
+    mvn-settings: dcaegen2-utils-settings
+    build-node: centos7-builder-2c-1g
+    tox-dir: onap-dcae-cbs-docker-client
+    jobs:
+      - '{project-name}-gerrit-pypi-jobs'
+    stream:
+      - master:
+          branch: master
