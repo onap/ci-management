@@ -14,3 +14,11 @@
     jobs:
       - '{project-name}-{stream}-review':
           build_script: '{offline_review_bootstrap}'
+
+- project:
+    name: offline-installer-info
+    project-name: offline-installer
+    jobs:
+      - gerrit-info-yaml-verify
+    project: offline-installer
+    branch: master
