@@ -30,6 +30,21 @@
           branch: elalto
 
 - project:
+    name: dcaegen2-platform-configbinding-pypi
+    # git repo
+    project: dcaegen2/platform/configbinding
+    # jenkins job prefix
+    project-name: dcaegen2-platform-configbinding
+    # push credentials
+    mvn-settings: dcaegen2-platform-configbinding-settings
+    build-node: centos7-builder-4c-4g
+    jobs:
+      - '{project-name}-gerrit-pypi-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
     name: dcaegen2-platform-configbinding-sonar
     project: dcaegen2/platform/configbinding
     project-name: dcaegen2-platform-configbinding
