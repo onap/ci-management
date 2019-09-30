@@ -37,7 +37,7 @@ fi
 if [ ${MAX_GIT_REPO_AGE_HOURS:=0} -ne 0 ]; then
   LAST_COMMIT_AGE=$(( $(date +%s) - $(git log -1 --pretty=format:%ct) ))
 
-  if [ $LAST_COMMIT_AGE -le $(( MAX_GIT_REPO_AGE_HOURS *60*60 )) ]; then
+  if [ $LAST_COMMIT_AGE -gt $(( MAX_GIT_REPO_AGE_HOURS *60*60 )) ]; then
     echo '[NOTICE] Git repository did not have any commits last' \
       "${MAX_GIT_REPO_AGE_HOURS} hours - no need to re-analyse it." \
       >&2
