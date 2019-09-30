@@ -40,8 +40,9 @@
 - project:
     name: 'portal-coverity'
     jobs:
-      - onap-gerrit-maven-coverity
+      - 'onap-gerrit-maven-coverity'
     cron: '@daily'
+    max-git-repo-age-hours: 48
     build-node: 'ubuntu1604-builder-4c-4g'
     project: 'portal'
     project-name: 'portal'
