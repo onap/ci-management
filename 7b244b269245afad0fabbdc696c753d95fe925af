@@ -46,6 +46,30 @@
       "revId": "7b244b269245afad0fabbdc696c753d95fe925af",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86fbea0b_07013b70",
+        "filename": "jjb/dcaegen2/dcaegen2-utils.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-09-30T13:11:33Z",
+      "side": 1,
+      "message": "okay. thanks for clarification",
+      "parentUuid": "dd88c9d2_701580c8",
+      "range": {
+        "startLine": 74,
+        "startChar": 24,
+        "endLine": 74,
+        "endChar": 40
+      },
+      "revId": "7b244b269245afad0fabbdc696c753d95fe925af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
