@@ -20,5 +20,5 @@
     project-name: offline-installer
     jobs:
       - gerrit-info-yaml-verify
-    project: offline-installer
+    project: oom/offline-installer
     branch: master
