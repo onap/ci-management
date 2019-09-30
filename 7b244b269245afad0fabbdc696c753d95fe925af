@@ -22,6 +22,30 @@
       "revId": "7b244b269245afad0fabbdc696c753d95fe925af",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dd88c9d2_701580c8",
+        "filename": "jjb/dcaegen2/dcaegen2-utils.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-09-30T12:45:03Z",
+      "side": 1,
+      "message": "yes. one of the jobs in this group, specifically the gerrit-pypi-merge job, pushes a distribution to the PyPI \"staging\" repo which is currently configured to point to an LF Nexus.",
+      "parentUuid": "fa40c76b_5efca3cb",
+      "range": {
+        "startLine": 74,
+        "startChar": 24,
+        "endLine": 74,
+        "endChar": 40
+      },
+      "revId": "7b244b269245afad0fabbdc696c753d95fe925af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
