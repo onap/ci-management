@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fde587ab_748db03c",
+        "filename": "jjb/optf/optf-cmso.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-01T22:30:12Z",
+      "side": 1,
+      "message": "Both jobs are skipping the versions plugin. \nAre you guys doing this manually rather than letting the job do it?\nMost teams let the maven-stage bump the versions..",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 38
+      },
+      "revId": "e1eefa2f3fa609d73ba85c8f83071fb90ce9bd6c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
