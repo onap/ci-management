@@ -10,20 +10,20 @@
     project-name: 'optf-cmso'
     jobs:
       - gerrit-maven-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          maven-versions-plugin: false
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-Dmaven.test.skip=true -P docker'
       - '{project-name}-{stream}-verify-java-checkstyle':
          mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
       - '{project-name}-{stream}-merge-properties-java':
          mvn_properties:
             - docker.pull.registry=nexus3.onap.org:10001
             - docker.push.registry=nexus3.onap.org:10003
-      - '{project-name}-{stream}-docker-java-properties-daily':
-         setVersion: 'DoSetVersion'
-         docker-pom: 'pom.xml'
-         mvn-profile: 'docker'
-         mvn-params: '-Dmaven.test.skip=true'
-         maven-properties: |
-          cmso.registry=$
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     build-node: ubuntu1604-docker-8c-8g
