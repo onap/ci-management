@@ -5,6 +5,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'vfc-nfvo-wfengine'
+    disabled: true
     stream: 'master'
     functionality:
       - 'sanity-check'
@@ -13,4 +14,3 @@
       - 'vfc-nfvo-wfengine-master-engine-mgr-service-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
-
