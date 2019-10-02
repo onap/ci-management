@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36088007_eb8acf38",
+        "filename": "jjb/optf/optf-has.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-02T17:23:38Z",
+      "side": 1,
+      "message": "for both stage jobs, do we want to run this using optf/has/pom.xml or\noptf/has/conductor/pom.xml?\nIf so, please add the pom location like this if we need to go for option #2:\n          mvn-pom: \u0027conductor/pom.xml\u0027\n          mvn-params: \u0027-f conductor/pom.xml\u0027",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 46
+      },
+      "revId": "35c53852549926ec498e33e05bfe525d31c2c490",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
