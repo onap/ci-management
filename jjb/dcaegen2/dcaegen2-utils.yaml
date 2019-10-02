@@ -55,23 +55,35 @@
     project: dcaegen2/utils
     branch: master
 
-- project:
-    name: dcaegen2-platform-cbs-client
+- cbs_client_pypi_common: &cbs_client_pypi_common
+    name: cbs-client-pypi-common
     # jenkins job prefix
-    project-name: '{name}'
+    project-name: dcaegen2-platform-cbs-client
     # git repo
     project: dcaegen2/utils
     # push credentials
     mvn-settings: dcaegen2-utils-settings
     # requires centos to sign release
     build-node: centos7-builder-2c-1g
-    # subdirectory
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'onap-dcae-cbs-docker-client/{name}/.*'
     tox-dir: onap-dcae-cbs-docker-client
-    jobs:
-      - '{project-name}-gerrit-pypi-jobs'
     stream:
       - master:
           branch: master
+
+- project:
+    name: dcaegen2-platform-cbs-client-pypi-build
+    <<: *cbs_client_pypi_common
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'onap-dcae-cbs-docker-client/{name}/.*'
+    jobs:
+      - gerrit-pypi-verify
+      - gerrit-pypi-merge:
+          pypi-repo: pypi-test
+
+- project:
+    name: dcaegen2-platform-cbs-client-pypi-release
+    <<: *cbs_client_pypi_common
+    jobs:
+      - gerrit-pypi-release-verify
+      - gerrit-pypi-release-merge
