@@ -23,6 +23,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'dcaegen2-platform-cli-settings'
     maven-deploy-properties: |
       deployAtEnd=true
