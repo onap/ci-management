@@ -1,2 +1,64 @@
 ---
 - import_playbook: ../common-packer/provision/baseline.yaml
+
+- hosts: all
+  become_user: root
+  become_method: sudo
+
+    - name: Update and upgrade apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install python-tox
+      pip:
+        name: tox
+        state: present
+      become: true
+
+    - apt_repository:
+        repo: ppa:jonathonf/python-3.6
+        state: present
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install Python 3.6 and packages
+      apt:
+        name:
+          - python3.6
+          - python3.6-dev
+          - python3.6-tk
+          - libssl-dev
+          - libmysqlclient-dev
+          - gcc
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install base packages
+      apt:
+        name:
+          - unzip
+          - xz-utils
+          - libxml-xpath-perl
+          - wget
+          - make
+          - npm
+          - sshuttle
+          - netcat
+          - libssl-dev
+          - libffi-dev
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install autorelease support packages
+      apt:
+        name:
+          - xmlstarlet
+          - xvfb
+          - crudini
+          - maven
+          - python-ncclient
+      become: true
+      when: ansible_distribution == 'Ubuntu'
