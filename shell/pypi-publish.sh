@@ -2,7 +2,7 @@
 # Script to publush PyPI artifacts
 set -e -x -o pipefail
 
-virtualenv -p "$PYTHON_VERSION" /tmp/v/twine
+virtualenv -p "$PYTHON" /tmp/v/twine
 source "/tmp/v/twine/bin/activate"
 
 pip install twine
