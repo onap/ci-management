@@ -5,6 +5,7 @@
   become_user: root
   become_method: sudo
 
+  tasks:
     - name: Update and upgrade apt packages
       apt:
         upgrade: yes
