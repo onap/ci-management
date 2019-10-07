@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b97f7f12_24cfdef1",
+        "filename": "jjb/optf/optf-has.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-07T16:57:46Z",
+      "side": 1,
+      "message": "we do not allow external scripts to run as a builder step in the maven-docker-stage job:\nhttps://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-maven-jobs.yaml#L994\n\nThe team will need to call this script some other way using Docker Files or pom.xml",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 67
+      },
+      "revId": "ef3a71143eff44cfd96711118a639ca2fd5965c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
