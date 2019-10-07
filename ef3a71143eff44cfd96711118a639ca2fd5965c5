@@ -22,6 +22,29 @@
       "revId": "ef3a71143eff44cfd96711118a639ca2fd5965c5",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf82c22b_f8a53420",
+        "filename": "jjb/optf/optf-osdf.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-07T16:58:31Z",
+      "side": 1,
+      "message": "Same here... we don\u0027t allow additional scripts to run as part of the builder steps",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 68
+      },
+      "revId": "ef3a71143eff44cfd96711118a639ca2fd5965c5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
