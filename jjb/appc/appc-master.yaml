@@ -25,6 +25,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'appc-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
@@ -39,6 +40,7 @@
     project-name: 'appc'
     branch: 'master'
     mvn-settings: 'appc-settings'
+    maven-version: "mvn35"
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx4096m'
 
@@ -55,6 +57,7 @@
     project-name: 'appc'
     branch: 'master'
     mvn-settings: 'appc-settings'
+    maven-version: "mvn35"
 
 - project:
     name: appc-info

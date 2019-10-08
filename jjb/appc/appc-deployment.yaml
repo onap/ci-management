@@ -12,6 +12,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'appc-deployment-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
@@ -50,6 +51,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'appc-deployment-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
