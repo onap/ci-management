@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
     files: '**'
     archive-artifacts: ''
@@ -49,6 +51,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
     files: '**'
     archive-artifacts: ''

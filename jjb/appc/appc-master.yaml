@@ -24,6 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'appc-settings'
     files: '**'
     archive-artifacts: ''

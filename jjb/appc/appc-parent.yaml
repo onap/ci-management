@@ -22,6 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'appc-parent-settings'
     build-node: ubuntu1604-builder-2c-1g
 
