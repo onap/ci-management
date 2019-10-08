@@ -14,6 +14,7 @@
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
@@ -54,6 +55,7 @@
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
+    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'

@@ -25,6 +25,7 @@
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'appc-parent-settings'
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-2c-1g
 
 - project:
