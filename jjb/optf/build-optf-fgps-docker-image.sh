@@ -8,3 +8,6 @@ echo $CURRENTDIR
 chmod 755 ./*.*
 cd ./valetapi
 ./build-dockers.sh
+
+cd ../engine
+./build-dockers.sh
