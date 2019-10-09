@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Brian Freeman <bf1936@att.com>
+Code-Review+2: Marcus Williams <marcus.williams@intel.com>
+Submitted-by: Marcus Williams <marcus.williams@intel.com>
+Submitted-at: Wed, 09 Oct 2019 14:21:07 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/96775
+Project: ci-management
+Branch: refs/heads/master
