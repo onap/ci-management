@@ -8,10 +8,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'dr-suite':
           trigger_jobs:
@@ -27,10 +23,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'ssl-dr-suite':
           trigger_jobs:
