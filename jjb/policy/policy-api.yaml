@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-api-elalto
+    name: policy-api
     project-name: 'policy-api'
     jobs:
       - '{project-name}-{stream}-verify-java'
@@ -23,67 +23,10 @@
 
     project: 'policy/api'
     stream:
-      - 'elalto':
-          branch: 'elalto'
-    mvn-settings: 'policy-api-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
-
-- project:
-    name: policy-api
-    project-name: 'policy-api'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
-          project-name: 'policy-api-amd64'
-          docker-pom: 'pom.xml'
-          mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          build-node: ubuntu1604-docker-8c-8g
-          pattern: 'do_not_match_any_file'
-      - '{project-name}-{stream}-merge-java':
-          project-name: 'policy-api-arm64'
-          docker-pom: 'pom.xml'
-          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          build-node: ubuntu1604-docker-arm64-4c-2g
-          pattern: 'do_not_match_any_file'
-      - '{project-name}-multiarch-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          project-name: 'policy-api-amd64'
-          build-node: ubuntu1604-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          container-public-registry: 'docker.io'
-          container-staging-registry: 'docker.io'
-          cron: ''
-          gerrit_trigger_file_paths:
-             - compare-type: REG_EXP
-               pattern: 'do_not_match_any_file'
-      - gerrit-maven-docker-stage:
-          project-name: 'policy-api-arm64'
-          build-node: ubuntu1604-docker-arm64-4c-2g
-          maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          container-public-registry: 'docker.io'
-          container-staging-registry: 'docker.io'
-          cron: ''
-          gerrit_trigger_file_paths:
-             - compare-type: REG_EXP
-               pattern: 'do_not_match_any_file'
-      - '{project-name}-docker-manifest-{stream}':
-          build-node: ubuntu1604-docker-8c-8g
-      - '{project-name}-multiarch-docker-stage-{stream}'
-#      - '{project-name}-gerrit-release-jobs':
-#          build-node: centos7-docker-8c-8g
-
-    project: 'policy/api'
-    stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'policy-api-settings'
     files: '**'
     archive-artifacts: ''
