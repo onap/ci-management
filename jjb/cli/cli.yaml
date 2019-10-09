@@ -23,6 +23,7 @@
           mvn-pom: 'deployment/docker/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-gerrit-release-jobs'
 
     project: 'cli'
     stream:
