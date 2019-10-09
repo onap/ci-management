@@ -48,6 +48,34 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    name: 'so-coverity'
+    jobs:
+      - 'onap-gerrit-maven-coverity'
+    cron: '@daily'
+    build-node: 'ubuntu1604-builder-4c-4g'
+    project: 'so'
+    project-name: 'so'
+    branch: 'master'
+    mvn-settings: 'so-settings'
+    mvn-params: '-Dmaven.test.skip=true'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    coverity-project-name: 'onap-so'
+    coverity-token: 'SrGGJp9T1n1lhJn2sF72XQ'
+    coverity-user-email: 'A.Naluzhnyy@samsung.com'
+    coverity-search-paths: >
+      so-monitoring/so-monitoring-ui/src/main/frontend/src
+    coverity-search-exclude-regexs: >
+      /cov-int/
+      /cov-analysis-
+      ^/usr/
+      ^/home/
+      /node_modules/
+      /bower_components/
+      /bower_components_external/
+      /src/test/
+      /__test__/
+
+- project:
     name: so-clm
     jobs:
       - gerrit-maven-clm
