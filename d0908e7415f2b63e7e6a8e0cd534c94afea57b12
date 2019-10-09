@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f5de9cac_c81910fa",
+        "filename": "jjb/dmaap/dmaap-datarouter-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-09T18:21:01Z",
+      "side": 0,
+      "message": "I don\u0027t think we should remove elalto..",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "d0908e7415f2b63e7e6a8e0cd534c94afea57b12",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43bacf17_887ad2c0",
+        "filename": "jjb/dmaap/dmaap-datarouter-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-09T18:21:01Z",
+      "side": 0,
+      "message": "I don\u0027t think we should remove elalto..",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 26
+      },
+      "revId": "d0908e7415f2b63e7e6a8e0cd534c94afea57b12",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
