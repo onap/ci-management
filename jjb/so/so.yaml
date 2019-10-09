@@ -27,6 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
@@ -56,8 +58,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'so-settings'
 
 - project:
@@ -67,3 +67,4 @@
       - gerrit-info-yaml-verify
     project: so
     branch: master
+    branch: elalto
