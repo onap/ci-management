@@ -27,6 +27,8 @@
           branch: 'casablanca'
       - dublin:
           branch: 'dublin'
+      - elalto:
+          branch: 'elalto'
 
 - project:
     name: doc-info
