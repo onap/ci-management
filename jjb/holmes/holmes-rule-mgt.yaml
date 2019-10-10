@@ -12,6 +12,8 @@
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
           build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     project: 'holmes/rule-management'
     stream:
       - 'master':
