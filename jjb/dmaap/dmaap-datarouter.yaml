@@ -22,8 +22,6 @@
           branch: 'master'
       - 'elalto':
           branch: 'elalto'
-      - 'dublin':
-          branch: 'dublin'
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''
