@@ -9,6 +9,8 @@
     name: testsuite
     project-name: 'testsuite'
     jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
       - '{project-name}-{stream}-3scm-docker-shell-daily':
           script:
             !include-raw-escape: 'testsuite-docker.sh'
