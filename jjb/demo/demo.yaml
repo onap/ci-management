@@ -20,8 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
