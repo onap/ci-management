@@ -6,6 +6,15 @@
       - project-view
 
 - project:
+    name: testsuite-release
+    project-name: 'testsuite'
+    project: 'testsuite'
+    mvn-settings: 'testsuite-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+- project:
     name: testsuite
     project-name: 'testsuite'
     jobs:
