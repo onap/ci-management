@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c26b0887_dac0114c",
+        "filename": "jjb/optf/optf-osdf.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-15T17:30:07Z",
+      "side": 1,
+      "message": "This will fail if you are not running on centos. \nRemove this line only if you need to run this build in ubuntu.",
+      "range": {
+        "startLine": 22,
+        "startChar": 10,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "4cc21a39c86222f105cf71728acfbdf76d1997e2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
