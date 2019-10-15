@@ -2,7 +2,6 @@
 - project:
     name: dmaap-buscontroller-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dmaap-buscontroller'
     stream: 'master'
