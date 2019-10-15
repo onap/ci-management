@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "751173f8_9600bd4e",
+        "filename": "jjb/optf/optf-fgps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-15T17:27:19Z",
+      "side": 0,
+      "message": "why are we removing the signing of the artifacts step?",
+      "range": {
+        "startLine": 20,
+        "startChar": 10,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "9bf4c60a005bcac2c04c7b416185d8719a797f8b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
