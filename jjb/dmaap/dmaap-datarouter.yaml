@@ -4,10 +4,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           mvn-goals: 'clean package -P docker docker:build docker:push'
