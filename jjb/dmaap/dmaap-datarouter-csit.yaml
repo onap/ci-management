@@ -1,19 +1,5 @@
 ---
 - project:
-    name: dmaap-datarouter-csit
-    jobs:
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'dmaap-datarouter'
-    stream:
-      - 'master':
-          branch: 'master'
-    functionality:
-      - 'dr-suite':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
-    robot-options: ''
-
-- project:
     name: dmaap-datarouter-csit-ssl
     jobs:
       - '{project-name}-{stream}-csit-{functionality}'
@@ -24,5 +10,5 @@
     functionality:
       - 'ssl-dr-suite':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
+            - '{project-name}-{stream}-merge-java'
     robot-options: ''
