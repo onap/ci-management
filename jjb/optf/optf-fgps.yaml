@@ -22,7 +22,7 @@
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: false
-          container-public-registry: 'nexus3.onap.org:10003'
+          container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
       - '{project-name}-gerrit-release-jobs':
