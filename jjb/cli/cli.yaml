@@ -17,15 +17,18 @@
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           sign-artifacts: true
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-f deployment/docker/pom.xml'
-          mvn-pom: 'deployment/docker/pom.xml'
+          mvn-params: '-Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
+      - '{project-name}-{stream}-aai-docker-java-daily':
+          pom: 'deployment/docker/pom.xml'
+          mvn-goals: 'docker:build'
+          docker-image-name: 'onap/cli'
+          build-node: ubuntu1604-docker-8c-8g
     project: 'cli'
     stream:
       - 'master':
