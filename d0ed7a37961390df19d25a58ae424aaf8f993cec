@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c423a3db_0672bb9e",
+        "filename": "jjb/cli/cli.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-22T17:47:37Z",
+      "side": 1,
+      "message": "I set this to false since it only works on centos..",
+      "range": {
+        "startLine": 19,
+        "startChar": 24,
+        "endLine": 19,
+        "endChar": 31
+      },
+      "revId": "d0ed7a37961390df19d25a58ae424aaf8f993cec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
