@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b941abf1_93e5f665",
+        "filename": "jjb/cli/cli.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-22T01:13:24Z",
+      "side": 1,
+      "message": "make sure this is the right pom.xml to call",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 46
+      },
+      "revId": "5a11a4e37a24e2fc9a3bcb97f5039f1fe5cfbf83",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db88276a_c233f62e",
         "filename": "jjb/cli/cli.yaml",
         "patchSetId": 1
