@@ -16,7 +16,6 @@
           pom: 'pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
