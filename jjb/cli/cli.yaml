@@ -21,6 +21,8 @@
           maven-versions-plugin: true
           mvn-params: '-f deployment/docker/pom.xml'
           mvn-pom: 'deployment/docker/pom.xml'
+      mvn-goals: 'docker:build'
+      docker-image-name: 'onap/cli'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
