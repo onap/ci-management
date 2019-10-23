@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c020c499_58eef4a7",
+        "filename": "jjb/logging-analytics/logging-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-23T18:43:02Z",
+      "side": 1,
+      "message": "Do not change this one. The build should run on centos since we are using SIGUL to sign the images ...",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "95ce41ea1836526ab3bcb4a40d91073338d4e753",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
