@@ -16,14 +16,21 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1604-docker-8c-8g
+
     project: 'logging-analytics'
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'logging-analytics-settings'
+    # due to a strange macro / variable translation problem this needs to be
+    # passed as a string block to properly get the properties correctly defined
+    # in the job
+    maven-deploy-properties: |
+      deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
 
 #- project:
@@ -80,7 +87,7 @@
       - '{project-name}-{subproject}-python-release-{stream}'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: logging-analytics-pylog-python
