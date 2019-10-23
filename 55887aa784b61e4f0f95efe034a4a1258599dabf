@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1afe9b33_9aaddf2c",
+        "filename": "jjb/dmaap/dmaap-datarouter-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-23T17:45:26Z",
+      "side": 1,
+      "message": "The job is called \"dmaap-datarouter-maven-docker-stage-master\"\n\nremove the \"gerrit\" part",
+      "range": {
+        "startLine": 13,
+        "startChar": 12,
+        "endLine": 13,
+        "endChar": 65
+      },
+      "revId": "55887aa784b61e4f0f95efe034a4a1258599dabf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
