@@ -22,6 +22,30 @@
       "revId": "95ce41ea1836526ab3bcb4a40d91073338d4e753",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66bdb7b2_64f23bb5",
+        "filename": "jjb/logging-analytics/logging-analytics.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2019-10-23T18:48:48Z",
+      "side": 1,
+      "message": "ACK",
+      "parentUuid": "c020c499_58eef4a7",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "95ce41ea1836526ab3bcb4a40d91073338d4e753",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
