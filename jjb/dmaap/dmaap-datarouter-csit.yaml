@@ -10,5 +10,5 @@
     functionality:
       - 'ssl-dr-suite':
           trigger_jobs:
-            - '{project-name}-{stream}-merge-java'
+            - '{project-name}-gerrit-maven-docker-stage-{stream}'
     robot-options: ''
