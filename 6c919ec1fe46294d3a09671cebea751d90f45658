@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b8c4549_3752ab44",
+        "filename": "jjb/cli/cli.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-10-23T04:30:42Z",
+      "side": 1,
+      "message": "Don\u0027t re-add the maven job.. we just need the docker one since the maven is working fine with \"cli-maven-stage-master\"\n\nPlease remove it",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 60
+      },
+      "revId": "6c919ec1fe46294d3a09671cebea751d90f45658",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
