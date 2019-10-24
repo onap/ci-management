@@ -29,7 +29,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-2g
+    build-node: ubuntu1604-builder-2c-1g
 
 #- project:
 #    name: multicloud-azure-arm64-java

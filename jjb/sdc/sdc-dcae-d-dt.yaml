@@ -50,7 +50,7 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-builder-2c-1g
     project: 'sdc/dcae-d/dt'
     project-name: 'sdc-dcae-d-dt'
     branch: 'master'
