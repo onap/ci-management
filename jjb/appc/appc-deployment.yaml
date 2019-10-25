@@ -21,23 +21,6 @@
     mvn-profile: docker
     build-node: ubuntu1604-builder-4c-4g
 
-#- project:
-#    name: appc-deployment-arm64
-#    project-name: 'appc-deployment-arm64'
-#    jobs:
-#      - '{project-name}-docker-image-blessing'
-#
-#    project: 'appc/deployment'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'appc-deployment-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    docker-pom: 'pom.xml'
-#    mvn-profile: docker
-#    build-node: ubuntu1604-docker-arm64-4c-2g
-#
 - project:
     name: appc-deployment-docker
     project-name: 'appc-deployment'
