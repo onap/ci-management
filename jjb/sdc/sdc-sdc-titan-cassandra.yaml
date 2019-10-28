@@ -10,7 +10,6 @@
     project-name: 'sdc-sdc-titan-cassandra'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-{stream}-merge-java'
     project: 'sdc/sdc-titan-cassandra'
     stream:
