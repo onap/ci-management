@@ -1,5 +1,5 @@
-# UUID                                                    	Group Name
+# UUID                                             	Group Name
 #
-7c0f2e5223b6fa638b4a75932a6080e9801509f9                  	Release Engineering Team
-daebbf523be390041a1a9c0e340a6d833aae5043                  	GitHub Replication
-ldap:cn=lf-collab-admins,ou=Groups,dc=freestandards,dc=org	ldap/lf-collab-admins
+7c0f2e5223b6fa638b4a75932a6080e9801509f9           	Release Engineering Team
+daebbf523be390041a1a9c0e340a6d833aae5043           	GitHub Replication
+ldap:cn=lf-releng,ou=Groups,dc=freestandards,dc=org	ldap/lf-releng
