@@ -30,7 +30,7 @@
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1604-docker-8c-8g'
+          build-node: 'ubuntu1604-docker-v1-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
@@ -40,7 +40,7 @@
           maven-versions-plugin: true
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1604-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
           container-public-registry: 'nexus3.onap.org:10001'
