@@ -1,0 +1,65 @@
+---
+- builder:
+    name: lf-onap-releasedockerhub-macro
+    builders:
+      - shell: !include-raw-escape:
+        - ../shell/run_releasedockerhub.sh
+        ##- ../shell/run_releasedockerhub.sh "{org} {summary} {verbose} {copy}"
+
+
+- job:
+    name: lf-onap-release-docker-hub
+    build-timeout: 90
+
+    project-type: freestyle
+    node: ubuntu1604-docker-8c-8g                           ## Probably don't need this much
+    disable-job: false
+    disabled: '{disable-job}'
+
+    # Runs every 6 hours on random minute
+    triggers:
+      - timed: "H */6 * * *"
+
+#   Define needed parameters for lf-infra-docker-login
+    parameters:
+      - string:
+          name: DOCKER_REGISTRY
+          default: 'nexus3.onap.org'
+      - string:
+          name: REGISTRY_PORTS
+          default: '10002'
+      - string:
+          name: DOCKERHUB_REGISTRY
+          default: 'docker.io'
+
+#   Define needed parameters for lf-onap-releasedockerhub-macro
+      - string:
+          name: RELEASEDOCKERHUB_ORG
+          default: 'onap'
+          description: ''
+      - string:
+          name: RELEASEDOCKERHUB_REPO
+          default: ''
+          description: 'Only match repos that contains this string'
+      # If below variables are set
+      - string:
+          name: RELEASEDOCKERHUB_SUMMARY
+          default: '--summary'
+          description: 'Provides a brief statistic summary of what it found, and what it should do. Activate with Yes'
+      - string:
+          name: RELEASEDOCKERHUB_VERBOSE
+          default: ''
+          description: 'Provides a verbose output of the operations. Activate with Yes'
+      - string:
+          name: RELEASEDOCKERHUB_COPY
+          default: ''
+          description: 'If a copy operation should be done from Nexus3 to docker hub. Activate with Yes'
+
+
+    builders:
+      - lf-infra-pre-build                                  ## shell/python-tools-install.sh
+      - lf-infra-docker-login:
+          global-settings-file: 'global-settings'
+          settings-file: 'onap-releasedockerhub-authz-settings'
+      - lf-onap-releasedockerhub-macro:
+
