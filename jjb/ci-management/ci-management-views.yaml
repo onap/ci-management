@@ -78,7 +78,7 @@
       - csit-view
     view-name: CSIT
     view-description: 'List of CSIT jobs'
-    view-regex: '^.*-csit-.*'
+    view-regex: '^(?=.*-csit-.*)(?!.*-verify-csit.*).*'
 
 - project:
     name: CSIT-Verify
