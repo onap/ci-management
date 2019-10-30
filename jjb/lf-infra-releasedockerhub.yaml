@@ -1,0 +1,42 @@
+- builder:
+    name: lf-onap-releasedockerhub-macro
+    builders:
+      - shell: !include-raw-escape:
+        - ../shell/run_releasedockerhub.sh 
+        ##- ../shell/run_releasedockerhub.sh "{org} {summary} {verbose} {copy}"
+
+
+- job:
+    name: lf-onap-release-docker-hub
+    build-timeout: 90
+    # Runs every 6 hours on random minute
+    cron: "H */6 * * *"
+
+    project-type: freestyle
+    node: "{build-node}"
+    disable-job: false
+    disabled: "{disable-job}"
+
+    triggers:
+      - timed: "{obj:cron}"
+
+    builders:
+      - lf-infra-pre-build                                  ## shell/python-tools-install.sh
+      - lf-infra-create-netrc:                              ## shell/create-netrc.sh
+          server-id: 'nexus3.onap.org'
+      - lf-infra-docker-login:
+          DOCKER_REGISTRY: 'nexus3.onap.org'
+          REGISTRY_PORTS: '10002'
+          DOCKERHUB_EMAIL: 'collab-it+onapdockerhub@linuxfoundation.org'
+      - lf-onap-releasedockerhub-macro:
+          org: 'onap'
+          # summary can be empty or --summary
+          summary: '--summary'
+          # verbose can be empty or --verbose
+          verbose: ''
+          # copy can be empty or --copy
+          copy: ''
+      # This seems overkill. Just want to delete netrc.
+      - lf-provide-maven-settings-cleanup                 ## Internal shell remove files
+
+
