@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Samuli Silvius <s.silvius@partner.samsung.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 31 Oct 2019 17:47:33 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/97776
+Project: ci-management
+Branch: refs/heads/master
