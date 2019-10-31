@@ -15,7 +15,6 @@
           area: kud-deployment
           script:
             !include-raw-escape: 'kud-deployment.sh'
-          build-node: ubuntu1604-builder-4c-4g
     project: 'multicloud/k8s'
     subproject:
       - validation-scripts:
