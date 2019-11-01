@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7c097df3_cef73a42",
+        "filename": "jjb/lf-infra-releasedockerhub.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:39:08Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 6,
+        "startChar": 42,
+        "endLine": 6,
+        "endChar": 43
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a2fdb729_2923db43",
         "filename": "shell/run_releasedockerhub.sh",
         "patchSetId": 3
