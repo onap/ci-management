@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dfc0b0a9_c45fb96c",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4403
+      },
+      "writtenOn": "2019-11-01T14:32:15Z",
+      "side": 1,
+      "message": "I like the -v I keep forgetting to use it. Note this is NOT the same as ${:-}\n\n-z ${FOO:-}: true when FOO is unset or \"\"\n! -v: true for unset",
+      "revId": "8e7f6752c39a92dc6331a2beb641dd4d07ad385b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c79ad3b_3495e8b3",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4403
+      },
+      "writtenOn": "2019-11-01T14:32:15Z",
+      "side": 1,
+      "message": "Please keep shell variable lower-case. Then shellcheck can check for used-before-set\ncmd_str\u003d\"--org $RELEASEDOCKERHUB_ORG\"",
+      "revId": "8e7f6752c39a92dc6331a2beb641dd4d07ad385b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6745efd5_7d583f87",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4403
+      },
+      "writtenOn": "2019-11-01T14:32:15Z",
+      "side": 1,
+      "message": "bash has a \u0027+\u003d\u0027 so you could use: cmd_str+\u003d\" --summary\"",
+      "revId": "8e7f6752c39a92dc6331a2beb641dd4d07ad385b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
