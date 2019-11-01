@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2fdb729_2923db43",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "do not disable -u",
+      "range": {
+        "startLine": 6,
+        "startChar": 1,
+        "endLine": 6,
+        "endChar": 19
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07a1ad2f_4d23dabe",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "\"$RELEASEDOCKERHUB_ORG:-\", to deal with unbound varaiables",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "14ae5e5b_4430c250",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 17,
+        "startChar": 39,
+        "endLine": 17,
+        "endChar": 40
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9dc2eb86_f16458b4",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 5
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4fd854c_ace48d5e",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 21,
+        "startChar": 39,
+        "endLine": 21,
+        "endChar": 40
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "72b571bb_5499474e",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 22,
+        "startChar": 4,
+        "endLine": 22,
+        "endChar": 5
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3468ee1_f51eb426",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 25,
+        "startChar": 36,
+        "endLine": 25,
+        "endChar": 37
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3092a5e3_1c08adab",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2019-11-01T05:36:46Z",
+      "side": 1,
+      "message": "white space",
+      "range": {
+        "startLine": 26,
+        "startChar": 4,
+        "endLine": 26,
+        "endChar": 5
+      },
+      "revId": "e5cd222a4dd521b8c5b5214444439c75c29d93f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
