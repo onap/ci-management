@@ -7,9 +7,12 @@
           path: '.'
           pattern: '**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-python'
     project: 'testsuite/heatbridge'
+    subproject:
+      - 'heatbridge':
+          path: 'heatbridge'
+          pattern: 'heatbridge/**'
     stream:
       - 'master':
           branch: 'master'
