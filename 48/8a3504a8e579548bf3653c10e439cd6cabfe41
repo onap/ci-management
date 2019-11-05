@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Morgan Richomme <morgan.richomme@orange.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 05 Nov 2019 18:42:05 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/97931
+Project: ci-management
+Branch: refs/heads/master
