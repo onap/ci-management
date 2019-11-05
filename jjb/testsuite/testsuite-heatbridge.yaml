@@ -7,8 +7,7 @@
           path: '.'
           pattern: '**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-verify-python'
     project: 'testsuite/heatbridge'
     stream:
       - 'master':
