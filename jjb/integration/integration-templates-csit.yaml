@@ -6,6 +6,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -52,6 +53,10 @@
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-arm64-{stream}-verify-csit-{functionality}'
@@ -60,6 +65,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -106,6 +112,10 @@
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-{stream}-verify-csit-{functionality}-testng'
@@ -114,6 +124,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -182,6 +193,10 @@
           link-to-last-build: false
           name: ExtentReport
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-arm64-{stream}-verify-csit-{functionality}-testng'
@@ -190,6 +205,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -258,6 +274,10 @@
           link-to-last-build: false
           name: ExtentReport
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}'
@@ -266,6 +286,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -315,6 +336,10 @@
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-arm64-{stream}-csit-{functionality}'
@@ -323,6 +348,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -372,6 +398,10 @@
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}-testng'
@@ -380,6 +410,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -451,6 +482,10 @@
           link-to-last-build: false
           name: ExtentReport
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     name: '{project-name}-arm64-{stream}-csit-{functionality}-testng'
@@ -459,6 +494,7 @@
     project-type: freestyle
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
+    recipients: ''
 
     properties:
       - lf-infra-properties:
@@ -530,3 +566,7 @@
           link-to-last-build: false
           name: ExtentReport
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
