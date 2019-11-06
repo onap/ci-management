@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "33b9f5d6_d6fa92e7",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4719
+      },
+      "writtenOn": "2019-11-06T14:32:01Z",
+      "side": 1,
+      "message": "it\u0027s too long , it will be folder structure / project in csit repo .. change it to \u0027dcaegen2-pmsh\u0027",
+      "range": {
+        "startLine": 6,
+        "startChar": 28,
+        "endLine": 6,
+        "endChar": 60
+      },
+      "revId": "250034831afd417075cfab1232777743274532a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06e67286_8602e2c3",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
         "patchSetId": 3
