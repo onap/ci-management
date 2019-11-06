@@ -7,7 +7,7 @@
           build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
 
     project: 'dcaegen2/services/sdk'
@@ -19,7 +19,7 @@
     mvn-settings: 'dcaegen2-services-sdk-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'centos7-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
 
@@ -28,7 +28,7 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: centos7-docker-8c-8g
     project: 'dcaegen2/services/sdk'
     project-name: 'dcaegen2-services-sdk'
     branch: 'master'
@@ -42,7 +42,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/services/sdk
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: centos7-docker-8c-8g
     project-name: 'dcaegen2-services-sdk'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-sdk-settings'
