@@ -22,6 +22,30 @@
       "revId": "4f48023ec5a32a5fa031c7b88a90d8ed84eb9e1d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e22107b_55251f0a",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-11-06T12:14:58Z",
+      "side": 1,
+      "message": "Missed during the copy/paste.\nDone",
+      "parentUuid": "072d2973_aa251b3b",
+      "range": {
+        "startLine": 12,
+        "startChar": 9,
+        "endLine": 12,
+        "endChar": 12
+      },
+      "revId": "4f48023ec5a32a5fa031c7b88a90d8ed84eb9e1d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
