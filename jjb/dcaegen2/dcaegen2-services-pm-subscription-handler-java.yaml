@@ -1,0 +1,52 @@
+---
+- project:
+    name: dcaegen2-services-pm-subscription-handler
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-version-java-daily':
+          build-node: ubuntu1604-docker-8c-8g
+          mvn-goals: 'clean install'
+      - '{project-name}-{subproject}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    subproject:
+      - 'pmsh':
+          pom: 'components/pm-subscription-handler/pom.xml'
+          pattern: 'components/pm-subscription-handler/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-services-pmsh-settings'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1604-docker-8c-8g'
+
+- project:
+    name: dcaegen2-services-pmsh-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services-pmsh'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-pmsh-settings'
+    mvn-params: '-f components/pm-subscription-handler/pom.xml'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: dcaegen2-services-pmsh-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    build-node: ubuntu1604-docker-8c-8g
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services-pmsh'
+    mvn-params: '-f components/pm-subscription-handler/pom.xml'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-pmsh-settings'
