@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "43a9bfd0_106a4624",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-11-06T15:41:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "33b9f5d6_d6fa92e7",
+      "range": {
+        "startLine": 6,
+        "startChar": 28,
+        "endLine": 6,
+        "endChar": 60
+      },
+      "revId": "250034831afd417075cfab1232777743274532a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "219312d8_5f0d222d",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "4e9d1aba_3b20bc4e",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-11-06T15:41:40Z",
+      "side": 1,
+      "message": "We can add it enabled and let it fail until CSITs are added but thought leaving it off for now was ok.",
+      "parentUuid": "219312d8_5f0d222d",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "250034831afd417075cfab1232777743274532a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06e67286_8602e2c3",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-11-06T14:29:07Z",
       "side": 1,
       "message": "it should be \u0027{project-name}-{stream}-docker-java-shell-daily\u0027",
+      "range": {
+        "startLine": 14,
+        "startChar": 15,
+        "endLine": 14,
+        "endChar": 77
+      },
+      "revId": "250034831afd417075cfab1232777743274532a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dfccfd89_3f42427b",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-11-06T15:41:40Z",
+      "side": 1,
+      "message": "Updated to the relevant job.",
+      "parentUuid": "06e67286_8602e2c3",
       "range": {
         "startLine": 14,
         "startChar": 15,
