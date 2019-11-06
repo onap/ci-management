@@ -1,0 +1,15 @@
+- project:
+    name: dcaegen2-pm-subscription-handler-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-services-pm-subscription-handler'
+    disabled: true
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'pmsh-testsuites':
+          trigger_jobs:
+            - 'dcaegen2-services-{stream}-pm-subscription-handler-merge-java'
+    robot-options: ''
