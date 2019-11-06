@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c98ed08b_dc9499b1",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2019-11-06T16:33:07Z",
+      "side": 1,
+      "message": "\"jh7358\" \u003d\u003e \"jrh3\"",
+      "revId": "3c2cc1317ed18a92e4190a4e9aa905536cf08d5f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
