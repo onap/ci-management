@@ -22,6 +22,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    recipients: 'liam.fallon@est.tech,ram.krishna.verma@est.tech'
     stream:
       - 'master':
           branch: master
@@ -37,6 +38,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    recipients: 'ram.krishna.verma@est.tech'
     stream:
       - 'master':
           branch: master
@@ -67,6 +69,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    recipients: 'ah999m@att.com'
     stream:
       - 'master':
           branch: master
@@ -82,6 +85,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    recipients: 'jrh3@att.com,ram.krishna.verma@est.tech'
     stream:
       - 'master':
           branch: master
@@ -120,4 +124,3 @@
     trigger_jobs:
       - 'policy-drools-applications-{stream}-merge-java'
     robot-options: ''
-
