@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "219312d8_5f0d222d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4719
+      },
+      "writtenOn": "2019-11-06T14:34:23Z",
+      "side": 1,
+      "message": "may be it is needed now .. but in future , it need to change to false once csit tests are ready for development.",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "250034831afd417075cfab1232777743274532a2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "06e67286_8602e2c3",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
         "patchSetId": 3
