@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c3cef1d_63ebcf0d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4719
+      },
+      "writtenOn": "2019-11-06T16:20:17Z",
+      "side": 1,
+      "message": "have a look at https://git.onap.org/ci-management/tree/jjb/dcaegen2/dcaegen2-services-pmmapper-csit.yaml\n\nit should not contain any service name ... so it should be only \n\u0027{project-name}-{stream}-docker-java-shell-daily\u0027",
+      "range": {
+        "startLine": 14,
+        "startChar": 14,
+        "endLine": 14,
+        "endChar": 71
+      },
+      "revId": "fbd49c0ea0fc1246ed5bd99dde1bb5fa70d25dcb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
