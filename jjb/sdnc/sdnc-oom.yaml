@@ -1,0 +1,40 @@
+---
+- project:
+    name: sdnc-oom-project-view
+    project-name: sdnc-oom
+    views:
+      - project-view
+
+- project:
+    name: sdnc-oom
+    helm-module: 'sdnc'
+    project-name: 'sdnc-oom'
+    project: 'sdnc/oom'
+    jobs:
+      - '{project-name}-{stream}-verify-external-helm'
+      - '{project-name}-{stream}-merge-external-helm':
+          build_script: '{oom_build_script}'
+          post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
+          files: '**'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
+
+    mvn-settings: 'sdnc-oom-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-helm-2c-1g
+    pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
+    oom_build_script: |
+        #!/bin/bash
+        set -e -o pipefail
+        cd kubernetes/
+        make all
+    build_script: |
+        #!/bin/bash
+        cd kubernetes/
+        make common
+        make {helm-module}
+    oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
