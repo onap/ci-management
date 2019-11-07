@@ -34,6 +34,7 @@
         - 'dublin':
               branch: 'dublin'
     mvn-settings: 'clamp-settings'
+    java-version: openjdk13
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
@@ -51,6 +52,7 @@
     mvn-settings: 'clamp-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk13
 
 - project:
     name: clamp-clm
@@ -64,6 +66,7 @@
     mvn-settings: 'clamp-settings'
     build-node: ubuntu1604-docker-8c-8g
     build-timeout: 120
+    java-version: openjdk13
 
 - project:
     name: clamp-info
