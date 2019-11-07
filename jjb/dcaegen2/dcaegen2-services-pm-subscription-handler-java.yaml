@@ -13,7 +13,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dcaegen2-services-pmsh-settings'
+    mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
@@ -55,7 +55,7 @@
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-pmsh'
     branch: 'master'
-    mvn-settings: 'dcaegen2-services-pmsh-settings'
+    mvn-settings: 'dcaegen2-services-settings'
     mvn-params: '-f components/pm-subscription-handler/pom.xml'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -70,4 +70,4 @@
     project-name: 'dcaegen2-services-pmsh'
     mvn-params: '-f components/pm-subscription-handler/pom.xml'
     branch: 'master'
-    mvn-settings: 'dcaegen2-services-pmsh-settings'
+    mvn-settings: 'dcaegen2-services-settings'
