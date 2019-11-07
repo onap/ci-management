@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e30a77b8_aa74203f",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-11-07T21:56:49Z",
+      "side": 1,
+      "message": "add this also for gerrit-maven-stage:\nsign-artifacts: true",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 42
+      },
+      "revId": "8972e8877b55e593f7ae6360072ccbe49a536b1f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
