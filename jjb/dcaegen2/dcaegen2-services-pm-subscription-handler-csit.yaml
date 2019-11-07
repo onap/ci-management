@@ -1,5 +1,5 @@
 - project:
-    name: dcaegen2-pm-subscription-handler-csit
+    name: dcaegen2-services-pmsh-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
@@ -10,7 +10,7 @@
       - 'master':
           branch: 'master'
     functionality:
-      - 'pmsh-testsuites':
+      - 'testsuites':
           trigger_jobs:
             - '{project-name}-{stream}-pmsh-release-version-java-daily'
     robot-options: ''
