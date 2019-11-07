@@ -39,7 +39,7 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
+    mvn-settings: 'dcaegen2-services-pmsh-settings'
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
