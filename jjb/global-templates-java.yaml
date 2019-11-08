@@ -18,6 +18,7 @@
     pom:
     mvn-opts: ''
     java-opts: ''
+    java-version: openjdk8
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -52,6 +53,8 @@
 
     builders:
       - lf-infra-pre-build
+      - lf-update-java-alternatives:
+          java-version: "{java-version}"
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
@@ -350,6 +353,7 @@
     mvn-params: ''
     mvn-opts: ''
     java-opts: ''
+    java-version: openjdk8
 
     properties:
       - infra-properties:
@@ -383,6 +387,8 @@
 
     builders:
       - lf-infra-pre-build
+      - lf-update-java-alternatives:
+          java-version: "{java-version}"
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
