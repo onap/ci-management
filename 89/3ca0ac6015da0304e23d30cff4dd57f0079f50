@@ -1,0 +1,8 @@
+Code-Review+2: Daniel Pono Takamori <dtakamori@contractor.linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review-1: Vijay Venkatesh Kumar <vv770d@att.com>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 11 Nov 2019 18:40:56 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/98071
+Project: ci-management
+Branch: refs/heads/master
