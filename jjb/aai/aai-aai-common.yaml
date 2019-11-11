@@ -52,8 +52,8 @@
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
 

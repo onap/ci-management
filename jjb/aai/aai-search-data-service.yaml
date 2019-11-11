@@ -72,8 +72,8 @@
     project: 'aai/search-data-service'
     project-name: 'aai-search-data-service'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-search-data-service-settings'
 
 - project:

@@ -41,8 +41,8 @@
     project: 'aai/chameleon'
     project-name: 'aai-chameleon'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-chameleon-settings'
 
 - project:

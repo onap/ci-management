@@ -54,8 +54,8 @@
     project: 'aai/babel'
     project-name: 'aai-babel'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-babel-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 

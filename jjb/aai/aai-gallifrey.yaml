@@ -34,8 +34,8 @@
     project: 'aai/gallifrey'
     project-name: 'aai-gallifrey'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-gallifrey-settings'
 
 - project:

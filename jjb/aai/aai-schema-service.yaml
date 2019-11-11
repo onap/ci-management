@@ -56,8 +56,8 @@
     project: 'aai/schema-service'
     project-name: 'aai-schema-service'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn35'
 

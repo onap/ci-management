@@ -48,8 +48,8 @@
     project: 'aai/rest-client'
     project-name: 'aai-rest-client'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-rest-client-settings'
 
 - project:

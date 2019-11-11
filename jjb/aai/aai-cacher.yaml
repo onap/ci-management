@@ -50,8 +50,8 @@
     project: 'aai/cacher'
     project-name: 'aai-cacher'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
 

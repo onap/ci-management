@@ -48,8 +48,8 @@
     project: 'aai/logging-service'
     project-name: 'aai-logging-service'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-logging-service-settings'
 
 - project:

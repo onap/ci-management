@@ -53,8 +53,8 @@
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-sparky-be-settings'
 
 - project:

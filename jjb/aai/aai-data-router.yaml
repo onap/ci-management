@@ -53,8 +53,8 @@
     project: 'aai/data-router'
     project-name: 'aai-data-router'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-data-router-settings'
 
 - project:

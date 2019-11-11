@@ -48,8 +48,8 @@
     project: 'aai/router-core'
     project-name: 'aai-router-core'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'aai-router-core-settings'
 
 - project:
