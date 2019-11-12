@@ -28,3 +28,17 @@
       - gerrit-info-yaml-verify
     project: aai/sparky-fe
     branch: master
+
+- project:
+    name: aai-sparky-fe-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'aai/sparky-fe'
+    project-name: 'aai-sparky-fe'
+    branch: 'master'
+    mvn-settings: 'aai-sparky-be-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
