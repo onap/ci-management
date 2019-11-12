@@ -4,6 +4,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dcaegen2'
+    recipients: 'vv770d@att.com piotr.wielebski@nokia.com kornel.janiak@nokia.com'
     stream:
       - 'master':
           branch: 'master'
@@ -18,6 +19,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dcaegen2'
+    recipients: 'vv770d@att.com piotr.wielebski@nokia.com kornel.janiak@nokia.com'
     stream:
       - 'master':
           branch: 'master'
