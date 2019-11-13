@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5616435c_c9d31cd6",
+        "filename": "jjb/dcaegen2/dcaegen2-ves-prh-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2837
+      },
+      "writtenOn": "2019-11-13T10:33:49Z",
+      "side": 1,
+      "message": "Here leave as it was me and Piotr.",
+      "range": {
+        "startLine": 22,
+        "startChar": 32,
+        "endLine": 22,
+        "endChar": 62
+      },
+      "revId": "cef39fd250ed6a50025993a6bf14d6bb0ce04675",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
