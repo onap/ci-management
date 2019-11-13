@@ -1,0 +1,8 @@
+---
+- project:
+    name: dcaegen2-platform-info
+    project-name: dcaegen2-platform
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/platform
+    branch: master
