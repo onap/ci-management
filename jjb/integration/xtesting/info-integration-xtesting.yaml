@@ -1,0 +1,8 @@
+---
+- project:
+    name: integration-xtesting-info
+    project-name: integration-xtesting
+    jobs:
+      - gerrit-info-yaml-verify
+    project: integration/xtesting
+    branch: master
