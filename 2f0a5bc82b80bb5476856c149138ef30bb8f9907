@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "929a8b75_4d063782",
+        "filename": "jjb/dcaegen2/dcaegen2-ves-prh-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2837
+      },
+      "writtenOn": "2019-11-13T09:02:26Z",
+      "side": 1,
+      "message": "This e-mails Should be reassigned to pawel.kasperkiewicz@nokia.com",
+      "range": {
+        "startLine": 7,
+        "startChar": 32,
+        "endLine": 7,
+        "endChar": 81
+      },
+      "revId": "2f0a5bc82b80bb5476856c149138ef30bb8f9907",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
