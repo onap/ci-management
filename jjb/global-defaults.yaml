@@ -56,3 +56,10 @@
     # SonarCloud
     sonarcloud_project_organization: onap
     sonarcloud_api_token: da97604dfdc36ec82488a97ebea96ad01f7b10ff
+
+    # Nexus3 docker registries
+    container-public-registry: nexus3.onap.org:10001
+    container-snapshot-registry: nexus3.onap.org:10003
+    container-staging-registry: nexus3.onap.org:10004
+    # the quotes here are REQUIRED
+    container-push-registry: '{container-staging-registry}'
