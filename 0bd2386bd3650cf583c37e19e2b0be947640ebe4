@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "60854a40_13155a96",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-14T22:30:48Z",
+      "side": 1,
+      "message": "this will require that yaml to exist\n\nsee example here: https://gerrit.o-ran-sc.org/r/gitweb?p\u003dric-plt/a1.git;a\u003dblob;f\u003dcontainer-tag.yaml;h\u003d2bb40a94ee5a61047d101039df7a3c66d182f425;hb\u003d41eeee6e05c74f9f2835084f012965e42a19979d",
+      "revId": "0bd2386bd3650cf583c37e19e2b0be947640ebe4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "44ead1d2_0df8e717",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-14T22:30:48Z",
+      "side": 1,
+      "message": "this fanciness is new to me",
+      "revId": "0bd2386bd3650cf583c37e19e2b0be947640ebe4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
