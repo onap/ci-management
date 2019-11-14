@@ -1,0 +1,31 @@
+---
+- dcaegen2_platform_common: &dcaegen2_platform_common
+    # values apply to all dcaegen2_platform docker projects
+    name: dcaegen2-platform-docker-common
+    # git repo
+    project: dcaegen2/platform
+    # maven settings file has docker credentials
+    mvn-settings: dcaegen2-platform-settings
+    # use host network to clone from our gerrit
+    docker-build-args: '--network=host'
+    # source of docker tag
+    container-tag-method: yaml-file
+    stream:
+      - master:
+            branch: master
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-aoadapter
+    # jenkins job name prefix
+    project-name: '{name}'
+    # image name
+    docker-name: '{name}'
+    # root of docker build
+    docker-root: adapter/acumos
+    # build only on relevant changes
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '{docker-root}/.*'
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
