@@ -1,0 +1,59 @@
+---
+- dcaegen2_platform_common: &dcaegen2_platform_common
+    # values apply to all dcaegen2_platform docker projects
+    name: dcaegen2-platform-docker-common
+    # git repo
+    project: dcaegen2/platform
+    # maven settings file has docker credentials
+    mvn-settings: dcaegen2-platform-settings
+    # use host network to clone from our gerrit
+    docker-build-args: '--network=host'
+    # source of docker tag
+    # container-tag-method: yaml-file
+    # until everything needed for yaml-file is in place
+    container-tag-method: latest
+    build-node: ubuntu1604-docker-8c-8g
+    # jenkins job name prefix
+    project-name: '{name}'
+    # build only on relevant changes
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '{docker-root}/.*'
+
+- project:
+    name: dcaegen2-platform-aoadapter-project-view
+    project-name: dcaegen2-platform-aoadapter
+    views:
+      - project-view
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-aoadapter
+    # root of docker build
+    docker-root: adapter/acumos
+    # image name
+    docker-name: '{name}'
+    stream:
+      - master:
+            branch: master
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcagen2-platform-aoadapter-verify
+    docker-root: adapter/acumos
+    stream:
+      - all:
+            branch: '*'
+    jobs:
+      - gerrit-tox-verify
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-aoadapter-sonar
+    docker-root: adapter/acumos
+    branch: master
+    jobs:
+      - gerrit-tox-sonar
+    cron: '@daily'
