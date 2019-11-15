@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "90a0a27f_b696170a",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-11-15T16:46:25Z",
+      "side": 1,
+      "message": "I missed this before.  I\u0027m not confident it will work.  I don\u0027t see docker-root in this macro.  Best to test creation of the job and look what appears in the Jenkins config.  Of course for that you need sandbox credentials.",
+      "parentUuid": "61f0ef72_10a64bc1",
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9c4b1a9f_3e0d061c",
         "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
         "patchSetId": 8
