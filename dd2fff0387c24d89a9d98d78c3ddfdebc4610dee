@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7206e9ff_74939004",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-11-15T14:28:42Z",
+      "side": 1,
+      "message": "This job requires the docker software on the build node, which the default lacks.  Please add:\n\n    build-node: ubuntu1604-docker-8c-8g\n\nThis name is not TOTAL black magic - look in ~/git/onap/ci-management/jenkins-config/clouds/openstack/cattle",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 3
+      },
+      "revId": "dd2fff0387c24d89a9d98d78c3ddfdebc4610dee",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "86424c2d_8c26fa23",
         "filename": "jjb/global-defaults.yaml",
         "patchSetId": 4
