@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91e3c5dd_30f80168",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T16:31:06Z",
+      "side": 1,
+      "message": "see line 113 herE: https://gerrit.o-ran-sc.org/r/gitweb?p\u003dci-management.git;a\u003dblob;f\u003djjb/ric-plt-lib-rmr/ric-plt-lib-rmr.yaml;h\u003dbde20689ac76bb618499a6feeb504f24b75a6f88;hb\u003dd4423595e0a954f8d7ac4293eebe8edddb14b1fc#l113\n\nI think isnteead of docker root you want tox-dir: adapter/acumos",
+      "revId": "a739bf45ad1ec271fad4d5b2652e0009755018c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83253c0c_7c310037",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T16:31:06Z",
+      "side": 1,
+      "message": "see line 113 herE: https://gerrit.o-ran-sc.org/r/gitweb?p\u003dci-management.git;a\u003dblob;f\u003djjb/ric-plt-lib-rmr/ric-plt-lib-rmr.yaml;h\u003dbde20689ac76bb618499a6feeb504f24b75a6f88;hb\u003dd4423595e0a954f8d7ac4293eebe8edddb14b1fc#l113\n\nI think isnteead of docker root you want tox-dir: adapter/acumos",
+      "revId": "a739bf45ad1ec271fad4d5b2652e0009755018c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
