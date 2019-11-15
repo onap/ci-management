@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27cd71ff_2e74bf78",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T16:23:12Z",
+      "side": 1,
+      "message": "is this going to \"cd\" into the right dir?",
+      "revId": "846261fc6eceb927be92c68013bb0952a99b30e2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
