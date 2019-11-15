@@ -60,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "f21f982d_ca6fb93c",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2019-11-15T16:49:45Z",
+      "side": 1,
+      "message": "I was thinking that since I\u0027m pulling in the common, and it sets tox-dir to docker-root (as well as needing docker-root for the trigger), that would cover it.  I was thinking of defining another variable and having both docker-root and tox-dir set to it, but I wasn\u0027t sure if that was safe.",
+      "parentUuid": "9c4b1a9f_3e0d061c",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 3
+      },
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e0d2d54e_daebe87f",
         "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
         "patchSetId": 8
@@ -71,6 +95,30 @@
       "writtenOn": "2019-11-15T16:44:13Z",
       "side": 1,
       "message": "I am surprised you would choose to run Sonar daily -- usually this is done weekly.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 3
+      },
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8989da34_613d04f1",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2019-11-15T16:49:45Z",
+      "side": 1,
+      "message": "Looking at other examples in onap, I saw the daily, so, guessing that that is the onap policy, I copied it.  I have no opinion on what it should be.",
+      "parentUuid": "e0d2d54e_daebe87f",
       "range": {
         "startLine": 60,
         "startChar": 0,
