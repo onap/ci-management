@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61f0ef72_10a64bc1",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T16:42:08Z",
+      "side": 1,
+      "message": "looks good to me, ill let Chris confim that this works and applies to all jobs",
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
