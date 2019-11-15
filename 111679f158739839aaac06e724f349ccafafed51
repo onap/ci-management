@@ -22,6 +22,30 @@
       "revId": "111679f158739839aaac06e724f349ccafafed51",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "849928ff_ee5f2276",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2019-11-15T15:22:28Z",
+      "side": 1,
+      "message": "The repo for dcaegen2-platform-configbinding-settings is .../dcaegen2/platform/configbinding (there\u0027s actually a git repo for configbinding).  The repo for this is dcaegen2-platform (there isn\u0027t a git repo for adapter, it\u0027s part of dcaegen2-platform, as specified by Vijay).",
+      "parentUuid": "08811cda_aac21b55",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 3
+      },
+      "revId": "111679f158739839aaac06e724f349ccafafed51",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
