@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "86424c2d_8c26fa23",
+        "filename": "jjb/global-defaults.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T13:57:45Z",
+      "side": 1,
+      "message": "looks better however I\u0027m not sure the ports are the same, I hope they are",
+      "revId": "dd2fff0387c24d89a9d98d78c3ddfdebc4610dee",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
