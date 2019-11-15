@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e279b7a3_960e4882",
+        "filename": "jjb/global-defaults.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 515
+      },
+      "writtenOn": "2019-11-15T13:55:05Z",
+      "side": 1,
+      "message": "uh, don\u0027t we want the ONAP repos?",
+      "revId": "2e6c48cbecbdc26e9d0b68df16e7d1983bd28e71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
