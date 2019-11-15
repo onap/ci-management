@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08811cda_aac21b55",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-11-15T15:17:37Z",
+      "side": 1,
+      "message": "Wait, maybe the generic \"dcaegen2-platform-settings\" does not exist.  Other projects have values like this:\n\n    dcaegen2-platform-configbinding-settings\n\nI think this possibly should be\n\n    mvn-settings: dcaegen2-platform-adapter-settings\n\nBut it\u0027s also possible that the LF RelEng team needs to create this settings file in both the production and sandbox Jenkins servers.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 3
+      },
+      "revId": "111679f158739839aaac06e724f349ccafafed51",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
