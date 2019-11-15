@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "3ff93c07_cad63376",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2019-11-15T17:21:49Z",
+      "side": 1,
+      "message": "Processing of \"\u003c\u003c:\", \"*x\", and \"\u0026x\" is part of the YAML parse,  processing of \"{y}\" is part of the jjb processing and is done after the YAML parse, so this should work as long as everything that pulls this in with \"\u003c\u003c:\" also sets docker-root.",
+      "parentUuid": "90a0a27f_b696170a",
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9c4b1a9f_3e0d061c",
         "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
         "patchSetId": 8
