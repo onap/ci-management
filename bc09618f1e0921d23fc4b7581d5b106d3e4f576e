@@ -16,6 +16,52 @@
       "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c4b1a9f_3e0d061c",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-11-15T16:44:13Z",
+      "side": 1,
+      "message": "Tox doesn\u0027t consume the docker-root argument, alas. You will need tox-dir.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 3
+      },
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0d2d54e_daebe87f",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-11-15T16:44:13Z",
+      "side": 1,
+      "message": "I am surprised you would choose to run Sonar daily -- usually this is done weekly.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 3
+      },
+      "revId": "bc09618f1e0921d23fc4b7581d5b106d3e4f576e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
