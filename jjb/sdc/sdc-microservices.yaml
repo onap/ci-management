@@ -1,0 +1,68 @@
+---
+- project:
+    name: sdc-microservices-project-view
+    project-name: sdc-microservices
+    views:
+      - project-view
+
+- project:
+    name: sdc-microservices
+    project-name: 'sdc-microservices'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-v1-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-DskipTests=true'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+    subproject:
+      - 'catalog-facade-ms':
+          pom: 'catalog-facade-ms/pom.xml'
+          pattern: 'catalog-facade-ms/**'
+    project: 'sdc/microservices'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'sdc-microservices-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+    maven-version: 'mvn35'
+
+- project:
+    name: sdc-microservices-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'sdc/microservices'
+    project-name: 'sdc-microservices'
+    branch: 'master'
+    mvn-settings: 'sdc-microservices-settings'
+    mvn-params: '-Dsonar.branch={branch}'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m'
+
+- project:
+    name: sdc-microservices-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: sdc/microservices
+    project-name: 'sdc-microservices'
+    branch: 'master'
+    mvn-settings: 'sdc-microservices-settings'
+
+- project:
+    name: sdc-microservices-info
+    project-name: sdc-microservices
+    jobs:
+      - gerrit-info-yaml-verify
+    project: sdc/microservices
+    branch: master
