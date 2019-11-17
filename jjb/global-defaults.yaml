@@ -62,4 +62,4 @@
     container-snapshot-registry: nexus3.onap.org:10003
     container-staging-registry: nexus3.onap.org:10004
     # the quotes here are REQUIRED
-    container-push-registry: '{container-staging-registry}'
+    container-push-registry: '{container-snapshot-registry}'
