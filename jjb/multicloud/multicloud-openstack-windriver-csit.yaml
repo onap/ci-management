@@ -4,6 +4,7 @@
     jobs:
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-windriver'
+    recipients: 'bin.yang@windriver.com'
     stream: 'master'
     disabled: true
     functionality:

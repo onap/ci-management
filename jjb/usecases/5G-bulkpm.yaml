@@ -5,6 +5,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'usecases'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com rajendra.jaiswal@ericsson.com liam.burke@ericsson.com'
     stream:
       - 'master':
           branch: 'master'
