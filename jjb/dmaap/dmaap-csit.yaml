@@ -4,6 +4,7 @@
     jobs:
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dmaap'
+    recipients: 'ms5838@att.com'
     stream: 'master'
     functionality:
       - 'mrpubsub':
