@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ff43923_f88e8c74",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-11-18T20:04:47Z",
+      "side": 1,
+      "message": "should this be on ubuntu node?",
+      "range": {
+        "startLine": 44,
+        "startChar": 16,
+        "endLine": 44,
+        "endChar": 36
+      },
+      "revId": "9fc89e24d2157a68e73812d00158c633c3db15e6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
