@@ -38,6 +38,18 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    name: dcaegen2-services-sdk-integration-pairwise
+    jobs:
+      - {project-name}-{stream}-integration-pairwise'
+    build-node: centos7-docker-8c-8g
+    project: 'dcaegen2/services/sdk'
+    project-name: 'dcaegen2-services-sdk'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-services-sdk-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: ' -P integration-pairwise'
+
+- project:
     name: dcaegen2-services-sdk-clm
     jobs:
       - gerrit-maven-clm
