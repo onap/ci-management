@@ -25,6 +25,7 @@
       - 'elalto':
           branch:  'elalto'
     mvn-settings: 'oparent-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
