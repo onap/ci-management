@@ -5,6 +5,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'multicloud-pike'
+    recipients: 'bin.yang@windriver.com'
     stream: 'master'
     disabled: true
     functionality:

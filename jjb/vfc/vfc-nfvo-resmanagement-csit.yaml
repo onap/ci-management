@@ -5,10 +5,10 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'vfc-nfvo-resmanagement'
+    recipients: 'yangyanyj@chinamobile.com'
     stream: 'master'
     functionality:
       - 'sanity-check':
           trigger_jobs: 'vfc-nfvo-resmanagement-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
-
