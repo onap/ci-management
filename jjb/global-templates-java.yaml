@@ -116,6 +116,25 @@
     name: '{project-name}-{stream}-{subproject}-verify-java'
 
 - job-template:
+      # Job template for Java integration pairwise jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean install
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+
+      <<: *verify_java_defaults
+      name: '{project-name}-{stream}-integration-pairwise'
+      triggers:
+        - timed: '@daily'
+        - gerrit-trigger-patch-submitted:
+            server: '{server-name}'
+            project: '{project}'
+            branch: '{branch}'
+            files: '{obj:pattern}'
+
+- job-template:
     # Job template for Java daily release jobs
     #
     # The purpose of this job template is to run:
