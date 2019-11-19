@@ -22,6 +22,10 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aaf/cadi'
     project-name: 'aaf-cadi-shiro'
@@ -53,6 +57,10 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aaf/cadi'
     project-name: 'aaf-cadi-fproxy'
@@ -84,6 +92,10 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: ubuntu1604-builder-4c-4g
     project: 'aaf/cadi'
     project-name: 'aaf-cadi-rproxy'
