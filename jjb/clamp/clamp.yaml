@@ -43,6 +43,10 @@
     name: clamp-sonar
     jobs:
       - gerrit-maven-sonar:
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
           mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
     cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
