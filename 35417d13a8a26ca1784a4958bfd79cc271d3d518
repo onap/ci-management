@@ -45,6 +45,52 @@
       "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "babf211e_2030cafe",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-11-19T22:43:54Z",
+      "side": 1,
+      "message": "dcaegen2-platform-mod-genprocessor-clm",
+      "range": {
+        "startLine": 25,
+        "startChar": 10,
+        "endLine": 25,
+        "endChar": 43
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8758de1e_d329d816",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-11-19T22:43:54Z",
+      "side": 1,
+      "message": "dcaegen2-platform-mod-genprocessor-clm",
+      "range": {
+        "startLine": 31,
+        "startChar": 18,
+        "endLine": 31,
+        "endChar": 52
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
