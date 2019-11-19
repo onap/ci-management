@@ -37,6 +37,10 @@
     name: dcaegen2-services-pm-mapper-sonar
     jobs:
       - gerrit-maven-sonar
+     sonarcloud: true
+     sonarcloud-project-organization: '{sonarcloud_project_organization}'
+     sonarcloud-api-token: '{sonarcloud_api_token}'
+     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     cron: '@daily'
     build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/services/pm-mapper'
