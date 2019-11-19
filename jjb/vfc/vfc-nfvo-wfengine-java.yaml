@@ -83,6 +83,10 @@
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
     jobs:
       - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     mvn-params: '-f wfenginemgrservice/pom.xml'
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
@@ -96,6 +100,10 @@
     name: vfc-nfvo-wfengine-activiti-extension-sonar
     jobs:
       - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     mvn-params: '-f activiti-extension/pom.xml'
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
