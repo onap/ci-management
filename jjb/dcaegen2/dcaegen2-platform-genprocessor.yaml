@@ -1,0 +1,35 @@
+---
+- project:
+    name: dcaegen2-platform-genprocessor
+    project-name: dcaegen2-platform-genprocessor
+    # git repo
+    project: dcaegen2/platform
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java':
+          mvn-goals: 'clean install'
+    subproject:
+      - genprocessor:
+          pom: 'mod/genprocessor/pom.xml'
+          pattern: 'mod/genprocessor/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    # Stole from dcaegen2-platform-adapter.yaml. Is this right for this?
+    mvn-settings: dcaegen2-platform-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: dcaegen2-platform-genprocessor-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    build-node: ubuntu1604-docker-8c-8g
+    project: 'dcaegen2/platform'
+    project-name: dcaegen2-platform-genprocessor-clm
+    mvn-params: '-f mod/genprocessor/pom.xml'
+    branch: 'master'
+    # Stole from dcaegen2-platform-adapter.yaml. Is this right for this?
+    mvn-settings: 'dcaegen2-platform-settings'
