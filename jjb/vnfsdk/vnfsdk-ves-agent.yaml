@@ -37,12 +37,16 @@
     name: vnfsdk-ves-agent-sonar
     jobs:
       - gerrit-maven-sonar
+     sonarcloud: true
+     sonarcloud-project-organization: '{sonarcloud_project_organization}'
+     sonarcloud-api-token: '{sonarcloud_api_token}'
+     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
       - gerrit-cmake-sonar:
           build-timeout: 60
           pre-build: !include-raw-escape: ./vnfsdk-ves-agent-cpp.sh
           build-dir: $WORKSPACE/veslibrary/ves_cpplibrary/src/build
           cmake-opts: '-DENABLE_COVERAGE=on -DCOVERAGE_DIR=coverage'
-          sonarcloud-api-token: '{sonarcloud_api_token}'
+               sonarcloud-api-token: '{sonarcloud_api_token}'
           sonarcloud-organization: '{sonarcloud_project_organization}'
           sonarcloud-project-key: '{sonarcloud_project_organization}_vnfsdk-ves-agent'
           make-opts: -j6
