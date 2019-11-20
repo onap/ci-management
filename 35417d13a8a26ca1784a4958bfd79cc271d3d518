@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "9bff6cba_dfcb21e0",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-11-20T17:02:44Z",
+      "side": 1,
+      "message": "yes, including \"mod\" tag will help given the number of subcomponents (we could have separate view for dcae-mod as well). Andrew\u0027s dcaegen2-platform-aoadapter needs to be fixed also. Either you can include in this patch or this can done separate.",
+      "parentUuid": "883b741b_2f21eca1",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 40
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2dce7f50_cd5f910a",
         "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
         "patchSetId": 1
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "Actually I just realized that this should not have genprocessor since that is covered by \"subproject\".",
       "parentUuid": "2dce7f50_cd5f910a",
+      "range": {
+        "startLine": 4,
+        "startChar": 18,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0759dad_2fa37d1b",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-11-20T17:02:44Z",
+      "side": 1,
+      "message": "yes, missed to noticed it as well.. component name can be identified on the subproject",
+      "parentUuid": "0579e029_c9f26e2b",
       "range": {
         "startLine": 4,
         "startChar": 18,
