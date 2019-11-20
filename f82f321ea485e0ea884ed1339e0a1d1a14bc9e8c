@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8a2a5aa_d73af7f5",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-genprocessor.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-11-20T19:05:30Z",
+      "side": 1,
+      "message": "yes. this is right,,, please remove the comment",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 44
+      },
+      "revId": "f82f321ea485e0ea884ed1339e0a1d1a14bc9e8c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d7ae8bc_b49ee79c",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-genprocessor.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-11-20T19:05:30Z",
+      "side": 1,
+      "message": "Also right, please remove the comment",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 46
+      },
+      "revId": "f82f321ea485e0ea884ed1339e0a1d1a14bc9e8c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
