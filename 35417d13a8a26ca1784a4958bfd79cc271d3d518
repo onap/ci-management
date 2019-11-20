@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "883b741b_2f21eca1",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1071
+      },
+      "writtenOn": "2019-11-20T15:30:58Z",
+      "side": 1,
+      "message": "I was trying to be consistent with the acumos adapter jjb which uses the name \"dcaegen2-platform-aoadapter\" and doesn\u0027t have an intermediary group name.  You still want to stick in \"mod\"?",
+      "parentUuid": "1d09b3eb_ff21fe33",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 40
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2dce7f50_cd5f910a",
         "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2019-11-19T22:37:18Z",
       "side": 1,
       "message": "same as earlier; would add \"mod\" to the name",
+      "range": {
+        "startLine": 4,
+        "startChar": 18,
+        "endLine": 4,
+        "endChar": 47
+      },
+      "revId": "35417d13a8a26ca1784a4958bfd79cc271d3d518",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0579e029_c9f26e2b",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1071
+      },
+      "writtenOn": "2019-11-20T15:30:58Z",
+      "side": 1,
+      "message": "Actually I just realized that this should not have genprocessor since that is covered by \"subproject\".",
+      "parentUuid": "2dce7f50_cd5f910a",
       "range": {
         "startLine": 4,
         "startChar": 18,
