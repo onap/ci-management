@@ -19,6 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'          
     mvn-settings: 'sdc-sdc-be-common-settings'
     files: '**'
     archive-artifacts: ''
