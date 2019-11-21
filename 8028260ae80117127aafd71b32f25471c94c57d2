@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e31b34b8_322c3328",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4403
+      },
+      "writtenOn": "2019-11-21T22:54:35Z",
+      "side": 1,
+      "message": "I encourage you to use lf-activate-venv function to create local venvs. You could/should remove the \u0027-l\u0027 on the shebang line. \n\n# shellcheck disable\u003dSC1090\nsource ~/lf-env.sh\n\nlf-activate-venv lftools",
+      "revId": "8028260ae80117127aafd71b32f25471c94c57d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
