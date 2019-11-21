@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'          
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
