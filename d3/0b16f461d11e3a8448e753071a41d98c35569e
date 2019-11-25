@@ -1,0 +1,9 @@
+Code-Review+1: Kornel Janiak <kornel.janiak@nokia.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Piotr Wielebski <piotr.wielebski@nokia.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 25 Nov 2019 18:34:53 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/98497
+Project: ci-management
+Branch: refs/heads/master
