@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06f7559b_19635bb8",
+        "filename": "jjb/global-templates-java.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 2837
+      },
+      "writtenOn": "2019-11-25T13:59:47Z",
+      "side": 1,
+      "message": "Check spacing. Seems to differ with rest jobs and descriptions.",
+      "revId": "e7eb421b4c7c26df6177b7e30744a9336b54cde5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
