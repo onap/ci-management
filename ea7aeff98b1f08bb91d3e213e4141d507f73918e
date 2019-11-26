@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e6f2122_72289a95",
+        "filename": "jjb/vnfsdk/vnfsdk-ves-agent.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2019-11-26T20:30:27Z",
+      "side": 1,
+      "message": "This doesn\u0027t need to be here. There is no sonar-mvn-goal param in the gerrit-cmake-sonar job.",
+      "range": {
+        "startLine": 48,
+        "startChar": 10,
+        "endLine": 48,
+        "endChar": 93
+      },
+      "revId": "ea7aeff98b1f08bb91d3e213e4141d507f73918e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
