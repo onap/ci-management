@@ -4,7 +4,8 @@
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-verify-java':
+          java-version: openjdk11
       - '{project-name}-{stream}-{subproject}-merge-java':
           mvn-goals: 'clean install'
     subproject:
