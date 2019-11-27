@@ -6,6 +6,18 @@
   become_method: sudo
 
   tasks:
+    - apt_repository:
+        repo: ppa:jonathonf/python-3.6
+        state: present
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - apt_repository:
+        repo: ppa:deadsnakes/ppa
+        state: present
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
     - name: Update and upgrade apt packages
       apt:
         upgrade: yes
@@ -19,12 +31,6 @@
         state: present
       become: true
 
-    - apt_repository:
-        repo: ppa:jonathonf/python-3.6
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
     - name: Install Python 3.6 and packages
       apt:
         name:
@@ -34,6 +40,15 @@
           - libssl-dev
           - libmysqlclient-dev
           - gcc
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install Python 3.7
+      apt:
+        name:
+          - python3.7
+          - python3.7-dev
+          - python3.7-tk
       become: true
       when: ansible_distribution == 'Ubuntu'
 
