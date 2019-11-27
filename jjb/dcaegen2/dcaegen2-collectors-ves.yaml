@@ -2,6 +2,7 @@
 - project:
     name: dcaegen2-collectors-ves
     project-name: 'dcaegen2-collectors-ves'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
