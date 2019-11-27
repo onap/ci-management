@@ -35,8 +35,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'dcaegen2-services-sdk-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: ' -P integration-pairwise'
+    mvn-params: ' -P integration-pairwise'
 
 - project:
     name: dcaegen2-services-sdk-sonar
