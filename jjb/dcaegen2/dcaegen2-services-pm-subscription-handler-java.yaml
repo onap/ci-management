@@ -1,73 +1,69 @@
 ---
 - project:
-    name: dcaegen2-services-pmsh
-    project: 'dcaegen2/services'
-    project-name: 'dcaegen2-services'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    subproject:
-      - 'pmsh':
-          pom: 'components/pm-subscription-handler/pom.xml'
-          pattern: 'components/pm-subscription-handler/**'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
-    maven-deploy-properties: |
-      deployAtEnd=true
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1604-docker-8c-8g'
-
-- project:
     name: dcaegen2-services-pmsh-release
-    project: 'dcaegen2/services'
-    project-name: 'dcaegen2-services-pmsh'
+    project: dcaegen2/services
+    project-name: dcaegen2-services
+    python-version: python3
     jobs:
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          version-properties-file: 'components/pm-subscription-handler/version.properties'
-          mvn-pom: 'components/pm-subscription-handler/pom.xml'
-          mvn-goals: 'clean deploy -f components/pm-subscription-handler/pom.xml'
+          version-properties-file: 'services/components/pm-subscription-handler/version.properties'
+          mvn-pom: 'services/components/pm-subscription-handler/pom.xml'
+          mvn-goals: 'clean deploy -f services/components/pm-subscription-handler/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'components/pm-subscription-handler/**'
+          pattern: 'services/components/pm-subscription-handler/**'
       - '{project-name}-gerrit-release-jobs':
               build-node: centos7-docker-8c-8g
     stream:
       - 'master':
-          branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
+          branch: master
+    mvn-settings: dcaegen2-services-settings
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: ubuntu1604-docker-8c-8g
+
+- project:
+    name: dcaegen2-services-pmsh
+    project: dcaegen2/services
+    project-name: dcaegen2-services-pmsh
+    subproject:
+      - 'pmsh':
+          pom: 'services/components/pm-subscription-handler/pom.xml'
+          pattern: 'services/components/pm-subscription-handler/**'
+    mvn-settings: dcaegen2-services-settings
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1604-docker-8c-8g
+    # used by tox-install.sh to specify the interpreter used to install tox
+    python-version: python3
+    jobs:
+      # clm and tox
+      - '{project-name}-python-jobs'
+      # build docker image
+      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-release-version-java-daily'
+    stream:
+      - master:
+          branch: master
 
 - project:
     name: dcaegen2-services-pmsh-sonar
+    python-version: python3
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-tox-sonar
     cron: '@daily'
-    build-node: 'ubuntu1604-builder-4c-4g'
-    project: 'dcaegen2/services'
-    project-name: 'dcaegen2-services-pmsh'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
-    mvn-params: '-f components/pm-subscription-handler/pom.xml'
-    mvn-goals: 'clean install'
+    build-node: ubuntu1604-builder-4c-4g
+    project: dcaegen2/services
+    project-name: dcaegen2-services-pmsh
+    branch: master
+    mvn-settings: dcaegen2-services-settings
+    mvn-params: '-f services/components/pm-subscription-handler/pom.xml'
+    mvn-goals: 'clean test'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
-- project:
-    name: dcaegen2-services-pmsh-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    build-node: 'ubuntu1604-docker-8c-8g'
-    project: 'dcaegen2/services'
-    project-name: 'dcaegen2-services-pmsh'
-    mvn-params: '-f components/pm-subscription-handler/pom.xml'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'

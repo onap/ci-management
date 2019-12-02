@@ -1,9 +1,8 @@
 - project:
     name: dcaegen2-services-pmsh-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'dcaegen2-services-pmsh'
+    project-name: dcaegen2-services-pmsh
     recipients: 'lego@est.tech'
     disabled: true
     stream:
@@ -12,5 +11,5 @@
     functionality:
       - 'testsuites':
           trigger_jobs:
-            - '{project-name}-{stream}-pmsh-release-version-java-daily'
+            - '{project-name}-{stream}-release-version-java-daily'
     robot-options: ''
