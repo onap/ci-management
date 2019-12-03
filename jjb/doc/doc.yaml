@@ -8,6 +8,7 @@
 - project:
     name: doc
     project-name: 'doc'
+    python-version: python3
     jobs:
       - '{project-name}-{stream}-verify-rtd':
           build-node: centos7-docker-8c-8g
