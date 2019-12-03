@@ -2,18 +2,17 @@
 - project:
     name: dcaegen2-services-pmsh-release
     project: dcaegen2/services
-    project-name: dcaegen2-services
-    python-version: python3
+    project-name: dcaegen2-services-pmsh-release
     jobs:
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          version-properties-file: 'services/components/pm-subscription-handler/version.properties'
-          mvn-pom: 'services/components/pm-subscription-handler/pom.xml'
-          mvn-goals: 'clean deploy -f services/components/pm-subscription-handler/pom.xml'
+          version-properties-file: 'components/pm-subscription-handler/version.properties'
+          mvn-pom: 'components/pm-subscription-handler/pom.xml'
+          mvn-goals: 'clean deploy -f components/pm-subscription-handler/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'services/components/pm-subscription-handler/**'
+          pattern: 'components/pm-subscription-handler/**'
       - '{project-name}-gerrit-release-jobs':
               build-node: centos7-docker-8c-8g
     stream:
@@ -29,11 +28,11 @@
 - project:
     name: dcaegen2-services-pmsh
     project: dcaegen2/services
-    project-name: dcaegen2-services-pmsh
+    project-name: dcaegen2-services
     subproject:
       - 'pmsh':
-          pom: 'services/components/pm-subscription-handler/pom.xml'
-          pattern: 'services/components/pm-subscription-handler/**'
+          pom: 'components/pm-subscription-handler/pom.xml'
+          pattern: 'components/pm-subscription-handler/**'
     mvn-settings: dcaegen2-services-settings
     maven-deploy-properties: |
       deployAtEnd=true
@@ -46,8 +45,7 @@
       # clm and tox
       - '{project-name}-python-jobs'
       # build docker image
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-{stream}-{subproject}-merge-java'
     stream:
       - master:
           branch: master
@@ -63,7 +61,7 @@
     project-name: dcaegen2-services-pmsh
     branch: master
     mvn-settings: dcaegen2-services-settings
-    mvn-params: '-f services/components/pm-subscription-handler/pom.xml'
+    mvn-params: '-f components/pm-subscription-handler/pom.xml'
     mvn-goals: 'clean test'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
