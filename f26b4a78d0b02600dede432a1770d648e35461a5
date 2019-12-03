@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "738164a1_5d34edfb",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-03T18:49:45Z",
+      "side": 1,
+      "message": "dcaegen2-services-pmsh-release",
+      "range": {
+        "startLine": 5,
+        "startChar": 18,
+        "endLine": 5,
+        "endChar": 35
+      },
+      "revId": "f26b4a78d0b02600dede432a1770d648e35461a5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "726cbbcb_8dfee474",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-03T18:49:45Z",
+      "side": 1,
+      "message": "Why is this job required?",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 46
+      },
+      "revId": "f26b4a78d0b02600dede432a1770d648e35461a5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "182e5ad9_3501e0c2",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-03T18:49:45Z",
+      "side": 1,
+      "message": "Not valid template and attributing to current build failure. Release is handled by gerrit-maven-docker-stage hence separate job is not required.",
+      "range": {
+        "startLine": 49,
+        "startChar": 5,
+        "endLine": 49,
+        "endChar": 72
+      },
+      "revId": "f26b4a78d0b02600dede432a1770d648e35461a5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
