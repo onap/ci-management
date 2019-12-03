@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c969d2e3_e4f08bdf",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-12-03T10:40:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "76484278_ed23ed81",
+      "range": {
+        "startLine": 11,
+        "startChar": 37,
+        "endLine": 11,
+        "endChar": 98
+      },
+      "revId": "a0b8f5b2cc2bf5b9c1c6b545140c59456f8ed17b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d6e6565d_7bd682fd",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-12-03T04:45:28Z",
       "side": 1,
       "message": "there is no services directory; this is incorrect",
+      "range": {
+        "startLine": 12,
+        "startChar": 20,
+        "endLine": 12,
+        "endChar": 29
+      },
+      "revId": "a0b8f5b2cc2bf5b9c1c6b545140c59456f8ed17b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c81f374_5e4722a2",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-12-03T10:40:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d6e6565d_7bd682fd",
       "range": {
         "startLine": 12,
         "startChar": 20,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "20f870aa_c614dc4b",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-12-03T10:40:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7fbbddf3_b9c0c0db",
+      "range": {
+        "startLine": 16,
+        "startChar": 20,
+        "endLine": 16,
+        "endChar": 29
+      },
+      "revId": "a0b8f5b2cc2bf5b9c1c6b545140c59456f8ed17b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "78fa37af_9fec9db6",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
         "patchSetId": 2
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "bf020041_2a22d71d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-12-03T10:40:48Z",
+      "side": 1,
+      "message": "No consistency across projects. Very confusing as to how each Job should be configured. Using a subproject also confused things further.",
+      "parentUuid": "78fa37af_9fec9db6",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 60
+      },
+      "revId": "a0b8f5b2cc2bf5b9c1c6b545140c59456f8ed17b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e45d3f09_7d4f407f",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
         "patchSetId": 2
@@ -105,6 +201,30 @@
       "writtenOn": "2019-12-03T04:45:28Z",
       "side": 1,
       "message": "remove this",
+      "range": {
+        "startLine": 66,
+        "startChar": 21,
+        "endLine": 66,
+        "endChar": 29
+      },
+      "revId": "a0b8f5b2cc2bf5b9c1c6b545140c59456f8ed17b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08cdbf5f_3f1caf4d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-java.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2019-12-03T10:40:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e45d3f09_7d4f407f",
       "range": {
         "startLine": 66,
         "startChar": 21,
