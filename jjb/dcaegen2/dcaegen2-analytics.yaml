@@ -1,0 +1,8 @@
+---
+- project:
+    name: dcaegen2-analytics-info
+    project-name: dcaegen2-analytics
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/analytics
+    branch: master

@@ -1,0 +1,8 @@
+---
+- project:
+    name: dcaegen2-collectors-info
+    project-name: dcaegen2-collectors
+    jobs:
+      - gerrit-info-yaml-verify
+    project: dcaegen2/collectors
+    branch: master
