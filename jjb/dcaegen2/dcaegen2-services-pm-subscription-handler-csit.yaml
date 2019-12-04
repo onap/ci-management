@@ -4,7 +4,6 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: dcaegen2-services-pmsh
     recipients: 'lego@est.tech'
-    disabled: true
     stream:
       - 'master':
           branch: 'master'
