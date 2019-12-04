@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "486a998f_ab892994",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-04T14:41:29Z",
+      "side": 1,
+      "message": "This is new job being introduced for Frankfurt - this should not be removed.",
+      "revId": "c4c4fe17ba2e16c738c036a1eeb17340e1b83aa6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
