@@ -3,8 +3,7 @@
     name: dcaegen2-services-sdk
     project-name: 'dcaegen2-services-sdk'
     jobs:
-      - '{project-name}-{stream}-verify-java':
-          build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
+      - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-aftifacts: true
@@ -29,7 +28,8 @@
 - project:
     name: dcaegen2-services-sdk-integration-pairwise
     jobs:
-      - '{project-name}-{stream}-integration-pairwise'
+      - '{project-name}-{stream}-integration-pairwise':
+          build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
     build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/services/sdk'
     project-name: 'dcaegen2-services-sdk'
