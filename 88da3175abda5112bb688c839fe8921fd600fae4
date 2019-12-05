@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c74cf876_fb7d535b",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6044
+      },
+      "writtenOn": "2019-12-05T13:12:16Z",
+      "side": 1,
+      "message": "Indentation doesn\u0027t match rest of the file",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 46
+      },
+      "revId": "88da3175abda5112bb688c839fe8921fd600fae4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
