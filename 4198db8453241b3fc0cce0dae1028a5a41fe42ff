@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df6347d9_3faea5f5",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6044
+      },
+      "writtenOn": "2019-12-05T13:15:26Z",
+      "side": 1,
+      "message": "Indentation still different than rest of file, remove 2 spaces in each line",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 44
+      },
+      "revId": "4198db8453241b3fc0cce0dae1028a5a41fe42ff",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
