@@ -3,13 +3,15 @@
     name: dcaegen2-services-sdk
     project-name: 'dcaegen2-services-sdk'
     jobs:
-      - '{project-name}-{stream}-verify-java':
-          build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
+      -   '{project-name}-{stream}-verify-java':
+              build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
       - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-aftifacts: true
-          build-node: centos7-docker-8c-8g
-          maven-versions-plugin: true
+      -   gerrit-maven-stage:
+              sign-aftifacts: true
+              build-node: centos7-docker-8c-8g
+              maven-versions-plugin: true
+      -   '{project-name}-gerrit-release-jobs':
+              build-node: centos7-docker-8c-8g
 
     project: 'dcaegen2/services/sdk'
     stream:
