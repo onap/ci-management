@@ -6,7 +6,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
-          sign-aftifacts: true
+          sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
