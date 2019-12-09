@@ -32,8 +32,10 @@
     name: dcaegen2-platform-aoadapter
     # root of docker build
     docker-root: adapter/acumos
+    # tag override
+    docker-get-container-tag-script: ../../shell/docker-ts-tag-override.sh
     # image name
-    docker-name: '{name}'
+    docker-name: 'onap/{name}'
     stream:
       - master:
             branch: master
