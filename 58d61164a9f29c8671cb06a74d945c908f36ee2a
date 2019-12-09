@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f0987db_9f557b91",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1071
+      },
+      "writtenOn": "2019-12-09T17:14:31Z",
+      "side": 1,
+      "message": "I\u0027m assuming that \"dcaegen2_platform_common\" doesn\u0027t need to be defined here and in the other YAML.",
+      "revId": "58d61164a9f29c8671cb06a74d945c908f36ee2a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
