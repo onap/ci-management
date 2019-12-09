@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69ea6323_babc71c2",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-09T22:46:14Z",
+      "side": 1,
+      "message": "Would prefer single view for all MOD components, rather than separate view per component",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8aa93e69_7e4a9dbb",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-onboardingapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-09T22:46:14Z",
+      "side": 1,
+      "message": "same.. doesn\u0027t require unique view per component",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
