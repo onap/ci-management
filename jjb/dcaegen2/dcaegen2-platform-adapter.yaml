@@ -33,12 +33,15 @@
     # root of docker build
     docker-root: adapter/acumos
     # image name
-    docker-name: '{name}'
+    docker-name: 'onap/{name}'
     stream:
       - master:
             branch: master
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
+      - gerrit-docker-verify:
+          docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
+      - gerrit-docker-merge:
+          docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
 
 - project:
     <<: *dcaegen2_platform_common
