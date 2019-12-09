@@ -29,6 +29,10 @@
     name: dcaegen2-services-pmsh
     project: dcaegen2/services
     project-name: dcaegen2-services
+    tox-dir: components/pm-subscription-handler/
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/pm-subscription-handler/**'
     subproject:
       - 'pmsh':
           pom: 'components/pm-subscription-handler/pom.xml'
@@ -53,6 +57,10 @@
 - project:
     name: dcaegen2-services-pmsh-sonar
     python-version: python3
+    tox-dir: components/pm-subscription-handler/
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/pm-subscription-handler/**'
     jobs:
       - gerrit-tox-sonar
     cron: '@daily'
