@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "896ca438_e9ddaa9f",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2019-12-09T22:17:58Z",
+      "side": 1,
+      "message": "Please fix the trailing spaces..",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 46,
+        "endChar": 67
+      },
+      "revId": "8fa79e834963e0714df9d90a413f40713f351c7a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
