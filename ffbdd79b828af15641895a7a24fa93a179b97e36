@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2b660ea7_5243ba7e",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "why repeat this for each job? Instead put docker-get-container-tag-script setting into the settings above, then it appears exactly once.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 3
+      },
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68c1fc45_4a4dc37b",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "Set options so the script stops if anything fails\n\n    set -feu -o pipefail",
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04000f23_dff20e92",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "Start with an echo command showing the shell script name\n\n    echo \"--\u003e docker-ts-tag-override.sh\"",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 1
+      },
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9edeae77_78aa5688",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "why not get the tag from the container-tag.yaml file and just tack on the timestamp?  I thought you were trying to get AWAY from Maven pom.xml files; this casts them further into concrete.\n\nAlso, all upper case is for environment variables. shell variables should use lower case.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 7
+      },
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6412f60e_ae1bd040",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "Similar, shell variables should be lower case",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 9
+      },
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab18abaf_04773dd6",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-09T20:10:56Z",
+      "side": 1,
+      "message": "Similar, shell variables should be lower case",
+      "range": {
+        "startLine": 30,
+        "startChar": 1,
+        "endLine": 30,
+        "endChar": 4
+      },
+      "revId": "ffbdd79b828af15641895a7a24fa93a179b97e36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
