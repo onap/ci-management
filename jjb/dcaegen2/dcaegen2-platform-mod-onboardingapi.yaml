@@ -1,0 +1,40 @@
+---
+# dcagen2_platform_common is defined in dcaegen2-platform-adapter.yaml
+
+- project:
+    name: dcaegen2-platform-mod-onboardingapi-project-view
+    project-name: dcaegen2-platform-mod-onboardingapi
+    views:
+      - project-view
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-mod-onboardingapi
+    # root of docker build
+    docker-root: mod/onboardingapi
+    # image name
+    docker-name: '{name}'
+    stream:
+      - master:
+            branch: master
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcagen2-platform-mod-onboardingapi-verify
+    docker-root: mod/onboardingapi
+    stream:
+      - all:
+            branch: '*'
+    jobs:
+      - gerrit-tox-verify
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-mod-onboardingapi-sonar
+    docker-root: mod/onboardingapi
+    branch: master
+    jobs:
+      - gerrit-tox-sonar
+    cron: '@daily'
