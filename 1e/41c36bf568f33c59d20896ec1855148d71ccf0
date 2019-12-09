@@ -1,0 +1,9 @@
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Code-Review+1: Jonathan Gathman <jonathan.gathman@att.com>
+Code-Review+1: Sai Gandham <sai.gandham@att.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 09 Dec 2019 21:22:38 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/98542
+Project: ci-management
+Branch: refs/heads/master
