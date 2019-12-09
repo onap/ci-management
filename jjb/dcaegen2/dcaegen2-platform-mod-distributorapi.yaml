@@ -1,0 +1,41 @@
+---
+# dcagen2_platform_common is defined in dcaegen2-platform-adapter.yaml
+
+- project:
+    name: dcaegen2-platform-mod-distributorapi-project-view
+    project-name: dcaegen2-platform-mod-distributorapi
+    views:
+      - project-view
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-mod-distributorapi
+    # root of docker build
+    docker-root: mod/distributorapi
+    # image name
+    docker-name: '{name}'
+    stream:
+      - master:
+            branch: master
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcagen2-platform-mod-distributorapi
+    # name: dcagen2-platform-mod-distributorapi-verify
+    docker-root: mod/distributorapi
+    stream:
+      - all:
+            branch: '*'
+    jobs:
+      - gerrit-tox-verify
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-mod-distributorapi-sonar
+    docker-root: mod/distributorapi
+    branch: master
+    jobs:
+      - gerrit-tox-sonar
+    cron: '@daily'
