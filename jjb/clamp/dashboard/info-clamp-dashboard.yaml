@@ -1,0 +1,8 @@
+---
+- project:
+    name: clamp-dashboard-info
+    project-name: clamp-dashboard
+    jobs:
+      - gerrit-info-yaml-verify
+    project: clamp/dashboard
+    branch: master
