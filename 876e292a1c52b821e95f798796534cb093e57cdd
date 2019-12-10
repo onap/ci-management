@@ -1,0 +1,245 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95ad9199_a4013119",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "This is the wrong place for this setting.",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 3
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82bf447f_862c1b1a",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Put the docker-get-container-tag-script HERE, not in the common.  It is only needed for these two jobs.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 2
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3d4c68a_34952cd1",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Remove trailing colon",
+      "range": {
+        "startLine": 42,
+        "startChar": 28,
+        "endLine": 42,
+        "endChar": 29
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "882708b1_ba567e75",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 43,
+        "startChar": 27,
+        "endLine": 43,
+        "endChar": 28
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c8abd16_d8e591ff",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Put the trailing \"Z\" here instead of writing it twice below",
+      "range": {
+        "startLine": 26,
+        "startChar": 31,
+        "endLine": 26,
+        "endChar": 34
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebee6284_24a6f84d",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Suggest using spaces, not tabs, to indent shell.",
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dbbec379_6854f71e",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "ditto for tab/space",
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29f835ef_cf5a8c88",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Remove trailing WS",
+      "range": {
+        "startLine": 42,
+        "startChar": 59,
+        "endLine": 42,
+        "endChar": 60
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d29f0baa_6ecc8968",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "remove trailing WS",
+      "range": {
+        "startLine": 43,
+        "startChar": 51,
+        "endLine": 43,
+        "endChar": 52
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47bf99ee_01fc2a0d",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Why is this line repeated?  Remove",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 5
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6b5158c_32417ffd",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-10T11:26:22Z",
+      "side": 1,
+      "message": "Why is this here??  Is this some leftover testing code?",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 1
+      },
+      "revId": "876e292a1c52b821e95f798796534cb093e57cdd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
