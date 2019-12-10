@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-by: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-at: Tue, 10 Dec 2019 18:53:50 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/99437
+Project: ci-management
+Branch: refs/heads/master
