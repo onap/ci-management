@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "0c6cedd6_35128e48",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1071
+      },
+      "writtenOn": "2019-12-10T21:12:38Z",
+      "side": 1,
+      "message": "Should I create a \"dcaegen2-platform-mod.yaml\" file and stick in the \"dcaegen2-platform-mod view\" there?  And delete these other ones?  I\u0027m not clear on how this \"mod view\" will be linked or show just the mod items.",
+      "parentUuid": "95ecb2c5_95d6e4bc",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8aa93e69_7e4a9dbb",
         "filename": "jjb/dcaegen2/dcaegen2-platform-mod-onboardingapi.yaml",
         "patchSetId": 2
