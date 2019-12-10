@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3b7c4489_f0acb741",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1071
+      },
+      "writtenOn": "2019-12-10T15:23:11Z",
+      "side": 1,
+      "message": "Does this mean I should remove these and we will rely on the \"dcaegen2-platform-aoadapter-project-view\"?",
+      "parentUuid": "69ea6323_babc71c2",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8aa93e69_7e4a9dbb",
         "filename": "jjb/dcaegen2/dcaegen2-platform-mod-onboardingapi.yaml",
         "patchSetId": 2
