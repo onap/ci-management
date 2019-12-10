@@ -12,6 +12,7 @@
 
     project: 'dmaap/dbcapi'
     mvn-settings: 'dmaap-dbcapi-settings'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: 'master'
@@ -35,6 +36,7 @@
     mvn-settings: 'dmaap-dbcapi-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: dmaap-dbcapi-clm
@@ -45,6 +47,7 @@
     project-name: 'dmaap-dbcapi'
     branch: 'master'
     mvn-settings: 'dmaap-dbcapi-settings'
+    java-version: openjdk11
 
 - project:
     name: dmaap-dbcapi-info
