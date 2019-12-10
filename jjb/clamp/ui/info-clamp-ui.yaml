@@ -1,0 +1,8 @@
+---
+- project:
+    name: clamp-ui-info
+    project-name: clamp-ui
+    jobs:
+      - gerrit-info-yaml-verify
+    project: clamp/ui
+    branch: master
