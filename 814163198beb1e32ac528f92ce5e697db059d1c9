@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "95ecb2c5_95d6e4bc",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-10T20:27:21Z",
+      "side": 1,
+      "message": "Adapter can be separate.. All MOD jobs can be consolidated under \"dcaegen2-platform-mod view\"",
+      "parentUuid": "3b7c4489_f0acb741",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8aa93e69_7e4a9dbb",
         "filename": "jjb/dcaegen2/dcaegen2-platform-mod-onboardingapi.yaml",
         "patchSetId": 2
