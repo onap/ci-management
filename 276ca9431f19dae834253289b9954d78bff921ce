@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c2f43eb4_d274ef8f",
+        "filename": "shell/run_releasedockerhub.sh",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4403
+      },
+      "writtenOn": "2019-12-11T16:36:29Z",
+      "side": 1,
+      "message": "Dont you need a license header ? TOX should have caught this.",
+      "revId": "276ca9431f19dae834253289b9954d78bff921ce",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
