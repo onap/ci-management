@@ -16,8 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'policy-parent-settings'
     files: '**'
     archive-artifacts: ''
