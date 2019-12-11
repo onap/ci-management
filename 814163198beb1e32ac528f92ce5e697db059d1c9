@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "075ebf78_71b05807",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-distributorapi.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-11T16:04:41Z",
+      "side": 1,
+      "message": "I have not dealt much with views, not sure on the linking. Don\u0027t seem to have permission to test/create view on Sandbox either. We can address this later probably, removing my -1\n\nJess/Chris - Can you advise on the steps for creating a view shared across multiple components/jobs?",
+      "parentUuid": "0c6cedd6_35128e48",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 20
+      },
+      "revId": "814163198beb1e32ac528f92ce5e697db059d1c9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8aa93e69_7e4a9dbb",
         "filename": "jjb/dcaegen2/dcaegen2-platform-mod-onboardingapi.yaml",
         "patchSetId": 2
