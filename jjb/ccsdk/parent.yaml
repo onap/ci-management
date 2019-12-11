@@ -6,6 +6,7 @@
       - gerrit-maven-verify
       - gerrit-maven-merge:
           cron: '@daily'
+          mvn-params: '-P dependency-list'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true

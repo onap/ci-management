@@ -10,7 +10,8 @@
     project-name: 'ccsdk-apps'
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-merge-java':
+          mvn-params: '-P dependency-list'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
