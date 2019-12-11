@@ -48,7 +48,7 @@
     branch: 'master'
     mvn-settings: 'ccsdk-features-settings'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx2048m -XX:MaxPermSize=512m'
+    mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
     maven-version: "mvn35"
 
 - project:
