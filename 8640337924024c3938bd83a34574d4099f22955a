@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6fad7570_262b2ea7",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-12T22:21:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af9eda3e_931008ed",
+      "range": {
+        "startLine": 36,
+        "startChar": 37,
+        "endLine": 36,
+        "endChar": 38
+      },
+      "revId": "8640337924024c3938bd83a34574d4099f22955a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "93a972ac_c13fad94",
         "filename": "shell/docker-ts-tag-override.sh",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "3b965470_0e589c93",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-12T22:21:13Z",
+      "side": 1,
+      "message": "orginally had this to cover cases pom file is not found - which will now error with set -e pipefail. Revised to check for semver validation instead",
+      "parentUuid": "93a972ac_c13fad94",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 23
+      },
+      "revId": "8640337924024c3938bd83a34574d4099f22955a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6bfb3fcc_10bcb64f",
         "filename": "shell/docker-ts-tag-override.sh",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2019-12-12T21:00:08Z",
       "side": 1,
       "message": "Please rewrite to:\n\n    echo \"INFO: docker tag is $tag\"",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 5
+      },
+      "revId": "8640337924024c3938bd83a34574d4099f22955a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6698048e_8bf97ef7",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-12T22:21:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6bfb3fcc_10bcb64f",
       "range": {
         "startLine": 40,
         "startChar": 0,
