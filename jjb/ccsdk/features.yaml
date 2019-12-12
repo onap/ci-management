@@ -29,7 +29,7 @@
     files: '**'
     archive-artifacts: ''
     maven-version: "mvn35"
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx2048m -XX:MaxPermSize=512m'
     build-node: ubuntu1604-builder-4c-4g
 
 - project:
