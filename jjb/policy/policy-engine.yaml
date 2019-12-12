@@ -46,7 +46,7 @@
     branch: 'master'
     mvn-settings: 'policy-engine-settings'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx2048m -XX:MaxPermSize=512m'
 
 - project:
     name: policy-engine-clm
