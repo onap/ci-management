@@ -3,10 +3,12 @@
     name: ccsdk-dashboard
     project-name: 'ccsdk-dashboard'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
+          cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
+          cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
@@ -25,6 +27,8 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
 
 - project:
     name: ccsdk-dashboard-sonar

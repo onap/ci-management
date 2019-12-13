@@ -3,12 +3,14 @@
     name: ccsdk-sli-plugins
     project-name: 'ccsdk-sli-plugins'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
           mvn-params: '-P dependency-list'
+          cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
+          cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
@@ -30,6 +32,8 @@
     archive-artifacts: ''
     maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
 
 - project:
     name: ccsdk-sli-plugins-sonar
