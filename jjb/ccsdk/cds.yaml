@@ -3,13 +3,15 @@
     name: ccsdk-cds
     project-name: 'ccsdk-cds'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
+          cron: '@daily'
           mvn-params: '-P dependency-list'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
           maven-versions-plugin: true
+          cron: ''
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
@@ -17,6 +19,7 @@
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-version: "mvn35"
           maven-versions-plugin: true
+          cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 

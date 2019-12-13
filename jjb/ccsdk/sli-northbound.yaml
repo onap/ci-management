@@ -3,11 +3,13 @@
     name: ccsdk-sli-northbound
     project-name: 'ccsdk-sli-northbound'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
           mvn-params: '-P dependency-list'
+          cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
+          cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
