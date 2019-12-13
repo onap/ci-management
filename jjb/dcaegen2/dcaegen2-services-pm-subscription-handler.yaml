@@ -1,75 +1,81 @@
 ---
-- project:
-    name: dcaegen2-services-pmsh-release
+- dcaegen2_services_common: &dcaegen2_services_common
+    # values apply to all dcaegen2_services docker projects
+    name: dcaegen2-services-docker-common
     project: dcaegen2/services
+    # maven settings file has docker credentials
+    mvn-settings: dcaegen2-services-settings
+    # use host network to clone from our gerrit
+    container-tag-method: latest
+    build-node: ubuntu1604-docker-8c-8g
+    # jenkins job name prefix
+    project-name: '{name}'
+    tox-dir: '{docker-root}'
+    # build only on relevant changes
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '{docker-root}/.*'
+
+- project:
+    <<: *dcaegen2_services_common
+    name: dcaegen2-services-pmsh
+    # root of docker build
+    docker-root: components/pm-subscription-handler
+    # tag override
+    # Following is dependent on merge https://gerrit.onap.org/r/#/c/ci-management/+/99313/
+    # docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
+    # image name
+    docker-name: 'onap/{name}'
+    stream:
+      - master:
+            branch: master
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge
+
+- project:
+    <<: *dcaegen2_services_common
+    name: dcaegen2-services-pmsh-verify
+    docker-root: components/pm-subscription-handler
+    stream:
+      - all:
+            branch: '*'
+    jobs:
+      - gerrit-tox-verify
+
+- project:
+    <<: *dcaegen2_services_common
+    name: dcaegen2-services-pmsh-sonar
+    docker-root: components/pm-subscription-handler
+    branch: master
+    jobs:
+      - gerrit-tox-sonar
+    cron: '@daily'
+
+- project:
+    <<: *dcaegen2_services_common
+    docker-root: components/pm-subscription-handler
+    name: dcaegen2-services-pmsh-release
     project-name: dcaegen2-services-pmsh-release
     jobs:
-      - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
-          maven-versions-plugin: true
-          version-properties-file: 'components/pm-subscription-handler/version.properties'
-          mvn-pom: 'components/pm-subscription-handler/pom.xml'
-          mvn-goals: 'clean deploy -f components/pm-subscription-handler/pom.xml'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'components/pm-subscription-handler/**'
       - '{project-name}-gerrit-release-jobs':
               build-node: centos7-docker-8c-8g
     stream:
       - 'master':
           branch: master
-    mvn-settings: dcaegen2-services-settings
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
 
 - project:
-    name: dcaegen2-services-pmsh
-    project: dcaegen2/services
-    project-name: dcaegen2-services
-    tox-dir: components/pm-subscription-handler/
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'components/pm-subscription-handler/**'
-    subproject:
-      - 'pmsh':
-          pom: 'components/pm-subscription-handler/pom.xml'
-          pattern: 'components/pm-subscription-handler/**'
-    mvn-settings: dcaegen2-services-settings
-    maven-deploy-properties: |
-      deployAtEnd=true
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
-    # used by tox-install.sh to specify the interpreter used to install tox
-    python-version: python3
+    <<: *dcaegen2_services_common
+    name: dcaegen2-services-pmsh-clm
+    docker-root: components/pm-subscription-handler
     jobs:
-      # clm and tox
-      - '{project-name}-python-jobs'
-      # build docker image
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    stream:
-      - master:
-          branch: master
-
-- project:
-    name: dcaegen2-services-pmsh-sonar
-    python-version: python3
-    tox-dir: components/pm-subscription-handler/
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'components/pm-subscription-handler/**'
-    jobs:
-      - gerrit-tox-sonar
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: dcaegen2/services
-    project-name: dcaegen2-services-pmsh
-    branch: master
-    mvn-settings: dcaegen2-services-settings
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project-name: 'dcaegen2-services-pmsh-clm'
     mvn-params: '-f components/pm-subscription-handler/pom.xml'
-    mvn-goals: 'clean test'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    branch: 'master'
 
