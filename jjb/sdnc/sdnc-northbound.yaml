@@ -3,11 +3,13 @@
     name: sdnc-northbound
     project-name: 'sdnc-northbound'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
+          cron: '@daily'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
+          cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
@@ -30,6 +32,7 @@
     archive-artifacts: ''
     maven-version: "mvn35"
     build-node: ubuntu1604-builder-4c-4g
+    mvn-snapshot-id: 'ecomp-snapshots'
 
 - project:
     name: sdnc-northbound-sonar
