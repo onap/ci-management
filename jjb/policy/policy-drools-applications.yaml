@@ -57,6 +57,7 @@
     project-name: 'policy-drools-applications'
     branch: 'master'
     mvn-settings: 'policy-drools-applications-settings'
+    build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: policy-drools-applications-info
