@@ -60,3 +60,15 @@
     jobs:
       - gerrit-tox-sonar
     cron: '@daily'
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-aoadapter-clm
+    docker-root: adapter/acumos
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project-name: 'dcaegen2-platform-aoadapter-clm'
+    mvn-params: '-f adapter/acumos/pom.xml'
+    branch: 'master'
+

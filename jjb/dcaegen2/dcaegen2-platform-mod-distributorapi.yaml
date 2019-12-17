@@ -32,3 +32,14 @@
     jobs:
       - gerrit-tox-sonar
     cron: '@daily'
+
+- project:
+    <<: *dcaegen2_platform_common
+    name: dcaegen2-platform-mod-distributorapi-clm
+    docker-root: mod/distributorapi
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project-name: 'dcaegen2-platform-mod-distributorapi-clm'
+    mvn-params: '-f mod/distributorapi/pom.xml'
+    branch: 'master'
