@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "886f5eba_69efe04d",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2019-12-17T16:23:42Z",
+      "side": 1,
+      "message": "Should have left this as \u0027{project-name}-gerrit-docker-jobs\u0027",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 44,
+        "endChar": 27
+      },
+      "revId": "7b537f98ada1ff324a2705a48fb1a7c692af653d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
