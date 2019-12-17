@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f9c74646_6569a766",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-17T16:16:28Z",
+      "side": 1,
+      "message": "Added log to print out pom version retrieved. What is being used for tag is logged already (#43)",
+      "parentUuid": "5311000b_fccc5333",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 2
+      },
+      "revId": "6a608c7c050027c4e2ec439715ab23f67459482d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "343932f5_7d2c55b2",
         "filename": "shell/docker-ts-tag-override.sh",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-12-16T22:07:25Z",
       "side": 1,
       "message": "I think that if this script is going to discard a version string that\u0027s not perfectly semver AFTER stripping any non-numbers, it needs to be very vocal about it (not silent), print WARNING etc etc.",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 16
+      },
+      "revId": "6a608c7c050027c4e2ec439715ab23f67459482d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf979eae_e3415ccf",
+        "filename": "shell/docker-ts-tag-override.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2019-12-17T16:16:28Z",
+      "side": 1,
+      "message": "Good point; added necessary logging",
+      "parentUuid": "343932f5_7d2c55b2",
       "range": {
         "startLine": 39,
         "startChar": 2,
