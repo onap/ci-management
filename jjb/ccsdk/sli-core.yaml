@@ -5,7 +5,6 @@
     jobs:
       - gerrit-maven-verify
       - gerrit-maven-merge:
-          mvn-params: '-P dependency-list'
           cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
