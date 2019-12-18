@@ -31,6 +31,7 @@
     project-name: 'policy-parent'
     branch: 'master'
     mvn-settings: 'policy-parent-settings'
+    java-version: openjdk11
 
 - project:
     name: policy-parent-info
