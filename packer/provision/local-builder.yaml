@@ -7,12 +7,6 @@
 
   tasks:
     - apt_repository:
-        repo: ppa:jonathonf/python-3.6
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - apt_repository:
         repo: ppa:deadsnakes/ppa
         state: present
       become: true
