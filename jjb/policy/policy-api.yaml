@@ -5,19 +5,47 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
+          project-name: 'policy-api-amd64'
           docker-pom: 'pom.xml'
-          mvn-params: '-P docker'
+          mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
           build-node: ubuntu1604-docker-8c-8g
+          pattern: 'do_not_match_any_file'
+      - '{project-name}-{stream}-merge-java':
+          project-name: 'policy-api-arm64'
+          docker-pom: 'pom.xml'
+          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+          pattern: 'do_not_match_any_file'
+      - '{project-name}-multiarch-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
+          project-name: 'policy-api-amd64'
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+          cron: ''
+          gerrit_trigger_file_paths:
+             - compare-type: REG_EXP
+               pattern: 'do_not_match_any_file'
+      - gerrit-maven-docker-stage:
+          project-name: 'policy-api-arm64'
+          build-node: ubuntu1604-docker-arm64-4c-2g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
+          container-public-registry: 'docker.io'
+          container-staging-registry: 'docker.io'
+          cron: ''
+          gerrit_trigger_file_paths:
+             - compare-type: REG_EXP
+               pattern: 'do_not_match_any_file'
+      - '{project-name}-docker-manifest-{stream}':
+          build-node: ubuntu1604-docker-8c-8g
+      - '{project-name}-multiarch-docker-stage-{stream}'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
@@ -26,6 +54,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-api-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
@@ -38,13 +67,14 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
+    sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     build-node: ubuntu1604-builder-4c-4g
     project: 'policy/api'
     project-name: 'policy-api'
     branch: 'master'
     mvn-settings: 'policy-api-settings'
+    java-version: openjdk11
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -57,11 +87,13 @@
     project-name: 'policy-api'
     branch: 'master'
     mvn-settings: 'policy-api-settings'
+    java-version: openjdk11
 
 - project:
     name: policy-api-info
     project-name: policy-api
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: policy/api
     branch: master
