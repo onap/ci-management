@@ -15,3 +15,11 @@
       - 'vCPE':
           trigger_jobs:
     robot-options: ''
+
+- project:
+    name: integration-csit-info
+    project-name: integration-csit
+    jobs:
+      - gerrit-info-yaml-verify
+    project: integration/csit
+    branch: master
