@@ -29,7 +29,6 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'sdc-microservices-settings'
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
@@ -44,7 +43,6 @@
     project: 'sdc/microservices'
     project-name: 'sdc-microservices'
     branch: 'master'
-    mvn-settings: 'sdc-microservices-settings'
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
@@ -57,7 +55,6 @@
     project: sdc/microservices
     project-name: 'sdc-microservices'
     branch: 'master'
-    mvn-settings: 'sdc-microservices-settings'
 
 - project:
     name: sdc-microservices-info
