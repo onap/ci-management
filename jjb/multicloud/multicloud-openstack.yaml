@@ -52,6 +52,10 @@
 #          path: 'lenovo'
 #          pattern: 'share/**'
 #          pom: 'lenovo/pom.xml'
+      - 'hpa':
+          path: 'hpa'
+          pattern: 'hpa/**'
+          pom: 'hpa/pom.xml'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-verify-java'
@@ -197,6 +201,25 @@
 #    mvn-settings: 'multicloud-openstack-settings'
 #    mvn-goals: 'clean install'
 #    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: multicloud-openstack-hpa-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'multicloud/openstack'
+    project-name: 'multicloud-openstack-hpa'
+    branch: 'master'
+    mvn-params: '-f hpa/pom.xml'
+    mvn-settings: 'multicloud-openstack-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
     name: multicloud-openstack-info
