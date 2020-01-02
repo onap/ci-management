@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ce60046_0aa592dd",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 477
+      },
+      "writtenOn": "2020-01-02T18:10:06Z",
+      "side": 1,
+      "message": "Can you explain a little, how it works to have 2 identical entries here and in \"gerrit-maven-docker-stage\" to generate the 2 builds?  Is there a wiki page that I could look at to get a little more background?  Thank you.",
+      "revId": "9548222e567c204c0c7dd43484d74d813a804497",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
