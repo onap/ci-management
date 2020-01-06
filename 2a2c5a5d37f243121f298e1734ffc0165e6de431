@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e1c894a_78c17ec6",
+        "filename": "jjb/lf-infra-releasedockerhub.yaml",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2020-01-06T06:41:32Z",
+      "side": 1,
+      "message": "Is this possible to make this a trigger job based on some kind of event or when an upstream job has completed staging the images, instead of running this periodic? Based on the past experience, periodic jobs are a hassle when the job are not maintained or unattended and the costs keeps increasing when keep failing and running in a loop endlessly.",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 28
+      },
+      "revId": "2a2c5a5d37f243121f298e1734ffc0165e6de431",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
