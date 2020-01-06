@@ -16,6 +16,24 @@
       "revId": "9548222e567c204c0c7dd43484d74d813a804497",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c98b9cf8_03643420",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5109
+      },
+      "writtenOn": "2020-01-06T15:14:22Z",
+      "side": 1,
+      "message": "The entries have different project name, one for amd64, the other for arm64. This was done in order to use the same template for both jobs, but without modifying the original template. The main reason was for the staging job, which is in global jjb and it would be difficult to modify it upstream. So the same approach was used for both merge and staging jobs. \n\nhttps://wiki.onap.org/display/DW/Migration+to+DockerHub describes what has been done for the multiarch effort. I will add the reasoning to this approach in the documentation there.",
+      "parentUuid": "2ce60046_0aa592dd",
+      "revId": "9548222e567c204c0c7dd43484d74d813a804497",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
