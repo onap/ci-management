@@ -22,6 +22,30 @@
       "revId": "8dc2d344a45242d462d9da40062cf2b07b229ecc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c72afbe_6ff70eaf",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-07T23:36:08Z",
+      "side": 1,
+      "message": "oh... funny it worked with yes for me... \nbut for consistency let me change it.. \n\nThanks!",
+      "parentUuid": "52dd621f_94b49307",
+      "range": {
+        "startLine": 34,
+        "startChar": 14,
+        "endLine": 34,
+        "endChar": 17
+      },
+      "revId": "8dc2d344a45242d462d9da40062cf2b07b229ecc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
