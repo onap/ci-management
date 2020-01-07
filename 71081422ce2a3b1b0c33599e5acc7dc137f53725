@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87dcfdb4_099c7687",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-designtool.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-07T23:31:15Z",
+      "side": 1,
+      "message": "Sorry missed this... \n\nthe mvn-settings should match the project name cloned. In this case, it should be dcaegen2-utils-settings",
+      "range": {
+        "startLine": 33,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 61
+      },
+      "revId": "71081422ce2a3b1b0c33599e5acc7dc137f53725",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
