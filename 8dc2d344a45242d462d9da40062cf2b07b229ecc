@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52dd621f_94b49307",
+        "filename": "packer/provision/redis.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2020-01-07T23:34:08Z",
+      "side": 1,
+      "message": "Should this be \"true\"?",
+      "range": {
+        "startLine": 34,
+        "startChar": 14,
+        "endLine": 34,
+        "endChar": 17
+      },
+      "revId": "8dc2d344a45242d462d9da40062cf2b07b229ecc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
