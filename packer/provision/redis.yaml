@@ -23,3 +23,12 @@
         name: redis
         state: started
       become: true
+
+    - name: Install Python 3.6 and packages
+      yum:
+        name:
+          - python36u
+          - python36u-libs
+          - python36u-devel
+        state: latest
+      become: true
