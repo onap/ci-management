@@ -23,3 +23,12 @@
         name: redis
         state: started
       become: true
+
+    - name: Install Python dependency packages for mysqlclient
+      yum:
+        name:
+          - python-devel
+          - mysql-devel
+          - python3-devel
+        state: latest
+      become: yes
