@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Code-Review+1: Tim Johnson <tijohnson@linuxfoundation.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Tue, 07 Jan 2020 05:41:54 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/97721
+Project: ci-management
+Branch: refs/heads/master
