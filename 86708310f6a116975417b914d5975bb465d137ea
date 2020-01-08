@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c57ffea_a34e6f4c",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "If I define a common macro, I try to make it the absolute least common denominator.  Unfortunately this macro sets some options specific to docker templates, but is included in non-docker templates. It also sets some options specific to python templates.  Are you interested in cleaning it up?  If so, move these out: docker-build-args, container-tag-method, tox-dir.  But  gerrit_trigger_file_paths might stay since this is a subdirectory in a repo.",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "796167cb_ef4d1ac4",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "project-name does not belong in a common macro. every other project (except one of course) must override.  better to move it out entirely.",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 19,
+        "endChar": 26
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e24400eb_41c0e62b",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "it\u0027s unfortunate that this gets repeated in every project.  would you consider refactoring?",
+      "range": {
+        "startLine": 36,
+        "startChar": 4,
+        "endLine": 36,
+        "endChar": 31
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74499249_703d2aca",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "repeat",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 31
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbd804e8_f8b61f9a",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "repeat",
+      "range": {
+        "startLine": 60,
+        "startChar": 4,
+        "endLine": 60,
+        "endChar": 15
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0762fa67_894a0387",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-08T18:05:22Z",
+      "side": 1,
+      "message": "repeat",
+      "range": {
+        "startLine": 69,
+        "startChar": 4,
+        "endLine": 69,
+        "endChar": 15
+      },
+      "revId": "86708310f6a116975417b914d5975bb465d137ea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
