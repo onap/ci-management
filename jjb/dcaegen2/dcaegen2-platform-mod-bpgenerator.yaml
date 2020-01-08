@@ -15,7 +15,7 @@
           version-properties-file: 'mod/bpgenerator/version.properties'
           mvn-pom: 'mod/bpgenerator/pom.xml'
           mvn-params: '-f mod/bpgenerator/pom.xml'
-          pattern: 'mode/bpgenerator/**'
+          pattern: 'mod/bpgenerator/**'
     subproject:
       - 'bpgenerator':
           pom: 'mode/bpgenerator/pom.xml'
