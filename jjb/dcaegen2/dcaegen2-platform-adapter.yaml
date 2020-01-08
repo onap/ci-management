@@ -6,6 +6,8 @@
     project: dcaegen2/platform
     # maven settings file has docker credentials
     mvn-settings: dcaegen2-platform-settings
+    # run maven based steps (clm/sonar) in sub-project directory
+    mvn-params: '-f {docker-root}/pom.xml'
     # use host network to clone from our gerrit
     docker-build-args: '--network=host'
     # source of docker tag
@@ -69,6 +71,5 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project-name: 'dcaegen2-platform-aoadapter-clm'
-    mvn-params: '-f adapter/acumos/pom.xml'
     branch: 'master'
 
