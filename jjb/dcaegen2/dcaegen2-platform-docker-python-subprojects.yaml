@@ -1,0 +1,94 @@
+---
+- job-group:
+    # This job group contains all the jobs that should be deployed for
+    # a subproject of dcaegen2/platform that builds a Docker image from
+    # Python code.
+    #
+    # Required parameters:
+    #  build-node: The node to run build on.
+    #  mvn-settings: Maven settings.xml file containing credentials to use.
+    #  project-name: The job name prefix
+    #  src-dir: The subdirectory of the repository containing subproject code
+    #  stream: The stream to build
+    #  branch: The branch to build
+    #
+    #  Note: Multiple subprojects can be built with a single JJB project
+    #  by specifying the value of project-name as a list.
+    #  Similarly, multiple streams can be built with a single JJB project
+    #  by specifying the value of the stream as a list.
+    #  For example:
+    #    project-name:
+    #      - subproject-name1:
+    #          src-dir: subproject-dir1
+    #      - subproject-name2:
+    #          src-dir: subproject-dir2
+    #      - subproject-name3:
+    #          src-dir: subproject-dir3
+    #    stream:
+    #      - master:
+    #          branch: master
+    #      - release1:
+    #          branch: release1.0
+    #    jobs:
+    #      - dcaegen2-docker-python-jobs
+
+    name: '{project-name}-dcaegen2-docker-python-jobs'
+    id: dcaegen2-docker-python-jobs
+    container-tag-method: latest
+    docker-get-container-tag-script: ../../shell/docker-ts-tag-override.sh
+    nexus-iq-namespace: 'onap-'
+    tox-dir: '{src-dir}'
+    docker-root: '{src-dir}'
+    docker-name: 'onap/{project-name}'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '{src-dir}/.*'
+    jobs:
+      - gerrit-tox-verify:
+          stream: all
+          branch: '*'
+      - gerrit-docker-verify
+      - gerrit-docker-merge
+      - gerrit-maven-clm:
+          mvn-params: '-f {src-dir}'
+          stream: master
+          branch: master
+      - gerrit-tox-sonar:
+          # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
+          sonar-mvn-goal: '-f {src-dir} sonar:sonar'
+          cron: '@daily'
+          stream: master
+          branch: master
+      - gerrit-release-verify
+      - gerrit-release-merge
+
+- project:
+    name: dcaegen2-platform-docker-python-subprojects
+    project: dcaegen2/platform
+    mvn-settings: dcaegen2-platform-settings
+    build-node: ubuntu1604-docker-8c-8g
+    project-name:
+      - dcaegen2-platform-aoadapter:
+          src-dir: adapter/acumos
+      - dcaegen2-platform-mod-distributorapi:
+          src-dir: mod/distributorapi
+      - dcaegen2-platform-mod-onboardingapi:
+          src-dir: mod/onboardingapi
+      - dcaegen2-platform-oti-event-handler:
+          src-dir: oti/event-handler
+    stream:
+      - master:
+          branch: master
+    views:
+      - project-view:
+          project-name: dcaegen2-platform-aoadapter
+      - project-view:
+          project-name: dcaegen2-platform-mod
+      - project-view:
+          project-name: dcaegen2-platform-oti
+    jobs:
+      - dcaegen2-docker-python-jobs
