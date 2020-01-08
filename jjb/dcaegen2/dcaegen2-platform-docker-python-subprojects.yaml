@@ -1,0 +1,52 @@
+---
+- job-group:
+    name: '{project-name}-dcaegen2-docker-python-jobs'
+    id: dcaegen2-docker-python-jobs
+    docker-build-args: '--network=host'
+    container-tag-method: latest
+    docker-get-container-tag-script: ../../shell/docker-ts-tag-override.sh
+    nexus-iq-namespace: 'onap-'
+    stream: master
+    branch: master
+    tox-dir: '{src-dir}'
+    docker-root: '{src-dir}'
+    docker-name: 'onap/{project-name}'
+    gerrit_trigger_file_paths:
+    - compare-type: REG_EXP
+      pattern: '{src-dir}/.*'
+    jobs:
+      - gerrit-tox-verify:
+          stream: all
+          branch: '*'
+      - gerrit-docker-verify:
+      - gerrit-docker-merge:
+      - gerrit-maven-clm:
+          mvn-params: '-f {src-dir}'
+      - gerrit-tox-sonar:
+          # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
+          sonar-mvn-goal: '-f {src-dir} sonar:sonar'
+          cron: '@daily'
+
+- project:
+    name: dcaegen2-platform-docker-python-subprojects
+    project: dcaegen2/platform
+    mvn-settings: dcaegen2-platform-settings
+    build-node: ubuntu1604-docker-8c-8g
+    project-name:
+      - dcaegen2-platform-aoadapter:
+          src-dir: adapter/acumos
+      - dcaegen2-platform-mod-distributorapi:
+          src-dir: mod/distributorapi
+      - dcaegen2-platform-mod-onboardingapi:
+          src-dir: mod/onboardingapi
+      - dcaegen2-platform-oti-event-handler:
+          src-dir: oti/event-handler
+    views:
+      - project-view:
+          project-name: dcaegen2-platform-aoadapter
+      - project-view:
+          project-name: dcaegen2-platform-mod
+      - project-view:
+          project-name: dcaegen2-platform-oti
+    jobs:
+      - dcaegen2-docker-python-jobs
