@@ -22,6 +22,30 @@
       "revId": "71081422ce2a3b1b0c33599e5acc7dc137f53725",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "527eb31f_ce2657ed",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-designtool.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2020-01-08T15:38:22Z",
+      "side": 1,
+      "message": "Good catch.. The project name is also not correct. Fixed it on https://gerrit.onap.org/r/c/ci-management/+/100097",
+      "parentUuid": "87dcfdb4_099c7687",
+      "range": {
+        "startLine": 33,
+        "startChar": 4,
+        "endLine": 33,
+        "endChar": 61
+      },
+      "revId": "71081422ce2a3b1b0c33599e5acc7dc137f53725",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
