@@ -19,7 +19,7 @@
     subproject:
       - 'bpgenerator':
           pom: 'mod/bpgenerator/pom.xml'
-          pattern: 'bpgenerator/**'
+          pattern: 'mod/bpgenerator/**'
     stream:
       - 'master':
           branch: 'master'
