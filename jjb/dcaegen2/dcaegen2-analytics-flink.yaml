@@ -1,8 +1,0 @@
----
-- project:
-    name: dcaegen2-analytics-flink-info
-    project-name: dcaegen2-analytics-flink
-    jobs:
-      - gerrit-info-yaml-verify
-    project: dcaegen2/analytics/flink
-    branch: master
