@@ -6,6 +6,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'elalto':
           branch: 'elalto'
     # apply to all jobs
