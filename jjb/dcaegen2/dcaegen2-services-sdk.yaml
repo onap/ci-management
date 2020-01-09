@@ -2,6 +2,7 @@
 - project:
     name: dcaegen2-services-sdk
     project-name: 'dcaegen2-services-sdk'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
