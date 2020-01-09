@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8db9ba8_bb963d98",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-09T21:52:13Z",
+      "side": 1,
+      "message": "will this overwrite \"dockerfile:build\" ?",
+      "range": {
+        "startLine": 38,
+        "startChar": 53,
+        "endLine": 38,
+        "endChar": 68
+      },
+      "revId": "da11acf1dc67db2d3c270872b55ccdd3e4931895",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
