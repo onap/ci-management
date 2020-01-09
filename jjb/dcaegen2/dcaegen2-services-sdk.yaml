@@ -16,6 +16,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'dcaegen2-services-sdk-settings'
@@ -27,6 +28,7 @@
 
 - project:
     name: dcaegen2-services-sdk-integration-pairwise
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-integration-pairwise':
           build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
@@ -41,6 +43,7 @@
 
 - project:
     name: dcaegen2-services-sdk-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
@@ -54,6 +57,7 @@
 
 - project:
     name: dcaegen2-services-sdk-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
