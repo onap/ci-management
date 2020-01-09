@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f99c005_e6366169",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2837
+      },
+      "writtenOn": "2020-01-09T15:39:20Z",
+      "side": 1,
+      "message": "Please check if its needed.",
+      "revId": "686f2b602964d36cd1f595c241de0a4c2919f681",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
