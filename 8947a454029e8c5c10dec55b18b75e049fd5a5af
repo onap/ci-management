@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7241f9fd_4a53422e",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T18:51:25Z",
+      "side": 1,
+      "message": "This indentation looks wrong, please make it same as you did in jobs: below",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 7
+      },
+      "revId": "8947a454029e8c5c10dec55b18b75e049fd5a5af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be0ed813_2c7b4710",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T18:51:25Z",
+      "side": 1,
+      "message": "This colon looks wrong, you have no properties below this list item (job)",
+      "range": {
+        "startLine": 21,
+        "startChar": 28,
+        "endLine": 21,
+        "endChar": 29
+      },
+      "revId": "8947a454029e8c5c10dec55b18b75e049fd5a5af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6bdfd01f_1721a2d3",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T18:51:25Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 22,
+        "startChar": 27,
+        "endLine": 22,
+        "endChar": 28
+      },
+      "revId": "8947a454029e8c5c10dec55b18b75e049fd5a5af",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
