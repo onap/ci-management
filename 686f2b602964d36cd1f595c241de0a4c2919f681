@@ -34,6 +34,24 @@
       "revId": "686f2b602964d36cd1f595c241de0a4c2919f681",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c333e61_1d9b1034",
+        "filename": "jjb/dcaegen2/dcaegen2-services-sdk.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 3699
+      },
+      "writtenOn": "2020-01-10T07:55:44Z",
+      "side": 1,
+      "message": "Restored",
+      "parentUuid": "4f99c005_e6366169",
+      "revId": "686f2b602964d36cd1f595c241de0a4c2919f681",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
