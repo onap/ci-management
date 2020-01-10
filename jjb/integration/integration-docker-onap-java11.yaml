@@ -1,0 +1,8 @@
+---
+- project:
+    name: integration-docker-onap-java11-info
+    project-name: integration-docker-onap-java11
+    jobs:
+      - gerrit-info-yaml-verify
+    project: integration/docker/onap-java11
+    branch: master
