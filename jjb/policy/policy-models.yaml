@@ -17,6 +17,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-models-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
@@ -36,6 +37,7 @@
     project-name: 'policy-models'
     branch: 'master'
     mvn-settings: 'policy-models-settings'
+    java-version: openjdk11
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -48,6 +50,7 @@
     project-name: 'policy-models'
     branch: 'master'
     mvn-settings: 'policy-models-settings'
+    java-version: openjdk11
 
 - project:
     name: policy-models-info
