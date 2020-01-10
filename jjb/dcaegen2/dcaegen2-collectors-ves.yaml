@@ -34,6 +34,7 @@
 
 - project:
     name: dcaegen2-collectors-ves-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
