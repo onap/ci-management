@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -17,6 +17,7 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
+          build-node: ubuntu1604-docker-8c-8g
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -43,8 +44,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -96,8 +97,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'optf-osdf-settings'
 
 - project:
