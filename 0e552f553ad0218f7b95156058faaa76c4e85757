@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55efbd55_26e59f28",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T21:35:52Z",
+      "side": 1,
+      "message": "It would be useful to document the configuration keys required by this job group, for example project-name and src-dir",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 1
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "751fc4db_79aa0696",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T21:35:52Z",
+      "side": 1,
+      "message": "job group name should not have a parameter, so this is a little silly but I don\u0027t think it\u0027s harmful.  I recommend you drop the {project-name}- prefix.",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68e98d5d_33fe3730",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T21:35:52Z",
+      "side": 1,
+      "message": "I would put this sort of config parameter in the project, not the job group, especially since you have only one project, you save no duplicates by putting them here",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 74
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe2c090d_22d2524e",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T21:35:52Z",
+      "side": 1,
+      "message": "What happens when one of these project has to build a different branch?",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 18
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2f90529b_646ccc1c",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-01-10T21:35:52Z",
+      "side": 1,
+      "message": "you really want a separate view for each little collection of jobs?  well, if you need it, I guess it doesn\u0027t cost any extra.  I mighta defined just one view dcagen2-platform*",
+      "range": {
+        "startLine": 44,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 9
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
