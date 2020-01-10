@@ -1,0 +1,14 @@
+- project:
+    name: optf-has-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: optf-has
+    recipients: 'snarayanan@research.att.com'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - '{project-name}-{stream}-conductor-docker-java-version-shell-daily'
+    robot-options: ''

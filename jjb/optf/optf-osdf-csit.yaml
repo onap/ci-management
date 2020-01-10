@@ -1,0 +1,14 @@
+- project:
+    name: optf-osdf-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: optf-osdf
+    recipients: 'snarayanan@research.att.com'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - '{project-name}-{stream}-osdf-docker-java-version-shell-daily'
+    robot-options: ''
