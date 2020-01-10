@@ -1,0 +1,11 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Joanna Jeremicz <joanna.jeremicz@nokia.com>
+Code-Review+1: Remigiusz Janeczek <remigiusz.janeczek@nokia.com>
+Code-Review+1: Mateusz Harazin <mateusz.harazin@nokia.com>
+Code-Review+1: Piotr Wielebski <piotr.wielebski@nokia.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Fri, 10 Jan 2020 19:02:04 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/100176
+Project: ci-management
+Branch: refs/heads/master
