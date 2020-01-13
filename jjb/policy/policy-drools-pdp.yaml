@@ -26,6 +26,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-drools-pdp-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
@@ -45,6 +46,7 @@
     project-name: 'policy-drools-pdp'
     branch: 'master'
     mvn-settings: 'policy-drools-pdp-settings'
+    java-version: openjdk11
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -58,6 +60,7 @@
     project-name: 'policy-drools-pdp'
     branch: 'master'
     mvn-settings: 'policy-drools-pdp-settings'
+    java-version: openjdk11
 
 - project:
     name: policy-drools-pdp-info
