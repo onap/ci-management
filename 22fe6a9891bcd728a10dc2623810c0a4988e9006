@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb494c78_818420ab",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T19:54:10Z",
+      "side": 1,
+      "message": "These lines were copied from dcaegen2-services-pmsh-release, but they don\u0027t affect the release jobs and have unexpected consequences for the sonar and clm jobs.",
+      "revId": "22fe6a9891bcd728a10dc2623810c0a4988e9006",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
