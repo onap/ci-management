@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a9674475_1be8e2ca",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T16:59:35Z",
+      "side": 1,
+      "message": "agreed.",
+      "parentUuid": "55efbd55_26e59f28",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 1
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "751fc4db_79aa0696",
         "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2020-01-10T21:35:52Z",
       "side": 1,
       "message": "job group name should not have a parameter, so this is a little silly but I don\u0027t think it\u0027s harmful.  I recommend you drop the {project-name}- prefix.",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "efda325a_456dd848",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T16:59:35Z",
+      "side": 1,
+      "message": "Not so sure about \"should not.\"  I see numerous examples like this one, in both the JJB documentation (in the section describing job groups) and in the LF global JJB.",
+      "parentUuid": "751fc4db_79aa0696",
       "range": {
         "startLine": 3,
         "startChar": 10,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "cf965f2e_4f0f5308",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T16:59:35Z",
+      "side": 1,
+      "message": "I tried running all the docker-verify-master jobs affected by the network\u003dhost line, with the line remove, in the sandbox, and it appears this setting is not needed by any of them, so I\u0027ll delete it.\nThe tag setting is a DCAE and possibly ONAP wide policy, so I think they should be here.",
+      "parentUuid": "68e98d5d_33fe3730",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 74
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fe2c090d_22d2524e",
         "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
         "patchSetId": 3
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "5be146db_3f7ec984",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T16:59:35Z",
+      "side": 1,
+      "message": "I think building images on master only is a DCAE policy thing.",
+      "parentUuid": "fe2c090d_22d2524e",
+      "range": {
+        "startLine": 9,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 18
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2f90529b_646ccc1c",
         "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
         "patchSetId": 3
@@ -105,6 +201,30 @@
       "writtenOn": "2020-01-10T21:35:52Z",
       "side": 1,
       "message": "you really want a separate view for each little collection of jobs?  well, if you need it, I guess it doesn\u0027t cost any extra.  I mighta defined just one view dcagen2-platform*",
+      "range": {
+        "startLine": 44,
+        "startChar": 4,
+        "endLine": 44,
+        "endChar": 9
+      },
+      "revId": "0e552f553ad0218f7b95156058faaa76c4e85757",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "130ae143_00f90b9a",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-01-13T16:59:35Z",
+      "side": 1,
+      "message": "Duplicating what was there before this change.  There actually is a dcaegen2-platform view, but it\u0027s defined in another yaml file that isn\u0027t involved in this change.",
+      "parentUuid": "2f90529b_646ccc1c",
       "range": {
         "startLine": 44,
         "startChar": 4,
