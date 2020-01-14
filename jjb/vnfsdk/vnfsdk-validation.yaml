@@ -40,6 +40,7 @@
     name: vnfsdk-validation-info
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'

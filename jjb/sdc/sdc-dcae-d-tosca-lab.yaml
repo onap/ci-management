@@ -61,5 +61,6 @@
     project-name: sdc-dcae-d-tosca-lab
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: sdc/dcae-d/tosca-lab
     branch: master

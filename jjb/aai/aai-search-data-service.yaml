@@ -86,6 +86,7 @@
     project-name: aai-search-data-service
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: aai/search-data-service
     branch: master
 

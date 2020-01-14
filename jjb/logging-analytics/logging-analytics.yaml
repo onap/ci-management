@@ -110,6 +110,7 @@
     project-name: 'logging-analytics'
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: 'logging-analytics'
     branch: 'master'
 

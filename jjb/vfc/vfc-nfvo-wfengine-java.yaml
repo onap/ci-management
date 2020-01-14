@@ -122,5 +122,6 @@
     project-name: vfc-nfvo-wfengine
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: vfc/nfvo/wfengine
     branch: master

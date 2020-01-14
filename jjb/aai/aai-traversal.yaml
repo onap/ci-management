@@ -71,5 +71,6 @@
     project-name: aai-traversal
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: aai/traversal
     branch: master

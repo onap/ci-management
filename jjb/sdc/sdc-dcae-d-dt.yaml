@@ -75,5 +75,6 @@
     project-name: sdc-dcae-d-dt
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: sdc/dcae-d/dt
     branch: master

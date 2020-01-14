@@ -76,6 +76,7 @@
     project-name: ccsdk-distribution
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: ccsdk/distribution
     branch: master
 

@@ -68,6 +68,7 @@
     project-name: ccsdk-platform-plugins
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: ccsdk/platform/plugins
     branch: master
 

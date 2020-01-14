@@ -64,5 +64,6 @@
     project-name: policy-drools-pdp
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: policy/drools-pdp
     branch: master

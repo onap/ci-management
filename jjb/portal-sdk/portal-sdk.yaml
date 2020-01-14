@@ -67,5 +67,6 @@
     project-name: portal-sdk
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: portal/sdk
     branch: master

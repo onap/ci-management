@@ -99,6 +99,7 @@
     project-name: ccsdk-apps
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: ccsdk/apps
     branch: master
 

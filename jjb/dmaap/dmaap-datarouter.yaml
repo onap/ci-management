@@ -50,5 +50,6 @@
     project-name: dmaap-datarouter
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: dmaap/datarouter
     branch: master

@@ -34,5 +34,6 @@
     project-name: music-mdbc
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: music/mdbc
     branch: master

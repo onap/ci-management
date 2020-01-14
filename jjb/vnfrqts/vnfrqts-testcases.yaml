@@ -4,6 +4,7 @@
     project: 'vnfrqts/testcases'
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project-name: 'vnfrqts-testcases'
     branch: 'master'
     mvn-settings: 'vnfrqts-testcases-settings'

@@ -67,5 +67,6 @@
     project-name: aai-data-router
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: aai/data-router
     branch: master

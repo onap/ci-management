@@ -23,5 +23,6 @@
     project-name: music-distributed-kv-store
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: music/distributed-kv-store
     branch: master

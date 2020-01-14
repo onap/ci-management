@@ -67,6 +67,7 @@
     name: vnfsdk-ves-agent-info
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: 'vnfsdk/ves-agent'
     project-name: 'vnfsdk-ves-agent'
     branch: 'master'

@@ -75,6 +75,7 @@
     name: vnfsdk-refrepo-info
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'

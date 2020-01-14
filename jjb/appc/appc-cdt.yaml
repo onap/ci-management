@@ -39,5 +39,6 @@
     project-name: appc-cdt
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: appc/cdt
     branch: master

@@ -48,5 +48,6 @@
     project-name: dcaegen2-analytics-pnda
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: dcaegen2/analytics/pnda
     branch: master

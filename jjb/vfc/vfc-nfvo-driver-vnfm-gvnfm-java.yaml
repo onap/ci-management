@@ -63,5 +63,6 @@
     project-name: vfc-nfvo-driver-vnfm-gvnfm
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: vfc/nfvo/driver/vnfm/gvnfm
     branch: master

@@ -40,5 +40,6 @@
     project-name: dcaegen2-platform-deployment-handler
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: dcaegen2/platform/deployment-handler
     branch: master

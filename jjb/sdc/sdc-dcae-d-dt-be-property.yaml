@@ -47,5 +47,6 @@
     project-name: sdc-dcae-d-dt-be-property
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: sdc/dcae-d/dt-be-property
     branch: master

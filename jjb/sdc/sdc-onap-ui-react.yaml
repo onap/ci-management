@@ -4,6 +4,7 @@
     project-name: 'sdc-onap-ui-react'
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: 'sdc/onap-ui-react'
     branch: 'master'
 

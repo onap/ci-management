@@ -21,5 +21,6 @@
     project-name: integration-csit
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: integration/csit
     branch: master

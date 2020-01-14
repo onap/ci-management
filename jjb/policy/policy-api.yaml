@@ -63,5 +63,6 @@
     project-name: policy-api
     jobs:
       - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
     project: policy/api
     branch: master
