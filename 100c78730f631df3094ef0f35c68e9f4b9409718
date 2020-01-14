@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a5cc2fc_2ac67e3c",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-01-14T16:25:09Z",
+      "side": 1,
+      "message": "copy the above line under this:\njava-version: openjdk11",
+      "range": {
+        "startLine": 48,
+        "startChar": 1,
+        "endLine": 48,
+        "endChar": 39
+      },
+      "revId": "100c78730f631df3094ef0f35c68e9f4b9409718",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5b6daf0_51c243df",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-01-14T16:25:09Z",
+      "side": 1,
+      "message": "same here",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 39
+      },
+      "revId": "100c78730f631df3094ef0f35c68e9f4b9409718",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
