@@ -21,6 +21,20 @@
     build-node: ubuntu1604-docker-8c-8g
 
 - project:
+    name: dcaegen2-platform-mod-runtimeapi-sonar
+    jobs:
+      - gerrit-maven-sonar
+    cron: '@daily'
+    build-node: ubuntu1604-builder-4c-4g
+    project: 'dcaegen2/platform'
+    project-name: 'dcaegen2-platform-mod-runtimeapi'
+    branch: 'master'
+    mvn-settings: 'dcaegen2-platform-settings'
+    mvn-params: '-f mod/runtimeapi/pom.xml'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
     name: dcaegen2-platform-mod-runtimeapi-clm
     jobs:
       - gerrit-maven-clm
