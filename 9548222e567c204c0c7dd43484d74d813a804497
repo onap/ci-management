@@ -57,6 +57,30 @@
       "revId": "9548222e567c204c0c7dd43484d74d813a804497",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "934e681d_9c38a88d",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-01-16T20:31:13Z",
+      "side": 1,
+      "message": "interestingly, it\u0027s the reverse: arm64 takes 20 minutes, while amd64 takes only one (for the step, \"Generating Requirements File\")",
+      "parentUuid": "d62592f8_3a2c3a0a",
+      "range": {
+        "startLine": 16,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 57
+      },
+      "revId": "9548222e567c204c0c7dd43484d74d813a804497",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
