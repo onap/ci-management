@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09253f4b_3d236712",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-runtimeapi.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-16T10:40:04Z",
+      "side": 1,
+      "message": "Let\u0027s place new sonar jobs in SonarCloud since we will migrate everyone anyways. \n\nAdd the following variables:\n\n    sonarcloud: true\n    sonarcloud-project-organization: \u0027{sonarcloud_project_organization}\u0027\n    sonarcloud-api-token: \u0027{sonarcloud_api_token}\u0027\n    sonarcloud-project-key: \u0027{sonarcloud_project_organization}_{project-name}\u0027\n    sonar-mvn-goal: \u0027{sonar_mvn_goal}\u0027",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 48
+      },
+      "revId": "89b407ad888ad1818e20149209a829a228294a9c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
