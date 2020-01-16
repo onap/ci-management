@@ -34,6 +34,29 @@
       "revId": "9548222e567c204c0c7dd43484d74d813a804497",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d62592f8_3a2c3a0a",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-01-16T18:11:11Z",
+      "side": 1,
+      "message": "This is not in the amd64 version, oversight? Could this be why the arm64 takes only a minute to run while the amd64 takes over 20 minutes? At least we are seeing that on the policy/docker jobs.",
+      "range": {
+        "startLine": 16,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 57
+      },
+      "revId": "9548222e567c204c0c7dd43484d74d813a804497",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
