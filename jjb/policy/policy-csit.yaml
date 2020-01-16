@@ -4,6 +4,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: master
@@ -22,6 +23,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
     stream:
       - 'master':
@@ -38,6 +40,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     recipients: 'ram.krishna.verma@est.tech'
     stream:
       - 'master':
@@ -54,6 +57,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: master
@@ -69,6 +73,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     recipients: 'ah999m@att.com'
     stream:
       - 'master':
@@ -85,6 +90,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
     stream:
       - 'master':
@@ -101,6 +107,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: master
@@ -116,6 +123,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: master
