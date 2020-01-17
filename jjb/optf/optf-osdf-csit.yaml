@@ -8,7 +8,7 @@
       - 'master':
           branch: 'master'
     functionality:
-      - 'testsuites':
+      - 'osdf':
           trigger_jobs:
             - '{project-name}-{stream}-osdf-docker-java-version-shell-daily'
     robot-options: ''
