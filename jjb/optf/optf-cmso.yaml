@@ -31,8 +31,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'optf-cmso-settings'
     subproject:
       - 'cmso':
@@ -71,8 +71,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'optf-cmso-settings'
 
 - project:
