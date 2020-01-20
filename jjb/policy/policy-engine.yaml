@@ -26,6 +26,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'policy-engine-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1604-docker-8c-8g'
@@ -45,6 +46,7 @@
     project-name: 'policy-engine'
     branch: 'master'
     mvn-settings: 'policy-engine-settings'
+    java-version: openjdk11
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx2048m -XX:MaxPermSize=512m'
 
@@ -58,6 +60,7 @@
     project-name: 'policy-engine'
     branch: 'master'
     mvn-settings: 'policy-engine-settings'
+    java-version: openjdk11
     build-node: 'ubuntu1604-builder-4c-4g'
 
 - project:
