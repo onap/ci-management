@@ -1,0 +1,9 @@
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+1: Ofir Sonsino <ofir.sonsino@intl.att.com>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 21 Jan 2020 17:08:54 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/98561
+Project: ci-management
+Branch: refs/heads/master
