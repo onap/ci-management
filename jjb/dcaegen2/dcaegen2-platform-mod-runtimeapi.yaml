@@ -25,7 +25,7 @@
     jobs:
       - gerrit-maven-sonar
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1604-docker-8c-8g
     project: 'dcaegen2/platform'
     project-name: 'dcaegen2-platform-mod-runtimeapi'
     branch: 'master'
