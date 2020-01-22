@@ -26,8 +26,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'appc-settings'
     maven-version: "mvn35"
     files: '**'

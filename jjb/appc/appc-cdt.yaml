@@ -16,8 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'appc-cdt-settings'
     files: '**'
     archive-artifacts: ''
