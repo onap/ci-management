@@ -11,8 +11,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
     maven-version: "mvn35"
     files: '**'
@@ -40,8 +38,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'appc-deployment-settings'
     maven-version: "mvn35"
     files: '**'
