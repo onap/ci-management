@@ -31,6 +31,7 @@
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
+          mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-versions-plugin: true
           mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
           java-opts: "-Xmx4000m -XX:MaxPermSize=256m"
