@@ -6,6 +6,16 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-docker-stage:
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
+          java-opts: "-Xmx4000m -XX:MaxPermSize=256m"
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+          mvn-opts: "-Xmx4000m -XX:MaxPermSize=256m"
+          java-opts: "-Xmx4000m -XX:MaxPermSize=256m"
 
     project: 'appc/deployment'
     stream:
