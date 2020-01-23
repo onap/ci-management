@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eae83e5f_cc80f0a6",
+        "filename": "jjb/dmaap/dmaap-messagerouter-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-23T17:37:54Z",
+      "side": 1,
+      "message": "looks like this is not properly indented..",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 42
+      },
+      "revId": "dd9ce4d026b578d8d8c8e643efc861dd1024a339",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
