@@ -19,7 +19,7 @@
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-version: "mvn35"
           maven-versions-plugin: true
-          cron: ''
+          cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     project: 'sdnc/oam'
