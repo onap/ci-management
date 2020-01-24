@@ -1,0 +1,9 @@
+---
+- project:
+    name: aaf-certservice-info
+    project-name: aaf-certservice
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+    project: aaf/certservice
+    branch: master
