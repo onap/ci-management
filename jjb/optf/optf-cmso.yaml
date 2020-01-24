@@ -34,6 +34,8 @@
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'optf-cmso-settings'
+    java-version: openjdk11
+
     subproject:
       - 'cmso':
           path: '.'
@@ -58,6 +60,7 @@
     mvn-settings: 'optf-cmso-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: optf-cmso-clm
@@ -74,6 +77,7 @@
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'optf-cmso-settings'
+    java-version: openjdk11
 
 - project:
     name: optf-cmso-info
