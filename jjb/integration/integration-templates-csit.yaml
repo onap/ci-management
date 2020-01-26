@@ -7,6 +7,7 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -43,6 +44,8 @@
           files: '**/{project-name}/**'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -66,6 +69,7 @@
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -102,6 +106,8 @@
           files: '**/{project-name}/**'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -125,6 +131,7 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -165,6 +172,8 @@
           files: '**/{project-name}/**'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -206,6 +215,7 @@
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -246,6 +256,8 @@
           files: '**/{project-name}/**'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -287,6 +299,7 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -326,6 +339,8 @@
           jobs: '{obj:trigger_jobs}'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -349,6 +364,7 @@
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -388,6 +404,8 @@
           jobs: '{obj:trigger_jobs}'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -411,6 +429,7 @@
     build-node: 'ubuntu1604-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -454,6 +473,8 @@
           jobs: '{obj:trigger_jobs}'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
@@ -495,6 +516,7 @@
     build-node: 'ubuntu1604-docker-arm64-4c-2g'
     node: '{build-node}'
     recipients: ''
+    java-version: 'openjdk11'
 
     properties:
       - lf-infra-properties:
@@ -538,6 +560,8 @@
           jobs: '{obj:trigger_jobs}'
 
     builders:
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
