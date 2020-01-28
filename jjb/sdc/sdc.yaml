@@ -35,6 +35,7 @@
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-stage:
+          build-timeout: 90
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
