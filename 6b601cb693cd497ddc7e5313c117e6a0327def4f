@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e48ad1c_a72a5b4f",
+        "filename": "global-jjb",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-30T19:23:06Z",
+      "side": 1,
+      "message": "We should discard this. \n\nOr do you need us to upgrade global-jjb?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "6b601cb693cd497ddc7e5313c117e6a0327def4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
