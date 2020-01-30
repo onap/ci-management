@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54481cc2_a3303773",
+        "filename": "jjb/policy/policy-gui.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-01-30T19:26:52Z",
+      "side": 1,
+      "message": "Please use sonarcloud. Add the following vars to the list:\n    sonarcloud: true\n    sonarcloud-project-organization: \u0027{sonarcloud_project_organization}\u0027\n    sonarcloud-api-token: \u0027{sonarcloud_api_token}\u0027\n    sonarcloud-project-key: \u0027{sonarcloud_project_organization}_{project-name}\u0027\n    sonar-mvn-goal: \u0027{sonar_mvn_goal}\u0027",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "3e3870b915471741bee05a8fbd0e747ade343f61",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
