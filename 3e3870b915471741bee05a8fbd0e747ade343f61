@@ -22,6 +22,30 @@
       "revId": "3e3870b915471741bee05a8fbd0e747ade343f61",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5dc676cd_c58b643a",
+        "filename": "jjb/policy/policy-gui.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3239
+      },
+      "writtenOn": "2020-01-31T11:32:30Z",
+      "side": 1,
+      "message": "Thanks Jess, probably I was referring to the old copy of jjb jobs.",
+      "parentUuid": "54481cc2_a3303773",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "3e3870b915471741bee05a8fbd0e747ade343f61",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
