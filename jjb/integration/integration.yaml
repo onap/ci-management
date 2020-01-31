@@ -13,3 +13,20 @@
     build-node: centos7-builder-2c-1g
     project: integration
     branch: master
+
+- project:
+    name: integration-verify-python
+    project-name: integration
+    project: integration
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'master':
+          branch: 'elalto'
+    build-node: 'centos7-builder-4c-4g'
+    subproject:
+      - 'test/vcpe':
+          path: 'test/vcpe'
+          pattern: 'test/vcpe/**'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
