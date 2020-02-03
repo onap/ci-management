@@ -19,3 +19,4 @@ SIGUL_BRIDGE_IP=10.30.104.3
 SIGUL_KEY=onap-test
 SILO=sandbox
 SONAR_URL=https://sonar.onap.org
+MASTER_RTD_PROJECT=doc-test

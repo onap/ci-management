@@ -1,0 +1,27 @@
+# Global read the docs version 3 jobs
+#
+# jobs trigger for all projects, all branches
+# on any changes to files in a docs/ directory
+# and publish subprojects to readthedocs.io
+# using credentials from Jenkins settings
+---
+- project:
+    name: rtdv3-view
+    project-name: rtdv3-global
+    views:
+      - project-view
+
+- project:
+    name: rtdv3-global
+    build-node: centos7-builder-1c-1g
+    # override the default to ignore ref-updated-event (tag)
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
+    jobs:
+      - rtdv3-global-verify
+      - rtdv3-global-merge
+    stream:
+      - master:
+          branch: '*'
