@@ -13,6 +13,8 @@
 
 - project:
     name: rtdv3-global
+    default-version: latest
+    tox-dir: "docs/"
     build-node: centos7-builder-2c-1g
     # override the default to ignore ref-updated-event (tag)
     gerrit_merge_triggers:
