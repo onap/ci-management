@@ -3,6 +3,7 @@
     name: optf-osdf
     project-name: 'optf-osdf'
     project: 'optf/osdf'
+    python-version: python3
     stream:
       - 'master':
           branch: 'master'
