@@ -21,8 +21,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'dcaegen2-services-prh-settings'
     files: '**'
     archive-artifacts: ''
