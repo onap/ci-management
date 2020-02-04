@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0cce30e7_730f4c77",
+        "filename": "jjb/integration/integration.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-02-04T18:24:49Z",
+      "side": 1,
+      "message": "elalto",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 17
+      },
+      "revId": "8db33cde5787b87ad80ec3800a444309bf5e623d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
