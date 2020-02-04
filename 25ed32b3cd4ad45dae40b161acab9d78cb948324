@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aecd4d9_502a38de",
+        "filename": "global-jjb",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-02-04T21:33:47Z",
+      "side": 1,
+      "message": "This is a regression in global-jjb :( is that intended?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "25ed32b3cd4ad45dae40b161acab9d78cb948324",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
