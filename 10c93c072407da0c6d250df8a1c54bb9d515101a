@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ce56379_0d4362a7",
+        "filename": "jjb/aaf/aaf-certservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-02-05T14:45:26Z",
+      "side": 1,
+      "message": "Use sonarcloud please. \nYou will need to add these extra variables:\n\n    sonarcloud: true\n    sonarcloud-project-organization: \u0027{sonarcloud_project_organization}\u0027\n    sonarcloud-api-token: \u0027{sonarcloud_api_token}\u0027\n    sonarcloud-project-key: \u0027{sonarcloud_project_organization}_{project-name}\u0027\n    sonar-mvn-goal: \u0027{sonar_mvn_goal}\u0027",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "10c93c072407da0c6d250df8a1c54bb9d515101a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
