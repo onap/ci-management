@@ -46,6 +46,30 @@
       "revId": "25ed32b3cd4ad45dae40b161acab9d78cb948324",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ded8350_684c4401",
+        "filename": "global-jjb",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2020-02-05T14:33:24Z",
+      "side": 1,
+      "message": "I was able to remove that change on the Gerrit page itself (after not being able to do it locally and push the change).  Should be good now, I think.  Thanks!",
+      "parentUuid": "4f227a11_ce25eb1f",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "25ed32b3cd4ad45dae40b161acab9d78cb948324",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
