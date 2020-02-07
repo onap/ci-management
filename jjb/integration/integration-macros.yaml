@@ -53,6 +53,19 @@
     builders:
       - shell: "${WORKSPACE}/autorelease/scripts/set-version.sh"
 
+- builder:
+    name: integration-install-vagrant
+    builders:
+      - shell: |
+          #!/bin/bash
+          set -ex # Fail build if any setup step fails
+          add-apt-repository --yes ppa:tiagohillebrandt/vagrant
+          apt update
+          apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
+          vagrant plugin install vagrant-libvirt
+          vagrant plugin install vagrant-disksize
+          mkdir -p ~/.ssh
+
 - publisher:
     name: integration-robot
     publishers:
