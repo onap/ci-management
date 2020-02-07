@@ -31,3 +31,15 @@
           pattern: 'test/vcpe/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
+
+- project:
+    name: integration-verify-vagrantfile
+    project-name: 'integration'
+    project: 'integration'
+
+    stream:
+      - 'master':
+          branch: 'master'
+
+    jobs:
+      - '{project-name}-{stream}-verify-vagrantfile'
