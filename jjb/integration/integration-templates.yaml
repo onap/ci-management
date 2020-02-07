@@ -1,0 +1,45 @@
+---
+- job-template:
+    # Job template for verifying Vagrantfiles
+    #
+    # The purpose of this job template is to run:
+    # vagrant validate
+
+    name: '{project-name}-{stream}-verify-vagrantfile'
+    project-type: freestyle
+    description: 'Job intended for validating vagrantfiles'
+    node: 'ubuntu1604-builder-2c-1g.cfg'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '**/Vagrantfile'
+
+    builders:
+      - integration-install-vagrant
+      - shell: !include-raw-escape: 'vagrantfile-verify.sh'
+
+    publishers:
+      - lf-infra-publish
