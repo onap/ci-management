@@ -8,7 +8,7 @@
     name: '{project-name}-{stream}-verify-vagrantfile'
     project-type: freestyle
     description: 'Job intended for validating vagrantfiles'
-    node: 'ubuntu1604-builder-2c-1g.cfg'
+    node: ubuntu1604-builder-2c-1g
 
     parameters:
       - lf-infra-parameters:
