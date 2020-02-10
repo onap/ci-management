@@ -46,6 +46,30 @@
       "revId": "02549fa3d607312b95ab2708bc8e5eb300cc280e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68e2e05f_ebe0689b",
+        "filename": "jjb/policy/policy-gui.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-02-10T08:39:37Z",
+      "side": 1,
+      "message": "This job won\u0027t work as there is no \u0027ubuntu1604-docker-4c-4g\u0027 CI executor, please see https://jenkins.onap.org/job/policy-gui-maven-docker-stage-master/",
+      "parentUuid": "20d2c2cb_6a428d2d",
+      "range": {
+        "startLine": 10,
+        "startChar": 40,
+        "endLine": 10,
+        "endChar": 45
+      },
+      "revId": "02549fa3d607312b95ab2708bc8e5eb300cc280e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
