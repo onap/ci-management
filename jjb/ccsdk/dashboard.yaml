@@ -9,6 +9,10 @@
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           cron: ''
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-8c-8g
+          mvn-goals: 'clean deploy'
+          mvn-params: ' -P docker'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
