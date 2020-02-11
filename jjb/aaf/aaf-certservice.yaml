@@ -7,12 +7,21 @@
     java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-merge-java':
+         build-node: 'ubuntu1604-docker-v1-8c-8g'
+         docker-pom: 'pom.xml'
+         mvn-profile: 'docker'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'certService/pom.xml'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1604-docker-v1-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -DskipTests=true'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
