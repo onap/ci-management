@@ -59,9 +59,9 @@
       - shell: |
           #!/bin/bash
           set -ex # Fail build if any setup step fails
-          add-apt-repository --yes ppa:tiagohillebrandt/vagrant
-          apt update
-          apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
+          sudo add-apt-repository --yes ppa:tiagohillebrandt/vagrant
+          sudo apt update
+          sudo apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
           vagrant plugin install vagrant-libvirt
           vagrant plugin install vagrant-disksize
           mkdir -p ~/.ssh
