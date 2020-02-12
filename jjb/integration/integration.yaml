@@ -63,5 +63,5 @@
     build_script: |
         #!/bin/bash
         set -ex # Fail build if any setup step fails
-        cd {path}
+        cd test/security/k8s
         make test
