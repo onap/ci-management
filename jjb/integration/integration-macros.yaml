@@ -59,6 +59,7 @@
       - shell: |
           #!/bin/bash
           set -ex # Fail build if any setup step fails
+          sudo find /etc/apt/sources.list.d -maxdepth 1 -name '*jonathonf*' -delete || true # CIMAN-359
           sudo add-apt-repository --yes ppa:tiagohillebrandt/vagrant
           sudo apt update
           sudo apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
