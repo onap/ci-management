@@ -5,15 +5,22 @@
     # The purpose of this job template is to run:
     # 1. make build
     #
-    # golangver can be set to golang110 or golang111
+    # golangver can be set to golang110, golang111 or golang112
     # depending on what version is needed by the project
     # default is golang110
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
+    #
+    # Optional Variables:
+    #     script:    build script to execute
+    #     pattern:   ant file-path pattern relative to the workspace used to
+    #                trigger the job
 
     name: '{project-name}-{stream}-verify-golang'
     path: '$WORKSPACE'
+    pattern: '**'
+    script: ''
     golangver: 'golang110'
 
     project-type: freestyle
@@ -47,7 +54,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '**'
+          files: '{pattern}'
 
     builders:
       - lf-infra-pre-build
@@ -58,6 +65,7 @@
           #!/bin/bash
           cd $WORKSPACE/{path}
           make build
+      - shell: '{script}'
 
     publishers:
       - infra-shiplogs:
