@@ -43,3 +43,25 @@
 
     jobs:
       - '{project-name}-{stream}-verify-vagrantfile'
+
+- project:
+    name: integration-verify-golang
+    project-name: 'integration'
+    project: 'integration'
+    golangver: 'golang112'
+    mvn-settings: 'integration-settings'
+    archive-artifacts: ''
+    build-node: ubuntu1604-builder-2c-1g
+    jobs:
+      - '{project-name}-{stream}-verify-golang':
+          script: '{build_script}'
+    path: 'test/security/k8s'
+    pattern: '{path}/**'
+    stream:
+      - 'master':
+          branch: 'master'
+    build_script: |
+        #!/bin/bash
+        set -ex # Fail build if any setup step fails
+        cd {path}
+        make test
