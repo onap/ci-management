@@ -52,6 +52,7 @@
 #    archive-artifacts: ''
 #    build-node: ubuntu1604-docker-arm64-4c-2g
 #
+
 - project:
     name: logging-analytics-sonar
     jobs:
@@ -72,7 +73,7 @@
 
 - project:
     name: logging-analytics-pylog
-    project-name: 'logging-analytics-pylog'
+    project-name: 'logging-analytics'
     project: 'logging-analytics'
     python-version: python3
     stream:
@@ -88,15 +89,19 @@
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-{subproject}-python-staging-{stream}'
-      - '{project-name}-{subproject}-python-release-{stream}'
+      #
+      # As submodule pylog is being built as part of parent logging-analytics module
+      # so, it shouldn't have separate staging and release jobs
+      #
+      #- '{project-name}-{subproject}-python-staging-{stream}'
+      #- '{project-name}-{subproject}-python-release-{stream}'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-docker-8c-8g
 
 - project:
     name: logging-analytics-pylog-python
-    project-name: 'logging-analytics-pylog'
+    project-name: 'logging-analytics'
     project: 'logging-analytics'
     stream:
       - 'master':
