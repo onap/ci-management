@@ -75,7 +75,7 @@
     name: logging-analytics-pylog
     project-name: 'logging-analytics'
     project: 'logging-analytics'
-    python-version: python3
+    python-version: python3.6
     tox-dir: 'pylog/'
     tox-envs: ''
     stream:
