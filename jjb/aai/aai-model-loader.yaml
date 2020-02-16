@@ -28,6 +28,7 @@
           branch: 'elalto'
       - 'master':
           branch: 'master'
+    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-model-loader-settings'
     files: '**'
     archive-artifacts: ''
