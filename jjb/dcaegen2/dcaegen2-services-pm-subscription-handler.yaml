@@ -46,11 +46,14 @@
 - project:
     <<: *dcaegen2_services_common
     name: dcaegen2-services-pmsh-sonar
-    docker-root: components/pm-subscription-handler
+    mvn-goals: 'clean test'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    cron: '@daily'
     branch: master
+    # used by tox-install.sh to specify the interpreter used to install tox
+    python-version: python3
     jobs:
       - gerrit-tox-sonar
-    cron: '@daily'
 
 - project:
     <<: *dcaegen2_services_common
