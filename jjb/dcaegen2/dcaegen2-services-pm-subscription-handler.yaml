@@ -47,10 +47,15 @@
     <<: *dcaegen2_services_common
     name: dcaegen2-services-pmsh-sonar
     docker-root: components/pm-subscription-handler
+    tox-dir: '{src-dir}'
     branch: master
     jobs:
       - gerrit-tox-sonar
-    cron: '@daily'
+          # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
+          sonar-mvn-goal: '-f {src-dir} sonar:sonar'
+          cron: '@daily'
+          stream: master
+          branch: master
 
 - project:
     <<: *dcaegen2_services_common
