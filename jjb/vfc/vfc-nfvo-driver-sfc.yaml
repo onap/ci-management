@@ -32,7 +32,6 @@
 
 - project:
     name: vfc-nfvo-driver-sfc-sonar
-    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
