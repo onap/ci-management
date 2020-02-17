@@ -24,6 +24,7 @@
 
 - project:
     name: vfc-nfvo-resmanagement-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
