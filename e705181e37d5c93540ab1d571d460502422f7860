@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9bbf8d80_fc925124",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-02-18T13:52:05Z",
+      "side": 1,
+      "message": "Pretty sure the only way to get this job running again is to revert to the way CBS is doing it.\n\n- project:\n    name: dcaegen2-platform-configbinding-sonar\n    project: dcaegen2/platform/configbinding\n    project-name: dcaegen2-platform-configbinding\n    cron: \u0027@daily\u0027\n    build-node: ubuntu1604-docker-8c-8g\n    # Sonar jobs use maven to push report\n    mvn-settings: dcaegen2-platform-configbinding-settings\n    mvn-goals: \u0027clean test\u0027\n    mvn-opts: \u0027-Xmx1024m -XX:MaxPermSize\u003d256m\u0027\n    branch: master\n    # used by tox-install.sh to specify the interpreter used to install tox\n    python-version: python3\n    jobs:\n      - gerrit-tox-sonar",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 18
+      },
+      "revId": "e705181e37d5c93540ab1d571d460502422f7860",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
