@@ -21,9 +21,9 @@
     stream:
       - 'master':
           branch: 'master'
+          mvn-params: '-P spring-boot-2-1'
       - 'elalto':
           branch: 'elalto'
-    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
     files: '**'
@@ -44,6 +44,7 @@
     project: 'aai/aai-common'
     project-name: 'aai-aai-common'
     branch: 'master'
+    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -60,6 +61,7 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
 
@@ -88,6 +90,7 @@
       - 'master':
           branch: 'master'
           distro: 'alpine'
+          mvn-params: '-P spring-boot-2-1'
     docker_name: 'onap/aai-common-{distro}'
     docker_build_args: '-f ./Dockerfile.{distro}'
     docker_root: '$WORKSPACE/Dockerfiles/aai-common/'
@@ -102,6 +105,7 @@
     build-node: ubuntu1604-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
+    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     wss-product-name: 'aai'
     mvn-clean-install: true
