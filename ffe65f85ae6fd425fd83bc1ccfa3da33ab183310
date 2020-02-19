@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82b4ec26_04073c69",
+        "filename": "jjb/sdnc/sdnc-oam.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-02-19T17:33:40Z",
+      "side": 1,
+      "message": "Is this intended as part of the patch?",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 23
+      },
+      "revId": "ffe65f85ae6fd425fd83bc1ccfa3da33ab183310",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
