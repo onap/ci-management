@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Code-Review+2: DW Talton <dtalton@contractor.linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 19 Feb 2020 19:36:32 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/101998
+Project: ci-management
+Branch: refs/heads/master
