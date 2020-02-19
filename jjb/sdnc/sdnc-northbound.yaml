@@ -17,10 +17,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
-      - 'elalto-fluorine':
-          branch: 'elalto-fluorine'
     mvn-settings: 'sdnc-northbound-settings'
 
     # due to a strange macro / variable translation problem this needs to be

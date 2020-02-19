@@ -26,15 +26,12 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
-      - 'elalto-fluorine':
-          branch: 'elalto-fluorine'
     mvn-settings: 'sdnc-oam-settings'
     maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
+    shallow-clone: true
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 

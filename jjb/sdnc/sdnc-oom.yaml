@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
 
     mvn-settings: 'sdnc-oom-settings'
     files: '**'
