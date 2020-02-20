@@ -10,6 +10,7 @@
           build-node: centos7-docker-8c-8g
           project-name: dcaegen2-platform-mod-bpgenerator
       - gerrit-maven-stage:
+          project-name: dcaegen2-platform-mod-bpgenerator
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
