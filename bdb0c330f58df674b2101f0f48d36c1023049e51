@@ -34,6 +34,24 @@
       "revId": "bdb0c330f58df674b2101f0f48d36c1023049e51",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ce60390_51b28f25",
+        "filename": "jjb/aaf/aaf-certservice-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-02-20T18:40:34Z",
+      "side": 1,
+      "message": "Yes... This is correct since the template takes:\ntest-plan: \u0027plans/{project-name}/{functionality}\u0027",
+      "parentUuid": "b775eeae_ec6e2dc1",
+      "revId": "bdb0c330f58df674b2101f0f48d36c1023049e51",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
