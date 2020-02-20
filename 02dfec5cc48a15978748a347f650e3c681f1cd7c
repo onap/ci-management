@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f933bce5_bd3b1e96",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4719
+      },
+      "writtenOn": "2020-02-20T09:38:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6cc1a1a4_4a0bff5a",
+      "range": {
+        "startLine": 4,
+        "startChar": 7,
+        "endLine": 4,
+        "endChar": 60
+      },
+      "revId": "02dfec5cc48a15978748a347f650e3c681f1cd7c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "148b3b4f_585f49b4",
         "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2020-02-18T13:52:12Z",
       "side": 1,
       "message": "Maybe trigger on a relevant job as well as cron daily.",
+      "range": {
+        "startLine": 14,
+        "startChar": 14,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "02dfec5cc48a15978748a347f650e3c681f1cd7c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1001e815_d8f235b2",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4719
+      },
+      "writtenOn": "2020-02-20T09:38:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "148b3b4f_585f49b4",
       "range": {
         "startLine": 14,
         "startChar": 14,
