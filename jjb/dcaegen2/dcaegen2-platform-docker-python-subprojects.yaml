@@ -20,10 +20,13 @@
     #    project-name:
     #      - subproject-name1:
     #          src-dir: subproject-dir1
+    #          docker-name: onap/org.onap.dcaegen2.platform.something.name1
     #      - subproject-name2:
     #          src-dir: subproject-dir2
+    #          docker-name: onap/org.onap.dcaegen2.platform.something.name2
     #      - subproject-name3:
     #          src-dir: subproject-dir3
+    #          docker-name: onap/org.onap.dcaegen2.platform.something.name3
     #    stream:
     #      - master:
     #          branch: master
@@ -39,7 +42,6 @@
     nexus-iq-namespace: 'onap-'
     tox-dir: '{src-dir}'
     docker-root: '{src-dir}'
-    docker-name: 'onap/{project-name}'
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: '{src-dir}/.*'
@@ -68,20 +70,24 @@
     mvn-settings: dcaegen2-platform-settings
     build-node: ubuntu1604-docker-8c-8g
     project-name:
-      - dcaegen2-platform-aoadapter:
+      - dcaegen2-platform-adapter-acumos:
           src-dir: adapter/acumos
+	  docker-name: onap/org.onap.dcaegen2.platform.adapter.acumos
       - dcaegen2-platform-mod-distributorapi:
           src-dir: mod/distributorapi
+	  docker-name: onap/org.onap.dcaegen2.platform.mod.distributorapi
       - dcaegen2-platform-mod-onboardingapi:
           src-dir: mod/onboardingapi
+	  docker-name: onap/org.onap.dcaegen2.platform.mod.onboardingapi
       - dcaegen2-platform-oti-event-handler:
           src-dir: oti/event-handler
+	  docker-name: onap/org.onap.dcaegen2.platform.oti.event-handler
     stream:
       - master:
           branch: master
     views:
       - project-view:
-          project-name: dcaegen2-platform-aoadapter
+          project-name: dcaegen2-platform-adapter
       - project-view:
           project-name: dcaegen2-platform-mod
       - project-view:
