@@ -16,6 +16,24 @@
       "revId": "bdb0c330f58df674b2101f0f48d36c1023049e51",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b775eeae_ec6e2dc1",
+        "filename": "jjb/aaf/aaf-certservice-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6100
+      },
+      "writtenOn": "2020-02-20T14:09:59Z",
+      "side": 1,
+      "message": "CSITs can be found in tests/aaf/certservice directory in integration/csit repo so I think project name should be aaf",
+      "parentUuid": "5566b19c_efe9b13e",
+      "revId": "bdb0c330f58df674b2101f0f48d36c1023049e51",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
