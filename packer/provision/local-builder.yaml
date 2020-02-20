@@ -70,7 +70,6 @@
           - python-ncclient
           - nodejs-dev
           - node-gyp
-          - libssl1.0-dev
           - nodejs
           - npm
         update_cache: yes
