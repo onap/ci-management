@@ -47,10 +47,12 @@
     <<: *dcaegen2_services_common
     name: dcaegen2-services-pmsh-sonar
     docker-root: components/pm-subscription-handler
+    cron: '@daily'
     branch: master
     jobs:
-      - gerrit-tox-sonar
-    cron: '@daily'
+      - gerrit-tox-sonar:
+          sonar-mvn-goal: '-f components/pm-subscription-handler sonar:sonar'
+
 
 - project:
     <<: *dcaegen2_services_common
