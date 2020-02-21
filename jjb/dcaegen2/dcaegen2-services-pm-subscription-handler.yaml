@@ -51,7 +51,7 @@
     branch: master
     jobs:
       - gerrit-tox-sonar:
-          sonar-mvn-goal: '-f components/pm-subscription-handler sonar:sonar'
+          sonar-mvn-goal: '-f components/pm-subscription-handler/pom.xml sonar:sonar'
 
 
 - project:
