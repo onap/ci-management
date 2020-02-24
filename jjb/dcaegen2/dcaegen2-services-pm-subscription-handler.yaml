@@ -53,23 +53,6 @@
       - gerrit-tox-sonar:
           sonar-mvn-goal: '-f components/pm-subscription-handler/pom.xml sonar:sonar'
 
-
-- project:
-    <<: *dcaegen2_services_common
-    docker-root: components/pm-subscription-handler
-    name: dcaegen2-services-pmsh-release
-    project-name: dcaegen2-services-pmsh-release
-    jobs:
-      - '{project-name}-gerrit-release-jobs':
-              build-node: centos7-docker-8c-8g
-    stream:
-      - 'master':
-          branch: master
-    maven-deploy-properties: |
-      deployAtEnd=true
-    files: '**'
-    archive-artifacts: ''
-
 - project:
     <<: *dcaegen2_services_common
     name: dcaegen2-services-pmsh-clm
