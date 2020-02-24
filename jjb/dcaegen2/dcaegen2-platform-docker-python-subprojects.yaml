@@ -61,8 +61,6 @@
           cron: '@daily'
           stream: master
           branch: master
-      - gerrit-release-verify
-      - gerrit-release-merge
 
 - project:
     name: dcaegen2-platform-docker-python-subprojects
