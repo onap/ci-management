@@ -25,7 +25,7 @@
     # Following is dependent on merge https://gerrit.onap.org/r/#/c/ci-management/+/99313/
     # docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
     # image name
-    docker-name: 'onap/{name}'
+    docker-name: 'onap/org.onap.dcaegen2.services.pmsh'
     stream:
       - master:
             branch: master
