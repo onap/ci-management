@@ -1,7 +1,8 @@
 {
-  "stack_tenant": "TENANTID",
-  "stack_user": "USERID",
-  "stack_pass": "PASSWD",
-  "stack_network": "NETID",
+  "cloud_auth_url": "https://auth.vexxhost.net/v3/",
+  "cloud_tenant": "ef6e8825-fc3a-4ebf-886a-ba51ada06a9c",
+  "cloud_user": "98fba6bb-548a-461c-ad3f-96a7e075e90e",
+  "cloud_pass": "nsXBzhMCbA7HJNcxubNm5ZV5jsjemmE2jvVB4YPqEFpvAjyE",
+  "cloud_network": "bd089be9-e846-4afe-905b-8bb6c7c90faf",
   "ssh_proxy_host": ""
 }
