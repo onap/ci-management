@@ -23,7 +23,7 @@
     docker-root: components/pm-subscription-handler
     # tag override
     # Following is dependent on merge https://gerrit.onap.org/r/#/c/ci-management/+/99313/
-    # docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
+    docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
     # image name
     docker-name: 'onap/org.onap.dcaegen2.services.pmsh'
     stream:
@@ -46,12 +46,11 @@
 - project:
     <<: *dcaegen2_services_common
     name: dcaegen2-services-pmsh-sonar
-    docker-root: components/pm-subscription-handler
+    docker-root: components/pm-subscription-handler/
     cron: '@daily'
     branch: master
     jobs:
       - gerrit-tox-sonar:
-          sonar-mvn-goal: '-f components/pm-subscription-handler/pom.xml sonar:sonar'
 
 - project:
     <<: *dcaegen2_services_common
