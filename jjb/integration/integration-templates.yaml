@@ -43,3 +43,56 @@
 
     publishers:
       - lf-infra-publish
+
+- job-template:
+    # Job template for running linters against specific file formats
+    #
+    # Required Variables:
+    #     python-version: Python version to deploy in venv
+    #     tox-env:        Tox environments to run
+    #     tox-dir:        Directory containing the project's tox.ini
+    #     pattern:        List of file patterns to scan
+
+    name: '{project-name}-{stream}-{subproject}-lint'
+    project-type: freestyle
+    description: 'Job intended for running linters with Tox and Coala'
+    node: ubuntu1604-builder-2c-1g
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+      - lf-infra-tox-parameters:
+          tox-dir: '{tox-dir}'
+          tox-envs: '{tox-envs}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{pattern}'
+
+    builders:
+      - lf-infra-tox-install:
+          python-version: '{python-version}'
+      - lf-infra-tox-run:
+          parallel: 'false'
+
+    publishers:
+      - lf-infra-publish

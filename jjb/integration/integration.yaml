@@ -36,11 +36,9 @@
     name: integration-verify-vagrantfile
     project-name: 'integration'
     project: 'integration'
-
     stream:
       - 'master':
           branch: 'master'
-
     jobs:
       - '{project-name}-{stream}-verify-vagrantfile'
 
@@ -65,3 +63,23 @@
         set -ex # Fail build if any setup step fails
         cd test/security/k8s
         make test
+
+- project:
+    name: integration-linters
+    project: 'integration'
+    project-name: 'integration'
+    python-version: python3
+    jobs:
+      - '{project-name}-{stream}-{subproject}-lint'
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml|**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+    stream:
+      - 'master':
+          branch: 'master'
