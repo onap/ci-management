@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7a38a1e_fe52a22a",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1907
+      },
+      "writtenOn": "2020-02-27T19:36:17Z",
+      "side": 1,
+      "message": "With the ones under platform, I had to set tox-dir to the subproject subdirectory for the generation of code coverage data.\n\nI had to set sonar-mvn-goal to \"-f [subprojectdirectory] sonar:sonar\" so it would use the suproject pom.xml file\n\nI don\u0027t think docker-root was used for sonar.",
+      "revId": "06a72894c36e7237bc7329220ecec437967a3a82",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
