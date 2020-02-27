@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1c0dd0a0_bfe238cd",
+        "filename": "jjb/dcaegen2/dcaegen2-services-pm-subscription-handler.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2020-02-27T23:04:27Z",
+      "side": 1,
+      "message": "This change conflicts with https://gerrit.onap.org/r/#/c/ci-management/+/102525/ where this jjb is removed/refactored\n\nPossibly we can remove update to dcaegen2-services-pm-subscription-handler.yaml on this change and Fiachra can add sonarcloud setting on new job/template.",
+      "revId": "a2ba84885f7ec1cdc55f027b93f7de0bf005b46b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
