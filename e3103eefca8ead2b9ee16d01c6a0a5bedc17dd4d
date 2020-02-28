@@ -16,6 +16,24 @@
       "revId": "e3103eefca8ead2b9ee16d01c6a0a5bedc17dd4d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4d4f545_ad4c3b3e",
+        "filename": "jjb/integration/netconf-pnp-simulator.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5447
+      },
+      "writtenOn": "2020-02-28T14:16:18Z",
+      "side": 1,
+      "message": "Sure. I\u0027ll fix it.",
+      "parentUuid": "f69b56be_ff3db275",
+      "revId": "e3103eefca8ead2b9ee16d01c6a0a5bedc17dd4d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
