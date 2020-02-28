@@ -1,0 +1,12 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Andy Walshe <andy.walshe@est.tech>
+Code-Review+1: David Farrelly <david.farrelly@est.tech>
+Code-Review+1: Joseph O'Leary <joseph.o.leary@est.tech>
+Code-Review+1: Vijay Venkatesh Kumar <vv770d@att.com>
+Code-Review+1: Robertas Rimkus <robertas.rimkus@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Fri, 28 Feb 2020 19:13:03 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/102525
+Project: ci-management
+Branch: refs/heads/master
