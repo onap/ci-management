@@ -1,0 +1,89 @@
+---
+- job-group:
+    # This job group contains all the jobs that should be deployed for
+    # a subproject of dcaegen2/services that builds a Docker image from
+    # Python code.
+    #
+    # Required parameters:
+    #  build-node: The node to run build on.
+    #  mvn-settings: Maven settings.xml file containing credentials to use.
+    #  project-name: The job name prefix
+    #  src-dir: The subdirectory of the repository containing subproject code
+    #  stream: The stream to build
+    #  branch: The branch to build
+    #
+    #  Note: Multiple subprojects can be built with a single JJB project
+    #  by specifying the value of project-name as a list.
+    #  Similarly, multiple streams can be built with a single JJB project
+    #  by specifying the value of the stream as a list.
+    #  For example:
+    #    project-name:
+    #      - subproject-name1:
+    #          src-dir: subproject-dir1
+    #          docker-name: onap/org.onap.dcaegen2.services.something.name1
+    #      - subproject-name2:
+    #          src-dir: subproject-dir2
+    #          docker-name: onap/org.onap.dcaegen2.services.something.name2
+    #      - subproject-name3:
+    #          src-dir: subproject-dir3
+    #          docker-name: onap/org.onap.dcaegen2.services.something.name3
+    #    stream:
+    #      - master:
+    #          branch: master
+    #      - release1:
+    #          branch: release1.0
+    #    jobs:
+    #      - dcaegen2-docker-python-jobs
+
+    name: '{project-name}-docker-python-jobs'
+    id: dcaegen2-services-docker-python-jobs
+    container-tag-method: latest
+    docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
+    nexus-iq-namespace: 'onap-'
+    tox-dir: '{src-dir}'
+    tox-envs: 'py3'
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    python-version: python3
+    wss-product-name: '{project-name}'
+    docker-root: '{src-dir}'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '{src-dir}/.*'
+    jobs:
+      - gerrit-tox-verify:
+          stream: master
+          branch: 'master'
+      - gerrit-docker-verify
+      - gerrit-docker-merge
+      - gerrit-whitesource-scan:
+          build-timeout: 120
+          submodule-timeout: 30
+          java-opts: '-Xmx2048m'
+          mvn-pom: '{src-dir}/pom.xml'
+      - gerrit-tox-sonar:
+          # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
+          sonar-mvn-goal: '-f {src-dir}/pom.xml sonar:sonar'
+          cron: '@daily'
+          stream: master
+          branch: master
+
+- project:
+    name: dcaegen2-services-docker-python-subprojects
+    project: dcaegen2/services
+    mvn-settings: dcaegen2-services-settings
+    build-node: ubuntu1604-docker-8c-8g
+    project-name:
+      - dcaegen2-services-pmsh:
+          src-dir: components/pm-subscription-handler
+          docker-name: onap/org.onap.dcaegen2.services.pmsh
+    stream:
+      - master:
+          branch: master
+    views:
+      - project-view:
+          project-name: dcaegen2-services-pmsh
+    jobs:
+      - dcaegen2-services-docker-python-jobs

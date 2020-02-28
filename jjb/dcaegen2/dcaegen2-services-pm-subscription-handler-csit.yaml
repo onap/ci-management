@@ -11,5 +11,5 @@
     functionality:
       - 'testsuite':
           trigger_jobs:
-            - '{project-name}-{stream}-release-version-java-daily'
+            - '{project-name}-docker-merge-master'
     robot-options: ''
