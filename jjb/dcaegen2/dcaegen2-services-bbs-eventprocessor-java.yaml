@@ -14,6 +14,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -45,6 +46,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -54,6 +56,7 @@
 
 - project:
     name: dcaegen2-services-bbs-event-processor-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -73,6 +76,7 @@
 
 - project:
     name: dcaegen2-services-bbs-event-processor-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
