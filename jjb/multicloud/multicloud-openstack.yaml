@@ -65,7 +65,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: centos7-docker-8c-8g
           maven-goals: install
           mvn-params: '-P docker'
           maven-versions-plugin: true
@@ -75,7 +75,7 @@
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-memcached-4c-4g'
+    build-node: 'centos7-builder-4c-4g'
 
 #- project:
 #    name: multicloud-openstack-arm64
