@@ -1,0 +1,10 @@
+---
+- project:
+    name: vvp-test-engine
+    project-name: 'vvp-test-engine'
+    project: 'vvp/test-engine'
+    mvn-settings: 'vvp-test-engine-settings'
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
