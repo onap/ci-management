@@ -74,7 +74,7 @@
           branch: 'master'
     # Required by verifier
     mvn-settings: 'integration-settings'
-    project-name: 'netconf-pnp-simulator'
+    project-name: 'integration-netconf-pnp-simulator'
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: 'test/mocks/netconf-pnp-simulator/engine/**'
@@ -82,7 +82,7 @@
     docker-root: test/mocks/netconf-pnp-simulator/engine
     container-tag-method: yaml-file
     build-node: centos7-docker-8c-8g
-    build-timeout: 1000
+    build-timeout: 20
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge
