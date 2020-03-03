@@ -18,7 +18,7 @@ set -euf -o pipefail
 # shellcheck disable=SC1090
 source ~/lf-env.sh
 
-lf-activate-venv lftools
+lf-activate-venv zipp==1.1.0 lftools
 
 if [ ! -v RELEASEDOCKERHUB_ORG ]
 then
