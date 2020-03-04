@@ -52,6 +52,40 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: Add nodejs apt key
+      apt_key:
+        url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+        state: present
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Add nodejs PPA
+      apt_repository:
+        repo: "deb https://deb.nodesource.com/node_13.x bionic main"
+        state: present
+        update_cache: yes
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: List APT dirs
+      shell: ls /etc/apt/sources.list.d
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Cat sources.list
+      shell: cat /etc/apt/sources.list
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install nodejs and nodejs-dev
+      apt:
+        name:
+          - nodejs-dev
+          - nodejs
+        update_cache: yes
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
     - name: Install base packages
       apt:
         name:
@@ -74,9 +108,7 @@
           - crudini
           - maven
           - python-ncclient
-          - nodejs-dev
           - node-gyp
-          - nodejs
           - npm
         update_cache: yes
       become: true
