@@ -14,7 +14,6 @@
          docker-pom: 'pom.xml'
          mvn-profile: 'docker'
          mvn-params: "-P docker"
-         java-opts: 'Xss2048k'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
