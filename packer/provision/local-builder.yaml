@@ -52,6 +52,15 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: Install nodejs and nodejs-dev
+      apt:
+        name:
+          - nodejs-dev=8.10.0~dfsg-2ubuntu0.4
+          - nodejs=8.10.0~dfsg-2ubuntu0.4
+        update_cache: yes
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
     - name: Install base packages
       apt:
         name:
@@ -74,9 +83,7 @@
           - crudini
           - maven
           - python-ncclient
-          - nodejs-dev
           - node-gyp
-          - nodejs
           - npm
         update_cache: yes
       become: true
