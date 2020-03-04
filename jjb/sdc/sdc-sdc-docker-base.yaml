@@ -4,7 +4,9 @@
     name: sdc-sdc-docker-base
     project-name: 'sdc-sdc-docker-base'
     jobs:
-      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-verify-java':
+          build-node: 'ubuntu1604-docker-v1-8c-8g'
+          docker-pom: 'pom.xml'
       - '{project-name}-{stream}-sdc-merge-java':
           build-node: 'ubuntu1604-docker-8c-8g'
           docker-pom: 'pom.xml'
