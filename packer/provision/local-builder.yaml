@@ -52,6 +52,13 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: Install libssl1.0-dev first
+      apt:
+        name: libssl1.0-dev
+        update_cache: yes
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
     - name: Install base packages
       apt:
         name:
