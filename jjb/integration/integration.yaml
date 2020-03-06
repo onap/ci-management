@@ -96,7 +96,11 @@
       - 'yaml':
           tox-dir: '.'
           tox-envs: 'yaml'
-          pattern: '**/*.yaml|**/*.yml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
       - 'json':
           tox-dir: '.'
           tox-envs: 'json'
