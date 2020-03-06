@@ -20,6 +20,8 @@
           maven-versions-plugin: true
           mvn-pom: 'nokiav2/pom.xml'
           mvn-params: '-f nokiav2/pom.xml'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     files: 'nokiav2/**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g

@@ -20,6 +20,8 @@
           maven-versions-plugin: true
           mvn-pom: 'huawei/pom.xml'
           mvn-params: '-f huawei/pom.xml'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1604-builder-4c-4g
