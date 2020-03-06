@@ -7,13 +7,17 @@
       - '{project-name}-{stream}-merge-java':
           project-name: 'policy-pap-amd64'
           docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
           mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
           build-node: ubuntu1804-docker-8c-8g
+          pattern: 'do_not_match_any_file'
       - '{project-name}-{stream}-merge-java':
           project-name: 'policy-pap-arm64'
           docker-pom: 'pom.xml'
+          mvn-profile: 'docker'
           mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu1604-docker-arm64-4c-2g
+          pattern: 'do_not_match_any_file'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
