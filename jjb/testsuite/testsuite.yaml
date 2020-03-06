@@ -56,3 +56,26 @@
     build-node: centos7-builder-2c-1g
     project: testsuite
     branch: master
+
+- project:
+    name: testsuite-linters
+    project: 'testsuite'
+    project-name: 'testsuite'
+    python-version: python3
+    jobs:
+      - '{project-name}-{stream}-{subproject}-lint'
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml|**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'robot':
+          tox-dir: '.'
+          tox-envs: 'robot'
+    stream:
+      - 'master':
+          branch: 'master'
