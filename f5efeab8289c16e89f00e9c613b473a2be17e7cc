@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f40c9d51_0223dd8a",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2020-03-09T15:00:03Z",
+      "side": 1,
+      "message": "i dont think you want 2 subproject:?",
+      "revId": "f5efeab8289c16e89f00e9c613b473a2be17e7cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
