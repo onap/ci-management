@@ -63,7 +63,8 @@
     project-name: 'testsuite'
     python-version: python3
     jobs:
-      - '{project-name}-{stream}-{subproject}-lint'
+      - '{project-name}-{stream}-{subproject}-lint':
+          build-node: ubuntu1804-builder-4c-4g
     subproject:
       - 'yaml':
           tox-dir: '.'
