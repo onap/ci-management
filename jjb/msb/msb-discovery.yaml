@@ -16,6 +16,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-pom: 'distributions/msb-discovery/pom.xml'
           mvn-params: '-f distributions/msb-discovery/pom.xml -Dmaven.test.skip=true -P linux,docker'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     project: 'msb/discovery'
     stream:
       - 'master':
