@@ -72,7 +72,7 @@
     branch: 'master'
     mvn-settings: 'dcaegen2-services-settings'
     mvn-params: '-f components/bbs-event-processor/pom.xml'
-    mvn-goals: 'clean install'
+    mvn-goals: 'clean install -Ddockerfile.skip'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
