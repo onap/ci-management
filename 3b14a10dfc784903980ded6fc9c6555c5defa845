@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32ec1977_867be987",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-10T14:48:48Z",
+      "side": 1,
+      "message": "This won\u0027t work, there\u0027s no option to define custom builder node in template...\nFixed it for you in https://gerrit.onap.org/r/c/ci-management/+/103447",
+      "revId": "3b14a10dfc784903980ded6fc9c6555c5defa845",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
