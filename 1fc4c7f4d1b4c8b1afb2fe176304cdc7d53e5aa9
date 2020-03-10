@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f7e72ab_8c9e9b46",
+        "filename": "jjb/integration/integration.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-10T14:27:32Z",
+      "side": 1,
+      "message": "Where is the tox.ini for this command? I can\u0027t find it in simulator dir:\n\nintegration$ find test/mocks/netconf-pnp-simulator | grep tox.ini\nintegration$\n\nDo you mean it\u0027s inside the \"docker-name\" image?",
+      "revId": "1fc4c7f4d1b4c8b1afb2fe176304cdc7d53e5aa9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
