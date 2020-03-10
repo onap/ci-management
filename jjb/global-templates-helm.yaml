@@ -55,6 +55,7 @@
     # Job template for helm verify jobs
 
     <<: *helm_job_boiler_plate
+    concurrent: true
 
     scm:
       - gerrit-trigger-scm:
