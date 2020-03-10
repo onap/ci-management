@@ -53,6 +53,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
