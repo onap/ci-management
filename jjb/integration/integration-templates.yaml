@@ -56,7 +56,8 @@
     name: '{project-name}-{stream}-{subproject}-lint'
     project-type: freestyle
     description: 'Job intended for running linters with Tox and Coala'
-    node: ubuntu1604-builder-2c-1g
+    build-node: ubuntu1604-builder-2c-1g
+    node: '{build-node}'
 
     parameters:
       - lf-infra-parameters:
