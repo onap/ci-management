@@ -30,7 +30,7 @@
 - project:
     name: vvp-test-engine-verify
     project-name: 'vvp-test-engine'
-    project: 'vvp/vvp-test-engine'
+    project: 'vvp/test-engine'
     stream:
       - 'master':
           branch: 'master'
