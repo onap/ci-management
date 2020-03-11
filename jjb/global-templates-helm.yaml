@@ -20,6 +20,7 @@
     submodule-disable: false
     submodule-recursive: true
     submodule-timeout: 10
+    build-timeout: 120
 
     #####################
     # Job Configuration #
