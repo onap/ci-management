@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c603ccb2_7d4df442",
+        "filename": "jjb/vvp/vvp-test-engine.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-03-11T17:37:55Z",
+      "side": 1,
+      "message": "lets start using ubuntu1804-docker-8c-8g",
+      "range": {
+        "startLine": 22,
+        "startChar": 16,
+        "endLine": 22,
+        "endChar": 39
+      },
+      "revId": "b968aeac06be73a486f0fe385f492935141f4555",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
