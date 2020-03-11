@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac621f90_d6671ff1",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-11T13:18:28Z",
+      "side": 1,
+      "message": "This is completely wrong, you copied my code from wrong commit, please check proper setup in most recent master in integration.yaml.",
+      "range": {
+        "startLine": 69,
+        "startChar": 0,
+        "endLine": 72,
+        "endChar": 39
+      },
+      "revId": "1052f91a724b87f38d430fbabf023cf616c691b1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
