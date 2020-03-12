@@ -13,7 +13,7 @@
 
     project-type: freestyle
     concurrent: true
-    node: '{build-node}'
+    node: ubuntu1604-docker-8c-8g
 
     properties:
       - infra-properties:
