@@ -26,8 +26,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'aai-graphgraph-settings'
     files: '**'
     archive-artifacts: ''
@@ -41,21 +39,3 @@
     project: aai/graphgraph
     branch: master
 
-- project:
-    name: aai-graphgraph-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
-    project: 'aai/graphgraph'
-    project-name: 'aai-graphgraph'
-    branch: 'master'
-    mvn-settings: 'aai-sparky-be-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-version: 'mvn35'
