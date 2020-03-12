@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd6fd488_633208fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-12T11:06:11Z",
+      "side": 1,
+      "message": "Just a hint on this from my side - please look at how I configured the jjb template to leverage tox builder in https://gerrit.onap.org/r/c/ci-management/+/102391/3/jjb/integration/integration-templates.yaml line 61-68 to make it pick the tox.ini in right directory - you need to set \"tox-dir\" accordingly for lf-infra-tox-parameters parameters and then use lf-infra-tox-install and lf-infra-tox-run builders. I think the correct workflow is not to use tox-run.sh explicitly but through those two builders, then it\u0027ll work. \n\ntox-run.sh is run as part of lf-infra-tox-run builder but it expects setup done by lf-infra-tox-install to be done prior to it.",
+      "revId": "72d60da8bd454ce90c7520a32c23bcdf72d46b4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
