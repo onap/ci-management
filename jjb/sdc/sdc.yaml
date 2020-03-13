@@ -66,7 +66,7 @@
 #    project-name: 'sdc-arm64'
 #    jobs:
 #      - '{project-name}-{stream}-docker-version-java-daily':
-#          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#          build-node: 'ubuntu1804-docker-arm64-4c-2g'
 #          docker-pom: 'pom.xml'
 #          mvn-profile: 'docker'
 #          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus.onap.org/content/repositories/npm/'

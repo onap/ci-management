@@ -16,7 +16,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          build-node: ubuntu1604-docker-arm64-4c-2g
+          build-node: ubuntu1804-docker-arm64-4c-2g
           pattern: 'do_not_match_any_file'
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -28,7 +28,7 @@
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-docker-stage:
           project-name: 'policy-pap-arm64'
-          build-node: ubuntu1604-docker-arm64-4c-2g
+          build-node: ubuntu1804-docker-arm64-4c-2g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
           container-public-registry: 'docker.io'
