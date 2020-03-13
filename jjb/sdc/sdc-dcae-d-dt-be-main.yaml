@@ -29,7 +29,7 @@
 #    project-name: 'sdc-dcae-d-dt-be-main-arm64'
 #    jobs:
 #      - '{project-name}-{stream}-docker-version-java-daily':
-#          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#          build-node: 'ubuntu1804-docker-arm64-4c-2g'
 #          docker-pom: 'pom.xml'
 #          mvn-profile: 'docker'
 #          mvn-params: '-DskipTests=true'
@@ -38,7 +38,7 @@
 #      - 'master':
 #          branch: 'master'
 #    mvn-settings: 'sdc-dcae-d-dt-be-main-settings'
-#    build-node: ubuntu1604-docker-arm64-4c-2g
+#    build-node: ubuntu1804-docker-arm64-4c-2g
 #    files: '**'
 #    archive-artifacts: ''
 #    build-timeout: 60

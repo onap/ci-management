@@ -53,7 +53,7 @@
 #    archive-artifacts: ''
 #    docker-pom: 'pom.xml'
 #    mvn-profile: docker
-#    build-node: ubuntu1604-docker-arm64-4c-2g
+#    build-node: ubuntu1804-docker-arm64-4c-2g
 #    maven-version: 'mvn35'
 #
 - project:

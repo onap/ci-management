@@ -29,10 +29,10 @@
 #- project:
 #    name: sdc-dcae-d-dt-arm64
 #    project-name: 'sdc-dcae-d-dt-arm64'
-#    build-node: ubuntu1604-docker-arm64-4c-2g
+#    build-node: ubuntu1804-docker-arm64-4c-2g
 #    jobs:
 #      - '{project-name}-{stream}-docker-version-java-daily':
-#          build-node: 'ubuntu1604-docker-arm64-4c-2g'
+#          build-node: 'ubuntu1804-docker-arm64-4c-2g'
 #          docker-pom: 'pom.xml'
 #          mvn-profile: 'server,docker'
 #          mvn-params: '-DskipTests=true'

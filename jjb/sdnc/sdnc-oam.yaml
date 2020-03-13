@@ -51,7 +51,7 @@
 #    mvn-settings: 'sdnc-oam-settings'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu1604-docker-arm64-4c-2g
+#    build-node: ubuntu1804-docker-arm64-4c-2g
 
 - project:
     name: sdnc-oam-clm
