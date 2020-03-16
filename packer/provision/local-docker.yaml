@@ -106,15 +106,6 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Install nodejs-dev dep for npm
-      apt:
-        name:
-          - nodejs-dev
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
     - name: Install nodejs-dev libssl1.0-dev dep
       apt:
         name:
@@ -123,6 +114,15 @@
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install nodejs-dev dep for npm
+      apt:
+        name:
+          - nodejs-dev
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install supporting packages
       apt:
