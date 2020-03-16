@@ -106,7 +106,25 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Install base packages
+    - name: Install nodejs-dev dep for npm
+      apt:
+        name:
+          - nodejs-dev
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install nodejs-dev libssl1.0-dev dep
+      apt:
+        name:
+          - libssl1.0-dev
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install supporting packages
       apt:
         name:
           - unzip
@@ -116,8 +134,6 @@
           - make
           - sshuttle
           - netcat
-          - nodejs-dev
-          - libssl1.0-dev
           - libssl-dev
           - libffi-dev
           - xmlstarlet
@@ -130,16 +146,16 @@
           - crudini
           - maven
           - python-ncclient
-          - nodejs
-          - npm
         update_cache: yes
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Install npm addon packages
+    - name: Install npm and addon packages
       apt:
         name:
+          - nodejs
+          - npm
           - node-gyp
         update_cache: yes
         state: fixed
