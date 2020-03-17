@@ -15,10 +15,10 @@
           pattern: 'conductor/**'
           pom: 'pom.xml'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-python':
+          build-node: ubuntu1804-builder-4c-4g
+      - '{project-name}-{stream}-{subproject}-merge-java':
+          build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
