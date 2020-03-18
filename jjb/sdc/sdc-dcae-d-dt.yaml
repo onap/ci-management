@@ -2,7 +2,7 @@
 - project:
     name: sdc-dcae-d-dt
     project-name: 'sdc-dcae-d-dt'
-    build-node: ubuntu1604-builder-4c-2g
+    build-node: ubuntu1804-builder-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -73,7 +73,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/dcae-d/dt
     project-name: 'sdc-dcae-d-dt'
-    build-node: ubuntu1604-builder-4c-2g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'sdc-dcae-d-dt-settings'
 

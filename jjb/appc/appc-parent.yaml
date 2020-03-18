@@ -24,7 +24,7 @@
           branch: 'master'
     mvn-settings: 'appc-parent-settings'
     maven-version: "mvn35"
-    build-node: ubuntu1604-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: appc-parent-info
