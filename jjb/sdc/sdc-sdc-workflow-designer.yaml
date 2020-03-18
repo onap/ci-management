@@ -28,8 +28,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
