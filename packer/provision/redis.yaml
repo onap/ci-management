@@ -24,11 +24,11 @@
         state: started
       become: true
 
-    - name: Install Python 3.6 and packages
+    - name: Install Python 3.6
       yum:
         name:
-          - python36u
-          - python36u-libs
-          - python36u-devel
+          - epel-release
+          - python36
+        update_cache: yes
         state: latest
       become: true
