@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdnc-oam-settings'
     maven-version: "mvn35"
     files: '**'

@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdnc-northbound-settings'
 
     # due to a strange macro / variable translation problem this needs to be
