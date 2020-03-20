@@ -4,7 +4,7 @@
     disabled: '{disabled}'
 
     project-type: freestyle
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
@@ -128,7 +128,7 @@
     disabled: false
 
     project-type: freestyle
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
@@ -296,7 +296,7 @@
     disabled: '{disabled}'
 
     project-type: freestyle
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
@@ -426,7 +426,7 @@
     disabled: false
 
     project-type: freestyle
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
