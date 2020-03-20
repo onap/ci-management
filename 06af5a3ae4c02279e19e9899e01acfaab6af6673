@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ac27ec8_012f66fc",
+        "filename": "jjb/policy/policy-pap.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-03-20T14:34:15Z",
+      "side": 1,
+      "message": "No - I would like it back to what it was before. I will switch to ubunut in one sweep with another review.",
+      "parentUuid": "c4cf50cd_26d337ff",
+      "revId": "06af5a3ae4c02279e19e9899e01acfaab6af6673",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ec45f1bd_dfd13d01",
         "filename": "jjb/policy/policy-pap.yaml",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2020-03-20T14:31:54Z",
       "side": 1,
       "message": "should these be docker.io?",
+      "revId": "06af5a3ae4c02279e19e9899e01acfaab6af6673",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30d70244_75d1aed4",
+        "filename": "jjb/policy/policy-pap.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-03-20T14:34:15Z",
+      "side": 1,
+      "message": "No - we got back to nexus3 for all the repos. Again, back to where it was before, same as the other repos. We\u0027ll change to docker.io in another set of reviews.",
+      "parentUuid": "ec45f1bd_dfd13d01",
       "revId": "06af5a3ae4c02279e19e9899e01acfaab6af6673",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
