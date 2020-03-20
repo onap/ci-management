@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4cf50cd_26d337ff",
+        "filename": "jjb/policy/policy-pap.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-03-20T14:31:54Z",
+      "side": 1,
+      "message": "should probably stay with 1804\n\nsame comment below",
+      "revId": "06af5a3ae4c02279e19e9899e01acfaab6af6673",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec45f1bd_dfd13d01",
+        "filename": "jjb/policy/policy-pap.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-03-20T14:31:54Z",
+      "side": 1,
+      "message": "should these be docker.io?",
+      "revId": "06af5a3ae4c02279e19e9899e01acfaab6af6673",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
