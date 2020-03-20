@@ -54,3 +54,31 @@
     build-node: centos7-builder-2c-1g
     project: demo
     branch: master
+
+- project:
+    name: demo-linters
+    project: 'demo'
+    project-name: 'demo'
+    python-version: python3
+    jobs:
+      - '{project-name}-{stream}-{subproject}-lint'
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'python':
+          tox-dir: '.'
+          tox-envs: 'py'
+          pattern: '**/*.py'
+    stream:
+      - 'master':
+          branch: 'master'
