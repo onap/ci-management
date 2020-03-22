@@ -82,12 +82,13 @@
 - project:
     name: sdc-sonar
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-maven-sonar:
+          build-timeout: 120
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
+    sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
     cron: '@daily'
     build-node: ubuntu1604-builder-8c-8g
     project: 'sdc'
