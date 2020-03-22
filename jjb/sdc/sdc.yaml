@@ -83,6 +83,7 @@
     name: sdc-sonar
     jobs:
       - gerrit-maven-sonar
+          build-timeout: 120
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
