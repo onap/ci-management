@@ -22,6 +22,30 @@
       "revId": "65198c857934d7f993e50d35594057d5e6765b45",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a65d02ac_8482de08",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-03-24T18:18:17Z",
+      "side": 1,
+      "message": "Thanks for your comments Chris. This had a very specific helm trigger, it was the team who requested this trigger to be more generic (IT-19326)\nI added the generic form + left the helm specific trigger to only trigger helm verify",
+      "parentUuid": "5bcf5349_5748a65c",
+      "range": {
+        "startLine": 406,
+        "startChar": 62,
+        "endLine": 406,
+        "endChar": 69
+      },
+      "revId": "65198c857934d7f993e50d35594057d5e6765b45",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
