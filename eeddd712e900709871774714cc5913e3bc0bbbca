@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71a05239_b2365ced",
+        "filename": "jjb/integration/integration.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5047
+      },
+      "writtenOn": "2020-03-24T08:50:40Z",
+      "side": 1,
+      "message": "Missing colon; PS2 on the way",
+      "range": {
+        "startLine": 57,
+        "startChar": 8,
+        "endLine": 57,
+        "endChar": 36
+      },
+      "revId": "eeddd712e900709871774714cc5913e3bc0bbbca",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
