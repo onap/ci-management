@@ -22,6 +22,30 @@
       "revId": "ad114ad2b8fafe8c23bbdea2a6ff1cbedecfedb4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5179a44c_cdf871fd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-24T15:30:01Z",
+      "side": 1,
+      "message": "sslendpoints you created recently:\n\nhttps://gerrit.onap.org/r/gitweb?p\u003dintegration.git;a\u003dblob;f\u003dtest/security/sslendpoints/Makefile;h\u003dcf5c34d720cf06d9e63138d6d2d284bf97b5d3fe;hb\u003d869657d5c974a2a03c38a6a3e34911c3fa4c3468#l19",
+      "parentUuid": "4aa0f430_220aa82c",
+      "range": {
+        "startLine": 13,
+        "startChar": 3,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "ad114ad2b8fafe8c23bbdea2a6ff1cbedecfedb4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
