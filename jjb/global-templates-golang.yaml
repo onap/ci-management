@@ -1,5 +1,5 @@
 ---
-- job-template:
+- job-template: &verify_golang_bolierplate
     # Job template for Golang verify jobs
     #
     # The purpose of this job template is to run:
@@ -70,6 +70,12 @@
     publishers:
       - infra-shiplogs:
           maven-version: '{maven-version}'
+
+- job-template:
+    # Job template for Golang verify jobs with subproject support
+
+    <<: *verify_golang_bolierplate
+    name: '{project-name}-{stream}-{subproject}-verify-golang'
 
 - job-template:
     # Job template for Golang merge jobs

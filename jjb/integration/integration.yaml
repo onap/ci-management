@@ -49,20 +49,24 @@
     golangver: 'golang112'
     mvn-settings: 'integration-settings'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-verify-golang':
-          script: '{build_script}'
-    path: 'test/security/k8s'
-    pattern: '{path}/**'
+      - '{project-name}-{stream}-{subproject}-verify-golang':
+          script: |
+              #!/bin/bash
+              set -ex # Fail build if any setup step fails
+              cd $WORKSPACE/{path}
+              make test
+    subproject:
+      - 'test-security-k8s':
+          path: 'test/security/k8s'
+          pattern: '{path}/**'
+      - 'test-security-sslendpoints':
+          path: 'test/security/sslendpoints'
+          pattern: '{path}/**'
     stream:
       - 'master':
           branch: 'master'
-    build_script: |
-        #!/bin/bash
-        set -ex # Fail build if any setup step fails
-        cd test/security/k8s
-        make test
 
 - project:
     name: integration-netconf-pnp-simulator
