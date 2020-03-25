@@ -50,7 +50,16 @@
           stream: all
           branch: '*'
       - gerrit-docker-verify
-      - gerrit-docker-merge
+      - gerrit-docker-merge:
+          post_docker_build_script: |
+              set -uex -o pipefail
+              DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
+              DNAME={container-snapshot-registry}/{docker-name}
+              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
+              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
+              docker push $DNAME:$DOCKER_IMAGE_TAG2
+              docker push $DNAME:latest
+
       - gerrit-maven-clm:
           mvn-params: '-f {src-dir}'
           stream: master
