@@ -52,6 +52,7 @@
       - gerrit-docker-verify
       - gerrit-docker-merge:
           post_docker_build_script: |
+              #!/bin/bash
               set -uex -o pipefail
               DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
               DNAME={container-snapshot-registry}/{docker-name}
