@@ -1,0 +1,16 @@
+---
+- project:
+    name: pnf-sw-upgrade-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'usecases'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech eric.e.moore@est.tech raj.gumma@est.tech'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'pnf-sw-upgrade':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
