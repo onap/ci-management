@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0372a44e_6905d6eb",
+        "filename": "jjb/integration/integration.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-03-25T13:20:37Z",
+      "side": 1,
+      "message": "Those targets added here to verify themselves.",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 24
+      },
+      "revId": "6c6cd56b6d645d75256f17b655990a772f7d966f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
