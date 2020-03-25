@@ -46,6 +46,30 @@
       "revId": "65198c857934d7f993e50d35594057d5e6765b45",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e6802e7_85e2ba5b",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-03-25T07:29:52Z",
+      "side": 1,
+      "message": "Hello, a lot of people tries \"recheck\" on OOM repo (and nothing happpens) as they don\u0027t know you have to use the specific \"verify-helm\". \nWith that, it\u0027ll be better.\nIs it just on oom repo that it will happen?",
+      "parentUuid": "a65d02ac_8482de08",
+      "range": {
+        "startLine": 406,
+        "startChar": 62,
+        "endLine": 406,
+        "endChar": 69
+      },
+      "revId": "65198c857934d7f993e50d35594057d5e6765b45",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
