@@ -18,7 +18,7 @@
       - gerrit-maven-docker-stage:
           build-node: ubuntu1604-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
+          mvn-params: '-P docker -DskipTests'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
@@ -63,7 +63,7 @@
     project-name: 'so'
     branch: 'master'
     mvn-settings: 'so-settings'
-    mvn-params: '-Dmaven.test.skip=true'
+    mvn-params: '-DskipTests'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     coverity-project-name: 'onap-so'
     coverity-token: 'SrGGJp9T1n1lhJn2sF72XQ'
