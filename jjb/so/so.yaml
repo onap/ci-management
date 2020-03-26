@@ -63,7 +63,7 @@
     project-name: 'so'
     branch: 'master'
     mvn-settings: 'so-settings'
-    mvn-params: '-Dmaven.test.skip=true'
+    mvn-params: '-DskipTests'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     coverity-project-name: 'onap-so'
     coverity-token: 'SrGGJp9T1n1lhJn2sF72XQ'
