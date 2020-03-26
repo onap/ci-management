@@ -57,7 +57,16 @@
           stream: master
           branch: 'master'
       - gerrit-docker-verify
-      - gerrit-docker-merge
+      - gerrit-docker-merge:
+          post_docker_build_script: |
+              #!/bin/bash
+              set -uex -o pipefail
+              DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
+              DNAME={container-snapshot-registry}/{docker-name}
+              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
+              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
+              docker push $DNAME:$DOCKER_IMAGE_TAG2
+              docker push $DNAME:latest
       - gerrit-whitesource-scan:
           build-timeout: 120
           submodule-timeout: 30
