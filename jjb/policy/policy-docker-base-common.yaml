@@ -8,9 +8,9 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: "-P docker"
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -25,7 +25,7 @@
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: policy-docker-base-common
@@ -37,7 +37,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-P docker -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           pattern: 'do_not_match_any_file'
       - '{project-name}-{stream}-merge-java':
           project-name: 'policy-docker-arm64'
@@ -60,7 +60,7 @@
                pattern: 'do_not_match_any_file'
       - gerrit-maven-docker-stage:
           project-name: 'policy-docker-amd64'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true -Ddocker.pull.registry=docker.io -Ddocker.push.registry=registry-1.docker.io'
           container-public-registry: 'docker.io'
@@ -70,7 +70,7 @@
              - compare-type: REG_EXP
                pattern: 'do_not_match_any_file'
       - '{project-name}-docker-manifest-{stream}':
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-multiarch-docker-stage-{stream}'
 #      - '{project-name}-gerrit-release-jobs':
 #          build-node: centos7-docker-8c-8g
@@ -82,7 +82,7 @@
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: policy-docker-clm
