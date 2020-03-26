@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8f855693_144ed718",
+        "filename": "jjb/policy/policy-gui.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-03-26T12:18:59Z",
+      "side": 1,
+      "message": "I cannot find any use of configuration key \"enabled\" in global-jjb or oran-jjb templates, so I think nothing is listening to the message you\u0027re sending here.\n\nIf you wish to temporarily disable this job, instead of deleting it, I recommend adding this key-value pair instead:\n\n    disabled: true",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 17
+      },
+      "revId": "0554907537d32f46c558ae61864214775ff23f64",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8e227eaf_3ba0d816",
+        "filename": "jjb/policy/policy-gui.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 681
+      },
+      "writtenOn": "2020-03-26T12:18:59Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 24
+      },
+      "revId": "0554907537d32f46c558ae61864214775ff23f64",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
