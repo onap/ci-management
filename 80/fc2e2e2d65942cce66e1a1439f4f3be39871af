@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Andy Walshe <andy.walshe@est.tech>
+Code-Review+1: Andrew Gauld <agauld@att.com>
+Code-Review+1: David Farrelly <david.farrelly@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 26 Mar 2020 14:53:50 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/104474
+Project: ci-management
+Branch: refs/heads/master
