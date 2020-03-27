@@ -2,7 +2,7 @@
 - job-template:
     name: '{project-name}-{stream}-{subproject}-docker-merge'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
 
     properties:
@@ -64,7 +64,7 @@
 - job-template:
     name: '{project-name}-{stream}-{subproject}-docker-verify'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
 
     properties:
