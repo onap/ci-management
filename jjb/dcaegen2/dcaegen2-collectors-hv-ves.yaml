@@ -14,7 +14,7 @@
     maven-deploy-properties: |
       deployAtEnd=true
     archive-artifacts: 'hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - '{project-name}-{stream}-verify-java':
           mvn-goals: 'clean install'
@@ -28,7 +28,7 @@
           maven-versions-plugin: true
           mvn-goals: 'clean deploy -Ddocker.skip'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
@@ -44,7 +44,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'dcaegen2/collectors/hv-ves'
     project-name: 'dcaegen2-collectors-hv-ves'
     branch: 'master'
@@ -61,7 +61,7 @@
     project: dcaegen2/collectors/hv-ves
     project-name: 'dcaegen2-collectors-hv-ves'
     branch: 'master'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
 
 

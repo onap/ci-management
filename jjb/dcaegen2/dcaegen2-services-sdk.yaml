@@ -30,7 +30,7 @@
     jobs:
       - '{project-name}-{stream}-integration-pairwise':
           build-env-variables: "TESTCONTAINERS_RYUK_DISABLED=true"
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'dcaegen2/services/sdk'
     project-name: 'dcaegen2-services-sdk'
     stream:

@@ -81,7 +81,7 @@
     name: dcaegen2-platform-docker-python-subprojects
     project: dcaegen2/platform
     mvn-settings: dcaegen2-platform-settings
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project-name:
       - dcaegen2-platform-adapter-acumos:
           src-dir: adapter/acumos

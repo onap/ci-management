@@ -12,7 +12,7 @@
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImage'
@@ -30,7 +30,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
 
 - project:
     name: dcaegen2-platform-servicechange-handler-clm
@@ -38,7 +38,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/platform/servicechange-handler
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-platform-servicechange-handler'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'

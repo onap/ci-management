@@ -28,7 +28,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: dcaegen2/deployments
     project-name: 'dcaegen2-deployments'
     branch: 'master'

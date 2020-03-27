@@ -13,7 +13,7 @@
     maven-deploy-properties: |
       deployAtEnd=true
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
@@ -21,7 +21,7 @@
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           mvn-goals: 'clean deploy docker:build -DpushImage'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -39,7 +39,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'dcaegen2/analytics/tca-gen2'
     project-name: 'dcaegen2-analytics-tca-gen2'
     branch: 'master'
@@ -53,7 +53,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/analytics/tca-gen2
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-analytics-tca-gen2'
     branch: 'master'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'

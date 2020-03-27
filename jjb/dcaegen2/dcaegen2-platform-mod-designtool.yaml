@@ -18,7 +18,7 @@
     mvn-settings: dcaegen2-platform-settings
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
 
 
 - project:
@@ -27,7 +27,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/platform
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-platform-mod-designtool'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-settings'
