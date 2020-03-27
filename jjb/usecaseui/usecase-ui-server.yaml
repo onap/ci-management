@@ -17,14 +17,14 @@
           maven-versions-plugin: true
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: usecase-ui-server-sonar
@@ -36,7 +36,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'usecase-ui/server'
     project-name: 'usecase-ui-server'
     branch: 'master'
@@ -51,7 +51,7 @@
     nexus-iq-namespace: 'onap-'
     project: usecase-ui/server
     project-name: 'usecase-ui-server'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'usecase-ui-server-settings'
 
