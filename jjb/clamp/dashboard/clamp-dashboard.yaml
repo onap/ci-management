@@ -10,10 +10,10 @@
     project-name: 'clamp-dashboard'
     jobs:
       - gerrit-maven-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -35,7 +35,7 @@
     java-version: openjdk11
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
 
 #- project:
 #    name: clamp-dashboard-sonar
@@ -48,7 +48,7 @@
 #    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
 #    sonar-mvn-goal: '{sonar_mvn_goal}'
 #    cron: '@daily'
-#    build-node: ubuntu1604-docker-8c-8g
+#    build-node: ubuntu1804-docker-8c-8g
 #    project: 'clamp/dashboard'
 #    project-name: 'clamp-dashboard'
 #    branch: 'master'
@@ -67,6 +67,6 @@
     project-name: 'clamp-dashboard'
     branch: 'master'
     mvn-settings: 'clamp-settings'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     build-timeout: 120
     java-version: openjdk11
