@@ -22,4 +22,3 @@
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
