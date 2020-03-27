@@ -42,7 +42,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'appc'
     project-name: 'appc'
     branch: 'master'

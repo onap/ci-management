@@ -32,7 +32,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8gg
+    build-node: ubuntu1804-docker-8c-8g
     project: 'dcaegen2/platform/policy-handler'
     project-name: 'dcaegen2-platform-policy-handler'
     branch: 'master'
