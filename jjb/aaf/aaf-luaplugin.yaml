@@ -14,6 +14,6 @@
     project-name: aaf-luaplugin
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
     project: aaf/luaplugin
     branch: master

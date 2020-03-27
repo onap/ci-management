@@ -10,7 +10,7 @@
       - '{project-name}-{stream}-merge-golang'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-builder-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'sms-client/java/pom.xml'
           mvn-params: '-f sms-client/java/pom.xml'
@@ -24,13 +24,13 @@
     mvn-settings: 'aaf-sms-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: aaf-sms-info
     project-name: aaf-sms
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
     project: aaf/sms
     branch: master

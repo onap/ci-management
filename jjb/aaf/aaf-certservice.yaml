@@ -12,21 +12,21 @@
     maven-deploy-properties: |
         deployAtEnd=true
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java':
          mvn-goals: 'clean install'
       - '{project-name}-{stream}-merge-java':
          mvn-goals: 'clean deploy'
       -  '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-builder-4c-4g
       - gerrit-maven-stage:
          sign-artifacts: true
-         build-node: centos7-docker-8c-8g
+         build-node: ubuntu1804-builder-4c-4g
          maven-versions-plugin: true
          mvn-goals: 'clean deploy -P docker'
       - gerrit-maven-docker-stage:
-            build-node: ubuntu1804-docker-8c-8g
+            build-node: ubuntu1804-builder-4c-4g
             container-public-registry: 'nexus3.onap.org:10001'
             container-staging-registry: 'nexus3.onap.org:10003'
             mvn-params: '-P docker -DskipTests=true -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
@@ -44,7 +44,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'aaf/certservice'
     project-name: 'aaf-certservice'
     branch: 'master'
@@ -58,6 +58,6 @@
     project-name: aaf-certservice
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
     project: aaf/certservice
     branch: master
