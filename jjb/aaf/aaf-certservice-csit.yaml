@@ -1,3 +1,4 @@
+# Note: 202003, LF says ubuntu1602 is deprecated.  Use ubuntu1804 when needed
 - project:
       name: aaf-certservice-csit
       jobs:

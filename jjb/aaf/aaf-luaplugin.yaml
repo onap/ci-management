@@ -1,4 +1,5 @@
 ---
+# Note: 202003, LF says ubuntu1602 is deprecated.  Use ubuntu1804 when needed
 - project:
     name: aaf-luaplugin-clm
     project-name: 'aaf-luaplugin'
