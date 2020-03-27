@@ -1,4 +1,5 @@
 ---
+# Note: 202003, LF says ubuntu1604 is deprecated.  Use ubuntu1804 when needed
 - project:
     name: aaf-sshsm
     project-name: 'aaf-sshsm'
@@ -18,7 +19,7 @@
     mvn-settings: 'aaf-sshsm-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: aaf-sshsm-info
