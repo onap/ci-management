@@ -16,6 +16,24 @@
       "revId": "089fed8bc3ee41c01604eaa36b55d06b01f41f3f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "00a1cd1c_94256a8d",
+        "filename": "jjb/integration/integration-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-03-27T15:50:55Z",
+      "side": 0,
+      "message": "https://github.com/onap/ci-management/blob/master/jjb/global-templates-docker.yaml#L9\n\nAll jobs have a build node. Otherwise they would not be able to run",
+      "parentUuid": "9b309765_ba0cc95b",
+      "revId": "089fed8bc3ee41c01604eaa36b55d06b01f41f3f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
