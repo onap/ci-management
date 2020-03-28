@@ -7,7 +7,7 @@
     stream:
       - 'master':
           branch: 'master'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -20,7 +20,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-db-docker-image.sh'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 

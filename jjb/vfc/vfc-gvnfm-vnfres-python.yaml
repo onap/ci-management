@@ -8,7 +8,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfres-settings'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     subproject:
       - 'res':
           path: 'res'

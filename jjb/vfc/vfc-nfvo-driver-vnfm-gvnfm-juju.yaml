@@ -17,7 +17,7 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-juju-sonar
@@ -29,7 +29,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     mvn-params: '-f juju/juju-vnfmadapter/pom.xml'
     project: 'vfc/nfvo/driver/vnfm/gvnfm'
     project-name: 'vfc-nfvo-driver-vnfm-gvnfm-juju'
