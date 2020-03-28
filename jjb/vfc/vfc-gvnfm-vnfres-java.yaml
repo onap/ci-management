@@ -24,12 +24,12 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-gvnfm-vnfres-docker-image.sh'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-gvnfm-vnfres-res-sonar
@@ -42,7 +42,7 @@
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     cron: '@daily'
     mvn-params: '-f res/pom.xml'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vfc/gvnfm/vnfres'
     project-name: 'vfc-gvnfm-vnfres-res'
     branch: 'master'
@@ -57,7 +57,7 @@
     nexus-iq-namespace: 'onap-'
     project: vfc/gvnfm/vnfres
     project-name: 'vfc-gvnfm-vnfres'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-gvnfm-vnfres-settings'
 

@@ -25,7 +25,7 @@
           mvn-goals: 'install'
           script:
             !include-raw-escape: 'build-nfvo-catalog-docker-image.sh'
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     files: '**'

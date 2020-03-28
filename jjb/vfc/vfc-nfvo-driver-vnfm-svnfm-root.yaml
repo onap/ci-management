@@ -13,7 +13,7 @@
           mvn-params: '-P rootOnly'
           pattern: 'pom.xml'
       - '{project-name}-{stream}-merge-profile-java':
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           pattern: 'pom.xml'
       - gerrit-maven-stage:
           sign-artifacts: true
