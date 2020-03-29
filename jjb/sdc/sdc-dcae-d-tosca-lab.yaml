@@ -11,11 +11,11 @@
         path: '.'
         pattern: '**'
     mvn-settings: 'sdc-dcae-d-tosca-lab-settings'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P default -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -54,7 +54,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     cron: '@daily'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'sdc/dcae-d/tosca-lab'
     project-name: 'sdc-dcae-d-tosca-lab'
     branch: 'master'
