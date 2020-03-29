@@ -58,7 +58,7 @@
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     maven-version: 'mvn35'
 
 #- project:
@@ -90,7 +90,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
     cron: '@daily'
-    build-node: ubuntu1604-builder-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
@@ -109,7 +109,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc-catalog'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
 
@@ -123,7 +123,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc-onboarding'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
 
@@ -139,7 +139,7 @@
 - project:
     name: 'sdc-whitesource'
     project-name: 'sdc'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan:
           build-timeout: 120
