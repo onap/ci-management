@@ -8,11 +8,11 @@
           build-node: 'ubuntu1804-docker-v1-8c-8g'
           docker-pom: 'pom.xml'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1604-docker-8c-8g'
+          build-node: 'ubuntu1804-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'default'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P default'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -26,7 +26,7 @@
     mvn-settings: 'sdc-sdc-docker-base-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-8c-8g
+    build-node: ubuntu1804-builder-8c-8g
     maven-version: 'mvn35'
 
 #- project:
@@ -34,7 +34,7 @@
 #    project-name: 'sdc-sdc-docker-base-arm64'
 #    jobs:
 #      - '{project-name}-{stream}-sdc-merge-java':
-#          build-node: 'ubuntu1604-docker-8c-8g'
+#          build-node: 'ubuntu1804-docker-8c-8g'
 #          docker-pom: 'pom.xml'
 #          mvn-profile: 'default'
 #    project: 'sdc/sdc-docker-base'
