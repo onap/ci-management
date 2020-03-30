@@ -27,7 +27,7 @@
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-wfengine-engine-mgr-service-stage
@@ -53,7 +53,7 @@
 
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-wfengine-engine-activiti-extension-stage
@@ -79,7 +79,7 @@
 
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-wfengine-wfenginemgrservice-sonar
@@ -92,7 +92,7 @@
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     mvn-params: '-f wfenginemgrservice/pom.xml'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-wfenginemgrservice'
     branch: 'master'
@@ -110,7 +110,7 @@
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     mvn-params: '-f activiti-extension/pom.xml'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vfc/nfvo/wfengine'
     project-name: 'vfc-nfvo-wfengine-activiti-extension'
     branch: 'master'
@@ -125,7 +125,7 @@
     nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/wfengine
     project-name: 'vfc-nfvo-wfengine'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-wfengine-settings'
 

@@ -21,7 +21,7 @@
           maven-versions-plugin: true
           mvn-params: '-P rootOnly'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-driver-svnfm-root-info

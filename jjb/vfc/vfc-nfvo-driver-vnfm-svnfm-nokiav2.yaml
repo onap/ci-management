@@ -24,7 +24,7 @@
           build-node: centos7-docker-8c-8g
     files: 'nokiav2/**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-docker
@@ -64,7 +64,7 @@
           docker_registry: '$DOCKER_REGISTRY:10003'
     files: 'nokiav2/**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
 
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-sonar
@@ -83,7 +83,7 @@
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vfc-nfvo-driver-vnfm-svnfm-nokiav2-clm
@@ -93,6 +93,6 @@
     nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/driver/vnfm/svnfm
     project-name: 'vfc-nfvo-driver-svnfm-nokiav2'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
