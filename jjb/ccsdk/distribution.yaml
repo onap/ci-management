@@ -83,7 +83,7 @@
 - project:
     name: ccsdk-distribution-whitesource
     project-name: ccsdk-distribution
-    build-node: ubuntu1804-builder-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     jobs:
       - gerrit-whitesource-scan:
           java-opts: '-Xmx2048m'

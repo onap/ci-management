@@ -79,7 +79,7 @@
 
 - project:
     name: ccsdk-features-whitesource
-    build-node: ubuntu1804-builder-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
     project-name: ccsdk-features
     jobs:
       - gerrit-whitesource-scan
