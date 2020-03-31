@@ -66,6 +66,11 @@
           vagrant plugin install vagrant-disksize
           mkdir -p ~/.ssh
 
+- builder:
+    name: integration-docker-compose-logs
+    builders:
+      - shell: !include-raw: shell/docker-compose-logs.sh
+
 - publisher:
     name: integration-robot
     publishers:
@@ -75,3 +80,16 @@
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
           only-critical: false
+
+- publisher:
+    name: integration-docker-compose-logs
+    publishers:
+      - postbuildscript:
+          builders:
+            - role: BOTH
+              build-on:
+                - FAILURE
+                - SUCCESS
+                - UNSTABLE
+              build-steps:
+                - integration-docker-compose-logs
