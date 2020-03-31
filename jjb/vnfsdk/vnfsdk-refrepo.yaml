@@ -12,8 +12,8 @@
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-Dmaven.test.skip=true -Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
-          mvn-pom: 'vnfmarket-be/deployment/pom.xml'
+          mvn-params: '-f vnfmarket-be/deployment/docker/docker-refrepo/pom.xml -P docker -Dmaven.test.skip=true -Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
+          mvn-pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
