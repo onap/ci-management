@@ -18,7 +18,7 @@
     mvn-settings: logging-analytics-pomba-pomba-audit-common-settings
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: logging-analytics-pomba-pomba-audit-common-sonar
@@ -30,7 +30,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: logging-analytics/pomba/pomba-audit-common
     project-name: logging-analytics-pomba-pomba-audit-common
     branch: master

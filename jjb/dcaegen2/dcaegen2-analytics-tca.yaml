@@ -14,7 +14,7 @@
     maven-deploy-properties: |
       deployAtEnd=true
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
     jobs:
       - '{project-name}-{stream}-verify-java':
@@ -38,7 +38,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'dcaegen2/analytics/tca'
     project-name: 'dcaegen2-analytics-tca'
     branch: 'master'
@@ -54,7 +54,7 @@
     project: 'dcaegen2/analytics/tca'
     project-name: 'dcaegen2-analytics-tca'
     branch: 'master'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     mvn-settings: 'dcaegen2-analytics-tca-settings'
 
 - project:

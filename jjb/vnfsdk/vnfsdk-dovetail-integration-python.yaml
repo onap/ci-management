@@ -21,7 +21,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'vnfsdk-dovetail-integration-settings'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-{subproject}-merge-java'
@@ -56,7 +56,7 @@
     jobs:
       - gerrit-tox-sonar
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vnfsdk/dovetail-integration'
     project-name: 'vnfsdk-dovetail-integration'
     branch: 'master'
@@ -80,6 +80,6 @@
     nexus-iq-namespace: 'onap-'
     project: vnfsdk/dovetail-integration
     project-name: 'vnfsdk-dovetail-integration'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vnfsdk-dovetail-integration-settings'
