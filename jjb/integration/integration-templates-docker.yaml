@@ -165,4 +165,5 @@
       - shell: '{script}'
 
     publishers:
+      - integration-docker-compose-logs
       - lf-infra-publish
