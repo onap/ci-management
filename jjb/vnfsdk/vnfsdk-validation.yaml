@@ -18,7 +18,7 @@
     mvn-settings: 'vnfsdk-validation-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: vnfsdk-validation-sonar
@@ -30,7 +30,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'
@@ -54,6 +54,6 @@
     nexus-iq-namespace: 'onap-'
     project: vnfsdk/validation
     project-name: 'vnfsdk-validation'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vnfsdk-validation-settings'

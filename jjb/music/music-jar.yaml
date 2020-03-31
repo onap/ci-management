@@ -27,7 +27,7 @@
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 
 - project:
