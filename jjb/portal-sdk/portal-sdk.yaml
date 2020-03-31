@@ -29,7 +29,7 @@
     mvn-settings: 'portal-sdk-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: portal-sdk-sonar
@@ -41,7 +41,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'portal/sdk'
     project-name: 'portal-sdk'
     branch: 'master'
@@ -56,7 +56,7 @@
       - gerrit-maven-clm:
           mvn-params: '-f ecomp-sdk/pom.xml'
     nexus-iq-namespace: 'onap-'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: portal/sdk
     project-name: 'portal-sdk'
     branch: 'master'

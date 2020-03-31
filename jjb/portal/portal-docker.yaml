@@ -20,7 +20,7 @@
     mvn-settings: 'portal-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     extra-project: 'portal/sdk'
     extra-branch: '{branch}'
     extra-refspec: 'refs/heads/{branch}'
