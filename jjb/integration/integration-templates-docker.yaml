@@ -123,3 +123,46 @@
       - infra-shiplogs:
           maven-version: '{maven-version}'
 
+
+- job-template:
+    name: '{project-name}-{stream}-{subproject}-docker-compose-verify'
+    project-type: freestyle
+    description: 'This job validates Docker Compose based projects'
+    node: 'ubuntu1804-docker-8c-8g'
+    docker_root: '$WORKSPACE'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{pattern}'
+
+    builders:
+      - inject:
+          properties-content: |
+            DOCKER_ROOT={docker_root}
+      - shell: '{script}'
+
+    publishers:
+      - lf-infra-publish
