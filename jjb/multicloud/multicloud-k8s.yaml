@@ -26,7 +26,7 @@
     mvn-settings: 'multicloud-k8s-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu1804-builder-4c-4g
 
 #- project:
 #    name: multicloud-k8s-arm64
