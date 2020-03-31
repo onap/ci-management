@@ -815,7 +815,7 @@
 
     name: '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily'
     project-type: freestyle
-    node: 'ubuntu1604-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     disabled: '{disabled}'
     properties:
       - infra-properties:

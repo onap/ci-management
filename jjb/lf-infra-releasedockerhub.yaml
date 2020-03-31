@@ -12,7 +12,7 @@
     build-timeout: 90
 
     project-type: freestyle
-    node: ubuntu1604-docker-8c-8g                           ## Probably don't need this much
+    node: ubuntu1804-docker-8c-8g                           ## Probably don't need this much
     disable-job: false
     disabled: '{disable-job}'
 

@@ -2,7 +2,7 @@
 - project:
     name: offline-installer
     project-name: 'offline-installer'
-    build-node: 'ubuntu1604-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-8c-8g'
     offline_review_bootstrap: !include-raw-escape: offline-installer-review-bootstrap.sh
 
     stream:
