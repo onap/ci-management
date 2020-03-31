@@ -10,10 +10,10 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-f vnfmarket-be/deployment/docker/docker-refrepo/pom.xml -P docker -Dmaven.test.skip=true -Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
-          mvn-pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
+          mvn-params: '-Dmaven.test.skip=true -Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
+          mvn-pom: 'vnfmarket-be/deployment/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
@@ -30,7 +30,7 @@
     mvn-settings: 'vnfsdk-refrepo-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
 
 #- project:
 #    name: vnfsdk-refrepo-arm64
@@ -63,7 +63,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'
@@ -87,6 +87,6 @@
     nexus-iq-namespace: 'onap-'
     project: vnfsdk/refrepo
     project-name: 'vnfsdk-refrepo'
-    build-node: ubuntu1604-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vnfsdk-refrepo-settings'
