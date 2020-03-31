@@ -5,7 +5,7 @@
     project-name: 'dmaap-kafka-docker'
     jobs:
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1604-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -21,7 +21,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
-    build-node: ubuntu1604-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
 
 - project:
     name: dmaap-kafka-docker-info
