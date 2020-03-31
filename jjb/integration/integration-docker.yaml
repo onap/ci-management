@@ -22,3 +22,21 @@
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: integration-docker-compose
+    project-name: 'integration'
+    project: 'integration'
+    stream:
+      - 'master':
+          branch: 'master'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-docker-compose-verify':
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            docker-compose up -d
+    subproject:
+      - 'netconf-pnp-simulator':
+          pattern: 'test/mocks/netconf-pnp-simulator/modules/**'
+          docker_root: 'test/mocks/netconf-pnp-simulator/modules'
