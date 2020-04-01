@@ -22,3 +22,25 @@
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: integration-netconf-pnp-simulator
+    project: integration
+    stream:
+      - 'master':
+          branch: 'master'
+    # Required by verifier
+    mvn-settings: 'integration-settings'
+    project-name: 'integration-netconf-pnp-simulator'
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: 'test/mocks/netconf-pnp-simulator/engine/**'
+    docker-name: 'onap/integration/simulators/netconf-pnp-simulator'
+    docker-root: test/mocks/netconf-pnp-simulator/engine
+    container-tag-method: yaml-file
+    post_docker_build_script: !include-raw-escape: ../global-jjb/shell/tox-run.sh
+    build-node: centos7-docker-8c-8g
+    build-timeout: 20
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge
