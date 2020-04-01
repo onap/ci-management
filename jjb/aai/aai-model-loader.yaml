@@ -28,7 +28,6 @@
           branch: 'elalto'
       - 'master':
           branch: 'master'
-          mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-model-loader-settings'
     files: '**'
     archive-artifacts: ''
@@ -48,7 +47,6 @@
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
     branch: 'master'
-    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-model-loader-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -63,7 +61,6 @@
     stream:
       - 'master':
           branch: 'master'
-    mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-model-loader-settings'
 
 - project:
@@ -73,7 +70,6 @@
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
     project: aai/model-loader
-    mvn-params: '-P spring-boot-2-1'
     branch: master
 
 - project:
@@ -83,7 +79,6 @@
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-model-loader-settings'
-    mvn-params: '-P spring-boot-2-1'
     wss-product-name: 'aai'
     mvn-clean-install: true
     project: 'aai/model-loader'
