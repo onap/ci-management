@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-dc-simulator-project-view
+    project-name: integration-simulators-dc-simulator
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-dc-simulator-info
+    project: integration/simulators/dc-simulator
+    project-name: integration-simulators-dc-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
