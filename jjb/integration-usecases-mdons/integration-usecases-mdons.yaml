@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-usecases-mdons-project-view
+    project-name: integration-usecases-mdons
+    views:
+      - project-view
+
+- project:
+    name: integration-usecases-mdons-info
+    project: integration/usecases/mdons
+    project-name: integration-usecases-mdons
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
