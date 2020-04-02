@@ -1,12 +1,10 @@
 ---
 - project:
-    name: dcaegen2-services-bbs-event-processor
+    name: dcaegen2-services-bbs-event-processor-verify
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java':
-          mvn-goals: 'clean install'
     subproject:
       - 'bbs-event-processor':
           pom: 'components/bbs-event-processor/pom.xml'
@@ -24,6 +22,26 @@
     build-node: 'ubuntu1804-docker-8c-8g'
 
 - project:
+    name: dcaegen2-services-bbs-event-processor-merge
+    project: 'dcaegen2/services'
+    project-name: 'dcaegen2-services-bbs-event-processor'
+    jobs:
+      - gerrit-maven-merge:
+          mvn-params: '-f components/bbs-event-processor/pom.xml'
+          mvn-goals: 'clean install -Dmaven.deploy.skip=true'
+    branch: 'master'
+    java-version: openjdk11
+    mvn-settings: 'dcaegen2-services-settings'
+    maven-version: 'mvn35'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: '**'
+    archive-artifacts: ''
+    build-node: 'ubuntu1804-docker-8c-8g'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
+
+- project:
     name: dcaegen2-services-bbs-event-processor-release
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-bbs-event-processor'
@@ -39,7 +57,7 @@
           pattern: 'components/bbs-event-processor/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/bbs-event-processor/pom.xml'
+          mvn-goals: 'clean package -Dmaven.deploy.skip=true dockerfile:build dockerfile:push -f components/bbs-event-processor/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           pattern: 'components/bbs-event-processor/**'
