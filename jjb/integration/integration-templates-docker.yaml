@@ -131,6 +131,7 @@
     node: 'ubuntu1804-docker-8c-8g'
     docker_root: '$WORKSPACE'
     post_script: ''
+    netconf_sim_service_name: ''
 
     parameters:
       - lf-infra-parameters:
@@ -163,6 +164,7 @@
       - inject:
           properties-content: |
             DOCKER_ROOT={docker_root}
+            NETCONF_SIM_SERVICE_NAME={netconf_sim_service_name}
       - shell: '{script}'
       - shell: '{post_script}'
 

@@ -14,14 +14,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-echo "---> emssimulator-swm-netconf_post.sh"
+# Script verifies if all services in Netconf simulator's docker
+# service container were launched successfully.
+
+echo "---> netconf-pnp-simulator-verify.sh"
 
 set -e # Exit with zero only if all commands succeed
 
-SERVICE_NAME="ems-netconf-swm"
 DOCKER_COMPOSE_LOG="/tmp/docker-compose.log"
 DOCKER_COMPOSE_LOG_MSG=( "INFO success:" "entered RUNNING state" )
 DOCKER_COMPOSE_SLEEP_INTERVAL=4
+
+if [ -z ${NETCONF_SIM_SERVICE_NAME} ];
+then
+    echo "ERROR: netconf-pnp-simulator service name not set."
+    exit 1
+fi
 
 pushd $DOCKER_ROOT
 
@@ -30,7 +38,7 @@ sleep ${DOCKER_COMPOSE_SLEEP_INTERVAL} # Hang for a while so the services settle
 docker-compose logs --no-color > ${DOCKER_COMPOSE_LOG}
 
 # Get the supervisord services running within container
-supervisord_services=($(docker-compose exec -T ${SERVICE_NAME} /bin/sh -c \
+supervisord_services=($(docker-compose exec -T ${NETCONF_SIM_SERVICE_NAME} /bin/sh -c \
     'cat /etc/supervisord.conf /etc/supervisord.d/*' | grep -ho "program:[-a-zA-Z0-9]*" | cut -d: -f 2))
 
 # Check all services are running and fail if not

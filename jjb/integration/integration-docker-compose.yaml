@@ -19,4 +19,5 @@
       - 'emssimulator-swm-netconf':
           pattern: 'test/mocks/emssimulator/swm-netconf/**'
           docker_root: 'test/mocks/emssimulator/swm-netconf'
-          post_script: !include-raw-escape: emssimulator-swm-netconf_post.sh
+          netconf_sim_service_name: 'ems-netconf-swm'
+          post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
