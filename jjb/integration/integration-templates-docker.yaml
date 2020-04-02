@@ -130,6 +130,7 @@
     description: 'This job validates Docker Compose based projects'
     node: 'ubuntu1804-docker-8c-8g'
     docker_root: '$WORKSPACE'
+    post_script: ''
 
     parameters:
       - lf-infra-parameters:
@@ -163,6 +164,7 @@
           properties-content: |
             DOCKER_ROOT={docker_root}
       - shell: '{script}'
+      - shell: '{post_script}'
 
     publishers:
       - integration-docker-compose-logs
