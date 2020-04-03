@@ -23,3 +23,8 @@
           docker_root: 'test/mocks/emssimulator/swm-netconf'
           netconf_sim_service_name: 'ems-netconf-swm'
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
+      - 'pmsh-pnf-sim':
+          pattern: 'test/mocks/pmsh-pnf-sim/docker-compose/**'
+          docker_root: 'test/mocks/pmsh-pnf-sim/docker-compose'
+          netconf_sim_service_name: 'netopeer2'
+          post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
