@@ -16,6 +16,8 @@
       - 'netconf-pnp-simulator':
           pattern: 'test/mocks/netconf-pnp-simulator/modules/**'
           docker_root: 'test/mocks/netconf-pnp-simulator/modules'
+          netconf_sim_service_name: 'netconf-pnp-simulator'
+          post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
       - 'emssimulator-swm-netconf':
           pattern: 'test/mocks/emssimulator/swm-netconf/**'
           docker_root: 'test/mocks/emssimulator/swm-netconf'
