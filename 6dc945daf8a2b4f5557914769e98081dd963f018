@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5cff8ac8_25be534f",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-04-06T07:22:48Z",
+      "side": 1,
+      "message": "remove docker:build\nat this stage we should publish maven artifacts, not images.\nchange mvn-goals to clean deploy",
+      "revId": "6dc945daf8a2b4f5557914769e98081dd963f018",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
