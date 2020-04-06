@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "afb8df34_db0bc438",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-04-06T11:39:49Z",
+      "side": 1,
+      "message": "remove -P docker.",
+      "revId": "ad9130a6b99742b5b31dbf7bf91dba0134ca6286",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
