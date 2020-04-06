@@ -1,34 +1,85 @@
 ---
 - project:
-    name: integration-simulators-pnf-simulator-info
-    project-name: integration-simulators-pnf-simulator
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
-    project: integration/simulators/pnf-simulator
-    branch: master
+      name: integration-simulators-pnf-simulator
+      project-name: 'integration-simulators-pnf-simulator'
+      stream:
+          -   'master':
+                  branch: 'master'
+                  java-version: openjdk8
+      project: 'integration/simulators/pnf-simulator'
+      mvn-settings: 'integration-simulators-pnf-simulator-settings'
+      files: '**'
+      maven-deploy-properties: |
+          deployAtEnd=true
+      archive-artifacts: ''
+      build-node: ubuntu1804-docker-8c-8g
+      jobs:
+          - '{project-name}-{stream}-verify-java':
+                mvn-goals: 'clean install'
+          - '{project-name}-{stream}-merge-java':
+                mvn-goals: 'clean deploy'
+          -  '{project-name}-gerrit-release-jobs':
+                 build-node: centos7-docker-8c-8g
+          - gerrit-maven-stage:
+                sign-artifacts: true
+                build-node: centos7-docker-8c-8g
+                maven-versions-plugin: true
+                mvn-goals: 'clean package docker:build'
+          - gerrit-maven-docker-stage:
+                build-node: ubuntu1804-docker-8c-8g
+                container-public-registry: 'nexus3.onap.org:10001'
+                container-staging-registry: 'nexus3.onap.org:10003'
+                mvn-params: '-P docker -DskipTests=true -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
 
 - project:
-    name: integration-simulators-pnf-simulator-linters
-    project: integration/simulators/pnf-simulator
-    project-name: integration-simulators-pnf-simulator
-    python-version: python3
-    jobs:
-      - '{project-name}-{stream}-{subproject}-lint'
-    subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-    stream:
-      - 'master':
-          branch: 'master'
+      name: integration-simulators-pnfsimulator-sonar
+      subproject: 'pnfsimulator'
+      path: 'pnfsimulator'
+      java-version: openjdk8
+      jobs:
+          - gerrit-maven-sonar
+      sonarcloud: true
+      sonarcloud-project-organization: '{sonarcloud_project_organization}'
+      sonarcloud-api-token: '{sonarcloud_api_token}'
+      sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+      sonar-mvn-goal: '{sonar_mvn_goal}'
+      cron: '@daily'
+      build-node: ubuntu1804-docker-8c-8g
+      project: 'integration/simulators/pnf-simulator'
+      project-name: 'integration-simulators-pnf-simulator'
+      branch: 'master'
+      mvn-settings: 'integration-simulators-pnf-simulator-settings'
+      mvn-pom: 'pnfsimulator/pom.xml'
+      mvn-goals: 'clean install'
+      mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
+- project:
+      name: integration-simulators-netconfsimulator-sonar
+      subproject: 'netconfsimulator'
+      path: 'netconfsimulator'
+      java-version: openjdk8
+      jobs:
+          - gerrit-maven-sonar
+      sonarcloud: true
+      sonarcloud-project-organization: '{sonarcloud_project_organization}'
+      sonarcloud-api-token: '{sonarcloud_api_token}'
+      sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+      sonar-mvn-goal: '{sonar_mvn_goal}'
+      cron: '@daily'
+      build-node: ubuntu1804-docker-8c-8g
+      project: 'integration/simulators/pnf-simulator'
+      project-name: 'integration-simulators-pnf-simulator'
+      branch: 'master'
+      mvn-settings: 'integration-simulators-pnf-simulator-settings'
+      mvn-pom: 'netconfsimulator/pom.xml'
+      mvn-goals: 'clean install'
+      mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+      name: integration-simulators-pnf-simulator-info
+      project-name: integration-simulators-pnf-simulator
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos7-builder-2c-1g
+      project: integration/simulators/pnf-simulator
+      branch: master
