@@ -7,24 +7,40 @@
       - 'master':
           branch: 'master'
     jobs:
-      - '{project-name}-{stream}-{subproject}-docker-compose-verify':
-          script: |
-            #!/bin/bash
-            cd $DOCKER_ROOT
-            docker-compose up -d
+      - '{project-name}-{stream}-{subproject}-docker-compose-verify'
     subproject:
       - 'netconf-pnp-simulator':
           pattern: 'test/mocks/netconf-pnp-simulator/modules/**'
           docker_root: 'test/mocks/netconf-pnp-simulator/modules'
           netconf_sim_service_name: 'netconf-pnp-simulator'
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
       - 'emssimulator-swm-netconf':
           pattern: 'test/mocks/emssimulator/swm-netconf/**'
           docker_root: 'test/mocks/emssimulator/swm-netconf'
           netconf_sim_service_name: 'ems-netconf-swm'
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
       - 'pmsh-pnf-sim':
           pattern: 'test/mocks/pmsh-pnf-sim/docker-compose/**'
           docker_root: 'test/mocks/pmsh-pnf-sim/docker-compose'
           netconf_sim_service_name: 'netopeer2'
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
+      - 'datafilecollector-testharness':
+          pattern: 'test/mocks/datafilecollector-testharness/**'
+          docker_root: 'test/mocks/datafilecollector-testharness/simulator-group'
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            ./prepare-images.sh
+            ./docker-compose-setup.sh
