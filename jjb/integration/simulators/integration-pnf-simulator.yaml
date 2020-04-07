@@ -59,3 +59,28 @@
       build-node: centos7-builder-2c-1g
       project: integration/simulators/pnf-simulator
       branch: master
+
+- project:
+      name: integration-simulators-pnf-simulator-linters
+      project: integration/simulators/pnf-simulator
+      project-name: integration-simulators-pnf-simulator
+      python-version: python3
+      jobs:
+          - '{project-name}-{stream}-{subproject}-lint'
+      subproject:
+          - 'yaml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yaml'
+          - 'yml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yml'
+          - 'json':
+                tox-dir: '.'
+                tox-envs: 'json'
+                pattern: '**/*.json'
+      stream:
+          - 'master':
+                branch: 'master'
+
