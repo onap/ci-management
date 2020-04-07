@@ -142,6 +142,30 @@
       "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a71043e_449facd0",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-04-07T07:24:47Z",
+      "side": 0,
+      "message": "@Bartek G. I don\u0027t see the reason to have such job, but if you really want to have it we can add it. Pls give us a full example how to configure job to ignore files. Thanks.",
+      "parentUuid": "37c32fed_973a0efe",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 26
+      },
+      "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
