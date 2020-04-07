@@ -118,6 +118,30 @@
       "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9cac231_cb615601",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-04-07T07:24:23Z",
+      "side": 0,
+      "message": "Please also consider that I\u0027ve already fixed most (if not all) issues in json files here https://gerrit.onap.org/r/c/integration/+/102409 for you",
+      "parentUuid": "37c32fed_973a0efe",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 26
+      },
+      "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
