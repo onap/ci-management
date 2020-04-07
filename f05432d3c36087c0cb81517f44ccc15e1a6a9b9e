@@ -70,6 +70,30 @@
       "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "706a06f5_1dd61afb",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-04-07T06:01:35Z",
+      "side": 0,
+      "message": "as I understand Bartek G., mentioned json files are used in JUnit tests to verify behavior of logic in error cases. So in our case mentioned job is not applicable.",
+      "parentUuid": "bf71a9bc_d8d82036",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 26
+      },
+      "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
