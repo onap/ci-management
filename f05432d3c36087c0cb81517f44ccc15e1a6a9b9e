@@ -46,6 +46,30 @@
       "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf71a9bc_d8d82036",
+        "filename": "jjb/integration/simulators/integration-pnf-simulator.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-04-07T05:56:30Z",
+      "side": 0,
+      "message": "as far as I understand this job is responsible for static code analysis and is responsible for yaml, yml and json validation. In our case it is causing more problems, because we have incorrect json for testing purpose and if it comes to code analysis, we are using sonar, so in my opinion this job is not needed",
+      "parentUuid": "2e1b6a83_3f2d841b",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 26
+      },
+      "revId": "f05432d3c36087c0cb81517f44ccc15e1a6a9b9e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
