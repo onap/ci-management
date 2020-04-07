@@ -58,7 +58,7 @@
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-8c-8g 
     maven-version: 'mvn35'
 
 #- project:
@@ -90,7 +90,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
