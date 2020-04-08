@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "962b389a_b2a6f814",
+        "filename": "jjb/multicloud/multicloud-k8s.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-04-08T17:31:25Z",
+      "side": 1,
+      "message": "Please configure these jobs to use build-node: centos7-docker-8c-8g\n\nThanks!",
+      "range": {
+        "startLine": 18,
+        "startChar": 1,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "00798d45e4a2a801a08dee2e4f20e405c0931539",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
