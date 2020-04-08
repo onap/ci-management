@@ -15,6 +15,7 @@
           area: kud-deployment
           script:
             !include-raw-escape: 'kud-deployment.sh'
+      - '{project-name}-gerrit-release-jobs'
     project: 'multicloud/k8s'
     subproject:
       - validation-scripts:
