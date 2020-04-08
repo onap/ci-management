@@ -22,7 +22,7 @@ echo "---> netconf-pnp-simulator-verify.sh"
 set -e # Exit with zero only if all commands succeed
 
 DOCKER_COMPOSE_LOG="/tmp/docker-compose.log"
-DOCKER_COMPOSE_LOG_MSG=( "INFO success:" "entered RUNNING state" )
+DOCKER_COMPOSE_LOG_MSG=( "INFO  [supervisor] success:" "entered RUNNING state" )
 DOCKER_COMPOSE_SLEEP_INTERVAL=60
 
 if [ -z ${NETCONF_SIM_SERVICE_NAME} ];
