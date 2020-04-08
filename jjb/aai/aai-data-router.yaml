@@ -24,8 +24,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/data-router'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-data-router-settings'

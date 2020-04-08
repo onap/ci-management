@@ -26,8 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
     files: '**'

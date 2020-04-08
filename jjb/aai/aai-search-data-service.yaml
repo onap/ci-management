@@ -25,8 +25,8 @@
     project: 'aai/search-data-service'
     docker-image-name: 'onap/search-data-service'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-search-data-service-settings'

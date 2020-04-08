@@ -26,8 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'aai-esr-gui-settings'
     files: '**'
     archive-artifacts: ''
@@ -43,8 +43,8 @@
     project: 'aai/esr-gui'
     project-name: 'aai-esr-gui'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'aai-esr-gui-settings'
 
 - project:

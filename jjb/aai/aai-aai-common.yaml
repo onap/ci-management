@@ -22,8 +22,9 @@
       - 'master':
           branch: 'master'
           mvn-params: '-P spring-boot-2-1'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
+          mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
     files: '**'
