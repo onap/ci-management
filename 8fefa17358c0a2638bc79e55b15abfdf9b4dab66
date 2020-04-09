@@ -70,6 +70,30 @@
       "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3bd0468_1681008d",
+        "filename": "jjb/integration/netconf-pnp-simulator-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5447
+      },
+      "writtenOn": "2020-04-09T12:03:06Z",
+      "side": 1,
+      "message": "Good.\nBut this project in particular doesn\u0027t create an application and then packages it in a docker image. Thus, a container launched from this image is the only artifact to be tested.\nMy previous attempt was to only run\n\n\u003e tox\n\nafter the image building.",
+      "parentUuid": "06fe34ca_615dae75",
+      "range": {
+        "startLine": 25,
+        "startChar": 32,
+        "endLine": 25,
+        "endChar": 44
+      },
+      "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
