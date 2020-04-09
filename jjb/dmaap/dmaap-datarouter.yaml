@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'dmaap-datarouter-settings'
