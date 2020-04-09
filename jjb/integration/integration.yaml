@@ -83,7 +83,7 @@
     project-name: 'integration'
     python-version: python3
     jobs:
-      - '{project-name}-{stream}-{subproject}-lint'
+      - integration-linters
     subproject:
       - 'yaml':
           tox-dir: '.'

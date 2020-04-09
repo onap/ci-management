@@ -54,6 +54,7 @@
     #     pattern:        List of file patterns to scan
 
     name: '{project-name}-{stream}-{subproject}-lint'
+    id: integration-linters
     project-type: freestyle
     description: 'Job intended for running linters with Tox and Coala'
     build-node: ubuntu1804-builder-4c-4g

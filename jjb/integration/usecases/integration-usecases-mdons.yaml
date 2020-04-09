@@ -14,7 +14,7 @@
     project-name: integration-usecases-mdons
     python-version: python3
     jobs:
-      - '{project-name}-{stream}-{subproject}-lint'
+      - integration-linters
     subproject:
       - 'yaml':
           tox-dir: '.'
