@@ -16,11 +16,14 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''
+    java-version: openjdk11
 
 - project:
     name: dmaap-datarouter-sonar
@@ -39,6 +42,7 @@
     mvn-settings: 'dmaap-datarouter-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: dmaap-datarouter-clm
@@ -49,6 +53,7 @@
     project-name: 'dmaap-datarouter'
     branch: 'master'
     mvn-settings: 'dmaap-datarouter-settings'
+    java-version: openjdk11
 
 - project:
     name: dmaap-datarouter-info
