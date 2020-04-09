@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9541e16c_6ef6f33b",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-04-09T18:56:09Z",
+      "side": 1,
+      "message": "Signing on artifacts run using SIGUL which only works on centos and not ubuntu.\nEither you might need to run using centos or disable signing if you want ubuntu but i would not recommmend releasing maven unsigned images",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 46
+      },
+      "revId": "ea11f5e261108c5916f4398e95e23582df906022",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
