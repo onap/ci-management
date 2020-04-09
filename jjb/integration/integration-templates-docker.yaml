@@ -126,6 +126,7 @@
 
 - job-template:
     name: '{project-name}-{stream}-{subproject}-docker-compose-verify'
+    id: integration-docker-compose-verify
     project-type: freestyle
     description: 'This job validates Docker Compose based projects'
     node: 'ubuntu1804-docker-8c-8g'

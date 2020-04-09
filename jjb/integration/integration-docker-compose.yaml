@@ -7,7 +7,7 @@
       - 'master':
           branch: 'master'
     jobs:
-      - '{project-name}-{stream}-{subproject}-docker-compose-verify'
+      - integration-docker-compose-verify
     subproject:
       - 'netconf-pnp-simulator':
           pattern: 'test/mocks/netconf-pnp-simulator/modules/**'
