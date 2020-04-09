@@ -11,11 +11,11 @@
     jobs:
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: ubuntu1804-builder-4c-4g
           maven-versions-plugin: true
       - '{project-name}-{stream}-release-java-daily'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
 
     project: 'portal'
     stream:
