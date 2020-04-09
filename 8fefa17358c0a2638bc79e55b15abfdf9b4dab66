@@ -46,6 +46,30 @@
       "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06fe34ca_615dae75",
+        "filename": "jjb/integration/netconf-pnp-simulator-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-04-09T11:47:51Z",
+      "side": 1,
+      "message": "Totally agree. Verify procedure I came up with was the consequence of lack of native working application level tests embedded within repo that could be used here to verify the service status. Should you provide those in the project files I\u0027ll be happy to update this job to leverage them. \n\nIn fact, if I\u0027m not mistaken, there are app level tests in csit repository but that\u0027s not the deal here - in integration project where only docker services bootstrapping code lives the only thing that\u0027s need verifying is whether the docker infra was brought up correctly without issues.",
+      "parentUuid": "fbe6d985_dde86e1a",
+      "range": {
+        "startLine": 25,
+        "startChar": 32,
+        "endLine": 25,
+        "endChar": 44
+      },
+      "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
