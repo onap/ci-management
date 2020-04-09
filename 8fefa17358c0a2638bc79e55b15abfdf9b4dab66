@@ -22,6 +22,30 @@
       "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fbe6d985_dde86e1a",
+        "filename": "jjb/integration/netconf-pnp-simulator-verify.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5447
+      },
+      "writtenOn": "2020-04-09T11:31:13Z",
+      "side": 1,
+      "message": "I would recommend not creating tests that are dependent on internal information that are inherently highly subject to change, like log messages, internal configuration files (/etc/supervisord.conf, /etc/supervisord.d/*), and so on.\nThe project provides tox-based tests that I tried, without success, to integrate into repo, using JJB (see https://gerrit.onap.org/r/c/ci-management/+/103588).\nIt performs functional black-box testing of the container using ncclient as an independent NETCONF client.",
+      "parentUuid": "c45a34ad_516d2e2f",
+      "range": {
+        "startLine": 25,
+        "startChar": 32,
+        "endLine": 25,
+        "endChar": 44
+      },
+      "revId": "8fefa17358c0a2638bc79e55b15abfdf9b4dab66",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
