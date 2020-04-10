@@ -44,3 +44,11 @@
             cd $DOCKER_ROOT
             ./prepare-images.sh
             ./docker-compose-setup.sh
+      - 'prov-mns-provider':
+          pattern: 'test/mocks/prov-mns-provider/**'
+          docker_root: 'test/mocks/prov-mns-provider'
+          script: |
+            #!/bin/bash
+            cd $DOCKER_ROOT
+            docker build . -t prov-mns-provider
+            docker-compose up -d
