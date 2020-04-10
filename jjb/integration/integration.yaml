@@ -101,6 +101,14 @@
           tox-dir: '.'
           tox-envs: 'py'
           pattern: '**/*.py'
+      - 'rst':
+          tox-dir: '.'
+          tox-envs: 'rst'
+          pattern: '**/*.rst'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
     stream:
       - 'master':
           branch: 'master'
