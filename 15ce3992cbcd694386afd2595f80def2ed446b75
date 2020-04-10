@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa95961_ce31ae6e",
+        "filename": "jjb/dmaap/dmaap-datarouter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-04-10T13:06:10Z",
+      "side": 1,
+      "message": "Note. The java11 jobs will fail until this patch is merged.\nhttps://gerrit.onap.org/r/c/dmaap/datarouter/+/105690",
+      "range": {
+        "startLine": 17,
+        "startChar": 19,
+        "endLine": 17,
+        "endChar": 25
+      },
+      "revId": "15ce3992cbcd694386afd2595f80def2ed446b75",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
