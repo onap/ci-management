@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7a04fce_b3ddcf48",
+        "filename": "jjb/portal-sdk/portal-sdk.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-04-10T16:40:55Z",
+      "side": 1,
+      "message": "Signing will fail in Ubuntu since SIGUL only works on Centos. \nYou can disable this but i strongly would advise not to release unsigned images. \n\nI will let Pam +1 if you guys decide to disable signing",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "b79100d49a914db96a67c15f7d58c4ef8ec63159",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
