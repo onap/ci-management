@@ -32,7 +32,13 @@
     docker-name: 'onap/integration/simulators/netconf-pnp-simulator'
     docker-root: test/mocks/netconf-pnp-simulator/engine
     container-tag-method: yaml-file
-    post_docker_build_script: !include-raw-escape: ../global-jjb/shell/tox-run.sh
+    post_docker_build_script: |
+        #!/bin/bash
+        set -eux
+        cd "$DOCKER_ROOT"
+        # To simplify the references inside tox.ini and tests/settings.py
+        docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" $DOCKER_NAME:latest
+        tox
     build-node: centos7-docker-8c-8g
     build-timeout: 20
     jobs:
