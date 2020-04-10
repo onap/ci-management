@@ -1,5 +1,5 @@
 - project:
-    name: dmaap-datarouter
+    name: dmaap-datarouter-java11
     project-name: 'dmaap-datarouter'
     jobs:
       - '{project-name}-{stream}-verify-java'
@@ -11,11 +11,31 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'dmaap/datarouter'
     stream:
-      - 'master':
+      - 'frankfurt':
           branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    files: '**'
+    archive-artifacts: ''
+    java-version: openjdk11
+
+
+- project:
+    name: dmaap-datarouter-java8
+    project-name: 'dmaap-datarouter'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          mvn-goals: 'clean package -P docker docker:build docker:push'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    project: 'dmaap/datarouter'
+    stream:
       - 'frankfurt':
           branch: 'frankfurt'
       - 'elalto':
@@ -23,7 +43,7 @@
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''
-    java-version: openjdk11
+    java-version: openjdk8
 
 - project:
     name: dmaap-datarouter-sonar
