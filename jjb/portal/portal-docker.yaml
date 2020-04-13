@@ -13,6 +13,8 @@
       - '{project-name}-{stream}-two-scm-release-docker-script-manual':
           script:
             !include-raw-escape: 'docker-build-release.sh'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     project: 'portal'
     stream:
       - 'master':
