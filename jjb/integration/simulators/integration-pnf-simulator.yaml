@@ -1,7 +1,7 @@
 ---
 - project:
       name: integration-simulators-pnf-simulator
-      project-name: 'integration-simulators-pnf-simulator'
+      project-name: integration-pnf-simulator
       stream:
           -   'master':
                   branch: 'master'
@@ -43,8 +43,8 @@
       sonar-mvn-goal: '{sonar_mvn_goal}'
       cron: '@daily'
       build-node: ubuntu1804-docker-8c-8g
-      project: 'integration/simulators/pnf-simulator'
-      project-name: 'integration-simulators-pnf-simulator'
+      project: integration/simulators/pnf-simulator
+      project-name: integration-pnf-simulator
       branch: 'master'
       mvn-settings: 'integration-simulators-pnf-simulator-settings'
       mvn-goals: 'clean install'
@@ -53,7 +53,7 @@
 
 - project:
       name: integration-simulators-pnf-simulator-info
-      project-name: integration-simulators-pnf-simulator
+      project-name: integration-pnf-simulator
       jobs:
           - gerrit-info-yaml-verify
       build-node: centos7-builder-2c-1g
@@ -63,7 +63,7 @@
 - project:
       name: integration-simulators-pnf-simulator-linters
       project: integration/simulators/pnf-simulator
-      project-name: integration-simulators-pnf-simulator
+      project-name: integration-pnf-simulator
       python-version: python3
       jobs:
           - integration-linters
