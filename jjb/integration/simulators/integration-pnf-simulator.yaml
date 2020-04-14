@@ -80,6 +80,10 @@
                 tox-dir: '.'
                 tox-envs: 'json'
                 pattern: '**/*.json'
+          - 'python':
+                tox-dir: '.'
+                tox-envs: 'py'
+                pattern: '**/*.py'
       stream:
           - 'master':
                 branch: 'master'
