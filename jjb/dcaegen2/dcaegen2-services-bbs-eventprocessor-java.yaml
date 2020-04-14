@@ -34,7 +34,7 @@
     mvn-settings: 'dcaegen2-services-settings'
     maven-version: 'mvn35'
     maven-deploy-properties: |
-      deployAtEnd=true
+      deployAtEnd=false
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
