@@ -52,3 +52,5 @@
             cd $DOCKER_ROOT
             docker build . -t prov-mns-provider
             docker-compose up -d
+            cd src
+            tox
