@@ -52,7 +52,10 @@
       - common-view
     view-name: All-Coverity
     view-regex: '.*-coverity'
-    view-description: 'List of Coverity jobs'
+    view-description: >
+      <h1>List of Coverity Scan static code analysis jobs</h1>
+      <p>See <a href="https://wiki.onap.org/x/Y6vQAw">how to add your component to Coverity Scan</a>
+      on ONAP Developer Wiki.</p>
 
 - view:
     name: CLM

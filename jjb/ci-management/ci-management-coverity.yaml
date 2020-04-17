@@ -20,6 +20,7 @@
           View Defects</a>.</li>
       </ol>
       <p>Please note that processing data takes some time. You will get an email when it's done.</p>
+      <p>See more <a href="https://wiki.onap.org/x/Y6vQAw">Coverity Scan HOWTOs</a> on ONAP Developer Wiki.</p>
       <hr/>
 
     project-type: freestyle
