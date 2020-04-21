@@ -41,6 +41,10 @@
           branch: '{branch}'
           files: '{pattern}'
 
+    wrappers:
+      - infra-wrappers:
+          build-timeout: '{build-timeout}'
+
     builders:
       - shell: '{script}'
 
