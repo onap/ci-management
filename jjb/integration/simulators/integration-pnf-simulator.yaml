@@ -5,7 +5,7 @@
       stream:
           -   'master':
                   branch: 'master'
-                  java-version: openjdk8
+                  java-version: openjdk11
       project: 'integration/simulators/pnf-simulator'
       mvn-settings: 'integration-simulators-pnf-simulator-settings'
       files: '**'
@@ -33,7 +33,7 @@
 
 - project:
       name: integration-simulators-pnf-simulator-sonar
-      java-version: openjdk8
+      java-version: openjdk11
       jobs:
           - gerrit-maven-sonar
       sonarcloud: true
