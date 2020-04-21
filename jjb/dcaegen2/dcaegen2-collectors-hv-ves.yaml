@@ -7,6 +7,9 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
+      - 'frankfurt':
+          branch: 'frankfurt'
+          java-version: openjdk11
     # apply to all jobs
     project: 'dcaegen2/collectors/hv-ves'
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'

@@ -13,6 +13,9 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
+      - 'frankfurt':
+          branch: 'frankfurt'
+          java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-version: 'mvn35'
     maven-deploy-properties: |

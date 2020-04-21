@@ -91,6 +91,8 @@
     stream:
       - master:
           branch: master
+      - frankfurt:
+          branch: frankfurt
     views:
       - project-view:
           project-name: dcaegen2-services-pmsh
