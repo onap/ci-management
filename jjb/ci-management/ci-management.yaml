@@ -18,6 +18,9 @@
     build-timeout: '60'
     build-node: 'centos7-builder-2c-1g'
     jjb-version: 2.9.1
+    # configure the gerrit-jjb-verify job
+    build-node-label-check: true
+    build-node-label-list: ""
 
 - project:
     name: builder-openstack
