@@ -21,7 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
-
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

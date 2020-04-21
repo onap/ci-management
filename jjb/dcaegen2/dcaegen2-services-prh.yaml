@@ -21,6 +21,10 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
+      - 'frankfurt':
+          branch: 'frankfurt'
+          java-version: openjdk11
+    mvn-settings: 'dcaegen2-services-prh-settings'
     mvn-settings: 'dcaegen2-services-prh-settings'
     files: '**'
     archive-artifacts: ''
