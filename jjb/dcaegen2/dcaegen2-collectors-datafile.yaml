@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     # apply to all jobs
     project: 'dcaegen2/collectors/datafile'
     mvn-settings: 'dcaegen2-collectors-datafile-settings'

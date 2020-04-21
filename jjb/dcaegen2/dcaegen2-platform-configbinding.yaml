@@ -28,6 +28,8 @@
     stream:
       - master:
           branch: master
+      - frankfurt:
+          branch: frankfurt
 
 - project:
     name: dcaegen2-platform-configbinding-sonar
