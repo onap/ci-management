@@ -1,9 +1,0 @@
----
-- project:
-    name: integration-docker-onap-java11-info
-    project-name: integration-docker-onap-java11
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
-    project: integration/docker/onap-java11
-    branch: master

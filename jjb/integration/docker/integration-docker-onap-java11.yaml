@@ -1,0 +1,69 @@
+---
+- project:
+    name: integration-docker-onap-java11-info
+    project-name: integration-docker-onap-java11
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: integration/docker/onap-java11
+    branch: master
+
+- project:
+      name: integration-docker-onap-java11-linters
+      project: integration/docker/onap-java11
+      project-name: integration-docker-onap-java11
+      python-version: python3
+      jobs:
+          - integration-linters
+      subproject:
+          - 'yaml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yaml'
+          - 'yml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yml'
+          - 'json':
+                tox-dir: '.'
+                tox-envs: 'json'
+                pattern: '**/*.json'
+          - 'md':
+              tox-dir: '.'
+              tox-envs: 'md'
+              pattern: '**/*.md'
+      stream:
+          - 'master':
+                branch: 'master'
+
+- project:
+    name: integration-docker-onap-java11-release
+    project-name: 'integration-docker-onap-java11'
+    project: 'integration/docker/onap-java11'
+    mvn-settings: 'integration-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+- project:
+    name: 'integration-docker-onap-java11-docker'
+    jobs:
+      - '{project-name}-{stream}-verify-docker'
+      - '{project-name}-{stream}-merge-docker'
+      - gerrit-maven-docker-stage:
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          build-node: ubuntu1804-docker-8c-8g
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+    project-name: 'integration-docker-onap-java11'
+    project: 'integration/docker/onap-java11'
+    stream:
+      - 'master':
+          branch: 'master'
+          mvn-params: '-P spring-boot-2-1'
+    docker_name: 'onap/integration-java11'
+    docker_build_args: '-f ./Dockerfile'
+    docker_root: '$WORKSPACE'
+    mvn-settings: 'integration-settings'
+    mvn-version: 'mvn35'
+    build-node: ubuntu1804-docker-8c-8g
