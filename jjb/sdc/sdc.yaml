@@ -59,7 +59,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
-    maven-version: 'mvn35'
+    maven-version: 'mvn36'
 
 #- project:
 #    name: sdc-arm64
