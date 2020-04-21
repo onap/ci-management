@@ -21,6 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-services-mapper-settings'
     files: '**'
     archive-artifacts: ''
