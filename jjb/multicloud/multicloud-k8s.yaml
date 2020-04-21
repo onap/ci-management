@@ -13,6 +13,7 @@
             !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
       - '{project-name}-{stream}-{area}-verify-shell':
           area: kud-deployment
+          build-timeout: 45
           script:
             !include-raw-escape: 'kud-deployment.sh'
       - '{project-name}-gerrit-release-jobs':
