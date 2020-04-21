@@ -13,6 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -42,6 +44,8 @@
     stream:
       - 'master':
          branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -71,6 +75,8 @@
     stream:
       - 'master':
          branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true

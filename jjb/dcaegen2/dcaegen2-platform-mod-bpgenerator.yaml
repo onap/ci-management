@@ -22,6 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'dcaegen2-platform-settings'
     maven-deploy-properties: |
       deployAtEnd=true
