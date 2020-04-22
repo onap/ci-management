@@ -18,6 +18,7 @@
     name: '{project-name}-{stream}-{area}-verify-shell'
     node: '{build-node}'
     type: freestyle
+    concurrent: true
 
     pattern: '**'
 
