@@ -24,26 +24,9 @@
 
     project: 'testsuite'
 
-    extra-project1: 'testsuite/python-testing-utils'
-    extra-branch1: '{branch}'
-    extra-refspec1: 'refs/heads/{branch}'
-    checkout-dir1: 'testsuite/eteutils'
-
-    extra-project2: 'testsuite/heatbridge'
-    extra-branch2: '{branch}'
-    extra-refspec2: 'refs/heads/{branch}'
-    checkout-dir2: 'testsuite/heatbridge'
-
-    extra-project3: 'demo'
-    extra-branch3: '{branch}'
-    extra-refspec3: 'refs/heads/{branch}'
-    checkout-dir3: 'demo'
-
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
       - 'elalto':
           branch: 'elalto'
     mvn-settings: 'testsuite-settings'

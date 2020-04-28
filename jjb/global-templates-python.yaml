@@ -99,27 +99,11 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
-
     scm:
       - gerrit-trigger-scm:
           refspec: ''
           choosing-strategy: 'default'
           submodule-recursive: '{submodule-recursive}'
-      - git-extra-project:
-          project: '{extra-project1}'
-          refspec: '{extra-refspec1}'
-          branch: '{extra-branch1}'
-          checkout-dir: '{checkout-dir1}'
-      - git-extra-project:
-          project: '{extra-project2}'
-          refspec: '{extra-refspec2}'
-          branch: '{extra-branch2}'
-          checkout-dir: '{checkout-dir2}'
-      - git-extra-project:
-          project: '{extra-project3}'
-          refspec: '{extra-refspec3}'
-          branch: '{extra-branch3}'
-          checkout-dir: '{checkout-dir3}'
 
     wrappers:
       - infra-wrappers-docker-build:
