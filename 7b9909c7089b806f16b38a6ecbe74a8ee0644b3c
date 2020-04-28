@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f19923d_7fb5526c",
+        "filename": "jjb/integration/docker/integration-docker-onap-java11.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-04-28T16:59:17Z",
+      "side": 0,
+      "message": "We still need to leave this in the file since this file (even though is called mvn-settings since this is the type of file in Jenkins) it contains docker registries that the docker jobs need.",
+      "range": {
+        "startLine": 67,
+        "startChar": 4,
+        "endLine": 67,
+        "endChar": 40
+      },
+      "revId": "7b9909c7089b806f16b38a6ecbe74a8ee0644b3c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
