@@ -69,6 +69,7 @@
     node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
     mvn-goals: 'clean package docker:build'
+    post-docker-verify-script: ''
 
     properties:
       - infra-properties:
@@ -120,6 +121,7 @@
           properties:
             - docker.pull.registry=nexus3.onap.org:10001
             - docker.push.registry=nexus3.onap.org:10003
+      - shell: '{post-docker-verify-script}'
 
     publishers:
       - infra-shiplogs:
