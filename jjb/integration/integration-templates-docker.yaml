@@ -5,6 +5,7 @@
     project-type: freestyle
     node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
+    mvn-goals: 'clean package docker:build docker:push'
 
     properties:
       - infra-properties:
@@ -48,7 +49,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean package docker:build docker:push'
+          goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
@@ -67,6 +68,7 @@
     project-type: freestyle
     node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
+    mvn-goals: 'clean package docker:build'
 
     properties:
       - infra-properties:
@@ -110,7 +112,7 @@
       - maven-target:
           maven-version: '{maven-version}'
           pom: '{pom}'
-          goals: 'clean package docker:build'
+          goals: '{mvn-goals}'
           settings: '{mvn-settings}'
           settings-type: cfp
           global-settings: 'global-settings'
