@@ -13,6 +13,10 @@
       - 'sniroemulator':
           pom: 'test/mocks/sniroemulator/pom.xml'
           pattern: 'test/mocks/sniroemulator/**'
+      - 'mass-pnf-sim':
+          pom: 'test/mocks/mass-pnf-sim/pnf-sim-lightweight/pom.xml'
+          pattern: 'test/mocks/mass-pnf-sim/**'
+          mvn-goals: 'clean package docker:build -Dcheckstyle.skip'
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
