@@ -48,23 +48,16 @@
 - project:
     name: 'integration-docker-onap-java11-docker'
     jobs:
-      - '{project-name}-{stream}-verify-docker'
-      - '{project-name}-{stream}-merge-docker'
-      - gerrit-maven-docker-stage:
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
+      - gerrit-docker-verify
+      - gerrit-docker-merge
     project-name: 'integration-docker-onap-java11'
     project: 'integration/docker/onap-java11'
     stream:
       - 'master':
-          branch: 'master'
-          mvn-params: '-P spring-boot-2-1'
-    docker_name: 'onap/integration-java11'
-    docker_build_args: '-f ./Dockerfile'
-    docker_root: '$WORKSPACE'
+            branch: 'master'
+            files: ''
+    docker-name: 'onap/integration-java11'
+    docker-build-args: '-f ./Dockerfile'
+    docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
-    mvn-version: 'mvn35'
-    files: '**'
     build-node: ubuntu1804-docker-8c-8g
