@@ -3,8 +3,8 @@
     name: integration-docker
     project-name: 'integration'
     jobs:
-      - '{project-name}-{stream}-{subproject}-docker-merge'
-      - '{project-name}-{stream}-{subproject}-docker-verify'
+      - integration-docker-merge
+      - integration-docker-verify
     project: 'integration'
     stream:
       - 'master':
