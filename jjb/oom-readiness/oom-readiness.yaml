@@ -1,0 +1,14 @@
+---
+- project:
+    name: oom-readiness-project-view
+    project-name: oom-readiness
+    views:
+      - project-view
+
+- project:
+    name: oom-readiness-info
+    project: oom/readiness
+    project-name: oom-readiness
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
