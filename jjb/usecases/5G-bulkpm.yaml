@@ -2,10 +2,10 @@
 - project:
     name: usecases-5G-bulkpm-csit
     jobs:
+    project-name: 'usecases-5G-bulkpm'
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'usecases'
-    recipients: 'morgan.richomm@orange.com bf1936@att.com rajendra.jaiswal@ericsson.com liam.burke@ericsson.com'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com lego@est.tech'
     stream:
       - 'master':
           branch: 'master'
