@@ -9,8 +9,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'healthCheck':
           trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'

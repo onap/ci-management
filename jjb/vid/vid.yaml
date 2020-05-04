@@ -27,8 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
