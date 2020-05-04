@@ -22,6 +22,30 @@
       "revId": "c0f606c5abd9e4e9649521f0eaf91f3efeae3eea",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec75a1e9_e4b3aa85",
+        "filename": "jjb/usecases/5G-bulkpm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-05-04T22:28:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "37692f26_6aa1ae88",
+      "range": {
+        "startLine": 5,
+        "startChar": 4,
+        "endLine": 5,
+        "endChar": 38
+      },
+      "revId": "c0f606c5abd9e4e9649521f0eaf91f3efeae3eea",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
