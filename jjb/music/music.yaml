@@ -27,8 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
