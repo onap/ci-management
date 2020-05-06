@@ -6,7 +6,7 @@
   become_method: sudo
 
   vars:
-    kubectl_version: 1.11.2
+    kubectl_version: 1.15.11
     helm_version: 2.16.6
 
   tasks:
