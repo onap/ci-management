@@ -7,7 +7,7 @@
 
   vars:
     kubectl_version: 1.11.2
-    helm_version: 2.12.3
+    helm_version: 2.16.6
 
   tasks:
     - name: 'Install kubectl {{kubectl_version}}'
@@ -36,4 +36,3 @@
           command: 'which helm'
         - name: 'Check kubectl.'
           command: 'which kubectl'
-
