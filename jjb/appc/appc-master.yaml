@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'appc-settings'
     maven-version: "mvn35"
     files: '**'

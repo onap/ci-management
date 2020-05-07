@@ -11,6 +11,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'appc-deployment-settings'
     maven-version: "mvn35"
     files: '**'
@@ -39,6 +41,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'appc-deployment-settings'
     maven-version: "mvn35"
     files: '**'
