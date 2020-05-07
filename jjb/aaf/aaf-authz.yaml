@@ -34,6 +34,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'aaf-authz-settings'
     files: '**'
     archive-artifacts: ''
