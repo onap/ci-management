@@ -15,6 +15,7 @@ NEXUSPROXY=https://nexus.onap.org
 REGISTRY_PORTS=10001 10002 10003 10004
 RELEASE_EMAIL=collab-it+onap-release@linuxfoundation.org
 RELEASE_USERNAME=onap-release
+S3_BUCKET=logs-s3-cloudfront-index
 SIGUL_BRIDGE_IP=10.30.104.3
 SIGUL_KEY=onap-release-2018
 SILO=production
