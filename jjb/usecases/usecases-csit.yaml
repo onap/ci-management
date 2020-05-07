@@ -1,11 +1,43 @@
 ---
 - project:
-    name: usecases-csit
+    name: usecases-5G-bulkpm-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'usecases'
-    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech eric.e.moore@est.tech raj.gumma@ericsson.com'
+    project-name: 'usecases-5G-bulkpm'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com lego@est.tech'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - '5G-bulkpm':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+
+- project:
+    name: usecases-pnf-sw-upgrade
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'usecases-pnf-sw-upgrade'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'pnf-sw-upgrade':
+          trigger_jobs:
+            - '{project-name}-{stream}-docker-java-shell-daily'
+    robot-options: ''
+
+- project:
+    name: usecases-config-over-netconf
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'usecases-config-over-netconf'
+    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech'
     stream:
       - 'master':
           branch: 'master'
@@ -13,7 +45,5 @@
       - 'config-over-netconf':
           trigger_jobs:
             - '{project-name}-{stream}-docker-java-shell-daily'
-      - 'pnf-sw-upgrade':
-          trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
+
