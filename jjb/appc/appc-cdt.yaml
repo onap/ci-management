@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'appc-cdt-settings'
     files: '**'
     archive-artifacts: ''

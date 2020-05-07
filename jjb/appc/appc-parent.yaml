@@ -22,6 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'appc-parent-settings'
     maven-version: "mvn35"
     build-node: ubuntu1804-builder-4c-4g
