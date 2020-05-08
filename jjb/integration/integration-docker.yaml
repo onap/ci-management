@@ -22,11 +22,12 @@
               #!/bin/bash
               set -ex # Fail build if any setup step fails
               cd $WORKSPACE/test/mocks/mass-pnf-sim
-              ./mass-pnf-sim.py --bootstrap {PNF_INSTANCES} --urlves http://127.0.0.1:10000/eventListener/v7 --ipfileserver 127.0.0.1 --typefileserver sftp --ipstart 10.11.0.16
-              ./mass-pnf-sim.py --start {PNF_INSTANCES}
-              ./mass-pnf-sim.py --trigger {PNF_INSTANCES}
-              ./mass-pnf-sim.py --stop {PNF_INSTANCES}
-              ./mass-pnf-sim.py --clean
+              ./mass-pnf-sim.py bootstrap --count {PNF_INSTANCES} --urlves http://127.0.0.1:10000/eventListener/v7 --ipfileserver 127.0.0.1 --typefileserver sftp --ipstart 10.11.0.16
+              ./mass-pnf-sim.py start --count {PNF_INSTANCES}
+              ./mass-pnf-sim.py trigger --count {PNF_INSTANCES}
+              ./mass-pnf-sim.py status --count {PNF_INSTANCES}
+              ./mass-pnf-sim.py stop --count {PNF_INSTANCES}
+              ./mass-pnf-sim.py clean
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
