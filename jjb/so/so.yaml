@@ -16,7 +16,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -DskipTests'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -32,7 +32,7 @@
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-v1-8c-8g
 
 - project:
     name: so-sonar
@@ -45,7 +45,7 @@
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     max-git-repo-age-hours: 48
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-v1-8c-8g
     project: 'so'
     project-name: 'so'
     branch: 'master'
@@ -58,7 +58,7 @@
     jobs:
       - 'onap-gerrit-maven-coverity'
     cron: '@daily'
-    build-node: 'ubuntu1804-builder-4c-4g'
+    build-node: 'ubuntu1804-docker-v1-8c-8g'
     project: 'so'
     project-name: 'so'
     branch: 'master'
@@ -88,7 +88,7 @@
     nexus-iq-namespace: 'onap-'
     project: so
     project-name: 'so'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu1804-docker-v1-8c-8g
     stream:
       - 'master':
           branch: 'master'
