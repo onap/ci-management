@@ -22,6 +22,30 @@
       "revId": "4f10783fe74b04cb3e8fed0dc48ab5e440e70edc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8df110ea_b5315ccd",
+        "filename": "jjb/oom/oom-readiness.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-05-11T17:22:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05075d37_d1e26d69",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 14
+      },
+      "revId": "4f10783fe74b04cb3e8fed0dc48ab5e440e70edc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
