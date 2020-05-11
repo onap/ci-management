@@ -1,0 +1,61 @@
+---
+- project:
+    name: ooom-readiness-info
+    project-name: oom-readiness
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: oom/readiness
+    branch: master
+
+- project:
+      name: oom-readiness-linters
+      project: oom/readiness
+      project-name: oom-readiness
+      python-version: python3
+      jobs:
+          - oom-linters
+      subproject:
+          - 'yaml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yaml'
+          - 'yml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yml'
+          - 'py':
+                tox-dir: '.'
+                tox-envs: 'python'
+                pattern: '**/*.python'
+      stream:
+          - 'master':
+                branch: 'master'
+          - 'frankfurt':
+                branch: 'frankfurt'
+
+- project:
+    name: oom-readiness-release
+    project-name: oom-readiness
+    project: oom/readiness
+    mvn-settings: 'oom-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+- project:
+    name: 'oom-readiness-docker'
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge
+    project-name: 'oom-readiness'
+    project: 'oom/readiness'
+    stream:
+      - 'master':
+            branch: 'master'
+            files: ''
+    docker-name: 'onap/oom/readiness'
+    docker-build-args: '-f ./Dockerfile'
+    docker-root: '$WORKSPACE'
+    mvn-settings: 'oom-settings'
+    build-node: ubuntu1804-docker-8c-8g
