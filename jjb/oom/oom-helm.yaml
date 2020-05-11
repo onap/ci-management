@@ -35,6 +35,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
       - 'dublin':
           branch: 'dublin'
       - 'casablanca':
