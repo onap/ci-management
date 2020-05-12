@@ -1,0 +1,63 @@
+---
+- project:
+    name: integration-docker-onap-python-info
+    project-name: integration-docker-onap-python
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: integration/docker/onap-python
+    branch: master
+
+- project:
+      name: integration-docker-onap-python-linters
+      project: integration/docker/onap-python
+      project-name: integration-docker-onap-python
+      python-version: python3
+      jobs:
+          - integration-linters
+      subproject:
+          - 'yaml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yaml'
+          - 'yml':
+                tox-dir: '.'
+                tox-envs: 'yaml'
+                pattern: '**/*.yml'
+          - 'json':
+                tox-dir: '.'
+                tox-envs: 'json'
+                pattern: '**/*.json'
+          - 'md':
+              tox-dir: '.'
+              tox-envs: 'md'
+              pattern: '**/*.md'
+      stream:
+          - 'master':
+                branch: 'master'
+
+- project:
+    name: integration-docker-onap-python-release
+    project-name: 'integration-docker-onap-python'
+    project: 'integration/docker/onap-python'
+    mvn-settings: 'integration-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+- project:
+    name: 'integration-docker-onap-python-docker'
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge
+    project-name: 'integration-docker-onap-python'
+    project: 'integration/docker/onap-python'
+    stream:
+      - 'master':
+            branch: 'master'
+            files: ''
+    docker-name: 'onap/integration-python'
+    docker-build-args: '-f ./Dockerfile'
+    docker-root: '$WORKSPACE'
+    mvn-settings: 'integration-settings'
+    build-node: ubuntu1804-docker-8c-8g
