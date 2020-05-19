@@ -25,6 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'policy-drools-applications-settings'
     java-version: openjdk11
     files: '**'

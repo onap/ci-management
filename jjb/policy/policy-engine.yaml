@@ -23,8 +23,8 @@
 
     project: 'policy/engine'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'policy-engine-settings'
     java-version: openjdk11
     files: '**'
@@ -44,7 +44,7 @@
     build-node: ubuntu1804-builder-4c-4g
     project: 'policy/engine'
     project-name: 'policy-engine'
-    branch: 'master'
+    branch: 'frankfurt'
     mvn-settings: 'policy-engine-settings'
     java-version: openjdk11
     mvn-goals: 'clean install'
@@ -58,7 +58,7 @@
     nexus-iq-namespace: 'onap-'
     project: policy/engine
     project-name: 'policy-engine'
-    branch: 'master'
+    branch: 'frankfurt'
     mvn-settings: 'policy-engine-settings'
     java-version: openjdk11
     build-node: 'ubuntu1804-builder-4c-4g'
@@ -70,4 +70,4 @@
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
     project: policy/engine
-    branch: master
+    branch: frankfurt

@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'policy-models-settings'
     java-version: openjdk11
     files: '**'

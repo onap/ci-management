@@ -25,6 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'policy-xacml-pdp-settings'
     java-version: openjdk11
     files: '**'
