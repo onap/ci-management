@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0af85b29_43b3a8ef",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-05-19T15:45:20Z",
+      "side": 1,
+      "message": "Not sure if this is ok - Jessica?",
+      "range": {
+        "startLine": 73,
+        "startChar": 12,
+        "endLine": 73,
+        "endChar": 21
+      },
+      "revId": "f6e92f5edd46970159ed02b7460b0860e0f5bd5e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
