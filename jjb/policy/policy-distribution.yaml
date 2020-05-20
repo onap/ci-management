@@ -27,6 +27,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'policy-distribution-settings'
     java-version: openjdk11
     files: '**'

@@ -25,6 +25,8 @@
     stream:
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'policy-engine-settings'
     java-version: openjdk11
     files: '**'
