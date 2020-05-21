@@ -34,38 +34,6 @@
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: policy-pap-elalto
-    project-name: 'policy-pap-elalto'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
-          docker-pom: 'pom.xml'
-          mvn-params: '-P docker'
-          build-node: ubuntu1804-docker-8c-8g
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
-
-    project: 'policy/pap'
-    stream:
-      - 'elalto':
-          branch: 'elalto'
-    mvn-settings: 'policy-pap-settings'
-    java-version: openjdk8
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
-
-- project:
     name: policy-pap-sonar
     jobs:
       - gerrit-maven-sonar
