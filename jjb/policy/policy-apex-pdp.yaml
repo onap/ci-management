@@ -41,7 +41,7 @@
 
 - project:
     name: policy-apex-pdp-elalto
-    project-name: 'policy-apex-pdp-elalto'
+    project-name: 'policy-apex-pdp'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':

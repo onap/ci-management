@@ -35,7 +35,7 @@
 
 - project:
     name: policy-pap-elalto
-    project-name: 'policy-pap-elalto'
+    project-name: 'policy-pap'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':

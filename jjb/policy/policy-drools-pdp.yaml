@@ -35,7 +35,7 @@
 
 - project:
     name: policy-drools-pdp-elalto
-    project-name: 'policy-drools-pdp-elalto'
+    project-name: 'policy-drools-pdp'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':

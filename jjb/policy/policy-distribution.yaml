@@ -35,7 +35,7 @@
 
 - project:
     name: policy-distribution-elalto
-    project-name: 'policy-distribution-elalto'
+    project-name: 'policy-distribution'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':

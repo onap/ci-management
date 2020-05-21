@@ -33,7 +33,7 @@
 
 - project:
     name: policy-engine-elalto
-    project-name: 'policy-engine-elalto'
+    project-name: 'policy-engine'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
