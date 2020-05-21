@@ -35,7 +35,7 @@
 
 - project:
     name: policy-drools-applications-elalto
-    project-name: 'policy-drools-applications-elalto'
+    project-name: 'policy-drools-applications'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
@@ -52,7 +52,7 @@
           mvn-params: '-P docker  -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+      - '{project-name}-{stream}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
     project: 'policy/drools-applications'
