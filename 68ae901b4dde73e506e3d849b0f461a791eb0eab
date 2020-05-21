@@ -50,6 +50,24 @@
       "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a38e6ad_dc987212",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-05-21T19:55:12Z",
+      "side": 0,
+      "message": "I don\u0027t know where these jobs are defined, can\u0027t seem to find them. Would be good if there was:\n{project-name}-{stream}-gerrit-release-jobs\n\nBut doesn\u0027t seem that there is - maybe what we do is delete this temporarily and point frankfurt to elalto and change back to jdk8. Then revert it when we are doing updating the certs on elalto.",
+      "parentUuid": "9efee448_c645a828",
+      "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
