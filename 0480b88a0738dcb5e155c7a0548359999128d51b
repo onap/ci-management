@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1fd549_b8d98e31",
+        "filename": "jjb/policy/policy-xacml-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-05-21T15:48:00Z",
+      "side": 1,
+      "message": "I think this needs to be changed also - it would conflict with the above job",
+      "range": {
+        "startLine": 38,
+        "startChar": 19,
+        "endLine": 38,
+        "endChar": 35
+      },
+      "revId": "0480b88a0738dcb5e155c7a0548359999128d51b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2746e51_0908ae3d",
+        "filename": "jjb/policy/policy-xacml-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 57
+      },
+      "writtenOn": "2020-05-21T15:48:00Z",
+      "side": 1,
+      "message": "It gets used in this line to formulate the full job name - so it ends up being the same.",
+      "range": {
+        "startLine": 41,
+        "startChar": 9,
+        "endLine": 41,
+        "endChar": 44
+      },
+      "revId": "0480b88a0738dcb5e155c7a0548359999128d51b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
