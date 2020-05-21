@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "359ebe14_b4bf5790",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 477
+      },
+      "writtenOn": "2020-05-21T19:02:18Z",
+      "side": 0,
+      "message": "needed to remove \"elalto\" here since it is triggering 2 jobs one good with openjdk8 and one bad with openjdk11,",
+      "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2715990_8c8d3724",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 477
+      },
+      "writtenOn": "2020-05-21T19:02:18Z",
+      "side": 0,
+      "message": "removing this is OK as the {stream} (set to elalto in this case) from line 57 I think will make them unique.",
+      "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9efee448_c645a828",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 477
+      },
+      "writtenOn": "2020-05-21T19:02:18Z",
+      "side": 0,
+      "message": "The issue is here as this is a global identifier (note that there is no stream) so the project from the top of the file, and this one collides in this name, since it is not distinguished by stream.   This is the error in general for any container:\n\njenkins_jobs.errors.JenkinsJobsException: Duplicate definitions for job \u0027policy-xacml-pdp-release-merge\u0027 specified\n\nNow the question, what are the side effects of this?\n\nAre there any side effects for gerry-maven-stage and gerrit-maven-docker-stage repeated across this project and the one on top for master/frankfurt?",
+      "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
