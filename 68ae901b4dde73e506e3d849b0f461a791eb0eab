@@ -68,6 +68,24 @@
       "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "569ef5c2_fb2062cc",
+        "filename": "jjb/policy/policy-engine.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-05-21T20:08:51Z",
+      "side": 0,
+      "message": "We do not have a \"{project-name}-{stream}-gerrit-release-jobs\", the only way would be to have this under another project block with a specific project-name and stream",
+      "parentUuid": "1a38e6ad_dc987212",
+      "revId": "68ae901b4dde73e506e3d849b0f461a791eb0eab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
