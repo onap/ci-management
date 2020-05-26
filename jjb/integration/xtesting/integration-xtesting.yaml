@@ -11,7 +11,7 @@
 - project:
       name: integration-xtesting-linters
       project: integration/xtesting
-      project-name: integration/xtesting
+      project-name: integration-xtesting
       python-version: python3
       jobs:
           - integration-linters
