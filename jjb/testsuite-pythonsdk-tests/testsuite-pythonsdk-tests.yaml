@@ -1,0 +1,14 @@
+---
+- project:
+    name: testsuite-pythonsdk-tests-project-view
+    project-name: testsuite-pythonsdk-tests
+    views:
+      - project-view
+
+- project:
+    name: testsuite-pythonsdk-tests-info
+    project: testsuite/pythonsdk-tests
+    project-name: testsuite-pythonsdk-tests
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
