@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'optf-has-settings'
     subproject:
       - 'conductor':
@@ -66,8 +66,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'optf-has-settings'
 
 - project:

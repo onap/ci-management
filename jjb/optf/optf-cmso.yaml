@@ -31,8 +31,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'optf-cmso-settings'
     java-version: openjdk11
 
@@ -74,8 +74,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'optf-cmso-settings'
     java-version: openjdk11
 
