@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82a35577_57a32d68",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-01T07:11:01Z",
+      "side": 1,
+      "message": "This job won\u0027t work as this project name is wrong, it\u0027s \"testsuite/pythonsdk-tests\"",
+      "revId": "0ec30d62aba5d0838c822dedfc8fa9a638fd7d26",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
