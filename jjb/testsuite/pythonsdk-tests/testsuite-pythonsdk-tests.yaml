@@ -5,13 +5,13 @@
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
-    project: testsuite-pythonsdk-tests
+    project: testsuite/pythonsdk-tests
     branch: master
 
 # - project:
 #     name: testsuite-pythonsdk-tests-verify-python
 #     project-name: testsuite-pythonsdk-tests
-#     project: testsuite-pythonsdk-tests
+#     project: testsuite/pythonsdk-tests
 #     stream:
 #       - 'master':
 #           branch: 'master'
@@ -25,7 +25,7 @@
 # - project:
 #     name: testsuite-pythonsdk-tests-verify-golang
 #     project-name: 'testsuite-pythonsdk-tests'
-#     project: 'testsuite-pythonsdk-tests'
+#     project: 'testsuite/pythonsdk-tests'
 #     golangver: 'golang112'
 #     mvn-settings: 'testsuite-pythonsdk-tests-settings'
 #     archive-artifacts: ''
@@ -39,7 +39,7 @@
 #
 # - project:
 #     name: testsuite-pythonsdk-tests-linters
-#     project: 'testsuite-pythonsdk-tests'
+#     project: 'testsuite/pythonsdk-tests'
 #     project-name: 'testsuite-pythonsdk-tests'
 #     python-version: python3
 #     jobs:
