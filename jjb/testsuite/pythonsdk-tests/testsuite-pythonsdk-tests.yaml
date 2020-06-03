@@ -8,69 +8,38 @@
     project: testsuite/pythonsdk-tests
     branch: master
 
-# - project:
-#     name: testsuite-pythonsdk-tests-verify-python
-#     project-name: testsuite-pythonsdk-tests
-#     project: testsuite/pythonsdk-tests
-#     stream:
-#       - 'master':
-#           branch: 'master'
-#       - 'frankfurt':
-#           branch: 'frankfurt'
-#     mvn-settings: 'testsuite-pythonsdk-tests-settings'
-#     build-node: 'centos7-builder-4c-4g'
-#     jobs:
-#       - '{project-name}-{stream}-{subproject}-verify-python'
-#
-# - project:
-#     name: testsuite-pythonsdk-tests-verify-golang
-#     project-name: 'testsuite-pythonsdk-tests'
-#     project: 'testsuite/pythonsdk-tests'
-#     golangver: 'golang112'
-#     mvn-settings: 'testsuite-pythonsdk-tests-settings'
-#     archive-artifacts: ''
-#     jobs:
-#       - '{project-name}-{stream}-{subproject}-verify-golang'
-#     stream:
-#       - 'master':
-#           branch: 'master'
-#       - 'frankfurt':
-#           branch: 'frankfurt'
-#
-# - project:
-#     name: testsuite-pythonsdk-tests-linters
-#     project: 'testsuite/pythonsdk-tests'
-#     project-name: 'testsuite-pythonsdk-tests'
-#     python-version: python3
-#     jobs:
-#       - testsuite-pythonsdk-tests-linters
-#     subproject:
-#       - 'yaml':
-#           tox-dir: '.'
-#           tox-envs: 'yaml'
-#           pattern: '**/*.yaml'
-#       - 'yml':
-#           tox-dir: '.'
-#           tox-envs: 'yaml'
-#           pattern: '**/*.yml'
-#       - 'json':
-#           tox-dir: '.'
-#           tox-envs: 'json'
-#           pattern: '**/*.json'
-#       - 'python':
-#           tox-dir: '.'
-#           tox-envs: 'py'
-#           pattern: '**/*.py'
-#       - 'rst':
-#           tox-dir: '.'
-#           tox-envs: 'rst'
-#           pattern: '**/*.rst'
-#       - 'md':
-#           tox-dir: '.'
-#           tox-envs: 'md'
-#           pattern: '**/*.md'
-#     stream:
-#       - 'master':
-#           branch: 'master'
-#       - 'frankfurt':
-#           branch: 'frankfurt'
+- project:
+    name: testsuite-pythonsdk-tests-linters
+    project: 'testsuite/pythonsdk-tests'
+    project-name: 'testsuite-pythonsdk-tests'
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'python':
+          tox-dir: '.'
+          tox-envs: 'py'
+          pattern: '**/*.py'
+      - 'rst':
+          tox-dir: '.'
+          tox-envs: 'rst'
+          pattern: '**/*.rst'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
+    stream:
+      - 'master':
+          branch: 'master'
