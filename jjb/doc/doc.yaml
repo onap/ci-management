@@ -30,6 +30,8 @@
           branch: 'dublin'
       - elalto:
           branch: 'elalto'
+      - frankfurt:
+          branch: 'frankfurt'
 
 - project:
     name: doc-info
