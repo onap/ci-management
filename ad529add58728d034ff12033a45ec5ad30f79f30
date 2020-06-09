@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e216748_9f62bc3a",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:30:16Z",
+      "side": 1,
+      "message": "Why do we need golang verify job in Python SDK related repo?",
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78d67a58_900007fc",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:30:16Z",
+      "side": 1,
+      "message": "This repo doesn\u0027t have F branch at all (or will there be one?).",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 29
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b3c4581_1b6a6b3b",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:30:16Z",
+      "side": 1,
+      "message": "Have you tested it? It doesn\u0027t look like it\u0027s going to work, there is no \u0027go\u0027 env in main tox.ini:\nhttps://gerrit.onap.org/r/gitweb?p\u003dtestsuite/pythonsdk-tests.git;a\u003dblob;f\u003dtox.ini;h\u003dee2b4c008fb439d1113dc8c754f7cab70c5a04ab;hb\u003dHEAD\n\nBesides that \"{project-name}-{stream}-{subproject}-verify-golang\" job doesn\u0027t support tox execution natively (no builders defined for tox).",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 28
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eea7a5d0_424327f8",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:30:16Z",
+      "side": 1,
+      "message": "Like above, no F branch.",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 29
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
