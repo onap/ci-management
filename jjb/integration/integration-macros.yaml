@@ -64,6 +64,7 @@
           sudo apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
           vagrant plugin install vagrant-libvirt
           vagrant plugin install vagrant-disksize
+          vagrant plugin install vagrant-sshfs
           mkdir -p ~/.ssh
 
 - builder:
