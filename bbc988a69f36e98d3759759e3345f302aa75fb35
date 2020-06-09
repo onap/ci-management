@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72912e86_ba52d4d1",
+        "filename": "jjb/testsuite-pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:37:38Z",
+      "side": 1,
+      "message": "The job path is wrong, it\u0027s  \"jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml\" actually by convention.",
+      "revId": "bbc988a69f36e98d3759759e3345f302aa75fb35",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a79e32e_0808c34d",
+        "filename": "jjb/testsuite-pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-06-09T08:37:38Z",
+      "side": 1,
+      "message": "This job is already there since https://gerrit.onap.org/r/c/ci-management/+/108549",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 31
+      },
+      "revId": "bbc988a69f36e98d3759759e3345f302aa75fb35",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
