@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b4f84ddd_49b3621b",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-06-09T13:02:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e216748_9f62bc3a",
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "78d67a58_900007fc",
         "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
         "patchSetId": 4
@@ -30,6 +48,30 @@
       "writtenOn": "2020-06-09T08:30:16Z",
       "side": 1,
       "message": "This repo doesn\u0027t have F branch at all (or will there be one?).",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 29
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6534b14f_f86b89f0",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-06-09T13:02:58Z",
+      "side": 1,
+      "message": "for this repo, there is not, new for guilin",
+      "parentUuid": "78d67a58_900007fc",
       "range": {
         "startLine": 23,
         "startChar": 0,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "38d2bc85_066c1128",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-06-09T13:02:58Z",
+      "side": 1,
+      "message": "full go target removed (it is a repo to host python scenarios)",
+      "parentUuid": "4b3c4581_1b6a6b3b",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 28
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "eea7a5d0_424327f8",
         "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
         "patchSetId": 4
@@ -85,6 +151,30 @@
       "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c97e1c15_19c3474c",
+        "filename": "jjb/testsuite/pythonsdk-tests/testsuite-pythonsdk-tests.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-06-09T13:02:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "eea7a5d0_424327f8",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 29
+      },
+      "revId": "ad529add58728d034ff12033a45ec5ad30f79f30",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
