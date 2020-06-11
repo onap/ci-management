@@ -24,6 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'aaf-sms-settings'
     files: '**'
     archive-artifacts: ''
