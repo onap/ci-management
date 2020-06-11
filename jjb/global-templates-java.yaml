@@ -451,6 +451,11 @@
     <<: *merge_java_defaults
     name: '{project-name}-{stream}-merge-properties-java'
 
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
 - job-template:
     # Job template for Java merge jobs that takes a maven template
     #
