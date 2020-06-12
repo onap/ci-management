@@ -22,8 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
