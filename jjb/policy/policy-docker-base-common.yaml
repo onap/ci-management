@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-docker-base-common-elalto
+    name: policy-docker-base-common
     project-name: 'policy-docker'
     jobs:
       - '{project-name}-{stream}-verify-java'
@@ -20,8 +20,8 @@
 
     project: 'policy/docker'
     stream:
-      - 'elalto':
-          branch: 'elalto'
+      - 'master':
+          branch: 'master'
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''
@@ -77,8 +77,8 @@
 
     project: 'policy/docker'
     stream:
-      - 'master':
-          branch: 'master'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''
