@@ -35,3 +35,40 @@
       stream:
           - 'master':
                 branch: 'master'
+
+- project:
+    name: integration-xtesting-release
+    project-name: 'integration-xtesting'
+    project: 'integration/docker/onap-python'
+    mvn-settings: 'integration-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+- project:
+    name: 'integration-xtesting-docker'
+    jobs:
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-infra-healthcheck'
+          docker-name: 'onap/xtesting-infra-healthcheck'
+          docker-build-args: '-f ./infra-healthcheck/docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-infra-healthcheck'
+          docker-name: 'onap/xtesting-infra-healthcheck'
+          docker-build-args: '-f ./infra-healthcheck/docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-security'
+          docker-name: 'onap/xtesting-security'
+          docker-build-args: '-f ./security/docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-security'
+          docker-name: 'onap/xtesting-infra-healthcheck'
+          docker-build-args: '-f ./security/docker/Dockerfile'
+    project: 'integration/xtesting'
+    stream:
+      - 'master':
+            branch: 'master'
+            files: ''
+    docker-root: '$WORKSPACE'
+    mvn-settings: 'integration-settings'
+    build-node: ubuntu1804-docker-8c-8g
