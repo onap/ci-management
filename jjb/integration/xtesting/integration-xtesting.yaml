@@ -52,7 +52,7 @@
           project-name: 'integration-xtesting-infra-healthcheck'
           docker-root: ./infra-healthcheck
           docker-name: 'onap/xtesting-infra-healthcheck'
-          docker-build-args: '-f ./Dockerfile'
+          docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-infra-healthcheck'
           docker-root: ./infra-healthcheck
