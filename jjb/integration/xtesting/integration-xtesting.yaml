@@ -50,20 +50,24 @@
     jobs:
       - gerrit-docker-verify:
           project-name: 'integration-xtesting-infra-healthcheck'
+          docker-root: ./infra-healthcheck
           docker-name: 'onap/xtesting-infra-healthcheck'
-          docker-build-args: '-f ./infra-healthcheck/docker/Dockerfile'
+          docker-build-args: '-f ./Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-infra-healthcheck'
+          docker-root: ./infra-healthcheck
           docker-name: 'onap/xtesting-infra-healthcheck'
-          docker-build-args: '-f ./infra-healthcheck/docker/Dockerfile'
+          docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-verify:
-          project-name: 'integration-xtesting-security'
+          project-name: 'integration/-xtesting-security'
+          docker-root: ./security
           docker-name: 'onap/xtesting-security'
-          docker-build-args: '-f ./security/docker/Dockerfile'
+          docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-security'
+          docker-root: ./security
           docker-name: 'onap/xtesting-infra-healthcheck'
-          docker-build-args: '-f ./security/docker/Dockerfile'
+          docker-build-args: '-f ./docker/Dockerfile'
     project: 'integration/xtesting'
     stream:
       - 'master':
