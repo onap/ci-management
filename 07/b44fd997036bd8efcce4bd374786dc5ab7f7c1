@@ -1,0 +1,7 @@
+Code-Review+2: Vanessa Rene Valderrama <vvalderrama@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 18 Jun 2020 19:39:21 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/109322
+Project: ci-management
+Branch: refs/heads/master
