@@ -59,14 +59,64 @@
           docker-name: 'onap/xtesting-infra-healthcheck'
           docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-verify:
-          project-name: 'integration/-xtesting-security'
+          project-name: 'integration-xtesting-healthcheck'
+          docker-root: ./healthcheck
+          docker-name: 'onap/xtesting-healthcheck'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-healthcheck'
+          docker-root: ./healthcheck
+          docker-name: 'onap/xtesting-healthcheck'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-smoke-usecases-pythonsdk'
+          docker-root: ./smoke-usecases-pythonsdk
+          docker-name: 'onap/xtesting-smoke-usecases-pythonsdk'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-smoke-usecases-pythonsdk'
+          docker-root: ./smoke-usecases-pythonsdk
+          docker-name: 'onap/xtesting-smoke-usecases-pythonsdk'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-smoke-usecases-robot'
+          docker-root: ./smoke-usecases-robot
+          docker-name: 'onap/xtesting-smoke-usecases-robot'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-smoke-usecases-robot'
+          docker-root: ./smoke-usecases-robot
+          docker-name: 'onap/xtesting-smoke-usecases-robot'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-benchmarking'
+          docker-root: ./benchmarking
+          docker-name: 'onap/xtesting-benchmarking'
+          docker-build-args: '-f ./benchmarking/docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-benchmarking'
+          docker-root: ./benchmarking
+          docker-name: 'onap/xtesting-benchmarking'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-candidate-usecases'
+          docker-root: ./candidate-usecases
+          docker-name: 'onap/xtesting-candidate-usecases'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-candidate-usecases'
+          docker-root: ./candidate-usecases
+          docker-name: 'onap/xtesting-candidate-usecases'
+          docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-security'
           docker-root: ./security
           docker-name: 'onap/xtesting-security'
           docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-security'
           docker-root: ./security
-          docker-name: 'onap/xtesting-infra-healthcheck'
+          docker-name: 'onap/xtesting-security'
           docker-build-args: '-f ./docker/Dockerfile'
     project: 'integration/xtesting'
     stream:
