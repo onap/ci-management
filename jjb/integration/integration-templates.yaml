@@ -44,7 +44,7 @@
     publishers:
       - lf-infra-publish
 
-- job-template:
+- job-template: &tox_verify_boilerplate
     # Job template for running linters against specific file formats
     #
     # Required Variables:
@@ -98,3 +98,9 @@
 
     publishers:
       - lf-infra-publish
+
+- job-template:
+    <<: *tox_verify_boilerplate
+    name: '{project-name}-{stream}-{subproject}-tox-verify'
+    id: integration-tox-verify
+    description: 'Job intended for running tox'
