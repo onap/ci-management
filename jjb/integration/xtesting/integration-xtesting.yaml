@@ -92,7 +92,7 @@
           project-name: 'integration-xtesting-benchmarking'
           docker-root: ./benchmarking
           docker-name: 'onap/xtesting-benchmarking'
-          docker-build-args: '-f ./benchmarking/docker/Dockerfile'
+          docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-benchmarking'
           docker-root: ./benchmarking
