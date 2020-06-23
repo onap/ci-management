@@ -61,6 +61,22 @@
       branch: master
 
 - project:
+      name: integration-simulators-pnf-simulator-cli
+      project: integration/simulators/pnf-simulator
+      project-name: integration-pnf-simulator
+      python-version: python3
+      jobs:
+          - integration-tox-verify
+      subproject:
+          - 'simulator-cli':
+                tox-dir: 'simulator-cli'
+                tox-envs: 'pytest'
+                pattern: '**/*'
+      stream:
+          - 'master':
+                branch: 'master'
+
+- project:
       name: integration-simulators-pnf-simulator-linters
       project: integration/simulators/pnf-simulator
       project-name: integration-pnf-simulator
