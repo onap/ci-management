@@ -8,6 +8,8 @@
       stream:
           - "master":
                 branch: "master"
+          -  "frankfurt":
+                branch: "frankfurt"
       functionality:
           - "certservice":
                 trigger_jobs:
