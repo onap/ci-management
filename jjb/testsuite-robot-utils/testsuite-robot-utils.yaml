@@ -1,0 +1,14 @@
+---
+- project:
+    name: testsuite-robot-utils-project-view
+    project-name: testsuite-robot-utils
+    views:
+      - project-view
+
+- project:
+    name: testsuite-robot-utils-info
+    project: testsuite/robot-utils
+    project-name: testsuite-robot-utils
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
