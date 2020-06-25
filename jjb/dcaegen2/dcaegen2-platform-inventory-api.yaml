@@ -2,6 +2,7 @@
 - project:
     name: dcaegen2-platform-inventory-api
     project-name: 'dcaegen2-platform-inventory-api'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
