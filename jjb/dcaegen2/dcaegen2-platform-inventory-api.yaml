@@ -2,6 +2,7 @@
 - project:
     name: dcaegen2-platform-inventory-api
     project-name: 'dcaegen2-platform-inventory-api'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -35,6 +36,7 @@
 
 - project:
     name: dcaegen2-platform-inventory-api-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
