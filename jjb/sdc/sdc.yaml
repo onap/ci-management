@@ -55,6 +55,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
