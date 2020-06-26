@@ -30,6 +30,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
