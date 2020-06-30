@@ -3,7 +3,7 @@
     name: multicloud-k8s
     project-name: 'multicloud-k8s'
     path: 'src'
-    golangver: 'golang112'
+    golangver: 'golang114'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{stream}-verify-golang'
@@ -35,7 +35,7 @@
 #    name: multicloud-k8s-arm64
 #    project-name: 'multicloud-k8s-arm64'
 #    path: 'src/k8splugin'
-#    golangver: 'golang112'
+#    golangver: 'golang114'
 #    jobs:
 #      - '{project-name}-{stream}-docker-golang-shell-daily':
 #          script:
