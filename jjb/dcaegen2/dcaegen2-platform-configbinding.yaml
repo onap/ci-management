@@ -33,19 +33,24 @@
 
 - project:
     name: dcaegen2-platform-configbinding-sonar
-    project: dcaegen2/platform/configbinding
-    project-name: dcaegen2-platform-configbinding
-    cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
-    # Sonar jobs use maven to push report
-    mvn-settings: dcaegen2-platform-configbinding-settings
-    mvn-goals: 'clean test'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    branch: master
-    # used by tox-install.sh to specify the interpreter used to install tox
-    python-version: python3
     jobs:
       - gerrit-tox-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: ubuntu1804-docker-8c-8g
+    project: 'dcaegen2/platform/configbinding'
+    project-name: 'dcaegen2-platform-configbinding'
+    branch: 'master'
+    # used by tox-install.sh to specify the interpreter used to install tox
+    python-version: python3
+    mvn-settings: 'dcaegen2-platform-configbinding-settings'
+    mvn-goals: 'clean test'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
 
 - project:
     name: dcaegen2-platform-configbinding-info
