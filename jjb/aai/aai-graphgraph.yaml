@@ -49,6 +49,18 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    name: aai-graphgraph-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'aai/graphgraph'
+    project-name: 'aai-graphgraph'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'aai-graphgraph-settings'
+
+- project:
     name: aai-graphgraph-info
     project-name: aai-graphgraph
     jobs:
