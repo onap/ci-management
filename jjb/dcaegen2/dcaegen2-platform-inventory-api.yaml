@@ -2,7 +2,6 @@
 - project:
     name: dcaegen2-platform-inventory-api
     project-name: 'dcaegen2-platform-inventory-api'
-    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -22,6 +21,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'dcaegen2-platform-inventory-api-settings'
