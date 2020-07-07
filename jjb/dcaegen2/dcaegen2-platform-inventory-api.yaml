@@ -55,6 +55,7 @@
 
 - project:
     name: dcaegen2-platform-inventory-api-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
