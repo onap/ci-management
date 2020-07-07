@@ -496,6 +496,15 @@
             </org.jenkinsci.plugins.golang.GolangBuildWrapper>
 
 - wrapper:
+    name: golang114
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.4">
+            <goVersion>Golang 1.14</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
     # This wrapper is required for all jobs as it configures the wrappers
     # needed by the eCOMP infra.
     name: infra-wrappers
