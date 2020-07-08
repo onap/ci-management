@@ -500,7 +500,7 @@
     wrappers:
       - raw:
           xml: |
-            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.4">
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
             <goVersion>Golang 1.14</goVersion>
             </org.jenkinsci.plugins.golang.GolangBuildWrapper>
 
