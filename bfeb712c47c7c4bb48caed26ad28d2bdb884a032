@@ -16,6 +16,24 @@
       "revId": "bfeb712c47c7c4bb48caed26ad28d2bdb884a032",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "070f3a87_e7bd7547",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 503,
+      "author": {
+        "id": 6745
+      },
+      "writtenOn": "2020-07-08T00:53:51Z",
+      "side": 1,
+      "message": "Fixed in https://gerrit.onap.org/r/c/ci-management/+/109926",
+      "parentUuid": "b49779cc_de79edbe",
+      "revId": "bfeb712c47c7c4bb48caed26ad28d2bdb884a032",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
