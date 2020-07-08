@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a6ee176_6919073d",
+        "filename": "jjb/dmaap/dmaap-buscontroller.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-07-08T18:28:42Z",
+      "side": 1,
+      "message": "My mistake. I think you can just have the release jobs on 1 project. So no {stream}, and remove this one.",
+      "range": {
+        "startLine": 43,
+        "startChar": 8,
+        "endLine": 44,
+        "endChar": 42
+      },
+      "revId": "d2bb2a48e8187605fa7965a64f6c068607ad4abd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
