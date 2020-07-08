@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a96f7439_1d8aaf8a",
+        "filename": "jjb/dmaap/dmaap-dbcapi.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-07-08T18:07:16Z",
+      "side": 1,
+      "message": "May need a unique project-name for J11 \u0026 J8. Same for the buscontroller jobs.",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 31
+      },
+      "revId": "04aeca7d2871582220b51f2c427b3ef04c59a411",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
