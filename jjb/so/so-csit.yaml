@@ -9,6 +9,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'elalto':
+          branch: 'elalto'
+      - 'frankfurt':
+          branch: 'frankfurt'
     functionality:
       - 'integration-testing':
           trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
