@@ -29,6 +29,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'elalto':
+          branch: 'elalto'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
