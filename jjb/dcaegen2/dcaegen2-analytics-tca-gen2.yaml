@@ -6,6 +6,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     # apply to all jobs
@@ -33,6 +34,7 @@
           maven-versions-plugin: true
 - project:
     name: dcaegen2-analytics-tca-gen2-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -51,6 +53,7 @@
 
 - project:
     name: dcaegen2-analytics-tca-gen2-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
@@ -62,6 +65,7 @@
 
 - project:
     name: dcaegen2-analytics-tca-gen2-info
+    java-version: openjdk11
     project-name: dcaegen2-analytics-tca-gen2
     jobs:
       - gerrit-info-yaml-verify
