@@ -24,6 +24,7 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk11
 
 - project:
     name: holmes-engine-management-sonar
