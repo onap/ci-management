@@ -21,6 +21,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'dcaegen2-services-son-handler-settings'
@@ -32,6 +33,7 @@
 
 - project:
     name: dcaegen2-services-son-handler-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -50,6 +52,7 @@
 
 - project:
     name: dcaegen2-services-son-handler-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
@@ -61,6 +64,7 @@
 
 - project:
     name: dcaegen2-services-son-handler-info
+    java-version: openjdk11
     project-name: dcaegen2-services-son-handler
     jobs:
       - gerrit-info-yaml-verify
