@@ -21,6 +21,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
@@ -38,6 +39,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
+    java-version: openjdk11
     project: dcaegen2/platform/servicechange-handler
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-platform-servicechange-handler'
