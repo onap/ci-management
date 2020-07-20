@@ -65,6 +65,7 @@
           vagrant plugin install vagrant-libvirt
           vagrant plugin install vagrant-disksize
           vagrant plugin install vagrant-sshfs
+          vagrant plugin install vagrant-reload
           mkdir -p ~/.ssh
 
 - builder:
