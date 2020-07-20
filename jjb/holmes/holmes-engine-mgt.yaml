@@ -9,11 +9,14 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          java-version: openjdk11
       - '{project-name}-{stream}-docker-java-daily':
           mvn-params: '-Dmaven.test.skip=true'
           build-node: ubuntu1804-docker-8c-8g
+          java-version: openjdk11
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+          java-version: openjdk11
     project: 'holmes/engine-management'
     stream:
       - 'master':
@@ -43,6 +46,7 @@
     mvn-settings: 'holmes-engine-management-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: holmes-engine-management-clm
@@ -53,6 +57,7 @@
     project-name: 'holmes-engine-management'
     branch: 'master'
     mvn-settings: 'holmes-engine-management-settings'
+    java-version: openjdk11
 
 - project:
     name: holmes-engine-management-info
