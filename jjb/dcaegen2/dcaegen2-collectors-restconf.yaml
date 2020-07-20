@@ -2,6 +2,7 @@
 - project:
     name: dcaegen2-collectors-restconf
     project-name: 'dcaegen2-collectors-restconf'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -35,6 +36,7 @@
 
 - project:
     name: dcaegen2-collectors-restconf-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -53,6 +55,7 @@
 
 - project:
     name: dcaegen2-collectors-restconf-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
@@ -65,6 +68,7 @@
 - project:
     name: dcaegen2-collectors-restconf-info
     project-name: dcaegen2-collectors-restconf
+    java-version: openjdk11
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
