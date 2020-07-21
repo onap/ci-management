@@ -1,0 +1,14 @@
+---
+- project:
+    name: oom-platform-cert-manager-project-view
+    project-name: oom-platform-cert-manager
+    views:
+      - project-view
+
+- project:
+    name: oom-platform-cert-manager-info
+    project: oom/platform/cert-manager
+    project-name: oom-platform-cert-manager
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
