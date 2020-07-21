@@ -1,0 +1,14 @@
+---
+- project:
+    name: oom-platform-keycloak-project-view
+    project-name: oom-platform-keycloak
+    views:
+      - project-view
+
+- project:
+    name: oom-platform-keycloak-info
+    project: oom/platform/keycloak
+    project-name: oom-platform-keycloak
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
