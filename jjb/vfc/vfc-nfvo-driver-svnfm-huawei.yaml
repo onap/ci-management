@@ -2,6 +2,7 @@
 - project:
     name: vfc-nfvo-driver-svnfm-huawei
     project-name: 'vfc-nfvo-driver-svnfm-huawei'
+    java-version: openjdk11
     project: 'vfc/nfvo/driver/vnfm/svnfm'
     stream:
       - 'master':
@@ -28,6 +29,7 @@
 
 - project:
     name: vfc-nfvo-driver-svnfm-huawei-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -47,6 +49,7 @@
 
 - project:
     name: vfc-nfvo-driver-svnfm-huawei-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm:
           mvn-params: '-f huawei/pom.xml'
@@ -60,6 +63,7 @@
 - project:
     name: vfc-nfvo-driver-svnfm-huawei-info
     project-name: vfc-nfvo-driver-svnfm-huawei
+    java-version: openjdk11
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
