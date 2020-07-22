@@ -1,0 +1,303 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6347bd92_ecbe9ba1",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "I wonder if the build machines are the same as in o-ran-sc?",
+      "range": {
+        "startLine": 12,
+        "startChar": 16,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf6406c1_9c927d20",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 16,
+        "endChar": 10
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7214b74d_2e826bec",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 16,
+        "startChar": 24,
+        "endLine": 16,
+        "endChar": 32
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f68e3cd_b57868b7",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 28,
+        "startChar": 9,
+        "endLine": 28,
+        "endChar": 17
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54954fcc_6d8a93d5",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 42,
+        "startChar": 9,
+        "endLine": 42,
+        "endChar": 17
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ff2de24_fafcea4f",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk-oran\"?",
+      "range": {
+        "startLine": 43,
+        "startChar": 10,
+        "endLine": 43,
+        "endChar": 18
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ecd706a_baa86630",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 63,
+        "startChar": 9,
+        "endLine": 63,
+        "endChar": 17
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca6031ba_fdaeba12",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk-oran\"?",
+      "range": {
+        "startLine": 64,
+        "startChar": 10,
+        "endLine": 64,
+        "endChar": 18
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20de87ae_c6e6eaaa",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 82,
+        "startChar": 9,
+        "endLine": 82,
+        "endChar": 17
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4be16c4e_d73fdb82",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk-oran\"?",
+      "range": {
+        "startLine": 83,
+        "startChar": 10,
+        "endLine": 83,
+        "endChar": 18
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53311b81_43cb9173",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should probably ne aligned to this spec:\n- project:\n       name: ccsdk-apps-sonar\n       jobs:\n         - gerrit-maven-sonar\n       sonarcloud: true\n       sonarcloud-project-organization: \u0027{sonarcloud_project_organization}\u0027\n       sonarcloud-api-token: \u0027{sonarcloud_api_token}\u0027\n       sonarcloud-project-key: \u0027{sonarcloud_project_organization}_{project-name}\u0027\n       sonar-mvn-goal: \u0027{sonar_mvn_goal}\u0027\n       cron: \u0027@daily\u0027\n       build-node: ubuntu1804-builder-4c-4g\n       project: \u0027ccsdk/apps\u0027\n       project-name: \u0027ccsdk-apps\u0027\n       branch: \u0027master\u0027\n       mvn-settings: \u0027ccsdk-apps-settings\u0027\n       mvn-goals: \u0027clean install\u0027\n       mvn-opts: \u0027-Xmx1024m -XX:MaxPermSize\u003d256m\u0027\n       maven-version: \"mvn35\"",
+      "range": {
+        "startLine": 90,
+        "startChar": 2,
+        "endLine": 90,
+        "endChar": 9
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "793e45cb_6d59f4ef",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk_oran\"?",
+      "range": {
+        "startLine": 91,
+        "startChar": 9,
+        "endLine": 91,
+        "endChar": 17
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "90ddc53c_c47eca36",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 3763
+      },
+      "writtenOn": "2020-07-22T13:33:38Z",
+      "side": 1,
+      "message": "Should this be \"ccsdk-oran\"?",
+      "range": {
+        "startLine": 92,
+        "startChar": 10,
+        "endLine": 92,
+        "endChar": 18
+      },
+      "revId": "e51df6197c987659eebe78dd6b7feb099ca0b45f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
