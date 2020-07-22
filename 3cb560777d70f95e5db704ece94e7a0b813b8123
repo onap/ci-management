@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd3200c3_b899d231",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-07-22T17:36:51Z",
+      "side": 0,
+      "message": "You might also want to transfer this so that you guys have a Jenkins tab for this project.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "3cb560777d70f95e5db704ece94e7a0b813b8123",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
