@@ -22,6 +22,30 @@
       "revId": "3cb560777d70f95e5db704ece94e7a0b813b8123",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0828a93c_4747bc48",
+        "filename": "jjb/ccsdk-oran/ccsdk-oran.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2020-07-23T11:14:36Z",
+      "side": 0,
+      "message": "Hi Jessica. \nI think its ok to have this repo/jobs etc under the CCSDK tab. \nThanks,\nJohn",
+      "parentUuid": "bd3200c3_b899d231",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "3cb560777d70f95e5db704ece94e7a0b813b8123",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
