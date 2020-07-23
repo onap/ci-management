@@ -41,7 +41,7 @@ Once you successfully clone the repository, next step is to install JJB
 
 ```
 cd ci-management
-sudo apt-get install python-virtualenv
+pip install virtualenv
 virtualenv onap_sandbox
 source onap_sandbox/bin/activate
 pip install jenkins-job-builder

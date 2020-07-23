@@ -15,6 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'elalto':
           branch: 'elalto'
       - 'frankfurt':
@@ -41,6 +42,7 @@
     build-node: ubuntu1804-builder-4c-4g
     project: 'so/libs'
     project-name: 'so-libs'
+    java-version: openjdk11
     branch: 'master'
     mvn-settings: 'so-libs-settings'
     mvn-goals: 'clean install'
@@ -53,6 +55,7 @@
     nexus-iq-namespace: 'onap-'
     project: so/libs
     project-name: 'so-libs'
+    java-version: openjdk11
     branch: 'master'
     mvn-settings: 'so-libs-settings'
 
