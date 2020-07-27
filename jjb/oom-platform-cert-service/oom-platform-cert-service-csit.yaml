@@ -1,0 +1,15 @@
+# Note: 202003, LF says ubuntu1604 is deprecated.  Use ubuntu1804 when needed
+- project:
+      name: oom-platform-cert-service-csit
+      jobs:
+          - "{project-name}-{stream}-verify-csit-{functionality}"
+          - "{project-name}-{stream}-csit-{functionality}"
+      project-name: "oom-platform-cert-service"
+      stream:
+          - "master":
+                branch: "master"
+      functionality:
+          - "certservice":
+                trigger_jobs:
+                    - "{project-name}-{stream}-merge-java"
+      robot-options: ""
