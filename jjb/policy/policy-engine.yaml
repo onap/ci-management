@@ -32,25 +32,6 @@
     build-node: 'ubuntu1804-docker-8c-8g'
 
 - project:
-    name: policy-engine-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
-    project: 'policy/engine'
-    project-name: 'policy-engine'
-    branch: 'frankfurt'
-    mvn-settings: 'policy-engine-settings'
-    java-version: openjdk11
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx2048m -XX:MaxPermSize=512m'
-
-- project:
     name: policy-engine-clm
     jobs:
       - gerrit-maven-clm:
