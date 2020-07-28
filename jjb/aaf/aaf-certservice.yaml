@@ -4,9 +4,6 @@
     name: aaf-certservice
     project-name: 'aaf-certservice'
     stream:
-        -   'master':
-                branch: 'master'
-                java-version: openjdk11
         -   'frankfurt':
                 branch: 'frankfurt'
                 java-version: openjdk11
@@ -51,7 +48,7 @@
     build-node: ubuntu1804-docker-8c-8g
     project: 'aaf/certservice'
     project-name: 'aaf-certservice'
-    branch: 'master'
+    branch: 'frankfurt'
     mvn-settings: 'aaf-certservice-settings'
     mvn-pom: 'certService/pom.xml'
     mvn-goals: 'clean install'
@@ -64,4 +61,4 @@
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
     project: aaf/certservice
-    branch: master
+    branch: frankfurt

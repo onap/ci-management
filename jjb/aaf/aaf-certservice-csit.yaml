@@ -6,8 +6,6 @@
           - "{project-name}-{stream}-csit-{functionality}"
       project-name: "aaf"
       stream:
-          - "master":
-                branch: "master"
           -  "frankfurt":
                 branch: "frankfurt"
       functionality:
