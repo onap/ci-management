@@ -33,6 +33,8 @@
           branch: 'frankfurt'
       - 'elalto':
           branch: 'elalto'
+      - 'dynamicBPMN':
+          branch: 'Dynamic_BPMN'
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
