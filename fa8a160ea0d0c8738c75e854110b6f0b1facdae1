@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9cff6f6_506e23c3",
+        "filename": "jjb/so/so.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-07-30T14:42:51Z",
+      "side": 0,
+      "message": "Is there a reason why we are moving away from the jobs that are using the \"ubuntu1804-docker-v1-8c-8g\" node?\n\nThe reason why some jobs were running on v1 was because this node has considerably more memory capacity that the new one you are using. \nOtherwise, the build will terminate due to lack of space",
+      "range": {
+        "startLine": 21,
+        "startChar": 22,
+        "endLine": 21,
+        "endChar": 48
+      },
+      "revId": "fa8a160ea0d0c8738c75e854110b6f0b1facdae1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
