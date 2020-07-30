@@ -23,3 +23,19 @@
     build-node: centos7-builder-2c-1g
     project: oom/offline-installer
     branch: master
+
+- project:
+      name: offline-installer-linters
+      project: oom/offline-installer
+      project-name: offline-installer
+      python-version: python3
+      jobs:
+          - integration-linters
+      subproject:
+          - 'py':
+              tox-dir: '.'
+              tox-envs: 'py'
+              pattern: '**/*.py'
+      stream:
+          - 'master':
+                branch: 'master'
