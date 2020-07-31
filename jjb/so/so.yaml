@@ -2,14 +2,14 @@
 - project:
     name: so-project-view
     project-name: so
-    java.version: openjdk11
+    java-version: openjdk11
     views:
       - project-view
 
 - project:
     name: so
     project-name: 'so'
-    java.version: openjdk11
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -36,13 +36,14 @@
       - 'dynamicBPMN':
           branch: 'Dynamic_BPMN'
     mvn-settings: 'so-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-v1-8c-8g
 
 - project:
     name: so-sonar
-    java.version: openjdk11
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -62,7 +63,7 @@
 
 - project:
     name: 'so-coverity'
-    java.version: openjdk11
+    java-version: openjdk11
     jobs:
       - 'onap-gerrit-maven-coverity'
     cron: '@daily'
@@ -91,7 +92,7 @@
 
 - project:
     name: so-clm
-    java.version: openjdk11
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
@@ -106,7 +107,7 @@
 - project:
     name: so-info
     project-name: so
-    java.version: openjdk11
+    java-version: openjdk11
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
