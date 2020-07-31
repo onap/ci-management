@@ -2,6 +2,7 @@
 - project:
     name: so-libs
     project-name: 'so-libs'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -27,10 +28,12 @@
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
+    java-version: openjdk11
     archive-artifacts: ''
 
 - project:
     name: so-libs-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -50,6 +53,7 @@
 
 - project:
     name: so-libs-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
@@ -62,6 +66,8 @@
 - project:
     name: so-libs-info
     project-name: so-libs
+    java-version: openjdk11
+    java-version: openjdk11
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
