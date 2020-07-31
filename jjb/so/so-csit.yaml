@@ -1,6 +1,7 @@
 ---
 - project:
     name: so-csit
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
