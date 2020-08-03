@@ -4,8 +4,8 @@
     project-name: 'dcaegen2-services'
     project: 'dcaegen2/services'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
     subproject:
       - 'slice-analysis-ms':
           pom: 'components/slice-analysis-ms/pom.xml'
@@ -23,7 +23,7 @@
 
 - project:
     name: dcaegen2-services-slice-analysis-ms-release
-    project-name: 'dcaegen2-slice-analysis-ms'
+    project-name: 'dcaegen2-services-slice-analysis-ms'
     project: 'dcaegen2/services'
     jobs:
       - gerrit-maven-stage:
@@ -73,14 +73,14 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
-    name: dcaegen2-slice-analysis-ms-clm
+    name: dcaegen2-services-slice-analysis-ms-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/services
     build-node: ubuntu1804-docker-8c-8g
-    project-name: 'dcaegen2-slice-analysis-ms-clm'
+    project-name: 'dcaegen2-services-slice-analysis-ms-clm'
     mvn-params: '-f components/slice-analysis-ms/pom.xml'
     branch: 'master'
     mvn-settings: 'dcaegen2-services-settings'
