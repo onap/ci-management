@@ -81,7 +81,7 @@
     stream:
       - 'master':
           branch: 'master'
-    build-node: centos7-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     mvn-settings: 'logging-analytics-settings'
     subproject:
       - 'pylog':
