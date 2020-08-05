@@ -2,14 +2,12 @@
 - project:
     name: so-project-view
     project-name: so
-    java.version: openjdk11
     views:
       - project-view
 
 - project:
     name: so
     project-name: 'so'
-    java.version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -29,12 +27,14 @@
     stream:
       - 'master':
           branch: 'master'
+          java.version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
       - 'elalto':
           branch: 'elalto'
       - 'dynamicBPMN':
           branch: 'Dynamic_BPMN'
+          java.version: openjdk11
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
