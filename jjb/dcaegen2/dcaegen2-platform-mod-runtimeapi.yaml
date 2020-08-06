@@ -15,6 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: dcaegen2-platform-settings
@@ -24,6 +25,7 @@
 
 - project:
     name: dcaegen2-platform-mod-runtimeapi-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -43,6 +45,7 @@
 
 - project:
     name: dcaegen2-platform-mod-runtimeapi-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
