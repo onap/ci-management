@@ -46,7 +46,7 @@
     name: integration-verify-golang
     project-name: 'integration'
     project: 'integration'
-    golangver: 'golang112'
+    golangver: 'golang114'
     mvn-settings: 'integration-settings'
     archive-artifacts: ''
     jobs:
