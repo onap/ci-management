@@ -2,7 +2,6 @@
 - project:
     name: so-libs
     project-name: 'so-libs'
-    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -66,7 +65,6 @@
 - project:
     name: so-libs-info
     project-name: so-libs
-    java-version: openjdk11
     java-version: openjdk11
     jobs:
       - gerrit-info-yaml-verify
