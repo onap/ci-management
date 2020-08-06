@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Code-Review+1: Sébastien Determe <sebastien.determe@intl.att.com>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 06 Aug 2020 14:14:23 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/110924
+Project: ci-management
+Branch: refs/heads/master
