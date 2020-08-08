@@ -37,7 +37,6 @@
           branch: 'Dynamic_BPMN'
           java-version: openjdk11
     mvn-settings: 'so-settings'
-    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-v1-8c-8g
