@@ -35,3 +35,23 @@
         https://jenkins.onap.org
         https://jenkins.onap.org/sandbox
     openstack-cloud: vex
+
+- project:
+    name: openstack-update-cloud-images
+    jobs:
+      - gerrit-openstack-update-cloud-image
+
+    project: ci-management
+    project-name: ci-management
+    branch: master
+    archive-artifacts: '**/*.log'
+    jenkins-ssh-credential: "{jenkins-ssh-credential}"
+
+    build-node: centos7-builder-2c-1g
+    # update-cloud-image: true
+    build-timeout: 10
+
+    gerrit-user: "jenkins-$SILO"
+    gerrit-host: "gerrit.onap.org"
+    gerrit-topic: "update-cloud-image"
+    reviewers-email: "onap-jobbuilder@jenkins.onap.org"

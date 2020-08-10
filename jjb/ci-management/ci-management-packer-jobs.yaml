@@ -16,6 +16,7 @@
       - centos-7
       - ubuntu-18.04
     templates: builder
+    update-cloud-image: true
 
 - project:
     name: packer-docker-jobs
@@ -35,6 +36,7 @@
       - ubuntu-18.04-arm64
       - ubuntu-18.04
     templates: docker
+    update-cloud-image: true
 
 - project:
     name: packer-memcached-jobs
@@ -52,6 +54,7 @@
     platforms:
       - ubuntu-18.04
     templates: memcached
+    update-cloud-image: true
 
 - project:
     name: packer-redis-jobs
@@ -68,6 +71,7 @@
     platforms:
       - centos-7
     templates: redis
+    update-cloud-image: true
 
 - project:
     name: packer-helm-jobs
@@ -84,3 +88,4 @@
     platforms:
       - ubuntu-18.04
     templates: helm
+    update-cloud-image: true
