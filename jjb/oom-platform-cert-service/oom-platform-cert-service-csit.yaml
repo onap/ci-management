@@ -11,5 +11,5 @@
       functionality:
           - "certservice":
                 trigger_jobs:
-                    - "{project-name}-{stream}-merge-java"
+                    - "oom-platform-cert-service-{stream}-merge-java"
       robot-options: ""
