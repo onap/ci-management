@@ -69,10 +69,12 @@
 
 - project:
       name: oom-platform-cert-service-clm
+      java-version: openjdk11
       jobs:
           - gerrit-maven-clm
       nexus-iq-namespace: 'onap-'
-      project: 'oom/platform/cert-service'
+      project: oom/platform/cert-service
       project-name: 'oom-platform-cert-service'
       branch: 'master'
+      build-node: ubuntu1804-docker-8c-8g
       mvn-settings: 'oom-platform-cert-service-settings'
