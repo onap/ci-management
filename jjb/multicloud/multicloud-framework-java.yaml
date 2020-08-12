@@ -6,6 +6,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
     mvn-settings: 'multicloud-framework-settings'
     subproject:
       - 'multivimbroker':
@@ -102,6 +103,7 @@
     project: 'multicloud/framework'
     project-name: 'multicloud-framework-artifactbroker'
     branch: 'master'
+    java-version: openjdk11
     mvn-params: '-f artifactbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
     mvn-goals: 'clean install'
@@ -115,5 +117,6 @@
     project: multicloud/framework
     project-name: 'multicloud-framework-artifactbroker'
     branch: 'master'
+    java-version: openjdk11
     mvn-params: '-f artifactbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
