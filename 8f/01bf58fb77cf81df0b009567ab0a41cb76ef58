@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: krishna moorthy <krishna.moorthy6@wipro.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Wed, 12 Aug 2020 22:36:11 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/111197
+Project: ci-management
+Branch: refs/heads/master
