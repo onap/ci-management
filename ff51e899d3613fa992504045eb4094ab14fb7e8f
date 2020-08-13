@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ccde0277_66bc1e00",
+        "filename": "jjb/dcaegen2/dcaegen2-services-son-handler-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2020-08-13T16:51:28Z",
+      "side": 1,
+      "message": "would recommend adding SON-handler developers as recipients",
+      "range": {
+        "startLine": 7,
+        "startChar": 17,
+        "endLine": 7,
+        "endChar": 32
+      },
+      "revId": "ff51e899d3613fa992504045eb4094ab14fb7e8f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
