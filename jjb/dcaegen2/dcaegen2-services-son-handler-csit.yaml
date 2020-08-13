@@ -1,0 +1,15 @@
+- project:
+    name: dcaegen2-services-son-handler-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-services-son-handler'
+    recipients: 'vv770d@att.com'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - '{project-name}-{stream}-merge-java'
+    robot-options: ''
