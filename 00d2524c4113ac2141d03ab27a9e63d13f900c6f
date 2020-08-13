@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e2ac9f3_6c3e88c2",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-08-13T14:07:58Z",
+      "side": 1,
+      "message": "Do you need to remove this other view?",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 9
+      },
+      "revId": "00d2524c4113ac2141d03ab27a9e63d13f900c6f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
