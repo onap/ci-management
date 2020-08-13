@@ -1,11 +1,5 @@
 ---
 - project:
-    name: sdc-master-project-view
-    project-name: sdc-master
-    views:
-      - project-view
-
-- project:
     name: sdc-sdc-docker-project-view
     project-name: sdc-sdc-docker
     views:
@@ -20,6 +14,12 @@
 - project:
     name: sdc-clm-project-view
     project-name: sdc-clm
+    views:
+      - project-view
+
+- project:
+    name: sdc-project-view
+    project-name: sdc
     views:
       - project-view
 
