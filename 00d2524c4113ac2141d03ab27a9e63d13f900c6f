@@ -22,6 +22,30 @@
       "revId": "00d2524c4113ac2141d03ab27a9e63d13f900c6f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6d438e68_8726a523",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2020-08-13T14:18:41Z",
+      "side": 1,
+      "message": "yes good point - it is probably confusing to keep it, let me fix that",
+      "parentUuid": "1e2ac9f3_6c3e88c2",
+      "range": {
+        "startLine": 2,
+        "startChar": 2,
+        "endLine": 2,
+        "endChar": 9
+      },
+      "revId": "00d2524c4113ac2141d03ab27a9e63d13f900c6f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
