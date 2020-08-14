@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f8aba81_10e27a0b",
+        "filename": "jjb/integration/xtesting/integration-xtesting.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-08-14T18:05:00Z",
+      "side": 1,
+      "message": "i am not sure is this works.. Can anyone give it a shot in the sandbox? I think this value might get overwritten if something else is specify in the Docker files of the repo. (I honestly don\u0027t have much experience configuring Dockerfiles but would there be a better place to set the tagging?)",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 129,
+        "endChar": 35
+      },
+      "revId": "28ab4838a4bd0a93da7ce6c3faf228984e803646",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
