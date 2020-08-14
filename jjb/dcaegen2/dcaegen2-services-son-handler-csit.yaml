@@ -4,7 +4,7 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'dcaegen2-services-son-handler'
-    recipients: 'vv770d@att.com'
+    recipients: 'vv770d@att.com reshmasree.chamarthi2@wipro.com niranjana.y60@wipro.com'
     stream:
       - 'master':
           branch: 'master'
