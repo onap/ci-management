@@ -6,6 +6,15 @@
       - project-view
 
 - project:
+    name: ci-management-info
+    project-name: ci-management
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: ci-management
+    branch: master
+
+- project:
     name: ci-management-jobs
     jobs:
       - '{project-name}-ci-jobs'
