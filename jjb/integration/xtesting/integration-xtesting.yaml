@@ -126,6 +126,7 @@
       - 'frankfurt':
             branch: 'frankfurt'
             files: ''
+            docker-tag: 'frankfurt'
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
