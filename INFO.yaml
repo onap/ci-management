@@ -51,5 +51,10 @@ committers:
       company: 'LF'
       id: 'agardner'
       timezone: 'America/New_York'
+    - name: 'Anil Belur'
+      email: 'abelur@linuxfoundation.org'
+      company: 'LF'
+      id: 'abelur'
+      timezone: 'Australia/Brisbane'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
