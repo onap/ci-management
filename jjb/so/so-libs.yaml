@@ -27,7 +27,6 @@
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
-    java-version: openjdk11
     archive-artifacts: ''
 
 - project:
