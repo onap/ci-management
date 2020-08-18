@@ -17,45 +17,24 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-#      - '{project-name}-{stream}-docker-version-java-daily':
-#          docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
-#          mvn-profile: 'docker'
-#          mvn-params: '-Dmaven.test.skip=true'
-#          build-node: ubuntu1804-docker-8c-8g
     project: 'vnfsdk/refrepo'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+                branch: 'master'
+                java-version: openjdk11
+        - 'frankfurt':
+                branch: 'frankfurt'
+                java-version: openjdk8
     mvn-settings: 'vnfsdk-refrepo-settings'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
 
-#- project:
-#    name: vnfsdk-refrepo-arm64
-#    project-name: 'vnfsdk-refrepo-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-aai-docker-java-daily':
-#          pom: 'vnfmarket-be/deployment/docker/docker-refrepo/pom.xml'
-#          mvn-goals: 'docker:build'
-#          docker-image-name: 'onap/vnfsdk/refrepo'
-#      - '{project-name}-{stream}-docker-version-java-daily':
-#          docker-pom: 'vnfmarket-be/deployment/docker/docker-postgres/pom.xml'
-#          mvn-profile: 'docker'
-#          mvn-params: '-Dmaven.test.skip=true'
-#    project: 'vnfsdk/refrepo'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'vnfsdk-refrepo-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#
 - project:
     name: vnfsdk-refrepo-sonar
     jobs:
       - gerrit-maven-sonar
+    java-version: openjdk11
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
@@ -81,6 +60,7 @@
 
 - project:
     name: vnfsdk-refrepo-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'

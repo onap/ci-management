@@ -13,8 +13,12 @@
         build-node: centos7-docker-8c-8g
     project: 'vnfsdk/validation'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+            branch: 'master'
+            java-version: openjdk11
+        - 'frankfurt':
+            branch: 'frankfurt'
+            java-version: openjdk8
     mvn-settings: 'vnfsdk-validation-settings'
     files: '**'
     archive-artifacts: ''
@@ -24,6 +28,7 @@
     name: vnfsdk-validation-sonar
     jobs:
       - gerrit-maven-sonar
+    java-version: openjdk11
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
@@ -49,6 +54,7 @@
 
 - project:
     name: vnfsdk-validation-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
