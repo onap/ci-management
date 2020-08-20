@@ -43,3 +43,22 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: ccsdk-oran-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: ubuntu1804-builder-4c-4g
+    project: 'ccsdk/oran'
+    project-name: 'ccsdk-oran'
+    branch: 'master'
+    mvn-settings: 'ccsdk-oran-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    maven-version: "mvn35"
