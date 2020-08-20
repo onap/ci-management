@@ -2,27 +2,27 @@
 - project:
     name: dcaegen2-platform-policy-handler
     project-name: 'dcaegen2-platform-policy-handler'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
     project: 'dcaegen2/platform/policy-handler'
+    python-version: python3.6
+    tox-dir: '.'
+    tox-envs: ''
     stream:
       - 'master':
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-platform-policy-handler-settings'
-    # due to a strange macro / variable translation problem this needs
-    # to be passed as a string block to properly get the properties
-    # correctly defined in the job
-    maven-deploy-properties: |
-      deployAtEnd=true
+    subproject:
+      - 'policy-handler':
+          pattern: 'policyhandler/**'
+          path: 'policyhandler'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-python'
+      - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-{subproject}-python-release-{stream}'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
 
 - project:
     name: dcaegen2-platform-policy-handler-sonar
