@@ -62,3 +62,4 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     maven-version: "mvn35"
+    java-version: openjdk11
