@@ -46,6 +46,30 @@
       "revId": "28ab4838a4bd0a93da7ce6c3faf228984e803646",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77d8cd85_b9788455",
+        "filename": "jjb/integration/xtesting/integration-xtesting.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-08-21T15:55:47Z",
+      "side": 1,
+      "message": "Hi Morgan,, I replied in IT-20480 with a better solution. Let me know what you think. \n\nThanks!",
+      "parentUuid": "b14864ee_cb49dcf3",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 129,
+        "endChar": 35
+      },
+      "revId": "28ab4838a4bd0a93da7ce6c3faf228984e803646",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
