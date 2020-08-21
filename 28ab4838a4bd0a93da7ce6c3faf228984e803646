@@ -22,6 +22,30 @@
       "revId": "28ab4838a4bd0a93da7ce6c3faf228984e803646",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b14864ee_cb49dcf3",
+        "filename": "jjb/integration/xtesting/integration-xtesting.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2020-08-21T14:17:12Z",
+      "side": 1,
+      "message": "I assume it shall be taken into account by the LF script in charge of building the dockers (gerrit-docker-verify/merge)\n\nif stream  \u003d master \u003d\u003e docker tag \u003d latest\nif stream \u003d branch_X \u003d\u003e docker tag \u003d branch_X\n\nThere is no reason when executing with stream branch_X to generate new docker with tag latest.\nstream has to be taken into account in gerrit-docker-verify and gerrit-docker-merge\n\nwould something like that better?\n\n      - gerrit-docker-merge:\n          project-name: \u0027integration-xtesting-security\u0027\n          docker-root: ./security\n          docker-name: \u0027onap/xtesting-security\u0027\n          docker-build-args: \u0027-f ./docker/Dockerfile\u0027\n          docker-tag: {stream}\n\n??",
+      "parentUuid": "9f8aba81_10e27a0b",
+      "range": {
+        "startLine": 129,
+        "startChar": 12,
+        "endLine": 129,
+        "endChar": 35
+      },
+      "revId": "28ab4838a4bd0a93da7ce6c3faf228984e803646",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
