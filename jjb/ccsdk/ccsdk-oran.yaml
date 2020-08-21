@@ -16,7 +16,7 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
-          maven-version: "mvn35"
+          maven-version: "mvn36"
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
@@ -28,7 +28,7 @@
     mvn-settings: 'ccsdk-oran-settings'
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn35"
+    maven-version: "mvn36"
     java-version: openjdk11
     docker-pom: 'pom.xml'
     mvn-profile: docker
@@ -61,4 +61,4 @@
     mvn-settings: 'ccsdk-oran-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    maven-version: "mvn35"
+    maven-version: "mvn36"

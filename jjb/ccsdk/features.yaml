@@ -27,7 +27,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn35"
+    maven-version: "mvn36"
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
@@ -50,7 +50,7 @@
     mvn-settings: 'ccsdk-features-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    maven-version: "mvn35"
+    maven-version: "mvn36"
 
 - project:
     name: ccsdk-features-clm
@@ -66,7 +66,7 @@
           branch: 'frankfurt'
     mvn-settings: 'ccsdk-features-settings'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    maven-version: "mvn35"
+    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
