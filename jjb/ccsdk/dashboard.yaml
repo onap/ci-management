@@ -32,12 +32,14 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
+    java-version: openjdk11
     build-node: ubuntu1804-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
 - project:
     name: ccsdk-dashboard-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -61,6 +63,7 @@
     nexus-iq-namespace: 'onap-'
     project: 'ccsdk/dashboard'
     project-name: 'ccsdk-dashboard'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: 'master'
@@ -86,3 +89,4 @@
     mvn-clean-install: true
     project: ccsdk/dashboard
     branch: master
+    java-version: openjdk11
