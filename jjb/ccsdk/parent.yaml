@@ -29,7 +29,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn35"
+    maven-version: "mvn36"
 
 - project:
     name: ccsdk-parent-clm
@@ -44,7 +44,7 @@
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'ccsdk-parent-settings'
-    maven-version: "mvn35"
+    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
 
 
