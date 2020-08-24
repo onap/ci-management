@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5884c7ea_5b438025",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5051
+      },
+      "writtenOn": "2020-08-24T10:14:56Z",
+      "side": 1,
+      "message": "same as other comment",
+      "revId": "1676d752d7a0cef1f1332b41d0c3aacf6581ba81",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e817a3b7_dd699719",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5051
+      },
+      "writtenOn": "2020-08-24T10:14:56Z",
+      "side": 1,
+      "message": "perhaps change the version here as well.",
+      "revId": "1676d752d7a0cef1f1332b41d0c3aacf6581ba81",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
