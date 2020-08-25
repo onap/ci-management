@@ -89,26 +89,6 @@
           docker-name: 'onap/xtesting-smoke-usecases-robot'
           docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-verify:
-          project-name: 'integration-xtesting-benchmarking'
-          docker-root: ./benchmarking
-          docker-name: 'onap/xtesting-benchmarking'
-          docker-build-args: '-f ./docker/Dockerfile'
-      - gerrit-docker-merge:
-          project-name: 'integration-xtesting-benchmarking'
-          docker-root: ./benchmarking
-          docker-name: 'onap/xtesting-benchmarking'
-          docker-build-args: '-f ./docker/Dockerfile'
-      - gerrit-docker-verify:
-          project-name: 'integration-xtesting-candidate-usecases'
-          docker-root: ./candidate-usecases
-          docker-name: 'onap/xtesting-candidate-usecases'
-          docker-build-args: '-f ./docker/Dockerfile'
-      - gerrit-docker-merge:
-          project-name: 'integration-xtesting-candidate-usecases'
-          docker-root: ./candidate-usecases
-          docker-name: 'onap/xtesting-candidate-usecases'
-          docker-build-args: '-f ./docker/Dockerfile'
-      - gerrit-docker-verify:
           project-name: 'integration-xtesting-security'
           docker-root: ./security
           docker-name: 'onap/xtesting-security'
@@ -130,3 +110,4 @@
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
     cron: '@daily'
+    container-tag-method: stream
