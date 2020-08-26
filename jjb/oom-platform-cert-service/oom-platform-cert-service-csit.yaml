@@ -12,4 +12,7 @@
           - "certservice":
                 trigger_jobs:
                     - "oom-platform-cert-service-{stream}-merge-java"
+          - "truststoremerger":
+                trigger_jobs:
+                    - "oom-platform-cert-service-{stream}-merge-java"
       robot-options: ""
