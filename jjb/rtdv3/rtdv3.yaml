@@ -24,7 +24,8 @@
           comment-contains-value: remerge$
     jobs:
       - rtdv3-global-verify
-      - rtdv3-global-merge
+      - rtdv3-global-merge:
+          build-timeout: 30
     stream:
       - master:
           branch: '*'
