@@ -1,0 +1,22 @@
+---
+- project:
+    name: dcaegen2-platform-mod2-assembly
+    project-name: dcaegen2-platform-mod2
+    # git repo
+    project: dcaegen2/platform
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java':
+          mvn-goals: 'clean install'
+    subproject:
+      - assembly:
+          pom: 'mod/assembly/pom.xml'
+          pattern: 'mod/assembly/**'
+    stream:
+      - 'master':
+          branch: 'master'
+          java-version: openjdk11
+    mvn-settings: dcaegen2-platform-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
