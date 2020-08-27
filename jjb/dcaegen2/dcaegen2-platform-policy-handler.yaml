@@ -3,9 +3,9 @@
     name: dcaegen2-platform-policy-handler
     project-name: 'dcaegen2-platform-policy-handler'
     project: 'dcaegen2/platform/policy-handler'
-    python-version: python3.6
+    python-version: python3
     tox-dir: '.'
-    tox-envs: ''
+    tox-envs: 'py3'
     stream:
       - 'master':
           branch: 'master'
@@ -21,6 +21,7 @@
       - '{project-name}-{stream}-{subproject}-verify-python'
       - '{project-name}-{subproject}-python-staging-{stream}'
       - '{project-name}-{subproject}-python-release-{stream}'
+      - '{project-name}-dcaegen2-docker-python-jobs'
     files: '**'
     archive-artifacts: ''
 
