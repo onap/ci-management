@@ -1,0 +1,11 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Patrik Buhr <patrik.buhr@est.tech>
+Code-Review+1: Chengkai Yan <martin.c.yan@est.tech>
+Code-Review+1: John  Keeney <John.Keeney@est.tech>
+Code-Review+1: Lathishbabu Ganesan <lathishbabu.ganesan@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Thu, 27 Aug 2020 14:11:56 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/111778
+Project: ci-management
+Branch: refs/heads/master
