@@ -10,8 +10,8 @@
           mvn-goals: 'clean install'
     subproject:
       - assembly:
-          pom: 'mod/assembly/pom.xml'
-          pattern: 'mod/assembly/**'
+          pom: 'mod2/assembly/pom.xml'
+          pattern: 'mod2/assembly/**'
     stream:
       - 'master':
           branch: 'master'
