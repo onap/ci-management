@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Eric Debeau <eric.debeau@orange.com>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Thu, 27 Aug 2020 16:53:29 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/111775
+Project: ci-management
+Branch: refs/heads/master
