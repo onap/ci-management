@@ -16,7 +16,6 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
-          maven-version: "mvn36"
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
@@ -38,7 +37,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
+    mvn-version: "mvn36"
     java-version: openjdk11
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
@@ -61,7 +60,7 @@
     mvn-settings: 'ccsdk-cds-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    maven-version: "mvn36"
+    mvn-version: "mvn36"
     java-version: openjdk11
 
 - project:
@@ -77,7 +76,7 @@
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'ccsdk-cds-settings'
-    maven-version: "mvn36"
+    mvn-version: "mvn36"
     java-version: openjdk11
     build-node: ubuntu1804-builder-4c-4g
 
@@ -101,5 +100,5 @@
     mvn-clean-install: true
     project: ccsdk/cds
     branch: master
-    maven-version: "mvn36"
+    mvn-version: "mvn36"
     java-version: openjdk11
