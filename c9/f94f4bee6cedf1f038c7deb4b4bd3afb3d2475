@@ -1,0 +1,10 @@
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+1: KAPIL SINGAL <ks220y@att.com>
+Code-Review+1: Oleg Mitsura <omitsura@gmail.com>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Fri, 28 Aug 2020 16:37:52 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/111846
+Project: ci-management
+Branch: refs/heads/master
