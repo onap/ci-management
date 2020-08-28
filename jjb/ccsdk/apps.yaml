@@ -21,7 +21,6 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
-          maven-version: "mvn36"
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
@@ -32,6 +31,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -40,7 +40,6 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -59,10 +58,10 @@
     project: 'ccsdk/apps'
     project-name: 'ccsdk-apps'
     branch: 'master'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    maven-version: "mvn36"
 
 - project:
     name: ccsdk-apps-clm
@@ -76,8 +75,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
 
 #- project:
@@ -111,6 +110,7 @@
     project-name: ccsdk-apps
     jobs:
       - gerrit-whitesource-scan
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

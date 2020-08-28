@@ -17,6 +17,7 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -38,8 +39,8 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
-
 
 - project:
     name: ccsdk-utils-info
@@ -55,6 +56,7 @@
     project-name: ccsdk-utils
     jobs:
       - gerrit-whitesource-scan
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

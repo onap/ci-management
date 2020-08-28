@@ -22,6 +22,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-core-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -30,7 +31,6 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -49,10 +49,10 @@
     project: 'ccsdk/sli/core'
     project-name: 'ccsdk-sli-core'
     branch: 'master'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-core-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    maven-version: "mvn36"
 
 - project:
     name: ccsdk-sli-core-clm
@@ -66,10 +66,9 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-core-settings'
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
-
 
 - project:
     name: ccsdk-sli-core-info
@@ -85,6 +84,7 @@
     project-name: ccsdk-sli-core
     jobs:
       - gerrit-whitesource-scan
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-core-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

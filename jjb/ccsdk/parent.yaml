@@ -21,6 +21,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -29,7 +30,6 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
 
 - project:
     name: ccsdk-parent-clm
@@ -43,10 +43,9 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
-
 
 - project:
     name: ccsdk-parent-info
@@ -62,6 +61,7 @@
     project-name: ccsdk-parent
     jobs:
       - gerrit-whitesource-scan
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

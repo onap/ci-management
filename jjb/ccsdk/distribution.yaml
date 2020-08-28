@@ -16,7 +16,6 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
-          maven-version: "mvn36"
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
@@ -29,10 +28,10 @@
           branch: 'elalto'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1804-docker-8c-8g
@@ -69,6 +68,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: ubuntu1804-docker-8c-8g
 
@@ -89,6 +89,7 @@
     jobs:
       - gerrit-whitesource-scan:
           java-opts: '-Xmx2048m'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

@@ -19,6 +19,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -27,7 +28,6 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
@@ -47,10 +47,10 @@
     project: 'ccsdk/features'
     project-name: 'ccsdk-features'
     branch: 'master'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    maven-version: "mvn36"
 
 - project:
     name: ccsdk-features-clm
@@ -64,9 +64,9 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    maven-version: "mvn36"
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -84,6 +84,7 @@
     project-name: ccsdk-features
     jobs:
       - gerrit-whitesource-scan
+    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true
