@@ -17,6 +17,7 @@
     stream:
       - 'master':
           branch: 'master'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -39,6 +40,7 @@
     stream:
       - 'master':
           branch: 'master'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
 
@@ -56,6 +58,7 @@
     project-name: ccsdk-utils
     jobs:
       - gerrit-whitesource-scan
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-utils-settings'
     wss-product-name: ccsdk

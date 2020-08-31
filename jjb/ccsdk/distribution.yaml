@@ -28,6 +28,7 @@
           branch: 'elalto'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
@@ -68,6 +69,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: ubuntu1804-docker-8c-8g
@@ -89,6 +91,7 @@
     jobs:
       - gerrit-whitesource-scan:
           java-opts: '-Xmx2048m'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk

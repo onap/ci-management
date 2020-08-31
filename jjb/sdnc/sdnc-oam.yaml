@@ -30,6 +30,8 @@
           branch: 'elalto'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
+    mvn-version: "mvn36"
     mvn-settings: 'sdnc-oam-settings'
     maven-version: "mvn35"
     files: '**'

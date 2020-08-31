@@ -31,6 +31,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -58,6 +59,7 @@
     project: 'ccsdk/apps'
     project-name: 'ccsdk-apps'
     branch: 'master'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     mvn-goals: 'clean install'
@@ -75,6 +77,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     build-node: ubuntu1804-builder-4c-4g
@@ -110,6 +113,7 @@
     project-name: ccsdk-apps
     jobs:
       - gerrit-whitesource-scan
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
     wss-product-name: ccsdk

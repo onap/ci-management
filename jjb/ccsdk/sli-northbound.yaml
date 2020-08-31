@@ -22,6 +22,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-northbound-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -49,6 +50,7 @@
     project: 'ccsdk/sli/northbound'
     project-name: 'ccsdk-sli-northbound'
     branch: 'master'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-northbound-settings'
     mvn-goals: 'clean install'
@@ -66,6 +68,7 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-northbound-settings'
     build-node: ubuntu1804-builder-4c-4g
@@ -84,6 +87,7 @@
     project-name: ccsdk-sli-northbound
     jobs:
       - gerrit-whitesource-scan
+    java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-sli-northbound-settings'
     wss-product-name: ccsdk
