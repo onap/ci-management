@@ -1,0 +1,8 @@
+---
+- project:
+    name: testsuite-cds-info
+    project: testsuite/cds
+    project-name: testsuite-cds
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
