@@ -10,6 +10,10 @@
       - 'master':
           branch: 'master'
     subproject:
+      - 'aai-simulator':
+          pom: 'test/mocks/aai-simulator/pom.xml'
+          pattern: 'test/mocks/aai-simulator/**'
+          mvn-goals: 'mvn clean install -Dcheckstyle.skip'
       - 'sniroemulator':
           pom: 'test/mocks/sniroemulator/pom.xml'
           pattern: 'test/mocks/sniroemulator/**'
@@ -53,27 +57,3 @@
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge
-
-- project:
-    name: integration-docker-aai-simulator
-    project-name: 'integration'
-    jobs:
-      - integration-docker-merge
-      - integration-docker-verify
-    project: 'integration'
-    stream:
-      - 'master':
-          branch: 'master'
-    subproject:
-      - 'aai-simulator':
-          pom: 'test/mocks/aai-simulator/pom.xml'
-          pattern: 'test/mocks/aai-simulator/**'
-          mvn-goals: 'mvn clean install -Dcheckstyle.skip'
-          post-docker-verify-script: |
-              #!/bin/bash
-              set -ex # Fail build if any setup step fails
-              cd $WORKSPACE/test/mocks/aai-simulator
-              tox
-    mvn-settings: 'integration-settings'
-    files: '**'
-    archive-artifacts: ''
