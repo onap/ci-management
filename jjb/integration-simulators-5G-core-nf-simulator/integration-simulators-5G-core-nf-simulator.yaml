@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-5G-core-nf-simulator-project-view
+    project-name: integration-simulators-5G-core-nf-simulator
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-5G-core-nf-simulator-info
+    project: integration/simulators/5G-core-nf-simulator
+    project-name: integration-simulators-5G-core-nf-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
