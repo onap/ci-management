@@ -28,9 +28,10 @@
     project-name: 'sdc'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P docker -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          build-node: 'ubuntu1804-docker-8c-16g'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-v1-8c-8g'
+          build-node: 'ubuntu1804-docker-8c-16g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
@@ -39,7 +40,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
@@ -55,8 +56,6 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
@@ -92,39 +91,25 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-16g
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+    mvn-params: '-P docker -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
 - project:
-    name: sdc-clm-catalog
+    name: sdc-clm
     jobs:
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P catalog -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P fast-build -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     nexus-iq-namespace: 'onap-'
     project: sdc
-    project-name: 'sdc-catalog'
-    build-node: ubuntu1804-docker-8c-8g
-    branch: 'master'
-    mvn-settings: 'sdc-settings'
-
-- project:
-    name: sdc-clm-onboarding
-    jobs:
-      - gerrit-maven-clm:
-          build-timeout: 120
-          submodule-timeout: 30
-          mvn-params: '-P onboarding -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
-    nexus-iq-namespace: 'onap-'
-    project: sdc
-    project-name: 'sdc-onboarding'
+    project-name: 'sdc'
     build-node: ubuntu1804-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
