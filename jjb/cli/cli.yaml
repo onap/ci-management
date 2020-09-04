@@ -31,8 +31,12 @@
           build-node: ubuntu1804-docker-8c-8g
     project: 'cli'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+                branch: 'master'
+                java-version: openjdk11
+        - 'frankfurt':
+                branch: 'frankfurt'
+                java-version: openjdk8
     mvn-settings: 'cli-settings'
     files: '**'
     archive-artifacts: ''
