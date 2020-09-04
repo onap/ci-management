@@ -11,6 +11,7 @@
           sign-artifacts: true
           cron: ''
       - '{project-name}-maven-javadoc-jobs':
+          mvn-dir: ""
           mvn-site-id: ecomp-site
           javadoc-path: org.onap.$PROJECT/$STREAM
       - '{project-name}-gerrit-release-jobs':
