@@ -1,0 +1,12 @@
+---
+- project:
+    name: oran
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'oran'
+    stream: 'master'
+    functionality:
+      - 'polmansuite':
+    robot-options: ''
+    branch: 'master'
