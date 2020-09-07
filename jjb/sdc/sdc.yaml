@@ -96,7 +96,7 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-P docker -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
