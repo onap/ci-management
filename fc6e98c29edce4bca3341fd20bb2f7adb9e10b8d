@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "960837b7_ab22a800",
+        "filename": "jjb/integration/integration-terraform.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-09-07T18:30:18Z",
+      "side": 1,
+      "message": "Does this exist, is this the ID of the job?? Normally we call the jobs using variables and not translating them.\nFor example {project-name}-{stream}-verify",
+      "range": {
+        "startLine": 15,
+        "startChar": 10,
+        "endLine": 15,
+        "endChar": 37
+      },
+      "revId": "fc6e98c29edce4bca3341fd20bb2f7adb9e10b8d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
