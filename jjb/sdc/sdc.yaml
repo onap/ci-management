@@ -57,6 +57,7 @@
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'sdc-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
@@ -96,7 +97,8 @@
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-P docker -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+    java-version: openjdk11
+    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
@@ -106,13 +108,14 @@
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P fast-build -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc'
     build-node: ubuntu1804-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
+    java-version: openjdk11
 
 - project:
     name: sdc-info
@@ -137,3 +140,4 @@
     mvn-clean-install: true
     project: 'sdc'
     branch: master
+    java-version: openjdk11
