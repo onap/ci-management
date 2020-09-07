@@ -1,0 +1,41 @@
+---
+- project:
+    name: integration-5G-core-nf-simulator-info
+    project-name: integration-5G-core-nf-simulator
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: integration/simulators/5G-core-nf-simulator
+    branch: master
+
+- project:
+    name: integration-5G-core-nf-simulator-linters
+    project: integration/simulators/5G-core-nf-simulator
+    project-name: integration-5G-core-nf-simulator
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'rst':
+          tox-dir: '.'
+          tox-envs: 'rst'
+          pattern: '**/*.rst'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
+    stream:
+      - 'master':
+          branch: 'master'
