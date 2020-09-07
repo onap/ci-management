@@ -29,9 +29,9 @@
     jobs:
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-P docker -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
-          build-node: 'ubuntu1804-docker-8c-16g'
+          build-node: 'ubuntu1804-docker-8c-16g-largevol'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-8c-16g'
+          build-node: 'ubuntu1804-docker-8c-16g-largevol'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
@@ -57,6 +57,7 @@
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'sdc-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
@@ -91,12 +92,13 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-16g
+    build-node: ubuntu1804-docker-8c-16g-largevol
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
     mvn-settings: 'sdc-settings'
-    mvn-params: '-P docker -Dsonar.branch={branch} -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+    java-version: openjdk11
+    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
@@ -113,6 +115,7 @@
     build-node: ubuntu1804-docker-8c-8g
     branch: 'master'
     mvn-settings: 'sdc-settings'
+    java-version: openjdk11
 
 - project:
     name: sdc-info
@@ -137,3 +140,4 @@
     mvn-clean-install: true
     project: 'sdc'
     branch: master
+    java-version: openjdk11
