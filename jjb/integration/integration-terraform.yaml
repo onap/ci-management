@@ -6,3 +6,18 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: integration-terraform-validate
+    project: integration/terraform
+    project-name: integration-terraform
+    jobs:
+        - integration-terraform-verify
+    subproject:
+        - 'openlab':
+              tox-dir: 'openlab'
+              tox-envs: 'terraform'
+              pattern: '**/*'
+    stream:
+        - 'master':
+              branch: 'master'
