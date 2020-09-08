@@ -22,6 +22,30 @@
       "revId": "fc6e98c29edce4bca3341fd20bb2f7adb9e10b8d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64844626_a92dfa42",
+        "filename": "jjb/integration/integration-terraform.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-08T06:26:10Z",
+      "side": 1,
+      "message": "This is a standard shorthand template id (not job id, job id is given in \"name\" key above), just like \"gerrit-info-yaml-verify\" above from global-jjb is. Looks much nicer than canonical name and is frequently used, please check \n\n$ ci-management/global-jjb$ git grep \"id:\"",
+      "parentUuid": "960837b7_ab22a800",
+      "range": {
+        "startLine": 15,
+        "startChar": 10,
+        "endLine": 15,
+        "endChar": 37
+      },
+      "revId": "fc6e98c29edce4bca3341fd20bb2f7adb9e10b8d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
