@@ -20,10 +20,12 @@
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'oran'
+    project-name: 'ccsdk/oran'
+    recipients: 'bjorn.magnusson@est.tech maxime.bonneau@est.tech'
     stream: 'master'
     functionality:
       - 'polmansuite':
-          trigger_jobs:
+        trigger_jobs:
+          - '{project-name}-{stream}-release-java-daily-checkstyle'
     robot-options: ''
     branch: 'master'
