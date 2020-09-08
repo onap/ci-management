@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8082e85b_447dd98c",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu1804-docker-8c-16g-largevol.cfg",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-09-08T18:58:05Z",
+      "side": 1,
+      "message": "Instead of making this new node, please increase the volume size from 20 to 40 in the 16G existing one:\nhttps://github.com/onap/ci-management/blob/master/jenkins-config/clouds/openstack/cattle/ubuntu1804-docker-8c-16g.cfg",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 0
+      },
+      "revId": "127349ddcf50834d2464e7cdb2978ae9a309aa87",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
