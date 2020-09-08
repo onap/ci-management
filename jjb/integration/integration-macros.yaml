@@ -31,6 +31,14 @@
           default: '{html-files}'
           description: 'File name to be used by HTML publisher plugin to produce the report'
 
+- parameter:
+    name: integration-terraform-version
+    parameters:
+      - string:
+          name: TERRAFORM_VERSION
+          default: '{terraform-version}'
+          description: 'Terraform version to install on minion'
+
 - builder:
     name: integration-install-robotframework
     builders:
@@ -67,6 +75,18 @@
           vagrant plugin install vagrant-sshfs
           vagrant plugin install vagrant-reload
           mkdir -p ~/.ssh
+
+- builder:
+   name: integration-install-terraform
+   builders:
+     - shell: |
+         #!/bin/bash
+         set -ex
+         cd /tmp
+         wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+         unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+         sudo mv terraform /usr/local/bin/
+         terraform version
 
 - builder:
     name: integration-docker-compose-logs

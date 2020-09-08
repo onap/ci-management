@@ -104,3 +104,29 @@
     name: '{project-name}-{stream}-{subproject}-tox-verify'
     id: integration-tox-verify
     description: 'Job intended for running tox'
+
+- job-template:
+    <<: *tox_verify_boilerplate
+    name: '{project-name}-{stream}-{subproject}-terraform-verify'
+    terraform-version: 0.13.2
+    python-version: python3
+    id: integration-terraform-verify
+    description: 'Job intended for validating terraform modules'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          stream: '{stream}'
+          branch: '{branch}'
+      - lf-infra-tox-parameters:
+          tox-dir: '{tox-dir}'
+          tox-envs: '{tox-envs}'
+      - integration-terraform-version:
+          terraform-version: '{terraform-version}'
+
+    builders:
+      - integration-install-terraform
+      - lf-infra-tox-install:
+          python-version: '{python-version}'
+      - lf-infra-tox-run:
+          parallel: 'false'
