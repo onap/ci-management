@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df8bb3ac_2a9a090d",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-09-08T20:46:37Z",
+      "side": 1,
+      "message": "I think is an indentation issue again. \nline 28 seems like it was removed 2 space to the left.. \nCan we align it like it was? just space it 2 more spaces",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 77
+      },
+      "revId": "84c302bd1c101b118a3ae6edaf780697a3eedca7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
