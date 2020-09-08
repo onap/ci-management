@@ -9,10 +9,6 @@
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           cron: ''
-      - '{project-name}-maven-javadoc-jobs':
-          mvn-site-id: ecomp-site
-          mvn-dir: ""
-          javadoc-path: org.onap.$PROJECT/$STREAM
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 
