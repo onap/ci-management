@@ -29,8 +29,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
@@ -75,8 +75,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-apps-settings'
