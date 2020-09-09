@@ -22,6 +22,30 @@
       "revId": "57d7db8561bece6ab8dc9d73b763c5e98e5b2e64",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78b2be9b_3c50a03b",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T08:02:21Z",
+      "side": 1,
+      "message": "...or maybe it would make more sense to change the plan structure under https://gerrit.onap.org/r/c/integration/csit/+/112235 - I\u0027m not sure how well jjb supports plan directory structures this deep?",
+      "parentUuid": "14b83863_064863c6",
+      "range": {
+        "startLine": 23,
+        "startChar": 18,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "57d7db8561bece6ab8dc9d73b763c5e98e5b2e64",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
