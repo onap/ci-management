@@ -46,6 +46,30 @@
       "revId": "041a204fdb3c7ad76f8e642becc2c8e5f3e09630",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c8a7074_c0f12fd6",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4011
+      },
+      "writtenOn": "2020-09-09T15:36:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "252deb3f_9519a49b",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 54
+      },
+      "revId": "041a204fdb3c7ad76f8e642becc2c8e5f3e09630",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
