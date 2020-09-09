@@ -18,13 +18,13 @@
 - project:
     name: ccsdk-oran-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'ccsdk/oran'
+      - '{project-name}-oran-{stream}-verify-csit-{functionality}'
+      - '{project-name}-oran-{stream}-csit-{functionality}'
+    project-name: 'ccsdk'
     recipients: 'bjorn.magnusson@est.tech maxime.bonneau@est.tech'
     stream: 'master'
     functionality:
-      - 'polmansuite':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+      - 'oran-polmansuite':
+          trigger_jobs: '{project-name}-oran-maven-docker-stage-master'
     robot-options: ''
     branch: 'master'
