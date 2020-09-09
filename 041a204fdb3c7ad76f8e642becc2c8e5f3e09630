@@ -22,6 +22,30 @@
       "revId": "041a204fdb3c7ad76f8e642becc2c8e5f3e09630",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "611b26fa_d18a0fb6",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T15:33:43Z",
+      "side": 1,
+      "message": "Right, that was bad advice as jjb reveals another non-obvious constraint: \n\nhttps://jenkins.onap.org/job/ci-management-jjb-verify/4881/console\n\njenkins_jobs.errors.JenkinsJobsException: Failed to find suitable template named \u0027{project-name}-oran-{stream}-verify-csit-{functionality}\u0027\n\nThis narrows your choices somewhat. Either you add oran-polmansuite under the original ccsdk project as another functionality next to healthcheck (meaning that both you and Dan Timoney have to start receiving notifications from all of these) or you follow my original suggestion to name this \u0027ccsdk-oran\u0027 and adjust the csit/plans accordingly",
+      "parentUuid": "252deb3f_9519a49b",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 54
+      },
+      "revId": "041a204fdb3c7ad76f8e642becc2c8e5f3e09630",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
