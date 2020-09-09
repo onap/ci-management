@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "252deb3f_9519a49b",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T15:03:55Z",
+      "side": 1,
+      "message": "These will overwrite the jobs defined above for healthcheck functionality if you insist to keep the project-name as \"ccsdk\u0027. If you\u0027re doing it like this, these should be\n      - \u0027{project-name}-oran-{stream}-verify-csit-{functionality}\u0027\n      - \u0027{project-name}-oran-{stream}-csit-{functionality}\u0027\nLittle things like these were what I meant when I said there might be some jjb synergies gained by having the project-name (and hence the corresponding csit/plans subdirectory) as \u0027ccsdk-oran\u0027 instead of \u0027ccsdk\u0027",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 54
+      },
+      "revId": "041a204fdb3c7ad76f8e642becc2c8e5f3e09630",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
