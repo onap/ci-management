@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5990c6c_9c6c3f93",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T11:36:38Z",
+      "side": 1,
+      "message": "This translates into ccsdk-master-release-java-daily-checkstyle, and there is no such job... so what builds do you *really* want to trigger this CSIT? I noticed that this same mistake is done in the original ccsdk-csit.yaml and numerous other projects as well (I wonder where this copy\u0026paste error originates from? I can\u0027t find any \"*-daily-checkstyle\" jobs anywhere from Jenkins?",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 78
+      },
+      "revId": "d4fe9c4753d2f5ba7665204c4925587d722e1399",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
