@@ -46,6 +46,30 @@
       "revId": "57d7db8561bece6ab8dc9d73b763c5e98e5b2e64",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab4d81f5_4c58d5ff",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T09:17:09Z",
+      "side": 1,
+      "message": "...ok it was fixed in https://gerrit.onap.org/r/c/ci-management/+/112281 - let\u0027s see how that works (for some reason I can\u0027t see this in the list of merged ci-management commits though? Is it because the merge verification failed? The change is nevertheless already in master)",
+      "parentUuid": "78b2be9b_3c50a03b",
+      "range": {
+        "startLine": 23,
+        "startChar": 18,
+        "endLine": 23,
+        "endChar": 24
+      },
+      "revId": "57d7db8561bece6ab8dc9d73b763c5e98e5b2e64",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
