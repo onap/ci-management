@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5913dcab_53a37426",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-09T16:05:16Z",
+      "side": 1,
+      "message": "Now you can reduce this to {project-name}-maven-docker-stage-master :D",
+      "range": {
+        "startLine": 28,
+        "startChar": 25,
+        "endLine": 28,
+        "endChar": 44
+      },
+      "revId": "ac47f3fac0daafa265891d471829a6b2d8b984be",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
