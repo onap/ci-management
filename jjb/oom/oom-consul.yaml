@@ -1,0 +1,14 @@
+---
+- project:
+    name: oom-consul-project-view
+    project-name: oom-consul
+    views:
+      - project-view
+
+- project:
+    name: oom-consul-info
+    project: oom/consul
+    project-name: oom-consul
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
