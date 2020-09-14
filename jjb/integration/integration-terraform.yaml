@@ -17,7 +17,7 @@
         - 'openlab':
               tox-dir: 'openlab'
               tox-envs: 'terraform'
-              pattern: '**/*'
+              pattern: 'openlab/**'
     stream:
         - 'master':
               branch: 'master'
