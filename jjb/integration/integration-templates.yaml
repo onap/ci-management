@@ -109,6 +109,7 @@
     <<: *tox_verify_boilerplate
     name: '{project-name}-{stream}-{subproject}-terraform-verify'
     terraform-version: 0.13.2
+    terragrunt-version: 0.24.1
     python-version: python3
     id: integration-terraform-verify
     description: 'Job intended for validating terraform modules'
@@ -123,9 +124,12 @@
           tox-envs: '{tox-envs}'
       - integration-terraform-version:
           terraform-version: '{terraform-version}'
+      - integration-terragrunt-version:
+          terragrunt-version: '{terragrunt-version}'
 
     builders:
       - integration-install-terraform
+      - integration-install-terragrunt
       - lf-infra-tox-install:
           python-version: '{python-version}'
       - lf-infra-tox-run:
