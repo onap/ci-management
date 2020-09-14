@@ -23,8 +23,10 @@
       # build docker image
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-      - gerrit-release-verify
-      - gerrit-release-merge
+      - gerrit-release-verify:
+          build-node: centos7-docker-8c-8g
+      - gerrit-release-merge:
+          build-node: centos7-docker-8c-8g
     stream:
       - master:
           branch: master
