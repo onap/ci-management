@@ -18,6 +18,10 @@
               tox-dir: 'openlab'
               tox-envs: 'terraform'
               pattern: 'openlab/**'
+        - 'terragrunt':
+              tox-dir: 'terragrunt'
+              tox-envs: 'terragrunt'
+              pattern: 'terragrunt/**'
     stream:
         - 'master':
               branch: 'master'
