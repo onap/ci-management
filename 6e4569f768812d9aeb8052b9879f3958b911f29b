@@ -16,6 +16,24 @@
       "revId": "6e4569f768812d9aeb8052b9879f3958b911f29b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0f2b039_96942a47",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-09-15T14:02:23Z",
+      "side": 0,
+      "message": "How is that global template applied and where are those jobs, if anyone actually uses that definition? https://jenkins.onap.org/view/all-jobs/ doesn\u0027t have any *-daily-checkstyle jobs, nor are there any such jobs visible under, say, https://jenkins.onap.org/view/ccsdk/ for ccsdk either.",
+      "parentUuid": "1bc9c7ac_33d54407",
+      "revId": "6e4569f768812d9aeb8052b9879f3958b911f29b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
