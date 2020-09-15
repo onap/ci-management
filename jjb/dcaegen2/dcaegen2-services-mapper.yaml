@@ -12,7 +12,7 @@
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          mvn-goals: 'clean package docker:build -DpushImage'
+          mvn-goals: 'clean package docker:build -DpushImageTag'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
