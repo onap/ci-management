@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1bc9c7ac_33d54407",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-15T13:13:18Z",
+      "side": 0,
+      "message": "Why do you imply that this job doesn\u0027t exists when it\u0027s defined in jjb/global-templates-java.yaml? According to it\u0027s synopsis what it does is \"# Job template for Java daily release jobs running checkstyle at the end\"",
+      "revId": "6e4569f768812d9aeb8052b9879f3958b911f29b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
