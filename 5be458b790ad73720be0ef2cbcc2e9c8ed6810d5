@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cbd8dd46_e3984419",
+        "filename": "jjb/dcaegen2/dcaegen2-services-slice-analysis-ms.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-09-16T16:31:11Z",
+      "side": 1,
+      "message": "This can go in the mvn-params. \n\nIs there a reason why we are making it part of the goals?",
+      "range": {
+        "startLine": 40,
+        "startChar": 64,
+        "endLine": 40,
+        "endChar": 100
+      },
+      "revId": "5be458b790ad73720be0ef2cbcc2e9c8ed6810d5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
