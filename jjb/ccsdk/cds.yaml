@@ -1,19 +1,19 @@
+
 ---
 - project:
     name: ccsdk-cds
     project-name: 'ccsdk-cds'
     jobs:
       - gerrit-maven-verify:
-          mvn-params: '-Ddocker.skip.push -P docker'
+          mvn-opts: '-Ddocker.skip.push=true'
       - gerrit-maven-merge:
           cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
-          maven-versions-plugin: true
+        mvn-opts: '-Ddocker.skip=true'
           cron: ''
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
@@ -21,7 +21,6 @@
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'ccsdk/cds'
     stream:
       - 'master':
@@ -42,10 +41,11 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1804-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
-
 - project:
     name: ccsdk-cds-sonar
     jobs:
@@ -65,7 +65,6 @@
     mvn-settings: 'ccsdk-cds-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
 - project:
     name: ccsdk-cds-clm
     jobs:
@@ -82,8 +81,6 @@
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-cds-settings'
     build-node: ubuntu1804-builder-4c-4g
-
-
 - project:
     name: ccsdk-cds-info
     project-name: ccsdk-cds
@@ -92,7 +89,6 @@
     build-node: centos7-builder-2c-1g
     project: ccsdk/cds
     branch: master
-
 - project:
     name: ccsdk-cds-whitesource
     project-name: ccsdk-cds
