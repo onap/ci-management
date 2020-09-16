@@ -7,8 +7,9 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+          java-version: openjdk11
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
