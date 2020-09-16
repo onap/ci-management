@@ -10,7 +10,7 @@
     subproject:
       - 'azure':
           pom: 'azure/pom.xml'
-          pattern: 'azure/**'
+          pattern: 'azure/azure/**'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
