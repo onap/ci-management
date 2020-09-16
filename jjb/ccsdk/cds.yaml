@@ -4,16 +4,15 @@
     project-name: 'ccsdk-cds'
     jobs:
       - gerrit-maven-verify:
-          mvn-params: '-Ddocker.skip.push -P docker'
+          mvn-opts: '-Ddocker.skip.push=true'
       - gerrit-maven-merge:
           cron: '@daily'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
-          maven-versions-plugin: true
+          mvn-opts: '-Ddocker.skip=true'
           cron: ''
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
@@ -42,7 +41,9 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1804-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
@@ -82,7 +83,6 @@
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-cds-settings'
     build-node: ubuntu1804-builder-4c-4g
-
 
 - project:
     name: ccsdk-cds-info
