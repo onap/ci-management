@@ -4,6 +4,7 @@
     project-name: 'ccsdk-cds'
     jobs:
       - gerrit-maven-verify
+          mvn-params: '-Ddocker.skip.push -P docker'
       - gerrit-maven-merge:
           cron: '@daily'
       - gerrit-maven-stage:
