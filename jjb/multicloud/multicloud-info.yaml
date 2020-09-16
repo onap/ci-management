@@ -1,0 +1,29 @@
+---
+
+- project:
+    name: multicloud-info
+    project-name: multicloud
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: multicloud
+    branch: master
+
+- project:
+    name: multicloud-windriver-info
+    project-name: multicloud-windriver
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: multicloud/openstack/windriver
+    branch: master
+
+- project:
+    name: multicloud-oom-info
+    project-name: multicloud-oom
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: multicloud/oom
+    branch: master
+
