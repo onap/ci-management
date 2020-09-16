@@ -38,6 +38,7 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImageTag'
+          mvn-params: '-f components/slice-analysis-ms/pom.xml'
           pattern: 'components/slice-analysis-ms/**'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
