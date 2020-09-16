@@ -1090,6 +1090,8 @@
 
     builders:
       - lf-infra-pre-build
+      - lf-update-java-alternatives:
+          java-version: "{java-version}"
       - provide-maven-settings:
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'

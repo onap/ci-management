@@ -35,7 +35,6 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
-          java-version: openjdk11
       - gerrit-maven-stage:
           build-timeout: 90
           sign-artifacts: true
