@@ -22,6 +22,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'dcaegen2-platform-settings'
