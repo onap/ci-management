@@ -34,6 +34,24 @@
       "revId": "a8bae1bf8d238b776847c16d35de1d59b45789d8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5aca226d_4eadb31f",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-17T09:05:28Z",
+      "side": 1,
+      "message": "Just checked it with JJB tool and indeed the job gets created although I can\u0027t see the template for this. What you\u0027re pointing at (distribution.yaml) are job definitions, not templates, so it\u0027s not there.",
+      "parentUuid": "f244e9ac_7abd0ded",
+      "revId": "a8bae1bf8d238b776847c16d35de1d59b45789d8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
