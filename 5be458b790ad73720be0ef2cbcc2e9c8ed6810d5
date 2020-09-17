@@ -22,6 +22,30 @@
       "revId": "5be458b790ad73720be0ef2cbcc2e9c8ed6810d5",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c53df7bf_35049e27",
+        "filename": "jjb/dcaegen2/dcaegen2-services-slice-analysis-ms.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2725
+      },
+      "writtenOn": "2020-09-17T03:41:36Z",
+      "side": 1,
+      "message": "No Specific reason for making it part of goals. Added it to mvn-params.",
+      "parentUuid": "cbd8dd46_e3984419",
+      "range": {
+        "startLine": 40,
+        "startChar": 64,
+        "endLine": 40,
+        "endChar": 100
+      },
+      "revId": "5be458b790ad73720be0ef2cbcc2e9c8ed6810d5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
