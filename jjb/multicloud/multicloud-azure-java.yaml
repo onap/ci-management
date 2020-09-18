@@ -10,10 +10,10 @@
     subproject:
       - 'azure':
           pom: 'azure/pom.xml'
-          pattern: 'azure/azure/**'
+          pattern: 'azure/**'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+#      - '{project-name}-{stream}-verify-java'
+#      - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - gerrit-maven-stage:
