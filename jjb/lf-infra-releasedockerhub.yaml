@@ -16,9 +16,9 @@
     disable-job: false
     disabled: '{disable-job}'
 
-    # Runs once a week 
+    # Runs once a day 
     triggers:
-      - timed: '@weekly'
+      - timed: '@daily'
 
 #   Define needed parameters for lf-infra-docker-login
     parameters:
