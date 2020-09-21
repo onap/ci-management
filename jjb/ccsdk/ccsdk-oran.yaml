@@ -64,3 +64,15 @@
     mvn-settings: 'ccsdk-oran-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: ccsdk-oran-rtd
+    project-name: 'ccsdk-oran'
+    jobs:
+      - '{project-name}-rtd-jobs'
+    stream:
+      - 'master':
+          branch: 'master'
+    project-pattern: ccsdk/oran
+    rtd-build-url: https://readthedocs.org/api/v2/webhook/onap-ccsdk-oran/133602/
+    rtd-token: 7346b9ecd6195ab86db1fcadd29662512edc86e1
