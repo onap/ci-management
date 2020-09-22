@@ -1,0 +1,8 @@
+Code-Review+1: Morgan Richomme <morgan.richomme@orange.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 22 Sep 2020 17:00:55 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/112974
+Project: ci-management
+Branch: refs/heads/master
