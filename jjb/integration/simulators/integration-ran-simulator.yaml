@@ -1,5 +1,31 @@
 ---
 - project:
+      name: integration-simulators-ran-simulator-info
+      project-name: integration-simulators-ran-simulator
+      stream:
+          -   'master':
+                  branch: 'master'
+      project: 'integration/simulators/ran-simulator'
+      mvn-settings: 'integration-simulators-ran-simulator-settings'
+      files: '**'
+      maven-deploy-properties: |
+          deployAtEnd=true
+      archive-artifacts: ''
+      build-node: ubuntu1804-docker-8c-8g
+      jobs:
+          - '{project-name}-{stream}-verify-java':
+                mvn-goals: 'clean install'
+          - '{project-name}-{stream}-merge-java':
+                mvn-goals: 'clean deploy'
+          -  '{project-name}-gerrit-release-jobs':
+                 build-node: centos7-docker-8c-8g
+          - gerrit-maven-stage:
+                sign-artifacts: true
+                build-node: centos7-docker-8c-8g
+                maven-versions-plugin: true
+                mvn-goals: 'clean deploy'
+
+- project:
     name: integration-simulators-ran-simulator-info
     project-name: integration-simulators-ran-simulator
     jobs:
