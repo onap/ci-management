@@ -73,6 +73,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     project: 'ccsdk/oran'
     project-pattern: ccsdk/oran
     rtd-build-url: https://readthedocs.org/api/v2/webhook/onap-ccsdk-oran/133602/
