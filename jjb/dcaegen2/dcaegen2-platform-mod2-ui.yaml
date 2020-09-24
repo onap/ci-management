@@ -17,6 +17,9 @@
           branch: 'master'
           java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
+    maven-version: 'mvn35'
+    maven-deploy-properties: |
+      deployAtEnd=true
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
