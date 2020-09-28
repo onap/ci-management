@@ -21,8 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'release-3.2.0':
-          branch: 'release-3.2.0'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'portal-settings'
     files: '**'
     archive-artifacts: ''
