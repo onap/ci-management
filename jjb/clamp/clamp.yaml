@@ -36,6 +36,8 @@
               branch: 'frankfurt'
         - 'elalto':
               branch: 'elalto'
+        - 'tosca-poc':
+              branch: 'tosca-poc'
     mvn-settings: 'clamp-settings'
     java-version: openjdk11
     files: '**'
