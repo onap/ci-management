@@ -87,6 +87,7 @@
     project: 'cli'
     project-name: 'cli'
     branch: 'master'
+    java-version: openjdk11
     mvn-settings: 'cli-settings'
     build-node: ubuntu1804-builder-4c-4g
 
