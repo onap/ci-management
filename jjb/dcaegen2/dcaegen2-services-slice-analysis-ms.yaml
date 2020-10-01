@@ -13,7 +13,9 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'
     archive-artifacts: ''
@@ -45,7 +47,9 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'
     archive-artifacts: ''

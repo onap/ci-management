@@ -13,9 +13,9 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -45,9 +45,9 @@
     stream:
       - 'master':
          branch: 'master'
-         java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -76,10 +76,10 @@
           pattern: 'components/datalake-handler/**'
     stream:
       - 'master':
-         branch: 'master'
-         java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -109,9 +109,9 @@
     stream:
       - 'master':
          branch: 'master'
-         java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true

@@ -15,9 +15,9 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
     files: '**'
     archive-artifacts: ''

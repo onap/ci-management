@@ -23,8 +23,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
     functionality:
       - 'prh-testsuites'
     trigger_jobs:
