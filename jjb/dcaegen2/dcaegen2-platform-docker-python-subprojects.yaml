@@ -98,8 +98,8 @@
     stream:
       - master:
           branch: master
-      - frankfurt:
-          branch: frankfurt
+      - guilin:
+          branch: guilin
     views:
       - project-view:
           project-name: dcaegen2-platform-adapter
