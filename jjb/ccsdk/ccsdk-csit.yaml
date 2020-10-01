@@ -23,9 +23,13 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'ccsdk-oran'
     recipients: 'bjorn.magnusson@est.tech maxime.bonneau@est.tech'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     functionality:
       - 'polmansuite':
-          trigger_jobs: '{project-name}-maven-docker-stage-master'
+          trigger_jobs: '{project-name}-maven-docker-stage-{stream}'
     robot-options: ''
     branch: 'master'
