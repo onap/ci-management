@@ -21,9 +21,9 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
     mvn-settings: 'dcaegen2-platform-servicechange-handler-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
