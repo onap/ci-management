@@ -9,8 +9,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-platform-policy-handler-settings'
     subproject:
