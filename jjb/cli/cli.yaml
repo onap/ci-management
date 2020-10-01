@@ -26,6 +26,7 @@
           build-node: centos7-docker-8c-8g
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'deployment/docker/pom.xml'
+          java-version: openjdk11
           mvn-goals: 'docker:build'
           docker-image-name: 'onap/cli'
           build-node: ubuntu1804-docker-8c-8g
