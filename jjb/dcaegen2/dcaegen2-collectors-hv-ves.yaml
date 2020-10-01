@@ -6,11 +6,10 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
-          java-version: openjdk11
+      - 'guilin':
+          branch: 'guilin'
     # apply to all jobs
+    java-version: openjdk11
     project: 'dcaegen2/collectors/hv-ves'
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
     files: '**'

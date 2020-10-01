@@ -30,8 +30,8 @@
     stream:
       - master:
           branch: master
-      - frankfurt:
-          branch: frankfurt
+      - guilin:
+          branch: guilin
 
 - project:
     name: dcaegen2-platform-configbinding-sonar
