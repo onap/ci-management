@@ -32,4 +32,3 @@
       - 'polmansuite':
           trigger_jobs: '{project-name}-maven-docker-stage-{stream}'
     robot-options: ''
-    branch: 'master'
