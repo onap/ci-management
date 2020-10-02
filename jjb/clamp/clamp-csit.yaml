@@ -11,7 +11,7 @@
               branch: 'master'
     functionality:
       - 'APIs':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs:
       - 'UIs':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs:
     robot-options: ''
