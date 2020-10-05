@@ -8,6 +8,6 @@
     stream: 'master'
     functionality:
       - 'mrpubsub':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs:
     robot-options: ''
     branch: 'master'
