@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b0efb1d_181d27a3",
+        "filename": "jjb/dmaap/dmaap-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-10-05T10:46:04Z",
+      "side": 1,
+      "message": "hm, shouldn\u0027t it be:\n\n    functionality:\n      - \u0027mrpubsub\u0027\n\n?",
+      "revId": "cc343aadb349e060b02b1ad1dd731da4a55e178d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
