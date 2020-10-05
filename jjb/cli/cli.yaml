@@ -7,6 +7,7 @@
 
 - project:
     name: cli
+    java-version: openjdk11
     project-name: 'cli'
     jobs:
       - '{project-name}-{stream}-verify-java'
@@ -26,7 +27,6 @@
           build-node: centos7-docker-8c-8g
       - '{project-name}-{stream}-aai-docker-java-daily':
           pom: 'deployment/docker/pom.xml'
-          java-version: openjdk11
           mvn-goals: 'docker:build'
           docker-image-name: 'onap/cli'
           build-node: ubuntu1804-docker-8c-8g
@@ -63,6 +63,7 @@
 #
 - project:
     name: cli-sonar
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -75,20 +76,19 @@
     project: 'cli'
     project-name: 'cli'
     branch: 'master'
-    java-version: openjdk11
     mvn-settings: 'cli-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
     name: cli-clm
+    java-version: openjdk11
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: 'cli'
     project-name: 'cli'
     branch: 'master'
-    java-version: openjdk11
     mvn-settings: 'cli-settings'
     build-node: ubuntu1804-builder-4c-4g
 
