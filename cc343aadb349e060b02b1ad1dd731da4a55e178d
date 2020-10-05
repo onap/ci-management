@@ -16,6 +16,24 @@
       "revId": "cc343aadb349e060b02b1ad1dd731da4a55e178d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cffe64bd_a6b80669",
+        "filename": "jjb/dmaap/dmaap-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-10-05T11:25:18Z",
+      "side": 1,
+      "message": "I haven\u0027t seen any of these without trigger_jobs so I have implicitly assumed it\u0027s mandatory... but have not checked. If it\u0027s not mandatory, there are a whole lot of files that are carrying it for nothing.",
+      "parentUuid": "8b0efb1d_181d27a3",
+      "revId": "cc343aadb349e060b02b1ad1dd731da4a55e178d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
