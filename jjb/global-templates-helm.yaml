@@ -18,9 +18,8 @@
     post_build_script: ''
     pre_build_script: ''
     submodule-disable: false
-    submodule-recursive: true
     submodule-timeout: 10
-    build-timeout: 120
+    build-timeout: 180
 
     #####################
     # Job Configuration #
@@ -293,4 +292,3 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-
