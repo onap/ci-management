@@ -30,5 +30,5 @@
           branch: 'guilin'
     functionality:
       - 'polmansuite':
-          trigger_jobs: '{project-name}-maven-docker-stage-{stream}'
+          trigger_jobs: '{project-name}-maven-merge-{stream}'
     robot-options: ''
