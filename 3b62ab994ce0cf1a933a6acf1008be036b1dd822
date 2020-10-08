@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36bae254_840fcd22",
+        "filename": "jjb/ccsdk/cds.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-10-08T18:55:22Z",
+      "side": 1,
+      "message": "this conflicts with line 4. \nMaybe we can name it ccsdk-cds-jdk\u003c#\u003e?",
+      "range": {
+        "startLine": 47,
+        "startChar": 19,
+        "endLine": 47,
+        "endChar": 29
+      },
+      "revId": "3b62ab994ce0cf1a933a6acf1008be036b1dd822",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
