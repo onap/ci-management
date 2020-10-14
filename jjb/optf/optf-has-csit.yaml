@@ -11,5 +11,4 @@
     functionality:
       - 'has':
           trigger_jobs:
-            - '{project-name}-{stream}-conductor-docker-java-version-shell-daily'
     robot-options: ''
