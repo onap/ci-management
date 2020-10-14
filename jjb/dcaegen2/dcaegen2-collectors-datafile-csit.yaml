@@ -11,9 +11,7 @@
     functionality:
       - 'ManagementInterface-suite':
           trigger_jobs:
-           - '{project-name}-{stream}-docker-java-shell-daily'
       - 'Functional-suite':
           trigger_jobs:
-           - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
     branch: 'master'

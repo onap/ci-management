@@ -11,6 +11,5 @@
     functionality:
       - 'pmmapper':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
     branch: 'master'
