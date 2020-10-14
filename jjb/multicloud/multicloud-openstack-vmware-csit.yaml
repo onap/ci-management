@@ -10,7 +10,5 @@
     functionality:
       - 'functionality1':
           trigger_jobs:
-            -  'multicloud-openstack-vmware-master-docker-java-version-shell-daily'
-#            -  'multicloud-openstack-vmware-arm64-master-docker-java-version-shell-daily'
     robot-options: ''
     branch: 'master'
