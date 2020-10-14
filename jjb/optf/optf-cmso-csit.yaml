@@ -11,6 +11,6 @@
            branch: master
      functionality:
        - 'cmso':
-           trigger_jobs: 'optf-cmso-master-docker-java-version-shell-daily'
+           trigger_jobs:
      robot-options: ''
      branch: 'master'
