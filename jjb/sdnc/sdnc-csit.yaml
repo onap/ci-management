@@ -11,8 +11,8 @@
           branch: 'master'
     functionality:
       - 'healthcheck':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs:
       - 'sdnc_netconf_tls_post_deploy':
-          trigger_jobs: '{project-name}-{stream}-release-java-daily-checkstyle'
+          trigger_jobs:
     robot-options: ''
     branch: 'master'
