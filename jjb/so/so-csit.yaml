@@ -16,7 +16,7 @@
           branch: 'frankfurt'
     functionality:
       - 'integration-testing':
-          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs:
       - 'integration-etsi-testing':
-          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs:
     robot-options: ''
