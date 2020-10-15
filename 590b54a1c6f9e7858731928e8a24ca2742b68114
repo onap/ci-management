@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b3a0bfa3_1c9a3b66",
+        "filename": "jjb/sdnc/sdnc-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2020-10-15T14:23:41Z",
+      "side": 0,
+      "message": "I think the trigger_job we want here is \u0027ccsdk-distribution-maven-docker-stage-{stream}\u0027.  That should trigger a CSIT build whenever a new docker is built.  FYI - we currently do daily docker builds, as well as on demand - so a side effect would be that this job would also be triggered daily, after the docker build completes.",
+      "revId": "590b54a1c6f9e7858731928e8a24ca2742b68114",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
