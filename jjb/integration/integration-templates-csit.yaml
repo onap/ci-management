@@ -125,7 +125,7 @@
 
 - job-template:
     name: '{project-name}-{stream}-verify-csit-{functionality}-testng'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -209,7 +209,7 @@
 
 - job-template:
     name: '{project-name}-arm64-{stream}-verify-csit-{functionality}-testng'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-arm64-4c-2g'
@@ -423,7 +423,7 @@
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}-testng'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -510,7 +510,7 @@
 
 - job-template:
     name: '{project-name}-arm64-{stream}-csit-{functionality}-testng'
-    disabled: false
+    disabled: '{disabled}'
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-arm64-4c-2g'
