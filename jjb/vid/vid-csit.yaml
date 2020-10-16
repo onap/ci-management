@@ -11,7 +11,7 @@
           branch: 'master'
     functionality:
       - 'healthCheck':
-          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs:
     robot-options: ''
 
 #- project:
