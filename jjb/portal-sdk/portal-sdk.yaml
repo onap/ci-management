@@ -14,7 +14,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'ecomp-sdk/pom.xml'
-          mvn-params: '-f ecomp-sdk/pom.xml'
+          mvn-params: '-f ecomp-sdk/pom.xml -DskipTests=true'
           pattern: 'ecomp-sdk/**'
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
