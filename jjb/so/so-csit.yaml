@@ -10,8 +10,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
       - 'frankfurt':
           branch: 'frankfurt'
     functionality:
