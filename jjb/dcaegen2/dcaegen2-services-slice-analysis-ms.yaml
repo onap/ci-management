@@ -42,8 +42,6 @@
           mvn-goals: 'clean package docker:build -DpushImageTag'
           mvn-params: '-f components/slice-analysis-ms/pom.xml'
           pattern: 'components/slice-analysis-ms/**'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
     stream:
       - 'master':
           branch: 'master'
