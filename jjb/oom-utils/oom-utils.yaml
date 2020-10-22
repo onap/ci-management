@@ -1,0 +1,14 @@
+---
+- project:
+    name: oom-utils-project-view
+    project-name: oom-utils
+    views:
+      - project-view
+
+- project:
+    name: oom-utils-info
+    project: oom/utils
+    project-name: oom-utils
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
