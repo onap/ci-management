@@ -11,8 +11,6 @@
       functionality:
           - "certservice":
                 trigger_jobs:
-                    - "oom-platform-cert-service-{stream}-merge-java"
           - "postprocessor":
                 trigger_jobs:
-                    - "oom-platform-cert-service-{stream}-merge-java"
       robot-options: ""
