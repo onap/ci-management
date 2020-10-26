@@ -27,6 +27,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'policy-xacml-pdp-settings'
     java-version: openjdk11
     files: '**'
