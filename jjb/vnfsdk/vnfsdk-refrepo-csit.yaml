@@ -11,5 +11,4 @@
     functionality:
       - 'testsuites':
           trigger_jobs:
-            - '{project-name}-{stream}-merge-java'
     robot-options: ''
