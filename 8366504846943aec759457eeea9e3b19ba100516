@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "409b8c00_681aee43",
+        "filename": "jjb/policy/policy-docker-base-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-10-26T17:55:05Z",
+      "side": 1,
+      "message": "can another committer verify that this is the correct update for the policy/docker builds?",
+      "revId": "8366504846943aec759457eeea9e3b19ba100516",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
