@@ -16,6 +16,29 @@
       "revId": "8366504846943aec759457eeea9e3b19ba100516",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ad1aef5_af1bcb45",
+        "filename": "jjb/policy/policy-docker-base-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2477
+      },
+      "writtenOn": "2020-10-27T00:39:33Z",
+      "side": 1,
+      "message": "looks like the original was using registry: docker.io. I am not sure if this is correct setting. We supposedly should use nexus3 in onap for registry.",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 41,
+        "endChar": 109
+      },
+      "revId": "8366504846943aec759457eeea9e3b19ba100516",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
