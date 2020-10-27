@@ -11,5 +11,4 @@
     functionality:
       - 'testsuites':
           trigger_jobs:
-            - 'vnfsdk-refrepo-{stream}-merge-java'
     robot-options: ''
