@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0eb10d2c_bd03080c",
+        "filename": "jjb/vnfsdk/vnfsdk-refrepo-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2020-10-27T06:29:54Z",
+      "side": 0,
+      "message": "If we remove this trigger, then when this job will be triggered?\n\nFrom commit message I understand that you would like to turn off CI at commit to master branch, because CSITs run at the latest docker image, not the current code. Docker image is created by vnfsdk-refrepo-maven-docker-stage-master CI Job. If so, then pls update CSIT CI Jobs to run after vnfsdk-refrepo-maven-docker-stage-master CI Job.",
+      "revId": "fb38cb6756afa5ea4b148e8d37c24c019baba568",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
