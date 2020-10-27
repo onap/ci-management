@@ -53,6 +53,7 @@ jenkins-jobs test --recursive jjb/
 
 Backup the jenkins.ini.example to jenkins.ini
 
+`mkdir -p ~/.config/jenkins_jobs`
 `cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini`
 
 After copying the jenkins.ini.example, modify `jenkins.ini` with your
@@ -72,9 +73,10 @@ password= <Refer below steps to get API token>
 url=https://jenkins.onap.org/sandbox
 query_plugins_info=False
 ```
-### How to retrieve API token?
+### How to retrieve username and API token?
 Login to the [Jenkins Sandbox](https://jenkins.onap.org/sandbox/), go to your user
-page by clicking on your username. Click **Configure** and then click **Add new Token**.
+page by clicking on your username - `Jenkins User ID` on this page is your Jenkins
+Sandbox username. Click **Configure** and then click **Add new Token**.
 After that specify a token name (optional) and click on **Generate** to generate and show
 new token. Please note down your token and store it securely.
 
@@ -106,17 +108,13 @@ The output directory will contain files with the XML configurations.
 
 ## To Update a job:
 
-Ensure you’ve configured your `jenkins_jobs.ini` and verified it by
-outputting valid XML descriptions of Jenkins jobs. Upon successful
-verification, execute the following command to update the job to the
-Jenkins sandbox.
+Ensure you’ve configured your `jenkins_jobs.ini` and verified the changes by
+outputting valid XML descriptions of the relevant Jenkins jobs. Upon successful
+verification, execute the following command to update the job to the Jenkins sandbox.
 
 `jenkins-jobs update jjb/ <job-name>`
 
 **Example:** `jenkins-jobs update jjb/ sdc-master-verify-java`
-
-Note that there will be some 403 errors along the way for failed view creation attempts even
-when the job creation succeeds.
 
 ## Trigger jobs from Jenkins Sandbox:
 
