@@ -16,6 +16,24 @@
       "revId": "fb38cb6756afa5ea4b148e8d37c24c019baba568",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "699bb455_fef7acaf",
+        "filename": "jjb/vnfsdk/vnfsdk-refrepo-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-10-27T09:07:00Z",
+      "side": 0,
+      "message": "Yes, this is basically the correct idea, but see my previous response for why I would prefer to not to replace the trigger with vnfsdk-refrepo-maven-docker-stage-master at this time.",
+      "parentUuid": "0eb10d2c_bd03080c",
+      "revId": "fb38cb6756afa5ea4b148e8d37c24c019baba568",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
