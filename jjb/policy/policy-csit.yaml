@@ -11,6 +11,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -30,6 +32,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'distribution'
     trigger_jobs:
@@ -48,6 +52,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'api'
     trigger_jobs:
@@ -67,6 +73,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'xacml-pdp'
     trigger_jobs:
@@ -86,6 +94,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'pap'
     trigger_jobs:
@@ -104,6 +114,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'drools-pdp'
     trigger_jobs:
@@ -122,6 +134,8 @@
           branch: master
       - 'frankfurt':
           branch: frankfurt
+      - 'guilin':
+          branch: guilin
     functionality:
       - 'drools-applications'
     trigger_jobs:

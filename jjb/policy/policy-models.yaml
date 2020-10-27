@@ -21,6 +21,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'policy-models-settings'
     java-version: openjdk11
     files: '**'

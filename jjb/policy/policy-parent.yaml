@@ -18,6 +18,8 @@
           branch: 'master'
       - 'frankfurt':
           branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'policy-parent-settings'
     java-version: openjdk11
     files: '**'
