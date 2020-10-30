@@ -16,10 +16,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'dublin':
-          branch: 'dublin'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'testsuite-heatbridge-settings'
     files: '**'
     archive-artifacts: ''
