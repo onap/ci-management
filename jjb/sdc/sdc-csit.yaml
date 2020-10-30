@@ -2,8 +2,8 @@
 - project:
     name: sdc-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}-testng'
-      - '{project-name}-{stream}-csit-{functionality}-testng'
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'sdc'
     disabled: true
     recipients: 'ofir.sonsino@intl.att.com'
@@ -12,11 +12,11 @@
           branch: 'master'
     functionality:
       - 'sanity':
-          trigger_jobs: '{project-name}-{stream}-sdc-merge-java'
+          trigger_jobs:
       - 'nightly':
-          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs:
       - 'uiSanity':
-          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
+          trigger_jobs:
     robot-options: ''
     branch: 'master'
     html-dir: 'archives'
