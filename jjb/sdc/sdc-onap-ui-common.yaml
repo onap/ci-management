@@ -18,6 +18,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdc-onap-ui-common-settings'
     files: '**'
     archive-artifacts: ''

@@ -22,6 +22,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdc-sdc-tosca-settings'
     files: '**'
     archive-artifacts: ''

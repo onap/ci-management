@@ -21,8 +21,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'guilin':
+          branch: 'guilin'
+      - 'frankfurt':
+          branch: 'frankfurt'
     mvn-settings: 'sdc-sdc-be-common-settings'
     files: '**'
     archive-artifacts: ''
