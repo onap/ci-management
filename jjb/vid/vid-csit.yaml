@@ -13,17 +13,3 @@
       - 'healthCheck':
           trigger_jobs:
     robot-options: ''
-
-#- project:
-#    name: vid-csit-arm64
-#    jobs:
-#      - '{project-name}-arm64-{stream}-verify-csit-{functionality}'
-#      - '{project-name}-arm64-{stream}-csit-{functionality}'
-#    project-name: 'vid'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    functionality:
-#      - 'healthCheck':
-#          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
-#    robot-options: ''
