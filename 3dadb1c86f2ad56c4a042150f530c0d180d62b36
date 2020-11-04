@@ -48,6 +48,29 @@
     },
     {
       "key": {
+        "uuid": "88ac7f36_3dadf00d",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-04T23:09:28Z",
+      "side": 1,
+      "message": "You might want to also add other triggers that will set up the environment for you as well as pull the right settings file. For example:\n      - lf-infra-pre-build\n      - lf-maven-install:\n          mvn-version: \"{mvn-version}\"\n      - lf-update-java-alternatives:\n          java-version: \"{java-version}\"\n      - lf-provide-maven-settings:\n          global-settings-file: \"{mvn-global-settings}\"\n          settings-file: \"{mvn-settings}\"\n\n\nCurrently, your jobs are failing to use any settings file",
+      "range": {
+        "startLine": 156,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 13
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c8da4686_6ca3d7fa",
         "filename": "jjb/integration/integration-templates-csit.yaml",
         "patchSetId": 1
