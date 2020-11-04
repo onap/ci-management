@@ -2,13 +2,18 @@
 - project:
     name: music-distributed-kv-store-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
       - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'music'
-    disabled: true
+      - '{project-name}-unified-review-{stream}-test'
+    project-name: 'music-distributed-kv-store'
+    project: 'music/distributed-kv-store'
     stream: 'master'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
+    mvn-settings: 'music-distributed-kv-store-settings'
+    mvn-global-settings: global-settings
     functionality:
       - 'music-distributed-kv-store-test-plan':
-          trigger_jobs: 'music-distributed-kv-store-master-docker-golang-shell-daily'
+          trigger_jobs:
+    review-functionality: 'music-distributed-kv-store-test-plan'
     robot-options: ''
     branch: 'master'
