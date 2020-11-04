@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6a4ec761_abceac49",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-04T23:02:18Z",
+      "side": 1,
+      "message": "Can we rename this to\n{project-name}-unified-review-test-{stream}\n\nFor consistency and is easier to read the branch name at the end of the name.",
+      "range": {
+        "startLine": 130,
+        "startChar": 11,
+        "endLine": 130,
+        "endChar": 54
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fb7a034_f9b23e7f",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-04T23:02:18Z",
+      "side": 1,
+      "message": "I don\u0027t think you need this..",
+      "range": {
+        "startLine": 134,
+        "startChar": 4,
+        "endLine": 134,
+        "endChar": 24
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c8da4686_6ca3d7fa",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-04T23:02:18Z",
+      "side": 1,
+      "message": "the trigger build might need to be the stage job no? since it is the one tagging and preparing a release? not all jobs use this docker-golang job, or-else we can also leave this as a open parameter for every project to define?",
+      "range": {
+        "startLine": 158,
+        "startChar": 12,
+        "endLine": 158,
+        "endChar": 72
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a192373c_78205683",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-04T23:02:18Z",
+      "side": 1,
+      "message": "We can also add the publisher block. We need \"lf-infra-publish\"",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 0
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
