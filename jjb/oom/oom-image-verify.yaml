@@ -1,0 +1,27 @@
+---
+- job-template:
+    name: '{project-name}-{stream}-image-verify'
+    project-type: freestyle
+    path: '$WORKSPACE'
+    concurrent: true
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - gerrit-trigger-helm-patch-submitted:
+          status-context: '{project}-Helm-Verify'
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - shell: 'make check-for-staging-images | true'
+
+    publishers:
+      - infra-shiplogs:

@@ -12,22 +12,10 @@
         #!/bin/bash
         set -e -o pipefail
         cd kubernetes/
-        if [ "$GERRIT_BRANCH" != "staging" ]; then
-          if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
-            echo "[ERROR] Only release images are allowed in helm charts."
-            exit 1
-          fi
-        fi
         make all
     subproject_build_script: |
         #!/bin/bash
         cd kubernetes/
-        if [ "$GERRIT_BRANCH" != "staging" ]; then
-          if grep -r -n -E ':\s*onap/.*:.*(STAGING|SNAPSHOT|latest).*'; then
-            echo "[ERROR] Only release images are allowed in helm charts."
-            exit 1
-          fi
-        fi
         make common
         make {subproject}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
@@ -99,6 +87,8 @@
           files: 'kubernetes/vnfsdk/**'
 
     jobs:
+      - '{project-name}-{stream}-image-verify':
+          files: '**'
       - '{project-name}-{stream}-verify-helm':
           build_script: '{oom_build_script}'
           files: '**'
