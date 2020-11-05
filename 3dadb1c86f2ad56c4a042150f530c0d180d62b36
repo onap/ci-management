@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "50116168_67a6cce6",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "This is currently a temporary name anyway (the \"test\" in it refers more to the fact I\u0027m using it for testing the solution rather than what the job itself does), but I\u0027ll take note for final naming once all this works",
+      "parentUuid": "6a4ec761_abceac49",
+      "range": {
+        "startLine": 130,
+        "startChar": 11,
+        "endLine": 130,
+        "endChar": 54
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9fb7a034_f9b23e7f",
         "filename": "jjb/integration/integration-templates-csit.yaml",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e962dca6_b6fc6457",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9fb7a034_f9b23e7f",
+      "range": {
+        "startLine": 134,
+        "startChar": 4,
+        "endLine": 134,
+        "endChar": 24
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "88ac7f36_3dadf00d",
         "filename": "jjb/integration/integration-templates-csit.yaml",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2020-11-04T23:09:28Z",
       "side": 1,
       "message": "You might want to also add other triggers that will set up the environment for you as well as pull the right settings file. For example:\n      - lf-infra-pre-build\n      - lf-maven-install:\n          mvn-version: \"{mvn-version}\"\n      - lf-update-java-alternatives:\n          java-version: \"{java-version}\"\n      - lf-provide-maven-settings:\n          global-settings-file: \"{mvn-global-settings}\"\n          settings-file: \"{mvn-settings}\"\n\n\nCurrently, your jobs are failing to use any settings file",
+      "range": {
+        "startLine": 156,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 13
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c200b980_1a0c8101",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "Thanks, this solved a docker build job error I got in sandbox. I still don\u0027t really understand though *why* this is needed in triggering job when the triggered job works perfectly well on its own when triggered manually?",
+      "parentUuid": "88ac7f36_3dadf00d",
       "range": {
         "startLine": 156,
         "startChar": 0,
@@ -94,6 +166,53 @@
     },
     {
       "key": {
+        "uuid": "3f8a0491_645bddf8",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "This is somewhat open question at the moment and needs wider discussion as it\u0027s related to the production, verification and purpose of our snapshot, staging and release images, but my current opinion is that\n- this should be a job that produces a snapshot image\n- it should not be left to projects to define as I see no reason for any project to deviate from the principles laid out in this design (in practice this will probably require some projects to define new docker build jobs when they move to this solution, but that is appropriate as some of those seem to be somewhat confused at the moment, i.e. I hope this to bring some additional clarity and structure to our project-specific docker image taggings in general)\n- the final job shall definitely not be docker-golang-shell-daily (I\u0027m just using that here for now to align with what music already has for producing the docker image it uses in its CSIT)",
+      "parentUuid": "c8da4686_6ca3d7fa",
+      "range": {
+        "startLine": 158,
+        "startChar": 12,
+        "endLine": 158,
+        "endChar": 72
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3329f1ad_89519531",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "Any suggestion how to do this properly so this template will trigger *all* the CSIT jobs defined in csit.yaml\u0027s \"functionality\" ?",
+      "range": {
+        "startLine": 164,
+        "startChar": 13,
+        "endLine": 164,
+        "endChar": 74
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a192373c_78205683",
         "filename": "jjb/integration/integration-templates-csit.yaml",
         "patchSetId": 1
@@ -105,6 +224,30 @@
       "writtenOn": "2020-11-04T23:02:18Z",
       "side": 1,
       "message": "We can also add the publisher block. We need \"lf-infra-publish\"",
+      "range": {
+        "startLine": 175,
+        "startChar": 0,
+        "endLine": 175,
+        "endChar": 0
+      },
+      "revId": "3dadb1c86f2ad56c4a042150f530c0d180d62b36",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f21f5bda_967f7d29",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-05T11:38:22Z",
+      "side": 1,
+      "message": "We do? I\u0027m not sure what that is needed for in the umbrella review job, but added it for now anyway",
+      "parentUuid": "a192373c_78205683",
       "range": {
         "startLine": 175,
         "startChar": 0,
