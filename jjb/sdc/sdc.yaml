@@ -54,12 +54,14 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'guilin':
           branch: 'guilin'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
+          java-version: openjdk8
     mvn-settings: 'sdc-settings'
-    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
