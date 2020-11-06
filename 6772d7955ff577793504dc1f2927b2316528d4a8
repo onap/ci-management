@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "832d8a88_67b2c2ea",
+        "filename": "jjb/oom/oom-image-verify.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-11-06T11:59:53Z",
+      "side": 1,
+      "message": "@Sylvain\nThis is the biggest change from our perspective. After this commit the job will really fail only if there are some staging images detected as all those that were present in OOM master has been already removed",
+      "revId": "6772d7955ff577793504dc1f2927b2316528d4a8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
