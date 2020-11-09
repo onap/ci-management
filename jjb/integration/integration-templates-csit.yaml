@@ -168,20 +168,20 @@
          -  project: "{project-name}-{stream}-docker-golang-shell-daily"
             condition: UNSTABLE_OR_BETTER
             predefined-parameters: |
-              UNIQUE_DOCKER_TAG=$BUILD_ID
+              UNIQUE_DOCKER_TAG=$BUILD_TAG
             block: true
       - trigger-builds:
          -  project: "{project-name}-{stream}-csit-{review-functionality}"
             condition: UNSTABLE_OR_BETTER
             predefined-parameters: |
-              UNIQUE_DOCKER_TAG=$BUILD_ID
+              UNIQUE_DOCKER_TAG=$BUILD_TAG
             block: true
     triggers:
       - gerrit-trigger-patch-submitted:
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '**/{project}/**'
+          files: '**'
     publishers:
       - lf-infra-publish
 
