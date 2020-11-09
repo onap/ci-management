@@ -169,7 +169,8 @@
           branch: '{branch}'
           refspec: 'refs/heads/{branch}'
           artifacts: '{archive-artifacts}'
-
+      - integration-unique-docker-tag:
+          unique-docker-tag: ''
     scm:
       - gerrit-trigger-scm:
           refspec: ''

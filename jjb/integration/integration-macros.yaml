@@ -47,6 +47,14 @@
           default: '{terragrunt-version}'
           description: 'Terragrunt version to install on minion'
 
+- parameter:
+    name: integration-unique-docker-tag
+    parameters:
+     - string:
+          name: UNIQUE_DOCKER_TAG
+          default: '{unique-docker-tag}'
+          description: 'Unique docker tag to identify specific version'
+
 - builder:
     name: integration-install-robotframework
     builders:
