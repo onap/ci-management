@@ -20,8 +20,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'aai-cacher-settings'
     mvn-version: 'mvn35'
     files: '**'

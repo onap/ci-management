@@ -13,8 +13,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/sparky-fe'
     stream:
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-sparky-fe-settings'

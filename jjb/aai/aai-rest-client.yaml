@@ -19,8 +19,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/rest-client'
     stream:
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-rest-client-settings'
