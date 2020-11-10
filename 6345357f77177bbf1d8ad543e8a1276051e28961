@@ -22,6 +22,30 @@
       "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61058d09_89b47702",
+        "filename": "jjb/integration/integration-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-10T17:42:00Z",
+      "side": 1,
+      "message": "This looks good to me. Do you mean conventions as in formats we should follow?",
+      "parentUuid": "56853652_e2d24630",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 71
+      },
+      "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
