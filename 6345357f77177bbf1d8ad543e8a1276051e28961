@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56853652_e2d24630",
+        "filename": "jjb/integration/integration-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-10T13:06:30Z",
+      "side": 1,
+      "message": "Not sure what kind of conventions we have for adding job input parameters - is there anything to improve here?",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 71
+      },
+      "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
