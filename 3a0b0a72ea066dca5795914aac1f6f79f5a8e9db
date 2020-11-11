@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9d371028_80f1f511",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-11T21:25:46Z",
+      "side": 1,
+      "message": "Can we add \"- lf-infra-pre-build\"\nThis step will set up the proper python tooling. Do you guys need it?",
+      "range": {
+        "startLine": 170,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 13
+      },
+      "revId": "3a0b0a72ea066dca5795914aac1f6f79f5a8e9db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
