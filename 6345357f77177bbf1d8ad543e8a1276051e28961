@@ -70,6 +70,30 @@
       "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "def4e613_e6c1845f",
+        "filename": "jjb/integration/integration-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-11T21:20:32Z",
+      "side": 1,
+      "message": "So, the jjb/global-macros.yaml is ideally for macros that many other job templates might use. Since yours is specific to integration, the placement in integration-macros.yaml fits best.",
+      "parentUuid": "9069f4a7_7ab89b93",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 71
+      },
+      "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
