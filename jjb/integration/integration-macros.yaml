@@ -68,6 +68,11 @@
       - shell: "${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
 
 - builder:
+    name: integration-run-project-test
+    builders:
+      - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+
+- builder:
     name: integration-autorelease-fix-relativepaths
     builders:
       - shell: "${WORKSPACE}/autorelease/scripts/fix-relativepaths.sh"
@@ -126,6 +131,16 @@
     publishers:
       - robot:
           output-path: 'archives'
+          other-files: ''
+          unstable-threshold: '{unstable-if}'
+          pass-threshold: '{pass-if}'
+          only-critical: false
+
+- publisher:
+    name: integration-project-robot
+    publishers:
+      - robot:
+          output-path: 'csit/archives'
           other-files: ''
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
