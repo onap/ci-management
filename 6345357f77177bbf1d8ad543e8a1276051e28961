@@ -46,6 +46,30 @@
       "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9069f4a7_7ab89b93",
+        "filename": "jjb/integration/integration-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-11T09:37:16Z",
+      "side": 1,
+      "message": "Yes, but also their grouping and location (for example, there\u0027s \"docker-image-name\" under jjb/global-macros.yaml - should this be somehow associated with that?). This is of course more a question of parameter classification consistency rather than functionality as such - it already works even as it is.",
+      "parentUuid": "61058d09_89b47702",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 71
+      },
+      "revId": "6345357f77177bbf1d8ad543e8a1276051e28961",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
