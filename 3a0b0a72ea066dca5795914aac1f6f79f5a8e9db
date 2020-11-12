@@ -46,6 +46,30 @@
       "revId": "3a0b0a72ea066dca5795914aac1f6f79f5a8e9db",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba7efb25_f3b75d68",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-12T11:23:22Z",
+      "side": 1,
+      "message": "...added it anyway as it doesn\u0027t cost much",
+      "parentUuid": "6b0e7f5d_05eff233",
+      "range": {
+        "startLine": 170,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 13
+      },
+      "revId": "3a0b0a72ea066dca5795914aac1f6f79f5a8e9db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
