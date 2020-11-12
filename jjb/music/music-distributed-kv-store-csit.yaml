@@ -2,7 +2,7 @@
 - project:
     name: music-distributed-kv-store-csit
     jobs:
-      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-project-csit-{functionality}'
       - '{project-name}-unified-review-{stream}-test'
     project-name: 'music-distributed-kv-store'
     project: 'music/distributed-kv-store'
@@ -12,8 +12,7 @@
     mvn-settings: 'music-distributed-kv-store-settings'
     mvn-global-settings: global-settings
     functionality:
-      - 'music-distributed-kv-store-test-plan':
-          trigger_jobs:
+      - 'music-distributed-kv-store-test-plan'
     review-functionality: 'music-distributed-kv-store-test-plan'
     robot-options: ''
     branch: 'master'
