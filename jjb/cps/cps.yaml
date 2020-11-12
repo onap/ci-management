@@ -14,6 +14,18 @@
       - gerrit-info-yaml-verify
 
 - project:
+      name: cps-clm
+      java-version: openjdk11
+      jobs:
+          - gerrit-maven-clm
+      nexus-iq-namespace: 'onap-'
+      project: 'cps'
+      project-name: 'cps'
+      branch: 'master'
+      mvn-settings: 'cps-settings'
+      build-node: ubuntu1804-builder-4c-4g
+
+- project:
     name: cps
     java-version: openjdk11
     project-name: 'cps'
