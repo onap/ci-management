@@ -22,6 +22,30 @@
       "revId": "3a0b0a72ea066dca5795914aac1f6f79f5a8e9db",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b0e7f5d_05eff233",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-12T08:47:30Z",
+      "side": 1,
+      "message": "I wondered about that since {project-name}-{stream}-csit-{functionality} adds it while {project-name}-{stream}-verify-csit-{functionality} does not. Everything seems to have worked without it so far though?",
+      "parentUuid": "9d371028_80f1f511",
+      "range": {
+        "startLine": 170,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 13
+      },
+      "revId": "3a0b0a72ea066dca5795914aac1f6f79f5a8e9db",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
