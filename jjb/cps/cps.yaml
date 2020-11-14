@@ -28,6 +28,7 @@
 - project:
     name: cps
     java-version: openjdk11
+    mvn-version : "mvn36"
     project-name: 'cps'
     project: 'cps'
     jobs:
