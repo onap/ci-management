@@ -106,6 +106,9 @@
       - 'frankfurt':
             branch: 'frankfurt'
             files: ''
+      - 'guilin':
+            branch: 'guilin'
+            files: ''
       - 'develop':
             branch: 'develop'
             files: ''
