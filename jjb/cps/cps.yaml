@@ -17,6 +17,7 @@
       name: cps-clm
       java-version: openjdk11
       mvn-version: "mvn36"
+      maven-version: "mvn36"
       jobs:
           - gerrit-maven-clm
       nexus-iq-namespace: 'onap-'
@@ -30,6 +31,7 @@
     name: cps
     java-version: openjdk11
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     project-name: 'cps'
     project: 'cps'
     jobs:
@@ -59,6 +61,7 @@
     name: cps-sonar
     java-version: openjdk11
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
