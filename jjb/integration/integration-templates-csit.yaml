@@ -130,9 +130,8 @@
           send-to-individuals: true
 
 - job-template:
-    name: '{project-name}-{stream}-project-csit-{functionality}'
+    name: '{project-name}-{stream}-project-csit-{functionality}-PoC'
     disabled: '{disabled}'
-
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
     node: '{build-node}'
@@ -155,6 +154,8 @@
           test-plan: 'plans/{functionality}'
       - integration-test-options:
           test-options: '{robot-options}'
+      - integration-unique-docker-tag:
+          unique-docker-tag: ''
 
     scm:
       - gerrit-trigger-scm:
@@ -187,7 +188,7 @@
           send-to-individuals: true
 
 - job-template:
-    name: '{project-name}-unified-review-{stream}-test'
+    name: '{project-name}-unified-review-{stream}-PoC'
     disabled: '{disabled}'
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -222,7 +223,7 @@
           global-settings-file: "{mvn-global-settings}"
           settings-file: "{mvn-settings}"
       - trigger-builds:
-         -  project: "{project-name}-{stream}-docker-golang-shell-daily"
+         -  project: "{project-name}-{stream}-docker-golang-snapshot-PoC"
             condition: UNSTABLE_OR_BETTER
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
@@ -231,7 +232,7 @@
               GERRIT_REFSPEC=$GERRIT_REFSPEC
             block: true
       - trigger-builds:
-         -  project: '{project-name}-{stream}-project-csit-{review-functionality}'
+         -  project: "{jobs_to_trigger}"
             condition: UNSTABLE_OR_BETTER
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
