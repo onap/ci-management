@@ -6,7 +6,7 @@
     jobs:
       - '{project-name}-{stream}-verify-golang'
       - '{project-name}-{stream}-merge-golang'
-      - '{project-name}-{stream}-docker-golang-shell-daily':
+      - '{project-name}-{stream}-docker-golang-snapshot-PoC':
           script:
             !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
     project: 'music/distributed-kv-store'

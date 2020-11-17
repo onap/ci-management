@@ -7,4 +7,4 @@ echo $CURRENTDIR
 
 chmod 755 ./deployment/*.sh
 cd ./deployment
-./docker-build.sh ${UNIQUE_DOCKER_TAG}
+./docker-build.sh
