@@ -22,6 +22,30 @@
       "revId": "fd9769fd872cd8a43afb15d3a9dc0e9683ee3b8b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de49bcfc_044a588d",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-17T22:38:49Z",
+      "side": 1,
+      "message": "I don\u0027t see the issue with using \"-\", I am using Jenkins Job Builder version: 3.4.0\n\nI would recommend using \"-\" since teams are not used to variables with underscores in jjb and can get confusing.",
+      "parentUuid": "74c9a353_d343ae16",
+      "range": {
+        "startLine": 235,
+        "startChar": 23,
+        "endLine": 235,
+        "endChar": 38
+      },
+      "revId": "fd9769fd872cd8a43afb15d3a9dc0e9683ee3b8b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
