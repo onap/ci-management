@@ -34,8 +34,8 @@
               branch: 'master'
         - 'frankfurt':
               branch: 'frankfurt'
-        - 'elalto':
-              branch: 'elalto'
+        - 'guilin':
+              branch: 'guilin'
         - 'tosca-poc':
               branch: 'tosca-poc'
     mvn-settings: 'clamp-settings'
