@@ -70,6 +70,30 @@
       "revId": "fd9769fd872cd8a43afb15d3a9dc0e9683ee3b8b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9153bfe7_34c340ca",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-18T08:42:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "642d0426_76536831",
+      "range": {
+        "startLine": 235,
+        "startChar": 23,
+        "endLine": 235,
+        "endChar": 38
+      },
+      "revId": "fd9769fd872cd8a43afb15d3a9dc0e9683ee3b8b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
