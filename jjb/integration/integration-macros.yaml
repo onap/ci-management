@@ -70,7 +70,7 @@
 - builder:
     name: integration-run-project-test
     builders:
-      - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+      - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTOPTIONS}"
 
 - builder:
     name: integration-autorelease-fix-relativepaths
@@ -131,6 +131,9 @@
     publishers:
       - robot:
           output-path: 'archives'
+          output-xml: '**/output.xml'
+          report-html: '**/report.html'
+          log-html: '**/log.html'
           other-files: ''
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
@@ -141,6 +144,9 @@
     publishers:
       - robot:
           output-path: 'csit/archives'
+          output-xml: '**/output.xml'
+          report-html: '**/report.html'
+          log-html: '**/log.html'
           other-files: ''
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
