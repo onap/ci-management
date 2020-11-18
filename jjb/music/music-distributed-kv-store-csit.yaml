@@ -4,6 +4,7 @@
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}-PoC'
       - '{project-name}-unified-review-{stream}-PoC'
+      - '{project-name}-unified-merge-{stream}-PoC'
     project-name: 'music-distributed-kv-store'
     project: 'music/distributed-kv-store'
     stream: 'master'
