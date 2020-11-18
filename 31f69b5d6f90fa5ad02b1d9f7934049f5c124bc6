@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8963ab20_b286f53d",
+        "filename": "jjb/global-templates-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-18T21:09:29Z",
+      "side": 1,
+      "message": "This seems to be incomplete... Is it meant to be part of this Gerrit?",
+      "range": {
+        "startLine": 312,
+        "startChar": 0,
+        "endLine": 312,
+        "endChar": 54
+      },
+      "revId": "31f69b5d6f90fa5ad02b1d9f7934049f5c124bc6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
