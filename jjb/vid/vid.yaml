@@ -27,8 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'vid-settings'
     files: '**'
     archive-artifacts: ''
