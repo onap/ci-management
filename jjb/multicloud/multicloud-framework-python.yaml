@@ -6,6 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'multicloud-framework-settings'
     build-node: 'ubuntu1804-builder-4c-4g'
     subproject:
