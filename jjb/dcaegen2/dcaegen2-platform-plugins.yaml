@@ -11,6 +11,7 @@
     stream:
       - 'master':
           branch: 'master'
+          python-version: python3
       - 'guilin':
           branch: 'guilin'
     mvn-settings: 'dcaegen2-platform-plugins-settings'
