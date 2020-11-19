@@ -22,6 +22,30 @@
       "revId": "31f69b5d6f90fa5ad02b1d9f7934049f5c124bc6",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fb4a085_3bf872a4",
+        "filename": "jjb/global-templates-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-11-19T12:18:43Z",
+      "side": 1,
+      "message": "Oops, not sure how that happened. This certainly belongs to this commit, but somehow got in completely half-baked. Should be fixed now (not sure if all the additions make sense in this context, but it should at least run the defined tagging script now using the given UNIQUE_DOCKER_TAG, which is the most essential part of it)",
+      "parentUuid": "8963ab20_b286f53d",
+      "range": {
+        "startLine": 312,
+        "startChar": 0,
+        "endLine": 312,
+        "endChar": 54
+      },
+      "revId": "31f69b5d6f90fa5ad02b1d9f7934049f5c124bc6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
