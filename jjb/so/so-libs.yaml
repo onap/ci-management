@@ -16,8 +16,9 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'elalto':
-          branch: 'elalto'
+      - 'guilin':
+          branch: 'guilin'
+          java-version: openjdk11
       - 'frankfurt':
           branch: 'frankfurt'
     mvn-settings: 'so-libs-settings'
@@ -70,4 +71,4 @@
     build-node: centos7-builder-2c-1g
     project: so/libs
     branch: master
-    branch: elalto
+    branch: guilin
