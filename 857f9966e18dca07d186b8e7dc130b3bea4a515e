@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f5c04b27_d2d195eb",
+        "filename": "jjb/so/so-libs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-20T17:56:21Z",
+      "side": 1,
+      "message": "Same here, you might want to remove this next patch",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 18
+      },
+      "revId": "857f9966e18dca07d186b8e7dc130b3bea4a515e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
