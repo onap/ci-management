@@ -131,6 +131,9 @@
     publishers:
       - robot:
           output-path: 'archives'
+          output-xml: '**/output.xml'
+          report-html: '**/report.html'
+          log-html: '**/log.html'
           other-files: ''
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
@@ -141,6 +144,9 @@
     publishers:
       - robot:
           output-path: 'csit/archives'
+          output-xml: '**/output.xml'
+          report-html: '**/report.html'
+          log-html: '**/log.html'
           other-files: ''
           unstable-threshold: '{unstable-if}'
           pass-threshold: '{pass-if}'
