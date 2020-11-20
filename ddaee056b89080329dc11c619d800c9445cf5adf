@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf7bad1d_fc7554b8",
+        "filename": "jjb/so/so.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-11-20T17:55:47Z",
+      "side": 1,
+      "message": "Not a huge deal, but in the next patch you might want to remove this line as is being overwritten anyways by line 117",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 18
+      },
+      "revId": "ddaee056b89080329dc11c619d800c9445cf5adf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
