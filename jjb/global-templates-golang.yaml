@@ -243,14 +243,6 @@
       - infra-wrappers:
           build-timeout: '{build-timeout}'
 
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-
     builders:
       - lf-infra-pre-build
       - provide-maven-settings:
