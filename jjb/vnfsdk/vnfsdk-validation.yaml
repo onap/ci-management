@@ -63,3 +63,17 @@
     build-node: ubuntu1804-builder-4c-4g
     branch: 'master'
     mvn-settings: 'vnfsdk-validation-settings'
+
+- project:
+      name: vnfsdk-validation-upload-docs
+      project: 'vnfsdk/validation'
+      project-name: 'vnfsdk-requirements'
+      mvn-settings: 'vnfsdk-validation-settings'
+      mvn-global-settings: 'global-settings'
+      stream:
+          - 'master':
+                branch: 'master'
+      jobs:
+          - '{project-name}-{stream}-build-and-upload':
+                project_id: org.onap.vnfsdk.refrepo
+                post_script: !include-raw-escape: ./upload-artifact.sh
