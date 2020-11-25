@@ -35,9 +35,9 @@
     project: 'dmaap/datarouter'
     stream:
       - 'frankfurt':
-          branch: 'frankfurt'
+          branch: 'guilin'
       - 'elalto':
-          branch: 'elalto'
+          branch: 'frankfurt'
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''
