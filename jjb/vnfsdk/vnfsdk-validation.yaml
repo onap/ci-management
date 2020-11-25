@@ -11,6 +11,9 @@
         maven-versions-plugin: true
     - '{project-name}-gerrit-release-jobs':
         build-node: centos7-docker-8c-8g
+    - '{project-name}-{stream}-build-and-upload':
+        project_id: org.onap.vnfsdk.refrepo
+        post_script: !include-raw-escape: ./upload-artifact.sh
     project: 'vnfsdk/validation'
     stream:
         - 'master':
