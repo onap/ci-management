@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7934e778_5480c6a6",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-11-26T09:44:36Z",
+      "side": 1,
+      "message": "shouldn\u0027t be tar.gz?",
+      "revId": "601cbd28c3a09b4047591dfa1c60b5023dfcc046",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
