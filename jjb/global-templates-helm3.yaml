@@ -1,0 +1,294 @@
+---
+###########
+# ANCHORS #
+###########
+- helm3_job_boiler_plate: &helm3_job_boiler_plate
+    name: helm3_job_boiler_plate
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    submodule-recursive: true
+
+    # default params for helm3 jobs
+    build_script: ''
+    git-url: '$GIT_URL/$PROJECT'
+    post_build_script: ''
+    pre_build_script: ''
+    submodule-disable: false
+    submodule-timeout: 10
+    build-timeout: 180
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: '{project}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    publishers:
+      - lf-infra-publish
+
+#################
+# JOB TEMPLATES #
+#################
+- job-template:
+    name: '{project-name}-{stream}-verify-helm3'
+    # Job template for helm3 verify jobs
+
+    <<: *helm3_job_boiler_plate
+    concurrent: true
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - gerrit-trigger-helm3-patch-submitted:
+          status-context: '{project}-Helm3-Verify'
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-merge-helm3'
+    # Job template for Helm3 merge jobs
+
+    <<: *helm3_job_boiler_plate
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - gerrit-trigger-helm3-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+      - lf-infra-create-netrc:
+          server-id: oom-helm
+      - inject:
+          properties-content: |
+            BUILD_TYPE=snapshot
+      - shell: '{obj:post_build_script}'
+      - lf-provide-maven-settings-cleanup
+
+- job-template:
+    name: '{project-name}-{stream}-verify-external-helm3'
+    # Job template for helm3 verify jobs
+
+    <<: *helm3_job_boiler_plate
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: 'oom'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_BRANCH'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
+          choosing-strategy: default
+
+    triggers:
+      - gerrit-trigger-helm3-patch-submitted:
+          status-context: '{project}-Helm3-Verify'
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_MODULE={helm-module}'
+      - shell: !include-raw-escape: shell/apply-submodule-patch-oom.sh
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-merge-external-helm3'
+    # Job template for Helm3 merge jobs
+
+    <<: *helm3_job_boiler_plate
+
+    parameters:
+      - lf-infra-parameters:
+          branch: '{branch}'
+          project: 'oom'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_BRANCH'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
+          choosing-strategy: default
+
+    triggers:
+      - gerrit-trigger-helm3-patch-merged:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '{files}'
+
+    builders:
+      - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_MODULE={helm-module}'
+      - lf-provide-maven-settings:
+          global-settings-file: 'global-settings'
+          settings-file: '{mvn-settings}'
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+      - lf-infra-create-netrc:
+          server-id: oom-helm
+      - inject:
+          properties-content: |
+            BUILD_TYPE=snapshot
+      - shell: '{obj:post_build_script}'
+      - lf-provide-maven-settings-cleanup
+
+- job-template:
+    name: '{project-name}-{stream}-stage-helm3'
+    # Job template for Helm3 stage jobs
+
+    <<: *helm3_job_boiler_plate
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: ''
+          choosing-strategy: 'default'
+          submodule-recursive: '{submodule-recursive}'
+
+    triggers:
+      - pollscm:
+          cron: '0 22 * * *'
+      - gerrit:
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: '^stage-helm3$'
+
+    builders:
+      - lf-infra-pre-build
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+      - lf-infra-create-netrc:
+          server-id: oom-helm
+      - inject:
+          properties-content: |
+            BUILD_TYPE=staging
+      - shell: '{obj:post_build_script}'
+      - lf-provide-maven-settings-cleanup
+
+- job-template:
+    name: '{project-name}-{subproject}-{stream}-verify-helm3'
+    # Job template for helm3 verify jobs
+
+    <<: *helm3_job_boiler_plate
+
+    disabled: true
+    builders:
+      - lf-infra-pre-build
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{subproject}-{stream}-merge-helm3'
+    # Job template for helm3 merge jobs
+
+    <<: *helm3_job_boiler_plate
+
+    disabled: true
+    builders:
+      - lf-infra-pre-build
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+- job-template:
+    name: '{project-name}-{stream}-update-helm3-weekly'
+    # Job template for weekly helm3 update jobs
+    #
+    # Required Variables:
+    #     branch:    git branch (eg. stable/lithium or master)
+    <<: *helm3_job_boiler_plate
+
+    disabled: true
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '$GIT_URL/$PROJECT'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: true
+          submodule-timeout: '{submodule-timeout}'
+          submodule-disable: '{submodule-disable}'
+          choosing-strategy: default
+
+    builders:
+      - lf-infra-pre-build
+      - shell: '{pre_build_script}'
+      - shell: '{build_script}'
+      - shell: '{post_build_script}'
+
+    triggers:
+      # 11 AM UTC
+      - timed: '@daily'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
