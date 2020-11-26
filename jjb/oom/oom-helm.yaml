@@ -5,111 +5,65 @@
     project: oom
     mvn-settings: oom-settings
     mvn-global-settings: global-settings
-    archive-artifacts: ''
+    archive-artifacts: ""
     build-node: ubuntu1804-helm-2c-1g
     pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
     oom_build_script: |
-        #!/bin/bash
-        set -e -o pipefail
-        cd kubernetes/
-        make all
+      #!/bin/bash
+      set -e -o pipefail
+      cd kubernetes/
+      make HELM_BIN=helm3 all
     subproject_build_script: |
-        #!/bin/bash
-        cd kubernetes/
-        make common
-        make {subproject}
+      #!/bin/bash
+      cd kubernetes/
+      make HELM_BIN=helm3 common
+      make HELM_BIN=helm3 {subproject}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
 
     stream:
-      - 'master':
-          branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
-      - 'frankfurt':
-          branch: 'frankfurt'
-      - 'dublin':
-          branch: 'dublin'
-      - 'casablanca':
-          branch: 'casablanca'
+      - "master":
+          branch: "master"
+      - "guilin":
+          branch: "guilin"
+      - "frankfurt":
+          branch: "frankfurt"
+      - "dublin":
+          branch: "dublin"
+      - "casablanca":
+          branch: "casablanca"
 
     subproject:
-      - 'aaf':
-          files: 'kubernetes/aaf/**'
-      - 'aai':
-          files: 'kubernetes/aai/**'
-      - 'appc':
-          files: 'kubernetes/appc/**'
-      - 'clamp':
-          files: 'kubernetes/clamp/**'
-      - 'cli':
-          files: 'kubernetes/cli/**'
-      - 'common':
-          files: 'kubernetes/common/**'
-      - 'consul':
-          files: 'kubernetes/consul/**'
-      - 'dcaegen2':
-          files: 'kubernetes/dcaegen2/**'
-      - 'dmaap':
-          files: 'kubernetes/dmaap/**'
-      - 'esr':
-          files: 'kubernetes/esr/**'
-      - 'log':
-          files: 'kubernetes/log/**'
-      - 'msb':
-          files: 'kubernetes/msb/**'
-      - 'multicloud':
-          files: 'kubernetes/multicloud/**'
-      - 'nbi':
-          files: 'kubernetes/nbi/**'
-      - 'oof':
-          files: 'kubernetes/oof/**'
-      - 'policy':
-          files: 'kubernetes/policy/**'
-      - 'portal':
-          files: 'kubernetes/portal/**'
-      - 'readiness':
-          files: 'kubernetes/readiness/**'
-      - 'robot':
-          files: 'kubernetes/robot/**'
-      - 'sdc':
-          files: 'kubernetes/sdc/**'
-      - 'sdnc':
-          files: 'kubernetes/sdnc/**'
-      - 'sniro-emulator':
-          files: 'kubernetes/sniro-emulator/**'
-      - 'so':
-          files: 'kubernetes/so/**'
-      - 'uui':
-          files: 'kubernetes/uui/**'
-      - 'vfc':
-          files: 'kubernetes/vfc/**'
-      - 'vid':
-          files: 'kubernetes/vid/**'
-      - 'vnfsdk':
-          files: 'kubernetes/vnfsdk/**'
+      - "aai":
+          files: "kubernetes/aai/**"
+      - "robot":
+          files: "kubernetes/robot/**"
 
     jobs:
-      - '{project-name}-{stream}-image-verify':
-          files: '**'
+      - "{project-name}-{stream}-image-verify":
+          files: "**"
+      - "{project-name}-{stream}-verify-helm2":
+          files: "**"
           build-timeout: 240
-      - '{project-name}-{stream}-verify-helm':
-          build_script: '{oom_build_script}'
-          files: '**'
+      - "{project-name}-{stream}-verify-helm":
+          build_script: "{oom_build_script}"
+          files: "**"
           build-timeout: 240
-      - '{project-name}-{stream}-merge-helm':
-          build_script: '{oom_build_script}'
+      - "{project-name}-{stream}-merge-helm":
+          build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
-          files: '**'
-      - '{project-name}-{stream}-stage-helm':
-          build_script: '{oom_build_script}'
+          files: "**"
+      - "{project-name}-{stream}-stage-helm":
+          build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
-          files: '**'
+          files: "**"
 
       # Below jobs disabled until future need.
-      - '{project-name}-{subproject}-{stream}-verify-helm':
-          build_script: '{subproject_build_script}'
-      - '{project-name}-{subproject}-{stream}-merge-helm':
-          build_script: '{subproject_build_script}'
-      - '{project-name}-{stream}-update-helm-weekly':
-          build_script: '{oom_build_script}'
-          files: '**'
+      - "{project-name}-{subproject}-{stream}-verify-helm":
+          build_script: "{subproject_build_script}"
+      - "{project-name}-{subproject}-{stream}-verify-helm3":
+          build_script: "{subproject_build_script_helm3}"
+      - "{project-name}-{subproject}-{stream}-merge-helm":
+          build_script: "{subproject_build_script}"
+      - "{project-name}-{stream}-update-helm-weekly":
+          build_script: "{oom_build_script}"
+          files: "**"

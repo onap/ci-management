@@ -1,0 +1,59 @@
+---
+- job-template:
+    name: "{project-name}-{stream}-verify-helm2"
+    concurrent: true
+    branch: master
+    submodule-recursive: true
+
+    build_script: |
+      #!/bin/bash
+      set -e -o pipefail
+      cd kubernetes/
+      make all
+    git-url: "$GIT_URL/$PROJECT"
+    post_build_script: ""
+    pre_build_script: !include-raw-escape: shell/helm2-repo-init.sh
+    submodule-disable: false
+    submodule-timeout: 10
+
+    project-type: freestyle
+    node: "{build-node}"
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: "{build-days-to-keep}"
+
+    parameters:
+      - lf-infra-parameters:
+          branch: "{branch}"
+          project: "{project}"
+          stream: "{stream}"
+          lftools-version: "{lftools-version}"
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+
+    publishers:
+      - lf-infra-publish
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "gerrit"
+          submodule-recursive: "{submodule-recursive}"
+
+    triggers:
+      - gerrit-trigger-helm-patch-submitted:
+          status-context: "{project}-Helm-Verify"
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{files}"
+
+    builders:
+      builders:
+        - lf-infra-pre-build
+        - shell: "{obj:pre_build_script}"
+        - shell: "{obj:build_script}"
