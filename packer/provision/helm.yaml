@@ -8,6 +8,8 @@
   vars:
     kubectl_version: 1.15.11
     helm_version: 2.16.6
+    helm3_version: 3.3.4
+    chartmuseum_version: 0.12.0
 
   tasks:
     - name: 'Install kubectl {{kubectl_version}}'
@@ -21,7 +23,7 @@
       block:
         - name: 'Fetch tar.gz'
           get_url:
-            url: http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz
+            url: "http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz"
             dest: /tmp/helm-v{{helm_version}}-linux-amd64.tar.gz
         - name: 'Unarchive'
           unarchive:
@@ -34,5 +36,41 @@
           become: yes
         - name: 'Check helm.'
           command: 'which helm'
+
+
+    - name: 'Install Helm3 {{helm3_version}}'
+      block:
+        - name: create directory
+          file:
+            path: /tmp/helm3
+            state: directory
+        - name: 'Fetch tar.gz'
+          get_url:
+            url: "http://storage.googleapis.com/kubernetes-helm/helm-v{{helm3_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz
+        - name: 'Unarchive'
+          unarchive:
+            src: /tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz
+            dest: /tmp/helm3
+            remote_src: true
+          become: yes
+        - name: 'Move helm to /usr/local/bin and set as executable'
+          command: 'mv /tmp/helm3/linux-amd64/helm /usr/local/bin/helm3'
+          become: yes
+        - name: 'Check helm3.'
+          command: 'which helm3'
         - name: 'Check kubectl.'
           command: 'which kubectl'
+
+
+
+    - name: 'Install ChartMuseum {{chartmuseum_version}}'
+      block:
+        - name: 'Fetch bin'
+          get_url:
+            url: "https://s3.amazonaws.com/chartmuseum/release/v{{ chartmuseum_version }}/bin/linux/amd64/chartmuseum"
+            dest: /usr/local/bin/chartmuseum
+            mode: "0777"
+          become: yes
+        - name: 'Check chartmuseum.'
+          command: 'which chartmuseum'
