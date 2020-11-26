@@ -8,6 +8,8 @@
       stream:
           - "master":
                 branch: "master"
+          - "guilin":
+                branch: "guilin"
       functionality:
           - "certservice":
                 trigger_jobs:
