@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8465b0f_1a16485a",
+        "filename": "jjb/vnfsdk/upload-artifact.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-11-27T11:15:08Z",
+      "side": 1,
+      "message": "Shouldn\u0027t you fail the job here in this case? I.e. \"exit 1\"",
+      "revId": "c6f1d20edb235bcf10a9fadb8c34bc72ebcccf59",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
