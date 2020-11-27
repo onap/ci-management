@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "33833c99_9ae62ebf",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-11-27T11:35:23Z",
+      "side": 1,
+      "message": "If this will be left here any commits cherry picked to those branches will fail helm3 validation for obvious reasons. Is it somehow possible to run {project-name}-{subproject}-{stream}-verify-helm3 job only for master and Guilin branch?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 30
+      },
+      "revId": "4aa6d30700b2c4e281071dfbc137fcec1bf13bfe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
