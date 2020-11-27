@@ -9,6 +9,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'dmaap-kafka11aaf-settings'
 
 - project:
