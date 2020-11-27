@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "445feb8e_381e4c0a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-11-27T11:36:26Z",
+      "side": 1,
+      "message": "legit? :\u003e",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 15
+      },
+      "revId": "4aa6d30700b2c4e281071dfbc137fcec1bf13bfe",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "33833c99_9ae62ebf",
         "filename": "jjb/oom/oom-helm.yaml",
         "patchSetId": 4
