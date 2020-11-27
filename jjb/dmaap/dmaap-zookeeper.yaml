@@ -9,6 +9,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'dmaap-zookeeper-settings'
 - project:
     name: dmaap-zookeeper-docker
