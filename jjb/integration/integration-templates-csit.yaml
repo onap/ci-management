@@ -130,7 +130,14 @@
           send-to-individuals: true
 
 - job-template:
-    name: '{project-name}-{stream}-project-csit-PoC'
+    # Job template for project-specific CSIT jobs
+    #
+    # The purpose of this job template is to execute
+    # project-specific CSIT test cases for docker image versions 
+    # identified by unique docker tag input parameter
+    #
+
+    name: '{project-name}-{stream}-project-csit'
     disabled: '{disabled}'
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -186,7 +193,16 @@
           send-to-individuals: true
 
 - job-template:
-    name: '{project-name}-unified-review-{stream}-PoC'
+    # Job template for review verification jobs in 
+    # project-specific CSIT flow
+    #
+    # The purpose of this job template is to:
+    #  1. trigger snapshot docker build job
+    #  2. trigger CSIT job
+    #  3. give a verify vote to the triggering review
+    #
+
+    name: '{project-name}-review-verification-{stream}'
     disabled: '{disabled}'
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -221,7 +237,7 @@
           global-settings-file: "{mvn-global-settings}"
           settings-file: "{mvn-settings}"
       - trigger-builds:
-         -  project: "{project-name}-{stream}-{artifact-type}-docker-snapshot-PoC"
+         -  project: "{project-name}-{stream}-{artifact-type}-docker-snapshot"
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
               PROJECT=$PROJECT
@@ -229,7 +245,7 @@
               GERRIT_REFSPEC=$GERRIT_REFSPEC
             block: true
       - trigger-builds:
-         -  project: "{project-name}-{stream}-project-csit-PoC"
+         -  project: "{project-name}-{stream}-project-csit"
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
               PROJECT=$PROJECT
@@ -246,7 +262,17 @@
       - lf-infra-publish
 
 - job-template:
-    name: '{project-name}-unified-merge-{stream}-PoC'
+    # Job template for merge verification jobs in 
+    # project-specific CSIT flow
+    #
+    # The purpose of this job template is to trigger
+    # the following jobs in sequence:
+    #  1. snapshot docker build job
+    #  2. CSIT job
+    #  3. docker staging job
+    #
+
+    name: '{project-name}-merge-verification-{stream}'
     disabled: '{disabled}'
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -281,7 +307,7 @@
           global-settings-file: "{mvn-global-settings}"
           settings-file: "{mvn-settings}"
       - trigger-builds:
-         -  project: "{project-name}-{stream}-{artifact-type}-docker-snapshot-PoC"
+         -  project: "{project-name}-{stream}-{artifact-type}-docker-snapshot"
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
               PROJECT=$PROJECT
@@ -289,7 +315,7 @@
               GERRIT_REFSPEC=$GERRIT_REFSPEC
             block: true
       - trigger-builds:
-         -  project: "{project-name}-{stream}-project-csit-PoC"
+         -  project: "{project-name}-{stream}-project-csit"
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
               PROJECT=$PROJECT
@@ -297,7 +323,7 @@
               GERRIT_REFSPEC=$GERRIT_REFSPEC
             block: true
       - trigger-builds:
-         -  project: "{project-name}-{stream}-docker-staging-PoC"
+         -  project: "{project-name}-{stream}-docker-staging"
             predefined-parameters: |
               UNIQUE_DOCKER_TAG=$BUILD_TAG
               PROJECT=$PROJECT

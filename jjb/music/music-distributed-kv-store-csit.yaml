@@ -2,9 +2,9 @@
 - project:
     name: music-distributed-kv-store-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-PoC'
-      - '{project-name}-unified-review-{stream}-PoC'
-      - '{project-name}-unified-merge-{stream}-PoC'
+      - '{project-name}-{stream}-project-csit'
+      - '{project-name}-review-verification-{stream}'
+      - '{project-name}-merge-verification-{stream}'
     project-name: 'music-distributed-kv-store'
     project: 'music/distributed-kv-store'
     stream: 'master'
