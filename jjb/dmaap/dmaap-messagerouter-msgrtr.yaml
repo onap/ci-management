@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
     files: '**'
     archive-artifacts: ''
