@@ -7,7 +7,7 @@
                   branch: 'master'
       project: 'integration/simulators/ran-simulator'
       mvn-settings: 'integration-simulators-ran-simulator-settings'
-      files: '**'
+      files: 'ransim/**'
       maven-deploy-properties: |
           deployAtEnd=true
       archive-artifacts: ''
