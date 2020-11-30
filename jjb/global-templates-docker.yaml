@@ -302,14 +302,15 @@
                 DOCKERHUB_REGISTRY=docker.io
 
 - job-template:
-    # Job template PoC for tagging snapshot docker images
+    # Job template for tagging snapshot docker images
     # identified by given unique tag as STAGING
+    # in project-specific CSIT versioning flow
     # The purpose of this job template is to run:
     #  1. login to the docker registry
     #  2. run a specified shell builder for tagging
     #
 
-    name: '{project-name}-{stream}-docker-staging-PoC'
+    name: '{project-name}-{stream}-docker-staging'
     project-type: freestyle
     node: 'ubuntu1804-docker-8c-8g'
     disabled: '{disabled}'

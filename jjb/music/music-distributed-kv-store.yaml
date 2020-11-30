@@ -9,10 +9,10 @@
       - '{project-name}-{stream}-docker-golang-shell-daily':
           script:
             !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
-      - '{project-name}-{stream}-golang-docker-snapshot-PoC':
+      - '{project-name}-{stream}-golang-docker-snapshot':
           script:
             !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
-      - '{project-name}-{stream}-docker-staging-PoC':
+      - '{project-name}-{stream}-docker-staging':
           script:
             !include-raw-escape: 'tag-music-distributed-kv-store-image-staging.sh'
     project: 'music/distributed-kv-store'

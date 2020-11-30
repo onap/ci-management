@@ -203,8 +203,8 @@
           maven-version: '{maven-version}'
 
 - job-template:
-    # Job template PoC for building & pushing snapshot docker images
-    # for CSIT verification
+    # Job template for building and pushing uniquely tagged
+    # snapshot docker images in project-specific CSIT flow
     #
     # golangver can be set to golang110 or golang111
     # depending on what version is needed by the project
@@ -215,7 +215,7 @@
     #  2. run a specified shell builder
     #
 
-    name: '{project-name}-{stream}-golang-docker-snapshot-PoC'
+    name: '{project-name}-{stream}-golang-docker-snapshot'
     golangver: 'golang110'
     project-type: freestyle
     node: 'ubuntu1804-docker-8c-8g'
