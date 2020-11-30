@@ -7,7 +7,6 @@
                   branch: 'master'
       project: 'integration/simulators/ran-simulator'
       mvn-settings: 'integration-simulators-ran-simulator-settings'
-      files: 'ransim/**'
       maven-deploy-properties: |
           deployAtEnd=true
       archive-artifacts: ''
@@ -15,6 +14,7 @@
       jobs:
           - '{project-name}-{stream}-verify-java':
                 mvn-goals: 'clean install'
+                pattern: 'ransim/**'
           - '{project-name}-{stream}-merge-java':
                 mvn-goals: 'clean deploy'
           -  '{project-name}-gerrit-release-jobs':
