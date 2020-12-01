@@ -91,9 +91,11 @@
     jobs:
       - '{project-name}-{stream}-image-verify':
           files: '**'
+          build-timeout: 240
       - '{project-name}-{stream}-verify-helm':
           build_script: '{oom_build_script}'
           files: '**'
+          build-timeout: 240
       - '{project-name}-{stream}-merge-helm':
           build_script: '{oom_build_script}'
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
