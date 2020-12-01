@@ -16,6 +16,24 @@
       "revId": "c6f1d20edb235bcf10a9fadb8c34bc72ebcccf59",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0278323e_6a33b9d6",
+        "filename": "jjb/vnfsdk/upload-artifact.sh",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2020-12-01T07:18:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d8465b0f_1a16485a",
+      "revId": "c6f1d20edb235bcf10a9fadb8c34bc72ebcccf59",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
