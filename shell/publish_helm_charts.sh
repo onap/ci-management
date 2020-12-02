@@ -20,8 +20,7 @@ for chart in "${helm_charts[@]}"; do
       curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$GERRIT_BRANCH/$GIT_COMMIT/$chart"
       ;;
     'release')
-      echo "Release automation not implemented yet."
-      exit 1
+      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$chart"
         ;;
     *)
       echo "You must set BUILD_TYPE to one of (snapshot, staging, release)."
