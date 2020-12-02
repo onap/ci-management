@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4930fd33_5a242126",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-02T15:56:01Z",
+      "side": 1,
+      "message": "oh thanks!\nI was struggling on finding the issue!",
+      "parentUuid": "7080aabe_61e35766",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 37
+      },
+      "revId": "de8ad7d896990a39e68f63c8dec376b183820e94",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8216ba3d_76a00b32",
         "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
         "patchSetId": 6
@@ -45,6 +69,30 @@
       "revId": "de8ad7d896990a39e68f63c8dec376b183820e94",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5d4c21c_01ed7eb9",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-02T15:56:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8216ba3d_76a00b32",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 37
+      },
+      "revId": "de8ad7d896990a39e68f63c8dec376b183820e94",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
