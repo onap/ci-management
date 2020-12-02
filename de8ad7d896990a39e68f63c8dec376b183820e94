@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7080aabe_61e35766",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2020-12-02T15:52:23Z",
+      "side": 1,
+      "message": "This should have \"builders\" twice. Remove one and fix the indentation.",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 37
+      },
+      "revId": "de8ad7d896990a39e68f63c8dec376b183820e94",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8216ba3d_76a00b32",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2020-12-02T15:52:23Z",
+      "side": 1,
+      "message": "Same as above, this should only have \"builders\" once.",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 118,
+        "endChar": 37
+      },
+      "revId": "de8ad7d896990a39e68f63c8dec376b183820e94",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
