@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82351255_cf67282a",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-12-03T08:26:14Z",
+      "side": 1,
+      "message": "Values for those vars from jjb/oom/oom-helm.yaml will override those defined in this template scope so even for helm2 shell/helm-repo-init.sh will be picked up. You can check the rendered configuration here: https://jenkins.onap.org/sandbox/job/oom-master-verify-helm2/configure",
+      "range": {
+        "startLine": 57,
+        "startChar": 1,
+        "endLine": 58,
+        "endChar": 35
+      },
+      "revId": "9a170053eb4b080f7741924d93770003b166e74e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
