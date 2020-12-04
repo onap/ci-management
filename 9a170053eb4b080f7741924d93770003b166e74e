@@ -94,6 +94,30 @@
       "revId": "9a170053eb4b080f7741924d93770003b166e74e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "77c954e7_dfad8f8a",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-04T09:27:35Z",
+      "side": 1,
+      "message": "Well I\u0027ve not setup helm2 in jjb/global-templates-helm.yaml as for me it\u0027s a transient state (we should remove it at one point).",
+      "parentUuid": "7be327ec_8ceba7b1",
+      "range": {
+        "startLine": 57,
+        "startChar": 1,
+        "endLine": 58,
+        "endChar": 35
+      },
+      "revId": "9a170053eb4b080f7741924d93770003b166e74e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
