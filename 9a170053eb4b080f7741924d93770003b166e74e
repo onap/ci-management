@@ -22,6 +22,30 @@
       "revId": "9a170053eb4b080f7741924d93770003b166e74e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ff80105_2d23c3f3",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-04T07:54:20Z",
+      "side": 1,
+      "message": "I can\u0027t read it: sdesbure is missing the Job/ExtendedRead permission :( but OK I\u0027ll put the script directly",
+      "parentUuid": "82351255_cf67282a",
+      "range": {
+        "startLine": 57,
+        "startChar": 1,
+        "endLine": 58,
+        "endChar": 35
+      },
+      "revId": "9a170053eb4b080f7741924d93770003b166e74e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
