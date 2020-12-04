@@ -40,7 +40,7 @@
     project-name: 'vnfsdk-validation'
     branch: 'master'
     mvn-settings: 'vnfsdk-validation-settings'
-    mvn-goals: 'clean install -DskipDocsGeneration=false'
+    mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
@@ -70,6 +70,7 @@
       project-name: 'vnfsdk-requirements'
       mvn-settings: 'vnfsdk-validation-settings'
       mvn-global-settings: 'global-settings'
+      mvn-goals: 'clean install -DskipDocsGeneration=false'
       stream:
           - 'master':
                 branch: 'master'
