@@ -27,8 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'guilin':
+          branch: 'guilin'
     mvn-settings: 'testsuite-settings'
 
 - project:
