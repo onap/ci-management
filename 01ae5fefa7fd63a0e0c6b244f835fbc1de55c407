@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a03a3dbf_613813a2",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-07T07:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b9cb7e01_dea1ffe6",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 0
+      },
+      "revId": "01ae5fefa7fd63a0e0c6b244f835fbc1de55c407",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "68c6502c_caec62ec",
         "filename": "packer/provision/helm.yaml",
         "patchSetId": 11
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "0e5d7259_40cc3b95",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-07T07:34:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "68c6502c_caec62ec",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 0
+      },
+      "revId": "01ae5fefa7fd63a0e0c6b244f835fbc1de55c407",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "acfac56e_8659f896",
         "filename": "packer/provision/helm.yaml",
         "patchSetId": 11
@@ -68,6 +116,30 @@
       "revId": "01ae5fefa7fd63a0e0c6b244f835fbc1de55c407",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1eab20e8_5a26bcde",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 11
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-07T07:34:54Z",
+      "side": 1,
+      "message": "moved to 0755",
+      "parentUuid": "acfac56e_8659f896",
+      "range": {
+        "startLine": 73,
+        "startChar": 19,
+        "endLine": 73,
+        "endChar": 23
+      },
+      "revId": "01ae5fefa7fd63a0e0c6b244f835fbc1de55c407",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
