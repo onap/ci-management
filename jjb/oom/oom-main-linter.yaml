@@ -1,0 +1,19 @@
+- project:
+    name: oom-main-linters
+    project: oom
+    project-name: oom
+    python-version: python3
+    jobs:
+      - oom-linters
+    subproject:
+      - "commit":
+          tox-dir: "."
+          tox-envs: "gitlint"
+          pattern: "**"
+    stream:
+      - "master":
+          branch: "master"
+      - "frankfurt":
+          branch: "frankfurt"
+      - "stuttgart":
+          branch: "stuttgart"
