@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b20d10a7_dabbd6d5",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-12-07T21:32:27Z",
+      "side": 1,
+      "message": "Most of this code is repeated in the 2 jobs. \nCan we optimize it by re-using this anchor?\nhttps://github.com/onap/ci-management/blob/master/jjb/global-templates-helm.yaml#L5",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 26
+      },
+      "revId": "c20d3981ead5df88d5763700b48cfbb17310c089",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
