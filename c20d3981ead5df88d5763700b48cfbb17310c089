@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "b7d8fd4d_fd29894b",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2020-12-07T21:34:23Z",
+      "side": 1,
+      "message": "This trigger will also spin the old helm jobs. Is that ok?\n\nOtherwise, we an crate a separate macro for helm2",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 44
+      },
+      "revId": "c20d3981ead5df88d5763700b48cfbb17310c089",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b20d10a7_dabbd6d5",
         "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
         "patchSetId": 12
