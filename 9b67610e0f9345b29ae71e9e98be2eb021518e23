@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91f7ab2c_de2a967b",
+        "filename": "jjb/oom/oom-main-linter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-12-07T10:24:23Z",
+      "side": 1,
+      "message": "stuttgart??",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 29
+      },
+      "revId": "9b67610e0f9345b29ae71e9e98be2eb021518e23",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
