@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b71eff9c_c0a4e934",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-08T11:07:31Z",
+      "side": 1,
+      "message": "yes it\u0027s OK\nit\u0027s actually the same stuff as oom-image-verify which works as expected for us :)",
+      "parentUuid": "b7d8fd4d_fd29894b",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 44
+      },
+      "revId": "c20d3981ead5df88d5763700b48cfbb17310c089",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b20d10a7_dabbd6d5",
         "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
         "patchSetId": 12
@@ -45,6 +69,30 @@
       "revId": "c20d3981ead5df88d5763700b48cfbb17310c089",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9823c306_3baed266",
+        "filename": "jjb/oom/oom-helm-verify-helm2.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-08T11:07:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b20d10a7_dabbd6d5",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 26
+      },
+      "revId": "c20d3981ead5df88d5763700b48cfbb17310c089",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
