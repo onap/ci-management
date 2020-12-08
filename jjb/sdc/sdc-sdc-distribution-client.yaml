@@ -22,10 +22,13 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
       - 'guilin':
           branch: 'guilin'
+          java-version: openjdk8
       - 'frankfurt':
           branch: 'frankfurt'
+          java-version: openjdk8
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
