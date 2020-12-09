@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3bff9add_6e642e9c",
+        "filename": "jjb/integration/integration-maven-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-12-09T14:54:22Z",
+      "side": 1,
+      "message": "This is basically from global-jjb/jjb/lf-maven-jobs.yaml, but I didn\u0027t feel comfortable touching anything the global-jjb submodule. Should I try to move this content there, and how exactly would that be done?",
+      "revId": "c2c6b26bb40c58a79c6862702d2bb9ac72b5eab6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "50edbab2_0b600bb6",
+        "filename": "jjb/integration/integration-maven-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-12-09T14:54:22Z",
+      "side": 1,
+      "message": "This is largely copied and pasted from lf-maven-docker-stage, only some release pushing and triggers have been dropped. I\u0027m not sure if something more could be dropped here (signing maybe?), any opinions?",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 43
+      },
+      "revId": "c2c6b26bb40c58a79c6862702d2bb9ac72b5eab6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
