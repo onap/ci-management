@@ -20,6 +20,16 @@
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+      - gerrit-maven-docker-snapshot-PoC:
+          build-node: ubuntu1804-docker-8c-8g
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-snapshot-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-Dmaven.test.skip=true -P docker'
+          maven-versions-plugin: true
+      - '{project-name}-{stream}-docker-staging':
+          script:
+            !include-raw-escape: 'tag-ccsdk-distribution-images-staging.sh'
+
     project: 'ccsdk/distribution'
     stream:
       - 'master':
