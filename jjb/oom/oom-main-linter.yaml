@@ -10,6 +10,18 @@
           tox-dir: "."
           tox-envs: "gitlint"
           pattern: "**"
+      - "doc8":
+          tox-dir: "."
+          tox-envs: "doc8"
+          pattern: "docs/**"
+      - "linkcheck":
+          tox-dir: "."
+          tox-envs: "docs-linkcheck"
+          pattern: "docs/**"
+      - "sphinx":
+          tox-dir: "."
+          tox-envs: "docs"
+          pattern: "docs/**"
     stream:
       - "master":
           branch: "master"
