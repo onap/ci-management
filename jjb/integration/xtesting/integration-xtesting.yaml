@@ -16,6 +16,10 @@
       jobs:
           - integration-linters
       subproject:
+          - 'commit':
+                tox-dir: '.'
+                tox-envs: 'gitlint'
+                pattern: '**'
           - 'yaml':
                 tox-dir: '.'
                 tox-envs: 'yaml'
@@ -35,6 +39,10 @@
       stream:
           - 'master':
                 branch: 'master'
+          - 'frankfurt':
+                branch: 'frankfurt'
+          - 'guilin':
+                branch: 'guilin'
 
 - project:
     name: integration-xtesting-release
@@ -102,9 +110,6 @@
     stream:
       - 'master':
             branch: 'master'
-            files: ''
-      - 'frankfurt':
-            branch: 'frankfurt'
             files: ''
       - 'guilin':
             branch: 'guilin'
