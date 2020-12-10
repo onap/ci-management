@@ -1,0 +1,79 @@
+---
+- project:
+    name: policy-clamp
+    project-name: 'policy-clamp'
+    jobs:
+      - gerrit-maven-stage:
+          build-node: ubuntu1804-docker-8c-16g
+          maven-versions-plugin: true
+          sign-artifacts: true
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-Dmaven.test.skip=true -P docker'
+      - '{project-name}-{stream}-verify-java':
+          mvn-params: '-P docker'
+          build-node: ubuntu1804-docker-8c-16g
+      - '{project-name}-{stream}-merge-java':
+         mvn-params: '-P docker'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+    project: 'policy/clamp'
+    stream:
+        - 'master':
+              branch: 'master'
+        - 'frankfurt':
+              branch: 'frankfurt'
+        - 'guilin':
+              branch: 'guilin'
+        - 'tosca-poc':
+              branch: 'tosca-poc'
+    mvn-settings: 'clamp-settings'
+    java-version: openjdk11
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
+
+- project:
+    name: policy-clamp-sonar
+    jobs:
+      - gerrit-maven-sonar:
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: ubuntu1804-docker-8c-8g
+    project: 'policy/clamp'
+    project-name: 'policy-clamp'
+    branch: 'master'
+    mvn-settings: 'clamp-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
+
+- project:
+    name: policy-clamp-clm
+    jobs:
+      - gerrit-maven-clm:
+         mvn-params: '-Ddocker.pull.registry=nexus3.onap.org:10001'
+    nexus-iq-namespace: 'onap-'
+    project: 'policy/clamp'
+    project-name: 'policy-clamp'
+    branch: 'master'
+    mvn-settings: 'clamp-settings'
+    build-node: ubuntu1804-docker-8c-8g
+    java-version: openjdk11
+
+- project:
+    name: policy-clamp-info
+    project-name: policy-clamp
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: policy/clamp
+    branch: master
