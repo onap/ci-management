@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "de169505_1df77d42",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "457152f1_656bad96",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9855393_a66b87fe",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -98,6 +122,24 @@
       "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0ca883f_130c7f81",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2c3f735_81e2282b",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -148,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "3861a392_b7b25822",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5abea6ce_2d6a08d4",
+      "range": {
+        "startLine": 15,
+        "startChar": 33,
+        "endLine": 15,
+        "endChar": 55
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bfdf93bb_09ac774f",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -192,6 +258,30 @@
       "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0abbad9e_ec59694c",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "181f2111_181accf4",
+      "range": {
+        "startLine": 16,
+        "startChar": 23,
+        "endLine": 16,
+        "endChar": 67
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -242,6 +332,30 @@
     },
     {
       "key": {
+        "uuid": "978906b1_52e8325f",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7a2028e_98c6601a",
+      "range": {
+        "startLine": 18,
+        "startChar": 33,
+        "endLine": 18,
+        "endChar": 54
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "74104834_47fe7410",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -289,6 +403,30 @@
     },
     {
       "key": {
+        "uuid": "30e7022f_e1d04e91",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c344de30_55440ff0",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 56
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "148ac19c_31c9cab2",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -324,6 +462,24 @@
     },
     {
       "key": {
+        "uuid": "ffdfe967_e6dc4149",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72449897_b862c112",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0936965_e7d96965",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -344,6 +500,30 @@
       "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0064d27a_3cd1066f",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0936965_e7d96965",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 22
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -391,6 +571,30 @@
       "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "355cc2b8_80bf946e",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:09:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "43710a2b_af39a44a",
+      "range": {
+        "startLine": 77,
+        "startChar": 18,
+        "endLine": 77,
+        "endChar": 23
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
