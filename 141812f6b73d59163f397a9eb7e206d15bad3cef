@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "457152f1_656bad96",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "Yeah we used a beefier node because we have an Integration test phase running some docker containers during the build (all tests are executed in parallel)\nThis stage step executes the tests so we can\u0027t use another node or it\u0027s going to fail.",
+      "parentUuid": "eb280782_ebcc2a93",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b9855393_a66b87fe",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -59,6 +83,24 @@
     },
     {
       "key": {
+        "uuid": "c2c3f735_81e2282b",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "We did not have that before, i can add it no problem.",
+      "parentUuid": "b9855393_a66b87fe",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2abbb38e_98f041a3",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -70,6 +112,30 @@
       "writtenOn": "2020-12-10T15:09:46Z",
       "side": 1,
       "message": "we typically just use: verify-java",
+      "range": {
+        "startLine": 15,
+        "startChar": 33,
+        "endLine": 15,
+        "endChar": 55
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5abea6ce_2d6a08d4",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "Right, this one was a special one to enable the checkstyle reporting in jenkins (we have been requested to do so by the LF a while ago, it was a trial for them)\n\nNow that the maven parent has the checkstyle plugin, we can remove it.",
+      "parentUuid": "2abbb38e_98f041a3",
       "range": {
         "startLine": 15,
         "startChar": 33,
@@ -105,6 +171,30 @@
     },
     {
       "key": {
+        "uuid": "181f2111_181accf4",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "It\u0027s a legacy stuff, this is declared in the pom anyway.\nGood point for the docker, it\u0027s the time to check it.",
+      "parentUuid": "bfdf93bb_09ac774f",
+      "range": {
+        "startLine": 16,
+        "startChar": 23,
+        "endLine": 16,
+        "endChar": 67
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e1f08129_cd31ea9e",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -116,6 +206,30 @@
       "writtenOn": "2020-12-10T15:09:46Z",
       "side": 1,
       "message": "we typically just use merge-java",
+      "range": {
+        "startLine": 18,
+        "startChar": 33,
+        "endLine": 18,
+        "endChar": 54
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d7a2028e_98c6601a",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "I can try to use that template, should not be a problem",
+      "parentUuid": "e1f08129_cd31ea9e",
       "range": {
         "startLine": 18,
         "startChar": 33,
@@ -151,6 +265,30 @@
     },
     {
       "key": {
+        "uuid": "c344de30_55440ff0",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "Yep will do it, it makes sense to have it there.",
+      "parentUuid": "74104834_47fe7410",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 56
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "148ac19c_31c9cab2",
         "filename": "jjb/policy/policy-clamp.yaml",
         "patchSetId": 2
@@ -162,6 +300,24 @@
       "writtenOn": "2020-12-10T15:09:46Z",
       "side": 1,
       "message": "is this line needed?  policy doesn\u0027t typically include it\n\nsame comment on line 65",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72449897_b862c112",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "It\u0027s a legacy stuff, I\u0027ll remove it",
+      "parentUuid": "148ac19c_31c9cab2",
       "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
@@ -202,6 +358,30 @@
       "writtenOn": "2020-12-10T15:09:46Z",
       "side": 1,
       "message": "policy",
+      "range": {
+        "startLine": 77,
+        "startChar": 18,
+        "endLine": 77,
+        "endChar": 23
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "43710a2b_af39a44a",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 23
+      },
+      "writtenOn": "2020-12-10T15:48:39Z",
+      "side": 1,
+      "message": "Typo thanks :-)",
+      "parentUuid": "95927bdb_849f95fd",
       "range": {
         "startLine": 77,
         "startChar": 18,
