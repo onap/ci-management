@@ -1,0 +1,216 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54f0c30a_3d47c4d6",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "my comments below are based on comparing this file to this:\n\n  https://gerrit.onap.org/r/gitweb?p\u003dci-management.git;a\u003dblob;f\u003djjb/policy/policy-distribution.yaml;h\u003d36ce1f6bad8702f61af19571348b7b922a3536ae;hb\u003drefs/heads/master",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb280782_ebcc2a93",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "we typically use this for maven-stage:\n\n  centos7-builder-4c-4g",
+      "range": {
+        "startLine": 7,
+        "startChar": 22,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9855393_a66b87fe",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "also need this?\n\n  sign-artifacts: true",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2abbb38e_98f041a3",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "we typically just use: verify-java",
+      "range": {
+        "startLine": 15,
+        "startChar": 33,
+        "endLine": 15,
+        "endChar": 55
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bfdf93bb_09ac774f",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "policy verify jobs typically just use:\n\n  -P docker",
+      "range": {
+        "startLine": 16,
+        "startChar": 23,
+        "endLine": 16,
+        "endChar": 67
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1f08129_cd31ea9e",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "we typically just use merge-java",
+      "range": {
+        "startLine": 18,
+        "startChar": 33,
+        "endLine": 18,
+        "endChar": 54
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74104834_47fe7410",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "policy merge jobs typically use this instead:\n\n  mvn-params: \u0027-P docker\u0027",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 56
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "148ac19c_31c9cab2",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "is this line needed?  policy doesn\u0027t typically include it\n\nsame comment on line 65",
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0936965_e7d96965",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "is this minutes?  if so, does it really take this long?",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 22
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95927bdb_849f95fd",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T15:09:46Z",
+      "side": 1,
+      "message": "policy",
+      "range": {
+        "startLine": 77,
+        "startChar": 18,
+        "endLine": 77,
+        "endChar": 23
+      },
+      "revId": "141812f6b73d59163f397a9eb7e206d15bad3cef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
