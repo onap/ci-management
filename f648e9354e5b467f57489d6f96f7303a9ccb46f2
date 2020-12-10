@@ -22,6 +22,30 @@
       "revId": "f648e9354e5b467f57489d6f96f7303a9ccb46f2",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "37b0554f_ce643b76",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2020-12-10T16:18:11Z",
+      "side": 1,
+      "message": "my bad.  Maybe remove this line altogether",
+      "parentUuid": "6ba3112d_59692396",
+      "range": {
+        "startLine": 63,
+        "startChar": 22,
+        "endLine": 63,
+        "endChar": 66
+      },
+      "revId": "f648e9354e5b467f57489d6f96f7303a9ccb46f2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
