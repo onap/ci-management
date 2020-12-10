@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d220b9fe_0099f0bd",
+        "filename": "jjb/integration/integration-maven-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-12-10T13:13:02Z",
+      "side": 1,
+      "message": "Yes (I suppose that makes them redundant in integration_maven_common for now as nothing else uses that)",
+      "parentUuid": "1df27ac2_76215d44",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 129,
+        "endChar": 31
+      },
+      "revId": "9a4a1a1950239f1ff8b2c6e1b6884391031e9b2b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "bf13b4f3_ca465d2b",
         "filename": "jjb/integration/integration-maven-jobs.yaml",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2020-12-09T21:37:34Z",
       "side": 1,
       "message": "This block seems pretty standard across job templates... can we move it to the integration_maven_common block?",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 141,
+        "endChar": 0
+      },
+      "revId": "9a4a1a1950239f1ff8b2c6e1b6884391031e9b2b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "444a5756_542d26c2",
+        "filename": "jjb/integration/integration-maven-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2020-12-10T13:13:02Z",
+      "side": 1,
+      "message": "Sure. I was trying to keep integration_maven_common the same as lf_maven_common in case we want to move any of this back to global_jjb, but this will now make those genuinely different.",
+      "parentUuid": "bf13b4f3_ca465d2b",
       "range": {
         "startLine": 131,
         "startChar": 0,
