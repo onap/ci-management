@@ -14,7 +14,7 @@
   tasks:
     - name: 'Install kubectl {{kubectl_version}}'
       get_url:
-        url: https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/linux/amd64/kubectl
+        url: "https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/linux/amd64/kubectl"
         dest: /usr/local/bin/kubectl
         mode: 0775
       become: yes
@@ -24,10 +24,10 @@
         - name: 'Fetch tar.gz'
           get_url:
             url: "http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm-v{{helm_version}}-linux-amd64.tar.gz
+            dest: "/tmp/helm-v{{helm_version}}-linux-amd64.tar.gz"
         - name: 'Unarchive'
           unarchive:
-            src: /tmp/helm-v{{helm_version}}-linux-amd64.tar.gz
+            src: "/tmp/helm-v{{helm_version}}-linux-amd64.tar.gz"
             dest: /tmp
             remote_src: true
           become: yes
@@ -45,11 +45,11 @@
             state: directory
         - name: 'Fetch tar.gz'
           get_url:
-            url: "http://storage.googleapis.com/kubernetes-helm/helm-v{{helm3_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz
+            url: "https://get.helm.sh/helm-v{{ helm3_version }}-linux-amd64.tar.gz"
+            dest: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
         - name: 'Unarchive'
           unarchive:
-            src: /tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz
+            src: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
             dest: /tmp/helm3
             remote_src: true
           become: yes
