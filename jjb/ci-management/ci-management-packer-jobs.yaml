@@ -3,6 +3,7 @@
     name: packer-builder-jobs
     jobs:
       - gerrit-packer-merge
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management
@@ -22,6 +23,7 @@
     name: packer-docker-jobs
     jobs:
       - gerrit-packer-merge
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management
@@ -42,6 +44,7 @@
     name: packer-memcached-jobs
     jobs:
       - gerrit-packer-merge
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management
@@ -60,6 +63,7 @@
     name: packer-redis-jobs
     jobs:
       - gerrit-packer-merge
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management
@@ -77,6 +81,7 @@
     name: packer-helm-jobs
     jobs:
       - gerrit-packer-merge
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management
