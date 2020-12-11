@@ -46,7 +46,7 @@
         - name: 'Fetch tar.gz'
           get_url:
             url: "https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz"
-            dest: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3
         - name: 'Unarchive'
           unarchive:
             src: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
@@ -54,7 +54,7 @@
             remote_src: true
           become: yes
         - name: 'Move helm to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3/linux-amd64/helm /usr/local/bin/helm3'
+          command: 'mv helm3/linux-amd64/helm /usr/local/bin/helm3'
           become: yes
         - name: 'Check helm3.'
           command: 'which helm3'
