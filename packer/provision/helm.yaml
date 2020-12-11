@@ -45,7 +45,7 @@
             state: directory
         - name: 'Fetch tar.gz'
           get_url:
-            url: "https://get.helm.sh/helm-v{{ helm3_version }}-linux-amd64.tar.gz"
+            url: "https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz"
             dest: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
         - name: 'Unarchive'
           unarchive:
