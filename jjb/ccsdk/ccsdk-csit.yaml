@@ -1,17 +1,22 @@
 ---
 - project:
-    name: ccsdk-csit
+    name: ccsdk-distribution-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'ccsdk'
+      - '{project-name}-{stream}-project-csit'
+      - '{project-name}-review-verification-{stream}'
+      - '{project-name}-merge-verification-{stream}'
+    project-name: 'ccsdk-distribution'
     recipients: 'dtimoney@att.com'
+    # project name in gerrit
+    project: 'ccsdk/distribution'
     stream:
       - 'master':
           branch: 'master'
-    functionality:
-      - 'healthcheck':
-          trigger_jobs:
+    artifact-type: 'maven'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
+    mvn-settings: 'ccsdk-distribution-settings'
+    mvn-global-settings: global-settings
     robot-options: ''
     branch: 'master'
 
