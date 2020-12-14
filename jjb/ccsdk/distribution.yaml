@@ -26,6 +26,7 @@
           container-snapshot-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -P docker'
           maven-versions-plugin: true
+          maven-version: 'mvn36'
       - '{project-name}-{stream}-docker-staging':
           script:
             !include-raw-escape: 'tag-ccsdk-distribution-images-staging.sh'
