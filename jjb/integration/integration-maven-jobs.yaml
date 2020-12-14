@@ -120,7 +120,7 @@
     mvn-goals: clean deploy
     mvn-opts: ""
     mvn-params: ""
-    mvn-version: mvn35
+    maven-version: mvn36
     ossrh-profile-id: ""
     mvn-pom: ""
     sign-artifacts: false
@@ -138,5 +138,8 @@
           artifacts: '{archive-artifacts}'
       - maven-exec:
           maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
+
       - integration-unique-docker-tag:
           unique-docker-tag: ''
