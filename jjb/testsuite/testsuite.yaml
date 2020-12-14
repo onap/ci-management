@@ -60,10 +60,10 @@
           tox-dir: '.'
           tox-envs: 'json'
           pattern: '**/*.json'
-#      - 'robot':
-#          tox-dir: '.'
-#          tox-envs: 'robot'
-#          pattern: '**/*.robot'
+      - 'robot':
+          tox-dir: '.'
+          tox-envs: 'robot'
+          pattern: 'robot/assets/usecases/*.robot'
     stream:
       - 'master':
           branch: 'master'
