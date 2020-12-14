@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-masspnf-simulator-project-view
+    project-name: integration-simulators-masspnf-simulator
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-masspnf-simulator-info
+    project: integration/simulators/masspnf-simulator
+    project-name: integration-simulators-masspnf-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
