@@ -63,7 +63,9 @@
       - 'robot':
           tox-dir: '.'
           tox-envs: 'robot'
-          pattern: 'robot/assets/usecases/*.robot'
+          pattern: 'robot/testsuites/usecases/*.robot'
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
