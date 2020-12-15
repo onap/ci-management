@@ -12,3 +12,27 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: integration-simulators-masspnf-simulator-docker
+    project-name: integration-simulators-masspnf-simulator
+    jobs:
+      - integration-docker-merge
+      - integration-docker-verify
+    project: integration/simulators/masspnf-simulator
+    stream:
+      - 'master':
+          branch: 'master'
+    subproject:
+      - 'masspnfsim':
+          pom: 'pnf-sim-lightweight/pom.xml'
+          pattern: '**'
+          mvn-goals: 'clean package docker:build -Dcheckstyle.skip'
+          post-docker-verify-script: |
+              #!/bin/bash
+              set -ex # Fail build if any setup step fails
+              cd $WORKSPACE/
+              tox -e pytest
+    mvn-settings: 'integration-settings'
+    files: '**'
+    archive-artifacts: ''
