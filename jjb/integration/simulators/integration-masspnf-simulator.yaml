@@ -36,3 +36,35 @@
     mvn-settings: 'integration-settings'
     files: '**'
     archive-artifacts: ''
+
+- project:
+    name: integration-simulators-masspnf-simulator-linters
+    project: 'integration/simulators/masspnf-simulator'
+    project-name: 'integration-simulators-masspnf-simulator'
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'python':
+          tox-dir: '.'
+          tox-envs: 'py'
+          pattern: '**/*.py'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
+    stream:
+      - 'master':
+          branch: 'master'
