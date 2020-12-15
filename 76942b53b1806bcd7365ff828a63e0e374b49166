@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74346233_2cd697ee",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2671
+      },
+      "writtenOn": "2020-12-15T05:55:41Z",
+      "side": 1,
+      "message": "Morgan, Shouldn\u0027t this be testsuites. assets directory contains only the configuration files.",
+      "range": {
+        "startLine": 66,
+        "startChar": 26,
+        "endLine": 66,
+        "endChar": 33
+      },
+      "revId": "76942b53b1806bcd7365ff828a63e0e374b49166",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
