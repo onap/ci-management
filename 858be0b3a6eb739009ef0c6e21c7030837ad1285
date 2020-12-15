@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9cada14_28ae3e36",
+        "filename": "jjb/testsuite/testsuite.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-12-15T09:29:36Z",
+      "side": 1,
+      "message": "guilin",
+      "range": {
+        "startLine": 70,
+        "startChar": 9,
+        "endLine": 70,
+        "endChar": 15
+      },
+      "revId": "858be0b3a6eb739009ef0c6e21c7030837ad1285",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
