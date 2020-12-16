@@ -39,7 +39,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
@@ -55,7 +55,7 @@
     mvn-settings: 'cps-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-docker-8c-8g
 
 - project:
     name: cps-sonar
@@ -70,7 +70,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-docker-8c-8g
     project: 'cps'
     project-name: 'cps'
     branch: 'master'
