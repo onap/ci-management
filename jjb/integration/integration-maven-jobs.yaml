@@ -46,7 +46,7 @@
           submodule-recursive: "{submodule-recursive}"
           submodule-timeout: "{submodule-timeout}"
           submodule-disable: "{submodule-disable}"
-          choosing-strategy: default
+          choosing-strategy: "gerrit"
 
     wrappers:
       - lf-infra-wrappers:
