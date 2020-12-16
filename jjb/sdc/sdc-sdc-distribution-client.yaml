@@ -36,6 +36,25 @@
     maven-version: 'mvn35'
 
 - project:
+    name: sdc-sdc-distribution-client-integration-pairwise
+    java-version: openjdk11
+    jobs:
+       - '{project-name}-{stream}-integration-pairwise'
+    build-node: ubuntu1804-docker-8c-8g
+    project: 'sdc/sdc-distribution-client'
+    project-name: 'sdc-sdc-distribution-client'
+    stream:
+        - 'master':
+            branch: 'master'
+            java-version: openjdk11
+    mvn-settings: 'sdc-sdc-distribution-client-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-timeout: 60
+    maven-version: 'mvn35'
+    mvn-params: ' -P integration-pairwise'
+
+- project:
     name: sdc-sdc-distribution-client-sonar
     jobs:
       - gerrit-maven-sonar
