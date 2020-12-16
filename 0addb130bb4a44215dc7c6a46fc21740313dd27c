@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f261889_2590d001",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6679
+      },
+      "writtenOn": "2020-12-16T10:31:39Z",
+      "side": 1,
+      "message": "@Jesica, we have tests that will start a docker container and run tests over it. Requirement for this is only to have to docker. We think that using image centos7-docker-8c-8g should be enough.\nBut we had some doubts whether we should add it for all jobs, please let us if we changed more than required.\nThanks",
+      "revId": "0addb130bb4a44215dc7c6a46fc21740313dd27c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
