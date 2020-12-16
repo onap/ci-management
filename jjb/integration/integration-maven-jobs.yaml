@@ -1,4 +1,12 @@
+####################
+# COMMON FUNCTIONS #
+####################
+
 - integration_maven_common: &integration_maven_common
+    # This common maven base template is based on 
+    # lf-maven-common in global-jjb/jjb/lf-maven-jobs.yaml 
+    # and adjusted for jobs in project-specific CSIT flow
+
     name: integration-maven-common
 
     ######################
@@ -96,8 +104,12 @@
       - lf-provide-maven-settings-cleanup
 
 - job-template:
+    # Job template for creating snapshot docker images
+    # identified by given unique tag with maven
+    # in project-specific CSIT flow
+
     name: "{project-name}-{stream}-maven-docker-snapshot"
-    id: gerrit-maven-docker-snapshot-PoC
+    id: gerrit-maven-docker-snapshot
     <<: *integration_maven_common
     # yamllint disable-line rule:key-duplicates
     <<: *integration_maven_docker_snapshot
