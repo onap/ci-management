@@ -3,7 +3,8 @@
     name: ccsdk-distribution
     project-name: 'ccsdk-distribution'
     jobs:
-      - gerrit-maven-verify
+      - gerrit-maven-verify:
+          mvn-params: '-Ddocker.skip.push=true -P docker'
       - gerrit-maven-merge:
           cron: '@daily'
       - gerrit-maven-stage:
