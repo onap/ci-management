@@ -52,6 +52,24 @@
       "revId": "0addb130bb4a44215dc7c6a46fc21740313dd27c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "001a54cc_f15841b3",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6679
+      },
+      "writtenOn": "2020-12-17T10:34:42Z",
+      "side": 1,
+      "message": "@Jessica, another question. We need to add an enviroment variable, I checked the jobs and I can\u0027t add it to Jenkins itself. I dont have rights, what is the way to proceed? Is any chance we could add it in this yaml, and jenkins will pick it?",
+      "parentUuid": "78ab2e50_1a238215",
+      "revId": "0addb130bb4a44215dc7c6a46fc21740313dd27c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
