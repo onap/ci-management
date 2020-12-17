@@ -7,6 +7,7 @@
       - '{project-name}-merge-verification-{stream}'
     project-name: 'music-distributed-kv-store'
     project: 'music/distributed-kv-store'
+    disabled: true
     stream: 'master'
     artifact-type: 'golang'
     java-version: openjdk11
