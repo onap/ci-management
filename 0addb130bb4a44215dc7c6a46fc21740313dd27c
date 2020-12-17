@@ -34,6 +34,24 @@
       "revId": "0addb130bb4a44215dc7c6a46fc21740313dd27c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78ab2e50_1a238215",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6679
+      },
+      "writtenOn": "2020-12-17T08:15:34Z",
+      "side": 1,
+      "message": "@Jesica, thanks for advice. Then we will proceed with this patch.\nRegards",
+      "parentUuid": "d5841b96_0a8e3912",
+      "revId": "0addb130bb4a44215dc7c6a46fc21740313dd27c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
