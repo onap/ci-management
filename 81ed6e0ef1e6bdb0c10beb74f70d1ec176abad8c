@@ -16,6 +16,24 @@
       "revId": "81ed6e0ef1e6bdb0c10beb74f70d1ec176abad8c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93579b8b_90858e6e",
+        "filename": "shell/helm-repo-init.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-12-18T11:42:42Z",
+      "side": 1,
+      "message": "CI minions do not have /tmp configured to be tmpfs, it can be verified in any job log, e.g. https://jenkins.onap.org/view/oom/job/oom-master-commit-lint/120/consoleText:\n\n\n---\u003e df -h:\nFilesystem      Size  Used Avail Use% Mounted on\nudev            2.0G     0  2.0G   0% /dev\ntmpfs           395M  652K  394M   1% /run\n/dev/vda1        20G  7.6G   12G  40% /\ntmpfs           2.0G     0  2.0G   0% /dev/shm\ntmpfs           5.0M     0  5.0M   0% /run/lock\ntmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup\n/dev/vda15      105M  3.6M  101M   4% /boot/efi\ntmpfs           395M     0  395M   0% /run/user/1001",
+      "parentUuid": "267a4095_d83d5bfe",
+      "revId": "81ed6e0ef1e6bdb0c10beb74f70d1ec176abad8c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
