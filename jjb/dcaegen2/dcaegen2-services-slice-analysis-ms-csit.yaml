@@ -1,0 +1,15 @@
+- project:
+    name: dcaegen2-services-slice-analysis-ms-csit
+    jobs:
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-{stream}-csit-{functionality}'
+    project-name: 'dcaegen2-services-slice-analysis-ms'
+    recipients: 'vv770d@att.com ahila.pandaram@wipro.com niranjana.y60@wipro.com'
+    stream:
+      - 'master':
+           branch: 'master'
+    functionality:
+      - 'testsuites':
+          trigger_jobs:
+            - '{project-name}-{stream}-merge-java'
+    robot-options: ''
