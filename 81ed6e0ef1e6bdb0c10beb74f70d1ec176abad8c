@@ -52,6 +52,24 @@
       "revId": "81ed6e0ef1e6bdb0c10beb74f70d1ec176abad8c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "04f0a91e_06d0dadc",
+        "filename": "shell/helm-repo-init.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-12-18T17:49:07Z",
+      "side": 1,
+      "message": "I obviously knew that when I proposed the change (cough cough) ;-)",
+      "parentUuid": "93256feb_4675bf3f",
+      "revId": "81ed6e0ef1e6bdb0c10beb74f70d1ec176abad8c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
