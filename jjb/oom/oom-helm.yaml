@@ -18,7 +18,6 @@
       cd kubernetes/
       make HELM_BIN=helm3 common
       make HELM_BIN=helm3 {subproject}
-    oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
 
     stream:
       - "master":
@@ -50,9 +49,8 @@
           build-timeout: 240
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
-          post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
-      - "{project-name}-{stream}-stage-helm":
+      - "{project-name}-{stream}-release-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
