@@ -199,7 +199,7 @@
       - lf-provide-maven-settings-cleanup
 
 - job-template:
-    name: '{project-name}-{stream}-stage-helm'
+    name: '{project-name}-{stream}-release-helm'
     # Job template for Helm stage jobs
 
     <<: *helm_job_boiler_plate
@@ -211,12 +211,10 @@
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
-      - pollscm:
-          cron: '0 22 * * *'
       - gerrit:
           trigger-on:
             - comment-added-contains-event:
-                comment-contains-value: '^stage-helm$'
+                comment-contains-value: '^release-helm$'
 
     builders:
       - lf-infra-pre-build
@@ -229,7 +227,7 @@
           server-id: oom-helm
       - inject:
           properties-content: |
-            BUILD_TYPE=staging
+            BUILD_TYPE=release
       - shell: '{obj:post_build_script}'
       - lf-provide-maven-settings-cleanup
 
