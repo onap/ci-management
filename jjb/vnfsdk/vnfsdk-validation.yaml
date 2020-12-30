@@ -76,5 +76,5 @@
       jobs:
           - '{project-name}-{stream}-build-and-upload':
                 pre_script: !include-raw-escape: ./generate-dosc.sh
-                project_id: org.onap.vnfsdk.refrepo
+                project_id: org.onap.vnfsdk.validation
                 post_script: !include-raw-escape: ./upload-artifact.sh
