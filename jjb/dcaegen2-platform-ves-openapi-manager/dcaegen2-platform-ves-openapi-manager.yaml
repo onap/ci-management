@@ -1,0 +1,14 @@
+---
+- project:
+    name: dcaegen2-platform-ves-openapi-manager-project-view
+    project-name: dcaegen2-platform-ves-openapi-manager
+    views:
+      - project-view
+
+- project:
+    name: dcaegen2-platform-ves-openapi-manager-info
+    project: dcaegen2/platform/ves-openapi-manager
+    project-name: dcaegen2-platform-ves-openapi-manager
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
