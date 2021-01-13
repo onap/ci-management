@@ -325,8 +325,9 @@
           submodule-recursive: '{submodule-recursive}'
 
     wrappers:
-      - infra-wrappers:
+      - lf-infra-wrappers:
           build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
 
     triggers:
       - gerrit-trigger-patch-merged:
