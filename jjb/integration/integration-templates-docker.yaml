@@ -59,8 +59,7 @@
             - docker.push.registry=nexus3.onap.org:10003
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     name: '{project-name}-{stream}-{subproject}-docker-verify'
@@ -124,8 +123,7 @@
       - shell: '{post-docker-verify-script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     name: '{project-name}-{stream}-{subproject}-docker-compose-verify'

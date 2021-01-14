@@ -301,6 +301,9 @@
                 PARENT_JOB_NAME=$JOB_NAME
                 DOCKERHUB_REGISTRY=docker.io
 
+    publishers:
+      - lf-infra-publish
+
 - job-template:
     # Job template for tagging snapshot docker images
     # identified by given unique tag as STAGING
@@ -347,6 +350,4 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-
+      - lf-infra-publish

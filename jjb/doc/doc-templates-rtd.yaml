@@ -82,8 +82,7 @@
           mv  docs/_build/html "$WORKSPACE/archives/"
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for merging/publishing Sphinx/Restructured Text at RTD
@@ -160,6 +159,4 @@
       - shell: !include-raw: doc-post-rtd.sh
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-
+      - lf-infra-publish

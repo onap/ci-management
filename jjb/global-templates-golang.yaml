@@ -68,8 +68,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for Golang verify jobs with subproject support
@@ -139,8 +138,7 @@
           make deploy
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building & pushing docker images
@@ -199,8 +197,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building and pushing uniquely tagged
@@ -254,5 +251,4 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish

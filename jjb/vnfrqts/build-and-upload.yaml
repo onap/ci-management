@@ -66,5 +66,4 @@
       - lf-provide-maven-settings-cleanup
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish

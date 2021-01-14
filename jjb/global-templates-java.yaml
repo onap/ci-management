@@ -75,8 +75,7 @@
           global-settings-type: cfp
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for Java verify jobs running checkstyle at the end
@@ -93,9 +92,9 @@
 
     <<: *verify_java_defaults
     name: '{project-name}-{stream}-verify-java-checkstyle'
+
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
       - checkstyle-result
 
 - job-template:
@@ -204,9 +203,9 @@
           settings-type: cfp
           global-settings: 'global-settings'
           global-settings-type: cfp
+
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
       - checkstyle-result-daily
 
 - job-template:
@@ -281,8 +280,7 @@
           global-settings-type: cfp
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template: &merge_java_defaults
     # Job template for Java merge jobs
@@ -365,8 +363,7 @@
           properties: '{obj:mvn_properties}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for Java merge jobs based on
@@ -506,8 +503,7 @@
           mvn-params: '{mvn-params}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for Docker daily jobs
@@ -592,8 +588,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building & pushing docker images
@@ -661,8 +656,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building & pushing docker images
@@ -737,8 +731,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building & pushing docker images
@@ -816,8 +809,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template: &docker_version_java_defaults
     # Job template for building & pushing docker images
@@ -894,8 +886,7 @@
           mvn-params: '{mvn-params}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for building & pushing docker images
@@ -1005,8 +996,7 @@
       - shell: !include-raw-escape: include-docker-push.sh
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for Java merge jobs for SDC specific repos

@@ -124,10 +124,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-
-
+      - lf-infra-publish
 
 # vim: sw=2 ts=2 sts=2 et :
 
@@ -197,8 +194,7 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
 
 - job-template:
     # Job template for two scm and script trigger - for docker daily release
@@ -265,5 +261,4 @@
       - shell: '{script}'
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish

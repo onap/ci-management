@@ -68,9 +68,7 @@
           tox
 
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
-
+      - lf-infra-publish
 
 - job-template:
     # Job template for docker daily jobs for 3 SCMs
@@ -130,6 +128,6 @@
           properties-file: version.properties
       - docker-login
       - shell: '{script}'
+
     publishers:
-      - infra-shiplogs:
-          maven-version: '{maven-version}'
+      - lf-infra-publish
