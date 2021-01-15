@@ -193,6 +193,131 @@
           send-to-individuals: true
 
 - job-template:
+    # Job template for unified review verification jobs in
+    # project-specific CSIT flow for projects built with maven
+    #
+    # The purpose of this job template is to:
+    #  1. build local snapshot docker images with maven
+    #  2. run CSIT job with the local images
+    #  3. give a verify vote to the triggering review
+    #
+
+    name: '{project-name}-review-verification-maven-{stream}'
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    build-days-to-keep: 30 # 30 days in case a release takes long to get approved.
+    build-timeout: 60
+    disable-job: false
+    git-url: "$GIT_URL/$PROJECT"
+    github-url: "https://github.com"
+    maven-versions-plugin: false
+    version-properties-file: version.properties
+    mvn-central: false
+    mvn-global-settings: global-settings
+    mvn-goals: clean deploy
+    mvn-opts: ""
+    mvn-params: ""
+    maven-version: mvn36
+    ossrh-profile-id: ""
+    mvn-pom: ""
+    stream: master
+    submodule-recursive: true
+    submodule-timeout: 10
+    submodule-disable: false
+
+    disabled: '{disabled}'
+    archive-artifacts: >
+      **/*.log
+      **/hs_err_*.log
+      **/target/**/feature.xml
+      **/target/failsafe-reports/failsafe-summary.xml
+      **/target/surefire-reports/*-output.txt
+
+    project-type: freestyle
+    node: '{build-node}'
+    java-version: 'openjdk11'
+
+    properties:
+      - lf-infra-properties:
+          project: '{project}'
+          build-days-to-keep: '{build-days-to-keep}'
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          refspec: 'refs/heads/{branch}'
+          artifacts: '{archive-artifacts}'
+      - lf-infra-maven-parameters:
+          mvn-opts: "{mvn-opts}"
+          mvn-params: "{mvn-params}"
+          mvn-version: "{mvn-version}"
+      - maven-exec:
+          maven-version: '{maven-version}'
+      - maven-params:
+          mvn-params: '{mvn-params}'
+      - string:
+          name: ARCHIVE_ARTIFACTS
+          default: "{archive-artifacts}"
+          description: Artifacts to archive to the logs server.
+      - integration-test-options:
+          test-options: '{robot-options}'
+
+    scm:
+      - gerrit-trigger-scm:
+          refspec: '$GERRIT_REFSPEC'
+          choosing-strategy: 'gerrit'
+          submodule-recursive: '{submodule-recursive}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+    builders:
+      - lf-infra-pre-build
+      - lf-jacoco-nojava-workaround
+      - lf-maven-install:
+          mvn-version: "{mvn-version}"
+      - lf-update-java-alternatives:
+          java-version: "{java-version}"
+      - lf-infra-docker-login:
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
+      # must provide maven settings AFTER docker-login due to its cleanup
+      - lf-provide-maven-settings:
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
+      - lf-maven-versions-plugin:
+          maven-versions-plugin: "{maven-versions-plugin}"
+          version-properties-file: "{version-properties-file}"
+          mvn-version: "{mvn-version}"
+          mvn-pom: "{mvn-pom}"
+          mvn-settings: "{mvn-settings}"
+      - inject:
+          properties-content: |
+            CONTAINER_PULL_REGISTRY={container-public-registry}
+            CONTAINER_PUSH_REGISTRY={container-snapshot-registry}
+      - lf-maven-build:
+          mvn-goals: "{mvn-goals}"
+      - integration-install-robotframework
+      - inject:
+          properties-file: 'env.properties'
+      - integration-run-project-test
+      - lf-provide-maven-settings-cleanup
+
+    triggers:
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+          files: '**'
+    publishers:
+      - lf-infra-publish
+
+- job-template:
     # Job template for review verification jobs in 
     # project-specific CSIT flow
     #
