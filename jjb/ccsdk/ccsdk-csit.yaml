@@ -5,6 +5,13 @@
       - '{project-name}-{stream}-project-csit'
       - '{project-name}-review-verification-{stream}'
       - '{project-name}-merge-verification-{stream}'
+      - '{project-name}-review-verification-maven-{stream}':
+          build-node: ubuntu1804-docker-8c-8g
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-snapshot-registry: 'nexus3.onap.org:10003'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          maven-versions-plugin: true
+
     project-name: 'ccsdk-distribution'
     recipients: 'dtimoney@att.com'
     # project name in gerrit
