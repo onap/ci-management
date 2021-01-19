@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd5e886e_a054f18a",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-01-19T15:06:00Z",
+      "side": 1,
+      "message": "Need {project-name}-{stream}-release-version-java-daily or similar job for docker build (current snmp deliverable is docker container)\n\ngerrit-docker-verify/gerrit-docker-merge can also be used for docker build (see here for an example - https://git.onap.org/ci-management/tree/jjb/dcaegen2/dcaegen2-platform-docker-python-subprojects.yaml#n52)",
+      "revId": "fbbd09ff3a0d20b3aa3516fc5fad5bef0899224e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
