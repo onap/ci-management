@@ -1,0 +1,14 @@
+---
+- project:
+    name: testsuite-cds-mock-odl-project-view
+    project-name: testsuite-cds-mock-odl
+    views:
+      - project-view
+
+- project:
+    name: testsuite-cds-mock-odl-info
+    project: testsuite/cds-mock-odl
+    project-name: testsuite-cds-mock-odl
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
