@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "d19e652b_f0676051",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-01-19T18:46:53Z",
+      "side": 1,
+      "message": "remove this as any change on root should also trigger jobs",
+      "range": {
+        "startLine": 18,
+        "startChar": 20,
+        "endLine": 18,
+        "endChar": 29
+      },
+      "revId": "fbbd09ff3a0d20b3aa3516fc5fad5bef0899224e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fd5e886e_a054f18a",
         "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
         "patchSetId": 1
