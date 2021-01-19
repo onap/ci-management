@@ -1,0 +1,14 @@
+---
+- project:
+    name: testsuite-cds-mock-ssh-project-view
+    project-name: testsuite-cds-mock-ssh
+    views:
+      - project-view
+
+- project:
+    name: testsuite-cds-mock-ssh-info
+    project: testsuite/cds-mock-ssh
+    project-name: testsuite-cds-mock-ssh
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
