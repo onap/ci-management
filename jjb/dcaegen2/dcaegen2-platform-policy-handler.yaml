@@ -15,7 +15,7 @@
     mvn-settings: 'dcaegen2-platform-policy-handler-settings'
     subproject:
       - 'policy-handler':
-          pattern: 'policyhandler/**'
+          pattern: '**'
           path: 'policyhandler'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
