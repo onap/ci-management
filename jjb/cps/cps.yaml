@@ -25,7 +25,7 @@
       project-name: 'cps'
       branch: 'master'
       mvn-settings: 'cps-settings'
-      build-node: ubuntu1804-builder-4c-4g
+      build-node: centos7-docker-8c-8g
 
 - project:
     name: cps
