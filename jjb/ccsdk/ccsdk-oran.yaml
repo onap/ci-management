@@ -38,6 +38,23 @@
     nexus-snapshot-repo: 'snapshots'
 
 - project:
+    name: ccsdk-oran-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'ccsdk/oran'
+    project-name: 'ccsdk-oran'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
+    mvn-settings: 'ccsdk-oran-settings'
+    build-node: ubuntu1804-builder-4c-4g
+
+- project:
     name: ccsdk-oran-info
     project: ccsdk/oran
     project-name: ccsdk-oran
