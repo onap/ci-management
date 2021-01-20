@@ -1,4 +1,23 @@
 - project:
+    name: policy-api-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-api'
+    recipients: 'takamune.cho@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'frankfurt':
+          branch: 'frankfurt'
+    functionality:
+      - 'api'
+    trigger_jobs:
+      - 'policy-api-{stream}-merge-java'
+
+- project:
     name: policy-apex-pdp-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
@@ -38,26 +57,6 @@
       - 'distribution'
     trigger_jobs:
       - 'policy-distribution-{stream}-merge-java'
-    robot-options: ''
-
-- project:
-    name: policy-api-csit
-    jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'policy'
-    java-version: openjdk11
-    stream:
-      - 'master':
-          branch: master
-      - 'frankfurt':
-          branch: frankfurt
-      - 'guilin':
-          branch: guilin
-    functionality:
-      - 'api'
-    trigger_jobs:
-      - 'policy-api-{stream}-merge-java'
     robot-options: ''
 
 - project:
