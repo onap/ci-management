@@ -173,6 +173,11 @@
           build-timeout: '{build-timeout}'
           jenkins-ssh-credential: '{jenkins-ssh-credential}'
 
+    triggers:
+      - timed: '@daily'
+      - reverse:
+          jobs: '{obj:trigger_jobs}'
+
     builders:
       - lf-infra-pre-build
       - lf-update-java-alternatives:

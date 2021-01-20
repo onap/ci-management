@@ -1,4 +1,22 @@
 - project:
+    name: policy-api-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit'
+    project-name: 'policy-api'
+    recipients: 'takamune.cho@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'frankfurt':
+          branch: 'frankfurt'
+    trigger_jobs:
+      - 'policy-api-{stream}-merge-java'
+    robot-options: 'api'
+
+- project:
     name: policy-apex-pdp-csit
     jobs:
       - '{project-name}-{stream}-verify-csit-{functionality}'
