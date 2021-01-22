@@ -115,6 +115,15 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: Install Python 3.9
+      apt:
+        name:
+          - python3.9
+          - python3.9-dev
+          - python3.9-tk
+      become: true
+      when: ansible_distribution == 'Ubuntu'
+
     - name: Install nodejs-dev libssl1.0-dev dep
       apt:
         name:
