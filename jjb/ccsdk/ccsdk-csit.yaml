@@ -3,7 +3,6 @@
     name: ccsdk-distribution-csit
     jobs:
       - '{project-name}-{stream}-project-csit'
-      - '{project-name}-review-verification-{stream}'
       - '{project-name}-merge-verification-{stream}'
       - '{project-name}-review-verification-maven-{stream}':
           build-node: ubuntu1804-docker-8c-8g
