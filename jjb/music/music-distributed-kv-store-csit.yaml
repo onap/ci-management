@@ -1,18 +1,25 @@
----
-- project:
-    name: music-distributed-kv-store-csit
-    jobs:
-      - '{project-name}-{stream}-project-csit'
-      - '{project-name}-review-verification-{stream}'
-      - '{project-name}-merge-verification-{stream}'
-    project-name: 'music-distributed-kv-store'
-    project: 'music/distributed-kv-store'
-    disabled: true
-    stream: 'master'
-    artifact-type: 'golang'
-    java-version: openjdk11
-    mvn-version: 'mvn36'
-    mvn-settings: 'music-distributed-kv-store-settings'
-    mvn-global-settings: global-settings
-    robot-options: ''
-    branch: 'master'
+# Integration templates no longer support these 
+# job definitions; if Music CSIT needs to be restored,
+# '{project-name}-review-verification-golang-{stream}'
+# '{project-name}-merge-verification-golag-{stream}'
+# would have to be added to integration templates and 
+# applied here
+#  
+#---
+#- project:
+#    name: music-distributed-kv-store-csit
+#    jobs:
+#      - '{project-name}-{stream}-project-csit'
+#      - '{project-name}-review-verification-{stream}'
+#      - '{project-name}-merge-verification-{stream}'
+#    project-name: 'music-distributed-kv-store'
+#    project: 'music/distributed-kv-store'
+#    disabled: true
+#    stream: 'master'
+#    artifact-type: 'golang'
+#    java-version: openjdk11
+#    mvn-version: 'mvn36'
+#    mvn-settings: 'music-distributed-kv-store-settings'
+#    mvn-global-settings: global-settings
+#    robot-options: ''
+#    branch: 'master'
