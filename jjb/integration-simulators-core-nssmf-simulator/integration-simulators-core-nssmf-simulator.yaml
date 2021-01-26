@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-core-nssmf-simulator-project-view
+    project-name: integration-simulators-core-nssmf-simulator
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-core-nssmf-simulator-info
+    project: integration/simulators/core-nssmf-simulator
+    project-name: integration-simulators-core-nssmf-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
