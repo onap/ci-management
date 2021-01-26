@@ -159,8 +159,6 @@
           artifacts: '{archive-artifacts}'
       - integration-test-options:
           test-options: '{robot-options}'
-      - integration-unique-docker-tag:
-          unique-docker-tag: ''
 
     scm:
       - gerrit-trigger-scm:
