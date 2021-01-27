@@ -6,3 +6,29 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: integration-simulators-core-nssmf-simulator
+    project: integration/simulators/core-nssmf-simulator
+    project-name: integration-simulators-core-nssmf-simulator
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'integration-simulators-core-nssmf-simulator-settings'
+    files: '**'
+    maven-deploy-properties: |
+        deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
+    jobs:
+        - '{project-name}-{stream}-verify-java':
+            mvn-goals: 'clean install'
+        - '{project-name}-{stream}-merge-java':
+            mvn-goals: 'clean deploy'
+        -  '{project-name}-gerrit-release-jobs':
+            build-node: centos7-docker-8c-8g
+        - gerrit-maven-stage:
+            sign-artifacts: true
+            build-node: centos7-docker-8c-8g
+            maven-versions-plugin: true
+            mvn-goals: 'clean deploy'
