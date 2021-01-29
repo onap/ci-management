@@ -77,3 +77,17 @@
     mvn-settings: 'cps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: cps-whitesource
+    project-name: cps
+    jobs:
+      - gerrit-whitesource-scan
+    java-version: openjdk11
+    mvn-version: 'mvn36'
+    mvn-settings: 'cps-settings'
+    wss-product-name: cps
+    mvn-clean-install: true
+    project: cps
+    branch: master
+
