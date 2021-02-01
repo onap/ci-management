@@ -1,0 +1,14 @@
+---
+- project:
+    name: so-adapters-so-oof-adapter-project-view
+    project-name: so-adapters-so-oof-adapter
+    views:
+      - project-view
+
+- project:
+    name: so-adapters-so-oof-adapter-info
+    project: so/adapters/so-oof-adapter
+    project-name: so-adapters-so-oof-adapter
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
