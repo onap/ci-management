@@ -1,0 +1,14 @@
+---
+- project:
+    name: so-so-admin-cockpit-project-view
+    project-name: so-so-admin-cockpit
+    views:
+      - project-view
+
+- project:
+    name: so-so-admin-cockpit-info
+    project: so/so-admin-cockpit
+    project-name: so-so-admin-cockpit
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
