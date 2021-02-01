@@ -1,0 +1,14 @@
+---
+- project:
+    name: so-adapters-so-cnf-adapter-project-view
+    project-name: so-adapters-so-cnf-adapter
+    views:
+      - project-view
+
+- project:
+    name: so-adapters-so-cnf-adapter-info
+    project: so/adapters/so-cnf-adapter
+    project-name: so-adapters-so-cnf-adapter
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
