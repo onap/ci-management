@@ -1,0 +1,14 @@
+---
+- project:
+    name: so-adapters-so-etsi-sol005-adapter-project-view
+    project-name: so-adapters-so-etsi-sol005-adapter
+    views:
+      - project-view
+
+- project:
+    name: so-adapters-so-etsi-sol005-adapter-info
+    project: so/adapters/so-etsi-sol005-adapter
+    project-name: so-adapters-so-etsi-sol005-adapter
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
