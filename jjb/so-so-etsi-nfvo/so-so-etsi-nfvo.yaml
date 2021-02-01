@@ -1,0 +1,14 @@
+---
+- project:
+    name: so-so-etsi-nfvo-project-view
+    project-name: so-so-etsi-nfvo
+    views:
+      - project-view
+
+- project:
+    name: so-so-etsi-nfvo-info
+    project: so/so-etsi-nfvo
+    project-name: so-so-etsi-nfvo
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
