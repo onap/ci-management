@@ -12,3 +12,45 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: so-so-etsi-nfvo
+    project-name: 'so-so-etsi-nfvo'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    project: 'so/so-etsi-nfvo'
+    stream:
+      - 'master':
+          branch: 'master'
+          java-version: openjdk11
+    mvn-settings: 'so-so-etsi-nfvo-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-v1-8c-8g
+
+- project:
+    name: so-so-etsi-nfvo-sonar
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    max-git-repo-age-hours: 48
+    build-node: ubuntu1804-docker-v1-8c-8g
+    project: 'so/so-etsi-nfvo'
+    project-name: 'so-so-etsi-nfvo'
+    branch: 'master'
+    mvn-settings: 'so-so-etsi-nfvo-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
