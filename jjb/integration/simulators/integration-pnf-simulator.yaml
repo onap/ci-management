@@ -15,7 +15,7 @@
       build-node: ubuntu1804-docker-8c-8g
       jobs:
           - '{project-name}-{stream}-verify-java':
-                mvn-goals: 'clean install'
+                mvn-goals: 'clean install -P docker,integration -DskipNexusStagingDeployMojo=true -DskipDockerPush=true'
           - '{project-name}-{stream}-merge-java':
                 mvn-goals: 'clean deploy'
           -  '{project-name}-gerrit-release-jobs':
