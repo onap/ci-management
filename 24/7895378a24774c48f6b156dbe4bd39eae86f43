@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Takamune Cho <takamune.cho@att.com>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Lasse Kaihlavirta <l.kaihlavirt@partner.samsung.com>
+Submitted-at: Tue, 02 Feb 2021 13:22:22 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/117352
+Project: ci-management
+Branch: refs/heads/master
