@@ -22,6 +22,30 @@
       "revId": "b6c2cfaad7d16f30e47018af52f09b2b93de5487",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c12bc42_78a912d0",
+        "filename": "jjb/policy/policy-csit-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2477
+      },
+      "writtenOn": "2021-02-02T20:38:10Z",
+      "side": 1,
+      "message": "Hi, I think daily is needed, because the snapsthot image is built daily. And policy has several modules: common/parent/model which are not building dockers but application dockers depend on those modules, If there is a change in those modules, then we need daily snapshot docker build in order to pick up the change. Hope that explained why we need daily cron.",
+      "parentUuid": "a724ee81_7f0ef72a",
+      "range": {
+        "startLine": 39,
+        "startChar": 8,
+        "endLine": 39,
+        "endChar": 23
+      },
+      "revId": "b6c2cfaad7d16f30e47018af52f09b2b93de5487",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
