@@ -3,18 +3,11 @@
     name: ccsdk-distribution-csit
     jobs:
       - '{project-name}-review-verification-maven-{stream}':
-          build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-snapshot-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
           maven-versions-plugin: true
       - '{project-name}-merge-verification-maven-{stream}':
-          build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-snapshot-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
           maven-versions-plugin: true
-
     project-name: 'ccsdk-distribution'
     recipients: 'dtimoney@att.com'
     # project name in gerrit
@@ -22,10 +15,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk11
-    mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
-    mvn-global-settings: global-settings
     robot-options: ''
     branch: 'master'
 
