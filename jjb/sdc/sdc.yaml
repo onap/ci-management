@@ -28,12 +28,12 @@
     project-name: 'sdc'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          mvn-params: '-P docker -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
-          build-node: 'ubuntu1804-docker-8c-16g'
+          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          build-node: 'ubuntu1804-builder-4c-4g'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-8c-16g'
+          build-node: 'ubuntu1804-builder-4c-4g'
           docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+          mvn-profile: 'skip-integration-tests'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
       - gerrit-maven-stage:
           build-timeout: 90
@@ -58,9 +58,9 @@
       - 'guilin':
           branch: 'guilin'
           java-version: openjdk11
-      - 'frankfurt':
-          branch: 'frankfurt'
-          java-version: openjdk8
+#     - 'frankfurt':
+#         branch: 'frankfurt'
+#         java-version: openjdk8
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
