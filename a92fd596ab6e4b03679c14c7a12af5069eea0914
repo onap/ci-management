@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79d8f1fb_dfb46822",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-03T17:38:43Z",
+      "side": 1,
+      "message": "Ubuntu does not support SIGUL for signing artifacts. \nIf you need to use ubuntu, then you will need to set \nsign-artifacts: false\nbut I wouldn\u0027t recommend releasing unsigned artifacts",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 41,
+        "endChar": 46
+      },
+      "revId": "a92fd596ab6e4b03679c14c7a12af5069eea0914",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
