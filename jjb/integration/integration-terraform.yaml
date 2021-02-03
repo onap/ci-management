@@ -8,20 +8,33 @@
       - gerrit-info-yaml-verify
 
 - project:
-    name: integration-terraform-validate
+    name: integration-terraform-linters
     project: integration/terraform
     project-name: integration-terraform
+    python-version: python3
     jobs:
-        - integration-terraform-verify
+      - integration-linters
     subproject:
-        - 'openlab':
-              tox-dir: 'openlab'
-              tox-envs: 'terraform'
-              pattern: 'openlab/**'
-        - 'terragrunt':
-              tox-dir: 'terragrunt'
-              tox-envs: 'terragrunt'
-              pattern: 'terragrunt/**'
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'python':
+          tox-dir: '.'
+          tox-envs: 'py'
+          pattern: '**/*.py'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
     stream:
-        - 'master':
-              branch: 'master'
+      - 'master':
+          branch: 'master'
