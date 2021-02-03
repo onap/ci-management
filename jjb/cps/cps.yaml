@@ -90,4 +90,4 @@
     mvn-clean-install: true
     project: cps
     branch: master
-
+    build-node: centos7-docker-8c-8g
