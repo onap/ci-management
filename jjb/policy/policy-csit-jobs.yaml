@@ -21,8 +21,6 @@
           artifacts: '{archive-artifacts}'
       - integration-test-options:
           test-options: '{functionality}'
-      - integration-unique-docker-tag:
-          unique-docker-tag: ''
 
     scm:
       - gerrit-trigger-scm:
