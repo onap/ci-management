@@ -42,7 +42,7 @@
           server: '{server-name}'
           project: 'integration/csit'
           branch: '{branch}'
-          files: '**/{project-name}/**'
+          files: '*/{project-name}/**'
 
     builders:
       - lf-update-java-alternatives:
@@ -105,7 +105,7 @@
           server: '{server-name}'
           project: 'integration/csit'
           branch: '{branch}'
-          files: '**/{project-name}/**'
+          files: '*/{project-name}/**'
       - timed: '@daily'
       - reverse:
           jobs: '{obj:trigger_jobs}'
