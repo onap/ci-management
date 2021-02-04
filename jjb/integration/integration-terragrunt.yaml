@@ -44,3 +44,18 @@
     stream:
       - 'master':
           branch: 'master'
+
+- project:
+    name: integration-terragrunt-validate
+    project: integration/terragrunt
+    project-name: integration-terragrunt
+    jobs:
+      - integration-terraform-verify
+    subproject:
+      - 'terragrunt':
+          tox-dir: '.'
+          tox-envs: 'terragrunt'
+          pattern: '**'
+    stream:
+      - 'master':
+          branch: 'master'
