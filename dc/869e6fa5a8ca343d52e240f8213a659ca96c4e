@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Verified+1: Bartek Grzybowski <b.grzybowski@partner.samsung.com>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-at: Thu, 04 Feb 2021 14:33:08 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/117477
+Project: ci-management
+Branch: refs/heads/master
