@@ -22,6 +22,30 @@
       "revId": "a92fd596ab6e4b03679c14c7a12af5069eea0914",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72ddc70e_58a64bf7",
+        "filename": "jjb/sdc/sdc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2021-02-04T08:38:44Z",
+      "side": 1,
+      "message": "Done\n\nSorry, I didn\u0027t know that, I wanted to align on builder OS but you\u0027re right, if there is a limitation let\u0027s keep the CentOS to sign artifacts.",
+      "parentUuid": "79d8f1fb_dfb46822",
+      "range": {
+        "startLine": 41,
+        "startChar": 10,
+        "endLine": 41,
+        "endChar": 46
+      },
+      "revId": "a92fd596ab6e4b03679c14c7a12af5069eea0914",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
