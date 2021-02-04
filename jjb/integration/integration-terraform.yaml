@@ -38,3 +38,18 @@
     stream:
       - 'master':
           branch: 'master'
+
+- project:
+    name: integration-terraform-validate
+    project: integration/terraform
+    project-name: integration-terraform
+    jobs:
+      - integration-terraform-verify
+    subproject:
+      - 'openlab':
+          tox-dir: 'openlab'
+          tox-envs: 'terraform'
+          pattern: 'openlab/**'
+    stream:
+      - 'master':
+          branch: 'master'
