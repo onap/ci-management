@@ -73,6 +73,8 @@
 
     builders:
       - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_BIN={HELM_BIN}'
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
 
