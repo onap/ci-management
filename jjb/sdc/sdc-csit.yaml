@@ -7,14 +7,14 @@
                 container-public-registry: 'nexus3.onap.org:10001'
                 container-snapshot-registry: 'nexus3.onap.org:10003'
                 mvn-goals: clean install
-                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker, all-for-integration-tests-only'
+                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
                 maven-versions-plugin: true
           - '{project-name}-merge-verification-maven-{stream}':
                 build-node: ubuntu1804-docker-8c-16g
                 container-public-registry: 'nexus3.onap.org:10001'
                 container-snapshot-registry: 'nexus3.onap.org:10003'
                 mvn-goals: clean install
-                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker, all-for-integration-tests-only'
+                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
                 maven-versions-plugin: true
 
       project-name: 'sdc'
