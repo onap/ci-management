@@ -18,16 +18,12 @@
     rtdproject: 'onap/58810/'
     mvn-settings: 'doc-settings'
     stream:
-      - amsterdam:
-          branch: 'amsterdam'
-      - beijing:
-          branch: 'beijing'
-      - casablanca:
-          branch: 'casablanca'
-      - dublin:
-          branch: 'dublin'
-      - elalto:
-          branch: 'elalto'
+      - master:
+          branch: 'master'
+      - guilin:
+          branch: 'guilin'
+      - frankfurt:
+          branch: 'frankfurt'
 
 - project:
     name: doc-info
