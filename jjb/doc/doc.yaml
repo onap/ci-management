@@ -18,10 +18,6 @@
     rtdproject: 'onap/58810/'
     mvn-settings: 'doc-settings'
     stream:
-      - master:
-          branch: 'master'
-      - guilin:
-          branch: 'guilin'
       - frankfurt:
           branch: 'frankfurt'
 
