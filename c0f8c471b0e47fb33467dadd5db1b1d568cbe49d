@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "269a9314_a85b5ed2",
+        "filename": "global-jjb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-08T22:09:21Z",
+      "side": 1,
+      "message": "If your change depends on a later version of global-jjb, we can always update global-jjb but it needs to be done in a separate change. \nIf your local workspace is based on an older version of global-jjb than the one we have, you might experience some test issues.",
+      "parentUuid": "a44ecad8_157f86b4",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b2522c8b_4e5cdabb",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 2
@@ -35,6 +53,29 @@
         "startChar": 41,
         "endLine": 77,
         "endChar": 49
+      },
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0171253f_72684860",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-08T22:09:21Z",
+      "side": 1,
+      "message": "I don\u0027t think this is supported,.. is best to define it the way we do in other parts of the code like line 22",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 20
       },
       "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
