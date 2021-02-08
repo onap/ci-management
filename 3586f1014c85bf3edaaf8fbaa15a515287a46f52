@@ -46,6 +46,30 @@
       "revId": "3586f1014c85bf3edaaf8fbaa15a515287a46f52",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "98a47805_c04640e9",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-08T18:44:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e5e0ebb_13c0b6c9",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 26
+      },
+      "revId": "3586f1014c85bf3edaaf8fbaa15a515287a46f52",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
