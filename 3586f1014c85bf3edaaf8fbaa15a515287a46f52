@@ -22,6 +22,30 @@
       "revId": "3586f1014c85bf3edaaf8fbaa15a515287a46f52",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9e5e0ebb_13c0b6c9",
+        "filename": "jjb/doc/doc.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-08T18:20:55Z",
+      "side": 1,
+      "message": "yes it should.. let me do that.",
+      "parentUuid": "ba5ab80d_20630264",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 26
+      },
+      "revId": "3586f1014c85bf3edaaf8fbaa15a515287a46f52",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
