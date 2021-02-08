@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a44ecad8_157f86b4",
+        "filename": "global-jjb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-02-08T20:42:16Z",
+      "side": 1,
+      "message": "Remove this change from the commit.",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2522c8b_4e5cdabb",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-02-08T20:42:16Z",
+      "side": 1,
+      "message": "This needs to be declared in this file in order to be included in this part of the script. Also, please define the JJB variable as \"helm_bin\" in lower case.\n\nUnder \"concurrent: true\" at line 58, you should add:\n\nhelm_bin: \u00273\u0027\n\nOr whatever version you like. You can even define it as an empty string, but it has to be declared in this file for the JJB to compile.",
+      "range": {
+        "startLine": 77,
+        "startChar": 41,
+        "endLine": 77,
+        "endChar": 49
+      },
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9985970_adc7da44",
+        "filename": "packer/common-packer",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-02-08T20:42:16Z",
+      "side": 1,
+      "message": "Remove this change from commit.",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cce26a5d_303f2400",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-02-08T20:42:16Z",
+      "side": 1,
+      "message": "Please put the packer changes into a separate commit. They should be tested separately, and committed first.",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
