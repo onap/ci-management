@@ -31,10 +31,10 @@
         #!/bin/bash
         set -e -o pipefail
         cd kubernetes/
-        make all
+        make HELM_BIN=helm3 all
     build_script: |
         #!/bin/bash
-        cd kubernetes/
-        make common
-        make {helm-module}
+      cd kubernetes/
+        make HELM_BIN=helm3 common
+        make HELM_BIN=helm3 {helm-module}
     oom_post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
