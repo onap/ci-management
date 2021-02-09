@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95c14f9d_b3f6eb0d",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-09T20:44:17Z",
+      "side": 1,
+      "message": "is this supported? I never seen the streams included like this for a job parameters. I have only seen them like they are in line 22. \n\nIf this is not supported, I would recommend duplicating this block like this:\n\n\n      - \"{project-name}-{stream}-verify-helm\":\n          build_script: \"{oom_build_script}\"\n          files: \"**\"\n          build-timeout: 240\n          stream: master\n  \n      - \"{project-name}-{stream}-verify-helm\":\n          build_script: \"{oom_build_script}\"\n          files: \"**\"\n          build-timeout: 240\n          stream: guilin",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "bb6057dbc065871a0835f5fbb64ab1076b852040",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
