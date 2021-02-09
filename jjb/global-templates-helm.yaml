@@ -56,6 +56,7 @@
 
     <<: *helm_job_boiler_plate
     concurrent: true
+    helm_bin: helm3
 
     scm:
       - gerrit-trigger-scm:
@@ -69,10 +70,13 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
+          helm_bin: '{helm_bin}'
           files: '{files}'
 
     builders:
       - lf-infra-pre-build
+      - inject:
+          properties-content: 'HELM_BIN={helm_bin}'
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
 

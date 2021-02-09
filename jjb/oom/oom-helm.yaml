@@ -12,18 +12,20 @@
       #!/bin/bash
       set -e -o pipefail
       cd kubernetes/
-      make HELM_BIN=helm3 all
+      make all
     subproject_build_script: |
       #!/bin/bash
       cd kubernetes/
-      make HELM_BIN=helm3 common
-      make HELM_BIN=helm3 {subproject}
+      make common
+      make {subproject}
 
     stream:
       - "master":
           branch: "master"
+          helm_bin: "helm3"
       - "guilin":
           branch: "guilin"
+          helm_bin: "helm3.3"
       - "frankfurt":
           branch: "frankfurt"
       - "dublin":
@@ -47,6 +49,9 @@
           build_script: "{oom_build_script}"
           files: "**"
           build-timeout: 240
+          stream:
+            - master
+            - guilin
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           files: "**"
