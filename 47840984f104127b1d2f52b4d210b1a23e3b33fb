@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "769f88c5_bdb45c70",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-09T21:59:57Z",
+      "side": 1,
+      "message": "Sylvain, the build failed because /tmp/helm3_3 does not exist. \nEarlier in line 45 you created /tmp/helm3. Did you meant this dir to be called \"/tmp/helm3_3\"?\n\nCan you push a new change with the directory name that you need? not sure if it should be \"/tmp/helm3_3\" or \"/tmp/helm3\"  \n\nHere are the logs:\nhttps://jenkins.onap.org/view/packer/job/ci-management-packer-merge-ubuntu-18.04-helm/33/console",
+      "range": {
+        "startLine": 54,
+        "startChar": 18,
+        "endLine": 54,
+        "endChar": 30
+      },
+      "revId": "47840984f104127b1d2f52b4d210b1a23e3b33fb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
