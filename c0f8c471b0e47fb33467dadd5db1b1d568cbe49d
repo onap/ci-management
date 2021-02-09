@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0f3ec970_4260e0b2",
+        "filename": "global-jjb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-09T08:47:17Z",
+      "side": 1,
+      "message": "it\u0027s a mistake sorry!, I\u0027ll remove",
+      "parentUuid": "269a9314_a85b5ed2",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b2522c8b_4e5cdabb",
         "filename": "jjb/global-templates-helm.yaml",
         "patchSetId": 2
@@ -57,6 +75,30 @@
       "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c5adb2c3_5f80f6d8",
+        "filename": "jjb/global-templates-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-09T08:47:17Z",
+      "side": 1,
+      "message": "see on child review but it doesn\u0027t work (helm_bin is always translated to helm3)",
+      "parentUuid": "b2522c8b_4e5cdabb",
+      "range": {
+        "startLine": 77,
+        "startChar": 41,
+        "endLine": 77,
+        "endChar": 49
+      },
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -83,6 +125,30 @@
     },
     {
       "key": {
+        "uuid": "be2e4372_5f394974",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-09T08:47:17Z",
+      "side": 1,
+      "message": "it is. that\u0027s the only I managed to make work... \nthis part has moved to  https://gerrit.onap.org/r/c/ci-management/+/117627",
+      "parentUuid": "0171253f_72684860",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9985970_adc7da44",
         "filename": "packer/common-packer",
         "patchSetId": 2
@@ -100,6 +166,24 @@
     },
     {
       "key": {
+        "uuid": "e6902c16_723f2379",
+        "filename": "packer/common-packer",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-09T08:47:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b9985970_adc7da44",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cce26a5d_303f2400",
         "filename": "packer/provision/helm.yaml",
         "patchSetId": 2
@@ -114,6 +198,24 @@
       "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "905c875b_82ae43ff",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-09T08:47:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cce26a5d_303f2400",
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
