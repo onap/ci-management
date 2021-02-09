@@ -8,7 +8,8 @@
   vars:
     kubectl_version: 1.15.11
     helm_version: 2.16.6
-    helm3_version: 3.3.4
+    helm3_3_version: 3.3.4
+    helm3_version: 3.5.1
     chartmuseum_version: 0.12.0
 
   tasks:
@@ -37,6 +38,39 @@
         - name: 'Check helm.'
           command: 'which helm'
 
+    - name: 'Install Helm 3.3 {{helm3_3_version}}'
+      block:
+        - name: create directory
+          file:
+            path: /tmp/helm3
+            state: directory
+        - name: 'Fetch tar.gz'
+          get_url:
+            url: "https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3_3
+        - name: 'Unarchive'
+          unarchive:
+            src: "/tmp/helm3_3/helm-v{{helm3_3_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3_3
+            remote_src: true
+          become: yes
+        - name: 'Move helm to /usr/local/bin and set as executable'
+          command: 'mv /tmp/helm3_3/linux-amd64/helm /usr/local/bin/helm3.3'
+          become: yes
+        - name: 'Check helm3.'
+          command: 'which helm3'
+        - name: 'Check kubectl.'
+          command: 'which kubectl'
+
+        - name: Install helm 3.3
+          shell: |
+             echo "----> Installing helm 3.3"
+             wget 'https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz'
+             tar -xvf 'https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz'
+             mv linux-amd64/helm /usr/local/bin/helm3.3
+             which helm3.3
+          become: true
+
     - name: 'Install Helm3 {{helm3_version}}'
       block:
         - name: create directory
@@ -64,8 +98,8 @@
         - name: Install helm3
           shell: |
              echo "----> Installing helm3"
-             wget 'https://get.helm.sh/helm-v3.3.4-linux-amd64.tar.gz'
-             tar -xvf 'https://get.helm.sh/helm-v3.3.4-linux-amd64.tar.gz'
+             wget 'https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz'
+             tar -xvf 'https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz'
              mv linux-amd64/helm /usr/local/bin/helm3
              which helm3
           become: true
