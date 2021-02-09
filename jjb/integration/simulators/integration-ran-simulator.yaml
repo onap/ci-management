@@ -15,6 +15,7 @@
           - '{project-name}-{stream}-verify-java':
                 mvn-goals: 'clean install'
                 pattern: 'ransim/**'
+                mvn-pom: 'ransim/pom.xml'
           - '{project-name}-{stream}-merge-java':
                 mvn-goals: 'clean deploy'
           -  '{project-name}-gerrit-release-jobs':
