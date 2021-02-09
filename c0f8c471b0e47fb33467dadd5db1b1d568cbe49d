@@ -149,6 +149,30 @@
     },
     {
       "key": {
+        "uuid": "8aeccc14_94450aba",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-02-09T19:30:34Z",
+      "side": 1,
+      "message": "Jessica, I tested that this worked before suggesting this form of branch restrictions. If you push \"*-verify-helm\", you\u0027ll see that only the two streams this is restricted to will be generated.",
+      "parentUuid": "be2e4372_5f394974",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "c0f8c471b0e47fb33467dadd5db1b1d568cbe49d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9985970_adc7da44",
         "filename": "packer/common-packer",
         "patchSetId": 2
