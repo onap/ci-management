@@ -42,7 +42,7 @@
       block:
         - name: create directory
           file:
-            path: /tmp/helm3
+            path: /tmp/helm3_3
             state: directory
         - name: 'Fetch tar.gz'
           get_url:
