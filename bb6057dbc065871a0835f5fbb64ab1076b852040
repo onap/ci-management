@@ -22,6 +22,30 @@
       "revId": "bb6057dbc065871a0835f5fbb64ab1076b852040",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4cf521b3_bd8939a8",
+        "filename": "jjb/oom/oom-helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2021-02-10T06:53:20Z",
+      "side": 1,
+      "message": "it was supported but your proposal allows to set \"helm_bin\" part so I\u0027ve used it",
+      "parentUuid": "95c14f9d_b3f6eb0d",
+      "range": {
+        "startLine": 52,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "bb6057dbc065871a0835f5fbb64ab1076b852040",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
