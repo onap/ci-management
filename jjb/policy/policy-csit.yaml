@@ -1,4 +1,19 @@
 - project:
+    name: policy-pap-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-pap'
+    recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'pap'
+    trigger_jobs:
+      - 'policy-pap-{stream}-merge-java'
+
+- project:
     name: policy-api-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -103,8 +118,6 @@
     java-version: openjdk11
     recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
