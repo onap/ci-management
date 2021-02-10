@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-ietf-actn-tools-project-view
+    project-name: integration-ietf-actn-tools
+    views:
+      - project-view
+
+- project:
+    name: integration-ietf-actn-tools-info
+    project: integration/ietf-actn-tools
+    project-name: integration-ietf-actn-tools
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
