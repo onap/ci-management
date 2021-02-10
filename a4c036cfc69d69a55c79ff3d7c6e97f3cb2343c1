@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef0ad35f_6f4fb064",
+        "filename": "jjb/integration/simulators/integration-ran-simulator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-10T00:48:43Z",
+      "side": 1,
+      "message": "Sorry, just merged this but this variable needs to be pom... not mvn-pom \n\nCan you please correct it? or you can also add pom too to have both in case later on you need mvn-pom for other jobs",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "a4c036cfc69d69a55c79ff3d7c6e97f3cb2343c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
