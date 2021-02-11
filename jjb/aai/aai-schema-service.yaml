@@ -29,10 +29,11 @@
       - 'guilin':
           branch: 'guilin'
     mvn-settings: 'aai-schema-service-settings'
-    mvn-version: 'mvn35'
+    mvn-version: 'mvn36'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk11
 
 - project:
     name: aai-schema-service-sonar
@@ -45,13 +46,14 @@
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk11
     project: 'aai/schema-service'
     project-name: 'aai-schema-service'
     branch: 'master'
     mvn-settings: 'aai-schema-service-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-version: 'mvn35'
+    mvn-version: 'mvn36'
 
 - project:
     name: aai-schema-service-clm
