@@ -1,4 +1,19 @@
 - project:
+    name: policy-apex-pdp-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-apex-pdp'
+    recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'apex-pdp'
+    trigger_jobs:
+      - 'policy-apex-pdp-{stream}-merge-java'
+
+- project:
     name: policy-pap-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -55,8 +70,6 @@
     java-version: openjdk11
     recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
