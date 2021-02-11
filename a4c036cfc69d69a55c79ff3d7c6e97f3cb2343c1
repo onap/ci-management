@@ -22,6 +22,30 @@
       "revId": "a4c036cfc69d69a55c79ff3d7c6e97f3cb2343c1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d80088f_1b9a66b0",
+        "filename": "jjb/integration/simulators/integration-ran-simulator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 6219
+      },
+      "writtenOn": "2021-02-11T06:58:01Z",
+      "side": 1,
+      "message": "Thanks, I will make these changes in the next commit.",
+      "parentUuid": "ef0ad35f_6f4fb064",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "a4c036cfc69d69a55c79ff3d7c6e97f3cb2343c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
