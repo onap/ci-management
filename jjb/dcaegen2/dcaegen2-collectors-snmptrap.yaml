@@ -3,9 +3,9 @@
     name: dcaegen2-collectors-snmptrap
     project-name: 'dcaegen2-collectors-snmptrap'
     project: 'dcaegen2/collectors/snmptrap'
-    python-version: python3.6
+    python-version: python3
     tox-dir: '.'
-    tox-envs: ''
+    tox-envs: 'py3'
     stream:
       - 'master':
           branch: 'master'
@@ -13,17 +13,24 @@
           branch: 'guilin'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
-    subproject:
-      - 'snmptrap':
-          pattern: '**'
-          path: 'snmptrap'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{subproject}-python-staging-{stream}'
-      - '{project-name}-{subproject}-python-release-{stream}'
+      - gerrit-tox-verify:
+          stream: all
+          branch: '*'
+      - gerrit-docker-verify
+      - gerrit-docker-merge
       - '{project-name}-{stream}-release-version-java-daily'
     files: '**'
     archive-artifacts: ''
+    container-tag-method: latest
+    docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
+    nexus-iq-namespace: 'onap-'
+    docker-root: '.'
+    docker-name: onap/org.onap.dcaegen2.collectors.snmptrap
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '**'
+
 
 - project:
     name: dcaegen2-collectors-snmptrap-sonar
