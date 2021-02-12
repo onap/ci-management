@@ -14,9 +14,7 @@
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:
-      - gerrit-tox-verify:
-          stream: all
-          branch: '*'
+      - gerrit-tox-verify
       - gerrit-docker-verify
       - gerrit-docker-merge
       - '{project-name}-{stream}-release-version-java-daily'
