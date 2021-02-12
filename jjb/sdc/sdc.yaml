@@ -29,9 +29,9 @@
     jobs:
       - '{project-name}-{stream}-verify-java':
           mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
-          build-node: 'ubuntu1804-builder-4c-4g'
+          build-node: 'ubuntu1804-docker-8c-8g'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-builder-4c-4g'
+          build-node: 'ubuntu1804-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'skip-integration-tests'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
