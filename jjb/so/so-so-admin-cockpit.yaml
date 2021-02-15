@@ -62,6 +62,35 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    name: 'so-so-admin-cockpit-coverity'
+    java-version: openjdk11
+    jobs:
+      - 'onap-gerrit-maven-coverity'
+    cron: '@daily'
+    build-node: 'ubuntu1804-docker-v1-8c-8g'
+    project: 'so/so-admin-cockpit'
+    project-name: 'so-so-admin-cockpit'
+    branch: 'master'
+    mvn-settings: 'so-so-admin-cockpit-settings'
+    mvn-params: '-DskipTests'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    coverity-project-name: 'onap-so'
+    coverity-token: 'SrGGJp9T1n1lhJn2sF72XQ'
+    coverity-user-email: 'A.Naluzhnyy@samsung.com'
+    coverity-search-paths: >
+      so-admin-cockpit-monitoring-workflow/so-admin-cockpit-monitoring-workflow-ui/src/main/frontend/src
+    coverity-search-exclude-regexs: >
+      /cov-int/
+      /cov-analysis-
+      ^/usr/
+      ^/home/
+      /node_modules/
+      /bower_components/
+      /bower_components_external/
+      /src/test/
+      /__test__/
+
+- project:
     name: so-so-admin-cockpit-clm
     java-version: openjdk11
     jobs:
