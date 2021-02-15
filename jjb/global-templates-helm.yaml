@@ -51,12 +51,11 @@
 # JOB TEMPLATES #
 #################
 - job-template:
-    name: '{project-name}-{stream}-verify-helm'
+    name: '{project-name}-{stream}-verify-{helm_bin}'
     # Job template for helm verify jobs
 
     <<: *helm_job_boiler_plate
     concurrent: true
-    helm_bin: helm3
 
     scm:
       - gerrit-trigger-scm:
@@ -75,8 +74,6 @@
 
     builders:
       - lf-infra-pre-build
-      - inject:
-          properties-content: 'HELM_BIN={helm_bin}'
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
 
