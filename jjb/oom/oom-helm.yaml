@@ -37,23 +37,35 @@
       - "robot":
           files: "kubernetes/robot/**"
 
+    helm_bin:
+      - helm3.5
+      - helm3.3
+
+    exclude:
+      - stream: guilin
+        helm_bin: helm3.5
+      - stream: frankfurt
+        helm_bin: helm3.5
+      - stream: frankfurt
+        helm_bin: helm3.3
+      - stream: dublin
+        helm_bin: helm3.5
+      - stream: dublin
+        helm_bin: helm3.3
+      - stream: casablanca
+        helm_bin: helm3.5
+      - stream: casablanca
+        helm_bin: helm3.3
     jobs:
       - "{project-name}-{stream}-image-verify":
           files: "**"
       - "{project-name}-{stream}-verify-helm2":
           files: "**"
           build-timeout: 360
-      - "{project-name}-{stream}-verify-helm":
+      - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
           build-timeout: 360
-          stream: master
-      - "{project-name}-{stream}-verify-helm":
-          build_script: "{oom_build_script}"
-          files: "**"
-          build-timeout: 360
-          stream: guilin
-          helm_bin: "helm3.3"
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           files: "**"
