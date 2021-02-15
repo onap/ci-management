@@ -41,6 +41,10 @@
           tox-dir: '.'
           tox-envs: 'md'
           pattern: '**/*.md'
+      - 'js':
+          tox-dir: '.'
+          tox-envs: 'js'
+          pattern: '**/*.js'
     stream:
       - 'master':
           branch: 'master'
