@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a13b276_9afe0387",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T17:43:45Z",
+      "side": 1,
+      "message": "You don\u0027t need this. Is already defined in cps.yaml",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 36
+      },
+      "revId": "238909011d9e1e0738f07f013e69663011c326a1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
