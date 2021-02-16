@@ -32,6 +32,8 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk11
+    mvn-version: 'mvn36'
 
 - project:
     name: aai-babel-sonar
@@ -50,6 +52,8 @@
     mvn-settings: 'aai-babel-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
 
 - project:
     name: aai-babel-clm
@@ -63,6 +67,8 @@
           branch: 'master'
     mvn-settings: 'aai-babel-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
 
 
 - project:
