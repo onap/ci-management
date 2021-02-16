@@ -57,9 +57,9 @@
         - name: 'Move helm to /usr/local/bin and set as executable'
           command: 'mv /tmp/helm3_3/linux-amd64/helm /usr/local/bin/helm3.3'
           become: yes
-        - name: 'Check helm3.'
-          command: 'which helm3'
-        - name: 'Check kubectl.'
+        - name: 'Check helm3.3'
+          command: 'which helm3.3'
+        - name: 'Check kubectl'
           command: 'which kubectl'
 
         - name: Install helm 3.3
@@ -71,37 +71,37 @@
              which helm3.3
           become: true
 
-    - name: 'Install Helm3 {{helm3_version}}'
+    - name: 'Install Helm3.5 {{helm3_version}}'
       block:
         - name: create directory
           file:
-            path: /tmp/helm3
+            path: /tmp/helm3.5
             state: directory
         - name: 'Fetch tar.gz'
           get_url:
             url: "https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3
+            dest: /tmp/helm3.5
         - name: 'Unarchive'
           unarchive:
-            src: "/tmp/helm3/helm-v{{helm3_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3
+            src: "/tmp/helm3.5/helm-v{{helm3_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3.5
             remote_src: true
           become: yes
         - name: 'Move helm to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3/linux-amd64/helm /usr/local/bin/helm3'
+          command: 'mv /tmp/helm3/linux-amd64/helm /usr/local/bin/helm3.5'
           become: yes
-        - name: 'Check helm3.'
-          command: 'which helm3'
-        - name: 'Check kubectl.'
+        - name: 'Check helm3.5'
+          command: 'which helm3.5'
+        - name: 'Check kubectl'
           command: 'which kubectl'
 
-        - name: Install helm3
+        - name: Install helm3.5
           shell: |
-             echo "----> Installing helm3"
+             echo "----> Installing helm3.5"
              wget 'https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz'
              tar -xvf 'https://get.helm.sh/helm-v{{helm3_version}}-linux-amd64.tar.gz'
-             mv linux-amd64/helm /usr/local/bin/helm3
-             which helm3
+             mv linux-amd64/helm /usr/local/bin/helm3.5
+             which helm3.5
           become: true
 
     - name: 'Install ChartMuseum {{chartmuseum_version}}'
