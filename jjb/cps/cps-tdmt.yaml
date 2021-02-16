@@ -1,0 +1,75 @@
+---
+- project:
+    name: cps-tbdmt -info
+    project: cps/tbdmt
+    project-name: cps
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
+      name: cps-tbdmt -clm
+      java-version: openjdk11
+      mvn-version: "mvn36"
+      maven-version: "mvn36"
+      jobs:
+          - gerrit-maven-clm
+      nexus-iq-namespace: 'onap-'
+      project: cps/tbdmt
+      project-name: 'cps-tbdmt '
+      branch: 'master'
+      mvn-settings: 'cps-settings'
+      build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-tbdmt
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    project-name: 'cps-tbdmt '
+    project: cps/tbdmt
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java':
+          docker-pom: 'pom.xml'
+      #    mvn-params: "-P cps-xnf-docker"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-P docker'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'cps-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-tbdmt -sonar
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: centos7-docker-8c-8g
+    project: cps/tbdmt
+    project-name: 'cps-tbdmt '
+    branch: 'master'
+    mvn-settings: 'cps-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
