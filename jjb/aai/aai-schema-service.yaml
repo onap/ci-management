@@ -62,11 +62,12 @@
     nexus-iq-namespace: 'onap-'
     project: 'aai/schema-service'
     project-name: 'aai-schema-service'
+    java-version: openjdk11
     stream:
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-schema-service-settings'
-    mvn-version: 'mvn35'
+    mvn-version: 'mvn36'
 
 - project:
     name: aai-schema-service-info
