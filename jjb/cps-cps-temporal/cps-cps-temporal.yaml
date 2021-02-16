@@ -1,0 +1,14 @@
+---
+- project:
+    name: cps-cps-temporal-project-view
+    project-name: cps-cps-temporal
+    views:
+      - project-view
+
+- project:
+    name: cps-cps-temporal-info
+    project: cps/cps-temporal
+    project-name: cps-cps-temporal
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
