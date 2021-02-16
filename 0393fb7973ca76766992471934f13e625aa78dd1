@@ -2,6 +2,75 @@
   "comments": [
     {
       "key": {
+        "uuid": "8bd4b0d3_cd4ec900",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-16T08:32:28Z",
+      "side": 1,
+      "message": "I know its a terrible acronym but based on the agreed name it should be TBDMT",
+      "range": {
+        "startLine": 3,
+        "startChar": 14,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "0393fb7973ca76766992471934f13e625aa78dd1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0448696e_cc9b69e7",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-16T08:32:28Z",
+      "side": 1,
+      "message": "tbdmt (do find replace, I wont repeat))",
+      "range": {
+        "startLine": 4,
+        "startChar": 17,
+        "endLine": 4,
+        "endChar": 21
+      },
+      "revId": "0393fb7973ca76766992471934f13e625aa78dd1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a8089fe_1e69c6a3",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-16T08:32:28Z",
+      "side": 1,
+      "message": "what doe this domean?",
+      "range": {
+        "startLine": 21,
+        "startChar": 21,
+        "endLine": 21,
+        "endChar": 33
+      },
+      "revId": "0393fb7973ca76766992471934f13e625aa78dd1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "930f8376_4b9e453b",
         "filename": "jjb/cps/cps-tdmt.yaml",
         "patchSetId": 1
