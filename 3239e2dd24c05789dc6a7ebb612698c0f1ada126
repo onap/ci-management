@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8be5a1db_0979d227",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "I think this space can cause issues",
+      "range": {
+        "startLine": 3,
+        "startChar": 10,
+        "endLine": 3,
+        "endChar": 25
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1b5507cf_9a01194a",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "I think this space can cause issues",
+      "range": {
+        "startLine": 11,
+        "startChar": 20,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63a45f9e_6ed69766",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "bad empty space",
+      "range": {
+        "startLine": 19,
+        "startChar": 30,
+        "endLine": 19,
+        "endChar": 32
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "386eb538_ece6b581",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "bad empty space",
+      "range": {
+        "startLine": 29,
+        "startChar": 28,
+        "endLine": 29,
+        "endChar": 29
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1fa39818_9839af94",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "bad empty space",
+      "range": {
+        "startLine": 57,
+        "startChar": 18,
+        "endLine": 57,
+        "endChar": 21
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eee54f7b_020a17ed",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-16T19:01:16Z",
+      "side": 1,
+      "message": "bad empty space",
+      "range": {
+        "startLine": 71,
+        "startChar": 28,
+        "endLine": 71,
+        "endChar": 30
+      },
+      "revId": "3239e2dd24c05789dc6a7ebb612698c0f1ada126",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
