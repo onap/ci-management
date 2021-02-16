@@ -137,6 +137,7 @@
     ######################
 
     branch: master
+    build-concurrent: false
     build-days-to-keep: 30 # 30 days in case a release takes long to get approved.
     build-node: ubuntu1804-docker-8c-8g
     build-timeout: 60
@@ -171,7 +172,7 @@
     #####################
     # Job Configuration #
     #####################
-
+    concurrent: "{build-concurrent}"
     properties:
       - lf-infra-properties:
           project: '{project}'
