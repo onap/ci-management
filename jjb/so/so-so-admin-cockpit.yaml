@@ -95,7 +95,6 @@
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
     project: 'so/so-admin-cockpit'
     project-name: 'so-so-admin-cockpit'
     build-node: ubuntu1804-docker-v1-8c-8g
