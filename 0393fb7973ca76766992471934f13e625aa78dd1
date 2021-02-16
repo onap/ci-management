@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "a609edf3_bdc1527c",
+        "filename": "jjb/cps/cps-tdmt.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6679
+      },
+      "writtenOn": "2021-02-16T08:39:52Z",
+      "side": 1,
+      "message": "that is the mvn settings, I dont see any issue on reusing it. Jessica correct me if Im wrong",
+      "parentUuid": "9a8089fe_1e69c6a3",
+      "range": {
+        "startLine": 21,
+        "startChar": 21,
+        "endLine": 21,
+        "endChar": 33
+      },
+      "revId": "0393fb7973ca76766992471934f13e625aa78dd1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "930f8376_4b9e453b",
         "filename": "jjb/cps/cps-tdmt.yaml",
         "patchSetId": 1
