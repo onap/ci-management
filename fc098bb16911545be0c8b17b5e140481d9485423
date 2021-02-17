@@ -70,6 +70,30 @@
       "revId": "fc098bb16911545be0c8b17b5e140481d9485423",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "203b9029_7f7ce975",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-02-17T22:42:46Z",
+      "side": 1,
+      "message": "Oh yeah, your are right. tox-merge should suffice here.",
+      "parentUuid": "84e3c43b_62940e1f",
+      "range": {
+        "startLine": 18,
+        "startChar": 8,
+        "endLine": 18,
+        "endChar": 26
+      },
+      "revId": "fc098bb16911545be0c8b17b5e140481d9485423",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
