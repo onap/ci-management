@@ -22,6 +22,30 @@
       "revId": "fc0a0c84131cb98b793d688d138b4747e10b8306",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eab4d795_89babd0a",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-02-17T22:08:57Z",
+      "side": 1,
+      "message": "Okay..lets try it.. switched it on the latest patchset",
+      "parentUuid": "fb0e4b94_6b5868db",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "fc0a0c84131cb98b793d688d138b4747e10b8306",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
