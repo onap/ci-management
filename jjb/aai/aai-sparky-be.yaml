@@ -31,6 +31,8 @@
     mvn-settings: 'aai-sparky-be-settings'
     files: '**'
     archive-artifacts: ''
+    mvn-version: 'mvn36'
+    java-version: openjdk11
 
 - project:
     name: aai-sparky-be-sonar
@@ -49,6 +51,8 @@
     mvn-settings: 'aai-sparky-be-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn36'
+    java-version: openjdk11
 
 - project:
     name: aai-sparky-be-clm
@@ -61,6 +65,8 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-sparky-be-settings'
+    mvn-version: 'mvn36'
+    java-version: openjdk11
 
 - project:
     name: aai-sparky-be-info
