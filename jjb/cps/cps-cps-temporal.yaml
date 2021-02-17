@@ -12,3 +12,83 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: cps-cps-temporal
+    java-version: openjdk11
+    mvn-version: mvn36
+    maven-version: mvn36
+    project-name: cps-cps-temporal
+    project: cps/cps-temporal
+    jobs:
+      - gerrit-maven-verify
+      - gerrit-maven-merge:
+          mvn-params: -Pdocker
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: -Pdocker
+          container-public-registry: nexus3.onap.org:10001
+          container-staging-registry: nexus3.onap.org:10003
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    stream:
+      - 'master':
+          branch: master
+    mvn-settings: cps-cps-temporal-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-cps-temporal-clm
+    java-version: openjdk11
+    mvn-version: mvn36
+    maven-version: mvn36
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: onap-
+    project: cps/cps-temporal
+    project-name: cps-cps-temporal
+    branch: master
+    mvn-settings: cps-cps-temporal-settings
+    build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-cps-temporal-sonar
+    java-version: openjdk11
+    mvn-version: mvn36
+    maven-version: mvn36
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: centos7-docker-8c-8g
+    project: cps/cps-temporal
+    project-name: cps-cps-temporal
+    branch: master
+    mvn-settings: cps-cps-temporal-settings
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: cps-cps-temporal-whitesource
+    project-name: cps-cps-temporal
+    jobs:
+      - gerrit-whitesource-scan
+    java-version: openjdk11
+    mvn-version: mvn36
+    mvn-settings: cps-cps-temporal-settings
+    wss-product-name: cps-cps-temporal
+    mvn-clean-install: true
+    project: cps/cps-temporal
+    branch: master
+    build-node: centos7-docker-8c-8g
