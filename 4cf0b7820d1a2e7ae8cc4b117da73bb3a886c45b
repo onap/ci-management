@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30251b28_5a36c70b",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T23:52:04Z",
+      "side": 1,
+      "message": "local jjb jobs are slowly deprecating... please use the global-jjb ones\nhttps://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-maven-job-groups.yaml#L8",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 49
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0991dabf_0ba3303d",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T23:52:04Z",
+      "side": 1,
+      "message": "cps-cps-temporal",
+      "range": {
+        "startLine": 57,
+        "startChar": 20,
+        "endLine": 57,
+        "endChar": 36
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63813077_c37246a3",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T23:52:04Z",
+      "side": 1,
+      "message": "cps-cps-temporal-settings",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "127cd38b_1d991134",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T23:52:04Z",
+      "side": 1,
+      "message": "cps-cps-temporal-settings",
+      "range": {
+        "startLine": 79,
+        "startChar": 20,
+        "endLine": 79,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c195ad64_ba0f1da8",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T23:52:04Z",
+      "side": 1,
+      "message": "cps-cps-temporal-settings",
+      "range": {
+        "startLine": 90,
+        "startChar": 20,
+        "endLine": 90,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
