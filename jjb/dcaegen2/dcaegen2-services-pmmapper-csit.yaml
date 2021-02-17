@@ -11,5 +11,7 @@
     functionality:
       - 'pmmapper':
           trigger_jobs:
+      - 'files-processing-config-pmmapper':
+            trigger_jobs:
     robot-options: ''
     branch: 'master'
