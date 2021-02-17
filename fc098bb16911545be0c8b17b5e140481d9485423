@@ -46,6 +46,30 @@
       "revId": "fc098bb16911545be0c8b17b5e140481d9485423",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "84e3c43b_62940e1f",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T22:37:12Z",
+      "side": 1,
+      "message": "In this case, do we even need the gerrit-maven-merge if the python-merge is there already?",
+      "parentUuid": "1fc90fbb_31769dcb",
+      "range": {
+        "startLine": 18,
+        "startChar": 8,
+        "endLine": 18,
+        "endChar": 26
+      },
+      "revId": "fc098bb16911545be0c8b17b5e140481d9485423",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
