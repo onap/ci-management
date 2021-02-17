@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb0e4b94_6b5868db",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-snmptrap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-17T21:35:18Z",
+      "side": 1,
+      "message": "why not using global-jjb here too?\nhttps://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-maven-jobs.yaml#L633\n\nIn the long run, opting for global-jjb over local jobs will save a lot of work since local jobs are not maintained by LF anymore.",
+      "range": {
+        "startLine": 18,
+        "startChar": 7,
+        "endLine": 18,
+        "endChar": 44
+      },
+      "revId": "fc0a0c84131cb98b793d688d138b4747e10b8306",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
