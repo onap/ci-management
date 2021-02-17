@@ -14,20 +14,19 @@
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:
-      - gerrit-tox-verify
-      - gerrit-docker-verify
-      - gerrit-docker-merge
+      - '{project-name}-python-jobs'
       - '{project-name}-{stream}-release-version-java-daily'
-    files: '**'
     archive-artifacts: ''
     container-tag-method: latest
-    docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
     nexus-iq-namespace: 'onap-'
-    docker-root: '.'
-    docker-name: onap/org.onap.dcaegen2.collectors.snmptrap
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: '**'
+        pattern: '.*'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
+    files: '**'
 
 
 - project:
@@ -47,17 +46,6 @@
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: dcaegen2-collectors-snmptrap-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: dcaegen2/collectors/snmptrap
-    build-node: ubuntu1804-docker-8c-8g
-    project-name: 'dcaegen2-collectors-snmptrap'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
 
 - project:
     name: dcaegen2-collectors-snmptrap-info
