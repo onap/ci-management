@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "719c0ec2_c7567995",
+        "filename": "jjb/cps/cps-cps-tbdmt.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-18T21:57:29Z",
+      "side": 1,
+      "message": "Can we please use the global-jjb jobs here instead of the local ones?\nThe local ones are getting deprecated\n\nhttps://docs.releng.linuxfoundation.org/projects/global-jjb/en/latest/jjb/lf-maven-jobs.html\n\n      - gerrit-maven-merge\n      - gerrit-maven-verify",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 37
+      },
+      "revId": "c3dd2b52397147343603a44c371f35c22d071380",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
