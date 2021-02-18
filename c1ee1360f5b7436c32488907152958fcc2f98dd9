@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38eda1ad_9b25d3de",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-18T09:45:40Z",
+      "side": 1,
+      "message": "ok, so this project will have its own setting after all :-)",
+      "range": {
+        "startLine": 43,
+        "startChar": 18,
+        "endLine": 43,
+        "endChar": 43
+      },
+      "revId": "c1ee1360f5b7436c32488907152958fcc2f98dd9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
