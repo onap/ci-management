@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "3c830d17_b61a2143",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-18T17:59:01Z",
+      "side": 1,
+      "message": "Yes sure.. here is our maven templates official docs\nhttps://docs.releng.linuxfoundation.org/projects/global-jjb/en/latest/jjb/lf-maven-jobs.html\n\nBasically, you just want to replace these lines for:\n      - gerrit-maven-merge\n      - gerrit-maven-verify",
+      "parentUuid": "3f89cad6_8d458ecc",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 49
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0991dabf_0ba3303d",
         "filename": "jjb/cps/cps-cps-temporal.yaml",
         "patchSetId": 1
