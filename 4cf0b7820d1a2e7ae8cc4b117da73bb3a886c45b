@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3f89cad6_8d458ecc",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2021-02-18T03:48:34Z",
+      "side": 1,
+      "message": "I had hard time with to replace \u0027{project-name}-{stream}-merge-java\u0027 with \u0027gerrit-maven-merge\u0027.\n\nDo you have any hint, example or documentation ?",
+      "parentUuid": "30251b28_5a36c70b",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 49
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0991dabf_0ba3303d",
         "filename": "jjb/cps/cps-cps-temporal.yaml",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b84fbf1_a30c7222",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2021-02-18T03:48:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0991dabf_0ba3303d",
+      "range": {
+        "startLine": 57,
+        "startChar": 20,
+        "endLine": 57,
+        "endChar": 36
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "bc2e95d8_da00fecd",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2021-02-18T03:48:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "63813077_c37246a3",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "127cd38b_1d991134",
         "filename": "jjb/cps/cps-cps-temporal.yaml",
         "patchSetId": 1
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "1bc928a5_f3a1c431",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2021-02-18T03:48:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "127cd38b_1d991134",
+      "range": {
+        "startLine": 79,
+        "startChar": 20,
+        "endLine": 79,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c195ad64_ba0f1da8",
         "filename": "jjb/cps/cps-cps-temporal.yaml",
         "patchSetId": 1
@@ -114,6 +210,30 @@
       "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01ec8d94_5ca49ace",
+        "filename": "jjb/cps/cps-cps-temporal.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2021-02-18T03:48:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c195ad64_ba0f1da8",
+      "range": {
+        "startLine": 90,
+        "startChar": 20,
+        "endLine": 90,
+        "endChar": 32
+      },
+      "revId": "4cf0b7820d1a2e7ae8cc4b117da73bb3a886c45b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
