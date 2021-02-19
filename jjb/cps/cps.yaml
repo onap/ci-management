@@ -35,15 +35,15 @@
     project-name: 'cps'
     project: 'cps'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify
+      - gerrit-maven-merge
           docker-pom: 'pom.xml'
           mvn-params: "-P cps-xnf-docker"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-DprocessAllModules'
+          mvn-params: '-DprocessAllModules -DskipTests -X'
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
