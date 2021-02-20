@@ -94,7 +94,7 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar"
+    sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     build-node: ubuntu1804-docker-8c-16g
     project: 'sdc'
