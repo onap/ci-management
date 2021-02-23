@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "671efaac_35fd058c",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7362
+      },
+      "writtenOn": "2021-02-23T11:12:05Z",
+      "side": 1,
+      "message": "its by default in the template, also\nthere is no other project using same template except ccsdk/integration",
+      "parentUuid": "9fb30ea5_2f6cb14a",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "432b2f82_07b89a37",
         "filename": "jjb/cps/cps-csit.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2021-02-23T10:29:15Z",
       "side": 1,
       "message": "should this be populated with some cps contacts at least the 3 current committers?",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83c14ab6_3c4f274a",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 7362
+      },
+      "writtenOn": "2021-02-23T11:12:05Z",
+      "side": 1,
+      "message": "this can be updated later if necessary",
+      "parentUuid": "432b2f82_07b89a37",
       "range": {
         "startLine": 12,
         "startChar": 18,
