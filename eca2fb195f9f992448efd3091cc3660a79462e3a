@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fb30ea5_2f6cb14a",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-23T10:29:15Z",
+      "side": 1,
+      "message": "I noticed other projects also define java version:\njava-version: openjdk11  \n\nbut maybe tat is default now anyway",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 25
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "432b2f82_07b89a37",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-02-23T10:29:15Z",
+      "side": 1,
+      "message": "should this be populated with some cps contacts at least the 3 current committers?",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
