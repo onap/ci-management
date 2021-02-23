@@ -63,6 +63,9 @@
       - "{project-name}-{stream}-verify-helm2":
           files: "**"
           build-timeout: 360
+          stream:
+            - guilin
+            - frankfurt
       - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
