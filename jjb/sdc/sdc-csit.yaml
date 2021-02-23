@@ -19,6 +19,10 @@
                     integration-tests/target/ExtentReport/API/*.html
                     integration-tests/target/ExtentReport/UI/*.html
                     integration-tests/target/ExtentReport/UI/screenshots/*.png
+                    /tmp/sdc-integration-tests/*.log*
+                    /tmp/sdc-integration-tests/SDC/ONBOARDING-BE/*.log
+                    /tmp/sdc-integration-tests/SDC/SDC-BE/*.log
+                    /tmp/sdc-integration-tests/SDC/SDC-FE/*.log
           - '{project-name}-merge-verification-maven-{stream}':
                 build-node: ubuntu1804-docker-8c-16g
                 container-public-registry: 'nexus3.onap.org:10001'
