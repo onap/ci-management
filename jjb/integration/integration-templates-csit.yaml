@@ -228,7 +228,14 @@
       - integration-run-project-test
       - lf-provide-maven-settings-cleanup
     publishers:
+      - integration-robot:
+          unstable-if: 0.0
+          pass-if: 100.0
       - lf-infra-publish
+      - email:
+          recipients: '{recipients}'
+          notify-every-unstable-build: false
+          send-to-individuals: true
 
 - job-template:
     # Job template for unified review verification jobs in
