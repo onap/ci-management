@@ -228,7 +228,7 @@
       - integration-run-project-test
       - lf-provide-maven-settings-cleanup
     publishers:
-      - integration-robot:
+      - integration-project-robot:
           unstable-if: 0.0
           pass-if: 100.0
       - lf-infra-publish
