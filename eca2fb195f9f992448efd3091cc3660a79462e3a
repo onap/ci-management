@@ -117,6 +117,30 @@
       "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "65f51ad1_afb74bf8",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 7362
+      },
+      "writtenOn": "2021-02-24T16:22:01Z",
+      "side": 1,
+      "message": "i think there must be a significant reason to put someone\u0027s email into a repository you cannot easily modify later on",
+      "parentUuid": "dd81d8ee_e0b5d214",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
