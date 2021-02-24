@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-nf-simulator-project-view
+    project-name: integration-simulators-nf-simulator
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-nf-simulator-info
+    project: integration/simulators/nf-simulator
+    project-name: integration-simulators-nf-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
