@@ -1,0 +1,9 @@
+Verified+1: Lasse Kaihlavirta <l.kaihlavirt@partner.samsung.com>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Ruslan Kashapov <ruslan.kashapov@pantheon.tech>
+Code-Review+2: Bartek Grzybowski <b.grzybowski@partner.samsung.com>
+Submitted-by: Lasse Kaihlavirta <l.kaihlavirt@partner.samsung.com>
+Submitted-at: Wed, 24 Feb 2021 10:11:23 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/118353
+Project: ci-management
+Branch: refs/heads/master
