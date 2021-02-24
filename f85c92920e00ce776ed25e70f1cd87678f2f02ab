@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2591daf4_91a24d73",
+        "filename": "jjb/global-defaults.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2021-02-24T03:08:47Z",
+      "side": 1,
+      "message": "this didn\u0027t work:\n\n20:07:33 [WARNING] The POM for org.sonarsource.scanner.maven:sonar-maven-plugin:jar:4.6.0.2311 is missing, no dependency information available\n\nthe original version (3.8.0.2131) is the latest one in maven (per mvnrepository.com) as well as on nexus.onap.org",
+      "revId": "f85c92920e00ce776ed25e70f1cd87678f2f02ab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
