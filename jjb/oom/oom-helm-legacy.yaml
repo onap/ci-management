@@ -1,8 +1,8 @@
 ---
 - project:
-    name: oom
-    project-name: oom
-    project: oom
+    name: oom-legacy
+    project-name: oom-legacy
+    project: oom-legacy
     mvn-settings: oom-settings
     mvn-global-settings: global-settings
     archive-artifacts: ""
@@ -20,22 +20,48 @@
       make HELM_BIN=$HELM_BIN common
       make HELM_BIN=$HELM_BIN {subproject}
 
-    stream:
-      - "master":
-          branch: "master"
-      - "honolulu":
-          branch: "honolulu"
-
     helm_bin:
       - helm3.5
       - helm3.3
 
-    exclude: []
-    subproject: []
+    exclude:
+      - stream: guilin
+        helm_bin: helm3.5
+      - stream: frankfurt
+        helm_bin: helm3.5
+      - stream: frankfurt
+        helm_bin: helm3.3
+      - stream: dublin
+        helm_bin: helm3.5
+      - stream: dublin
+        helm_bin: helm3.3
+      - stream: casablanca
+        helm_bin: helm3.5
+      - stream: casablanca
+        helm_bin: helm3.3
+
+    stream:
+      - "guilin":
+          branch: "guilin"
+      - "frankfurt":
+          branch: "frankfurt"
+      - "dublin":
+          branch: "dublin"
+      - "casablanca":
+          branch: "casablanca"
+
+    subproject:
+      - "aai":
+          files: "kubernetes/aai/**"
+      - "robot":
+          files: "kubernetes/robot/**"
 
     jobs:
       - "{project-name}-{stream}-image-verify":
           files: "**"
+      - "{project-name}-{stream}-verify-helm2":
+          files: "**"
+          build-timeout: 360
       - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
@@ -50,8 +76,6 @@
 
       # Below jobs disabled until future need.
       - "{project-name}-{subproject}-{stream}-verify-helm2":
-          build_script: "{subproject_build_script}"
-      - "{project-name}-{subproject}-{stream}-verify-helm":
           build_script: "{subproject_build_script}"
       - "{project-name}-{subproject}-{stream}-merge-helm":
           build_script: "{subproject_build_script}"
