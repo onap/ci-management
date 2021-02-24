@@ -23,6 +23,8 @@
                     /tmp/sdc-integration-tests/SDC/ONBOARDING-BE/*.log
                     /tmp/sdc-integration-tests/SDC/SDC-BE/*.log
                     /tmp/sdc-integration-tests/SDC/SDC-FE/*.log
+                publishers:
+                    -  lf-infra-publish
           - '{project-name}-merge-verification-maven-{stream}':
                 build-node: ubuntu1804-docker-8c-16g
                 container-public-registry: 'nexus3.onap.org:10001'
@@ -30,6 +32,8 @@
                 mvn-goals: clean install
                 mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
                 maven-versions-plugin: true
+                publishers:
+                    - lf-infra-publish
 
       project-name: 'sdc'
       recipients: 'christophe.closset@intl.att.com'
