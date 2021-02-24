@@ -5,7 +5,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
       - '{project-name}-{stream}-verify-csit-{functionality}'
     project-name: 'dmaap'
-    recipients: 'ms5838@att.com'
+    recipients: 'fiachra.corcoran@est.tech'
     stream: 'master'
     functionality:
       - 'mrpubsub':
