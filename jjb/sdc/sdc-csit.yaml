@@ -2,14 +2,11 @@
 - project:
       name: sdc-csit
       jobs:
-          - '{project-name}-review-verification-maven-{stream}':
-                build-node: ubuntu1804-docker-8c-16g
-                container-public-registry: 'nexus3.onap.org:10001'
-                container-snapshot-registry: 'nexus3.onap.org:10003'
+          - '{project-name}-{stream}-verify-java':
+                # this build is integration test only - CSIT (Verify 2/2)
                 mvn-goals: clean install
                 mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
-                maven-versions-plugin: true
-                build-concurrent: true
+                build-node: 'ubuntu1804-docker-8c-16g'
                 archive-artifacts: >
                     **/*.log
                     **/hs_err_*.log
@@ -23,47 +20,13 @@
                     /tmp/sdc-integration-tests/SDC/ONBOARDING-BE/*.log
                     /tmp/sdc-integration-tests/SDC/SDC-BE/*.log
                     /tmp/sdc-integration-tests/SDC/SDC-FE/*.log
-          - '{project-name}-merge-verification-maven-{stream}':
-                build-node: ubuntu1804-docker-8c-16g
-                container-public-registry: 'nexus3.onap.org:10001'
-                container-snapshot-registry: 'nexus3.onap.org:10003'
-                mvn-goals: clean install
-                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
-                maven-versions-plugin: true
-
-      project-name: 'sdc'
-      recipients: 'christophe.closset@intl.att.com'
+      project-name: 'sdc-integration-tests'
       # project name in gerrit
       project: 'sdc'
       stream:
           - 'master':
                 branch: 'master'
-          - 'guilin':
-                branch: 'guilin'
       java-version: openjdk11
       mvn-version: 'mvn36'
       mvn-settings: 'sdc-settings'
       mvn-global-settings: global-settings
-      robot-options: ''
-      branch: 'master'
-
-#- project:
-#    name: sdc-csit-arm64
-#    jobs:
-#      - '{project-name}-arm64-{stream}-verify-csit-{functionality}-testng'
-#      - '{project-name}-arm64-{stream}-csit-{functionality}-testng'
-#    project-name: 'sdc'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    functionality:
-#      - 'sanity':
-#          trigger_jobs: '{project-name}-{stream}-sdc-merge-java'
-#      - 'nightly':
-#          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
-#      - 'uiSanity':
-#          trigger_jobs: '{project-name}-{stream}-docker-version-java-daily'
-#    robot-options: ''
-#    branch: 'master'
-#    html-dir: 'archives'
-#    html-files: 'SDC_CI_Extent_Report.html'

@@ -28,13 +28,29 @@
     project-name: 'sdc'
     jobs:
       - '{project-name}-{stream}-verify-java':
+          # this build is unit test only (Verify 1/2)
           mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
           build-node: 'ubuntu1804-docker-8c-8g'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-8c-8g'
+          build-node: 'ubuntu1804-docker-8c-16g'
           docker-pom: 'pom.xml'
-          mvn-profile: 'skip-integration-tests'
+          mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          # running everything (unit tests and integration tests in a single job for merge, as we don't need // run
+          # for merge, but still saving integration tests results and report.
+          archive-artifacts: >
+              **/*.log
+              **/hs_err_*.log
+              **/target/**/feature.xml
+              **/target/failsafe-reports/failsafe-summary.xml
+              **/target/surefire-reports/*-output.txt
+              integration-tests/target/ExtentReport/API/*.html
+              integration-tests/target/ExtentReport/UI/*.html
+              integration-tests/target/ExtentReport/UI/screenshots/*.png
+              /tmp/sdc-integration-tests/*.log*
+              /tmp/sdc-integration-tests/SDC/ONBOARDING-BE/*.log
+              /tmp/sdc-integration-tests/SDC/SDC-BE/*.log
+              /tmp/sdc-integration-tests/SDC/SDC-FE/*.log
       - gerrit-maven-stage:
           build-timeout: 90
           sign-artifacts: true
