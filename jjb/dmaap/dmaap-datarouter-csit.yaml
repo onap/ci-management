@@ -3,7 +3,9 @@
     name: dmaap-datarouter-csit-ssl
     jobs:
       - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-verify-csit-{functionality}'        
     project-name: 'dmaap-datarouter'
+    recipients: 'fiachra.corcoran@est.tech'
     stream:
       - 'master':
           branch: 'master'
