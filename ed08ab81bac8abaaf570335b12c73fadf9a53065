@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8cc065b7_64d39104",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-02-25T11:00:15Z",
+      "side": 1,
+      "message": "You shouldn\u0027t need a new project for this; the changes should replace existing ccsdk-oran-csit",
+      "range": {
+        "startLine": 42,
+        "startChar": 1,
+        "endLine": 52,
+        "endChar": 17
+      },
+      "revId": "ed08ab81bac8abaaf570335b12c73fadf9a53065",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
