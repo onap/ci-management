@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c604f857_4c250b05",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-02-25T11:49:59Z",
+      "side": 0,
+      "message": "Is it OK to drop guilin jobs?",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 33,
+        "endChar": 26
+      },
+      "revId": "551c1fe6561a87ae53c5eca837570587eb6e5093",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
