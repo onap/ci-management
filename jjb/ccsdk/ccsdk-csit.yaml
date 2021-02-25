@@ -22,16 +22,21 @@
 - project:
     name: ccsdk-oran-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-review-verification-maven-{stream}':
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          maven-versions-plugin: true
+      - '{project-name}-merge-verification-maven-{stream}':
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          maven-versions-plugin: true
     project-name: 'ccsdk-oran'
-    recipients: 'bjorn.magnusson@est.tech maxime.bonneau@est.tech'
+    recipients: 'bjorn.magnusson@est.tech martin.c.yan@est.tech'
+    # project name in gerrit
+    project: 'ccsdk/oran'
     stream:
       - 'master':
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
-    functionality:
-      - 'polmansuite':
-          trigger_jobs: '{project-name}-maven-merge-{stream}'
+    mvn-settings: 'ccsdk-oran-settings'
     robot-options: ''
+    branch: 'master'
