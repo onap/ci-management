@@ -141,6 +141,30 @@
       "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7ae3625_08378880",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-02-25T14:20:40Z",
+      "side": 1,
+      "message": "Usually the PTL of the project has been defined as the recipient. It shouldn\u0027t be too hard to change it when necessary - such commits are usually merged within one day by ci-management reviewers",
+      "parentUuid": "65f51ad1_afb74bf8",
+      "range": {
+        "startLine": 12,
+        "startChar": 18,
+        "endLine": 12,
+        "endChar": 20
+      },
+      "revId": "eca2fb195f9f992448efd3091cc3660a79462e3a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
