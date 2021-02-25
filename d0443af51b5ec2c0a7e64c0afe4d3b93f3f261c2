@@ -22,6 +22,30 @@
       "revId": "d0443af51b5ec2c0a7e64c0afe4d3b93f3f261c2",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c37a2d6e_df3620c9",
+        "filename": "jjb/dmaap/dmaap-datarouter-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-02-25T06:09:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ca34265_7dba6bd1",
+      "range": {
+        "startLine": 6,
+        "startChar": 61,
+        "endLine": 6,
+        "endChar": 69
+      },
+      "revId": "d0443af51b5ec2c0a7e64c0afe4d3b93f3f261c2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
