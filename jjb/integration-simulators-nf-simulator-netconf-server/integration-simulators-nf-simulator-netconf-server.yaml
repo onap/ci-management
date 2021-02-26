@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-simulators-nf-simulator-netconf-server-project-view
+    project-name: integration-simulators-nf-simulator-netconf-server
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-nf-simulator-netconf-server-info
+    project: integration/simulators/nf-simulator/netconf-server
+    project-name: integration-simulators-nf-simulator-netconf-server
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
