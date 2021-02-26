@@ -37,7 +37,7 @@
       mvn-snapshot-id: 'ecomp-snapshots'
       nexus-snapshot-repo: 'snapshots'
       jobs:
-          - gerrit-maven-verify
+          - '{project-name}-{stream}-verify-java'
           - gerrit-maven-merge
           - gerrit-maven-stage:
                 sign-artifacts: true
