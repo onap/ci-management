@@ -37,7 +37,8 @@
       mvn-snapshot-id: 'ecomp-snapshots'
       nexus-snapshot-repo: 'snapshots'
       jobs:
-          - gerrit-maven-verify
+          - gerrit-maven-verify:
+                mvn-goals: 'clean install'
           - gerrit-maven-merge
           - gerrit-maven-stage:
                 sign-artifacts: true
