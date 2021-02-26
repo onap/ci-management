@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b7da4d53_5306d127",
+        "filename": "jjb/cps/cps-cps-tbdmt.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-02-26T18:40:20Z",
+      "side": 1,
+      "message": "You missed the \":\" here after \"gerrit-maven-verify\"",
+      "range": {
+        "startLine": 40,
+        "startChar": 12,
+        "endLine": 40,
+        "endChar": 31
+      },
+      "revId": "1c3d9f1e09f6a1b30ed5325197813cab09aeade2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
