@@ -16,6 +16,8 @@
     jobs:
       - '{project-name}-python-jobs'
       - '{project-name}-{stream}-release-version-java-daily'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
     archive-artifacts: ''
     container-tag-method: latest
     nexus-iq-namespace: 'onap-'
