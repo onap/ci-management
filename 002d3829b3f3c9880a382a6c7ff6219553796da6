@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9f28475_bf03d340",
+        "filename": "jjb/integration/simulators/nf-simulator/integration-pm-https-server-nf-simulator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-03T18:18:44Z",
+      "side": 1,
+      "message": "integration-simulators-nf-simulator-pm-https-server-settings",
+      "range": {
+        "startLine": 25,
+        "startChar": 20,
+        "endLine": 25,
+        "endChar": 71
+      },
+      "revId": "002d3829b3f3c9880a382a6c7ff6219553796da6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a305967_5f309963",
+        "filename": "jjb/integration/simulators/nf-simulator/integration-pm-https-server-nf-simulator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-03T18:18:44Z",
+      "side": 1,
+      "message": "integration-simulators-nf-simulator-pm-https-server-settings",
+      "range": {
+        "startLine": 50,
+        "startChar": 19,
+        "endLine": 50,
+        "endChar": 71
+      },
+      "revId": "002d3829b3f3c9880a382a6c7ff6219553796da6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
