@@ -1,4 +1,19 @@
 - project:
+    name: policy-drools-pdp-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-drools-pdp'
+    recipients: 'jrh3@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'drools-pdp'
+    trigger_jobs:
+      - 'policy-drools-pdp-{stream}-merge-java'
+
+- project:
     name: policy-apex-pdp-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -149,8 +164,6 @@
     project-name: 'policy'
     java-version: openjdk11
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
