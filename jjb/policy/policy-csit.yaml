@@ -1,4 +1,19 @@
 - project:
+    name: policy-drools-applications-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-drools-applications'
+    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'drools-applications'
+    trigger_jobs:
+      - 'policy-drools-applications-{stream}-merge-java'
+
+- project:
     name: policy-drools-pdp-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -182,8 +197,6 @@
     project-name: 'policy'
     java-version: openjdk11
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
