@@ -9,6 +9,33 @@
     branch: master
 
 - project:
+    name: integration-5G-core-nf-simulator
+    project-name: integration-5G-core-nf-simulator
+    project: integration/simulators/5G-core-nf-simulator
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'integration-simulators-5G-core-nf-simulator-settings'
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
+    subproject:
+      - 'AMF':
+          path: 'coresim/AMF/'
+          pattern: 'coresim/AMF/**'
+          pom: 'coresim/AMF/pom.xml'
+      - 'SMF':
+          path: 'coresim/SMF/'
+          pattern: 'coresim/SMF/**'
+          pom: 'coresim/SMF/pom.xml'
+      - 'UPF':
+          path: 'coresim/UPF/'
+          pattern: 'coresim/UPF/**'
+          pom: 'coresim/UPF/pom.xml'
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java':
+          mvn-goals: 'clean install'
+
+- project:
     name: integration-5G-core-nf-simulator-linters
     project: integration/simulators/5G-core-nf-simulator
     project-name: integration-5G-core-nf-simulator
