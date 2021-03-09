@@ -5,12 +5,13 @@
     project: 'dcaegen2/collectors/snmptrap'
     python-version: python3
     tox-dir: '.'
-    tox-envs: 'py3'
     stream:
       - 'master':
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:

@@ -23,6 +23,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-platform-inventory-api-settings'
     # due to a strange macro / variable translation problem this needs

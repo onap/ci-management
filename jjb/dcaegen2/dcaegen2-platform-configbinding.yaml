@@ -32,6 +32,8 @@
           branch: master
       - guilin:
           branch: guilin
+      - honolulu:
+          branch: honolulu
 
 - project:
     name: dcaegen2-platform-configbinding-sonar

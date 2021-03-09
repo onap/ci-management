@@ -23,6 +23,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-son-handler-settings'
     files: '**'

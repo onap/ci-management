@@ -100,6 +100,9 @@
           branch: master
       - guilin:
           branch: guilin
+      - honolulu:
+          branch: honolulu
+
     views:
       - project-view:
           project-name: dcaegen2-platform-adapter

@@ -21,6 +21,8 @@
           branch: 'frankfurt'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'dcaegen2-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

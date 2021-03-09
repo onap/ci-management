@@ -17,6 +17,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: dcaegen2-platform-settings
     files: '**'
     archive-artifacts: ''

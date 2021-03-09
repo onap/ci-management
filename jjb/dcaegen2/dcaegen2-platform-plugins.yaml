@@ -14,6 +14,9 @@
           python-version: python3
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
+          python-version: python3
     mvn-settings: 'dcaegen2-platform-plugins-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
