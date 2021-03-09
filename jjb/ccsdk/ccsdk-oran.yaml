@@ -26,6 +26,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-oran-settings'
@@ -49,6 +51,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-oran-settings'

@@ -35,6 +35,8 @@
           branch: 'master'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'ccsdk-oran-settings'
     robot-options: ''
     branch: 'master'
