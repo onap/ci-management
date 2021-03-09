@@ -13,6 +13,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'
