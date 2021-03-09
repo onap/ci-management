@@ -15,7 +15,7 @@
       - 'guilin':
           branch: 'guilin'
       - 'honolulu':
-          branch: 'honololu'
+          branch: 'honolulu'
     mvn-settings: 'dcaegen2-deployments-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
