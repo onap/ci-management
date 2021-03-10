@@ -1,4 +1,19 @@
 - project:
+    name: policy-xacml-pdp-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-xacml-pdp'
+    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'xacml-pdp'
+    trigger_jobs:
+      - 'policy-xacml-pdp-{stream}-merge-java'
+
+- project:
     name: policy-drools-applications-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -140,8 +155,6 @@
     java-version: openjdk11
     recipients: 'ah999m@att.com'
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
