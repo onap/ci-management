@@ -1,0 +1,14 @@
+---
+- project:
+    name: sdc-sdc-helm-validator-project-view
+    project-name: sdc-sdc-helm-validator
+    views:
+      - project-view
+
+- project:
+    name: sdc-sdc-helm-validator-info
+    project: sdc/sdc-helm-validator
+    project-name: sdc-sdc-helm-validator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
