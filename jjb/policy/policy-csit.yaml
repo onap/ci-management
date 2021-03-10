@@ -8,6 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'xacml-pdp'
     trigger_jobs:
@@ -23,6 +25,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'drools-applications'
     trigger_jobs:
@@ -38,6 +42,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'drools-pdp'
     trigger_jobs:
@@ -53,6 +59,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -68,6 +76,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'pap'
     trigger_jobs:
@@ -83,6 +93,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     functionality:
       - 'api'
     trigger_jobs:
@@ -136,6 +148,8 @@
     stream:
       - 'master':
           branch: master
+      - 'honolulu':
+          branch: 'honolulu'
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':

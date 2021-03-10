@@ -27,6 +27,8 @@
     stream:
         - 'master':
               branch: 'master'
+        - 'honolulu':
+              branch: 'honolulu'
         - 'tosca-poc':
               branch: 'tosca-poc'
     mvn-settings: 'policy-clamp-settings'
