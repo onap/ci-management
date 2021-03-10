@@ -23,6 +23,8 @@
           branch: 'frankfurt'
       - 'guilin':
           branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'policy-models-settings'
     java-version: openjdk11
     files: '**'
