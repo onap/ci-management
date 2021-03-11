@@ -6,17 +6,17 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
     project-name: 'dmaap-buscontroller'
     recipients: 'fiachra.corcoran@est.tech'
-    stream: 'master'
-    disabled: false
+    stream:
+      - 'master':
+          branch: 'master'
     functionality:
       - 'ssl':
           trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+            - '{project-name}-maven-docker-stage-{stream}'
       - 'with_mr':
           trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+            - '{project-name}-maven-docker-stage-{stream}'
       - 'with_dr':
           trigger_jobs:
-            - '{project-name}-{stream}-release-java-daily-checkstyle'
+            - '{project-name}-maven-docker-stage-{stream}'
     robot-options: ''
-    branch: 'master'

@@ -16,6 +16,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'guilin':
           branch: 'guilin'
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
