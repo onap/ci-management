@@ -1,22 +1,25 @@
 ---
-
 - project:
-    name: dmaap-kafka-docker
-    project-name: 'dmaap-kafka-docker'
+    name: dmaap-zookeeper
+    project-name: 'dmaap-zookeeper'
     jobs:
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
+          maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-    project: 'dmaap/kafka11aaf'
+    project: 'dmaap/zookeeper'
     stream:
       - 'master':
           branch: 'master'
-    mvn-settings: 'dmaap-kafka11aaf-settings'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'guilin':
+          branch: 'guilin'
+    mvn-settings: 'dmaap-zookeeper-settings'
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
@@ -24,10 +27,10 @@
     build-node: ubuntu1804-docker-8c-8g
 
 - project:
-    name: dmaap-kafka-docker-info
-    project-name: dmaap-kafka-docker
+    name: dmaap-zookeeper-info
+    project-name: dmaap-zookeeper
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
-    project: dmaap/kafka11aaf
+    project: dmaap/zookeeper
     branch: master
