@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e807e4c5_1459666b",
+        "filename": "jjb/dmaap/dmaap-messagerouter-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-11T16:28:40Z",
+      "side": 1,
+      "message": "No Guilin or Honolulu needed?",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
