@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'guilin':
           branch: 'guilin'
     # due to a strange macro / variable translation problem this needs to be
