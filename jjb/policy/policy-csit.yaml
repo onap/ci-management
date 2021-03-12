@@ -1,4 +1,21 @@
 - project:
+    name: policy-distribution-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-distribution'
+    recipients: 'ram.krishna.verma@est.tech'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+    functionality:
+      - 'distribution'
+    trigger_jobs:
+      - 'policy-distribution-{stream}-merge-java'
+
+- project:
     name: policy-xacml-pdp-project-csit
     jobs:
       - '{project-name}-{stream}-project-csit-{functionality}'
@@ -146,14 +163,10 @@
     java-version: openjdk11
     recipients: 'ram.krishna.verma@est.tech'
     stream:
-      - 'master':
-          branch: master
       - 'frankfurt':
           branch: frankfurt
       - 'guilin':
           branch: guilin
-      - 'honolulu':
-          branch: 'honolulu'
     functionality:
       - 'distribution'
     trigger_jobs:
