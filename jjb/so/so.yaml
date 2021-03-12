@@ -32,8 +32,8 @@
       - 'guilin':
           branch: 'guilin'
           java-version: openjdk11
-      - 'dynamicBPMN':
-          branch: 'Dynamic_BPMN'
+      - 'honolulu':
+          branch: 'honolulu'
           java-version: openjdk11
     mvn-settings: 'so-settings'
     files: '**'
@@ -113,3 +113,4 @@
     project: so
     branch: master
     branch: guilin
+    branch: honolulu    
