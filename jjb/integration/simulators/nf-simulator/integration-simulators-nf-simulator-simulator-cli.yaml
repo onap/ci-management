@@ -1,0 +1,43 @@
+---
+- project:
+      name: integration-simulators-nf-simulator-simulator-cli
+      project-name: 'integration-simulators-nf-simulator-simulator-cli'
+      python-version: python3
+      tox-dir: '.'
+      tox-envs: ''
+      subproject:
+          - pkgtools:
+                path: '.'
+                pattern: '**'
+      project: 'integration/simulators/nf-simulator/simulator-cli'
+      stream:
+          - 'master':
+                branch: 'master'
+      mvn-settings: 'integration-simulators-nf-simulator-simulator-cli-settings'
+      build-node: ubuntu1804-builder-4c-4g
+      jobs:
+          - '{project-name}-{stream}-{subproject}-verify-python'
+          - '{project-name}-{subproject}-python-staging-{stream}'
+          - '{project-name}-{subproject}-python-release-{stream}'
+
+- project:
+      name: integration-simulators-nf-simulator-simulator-cli-sonar
+      jobs:
+          - gerrit-tox-sonar
+      cron: '@daily'
+      build-node: ubuntu1804-builder-4c-4g
+      project: 'integration/simulators/nf-simulator/simulator-cli'
+      project-name: 'integration-simulators-nf-simulator-simulator-cli'
+      branch: 'master'
+      mvn-settings: 'integration-simulators-nf-simulator-simulator-cli-settings'
+      mvn-goals: 'clean install'
+      mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+      name: integration-simulators-nf-simulator-simulator-cli-info
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos7-builder-2c-1g
+      project: 'integration/simulators/nf-simulator/simulator-cli'
+      project-name: 'integration-simulators-nf-simulator-simulator-cli'
+      branch: 'master'
