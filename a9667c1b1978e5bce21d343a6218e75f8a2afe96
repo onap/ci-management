@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d5380e8_864d9aac",
+        "filename": "jjb/testsuite/testsuite-cds-mock-odl.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-16T17:16:15Z",
+      "side": 1,
+      "message": "stream parameter missing to format {project-name}-docker-verify-{stream}",
+      "range": {
+        "startLine": 51,
+        "startChar": 8,
+        "endLine": 51,
+        "endChar": 29
+      },
+      "revId": "a9667c1b1978e5bce21d343a6218e75f8a2afe96",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
