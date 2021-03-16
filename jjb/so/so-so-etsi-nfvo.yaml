@@ -36,6 +36,9 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
+      - 'honolulu':
+          branch: 'honolulu'
+          java-version: openjdk11
     mvn-settings: 'so-so-etsi-nfvo-settings'
     files: '**'
     archive-artifacts: ''
