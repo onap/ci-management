@@ -1,0 +1,65 @@
+---
+
+- project:
+    name: usecase-ui-nlp
+    project-name: 'usecase-ui-nlp'
+    project: 'usecase-ui/nlp'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'usecase-ui-nlp-settings'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - '{project-name}-{stream}-docker-java-daily':
+          mvn-params: '-Dmaven.test.skip=true'
+          build-node: ubuntu1804-docker-8c-8g
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: docker
+    build-node: ubuntu1804-builder-4c-4g
+
+- project:
+    name: usecase-ui-nlp-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: ubuntu1804-builder-4c-4g
+    project: 'usecase-ui/nlp'
+    project-name: 'usecase-ui-nlp'
+    branch: 'master'
+    mvn-settings: 'usecase-ui-nlp-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: usecase-ui-nlp-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: usecase-ui/nlp
+    project-name: 'usecase-ui-nlp'
+    build-node: ubuntu1804-builder-4c-4g
+    branch: 'master'
+    mvn-settings: 'usecase-ui-nlp-settings'
+
+- project:
+    name: usecase-ui-nlp-info
+    project-name: usecase-ui-nlp
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos7-builder-2c-1g
+    project: usecase-ui/nlp
+    branch: master
