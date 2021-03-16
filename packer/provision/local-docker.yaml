@@ -121,6 +121,7 @@
           - python3.9
           - python3.9-dev
           - python3.9-tk
+          - python3.9-distutils
       become: true
       when: ansible_distribution == 'Ubuntu'
 
