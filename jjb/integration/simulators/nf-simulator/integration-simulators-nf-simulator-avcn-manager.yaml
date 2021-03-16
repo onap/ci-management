@@ -4,12 +4,15 @@
       project-name: 'integration-simulators-nf-simulator-avcn-manager'
       java-version: openjdk11
       jobs:
-          - '{project-name}-{stream}-verify-java'
-          - '{project-name}-{stream}-merge-java'
+          - '{project-name}-{stream}-verify-java':
+                mvn-goals: 'clean install -P docker -DskipDockerPush=true'
+          - '{project-name}-{stream}-merge-java':
+                mvn-goals: 'clean deploy'
           - gerrit-maven-stage:
                 sign-artifacts: true
                 build-node: centos7-docker-8c-8g
                 maven-versions-plugin: true
+                mvn-goals: 'clean deploy'
           - gerrit-maven-docker-stage:
                 build-node: ubuntu1804-docker-8c-8g
                 container-public-registry: 'nexus3.onap.org:10001'
