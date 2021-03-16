@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fcadea51_4ffeb4b7",
+        "filename": "jjb/testsuite/testsuite-cds-mock-odl.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-16T18:59:22Z",
+      "side": 1,
+      "message": "This should be testsuite-cds-mock-odl-settings",
+      "range": {
+        "startLine": 67,
+        "startChar": 19,
+        "endLine": 67,
+        "endChar": 40
+      },
+      "revId": "869552653b8cd8eecb89f47bbbe4b181a11b74c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
