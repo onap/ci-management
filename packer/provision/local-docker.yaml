@@ -121,8 +121,28 @@
           - python3.9
           - python3.9-dev
           - python3.9-tk
+          - python3.9-distutils
       become: true
       when: ansible_distribution == 'Ubuntu'
+
+    - name: Gather package facts
+      package_facts:
+        manager: auto
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Debug if package is present
+      debug:
+        msg: 'BENGT yes, python3.9-distutils is present'
+      when:
+        - ansible_distribution == 'Ubuntu' 
+        - 'python3.9-distutils' in ansible_facts.packages
+
+    - name: Debug if package is absent
+      debug:
+        msg: 'BENGT no, python3.9-distutils is absent'
+      when:
+        - ansible_distribution == 'Ubuntu' 
+        - 'python3.9-distutils' not in ansible_facts.packages
 
     - name: Install nodejs-dev libssl1.0-dev dep
       apt:
