@@ -3,11 +3,11 @@
       name: integration-simulators-nf-simulator-simulator-cli
       project-name: 'integration-simulators-nf-simulator'
       python-version: python3
-      tox-dir: './simulator-cli'
+      tox-dir: '.'
       tox-envs: ''
       subproject:
           - simulator-cli:
-                path: '.'
+                path: './simulator-cli'
                 pattern: '**'
       project: 'integration/simulators/nf-simulator'
       stream:
