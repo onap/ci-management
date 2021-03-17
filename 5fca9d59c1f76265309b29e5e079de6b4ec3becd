@@ -22,6 +22,30 @@
       "revId": "5fca9d59c1f76265309b29e5e079de6b4ec3becd",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5e62337_2ad60500",
+        "filename": "jjb/integration/simulators/nf-simulator/integration-simulators-nf-simulator-avcn-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2021-03-17T09:34:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa67f7b5_ff5764c4",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 19,
+        "endChar": 20
+      },
+      "revId": "5fca9d59c1f76265309b29e5e079de6b4ec3becd",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
