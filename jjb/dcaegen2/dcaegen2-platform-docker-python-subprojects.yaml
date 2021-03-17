@@ -92,9 +92,6 @@
       - dcaegen2-platform-mod-onboardingapi:
           src-dir: mod/onboardingapi
           docker-name: onap/org.onap.dcaegen2.platform.mod.onboardingapi
-      - dcaegen2-platform-oti-event-handler:
-          src-dir: oti/event-handler
-          docker-name: onap/org.onap.dcaegen2.platform.oti.event-handler
     stream:
       - master:
           branch: master
@@ -108,7 +105,5 @@
           project-name: dcaegen2-platform-adapter
       - project-view:
           project-name: dcaegen2-platform-mod
-      - project-view:
-          project-name: dcaegen2-platform-oti
     jobs:
       - dcaegen2-docker-python-jobs
