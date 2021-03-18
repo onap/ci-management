@@ -31,7 +31,7 @@
     archive-artifacts: '**/*.log'
 
     build-node: centos7-builder-2c-1g
-    build-timeout: 90
+    build-timeout: 120
 
     platforms:
       - centos-7
