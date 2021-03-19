@@ -1,0 +1,9 @@
+---
+
+- project:
+    name: integration-usecases-A1-policy-enforcement-info
+    project: integration/usecases/A1-policy-enforcement
+    project-name: integration-usecases-A1-policy-enforcement
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
