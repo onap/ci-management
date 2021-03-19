@@ -1,0 +1,9 @@
+---
+
+- project:
+    name: integration-simulators-A1-policy-enforcement-simulator-info
+    project: integration/simulators/A1-policy-enforcement-simulator
+    project-name: integration-simulators-A1-policy-enforcement-simulator
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
