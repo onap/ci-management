@@ -66,8 +66,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'guilin':
-          branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
           java-version: openjdk11
 #     - 'frankfurt':
 #         branch: 'frankfurt'

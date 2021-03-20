@@ -22,9 +22,7 @@
       - 'master':
           branch: 'master'
       - 'guilin':
-          branch: 'guilin'
-      - 'frankfurt':
-          branch: 'frankfurt'
+          branch: 'honolulu'
     mvn-settings: 'sdc-sdc-be-common-settings'
     files: '**'
     archive-artifacts: ''
