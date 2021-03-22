@@ -142,6 +142,30 @@
       "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd0c11d8_cd7b688f",
+        "filename": "jjb/dmaap/dmaap-messagerouter-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-03-22T17:41:09Z",
+      "side": 1,
+      "message": "So say for instance for any docker-compose or docker run in the csits, when the branch is cut, suite owners should hardcode the image version?\nTo be honest we have been just deploying the \"latest\" image for all csit branches.",
+      "parentUuid": "b63c21d1_dad2475f",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
