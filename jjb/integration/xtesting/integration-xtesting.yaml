@@ -47,7 +47,7 @@
 - project:
     name: integration-xtesting-release
     project-name: 'integration-xtesting'
-    project: 'integration/docker/onap-python'
+    project: 'integration/xtesting
     mvn-settings: 'integration-settings'
     jobs:
       - '{project-name}-gerrit-release-jobs':
