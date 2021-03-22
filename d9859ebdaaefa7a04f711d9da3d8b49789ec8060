@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b161220_11eb1636",
+        "filename": "jjb/sdc/sdc-sdc-be-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-22T16:34:08Z",
+      "side": 1,
+      "message": "This needs to be honolulu",
+      "range": {
+        "startLine": 24,
+        "startChar": 9,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "d9859ebdaaefa7a04f711d9da3d8b49789ec8060",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
