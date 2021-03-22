@@ -118,6 +118,30 @@
       "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b63c21d1_dad2475f",
+        "filename": "jjb/dmaap/dmaap-messagerouter-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-22T17:27:53Z",
+      "side": 1,
+      "message": "Basically, if you are cherry-picking anything to older branches that this CSIT verifies, you should have a separate job for those (I\u0027m assuming it\u0027s self-evident in those cases that the produced docker image versions would then differ from master)",
+      "parentUuid": "1c17b568_49e35fb3",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
