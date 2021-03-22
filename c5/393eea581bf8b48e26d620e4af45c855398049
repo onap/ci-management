@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Bogumil Zebek <bogumil.zebek@nokia.com>
+Code-Review+1: Tomasz Pietruszkiewicz <tomasz.pietruszkiewicz@nokia.com>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Mon, 22 Mar 2021 13:24:26 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/119574
+Project: ci-management
+Branch: refs/heads/master
