@@ -6,9 +6,11 @@
       - '{project-name}-{stream}-verify-csit-{functionality}'
     project-name: 'dmaap'
     recipients: 'fiachra.corcoran@est.tech'
-    stream: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
     functionality:
       - 'mrpubsub':
           trigger_jobs:
+            - '{project-name}-maven-docker-stage-{stream}'
     robot-options: ''
-    branch: 'master'
