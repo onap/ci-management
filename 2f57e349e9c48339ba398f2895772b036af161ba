@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e6fd07e_ca84f3a7",
+        "filename": "jjb/integration/xtesting/integration-xtesting.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-03-22T18:33:35Z",
+      "side": 1,
+      "message": "missing an ending \u0027",
+      "range": {
+        "startLine": 50,
+        "startChar": 32,
+        "endLine": 50,
+        "endChar": 34
+      },
+      "revId": "2f57e349e9c48339ba398f2895772b036af161ba",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
