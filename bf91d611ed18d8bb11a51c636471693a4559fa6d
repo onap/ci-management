@@ -166,6 +166,30 @@
       "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ecf8dce_abf33bfb",
+        "filename": "jjb/dmaap/dmaap-messagerouter-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-23T09:17:57Z",
+      "side": 1,
+      "message": "That sounds wrong. The CSITs in a branch should certainly ensure somehow that they are verifying the images belonging to that same branch.",
+      "parentUuid": "bd0c11d8_cd7b688f",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 26
+      },
+      "revId": "bf91d611ed18d8bb11a51c636471693a4559fa6d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
