@@ -9,6 +9,22 @@
       - gerrit-info-yaml-verify
 
 - project:
+    name: integration-simulators-A1-policy-enforcement-simulator
+    project: integration/simulators/A1-policy-enforcement-simulator
+    project-name: integration-simulators-A1-policy-enforcement-simulator
+    java-version: openjdk11
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'integration-simulators-A1-policy-enforcement-simulator-settings'
+    files: '**'
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
+    jobs:
+        - '{project-name}-{stream}-verify-java':
+            mvn-goals: 'clean install'
+
+- project:
     name: integration-simulators-A1-policy-enforcement-simulator-linters
     project: integration/simulators/A1-policy-enforcement-simulator
     project-name: integration-simulators-A1-policy-enforcement-simulator
