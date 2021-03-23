@@ -13,6 +13,7 @@
       - 'honolulu':
           branch: 'honolulu'
     build-node: ubuntu1804-docker-8c-8g
+    build-timeout: 45
     mvn-settings: 'dcaegen2-platform-policy-handler-settings'
     jobs:
       - '{project-name}-python-jobs'
