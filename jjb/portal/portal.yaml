@@ -31,7 +31,7 @@
 - project:
     name: portal-sonar
     jobs:
-      - gerrit-maven-sonar
+      - gerrit-maven-sonar-prescan-script
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
@@ -45,6 +45,7 @@
     mvn-settings: 'portal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    sonar-prescan-script: !include-raw-escape: ../ubuntu-latest-nodejs.sh
 
 - project:
     name: 'portal-coverity'
