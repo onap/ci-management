@@ -23,8 +23,6 @@
     jobs:
         - '{project-name}-{stream}-verify-java':
             mvn-goals: 'clean install'
-        - '{project-name}-gerrit-release-jobs':
-            build-node: centos7-docker-8c-8g
 
 - project:
     name: integration-simulators-A1-policy-enforcement-simulator-linters
