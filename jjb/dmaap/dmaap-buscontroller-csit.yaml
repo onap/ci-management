@@ -10,9 +10,6 @@
       - 'master':
           branch: 'master'
     functionality:
-      - 'ssl':
-          trigger_jobs:
-            - '{project-name}-maven-docker-stage-{stream}'
       - 'with_mr':
           trigger_jobs:
             - '{project-name}-maven-docker-stage-{stream}'
