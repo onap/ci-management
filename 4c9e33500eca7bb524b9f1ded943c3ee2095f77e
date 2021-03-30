@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d4c31fbb_6f6011dc",
+        "filename": "jjb/dmaap/dmaap-datarouter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-30T13:01:47Z",
+      "side": 1,
+      "message": "Not sure if this is needed (or even problematic)?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 42
+      },
+      "revId": "4c9e33500eca7bb524b9f1ded943c3ee2095f77e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
