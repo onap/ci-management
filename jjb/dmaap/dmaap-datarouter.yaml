@@ -17,6 +17,25 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
+    files: '**'
+    archive-artifacts: ''
+    java-version: openjdk11
+
+- project:
+    name: dmaap-datarouter-maintenance-java11
+    project-name: 'dmaap-datarouter-maintenance'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-goals: 'clean package -P docker docker:build docker:push'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+    project: 'dmaap/datarouter'
+    stream:
       - 'honolulu':
           branch: 'honolulu'
       - 'guilin':
@@ -25,7 +44,7 @@
     files: '**'
     archive-artifacts: ''
     java-version: openjdk11
-
+    cron: ''
 
 - project:
     name: dmaap-datarouter-sonar
