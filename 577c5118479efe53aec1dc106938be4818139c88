@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7cfae1b_22fc47b6",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-31T08:12:09Z",
+      "side": 1,
+      "message": "Does this compile your docker images?",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "52686245_1bd3fb16",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-31T08:12:09Z",
+      "side": 1,
+      "message": "you don\u0027t need these any longer",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 23
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "178a5e6b_defad48b",
+        "filename": "jjb/optf/optf-osdf-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-31T08:12:09Z",
+      "side": 1,
+      "message": "Does this compile your docker images?",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01201751_ae2cddcb",
+        "filename": "jjb/optf/optf-osdf-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-31T08:12:09Z",
+      "side": 1,
+      "message": "No need for these",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 23
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
