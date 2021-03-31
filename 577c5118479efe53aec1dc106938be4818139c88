@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "27a04f10_5f9a13ae",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2671
+      },
+      "writtenOn": "2021-03-31T08:30:51Z",
+      "side": 1,
+      "message": "Yes. mvn clean install will create the docker image",
+      "parentUuid": "c7cfae1b_22fc47b6",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "52686245_1bd3fb16",
         "filename": "jjb/optf/optf-has-csit.yaml",
         "patchSetId": 2
@@ -59,6 +83,30 @@
       "writtenOn": "2021-03-31T08:12:09Z",
       "side": 1,
       "message": "Does this compile your docker images?",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17fdac33_c2a719d7",
+        "filename": "jjb/optf/optf-osdf-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2671
+      },
+      "writtenOn": "2021-03-31T08:30:51Z",
+      "side": 1,
+      "message": "Yes. Same for this as well",
+      "parentUuid": "178a5e6b_defad48b",
       "range": {
         "startLine": 6,
         "startChar": 10,
