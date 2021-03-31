@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ac39c881_a5d045fe",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3949
+      },
+      "writtenOn": "2021-03-31T09:17:27Z",
+      "side": 1,
+      "message": "...and does it push the image to Nexus?",
+      "parentUuid": "27a04f10_5f9a13ae",
+      "range": {
+        "startLine": 6,
+        "startChar": 10,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "577c5118479efe53aec1dc106938be4818139c88",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "52686245_1bd3fb16",
         "filename": "jjb/optf/optf-has-csit.yaml",
         "patchSetId": 2
