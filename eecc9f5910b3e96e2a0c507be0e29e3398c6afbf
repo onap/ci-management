@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8676fbd0_5eacd51a",
+        "filename": "jjb/optf/optf-has-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2671
+      },
+      "writtenOn": "2021-03-31T08:51:24Z",
+      "side": 1,
+      "message": "No, I didn\u0027t take it from the documentation. I got this from the ccsdk\u0027s CSIT. I thought this might be for the running the daily CSIT.\n\nSo, we won\u0027t be running daily CSIT jobs?",
+      "parentUuid": "217844d3_f000db16",
+      "range": {
+        "startLine": 4,
+        "startChar": 8,
+        "endLine": 4,
+        "endChar": 46
+      },
+      "revId": "eecc9f5910b3e96e2a0c507be0e29e3398c6afbf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2fb88bb4_89003ef3",
         "filename": "jjb/optf/optf-osdf-csit.yaml",
         "patchSetId": 3
