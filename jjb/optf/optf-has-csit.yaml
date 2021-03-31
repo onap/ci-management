@@ -1,10 +1,14 @@
 - project:
     name: optf-has-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-project-csit'
+      - '{project-name}-review-verification-maven-{stream}':
+          mvn-goals: clean install
+      - '{project-name}-merge-verification-maven-{stream}':
+          mvn-goals: clean install
     project-name: optf-has
     recipients: 'snarayanan@research.att.com'
+    project: optf/has
     stream:
       - 'master':
           branch: 'master'
