@@ -38,7 +38,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java':
           docker-pom: 'pom.xml'
-          mvn-params: "-P cps-xnf-docker"
+          mvn-params: "-P cps-ncmp-docker"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -46,7 +46,7 @@
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P cps-xnf-docker'
+          mvn-params: '-P cps-ncmp-docker'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
