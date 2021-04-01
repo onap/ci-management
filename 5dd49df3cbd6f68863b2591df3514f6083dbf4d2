@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef82dfd7_02d1616c",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T12:39:39Z",
+      "side": 1,
+      "message": "Can be removed",
+      "range": {
+        "startLine": 23,
+        "startChar": 10,
+        "endLine": 23,
+        "endChar": 26
+      },
+      "revId": "5dd49df3cbd6f68863b2591df3514f6083dbf4d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d518a8b4_7e239abe",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T12:39:39Z",
+      "side": 1,
+      "message": "Can be removed",
+      "revId": "5dd49df3cbd6f68863b2591df3514f6083dbf4d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9fa7ed36_3792412a",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T12:39:39Z",
+      "side": 1,
+      "message": "Can be removed",
+      "revId": "5dd49df3cbd6f68863b2591df3514f6083dbf4d2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
