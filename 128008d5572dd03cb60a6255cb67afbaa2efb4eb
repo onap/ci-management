@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e4e2dd4_63269a88",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T13:29:35Z",
+      "side": 1,
+      "message": "My bad. Release jobs should be tied to master branch and removed from here.",
+      "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6d95785f_36242794",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T13:29:35Z",
+      "side": 1,
+      "message": "Add the empty cron entry so it doesnt build daily.\n    cron: \u0027\u0027",
+      "range": {
+        "startLine": 30,
+        "startChar": 22,
+        "endLine": 30,
+        "endChar": 25
+      },
+      "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d0bb38ce_32348d91",
+        "filename": "jjb/dmaap/dmaap-messagerouter-msgrtr.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-01T13:29:35Z",
+      "side": 1,
+      "message": "Same comments as for mesageservice",
+      "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
