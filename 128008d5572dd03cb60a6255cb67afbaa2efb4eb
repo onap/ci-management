@@ -42,6 +42,29 @@
     },
     {
       "key": {
+        "uuid": "b0f095d0_f4339871",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-04-01T17:53:44Z",
+      "side": 1,
+      "message": "Remove these trailing spaces please",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 4
+      },
+      "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d0bb38ce_32348d91",
         "filename": "jjb/dmaap/dmaap-messagerouter-msgrtr.yaml",
         "patchSetId": 4
@@ -53,6 +76,29 @@
       "writtenOn": "2021-04-01T13:29:35Z",
       "side": 1,
       "message": "Same comments as for mesageservice",
+      "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69768787_e18fc2f2",
+        "filename": "jjb/dmaap/dmaap-messagerouter-msgrtr.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-04-01T17:53:44Z",
+      "side": 1,
+      "message": "Remove these trailing spaces please",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 4
+      },
       "revId": "128008d5572dd03cb60a6255cb67afbaa2efb4eb",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
