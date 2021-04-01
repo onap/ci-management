@@ -23,6 +23,30 @@
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
     files: '**'
     archive-artifacts: ''
+    
+- project:
+    name: dmaap-messagerouter-msgrtr-java-11
+    project-name: 'dmaap-messagerouter-msgrtr-java-11'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+
+    project: 'dmaap/messagerouter/msgrtr'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
+    mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
+    java-version: openjdk11
+    files: '**'
+    archive-artifacts: ''
 
 - project:
     name: dmaap-messagerouter-msgrtr-sonar
