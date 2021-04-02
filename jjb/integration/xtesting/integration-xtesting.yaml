@@ -43,6 +43,8 @@
                 branch: 'frankfurt'
           - 'guilin':
                 branch: 'guilin'
+          - 'honolulu':
+                branch: 'honolulu'
 
 - project:
     name: integration-xtesting-release
@@ -110,6 +112,9 @@
     stream:
       - 'master':
             branch: 'master'
+            files: ''
+      - 'honolulu':
+            branch: 'honolulu'
             files: ''
       - 'guilin':
             branch: 'guilin'
