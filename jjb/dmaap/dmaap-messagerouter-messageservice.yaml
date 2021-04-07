@@ -5,10 +5,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           mvn-params: '-P docker -Dmaven.test.skip=true'
@@ -26,7 +22,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
-    crom: ''
+    cron: ''
 
 - project:
     name: dmaap-messagerouter-messageservice-java-11
@@ -34,10 +30,6 @@
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-builder-4c-4g
-          maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           mvn-params: '-P docker -Dmaven.test.skip=true'
