@@ -26,7 +26,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
-    crom: ''
+    cron: ''
 
 - project:
     name: dmaap-messagerouter-messageservice-java-11
