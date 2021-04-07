@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bcb82fea_e2360bcc",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-07T14:06:05Z",
+      "side": 1,
+      "message": "Don\u0027t think we need this as we are only delivering a container.",
+      "revId": "00828c6679954add8b1105e18295d912d0b0fd33",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ec2d528_caaaa52a",
+        "filename": "jjb/dmaap/dmaap-messagerouter-messageservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-04-07T14:06:05Z",
+      "side": 1,
+      "message": "Same as above",
+      "revId": "00828c6679954add8b1105e18295d912d0b0fd33",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
