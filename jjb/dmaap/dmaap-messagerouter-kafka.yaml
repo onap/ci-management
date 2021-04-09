@@ -17,6 +17,24 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'dmaap-kafka11aaf-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: dmaap-kafka-maintenance
+    project-name: 'dmaap-kafka-maintenance'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+    project: 'dmaap/kafka11aaf'
+    stream:
       - 'honolulu':
           branch: 'honolulu'
       - 'guilin':
@@ -24,6 +42,7 @@
     mvn-settings: 'dmaap-kafka11aaf-settings'
     files: '**'
     archive-artifacts: ''
+    cron: ''
 
 - project:
     name: dmaap-kafka-sonar

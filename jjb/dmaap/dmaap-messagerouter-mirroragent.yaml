@@ -11,11 +11,26 @@
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'dmaap/messagerouter/mirroragent'
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
+    files: '**'
+    archive-artifacts: ''
+
+- project:
+    name: dmaap-messagerouter-mirroragent-maintenance
+    project-name: 'dmaap-messagerouter-mirroragent-maintenance'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true8g
+    project: 'dmaap/messagerouter/mirroragent'
+    stream:
       - 'honolulu':
           branch: 'honolulu'
       - 'guilin':
@@ -23,6 +38,7 @@
     mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
     files: '**'
     archive-artifacts: ''
+    cron: ''
 
 - project:
     name: dmaap-messagerouter-mirroragent-sonar

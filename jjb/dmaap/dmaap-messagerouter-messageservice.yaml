@@ -1,30 +1,5 @@
 ---
 - project:
-    name: dmaap-messagerouter-messageservice
-    project-name: 'dmaap-messagerouter-messageservice'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-    project: 'dmaap/messagerouter/messageservice'
-    stream:
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
-    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: 'docker'
-    cron: ''
-
-- project:
     name: dmaap-messagerouter-messageservice-java-11
     project-name: 'dmaap-messagerouter-messageservice-java-11'
     jobs:
@@ -48,6 +23,31 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
+
+- project:
+    name: dmaap-messagerouter-messageservice-maintenance
+    project-name: 'dmaap-messagerouter-messageservice-maintenance'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          mvn-params: '-P docker -Dmaven.test.skip=true'
+          maven-versions-plugin: true
+          container-public-registry: 'nexus3.onap.org:10001'
+          container-staging-registry: 'nexus3.onap.org:10003'
+    project: 'dmaap/messagerouter/messageservice'
+    stream:
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'guilin':
+          branch: 'guilin'
+    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
+    files: '**'
+    archive-artifacts: ''
+    docker-pom: 'pom.xml'
+    mvn-profile: 'docker'
+    cron: ''
 
 - project:
     name: dmaap-messagerouter-messageservice-sonar

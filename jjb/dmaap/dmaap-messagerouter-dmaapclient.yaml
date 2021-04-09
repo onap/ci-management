@@ -1,7 +1,7 @@
 ---
 - project:
-    name: dmaap-messagerouter-dmaapclient
-    project-name: 'dmaap-messagerouter-dmaapclient'
+    name: dmaap-messagerouter-dmaapclient-java11
+    project-name: 'dmaap-messagerouter-dmaapclient-java11'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -15,6 +15,23 @@
     stream:
       - 'master':
           branch: 'master'
+    mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
+    files: '**'
+    archive-artifacts: ''
+    java-version: openjdk11
+
+- project:
+    name: dmaap-messagerouter-dmaapclient-maintenance
+    project-name: 'dmaap-messagerouter-dmaapclient-maintenance'
+    jobs:
+      - '{project-name}-{stream}-verify-java'
+      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+    project: 'dmaap/messagerouter/dmaapclient'
+    stream:
       - 'honolulu':
           branch: 'honolulu'
       - 'guilin':
@@ -22,6 +39,7 @@
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
     files: '**'
     archive-artifacts: ''
+    cron: ''
 
 - project:
     name: dmaap-messagerouter-dmaapclient-sonar
