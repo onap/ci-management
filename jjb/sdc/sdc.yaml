@@ -29,13 +29,13 @@
     jobs:
       - '{project-name}-{stream}-verify-java':
           # this build is unit test only (Verify 1/2)
-          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
           build-node: 'ubuntu1804-docker-8c-8g'
       - '{project-name}-{stream}-sdc-merge-java':
           build-node: 'ubuntu1804-docker-8c-16g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
           # running everything (unit tests and integration tests in a single job for merge, as we don't need // run
           # for merge, but still saving integration tests results and report.
           archive-artifacts: >
@@ -51,11 +51,11 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
@@ -113,7 +113,7 @@
     branch: 'master'
     mvn-settings: 'sdc-settings'
     java-version: openjdk11
-    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
 
@@ -123,7 +123,7 @@
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/'
+          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm-proxy2/'
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc'
