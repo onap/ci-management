@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'multicloud-k8s-settings'
     files: '**'
     archive-artifacts: ''
@@ -52,12 +54,3 @@
 #    files: '**'
 #    archive-artifacts: ''
 #    build-node: ubuntu1804-docker-arm64-4c-2g
-
-- project:
-    name: multicloud-k8s-info
-    project-name: multicloud-k8s
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
-    project: multicloud/k8s
-    branch: master
