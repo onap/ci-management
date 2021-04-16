@@ -23,6 +23,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'holmes-common-settings'
     files: '**'
     archive-artifacts: ''
