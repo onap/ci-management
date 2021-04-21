@@ -50,6 +50,22 @@
     cron: ''
 
 - project:
+    name: dmaap-csit
+    jobs:
+      - '{project-name}-{stream}-csit-{functionality}'
+      - '{project-name}-{stream}-verify-csit-{functionality}'
+    project-name: 'dmaap'
+    recipients: 'fiachra.corcoran@est.tech'
+    stream:
+      - 'master':
+          branch: 'master'
+    functionality:
+      - 'mrpubsub':
+          trigger_jobs:
+            - '{project-name}-maven-docker-stage-{stream}'
+    robot-options: ''
+
+- project:
     name: dmaap-messagerouter-messageservice-sonar
     jobs:
       - gerrit-maven-sonar

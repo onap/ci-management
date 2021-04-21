@@ -51,6 +51,45 @@
     cron: ''
 
 - project:
+    name: dmaap-buscontroller-csit
+    jobs:
+      - '{project-name}-review-verification-maven-{stream}':
+            mvn-goals: clean install
+            mvn-params: '-P docker -DskipTests=true'
+      - '{project-name}-merge-verification-maven-{stream}':
+            mvn-goals: clean install
+            mvn-params: '-P docker'
+    project-name: 'dmaap-buscontroller'
+    recipients: 'fiachra.corcoran@est.tech'
+    project: 'dmaap/buscontroller'
+    stream:
+      - 'master':
+            branch: 'master'
+      - 'honolulu':
+            branch: 'honolulu'
+    mvn-settings: 'dmaap-buscontroller-settings'
+    robot-options: ''
+
+- project:
+    name: dmaap-buscontroller-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    cron: '@daily'
+    build-node: ubuntu1804-builder-4c-4g
+    project: 'dmaap/buscontroller'
+    project-name: 'dmaap-buscontroller'
+    branch: 'master'
+    mvn-settings: 'dmaap-buscontroller-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
+
+- project:
     name: dmaap-buscontroller-clm
     jobs:
       - gerrit-maven-clm
@@ -59,6 +98,7 @@
     project-name: 'dmaap-buscontroller'
     branch: 'master'
     mvn-settings: 'dmaap-buscontroller-settings'
+    java-version: openjdk11
 
 - project:
     name: dmaap-buscontroller-info
