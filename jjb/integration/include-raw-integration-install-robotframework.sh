@@ -18,12 +18,12 @@ set -exu
 # Make sure pip itself us up-to-date.
 pip install --upgrade pip
 
-pip install --upgrade --no-binary pycparser pycparser
-pip install --upgrade pyOpenSSL==16.2.0 docker-py importlib requests scapy netifaces netaddr ipaddr simplejson demjson
-pip install --upgrade robotframework{,-{httplibrary,requests,sshlibrary,selenium2library,xvfb}}
+pip install --no-binary pycparser==2.20
+pip install pyOpenSSL==16.2.0 docker-py==1.10.6 importlib==1.0.4 requests==2.25.1 scapy==2.4.4 netifaces==0.10.9 netaddr==0.8.0 ipaddr==2.2.0 simplejson==3.17.2 demjson==2.2.4
+pip install robotframework-httplibrary==0.4.2 robotframework-requests==0.8.2 robotframework-sshlibrary==3.6.0 robotframework-selenium2library==1.8.0 robotframework-xvfb==1.2.2
 
-pip install xvfbwrapper
-pip install PyVirtualDisplay
+pip install xvfbwrapper==0.2.9
+pip install PyVirtualDisplay==2.1
 
 # Print installed versions.
 pip freeze
