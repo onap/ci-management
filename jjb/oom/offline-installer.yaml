@@ -8,8 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
+      - 'honolulu':
+          branch: 'honolulu'
 
     jobs:
       - '{project-name}-{stream}-review':
