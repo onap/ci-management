@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc577af5_62239775",
+        "filename": "jjb/cps/cps-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-04-22T10:02:17Z",
+      "side": 1,
+      "message": "were you able to verify this locally using both H and master branches of cps code?!",
+      "range": {
+        "startLine": 8,
+        "startChar": 73,
+        "endLine": 8,
+        "endChar": 107
+      },
+      "revId": "6c5dd83d60e3dc8564a67c4f0dabd28c386ed311",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
