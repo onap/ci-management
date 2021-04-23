@@ -58,6 +58,7 @@
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: dmaap-messagerouter-dmaapclient-clm
@@ -68,6 +69,7 @@
     project-name: 'dmaap-messagerouter-dmaapclient'
     branch: 'master'
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
+    java-version: openjdk11
 
 - project:
     name: dmaap-messagerouter-dmaapclient-info

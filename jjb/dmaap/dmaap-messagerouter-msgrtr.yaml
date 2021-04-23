@@ -58,6 +58,7 @@
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-version: openjdk11
 
 - project:
     name: dmaap-messagerouter-msgrtr-clm
@@ -68,6 +69,7 @@
     project-name: 'dmaap-messagerouter-msgrtr'
     branch: 'master'
     mvn-settings: 'dmaap-messagerouter-msgrtr-settings'
+    java-version: openjdk11
 
 - project:
     name: dmaap-messagerouter-msgrtr-info
