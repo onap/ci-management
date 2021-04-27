@@ -18,6 +18,7 @@
       - 'honolulu':
           branch: 'honolulu'
     java-version: openjdk11
+    maven-version: 'mvn35'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
