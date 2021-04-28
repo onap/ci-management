@@ -66,6 +66,7 @@
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
+    java-version: openjdk11
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
@@ -79,6 +80,7 @@
     project-name: 'sdc-sdc-distribution-client'
     branch: 'master'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-distribution-client-info
