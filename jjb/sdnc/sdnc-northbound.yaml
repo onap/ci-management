@@ -53,7 +53,8 @@
     branch: 'master'
     mvn-settings: 'sdnc-northbound-settings'
     mvn-goals: 'clean install'
-    maven-version: "mvn35"
+    java-version: openjdk11
+    mvn-version: "mvn36"
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
@@ -68,6 +69,8 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'sdnc-northbound-settings'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
 
 - project:
     name: sdnc-northbound-info

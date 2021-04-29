@@ -71,6 +71,8 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'sdnc-oam-settings'
+    java-version: openjdk11
+    mvn-version: 'mvn36'
 
 - project:
     name: sdnc-oam-info
