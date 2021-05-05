@@ -64,6 +64,8 @@
     project: 'sdnc/apps'
     project-name: 'sdnc-apps'
     branch: 'master'
+    java-version: openjdk11
+    mvn-version : "mvn36"
     mvn-settings: 'sdnc-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -98,6 +100,8 @@
     stream:
       - 'master':
           branch: 'master'
+    java-version: openjdk11
+    mvn-version : "mvn36"
     mvn-settings: 'sdnc-apps-settings'
 
 - project:
