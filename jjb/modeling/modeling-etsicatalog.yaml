@@ -22,9 +22,7 @@
           maven-versions-plugin: true
       - '{project-name}-{stream}-docker-java-version-shell-daily':
           docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-modeling-etsicatalog-docker-image.sh'
+          mvn-goals: 'install deploy'
           build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
             build-node: centos7-docker-8c-8g
