@@ -12,7 +12,6 @@
     functionality:
       - 'pnf-sw-upgrade':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
 
 - project:
@@ -28,6 +27,4 @@
     functionality:
       - 'config-over-netconf':
           trigger_jobs:
-            - '{project-name}-{stream}-docker-java-shell-daily'
     robot-options: ''
-
