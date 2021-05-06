@@ -27,6 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'guilin':
           branch: 'guilin'
     mvn-settings: 'testsuite-settings'
@@ -67,5 +69,7 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'guilin':
           branch: 'guilin'
