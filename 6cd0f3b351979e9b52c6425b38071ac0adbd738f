@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36deef23_fcec0c6a",
+        "filename": "jjb/modeling/modeling-etsicatalog.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2021-05-06T00:52:15Z",
+      "side": 1,
+      "message": "Should this be \u0027clean deploy\u0027",
+      "revId": "6cd0f3b351979e9b52c6425b38071ac0adbd738f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
