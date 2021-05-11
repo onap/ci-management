@@ -1,9 +1,0 @@
----
-- project:
-    name: clamp-dashboard-info
-    project-name: clamp-dashboard
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
-    project: clamp/dashboard
-    branch: master
