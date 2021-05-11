@@ -7,7 +7,6 @@
     #
     # Required Variables:
     #     branch:    git branch (eg. stable/lithium or master)
-
     name: '{project-name}-{stream}-verify-java'
 
     project-type: freestyle
