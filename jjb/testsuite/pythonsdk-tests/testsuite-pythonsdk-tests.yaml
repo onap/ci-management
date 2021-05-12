@@ -43,3 +43,7 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'guilin':
+          branch: 'guilin'
