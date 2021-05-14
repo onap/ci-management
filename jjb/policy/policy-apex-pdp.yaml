@@ -31,8 +31,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'frankfurt':
-          branch: 'frankfurt'
       - 'guilin':
           branch: 'guilin'
       - 'honolulu':

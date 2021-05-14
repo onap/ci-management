@@ -132,8 +132,6 @@
     project-name: 'policy'
     java-version: openjdk11
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -151,8 +149,6 @@
     java-version: openjdk11
     recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -170,8 +166,6 @@
     java-version: openjdk11
     recipients: 'ram.krishna.verma@est.tech'
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -189,8 +183,6 @@
     java-version: openjdk11
     recipients: 'ah999m@att.com'
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -208,8 +200,6 @@
     java-version: openjdk11
     recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -226,8 +216,6 @@
     project-name: 'policy'
     java-version: openjdk11
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
@@ -244,8 +232,6 @@
     project-name: 'policy'
     java-version: openjdk11
     stream:
-      - 'frankfurt':
-          branch: frankfurt
       - 'guilin':
           branch: guilin
     functionality:
