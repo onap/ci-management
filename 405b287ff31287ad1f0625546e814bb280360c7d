@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4496592_47975b8f",
+        "filename": "jjb/aai/aai-traversal.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-05-14T16:51:01Z",
+      "side": 1,
+      "message": "This is not going to work :( ... the release jobs depends on Centos since it applies a tag and signs it . Sigul only works on Centos",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 45
+      },
+      "revId": "405b287ff31287ad1f0625546e814bb280360c7d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
