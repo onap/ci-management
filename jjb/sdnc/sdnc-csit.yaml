@@ -1,18 +1,20 @@
 ---
 - project:
-    name: sdnc-csit
+    name: sdnc-oam-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'sdnc'
+      - '{project-name}-review-verification-maven-{stream}':
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          maven-versions-plugin: true
+      - '{project-name}-merge-verification-maven-{stream}':
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          maven-versions-plugin: true
+    project-name: 'sdnc-oam'
     recipients: 'dtimoney@att.com'
+    # project name in gerrit
+    project: 'sdnc/oam'
     stream:
       - 'master':
           branch: 'master'
-    functionality:
-      - 'healthcheck':
-          trigger_jobs:
-      - 'sdnc_netconf_tls_post_deploy':
-          trigger_jobs:
+    mvn-settings: 'sdnc-oam-settings'
     robot-options: ''
     branch: 'master'
