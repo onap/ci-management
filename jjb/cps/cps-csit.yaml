@@ -4,10 +4,10 @@
       jobs:
           - '{project-name}-review-verification-maven-{stream}':
                 mvn-goals: clean install
-                mvn-params: '-Dmaven.test.skip=true -Dnexus.repository='
+                mvn-params: '-Dmaven.test.skip=true -Ddocker.repository.push='
           - '{project-name}-merge-verification-maven-{stream}':
                 mvn-goals: clean install
-                mvn-params: '-Dmaven.test.skip=true -Dnexus.repository='
+                mvn-params: '-Dmaven.test.skip=true -Ddocker.repository.push='
       project-name: 'cps'
       recipients: 'toine.siebelink@est.tech'
       # project name in gerrit
