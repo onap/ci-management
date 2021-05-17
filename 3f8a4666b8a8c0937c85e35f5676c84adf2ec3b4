@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c042bdc0_2a83605b",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-05-17T16:59:34Z",
+      "side": 1,
+      "message": "You need to set sign-artifacts to \"false\" if you want to use ubuntu. \nUbuntu does not have support for SIGUL and will fail to sign images. \nAlso.. not sure your team would want to release unsigned images, but we leave them to them to decide.",
+      "range": {
+        "startLine": 16,
+        "startChar": 21,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
