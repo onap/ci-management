@@ -22,6 +22,30 @@
       "revId": "405b287ff31287ad1f0625546e814bb280360c7d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82403a7a_7876588e",
+        "filename": "jjb/aai/aai-traversal.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7355
+      },
+      "writtenOn": "2021-05-17T13:31:15Z",
+      "side": 1,
+      "message": "Done. It should be under verify and merge jobs. thanks",
+      "parentUuid": "c4496592_47975b8f",
+      "range": {
+        "startLine": 24,
+        "startChar": 10,
+        "endLine": 24,
+        "endChar": 45
+      },
+      "revId": "405b287ff31287ad1f0625546e814bb280360c7d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
