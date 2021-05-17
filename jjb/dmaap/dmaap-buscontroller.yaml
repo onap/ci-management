@@ -64,8 +64,6 @@
     stream:
       - 'master':
             branch: 'master'
-      - 'honolulu':
-            branch: 'honolulu'
     mvn-settings: 'dmaap-buscontroller-settings'
     robot-options: ''
 
