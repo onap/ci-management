@@ -67,6 +67,18 @@
               docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
               docker push $DNAME:$DOCKER_IMAGE_TAG2
               docker push $DNAME:latest
+          stream: master
+          branch: master
+      - gerrit-docker-merge-maintainance:
+          post_docker_build_script: |
+              #!/bin/bash
+              set -uex -o pipefail
+              DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
+              DNAME={container-snapshot-registry}/{docker-name}
+              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
+              docker push $DNAME:$DOCKER_IMAGE_TAG2
+          stream: honolulu
+          branch: honolulu
       - gerrit-whitesource-scan:
           build-timeout: 120
           submodule-timeout: 30
@@ -88,13 +100,6 @@
       - dcaegen2-services-pmsh:
           src-dir: components/pm-subscription-handler
           docker-name: onap/org.onap.dcaegen2.services.pmsh
-    stream:
-      - master:
-          branch: master
-      - guilin:
-          branch: guilin
-      - honolulu:
-          branch: honolulu
     views:
       - project-view:
           project-name: dcaegen2-services-pmsh
