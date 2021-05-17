@@ -91,6 +91,24 @@
     stream:
       - master:
           branch: master
+    views:
+      - project-view:
+          project-name: dcaegen2-services-pmsh
+    jobs:
+      - dcaegen2-services-docker-python-jobs
+
+
+- project:
+    name: dcaegen2-services-docker-python-subprojects-maintenance
+    project: dcaegen2/services
+    mvn-settings: dcaegen2-services-settings
+    build-node: ubuntu1804-docker-8c-8g
+    cron: ''
+    project-name:
+      - dcaegen2-services-pmsh:
+          src-dir: components/pm-subscription-handler
+          docker-name: onap/org.onap.dcaegen2.services.pmsh
+    stream:
       - guilin:
           branch: guilin
       - honolulu:
