@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ee2ccb68_6d3cc619",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-18T07:57:56Z",
+      "side": 1,
+      "message": "Not sure how to accomplish that.",
+      "parentUuid": "6b5ffd36_799e31e8",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 39
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21035cef_0287db0e",
         "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "debf7892_3affc79e",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-18T07:57:56Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "21035cef_0287db0e",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 12
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "333dc95f_54d326db",
         "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2021-05-17T15:43:37Z",
       "side": 1,
       "message": "Separate view not required, this can go under current view - dcaegen2-services-pmsh",
+      "range": {
+        "startLine": 116,
+        "startChar": 1,
+        "endLine": 118,
+        "endChar": 58
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "210b1ddb_32d60df0",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-18T07:57:56Z",
+      "side": 1,
+      "message": "JJB verify wont allow duplicate views.",
+      "parentUuid": "333dc95f_54d326db",
       "range": {
         "startLine": 116,
         "startChar": 1,
