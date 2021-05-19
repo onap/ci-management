@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7d0636e2_e0167ce6",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2021-05-19T14:36:44Z",
+      "side": 1,
+      "message": "trigger_jobs imply that the verify will be triggered on those merge jobs.  Do I understand that correctly?",
+      "revId": "6e9871413494a73d5365a5a7bb2782e7e7780fb8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
