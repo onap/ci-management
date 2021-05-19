@@ -46,6 +46,30 @@
       "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "16da16b2_e1f6b163",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-05-19T16:45:26Z",
+      "side": 1,
+      "message": "yes... you can use mvn-params",
+      "parentUuid": "d72f0a57_1d1b2825",
+      "range": {
+        "startLine": 16,
+        "startChar": 21,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
