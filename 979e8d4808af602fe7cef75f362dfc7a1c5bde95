@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "a1f52823_9287742a",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-05-19T19:17:51Z",
+      "side": 1,
+      "message": "by adding explicit stream: master for gerrit-docker-merge and add new subjob - gerrit-docker-merge-maintenance with similar properties except latest tag generation/push",
+      "parentUuid": "ee2ccb68_6d3cc619",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 39
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21035cef_0287db0e",
         "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
         "patchSetId": 4
@@ -131,6 +155,30 @@
       "side": 1,
       "message": "JJB verify wont allow duplicate views.",
       "parentUuid": "333dc95f_54d326db",
+      "range": {
+        "startLine": 116,
+        "startChar": 1,
+        "endLine": 118,
+        "endChar": 58
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c69a346e_fef8e7ad",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2021-05-19T19:17:51Z",
+      "side": 1,
+      "message": "yep, you are right.. since its only single job, separate view is not necessary in this case",
+      "parentUuid": "210b1ddb_32d60df0",
       "range": {
         "startLine": 116,
         "startChar": 1,
