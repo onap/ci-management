@@ -70,6 +70,30 @@
       "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "101317ee_c3c2521f",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 7355
+      },
+      "writtenOn": "2021-05-19T18:03:11Z",
+      "side": 1,
+      "message": "Done. Thank you guys",
+      "parentUuid": "16da16b2_e1f6b163",
+      "range": {
+        "startLine": 16,
+        "startChar": 21,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
