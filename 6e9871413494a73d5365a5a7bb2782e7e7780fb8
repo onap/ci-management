@@ -34,6 +34,24 @@
       "revId": "6e9871413494a73d5365a5a7bb2782e7e7780fb8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e56c2f10_4cb78ccb",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 811
+      },
+      "writtenOn": "2021-05-19T14:55:54Z",
+      "side": 1,
+      "message": "got it, thanks",
+      "parentUuid": "c2c33cd8_fc210565",
+      "revId": "6e9871413494a73d5365a5a7bb2782e7e7780fb8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
