@@ -98,7 +98,7 @@
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          files: '*/csit/**'
+          files: '**/csit/**'
 
     builders:
       - lf-infra-pre-build
