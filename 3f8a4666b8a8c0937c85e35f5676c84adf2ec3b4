@@ -22,6 +22,30 @@
       "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d72f0a57_1d1b2825",
+        "filename": "jjb/aai/aai-resources.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 75
+      },
+      "writtenOn": "2021-05-19T13:13:00Z",
+      "side": 1,
+      "message": "@Jessica, I am asking them to undo the following change because that wasn\u0027t the intention.\nWe want the verify job and merge job to run ubuntu1804-docker-8c-8g or any jenkins node that has docker installed as we will have tests that use test containers which needs docker to be able to successfully complete.\nAlso, do the unit tests need to be run for the gerrit-maven-stage job? Since we are running the unit tests for verify and merge job, can we skip those tests by adding the mvn-params?",
+      "parentUuid": "c042bdc0_2a83605b",
+      "range": {
+        "startLine": 16,
+        "startChar": 21,
+        "endLine": 16,
+        "endChar": 45
+      },
+      "revId": "3f8a4666b8a8c0937c85e35f5676c84adf2ec3b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
