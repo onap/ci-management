@@ -1,9 +1,10 @@
 - project:
     name: policy-distribution-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-distribution'
-    recipients: 'ram.krishna.verma@est.tech'
+    recipients: 'ram_krishna.verma@bell.ca'
     project: 'policy/docker'
     stream:
       - 'master':
@@ -19,6 +20,7 @@
 - project:
     name: policy-xacml-pdp-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-xacml-pdp'
     recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
@@ -37,6 +39,7 @@
 - project:
     name: policy-drools-applications-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-drools-applications'
     recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
@@ -55,6 +58,7 @@
 - project:
     name: policy-drools-pdp-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-drools-pdp'
     recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
@@ -73,9 +77,10 @@
 - project:
     name: policy-apex-pdp-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-apex-pdp'
-    recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
+    recipients: 'liam.fallon@est.tech ram_krishna.verma@bell.ca'
     project: 'policy/docker'
     stream:
       - 'master':
@@ -91,9 +96,10 @@
 - project:
     name: policy-pap-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-pap'
-    recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     project: 'policy/docker'
     stream:
       - 'master':
@@ -109,9 +115,10 @@
 - project:
     name: policy-api-project-csit
     jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
     project-name: 'policy-api'
-    recipients: 'takamune.cho@att.com'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     project: 'policy/docker'
     stream:
       - 'master':
@@ -131,6 +138,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     stream:
       - 'guilin':
           branch: guilin
@@ -147,7 +155,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
-    recipients: 'liam.fallon@est.tech ram.krishna.verma@est.tech'
+    recipients: 'liam.fallon@est.tech ram_krishna.verma@bell.ca'
     stream:
       - 'guilin':
           branch: guilin
@@ -164,7 +172,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
-    recipients: 'ram.krishna.verma@est.tech'
+    recipients: 'ram_krishna.verma@bell.ca'
     stream:
       - 'guilin':
           branch: guilin
@@ -181,7 +189,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
-    recipients: 'ah999m@att.com'
+    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
     stream:
       - 'guilin':
           branch: guilin
@@ -198,7 +206,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
-    recipients: 'jrh3@att.com ram.krishna.verma@est.tech'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     stream:
       - 'guilin':
           branch: guilin
@@ -215,6 +223,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
+    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
     stream:
       - 'guilin':
           branch: guilin
@@ -231,6 +240,7 @@
       - '{project-name}-{stream}-csit-{functionality}'
     project-name: 'policy'
     java-version: openjdk11
+    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
     stream:
       - 'guilin':
           branch: guilin
