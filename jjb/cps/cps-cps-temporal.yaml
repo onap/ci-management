@@ -23,12 +23,11 @@
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
     jobs:
-      - gerrit-maven-verify
-      - gerrit-maven-merge
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-docker-8c-8g
-          maven-versions-plugin: true
+      - gerrit-maven-docker-verify:
+          container-public-registry: nexus3.onap.org:10001
+      - gerrit-maven-docker-merge:
+          container-public-registry: nexus3.onap.org:10001
+          container-snapshot-registry: nexus3.onap.org:10003
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
