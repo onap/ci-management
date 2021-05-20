@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "349b0ac8_e5cd408d",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-20T09:20:53Z",
+      "side": 1,
+      "message": "Not sure that is possible with the existing templates but will push what you have suggested.",
+      "parentUuid": "a1f52823_9287742a",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 39
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21035cef_0287db0e",
         "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
         "patchSetId": 4
@@ -188,6 +212,30 @@
       "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9d027e6_9e08ab18",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-20T09:20:53Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c69a346e_fef8e7ad",
+      "range": {
+        "startLine": 116,
+        "startChar": 1,
+        "endLine": 118,
+        "endChar": 58
+      },
+      "revId": "979e8d4808af602fe7cef75f362dfc7a1c5bde95",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
