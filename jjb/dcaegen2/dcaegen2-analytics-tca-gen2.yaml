@@ -14,6 +14,7 @@
     # apply to all jobs
     project: 'dcaegen2/analytics/tca-gen2'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    mvn-version: 'mvn35'
     files: '**'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -52,6 +53,7 @@
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-version: 'mvn35'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-clm
@@ -64,6 +66,7 @@
     project-name: 'dcaegen2-analytics-tca-gen2'
     branch: 'master'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    mvn-version: 'mvn35'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-info
