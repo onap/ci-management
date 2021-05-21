@@ -22,6 +22,30 @@
       "revId": "2f6ada1da87ac17f2c23bd4fd95e5c212ec9c90d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca7f8f2b_dd900ec4",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-05-21T15:57:31Z",
+      "side": 1,
+      "message": "It will prevent it from being built on a schedule. \nBut the merge job will still be triggered if a new change is merged. \nThe cron is only disabling the timed trigger. \n\nIf you want to actually prevent any job from running, no matter the trigger, then you will need to use:\ndisabled: true",
+      "parentUuid": "b0417de8_0c52925c",
+      "range": {
+        "startLine": 82,
+        "startChar": 10,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "2f6ada1da87ac17f2c23bd4fd95e5c212ec9c90d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
