@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0417de8_0c52925c",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-21T11:52:50Z",
+      "side": 1,
+      "message": "@Jess\nWould this suffice to prevent the H branch image being built?",
+      "range": {
+        "startLine": 82,
+        "startChar": 10,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "2f6ada1da87ac17f2c23bd4fd95e5c212ec9c90d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
