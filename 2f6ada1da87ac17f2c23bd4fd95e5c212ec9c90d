@@ -46,6 +46,30 @@
       "revId": "2f6ada1da87ac17f2c23bd4fd95e5c212ec9c90d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0198d456_02aa9efd",
+        "filename": "jjb/dcaegen2/dcaegen2-services-docker-python-subprojects.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2021-05-24T12:33:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ca7f8f2b_dd900ec4",
+      "range": {
+        "startLine": 82,
+        "startChar": 10,
+        "endLine": 82,
+        "endChar": 18
+      },
+      "revId": "2f6ada1da87ac17f2c23bd4fd95e5c212ec9c90d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
