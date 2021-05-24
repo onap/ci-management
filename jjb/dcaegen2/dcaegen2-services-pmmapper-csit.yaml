@@ -1,17 +1,18 @@
+---
 - project:
-    name: dcae-bulkpm-csit
-    jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'dcaegen2-pmmapper'
-    recipients: 'vv770d@att.com lego@est.tech rajendra.jaiswal@ericsson.com'
-    stream:
-      - 'master':
-          branch: 'master'
-    functionality:
-      - 'pmmapper':
-          trigger_jobs:
-      - 'files-processing-config-pmmapper':
-          trigger_jobs:
-    robot-options: ''
-    branch: 'master'
+      name: dcaegen2-services-pmmapper-csit
+      jobs:
+          - '{project-name}-review-verification-maven-{stream}':
+                  mvn-goals: clean install docker:build
+          - '{project-name}-merge-verification-maven-{stream}':
+                  mvn-goals: clean install docker:build
+      project-name: 'dcaegen2-services-pmmapper'
+      recipients: 'vv770d@att.com lego@est.tech rajendra.jaiswal@ericsson.com'
+      # project name in gerrit
+      project: 'dcaegen2/services/pm-mapper'
+      stream:
+          - 'master':
+                branch: 'master'
+      mvn-settings: 'dcaegen2-services-pmmapper-settings'
+      robot-options: ''
+      branch: 'master'
