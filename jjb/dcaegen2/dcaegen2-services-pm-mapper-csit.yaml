@@ -1,18 +1,18 @@
 ---
 - project:
-      name: dcaegen2-services-pmmapper-csit
+      name: dcaegen2-services-pm-mapper-csit
       jobs:
           - '{project-name}-review-verification-maven-{stream}':
                   mvn-goals: clean install docker:build
           - '{project-name}-merge-verification-maven-{stream}':
                   mvn-goals: clean install docker:build
-      project-name: 'dcaegen2-services-pmmapper'
+      project-name: 'dcaegen2-services-pm-mapper'
       recipients: 'vv770d@att.com lego@est.tech rajendra.jaiswal@ericsson.com'
       # project name in gerrit
       project: 'dcaegen2/services/pm-mapper'
       stream:
           - 'master':
                 branch: 'master'
-      mvn-settings: 'dcaegen2-services-pmmapper-settings'
+      mvn-settings: 'dcaegen2-services-pm-mapper-settings'
       robot-options: ''
       branch: 'master'
