@@ -1,0 +1,14 @@
+---
+- project:
+    name: cps-ncmp-dmi-plugin-project-view
+    project-name: cps-ncmp-dmi-plugin
+    views:
+      - project-view
+
+- project:
+    name: cps-ncmp-dmi-plugin-info
+    project: cps/ncmp-dmi-plugin
+    project-name: cps-ncmp-dmi-plugin
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
