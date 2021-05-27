@@ -34,36 +34,6 @@
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: vnfsdk-ves-agent-sonar
-    jobs:
-      - gerrit-maven-sonar
-      - gerrit-cmake-sonar:
-          build-timeout: 60
-          pre-build: !include-raw-escape: ./vnfsdk-ves-agent-cpp.sh
-          build-dir: $WORKSPACE/veslibrary/ves_cpplibrary/src/build
-          cmake-opts: '-DENABLE_COVERAGE=on -DCOVERAGE_DIR=coverage'
-          sonarcloud-api-token: '{sonarcloud_api_token}'
-          sonarcloud-organization: '{sonarcloud_project_organization}'
-          sonarcloud-project-key: '{sonarcloud_project_organization}_vnfsdk-ves-agent'
-          make-opts: -j6
-          stream: master
-          build-node: centos7-builder-4c-4g
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
-    project: 'vnfsdk/ves-agent'
-    project-name: 'vnfsdk-ves-agent'
-    branch: 'master'
-    mvn-params: '-f veslibrary/ves_javalibrary/evel_javalib2/pom.xml'
-    mvn-settings: 'vnfsdk-ves-agent-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
     name: vnfsdk-ves-agent-info
     jobs:
       - gerrit-info-yaml-verify
