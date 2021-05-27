@@ -93,6 +93,53 @@
       "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "587529be_6b05fc8d",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-05-27T18:38:32Z",
+      "side": 1,
+      "message": "This job is exactly same as \u0027gerrit-maven-verify\u0027 but logs in to the nexus and docker hub first before running \u0027mvn clean verify\u0027 command.",
+      "parentUuid": "a4a2d931_fd8b2f7c",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 35
+      },
+      "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3038d8c7_40aff7c7",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-05-27T18:38:32Z",
+      "side": 1,
+      "message": "In cps-temporal, the maven artifacts are not required to be published which is not the case with ncmp-dmi-plugins. So, we should use \u0027gerrit-maven-merge\u0027 and \u0027gerrit-maven-stage\u0027 to publish both maven artifacts and docker images. CPS-temporal initially configured these jobs as below.\n\n      - gerrit-maven-merge\n      - gerrit-maven-stage:\n          sign-artifacts: true\n          build-node: centos7-docker-8c-8g\n          maven-versions-plugin: true\n\nThe configuration has been taken from https://gerrit.onap.org/r/c/ci-management/+/118006/17/jjb/cps/cps-cps-temporal.yaml change",
+      "range": {
+        "startLine": 28,
+        "startChar": 8,
+        "endLine": 28,
+        "endChar": 34
+      },
+      "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
