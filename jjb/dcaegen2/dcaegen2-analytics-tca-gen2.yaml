@@ -1,25 +1,7 @@
 ---
 - project:
     name: dcaegen2-analytics-tca-gen2
-    # job template iterators
-    project-name: 'dcaegen2-analytics-tca-gen2'
-    stream:
-      - 'master':
-          branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
-      - 'honolulu':
-          branch: 'honolulu'
-    java-version: openjdk11
     # apply to all jobs
-    project: 'dcaegen2/analytics/tca-gen2'
-    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
-    mvn-version: 'mvn35'
-    files: '**'
-    maven-deploy-properties: |
-      deployAtEnd=true
-    archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - '{project-name}-{stream}-verify-java':
       - '{project-name}-{stream}-merge-java':
@@ -35,6 +17,26 @@
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
+    project: 'dcaegen2/analytics/tca-gen2'
+    # job template iterators
+    project-name: 'dcaegen2-analytics-tca-gen2'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'guilin':
+          branch: 'guilin'
+      - 'honolulu':
+          branch: 'honolulu'
+    java-version: openjdk11
+    mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
+    mvn-version: 'mvn35'
+    maven-version: 'mvn35'
+    files: '**'
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ''
+    build-node: ubuntu1804-docker-8c-8g
+
 - project:
     name: dcaegen2-analytics-tca-gen2-sonar
     java-version: openjdk11
@@ -54,6 +56,7 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     mvn-version: 'mvn35'
+    maven-version: 'mvn35'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-clm
@@ -67,6 +70,7 @@
     branch: 'master'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
     mvn-version: 'mvn35'
+    maven-version: 'mvn35'
 
 - project:
     name: dcaegen2-analytics-tca-gen2-info
