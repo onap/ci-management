@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "81ebaf8d_a986f441",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6738
+      },
+      "writtenOn": "2021-05-27T14:15:13Z",
+      "side": 1,
+      "message": "Question: why do we introduce and use new ids instead of using the ones already defined in oparent settings.xml(onap-snapshots and onap-release)",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 38
+      },
+      "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e44cc949_9bc5a938",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 6738
+      },
+      "writtenOn": "2021-05-27T14:15:13Z",
+      "side": 1,
+      "message": "Docker image generation is still not enabled in cps-ncmp-dmi-plugin, this doesnt make verify anything\nLet us try to first verify and merge the maven artifacts.\ncps-temporal had agreed to not push the maven artifacts to nexus.. Did we decide something similar for this ?",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 35
+      },
+      "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
