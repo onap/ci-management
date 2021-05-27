@@ -69,6 +69,30 @@
       "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4a2d931_fd8b2f7c",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-05-27T14:27:21Z",
+      "side": 1,
+      "message": "yes we coudl postpone this I am not sure what si best approach if we do cide to take it out we need to add something to teh backlog now...",
+      "parentUuid": "e44cc949_9bc5a938",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 35
+      },
+      "revId": "f4d04196d277c204f7479e1f9b852904bb687480",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
