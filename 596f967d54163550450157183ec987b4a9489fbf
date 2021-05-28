@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84005c6d_7338ca38",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-05-28T10:18:50Z",
+      "side": 1,
+      "message": "Verify job is passed, but the indentation still looks a little off in comparison to the properties in  gerrit-maven-docker-stage job configuration.",
+      "range": {
+        "startLine": 30,
+        "startChar": 6,
+        "endLine": 32,
+        "endChar": 39
+      },
+      "revId": "596f967d54163550450157183ec987b4a9489fbf",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
