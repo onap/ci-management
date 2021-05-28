@@ -11,16 +11,13 @@ for chart in "${helm_charts[@]}"; do
   chart=$(echo "$chart" | xargs)
   case "$BUILD_TYPE" in
     'snapshot')
-      echo "-n --upload-file $chart https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$GERRIT_BRANCH/$chart"
-      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$GERRIT_BRANCH/$chart"
-      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE//$GERRIT_BRANCH/$GIT_COMMIT/$chart"
+      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
       ;;
     'staging')
-      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$GERRIT_BRANCH/$chart"
-      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$GERRIT_BRANCH/$GIT_COMMIT/$chart"
+      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
       ;;
     'release')
-      curl -n --upload-file "$chart" "https://nexus.onap.org/content/sites/oom-helm-$BUILD_TYPE/$chart"
+      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-release/"
         ;;
     *)
       echo "You must set BUILD_TYPE to one of (snapshot, staging, release)."

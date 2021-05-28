@@ -8,3 +8,4 @@ chartmuseum --port=6464 --storage="local" --storage-local-rootdir=".chartstorage
 source helm.prop
 $HELM_BIN plugin install https://github.com/chartmuseum/helm-push.git
 $HELM_BIN repo add local http://localhost:6464
+$HELM_BIN repo add onap http://localhost:6464
