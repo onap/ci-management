@@ -42,7 +42,6 @@
       - lf-infra-pre-build
       - lf-update-java-alternatives:
           java-version: '{java-version}'
-      - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
       - integration-run-project-test
@@ -104,7 +103,6 @@
       - lf-infra-pre-build
       - lf-update-java-alternatives:
           java-version: '{java-version}'
-      - integration-install-robotframework
       - inject:
           properties-file: 'env.properties'
       - integration-run-project-test
