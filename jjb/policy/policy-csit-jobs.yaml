@@ -2,7 +2,7 @@
     name: '{project-name}-{stream}-project-csit-{functionality}'
     disabled: '{disabled}'
     project-type: freestyle
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-4c-4g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
@@ -62,7 +62,7 @@
     disabled: '{disabled}'
 
     project-type: freestyle
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu1804-docker-4c-4g'
     node: '{build-node}'
     recipients: ''
     java-version: 'openjdk11'
