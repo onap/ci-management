@@ -42,8 +42,6 @@
       - lf-infra-pre-build
       - lf-update-java-alternatives:
           java-version: '{java-version}'
-      - inject:
-          properties-file: 'env.properties'
       - integration-run-project-test
 
     publishers:
@@ -103,8 +101,6 @@
       - lf-infra-pre-build
       - lf-update-java-alternatives:
           java-version: '{java-version}'
-      - inject:
-          properties-file: 'env.properties'
       - integration-run-project-test
 
     publishers:
