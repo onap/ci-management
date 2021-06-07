@@ -5,7 +5,7 @@
           - '{project-name}-{stream}-verify-java':
                 # this build is integration test only - CSIT (Verify 2/2)
                 mvn-goals: clean install
-                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only'
+                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only,integration-tests-with-helm-validator'
                 build-node: 'ubuntu1804-docker-8c-16g'
                 archive-artifacts: >
                     **/*.log

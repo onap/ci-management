@@ -35,7 +35,7 @@
           build-node: 'ubuntu1804-docker-8c-16g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
+          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -P integration-tests-with-helm-validator'
           # running everything (unit tests and integration tests in a single job for merge, as we don't need // run
           # for merge, but still saving integration tests results and report.
           archive-artifacts: >
