@@ -54,7 +54,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: onap-
-    project: cps/cps-ncmp-dmi-plugin
+    project: cps/ncmp-dmi-plugin
     project-name: cps-ncmp-dmi-plugin
     branch: master
     mvn-settings: cps-ncmp-dmi-plugin-settings
@@ -74,7 +74,7 @@
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     build-node: centos7-docker-8c-8g
-    project: cps/cps-ncmp-dmi-plugin
+    project: cps/ncmp-dmi-plugin
     project-name: cps-ncmp-dmi-plugin
     branch: master
     mvn-settings: cps-ncmp-dmi-plugin-settings
@@ -91,7 +91,7 @@
     mvn-settings: cps-ncmp-dmi-plugin-settings
     wss-product-name: cps-ncmp-dmi-plugin
     mvn-clean-install: true
-    project: cps/cps-ncmp-dmi-plugin
+    project: cps/ncmp-dmi-plugin
     branch: master
     build-node: centos7-docker-8c-8g
 
