@@ -39,7 +39,7 @@
       - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
-          build-timeout: 360
+          build-timeout: 480
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           files: "**"
