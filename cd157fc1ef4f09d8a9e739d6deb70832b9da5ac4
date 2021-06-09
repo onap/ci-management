@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "622a5c7b_4894b5b0",
+        "filename": "jenkins-admin/managed-config-files/custom/jenkins-s3-log-ship/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-09T20:46:26Z",
+      "side": 1,
+      "message": "This file is matching the production one. As such, it should be created as a symlink instead of a separate file.",
+      "revId": "cd157fc1ef4f09d8a9e739d6deb70832b9da5ac4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d466e4a5_1b2f9611",
+        "filename": "jenkins-admin/managed-config-files/custom/pipconf/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-09T20:46:26Z",
+      "side": 1,
+      "message": "This file has a comment that it\u0027s empty. As such, you don\u0027t need to include it",
+      "revId": "cd157fc1ef4f09d8a9e739d6deb70832b9da5ac4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ab577da_81464f33",
+        "filename": "jenkins-admin/managed-config-files/custom/pipconf/customizedCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-09T20:46:26Z",
+      "side": 1,
+      "message": "This file has a comment that it\u0027s empty. As such, you don\u0027t need to include it",
+      "revId": "cd157fc1ef4f09d8a9e739d6deb70832b9da5ac4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
