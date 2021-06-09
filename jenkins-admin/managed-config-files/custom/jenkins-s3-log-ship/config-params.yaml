@@ -1,0 +1,3 @@
+---
+name: "jenkins-s3-log-ship"
+comment: "Log Ship AWS access file"
