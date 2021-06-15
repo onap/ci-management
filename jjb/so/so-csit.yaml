@@ -17,6 +17,9 @@
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
+      - 'Custom_Workflow':
+          branch: 'Custom_Workflow'
+          java-version: openjdk11
     functionality:
 # integration testing suites disabled until brought up to date,
 # see https://jira.onap.org/browse/SO-3632
