@@ -35,6 +35,9 @@
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
+      - 'Custom_Workflow':
+          branch: 'Custom_Workflow'
+          java-version: openjdk11
     mvn-settings: 'so-settings'
     files: '**'
     archive-artifacts: ''
