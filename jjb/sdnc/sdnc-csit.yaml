@@ -3,10 +3,10 @@
     name: sdnc-oam-csit
     jobs:
       - '{project-name}-review-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
           maven-versions-plugin: true
       - '{project-name}-merge-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
           maven-versions-plugin: true
     project-name: 'sdnc-oam'
     recipients: 'dtimoney@att.com'
@@ -15,6 +15,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'sdnc-oam-settings'
     robot-options: ''
     branch: 'master'
