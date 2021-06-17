@@ -223,7 +223,7 @@
       - gerrit:
           trigger-on:
             - comment-added-contains-event:
-                comment-contains-value: '^release-helm$'
+                comment-contains-value: '^Patch Set\s+\d+:\s+release-helm\s*$'
 
     builders:
       - lf-infra-pre-build
@@ -269,7 +269,9 @@
       - shell: |
           echo "export HELM_BIN=helm3.5" > helm.prop
       - shell: '{pre_build_script}'
-      - shell: '{build_script}'
+      - shell: '{build_script}'- inject:
+          properties-content: |
+            BUILD_TYPE=snapshot
       - shell: '{post_build_script}'
 
 - job-template:
