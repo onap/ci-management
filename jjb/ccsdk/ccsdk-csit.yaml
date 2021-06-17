@@ -3,10 +3,10 @@
     name: ccsdk-distribution-csit
     jobs:
       - '{project-name}-review-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
           maven-versions-plugin: true
       - '{project-name}-merge-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
           maven-versions-plugin: true
     project-name: 'ccsdk-distribution'
     recipients: 'dtimoney@att.com'
@@ -15,6 +15,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
     mvn-settings: 'ccsdk-distribution-settings'
     robot-options: ''
     branch: 'master'
@@ -23,9 +25,9 @@
     name: ccsdk-oran-csit
     jobs:
       - '{project-name}-review-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
       - '{project-name}-merge-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -P docker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
     project-name: 'ccsdk-oran'
     recipients: 'bjorn.magnusson@est.tech martin.c.yan@est.tech'
     # project name in gerrit
