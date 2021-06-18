@@ -18,7 +18,7 @@
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-Dmaven.test.skip=true -Pdocker'
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker'
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':

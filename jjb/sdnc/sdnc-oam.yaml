@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: sdnc-oam
     project-name: 'sdnc-oam'
@@ -18,8 +17,7 @@
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-Dmaven.test.skip=true -Pdocker'
-          maven-version: "mvn35"
+          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker'
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
@@ -35,7 +33,6 @@
     java-version: openjdk11
     mvn-version: "mvn36"
     mvn-settings: 'sdnc-oam-settings'
-    maven-version: "mvn35"
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
