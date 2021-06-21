@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e -o pipefail
+echo "*** starting releace process for $BUILD_TYPE"
 cd kubernetes/dist/packages/ || exit
 helm_charts=()
 while IFS= read -a line; do
@@ -9,14 +10,18 @@ done < <( ls )
 
 for chart in "${helm_charts[@]}"; do
   chart=$(echo "$chart" | xargs)
+  echo " ** processing chart $chart"
   case "$BUILD_TYPE" in
     'snapshot')
-      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
+      echo "  * snapshot build, pushing to https://nexus3.onap.org/repository/onap-helm-testing/"
+      curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
       ;;
     'staging')
-      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
+      echo "  * staging build, pushing to https://nexus3.onap.org/repository/onap-helm-testing/"
+      curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
       ;;
     'release')
+      echo "  * release build, pushing to https://nexus3.onap.org/repository/onap-helm-release/"
       curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-release/"
         ;;
     *)
@@ -25,4 +30,5 @@ for chart in "${helm_charts[@]}"; do
       ;;
   esac
 done
+echo "*** release process finished"
 cd ../../../
