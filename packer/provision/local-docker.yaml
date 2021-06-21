@@ -226,12 +226,6 @@
         dest: /tmp/rebar3
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
-    - name: Bootstrap rebar3
-      command: ./bootstrap
-      args:
-        chdir: /tmp/rebar3
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
     - name: Install rebar3 to bin
       copy:
         src: /tmp/rebar3/rebar3
