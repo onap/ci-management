@@ -10,6 +10,7 @@
     glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
     glide_version: v0.13.1
     golang_version: 1.9.1
+    npm_version: "6.14.13"
 
   tasks:
     - name: "Checking for x86_64"
@@ -181,6 +182,18 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: npm self-update
+      command: npm install npm@{{ npm_version }} -g
+      become: true
+
+    - name: npm install n module
+      command: npm install n -g
+      become: true
+
+    - name: Upgrade latest stable node version
+      command: n stable | PATH="$PATH"
+      become: true
+
     - name: Add Google Chrome key
       apt_key:
         url: https://dl-ssl.google.com/linux/linux_signing_key.pub
@@ -224,12 +237,6 @@
       git:
         repo: 'https://github.com/erlang/rebar3.git'
         dest: /tmp/rebar3
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Bootstrap rebar3
-      command: ./bootstrap
-      args:
-        chdir: /tmp/rebar3
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
     - name: Install rebar3 to bin
