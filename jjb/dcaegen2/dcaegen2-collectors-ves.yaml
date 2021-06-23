@@ -7,8 +7,8 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos7-docker-8c-8g
+          sign-artifacts: false
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
