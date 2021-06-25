@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d2948ba_c224d725",
+        "filename": "jjb/dcaegen2/dcaegen2-collectors-ves.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-06-25T17:37:26Z",
+      "side": 1,
+      "message": "Artifacts signing will fail in Ubuntu, \n\nYou need to set this to false since SIGUL is only available in CentOS",
+      "range": {
+        "startLine": 10,
+        "startChar": 10,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "1e1c4f02068910a76e0eace177946611fd1cae34",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
