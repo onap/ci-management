@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9544d529_8db06436",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-07-01T16:30:53Z",
+      "side": 1,
+      "message": "\"Sonar\" is not a category for conventional commits. We\u0027re using the following list:\nFix,Feat,Chore,Docs,Style,Refactor,Perf,Test,Revert,CI,Build",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 5
+      },
+      "revId": "a58e1f1d797e826b43a945af5cd9fa8697845dff",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
