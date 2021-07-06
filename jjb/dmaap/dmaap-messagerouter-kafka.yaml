@@ -20,6 +20,7 @@
     mvn-settings: 'dmaap-kafka11aaf-settings'
     files: '**'
     archive-artifacts: ''
+    java-version: openjdk11
 
 - project:
     name: dmaap-kafka-maintenance
