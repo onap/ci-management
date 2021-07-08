@@ -29,25 +29,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
-    maven-version: 'mvn35'
-
-#- project:
-#    name: sdc-sdc-docker-base-arm64
-#    project-name: 'sdc-sdc-docker-base-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-sdc-merge-java':
-#          build-node: 'ubuntu1804-docker-8c-8g'
-#          docker-pom: 'pom.xml'
-#          mvn-profile: 'default'
-#    project: 'sdc/sdc-docker-base'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'sdc-sdc-docker-base-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#    maven-version: 'mvn35'
+    mvn-version: 'mvn36'
 
 - project:
     name: sdc-sdc-docker-base-info

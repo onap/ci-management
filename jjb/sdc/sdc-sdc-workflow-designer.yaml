@@ -36,26 +36,8 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
-    maven-version: 'mvn35'
+    mvn-version: 'mvn36'
 
-#- project:
-#    name: sdc-sdc-workflow-designer-arm64
-#    project-name: 'sdc-sdc-workflow-designer-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-daily':
-#          mvn-params: '-Dmaven.test.skip=true'
-#    project: 'sdc/sdc-workflow-designer'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'sdc-sdc-workflow-designer-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    docker-pom: 'pom.xml'
-#    mvn-profile: docker
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#    maven-version: 'mvn35'
-#
 - project:
     name: sdc-sdc-workflow-designer-sonar
     jobs:

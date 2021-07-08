@@ -30,7 +30,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
-    maven-version: 'mvn35'
+    mvn-version: 'mvn36'
 
 - project:
     name: sdc-sdc-distribution-client-integration-pairwise
@@ -48,7 +48,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
-    maven-version: 'mvn35'
+    mvn-version: 'mvn36'
     mvn-params: ' -P integration-pairwise'
 
 - project:

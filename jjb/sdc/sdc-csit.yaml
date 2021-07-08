@@ -24,6 +24,6 @@
           - 'honolulu':
                 branch: 'honolulu'
       java-version: openjdk11
-      maven-version: 'mvn36'
+      mvn-version: 'mvn36'
       mvn-settings: 'sdc-settings'
       mvn-global-settings: global-settings
