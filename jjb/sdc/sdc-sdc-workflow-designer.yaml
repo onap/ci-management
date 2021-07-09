@@ -36,7 +36,7 @@
     docker-pom: 'pom.xml'
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
-    mvn-version: 'mvn36'
+    maven-version: 'mvn36'
 
 - project:
     name: sdc-sdc-workflow-designer-sonar

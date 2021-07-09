@@ -28,7 +28,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
-    mvn-version: 'mvn36'
+    maven-version: 'mvn36'
 
 - project:
     name: sdc-sdc-tosca-sonar
