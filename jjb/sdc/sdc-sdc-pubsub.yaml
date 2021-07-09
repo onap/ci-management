@@ -24,7 +24,7 @@
     files: '**'
     archive-artifacts: ''
     build-timeout: 60
-    mvn-version: 'mvn36'
+    maven-version: 'mvn35'
 
 - project:
     name: sdc-sdc-pubsub-sonar
