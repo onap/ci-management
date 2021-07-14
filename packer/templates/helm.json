@@ -25,7 +25,6 @@
       "tenant_name": "{{user `cloud_tenant`}}",
       "domain_name": "Default",
       "region": "ca-ymq-1",
-      "availability_zone": "ca-ymq-2",
       "networks": [
         "{{user `cloud_network`}}"
       ],
