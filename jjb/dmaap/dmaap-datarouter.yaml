@@ -49,17 +49,19 @@
 - project:
     name: dmaap-datarouter-csit-ssl
     jobs:
-      - '{project-name}-{stream}-csit-{functionality}'
-      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-review-verification-maven-{stream}':
+            mvn-goals: clean package
+            mvn-params: '-P docker docker:build -DskipTests=false'
+      - '{project-name}-merge-verification-maven-{stream}':
+            mvn-goals: clean package
+            mvn-params: '-P docker docker:build'
     project-name: 'dmaap-datarouter'
     recipients: 'fiachra.corcoran@est.tech'
+    project: 'dmaap/datarouter'
     stream:
       - 'master':
-          branch: 'master'
-    functionality:
-      - 'ssl-dr-suite':
-          trigger_jobs:
-            - '{project-name}-maven-docker-stage-{stream}'
+            branch: 'master'
+    mvn-settings: 'dmaap-datarouter-settings'
     robot-options: ''
 
 - project:
