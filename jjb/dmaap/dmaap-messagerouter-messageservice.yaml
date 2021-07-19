@@ -58,7 +58,7 @@
       - '{project-name}-merge-verification-maven-{stream}':
             mvn-goals: clean deploy
             mvn-params: '-P docker -DskipTests=true -Dskip.deploy=true -Dskip.docker.push=true'
-    project-name: 'dmaap'
+    project-name: 'dmaap-messagerouter-messageservice'
     project: 'dmaap/messagerouter/messageservice'
     recipients: 'fiachra.corcoran@est.tech'
     stream:
