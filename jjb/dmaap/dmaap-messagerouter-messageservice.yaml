@@ -52,17 +52,19 @@
 - project:
     name: dmaap-csit
     jobs:
-      - '{project-name}-{stream}-csit-{functionality}'
-      - '{project-name}-{stream}-verify-csit-{functionality}'
+      - '{project-name}-review-verification-maven-{stream}':
+            mvn-goals: clean deploy
+            mvn-params: '-P docker -DskipTests=true -Dskip.deploy=true -Dskip.docker.push=true'
+      - '{project-name}-merge-verification-maven-{stream}':
+            mvn-goals: clean deploy
+            mvn-params: '-P docker -DskipTests=true -Dskip.deploy=true -Dskip.docker.push=true'
     project-name: 'dmaap'
+    project: 'dmaap/messagerouter/messageservice'
     recipients: 'fiachra.corcoran@est.tech'
     stream:
       - 'master':
           branch: 'master'
-    functionality:
-      - 'mrpubsub':
-          trigger_jobs:
-            - '{project-name}-maven-docker-stage-{stream}'
+    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     robot-options: ''
 
 - project:
