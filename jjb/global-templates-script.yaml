@@ -19,6 +19,8 @@
     node: '{build-node}'
     type: freestyle
     concurrent: true
+    disable-job: false
+    disabled: '{disable-job}'
 
     pattern: '**'
 
