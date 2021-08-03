@@ -12,6 +12,7 @@
           script:
             !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
       - '{project-name}-{stream}-{area}-verify-shell':
+          disabled: '{obj:disable-kud}'
           area: kud-deployment
           build-timeout: 45
           script:
@@ -28,7 +29,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+          #KUD fixes are not backported to maintenance branches
+          disable-kud: true
     mvn-settings: 'multicloud-k8s-settings'
+    disable-kud: false
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
