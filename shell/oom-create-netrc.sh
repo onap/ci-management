@@ -40,7 +40,7 @@ fi
 if [ "$SERVER_ID" == "ossrh" ]; then
     machine="oss.sonatype.org"
 else
-    machine=$(echo "$DOCKER_URL" | awk -F/ '{print $3}')
+    machine=$(echo "$DOCKER_URL")
 fi
 
 user=$(echo "$CREDENTIAL" | cut -f1 -d:)
