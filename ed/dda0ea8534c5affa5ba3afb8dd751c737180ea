@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Ritu Sood <ritu.sood@intel.com>
+Code-Review+1: Lukasz Rajewski <lukasz.rajewski@orange.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 04 Aug 2021 00:55:09 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/123078
+Project: ci-management
+Branch: refs/heads/master
