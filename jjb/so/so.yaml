@@ -29,9 +29,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'guilin':
-          branch: 'guilin'
-          java-version: openjdk11
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
@@ -115,5 +112,4 @@
     build-node: centos7-builder-2c-1g
     project: so
     branch: master
-    branch: guilin
     branch: honolulu
