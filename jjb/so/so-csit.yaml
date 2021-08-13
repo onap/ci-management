@@ -11,9 +11,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'guilin':
-          branch: 'guilin'
-          java-version: openjdk11
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
