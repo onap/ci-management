@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8012236f_e8888d5e",
+        "filename": "jjb/so/so.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-08-13T19:24:02Z",
+      "side": 0,
+      "message": "Having multiple definitions of property \u0027branch\u0027 is not correct unless you are defining them under a Streams section (e.g. https://gerrit.onap.org/r/gitweb?p\u003dci-management.git;f\u003djjb/so/so-csit.yaml;hb\u003d6069446db772e6b2e8a769191a523c4fd111358b#l10). Please remove the old value and only leave the one you want to use.",
+      "revId": "7d05da8a1e96839544e88ec6a01634e34e721af8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
