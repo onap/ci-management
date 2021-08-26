@@ -16,6 +16,7 @@
     platforms:
       - centos-7
       - ubuntu-18.04
+      - ubuntu-20.04
     templates: builder
     update-cloud-image: true
 
@@ -37,6 +38,8 @@
       - centos-7
       - ubuntu-18.04-arm64
       - ubuntu-18.04
+      - ubuntu-20.04
+      - ubuntu-20.04-arm64
     templates: docker
     update-cloud-image: true
 
@@ -56,6 +59,7 @@
 
     platforms:
       - ubuntu-18.04
+      - ubuntu-20.04
     templates: memcached
     update-cloud-image: true
 
@@ -92,5 +96,6 @@
 
     platforms:
       - ubuntu-18.04
+      - ubuntu-20.04
     templates: helm
     update-cloud-image: true
