@@ -56,6 +56,7 @@
           build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
+          maven-version: 'mvn36'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
