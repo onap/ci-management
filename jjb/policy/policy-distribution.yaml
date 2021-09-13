@@ -10,7 +10,7 @@
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: ubuntu1804-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
@@ -19,7 +19,7 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
 
     project: 'policy/distribution'
     stream:
@@ -70,6 +70,6 @@
     project-name: policy-distribution
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
     project: policy/distribution
     branch: master

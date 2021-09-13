@@ -4,7 +4,7 @@
     project-name: 'policy-clamp'
     jobs:
       - gerrit-maven-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
@@ -21,7 +21,7 @@
           build-node: ubuntu1804-docker-8c-16g
           mvn-params: '-P docker'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
 
     project: 'policy/clamp'
     stream:
@@ -73,6 +73,6 @@
     project-name: policy-clamp
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: ubuntu1804-builder-4c-4g
     project: policy/clamp
     branch: master
