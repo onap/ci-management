@@ -18,6 +18,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
