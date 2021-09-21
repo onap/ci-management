@@ -22,6 +22,8 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
@@ -69,6 +71,8 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'

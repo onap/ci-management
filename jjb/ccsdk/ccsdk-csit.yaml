@@ -17,6 +17,8 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'ccsdk-distribution-settings'
     robot-options: ''
     branch: 'master'
@@ -37,6 +39,8 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'ccsdk-oran-settings'
     robot-options: ''
     branch: 'master'
