@@ -39,10 +39,6 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'frankfurt':
-                branch: 'frankfurt'
-          - 'guilin':
-                branch: 'guilin'
           - 'honolulu':
                 branch: 'honolulu'
 
@@ -108,6 +104,11 @@
           docker-root: ./security
           docker-name: 'onap/xtesting-security'
           docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-merge:
+          project-name: 'integration-xtesting-smoke-usecases-robot-py3'
+          docker-root: ./smoke-usecases-robot-py3
+          docker-name: 'onap/xtesting-smoke-usecases-robot-py3'
+          docker-build-args: '-f ./docker/Dockerfile'
     project: 'integration/xtesting'
     stream:
       - 'master':
@@ -115,9 +116,6 @@
             files: ''
       - 'honolulu':
             branch: 'honolulu'
-            files: ''
-      - 'guilin':
-            branch: 'guilin'
             files: ''
       - 'develop':
             branch: 'develop'
