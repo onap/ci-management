@@ -104,6 +104,11 @@
           docker-root: ./security
           docker-name: 'onap/xtesting-security'
           docker-build-args: '-f ./docker/Dockerfile'
+      - gerrit-docker-verify:
+          project-name: 'integration-xtesting-smoke-usecases-robot-py3'
+          docker-root: ./smoke-usecases-robot-py3
+          docker-name: 'onap/xtesting-smoke-usecases-robot-py3'
+          docker-build-args: '-f ./docker/Dockerfile'
       - gerrit-docker-merge:
           project-name: 'integration-xtesting-smoke-usecases-robot-py3'
           docker-root: ./smoke-usecases-robot-py3
