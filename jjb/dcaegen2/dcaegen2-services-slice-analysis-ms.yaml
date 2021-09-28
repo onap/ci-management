@@ -13,10 +13,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'

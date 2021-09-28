@@ -6,10 +6,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
