@@ -15,10 +15,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: dcaegen2-platform-settings
     files: '**'
     archive-artifacts: ''
