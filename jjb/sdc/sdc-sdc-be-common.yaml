@@ -21,8 +21,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-be-common-settings'
     files: '**'
     archive-artifacts: ''

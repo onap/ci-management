@@ -23,8 +23,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'

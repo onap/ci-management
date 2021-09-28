@@ -21,8 +21,8 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'honolulu':
-                branch: 'honolulu'
+          - 'istanbul':
+                branch: 'istanbul'
       java-version: openjdk11
       maven-version: 'mvn36'
       mvn-settings: 'sdc-settings'
