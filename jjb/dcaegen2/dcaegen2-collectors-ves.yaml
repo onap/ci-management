@@ -22,12 +22,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'ves_synchronous':
-          branch: 'ves_synchronous'
     mvn-settings: 'dcaegen2-collectors-ves-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

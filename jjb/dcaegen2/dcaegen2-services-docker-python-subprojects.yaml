@@ -106,6 +106,8 @@
           branch: master
       - honolulu:
           branch: honolulu
+      - istanbul:
+          branch: istanbul
     views:
       - project-view:
           project-name: dcaegen2-services-pmsh

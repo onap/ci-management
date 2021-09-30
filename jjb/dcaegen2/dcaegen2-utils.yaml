@@ -13,10 +13,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-utils-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

@@ -12,10 +12,11 @@
       - 'master':
           branch: 'master'
           python-version: python3
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+          python-version: python3
+      - 'istanbul':
+          branch: 'istanbul'
           python-version: python3
     mvn-settings: 'dcaegen2-platform-plugins-settings'
     # due to a strange macro / variable translation problem this needs

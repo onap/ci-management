@@ -22,10 +22,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-mapper-settings'
     files: '**'
     archive-artifacts: ''
