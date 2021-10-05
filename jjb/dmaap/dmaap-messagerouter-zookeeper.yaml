@@ -34,10 +34,10 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/zookeeper'
     stream:
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
     mvn-settings: 'dmaap-zookeeper-settings'
     files: '**'
     archive-artifacts: ''

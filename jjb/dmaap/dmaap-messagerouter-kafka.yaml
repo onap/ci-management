@@ -36,10 +36,10 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/kafka11aaf'
     stream:
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
     mvn-settings: 'dmaap-kafka11aaf-settings'
     files: '**'
     archive-artifacts: ''

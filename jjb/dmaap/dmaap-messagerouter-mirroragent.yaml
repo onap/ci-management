@@ -1,5 +1,6 @@
 ---
 - project:
+    disabled: true
     name: dmaap-messagerouter-mirroragent
     project-name: 'dmaap-messagerouter-mirroragent'
     jobs:
@@ -20,6 +21,7 @@
     archive-artifacts: ''
 
 - project:
+    disabled: true
     name: dmaap-messagerouter-mirroragent-maintenance
     project-name: 'dmaap-messagerouter-mirroragent-maintenance'
     jobs:
@@ -41,6 +43,7 @@
     cron: ''
 
 - project:
+    disabled: true
     name: dmaap-messagerouter-mirroragent-sonar
     jobs:
       - gerrit-maven-sonar
@@ -59,6 +62,7 @@
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
 - project:
+    disabled: true
     name: dmaap-messagerouter-mirroragent-clm
     jobs:
       - gerrit-maven-clm
@@ -69,6 +73,7 @@
     mvn-settings: 'dmaap-messagerouter-mirroragent-settings'
 
 - project:
+    disabled: true
     name: dmaap-messagerouter-mirroragent-info
     project-name: dmaap-messagerouter-mirroragent
     jobs:
