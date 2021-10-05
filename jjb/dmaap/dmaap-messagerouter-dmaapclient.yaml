@@ -32,10 +32,10 @@
           maven-versions-plugin: true
     project: 'dmaap/messagerouter/dmaapclient'
     stream:
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
     mvn-settings: 'dmaap-messagerouter-dmaapclient-settings'
     files: '**'
     archive-artifacts: ''

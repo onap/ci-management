@@ -39,10 +39,10 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/buscontroller'
     stream:
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
     mvn-settings: 'dmaap-buscontroller-settings'
     files: '**'
     archive-artifacts: ''
