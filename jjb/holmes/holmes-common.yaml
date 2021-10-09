@@ -27,6 +27,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'holmes-common-settings'
     files: '**'
     archive-artifacts: ''

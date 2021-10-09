@@ -25,6 +25,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'holmes-rule-management-settings'
     files: '**'
     archive-artifacts: ''
