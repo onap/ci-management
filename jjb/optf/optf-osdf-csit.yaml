@@ -11,7 +11,7 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'optf-osdf-settings'
     robot-options: ''
