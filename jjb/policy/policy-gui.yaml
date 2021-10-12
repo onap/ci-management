@@ -26,6 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-gui-settings'
     java-version: openjdk11
     files: '**'

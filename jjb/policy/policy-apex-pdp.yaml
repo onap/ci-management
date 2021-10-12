@@ -36,6 +36,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-apex-pdp-settings'
     java-version: openjdk11
     files: '**'
