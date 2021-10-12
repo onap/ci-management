@@ -21,6 +21,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-common-settings'
     java-version: openjdk11
     files: '**'

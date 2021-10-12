@@ -29,8 +29,8 @@
               branch: 'master'
         - 'honolulu':
               branch: 'honolulu'
-        - 'tosca-poc':
-              branch: 'tosca-poc'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'policy-clamp-settings'
     java-version: openjdk11
     files: '**'

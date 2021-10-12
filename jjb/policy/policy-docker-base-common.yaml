@@ -26,6 +26,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''

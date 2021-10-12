@@ -30,6 +30,8 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     functionality:
       - 'xacml-pdp'
     trigger_jobs:

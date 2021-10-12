@@ -30,6 +30,8 @@
           branch: 'guilin'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-xacml-pdp-settings'
     java-version: openjdk11
     files: '**'
