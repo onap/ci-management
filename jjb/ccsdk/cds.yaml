@@ -40,7 +40,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: centos7-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
@@ -79,7 +79,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: centos7-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
@@ -93,7 +93,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
     project: 'ccsdk/cds'
     project-name: 'ccsdk-cds'
     branch: 'master'
@@ -118,7 +118,7 @@
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-cds-settings'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
 
 - project:
     name: ccsdk-cds-info

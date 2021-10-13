@@ -50,7 +50,7 @@
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
 
 - project:
     name: ccsdk-parent-info

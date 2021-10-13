@@ -15,7 +15,7 @@
           maven-versions-plugin: true
           cron: ''
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: centos7-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker'
@@ -39,7 +39,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: centos7-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
@@ -59,7 +59,7 @@
 #    archive-artifacts: ''
 #    docker-pom: 'pom.xml'
 #    mvn-profile: docker
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: centos7-docker-arm64-4c-2g
 #
 - project:
     name: ccsdk-distribution-clm
@@ -78,7 +78,7 @@
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-distribution-settings'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: centos7-docker-8c-8g
 
 
 - project:
@@ -93,7 +93,7 @@
 - project:
     name: ccsdk-distribution-whitesource
     project-name: ccsdk-distribution
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
     jobs:
       - gerrit-whitesource-scan:
           java-opts: '-Xmx2048m'

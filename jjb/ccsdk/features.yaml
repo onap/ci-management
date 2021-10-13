@@ -35,7 +35,7 @@
     files: '**'
     archive-artifacts: ''
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
@@ -49,7 +49,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
     project: 'ccsdk/features'
     project-name: 'ccsdk-features'
     branch: 'master'
@@ -77,7 +77,7 @@
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-features-settings'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
 
 - project:
     name: ccsdk-features-info
@@ -90,7 +90,7 @@
 
 - project:
     name: ccsdk-features-whitesource
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos7-builder-4c-4g
     project-name: ccsdk-features
     jobs:
       - gerrit-whitesource-scan
