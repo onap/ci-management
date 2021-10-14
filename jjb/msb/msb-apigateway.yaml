@@ -28,6 +28,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'msb-apigateway-settings'
     files: '**'
     archive-artifacts: ''
