@@ -19,6 +19,14 @@
           tox-envs: "docs,docs-linkcheck"
           pattern: "docs/**"
           parallel: true
+      - "checkbashisms":
+          tox-dir: "."
+          tox-envs: "checkbashisms"
+          pattern: "**"
+      - "pre-commit":
+          tox-dir: "."
+          tox-envs: "pre-commit"
+          pattern: "**"
     stream:
       - "master":
           branch: "master"
@@ -28,3 +36,16 @@
           branch: "frankfurt"
       - "guilin":
           branch: "guilin"
+    exclude:
+      - stream: "honolulu"
+        subproject: "checkbashisms"
+      - stream: "frankfurt"
+        subproject: "checkbashisms"
+      - stream: "guilin"
+        subproject: "checkbashisms"
+      - stream: "honolulu"
+        subproject: "pre-commit"
+      - stream: "frankfurt"
+        subproject: "pre-commit"
+      - stream: "guilin"
+        subproject: "pre-commit"
