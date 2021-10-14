@@ -54,8 +54,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
-            branch: 'honolulu'
+          branch: 'honolulu
     mvn-settings: 'cps-settings'
     files: '**'
     archive-artifacts: ''
