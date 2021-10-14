@@ -45,6 +45,30 @@
       "revId": "28a5405d0df3ed67a379b51210394094ed58aef4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad369155_8f8f94dd",
+        "filename": "jjb/cps/cps-cps-temporal-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-10-14T19:03:27Z",
+      "side": 0,
+      "message": "Nop.. this variable was not useful here.. thanks for deleting this",
+      "parentUuid": "adce0886_d4aaa133",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 22,
+        "endChar": 22
+      },
+      "revId": "28a5405d0df3ed67a379b51210394094ed58aef4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
