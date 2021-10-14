@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fc41332_0220c8ec",
+        "filename": "jjb/oom/oom-main-linter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3685
+      },
+      "writtenOn": "2021-10-14T07:51:49Z",
+      "side": 1,
+      "message": "there is currently no checkbashisms env in frankfurt and guilin branch tox.ini..\nI am not completely sure of potential side-effects.",
+      "revId": "7ed396ffec175500e62c8e64bb945bc67b92cf05",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
