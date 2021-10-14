@@ -22,6 +22,10 @@
           tox-dir: "."
           tox-envs: "docs"
           pattern: "docs/**"
+      - "checkbashisms":
+          tox-dir: "."
+          tox-envs: "checkbashisms"
+          pattern: "**"
     stream:
       - "master":
           branch: "master"
