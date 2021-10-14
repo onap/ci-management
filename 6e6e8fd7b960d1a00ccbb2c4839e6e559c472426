@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77dcf5d3_7d3aeda4",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2021-10-14T14:17:05Z",
+      "side": 1,
+      "message": "I should have spotted that, sorry :-)",
+      "range": {
+        "startLine": 60,
+        "startChar": 27,
+        "endLine": 60,
+        "endChar": 28
+      },
+      "revId": "6e6e8fd7b960d1a00ccbb2c4839e6e559c472426",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
