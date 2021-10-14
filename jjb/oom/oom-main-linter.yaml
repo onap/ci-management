@@ -14,14 +14,11 @@
           tox-dir: "."
           tox-envs: "doc8"
           pattern: "docs/**"
-      - "linkcheck":
-          tox-dir: "."
-          tox-envs: "docs-linkcheck"
-          pattern: "docs/**"
       - "sphinx":
           tox-dir: "."
-          tox-envs: "docs"
+          tox-envs: "docs,docs-linkcheck"
           pattern: "docs/**"
+          parallel: true
     stream:
       - "master":
           branch: "master"
