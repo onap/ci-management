@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "80938a7a_1d1141f5",
+        "filename": "jjb/cps/cps-cps-temporal-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-10-14T19:00:53Z",
+      "side": 0,
+      "message": "Removed honolulu as cps-temporal was added in istanbul release only",
+      "range": {
+        "startLine": 18,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 34
+      },
+      "revId": "28a5405d0df3ed67a379b51210394094ed58aef4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "adce0886_d4aaa133",
+        "filename": "jjb/cps/cps-cps-temporal-csit.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-10-14T19:00:53Z",
+      "side": 0,
+      "message": "As branch is already mentioned inside the stream section, this is not required.  \n\nPlease let me know if it can cause any issues?",
+      "range": {
+        "startLine": 22,
+        "startChar": 6,
+        "endLine": 22,
+        "endChar": 22
+      },
+      "revId": "28a5405d0df3ed67a379b51210394094ed58aef4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
