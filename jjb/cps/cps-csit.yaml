@@ -17,6 +17,8 @@
                 branch: 'master'
           - 'honolulu':
                 branch: 'honolulu'
+          - 'istanbul':
+                branch: 'istanbul'
       mvn-settings: 'cps-settings'
       robot-options: ''
       branch: 'master'
