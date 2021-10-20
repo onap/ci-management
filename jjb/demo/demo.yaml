@@ -22,12 +22,10 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
-      - 'guilin':
-          branch: 'guilin'
-      - 'frankfurt':
-          branch: 'frankfurt'
     mvn-settings: 'demo-settings'
     files: '**'
     archive-artifacts: ''
@@ -86,5 +84,7 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'honolulu':
           branch: 'honolulu'
