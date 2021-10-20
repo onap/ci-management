@@ -22,8 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch:  'guilin'
+      - 'istanbul':
+          branch:  'istanbul'
     mvn-settings: 'oparent-settings'
     java-version: openjdk11
     files: '**'
