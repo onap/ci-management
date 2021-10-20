@@ -39,17 +39,17 @@
       - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
-          build-timeout: 480
+          build-timeout: 600
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
-          build-timeout: 480
+          build-timeout: 600
       - "{project-name}-{stream}-release-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
-          build-timeout: 480
+          build-timeout: 600
 
       # Below jobs disabled until future need.
       - "{project-name}-{subproject}-{stream}-verify-helm2":
