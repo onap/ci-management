@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "569797ac_1149056b",
+        "filename": "jjb/demo/demo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2021-10-20T12:23:26Z",
+      "side": 0,
+      "message": "do we keep guilin and frankfurt?",
+      "revId": "4495d721cc91991132cd7df6664acbe8a9772b54",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
