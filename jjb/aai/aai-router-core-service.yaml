@@ -19,8 +19,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/router-core'
     stream:
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-router-core-settings'

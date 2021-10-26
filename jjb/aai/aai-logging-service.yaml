@@ -19,8 +19,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/logging-service'
     stream:
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-logging-service-settings'

@@ -22,8 +22,8 @@
       - 'master':
           branch: 'master'
           mvn-params: '-P spring-boot-2-1'
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
           mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'

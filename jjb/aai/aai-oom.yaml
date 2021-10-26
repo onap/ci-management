@@ -17,8 +17,8 @@
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: '**'
     stream:
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
 
     mvn-settings: 'aai-oom-settings'
     files: '**'

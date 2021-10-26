@@ -26,8 +26,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
     files: '**'

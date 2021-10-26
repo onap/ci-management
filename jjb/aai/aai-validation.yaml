@@ -24,8 +24,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/validation'
     stream:
-      - 'guilin':
-          branch: 'guilin'
+      - 'istanbul':
+          branch: 'istanbul'
       - 'master':
           branch: 'master'
     mvn-settings: 'aai-validation-settings'
