@@ -40,9 +40,8 @@
     stream:
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
@@ -54,7 +53,7 @@
     jobs:
       - '{project-name}-review-verification-maven-{stream}':
             mvn-goals: clean deploy
-            mvn-params: '-P docker -DskipTests=true -Dskip.deploy=true -Dskip.docker.push=true'
+            mvn-params: '-P docker -Dskip.deploy=true -Dskip.docker.push=true'
       - '{project-name}-merge-verification-maven-{stream}':
             mvn-goals: clean deploy
             mvn-params: '-P docker -DskipTests=true -Dskip.deploy=true -Dskip.docker.push=true'
