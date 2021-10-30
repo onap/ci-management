@@ -39,6 +39,9 @@
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
+      - 'istanbul':
+          branch: 'istanbul'
+          java-version: openjdk11
     mvn-settings: 'so-adapters-so-nssmf-adapter-settings'
     files: '**'
     archive-artifacts: ''
