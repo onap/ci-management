@@ -32,6 +32,9 @@
       - 'honolulu':
           branch: 'honolulu'
           java-version: openjdk11
+      - 'istanbul':
+          branch: 'istanbul'
+          java-version: openjdk11
       - 'Custom_Workflow':
           branch: 'Custom_Workflow'
           java-version: openjdk11
@@ -117,4 +120,7 @@
           java-version: openjdk11
       - 'honolulu':
           branch: 'honolulu'
+          java-version: openjdk11
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
