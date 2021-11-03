@@ -1,0 +1,14 @@
+---
+- project:
+    name: integration-data-provider-project-view
+    project-name: integration-data-provider
+    views:
+      - project-view
+
+- project:
+    name: integration-data-provider-info
+    project: integration/data-provider
+    project-name: integration-data-provider
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
