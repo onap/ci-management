@@ -39,6 +39,8 @@
       stream:
           - 'master':
                 branch: 'master'
+          - 'istanbul':
+                branch: 'istanbul'
           - 'honolulu':
                 branch: 'honolulu'
 
@@ -118,6 +120,9 @@
     stream:
       - 'master':
             branch: 'master'
+            files: ''
+      - 'istanbul':
+            branch: 'istanbul'
             files: ''
       - 'honolulu':
             branch: 'honolulu'
