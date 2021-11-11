@@ -8,6 +8,15 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java':
           mvn-goals: 'clean install'
+      - gerrit-maven-stage:
+          project-name: dcaegen2-platform-mod2-helm-generator
+          sign-artifacts: true
+          build-node: centos7-builder-4c-4g
+          maven-versions-plugin: true
+          version-properties-file: 'mod2/helm-generator/version.properties'
+          mvn-pom: 'mod2/helm-generator/pom.xml'
+          mvn-params: '-f mod2/helm-generator/pom.xml'
+          pattern: 'mod2/helm-generator/**'
     subproject:
       - helm-generator:
           pom: 'mod2/helm-generator/pom.xml'
