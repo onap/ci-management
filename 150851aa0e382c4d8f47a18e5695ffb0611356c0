@@ -22,6 +22,30 @@
       "revId": "150851aa0e382c4d8f47a18e5695ffb0611356c0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d88f6a7_b5a96327",
+        "filename": "jjb/integration/integration-data-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2021-12-02T12:40:12Z",
+      "side": 1,
+      "message": "I have added basic setup to the data-provider repo: https://gerrit.onap.org/r/c/integration/data-provider/+/126020 \n\nRules for yaml files can be tuned in .yamllint. Generic idea so far was to have uniform set of rules for integration repos. To avoid false positives we have at lest three options:\n+ disable yaml linting for this repo at all by removing selected lines\n+ adjusting yaml linting rules in .yamllint file in repo\n+ whitelist some yaml files in repo based on file name pattern in .coafile in [yaml] section (\"ignore\" line)",
+      "parentUuid": "4157ca75_5c3a5179",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 29
+      },
+      "revId": "150851aa0e382c4d8f47a18e5695ffb0611356c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
