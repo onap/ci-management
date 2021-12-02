@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4157ca75_5c3a5179",
+        "filename": "jjb/integration/integration-data-provider.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6079
+      },
+      "writtenOn": "2021-12-02T12:07:40Z",
+      "side": 1,
+      "message": "Not sure with these, data-provider uses some \"own\" yaml tags and we could finally get false-positives with that",
+      "range": {
+        "startLine": 24,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 29
+      },
+      "revId": "150851aa0e382c4d8f47a18e5695ffb0611356c0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
