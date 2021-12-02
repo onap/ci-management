@@ -12,3 +12,39 @@
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: integration-data-provider-linters
+    project: 'integration/data-provider'
+    project-name: 'integration-data-provider'
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - 'yaml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yaml'
+      - 'yml':
+          tox-dir: '.'
+          tox-envs: 'yaml'
+          pattern: '**/*.yml'
+      - 'json':
+          tox-dir: '.'
+          tox-envs: 'json'
+          pattern: '**/*.json'
+      - 'python':
+          tox-dir: '.'
+          tox-envs: 'py'
+          pattern: '**/*.py'
+      - 'rst':
+          tox-dir: '.'
+          tox-envs: 'rst'
+          pattern: '**/*.rst'
+      - 'md':
+          tox-dir: '.'
+          tox-envs: 'md'
+          pattern: '**/*.md'
+    stream:
+      - 'master':
+          branch: 'master'
