@@ -9,9 +9,10 @@
     name: dmaap-buscontroller-java11
     project-name: 'dmaap-buscontroller'
     jobs:
+      - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-docker-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-builder-4c-4g
           mvn-goals: 'clean package -P docker docker:build docker:push'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -33,7 +34,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-docker-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: ubuntu1804-builder-4c-4g
           mvn-goals: 'clean package -P docker docker:build docker:push'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -57,8 +58,7 @@
             mvn-params: '-P docker -DskipTests=true'
       - '{project-name}-merge-verification-maven-{stream}':
             mvn-goals: clean install
-            mvn-params: '-P docker'
-            build-node: centos7-docker-8c-8g
+            mvn-params: '-P docker -DskipTests=true'
     project-name: 'dmaap-buscontroller'
     recipients: 'fiachra.corcoran@est.tech'
     project: 'dmaap/buscontroller'
