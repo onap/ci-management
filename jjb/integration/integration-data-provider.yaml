@@ -48,3 +48,19 @@
     stream:
       - 'master':
           branch: 'master'
+
+- project:
+    name: 'integration-data-provider-docker-verify'
+    jobs:
+      - gerrit-docker-verify
+    project-name: 'integration-data-provider'
+    project: 'integration/data-provider'
+    stream:
+      - 'master':
+            branch: 'master'
+            files: ''
+    docker-build-args: '-f ./Dockerfile'
+    docker-name: 'data-provider'
+    docker-root: '$WORKSPACE'
+    mvn-settings: 'integration-settings'
+    build-node: ubuntu1804-docker-8c-8g
