@@ -232,9 +232,19 @@
 
     triggers:
       - gerrit:
+          server-name: '{gerrit-server-name}'
           trigger-on:
             - comment-added-contains-event:
                 comment-contains-value: '^Patch Set\s+\d+:\s+release-helm\s*$'
+          projects:
+            - project-compare-type: 'ANT'
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: 'ANT'
+                  pattern: '**'
 
     builders:
       - lf-infra-pre-build
