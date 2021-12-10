@@ -39,12 +39,42 @@
     stream:
       - 'master':
           branch: master
+    mvn-settings: cps-cps-temporal-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-cps-temporal-maintenance
+    java-version: openjdk11
+    mvn-version: mvn36
+    maven-version: mvn36
+    project-name: cps-cps-temporal-maintenance
+    project: cps/cps-temporal
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
+    jobs:
+      - gerrit-maven-docker-verify:
+          container-public-registry: nexus3.onap.org:10001
+      - gerrit-maven-docker-merge:
+          container-public-registry: nexus3.onap.org:10001
+          container-snapshot-registry: nexus3.onap.org:10003
+      - gerrit-maven-docker-stage:
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: -Pdocker
+          container-public-registry: nexus3.onap.org:10001
+          container-staging-registry: nexus3.onap.org:10003
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    stream:
       - 'istanbul':
           branch: 'istanbul'
     mvn-settings: cps-cps-temporal-settings
     files: '**'
     archive-artifacts: ''
     build-node: centos7-docker-8c-8g
+    cron: ''
 
 - project:
     name: cps-cps-temporal-clm

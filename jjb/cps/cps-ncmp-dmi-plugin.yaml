@@ -41,12 +41,44 @@
     stream:
       - 'master':
           branch: master
+    mvn-settings: cps-ncmp-dmi-plugin-settings
+    files: '**'
+    archive-artifacts: ''
+    build-node: centos7-docker-8c-8g
+
+- project:
+    name: cps-ncmp-dmi-plugin-maintenance
+    java-version: openjdk11
+    mvn-version: mvn36
+    maven-version: mvn36
+    project-name: cps-ncmp-dmi-plugin-maintenance
+    project: cps/ncmp-dmi-plugin
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
+    jobs:
+      - gerrit-maven-docker-verify:
+          container-public-registry: nexus3.onap.org:10001
+      - gerrit-maven-merge
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+      - gerrit-maven-docker-stage:
+          build-node: centos7-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: -Pdocker
+          container-public-registry: nexus3.onap.org:10001
+          container-staging-registry: nexus3.onap.org:10003
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
+    stream:
       - 'istanbul':
           branch: 'istanbul'
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: '**'
     archive-artifacts: ''
     build-node: centos7-docker-8c-8g
+    cron: ''
 
 - project:
     name: cps-ncmp-dmi-plugin-clm
