@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0e74a22_629ca382",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 7680
+      },
+      "writtenOn": "2021-12-13T04:21:15Z",
+      "side": 1,
+      "message": "If the intention is to remove the value for cron field for \u0027istanbul\u0027 stream, we can also add cron: \u0027\u0027 in the stream section like  \n\nstream:\n      - \u0027master\u0027:\n          branch: \u0027master\u0027\n      - \u0027istanbul\u0027:\n          branch: \u0027istanbul\u0027\n          cron: \u0027\u0027",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 10
+      },
+      "revId": "a178850a248d350def60a3e024d59a56a7e7b6e3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
