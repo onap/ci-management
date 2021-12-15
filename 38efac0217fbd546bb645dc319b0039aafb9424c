@@ -128,6 +128,23 @@
     },
     {
       "key": {
+        "uuid": "462aec73_3e6c9fe4",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "The contents are wrong. this should be more like this:\n\n[nexus]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n[nexus.onap.org]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n[rtd]\nendpoint \u003d https://readthedocs.org/api/v3/\ntoken \u003d $RTDTOKEN",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f902054e_7d38f2b0",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -163,6 +180,41 @@
     },
     {
       "key": {
+        "uuid": "025c1ebd_96c7107f",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "No, this should be replaced with the \"dummy\" credential for the sandbox.",
+      "parentUuid": "85afa7a2_8a8116a1",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1e1ac4fa_36620c38",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "Missing the following:\n\n  - credentialsId: \"rtd-token\"\n    tokenKey: \"RTDTOKEN\"",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9f4349d3_7d9d2b37",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -174,6 +226,41 @@
       "writtenOn": "2021-12-15T18:56:00Z",
       "side": 1,
       "message": "this cred is currently of type \"SSH username with private key\" so it won\u0027t have a $JENKINS_RELEASE_PSW value",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b4f8598e_f5fbe3e9",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "It should be changed to lftoolsini for the credential. Which didn\u0027t exist and I just created.",
+      "parentUuid": "9f4349d3_7d9d2b37",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4887c2bb_7f1ebd4a",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "Missing the following:\n\n  - credentialsId: \"dummy\"\n    tokenKey: \"RTDTOKEN\"",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
@@ -356,6 +443,74 @@
       "writtenOn": "2021-12-15T19:46:57Z",
       "side": 1,
       "message": "this cred doesn\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "855be9a5_6bb89048",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "This file needs to be redone with the content that currently exists in Jenkins",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80153664_e8eb1bad",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/serverCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "This file is not needed for globalMavenSettings",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6abcd2a6_30a7d8bf",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/serverCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "This file is not needed for globalMavenSettings",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83f5d8c3_072e9492",
+        "filename": "jenkins-config/managed-config-files/openstackUserData/jenkins-init-script/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-12-15T20:23:48Z",
+      "side": 1,
+      "message": "The script being used by ONAP is different from this.\n\nWe should continue to use the ONAP one since it has extra data being added for some reason",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
