@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14fe383d_d71ae962",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:49:34Z",
+      "side": 1,
+      "message": "onap",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e513a772_028678a4",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:49:34Z",
+      "side": 1,
+      "message": "onap",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e7a6251_1fc19b5c",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:49:34Z",
+      "side": 1,
+      "message": "onap",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 38
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
