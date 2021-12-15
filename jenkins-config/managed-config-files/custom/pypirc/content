@@ -1,0 +1,31 @@
+[distutils]
+index-servers =
+   staging
+   release
+   pypi-test
+   pypi
+
+[staging]
+repository: https://nexus3.onap.org/repository/PyPi.staging/
+username: $PYPI_STAGING_RELEASE_USR
+password: $PYPI_STAGING_RELEASE_PSW
+
+[release]
+repository: https://nexus3.onap.org/repository/PyPi.release/
+username: $PYPI_STAGING_RELEASE_USR
+password: $PYPI_STAGING_RELEASE_PSW
+
+[wheel-alpine]
+repository: https://nexus3.onap.org/repository/PyPi.wheel-alpine/
+username: $PYPI_STAGING_RELEASE_USR
+password: $PYPI_STAGING_RELEASE_PSW
+
+[pypi-test]
+repository: https://test.pypi.org/legacy/
+username: __token__
+password: $PYPI_TEST_TOKEN
+
+[pypi]
+repository: https://pypi.org/
+username: __token__
+password: $PYPI_TOKEN

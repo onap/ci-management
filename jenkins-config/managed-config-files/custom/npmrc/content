@@ -1,0 +1,3 @@
+registry=https://nexus3.onap.org/repository/npm.public/
+strict-ssl=false
+_auth=$NPM_PUBLIC_AUTH

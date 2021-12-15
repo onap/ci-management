@@ -1,0 +1,15 @@
+#!/bin/bash
+gerrit=gerrit.onap.org
+until host ${gerrit} &>/dev/null
+do
+    echo "Waiting until ${gerrit} is resolvable..."
+done
+
+git clone --recurse-submodules https://${gerrit}/r/ci-management /opt/ciman
+/opt/ciman/jjb/global-jjb/jenkins-init-scripts/init.sh
+
+IPADDR=$(facter ipaddress)
+HOSTNAME=$(facter hostname)
+FQDN=$(facter fqdn)
+
+echo "${IPADDR} ${HOSTNAME} ${FQDN}" >> /etc/hosts
