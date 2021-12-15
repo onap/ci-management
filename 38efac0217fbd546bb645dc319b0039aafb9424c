@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1cf27f0f_0e1b06df",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1bc357d3_052297fa",
+      "range": {
+        "startLine": 5,
+        "startChar": 20,
+        "endLine": 5,
+        "endChar": 58
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f237c02_0a83181c",
         "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -39,6 +63,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf42977f_c3888664",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Could be, but custom files are different between prod and sandbox often enough that it\u0027s normal to have two separate files.",
+      "parentUuid": "2f237c02_0a83181c",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "33d5c1dc_92e28ba6",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a5d822e_4f2e8ecf",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1681fd5e_a07d4fd9",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 1
@@ -73,6 +133,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3efd9d3a_51df9a30",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1681fd5e_a07d4fd9",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -99,6 +177,30 @@
     },
     {
       "key": {
+        "uuid": "8bd3c0e8_c50a7d1d",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14fe383d_d71ae962",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 30
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e513a772_028678a4",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 1
@@ -119,6 +221,30 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf38b69b_bd39eda1",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e513a772_028678a4",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -145,6 +271,30 @@
     },
     {
       "key": {
+        "uuid": "6970d95e_eda1c24c",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e7a6251_1fc19b5c",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 38
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "462aec73_3e6c9fe4",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
         "patchSetId": 1
@@ -162,6 +312,24 @@
     },
     {
       "key": {
+        "uuid": "d7bc6169_cc4ee769",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "462aec73_3e6c9fe4",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e7ef3ea7_61a44fa5",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
         "patchSetId": 1
@@ -176,6 +344,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a2abe12_6209b94b",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7ef3ea7_61a44fa5",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -232,6 +418,24 @@
     },
     {
       "key": {
+        "uuid": "c52721ae_b78e608e",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "025c1ebd_96c7107f",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1e1ac4fa_36620c38",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -246,6 +450,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1dddaa28_cd835634",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e1ac4fa_36620c38",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -284,6 +506,24 @@
     },
     {
       "key": {
+        "uuid": "30a08a5d_313a45dd",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b4f8598e_f5fbe3e9",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4887c2bb_7f1ebd4a",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -301,6 +541,24 @@
     },
     {
       "key": {
+        "uuid": "ebadf74a_b3416165",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4887c2bb_7f1ebd4a",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "24946e80_3d648fb3",
         "filename": "jenkins-config/managed-config-files/custom/npmrc/content",
         "patchSetId": 1
@@ -315,6 +573,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d594f311_b03c6366",
+        "filename": "jenkins-config/managed-config-files/custom/npmrc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "24946e80_3d648fb3",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -341,6 +617,30 @@
     },
     {
       "key": {
+        "uuid": "28a1a5b8_6b42cded",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3aaff005_df736693",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "288be508_3ae526ae",
         "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
         "patchSetId": 1
@@ -364,6 +664,30 @@
     },
     {
       "key": {
+        "uuid": "1cd63196_f0b78308",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "288be508_3ae526ae",
+      "range": {
+        "startLine": 6,
+        "startChar": 18,
+        "endLine": 6,
+        "endChar": 58
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9173e33_35ccf569",
         "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -378,6 +702,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5853583a_1f60d2bf",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f9173e33_35ccf569",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -398,6 +740,24 @@
     },
     {
       "key": {
+        "uuid": "21755334_718fec78",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e18fb06_0f89d76b",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "422e353e_5719e31e",
         "filename": "jenkins-config/managed-config-files/custom/pipconf/content",
         "patchSetId": 1
@@ -412,6 +772,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "30744d9b_31ce03de",
+        "filename": "jenkins-config/managed-config-files/custom/pipconf/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "422e353e_5719e31e",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -432,6 +810,24 @@
     },
     {
       "key": {
+        "uuid": "0a4a86e7_48cd4e97",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d52aa357_7e54e842",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4216431c_f28d75a0",
         "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
         "patchSetId": 1
@@ -446,6 +842,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f82cb16c_e9d1ba1a",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4216431c_f28d75a0",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -466,6 +880,24 @@
     },
     {
       "key": {
+        "uuid": "e8b91df6_b13a7e73",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0c8fcb1_f7e76e6d",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "82ab46ae_d399b2b9",
         "filename": "jenkins-config/managed-config-files/custom/pypirc/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -480,6 +912,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0ee73ca6_f898c9ec",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82ab46ae_d399b2b9",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -500,6 +950,24 @@
     },
     {
       "key": {
+        "uuid": "d12a87cb_279d158c",
+        "filename": "jenkins-config/managed-config-files/custom/signing-pubkey/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c59a1590_da47dafc",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b36aaa3e_ef0f1482",
         "filename": "jenkins-config/managed-config-files/custom/sigul-config/content",
         "patchSetId": 1
@@ -514,6 +982,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d6b5808f_0a70f0de",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b36aaa3e_ef0f1482",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -534,6 +1020,24 @@
     },
     {
       "key": {
+        "uuid": "faf884c0_d1454350",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "05744f69_6fdf3981",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d216364e_b8e90425",
         "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -548,6 +1052,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "94f54351_285fd90c",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d216364e_b8e90425",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -568,6 +1090,24 @@
     },
     {
       "key": {
+        "uuid": "3a4c3c3c_79faa630",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-password/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f731960a_d7636572",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d004c783_7481a5d7",
         "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -582,6 +1122,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "170db5e1_38fafb15",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d004c783_7481a5d7",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -602,6 +1160,24 @@
     },
     {
       "key": {
+        "uuid": "a55e79de_65a19968",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "76701eb5_957ecbf7",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "855be9a5_6bb89048",
         "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/content",
         "patchSetId": 1
@@ -616,6 +1192,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ed2d202f_2bef75ff",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "855be9a5_6bb89048",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -636,6 +1230,24 @@
     },
     {
       "key": {
+        "uuid": "2f9f2fe4_036406b1",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/serverCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "80153664_e8eb1bad",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6abcd2a6_30a7d8bf",
         "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/serverCredentialMappings.yaml",
         "patchSetId": 1
@@ -653,6 +1265,24 @@
     },
     {
       "key": {
+        "uuid": "e753b234_f7f35b4e",
+        "filename": "jenkins-config/managed-config-files/globalMavenSettings/global-settings/serverCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6abcd2a6_30a7d8bf",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "83f5d8c3_072e9492",
         "filename": "jenkins-config/managed-config-files/openstackUserData/jenkins-init-script/content",
         "patchSetId": 1
@@ -667,6 +1297,24 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "703448c4_71ec7de5",
+        "filename": "jenkins-config/managed-config-files/openstackUserData/jenkins-init-script/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "83f5d8c3_072e9492",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -690,6 +1338,30 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c281f797_81ada99b",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2021-12-15T22:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4dfa507a_68863a21",
+      "range": {
+        "startLine": 59,
+        "startChar": 8,
+        "endLine": 59,
+        "endChar": 18
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
