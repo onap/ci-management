@@ -25,6 +25,40 @@
     },
     {
       "key": {
+        "uuid": "2f237c02_0a83181c",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this could be a symlink of the prod one",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7a5d822e_4f2e8ecf",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this credentialsId doesn\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "14fe383d_d71ae962",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 1
@@ -111,6 +145,24 @@
     },
     {
       "key": {
+        "uuid": "85afa7a2_8a8116a1",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "I mean this whole file could be a symlink",
+      "parentUuid": "f902054e_7d38f2b0",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9f4349d3_7d9d2b37",
         "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -191,6 +243,40 @@
     },
     {
       "key": {
+        "uuid": "4e18fb06_0f89d76b",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this cred doesn\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "82ab46ae_d399b2b9",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "all these pypi-* creds don\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "05744f69_6fdf3981",
         "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -208,6 +294,40 @@
     },
     {
       "key": {
+        "uuid": "d216364e_b8e90425",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this cred doesn\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f731960a_d7636572",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-password/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this cred doesn\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d004c783_7481a5d7",
         "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 1
@@ -219,6 +339,23 @@
       "writtenOn": "2021-12-15T18:56:00Z",
       "side": 1,
       "message": "this could be a symlink to the prod one",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76701eb5_957ecbf7",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T19:46:57Z",
+      "side": 1,
+      "message": "this cred doesn\u0027t exist in Jenkins yet",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
