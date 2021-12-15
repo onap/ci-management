@@ -137,6 +137,29 @@
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4dfa507a_68863a21",
+        "filename": "jjb/cps/cps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:56:17Z",
+      "side": 1,
+      "message": "This one sneak in the change as part of this patch. Let\u0027s remove it",
+      "range": {
+        "startLine": 59,
+        "startChar": 8,
+        "endLine": 59,
+        "endChar": 18
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
