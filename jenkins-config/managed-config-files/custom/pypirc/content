@@ -1,0 +1,20 @@
+[distutils]
+index-servers =
+   staging
+   pypi-test
+   pypi
+
+[staging]
+repository: https://nexus3.acumos.org/repository/PyPi.staging/
+username: $PYPI_STAGING_USR
+password: $PYPI_STAGING_PSW
+
+[pypi]
+repository: https://upload.pypi.org/legacy/
+username: $PYPI_RELEASE_USR
+password: $PYPI_RELEASE_PSW
+
+[pypi-test]
+repository: https://test.pypi.org/legacy/
+username: $PYPI_TEST_USR
+password: $PYPI_TEST_PSW
