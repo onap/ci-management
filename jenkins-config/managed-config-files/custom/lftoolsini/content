@@ -1,0 +1,9 @@
+[nexus]
+username=$JENKINS_RELEASE_USR
+password=$JENKINS_RELEASE_PSW
+[nexus.onap.org]
+username=$JENKINS_RELEASE_USR
+password=$JENKINS_RELEASE_PSW
+[rtd]
+endpoint = https://readthedocs.org/api/v3/
+token = $RTD_TOKEN
