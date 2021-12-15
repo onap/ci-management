@@ -94,6 +94,40 @@
     },
     {
       "key": {
+        "uuid": "f902054e_7d38f2b0",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T18:56:00Z",
+      "side": 1,
+      "message": "This could be a symlink to the prod one",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9f4349d3_7d9d2b37",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/customizedCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T18:56:00Z",
+      "side": 1,
+      "message": "this cred is currently of type \"SSH username with private key\" so it won\u0027t have a $JENKINS_RELEASE_PSW value",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3aaff005_df736693",
         "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
         "patchSetId": 1
@@ -134,6 +168,57 @@
         "endLine": 6,
         "endChar": 58
       },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9173e33_35ccf569",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T18:56:00Z",
+      "side": 1,
+      "message": "this file could be a symlink to the prod one",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05744f69_6fdf3981",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T18:56:00Z",
+      "side": 1,
+      "message": "this could be a symlink to the prod one",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d004c783_7481a5d7",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-pki/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T18:56:00Z",
+      "side": 1,
+      "message": "this could be a symlink to the prod one",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
