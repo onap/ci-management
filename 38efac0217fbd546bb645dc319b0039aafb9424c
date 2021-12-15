@@ -59,6 +59,23 @@
     },
     {
       "key": {
+        "uuid": "1681fd5e_a07d4fd9",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "this section is missing \"retain_anchors\u003dTrue\" compared to the original file",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "14fe383d_d71ae962",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 1
@@ -139,6 +156,23 @@
       "writtenOn": "2021-12-15T20:23:48Z",
       "side": 1,
       "message": "The contents are wrong. this should be more like this:\n\n[nexus]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n[nexus.onap.org]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n[rtd]\nendpoint \u003d https://readthedocs.org/api/v3/\ntoken \u003d $RTDTOKEN",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e7ef3ea7_61a44fa5",
+        "filename": "jenkins-config/managed-config-files/custom/lftoolsini/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "this file is missing several details compared to original file:\n[nexus]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n\n[nexus.onap.org]\nusername\u003d$JENKINS_RELEASE_USR\npassword\u003d$JENKINS_RELEASE_PSW\n\n[rtd]\nendpoint \u003d https://readthedocs.org/api/v3/\ntoken \u003d $SOME_CRED_WITH_THE_TOKEN",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
@@ -267,6 +301,23 @@
     },
     {
       "key": {
+        "uuid": "24946e80_3d648fb3",
+        "filename": "jenkins-config/managed-config-files/custom/npmrc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "original file is not empty",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3aaff005_df736693",
         "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
         "patchSetId": 1
@@ -347,6 +398,74 @@
     },
     {
       "key": {
+        "uuid": "422e353e_5719e31e",
+        "filename": "jenkins-config/managed-config-files/custom/pipconf/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "original file is not empty:\n\n[global]\ntimeout \u003d 60",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d52aa357_7e54e842",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "this file is missing few sections and details compared to the original file",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4216431c_f28d75a0",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "should be ONAP",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d0c8fcb1_f7e76e6d",
+        "filename": "jenkins-config/managed-config-files/custom/pypirc/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "not the correct url compared to original file",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "82ab46ae_d399b2b9",
         "filename": "jenkins-config/managed-config-files/custom/pypirc/customizedCredentialMappings.yaml",
         "patchSetId": 1
@@ -358,6 +477,40 @@
       "writtenOn": "2021-12-15T19:46:57Z",
       "side": 1,
       "message": "all these pypi-* creds don\u0027t exist in Jenkins yet",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c59a1590_da47dafc",
+        "filename": "jenkins-config/managed-config-files/custom/signing-pubkey/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "the content is not the same as the original file",
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b36aaa3e_ef0f1482",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2021-12-15T20:35:27Z",
+      "side": 1,
+      "message": "all hostnames in this file are incorrect, they should be the ones for ONAP not acumos",
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
