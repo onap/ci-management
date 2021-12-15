@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1bc357d3_052297fa",
+        "filename": "jenkins-config/managed-config-files/custom/clouds-yaml/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:54:49Z",
+      "side": 1,
+      "message": "ef6e8825-fc3a-4ebf-886a-ba51ada06a9c",
+      "range": {
+        "startLine": 5,
+        "startChar": 20,
+        "endLine": 5,
+        "endChar": 58
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "14fe383d_d71ae962",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 1
@@ -64,6 +87,52 @@
         "startChar": 0,
         "endLine": 22,
         "endChar": 38
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3aaff005_df736693",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:54:49Z",
+      "side": 1,
+      "message": "\"ef6e8825-fc3a-4ebf-886a-ba51ada06a9c\",",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 57
+      },
+      "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "288be508_3ae526ae",
+        "filename": "jenkins-config/managed-config-files/custom/packer-cloud-env/content",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2021-12-15T17:54:49Z",
+      "side": 1,
+      "message": "\"bd089be9-e846-4afe-905b-8bb6c7c90faf\",",
+      "range": {
+        "startLine": 6,
+        "startChar": 18,
+        "endLine": 6,
+        "endChar": 58
       },
       "revId": "38efac0217fbd546bb645dc319b0039aafb9424c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
