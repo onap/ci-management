@@ -10,4 +10,4 @@ IPADDR=$(facter ipaddress)
 HOSTNAME=$(facter hostname)
 FQDN=$(facter fqdn)
 
-echo "${IPADDR} ${HOSTNAME} ${FQDN}" >> /etc/hosts
+echo "^${IPADDR} ^${HOSTNAME} ^${FQDN}" >> /etc/hosts
