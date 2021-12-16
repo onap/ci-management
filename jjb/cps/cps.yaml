@@ -56,8 +56,7 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+          cron: ''
     mvn-settings: 'cps-settings'
     files: '**'
     archive-artifacts: ''

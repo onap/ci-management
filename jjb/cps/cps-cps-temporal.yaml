@@ -41,6 +41,7 @@
           branch: master
       - 'istanbul':
           branch: 'istanbul'
+          cron: ''
     mvn-settings: cps-cps-temporal-settings
     files: '**'
     archive-artifacts: ''

@@ -43,6 +43,7 @@
           branch: master
       - 'istanbul':
           branch: 'istanbul'
+          cron: ''
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: '**'
     archive-artifacts: ''
@@ -96,4 +97,3 @@
     project: cps/ncmp-dmi-plugin
     branch: master
     build-node: centos7-docker-8c-8g
-
