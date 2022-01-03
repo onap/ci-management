@@ -61,7 +61,7 @@
     nexus-iq-namespace: 'onap-'
     build-node: ubuntu1804-docker-8c-8g
     project: 'dcaegen2/platform'
-    project-name: dcaegen2-platform-mod2-helm-generator-clm
+    project-name: dcaegen2-platform-mod2-helm-generator
     mvn-params: '-f mod2/helm-generator/pom.xml'
     branch: 'master'
     mvn-settings: 'dcaegen2-platform-settings'
