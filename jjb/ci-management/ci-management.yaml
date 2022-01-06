@@ -17,7 +17,11 @@
 - project:
     name: ci-management-jobs
     jobs:
-      - '{project-name}-ci-jobs'
+      - gerrit-jenkins-cfg-verify
+      - gerrit-jenkins-sandbox-cleanup
+      - gerrit-jjb-deploy-job
+      - gerrit-jjb-merge
+      - gerrit-jjb-verify
       - gerrit-packer-verify
 
     project: 'ci-management'
