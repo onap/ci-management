@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce275746_bb157681",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-01-06T23:06:46Z",
+      "side": 1,
+      "message": "In truth, this job has not been failing for ONAP. Please remove this word and this makes it a Chore instead of a Fix",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "d2387b4b8b667d1430a6bf74470f97ffc8dda3f5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
