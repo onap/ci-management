@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "269226c1_0a8215a6",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2022-01-06T23:55:55Z",
+      "side": 1,
+      "message": "I don\u0027t see these credentials on the sandbox.",
+      "range": {
+        "startLine": 3,
+        "startChar": 20,
+        "endLine": 3,
+        "endChar": 44
+      },
+      "revId": "d4fdf25a491a3c80f4a1f9840edee645dc50e52d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
