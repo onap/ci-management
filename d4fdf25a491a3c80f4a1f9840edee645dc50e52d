@@ -22,6 +22,30 @@
       "revId": "d4fdf25a491a3c80f4a1f9840edee645dc50e52d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd8ef5f3_b6b0e39f",
+        "filename": "jenkins-config/managed-config-files/custom/sigul-config/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-01-07T00:02:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "269226c1_0a8215a6",
+      "range": {
+        "startLine": 3,
+        "startChar": 20,
+        "endLine": 3,
+        "endChar": 44
+      },
+      "revId": "d4fdf25a491a3c80f4a1f9840edee645dc50e52d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
