@@ -94,6 +94,7 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-qualitygate-wait: true
     sonar-mvn-goal: '{sonar_mvn_goal}'
     build-node: centos7-docker-8c-8g
     project: 'cps'
