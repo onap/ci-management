@@ -25,6 +25,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+
     project: 'aai/resources'
     stream:
       - 'master':
@@ -36,6 +37,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk8
 
 - project:
     name: aai-resources-sonar
@@ -55,6 +57,7 @@
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     mvn-version: 'mvn35'
+    java-version: openjdk8
 
 - project:
     name: aai-resources-clm
@@ -68,6 +71,7 @@
           branch: 'master'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
+    java-version: openjdk8
 
 - project:
     name: aai-resources-info
@@ -77,6 +81,7 @@
     build-node: centos7-builder-2c-1g
     project: aai/resources
     branch: master
+    java-version: openjdk8
 
 - project:
     name: 'aai-resources-whitesource'
