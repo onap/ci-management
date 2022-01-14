@@ -5,16 +5,18 @@
     jobs:
       - gerrit-maven-verify:
           cron: ''
+          mvn-params: '-Drevision={snapshot_version}'
       - gerrit-maven-merge:
           cron: '@daily'
-          mvn-params: '-Dmaven.test.skip=true'
+          mvn-params: '-Dmaven.test.skip=true -Drevision={snapshot_version}'
       - gerrit-maven-stage:
           build-node: centos7-builder-4c-4g
           sign-artifacts: true
-          mvn-params: '-Dmaven.test.skip=true'
+          mvn-params: '-Dmaven.test.skip=true -Drevision={snapshot_version}'
           cron: ''
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+          mvn-params: '-Drevision={release_version}'
 
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -22,10 +24,16 @@
     stream:
       - 'master':
           branch: 'master'
+          snapshot_version: 3.0.0-SNAPSHOT
+          release_version: 3.0.0
       - 'honolulu':
           branch: 'honolulu'
+          snapshot_version: 2.1.9-SNAPSHOT
+          release_version: 2.1.9
       - 'istanbul':
           branch: 'istanbul'
+          snapshot_version: 2.2.5-SNAPSHOT
+          release_version: 2.2.5
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
