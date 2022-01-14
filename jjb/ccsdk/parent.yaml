@@ -22,6 +22,15 @@
     stream:
       - 'master':
           branch: 'master'
+          jobs:
+            - gerrit-maven-verify:
+                mvn-params: '-Drevision=3.0.0-SNAPSHOT'
+            - gerrit-maven-merge:
+                mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0-SNAPSHOT'
+            - gerrit-maven-stage:
+                mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0'
+            - '{project-name}-gerrit-release-jobs':
+                mvn-params: '-Drevision=3.0.0'
       - 'honolulu':
           branch: 'honolulu'
       - 'istanbul':
