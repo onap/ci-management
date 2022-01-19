@@ -124,12 +124,6 @@
       - 'istanbul':
             branch: 'istanbul'
             files: ''
-      - 'honolulu':
-            branch: 'honolulu'
-            files: ''
-      - 'develop':
-            branch: 'develop'
-            files: ''
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
