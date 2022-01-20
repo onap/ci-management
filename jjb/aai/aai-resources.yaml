@@ -67,8 +67,10 @@
     project: 'aai/resources'
     project-name: 'aai-resources'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
     java-version: openjdk8

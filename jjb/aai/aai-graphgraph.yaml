@@ -56,8 +56,10 @@
     project: 'aai/graphgraph'
     project-name: 'aai-graphgraph'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-graphgraph-settings'
 
 - project:

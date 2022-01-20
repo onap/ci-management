@@ -66,8 +66,10 @@
     project: 'aai/babel'
     project-name: 'aai-babel'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-babel-settings'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
     java-version: openjdk11

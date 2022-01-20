@@ -53,8 +53,10 @@
     project: 'aai/router-core'
     project-name: 'aai-router-core'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-router-core-settings'
 
 - project:

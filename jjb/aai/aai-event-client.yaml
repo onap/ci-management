@@ -53,8 +53,10 @@
     project: 'aai/event-client'
     project-name: 'aai-event-client'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-event-client-settings'
 
 - project:
