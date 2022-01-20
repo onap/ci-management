@@ -53,6 +53,7 @@
     name: 'integration-data-provider-docker-verify'
     jobs:
       - gerrit-docker-verify
+      - gerrit-docker-merge
     project-name: 'integration-data-provider'
     project: 'integration/data-provider'
     stream:
