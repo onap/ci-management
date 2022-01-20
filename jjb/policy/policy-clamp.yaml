@@ -63,7 +63,13 @@
     nexus-iq-namespace: 'onap-'
     project: 'policy/clamp'
     project-name: 'policy-clamp'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-clamp-settings'
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk11

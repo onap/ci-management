@@ -65,7 +65,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/drools-applications
     project-name: 'policy-drools-applications'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-drools-applications-settings'
     java-version: openjdk11
     build-node: ubuntu1804-docker-8c-8g

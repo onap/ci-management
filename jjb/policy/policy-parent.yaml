@@ -36,7 +36,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/parent
     project-name: 'policy-parent'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-parent-settings'
     java-version: openjdk11
 

@@ -64,7 +64,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/pap
     project-name: 'policy-pap'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-pap-settings'
     java-version: openjdk11
 

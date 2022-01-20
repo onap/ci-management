@@ -70,7 +70,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/apex-pdp
     project-name: 'policy-apex-pdp'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-apex-pdp-settings'
     java-version: openjdk11
 
