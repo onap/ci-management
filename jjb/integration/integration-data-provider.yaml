@@ -64,3 +64,12 @@
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
+
+- project:
+    name: integration-data-provider-release
+    project-name: 'integration-data-provider'
+    project: 'integration/data-provider'
+    mvn-settings: 'integration-settings'
+    jobs:
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-8c-8g
