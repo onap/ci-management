@@ -71,7 +71,11 @@
     project: dcaegen2/services/sdk
     build-node: centos7-docker-8c-8g
     project-name: 'dcaegen2-services-sdk'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-sdk-settings'
 
 - project:

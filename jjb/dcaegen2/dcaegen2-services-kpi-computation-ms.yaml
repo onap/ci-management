@@ -85,5 +85,9 @@
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-services-kpi-computation-ms-clm'
     mvn-params: '-f components/kpi-computation-ms/pom.xml'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-settings'

@@ -60,7 +60,11 @@
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk11
     project-name: 'dcaegen2-services-prh'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-prh-settings'
 
 - project:

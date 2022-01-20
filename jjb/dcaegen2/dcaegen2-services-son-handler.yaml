@@ -61,7 +61,11 @@
     project: dcaegen2/services/son-handler
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-services-son-handler'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-son-handler-settings'
 
 - project:

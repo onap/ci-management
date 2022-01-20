@@ -63,7 +63,11 @@
     project: dcaegen2/services/pm-mapper
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-services-pm-mapper'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
 

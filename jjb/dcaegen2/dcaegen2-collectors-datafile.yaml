@@ -63,7 +63,11 @@
     project: dcaegen2/collectors/datafile
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-collectors-datafile'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-collectors-datafile-settings'
 

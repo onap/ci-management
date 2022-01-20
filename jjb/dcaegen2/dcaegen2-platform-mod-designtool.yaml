@@ -33,5 +33,9 @@
     project: dcaegen2/platform
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-platform-mod-designtool'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-platform-settings'
