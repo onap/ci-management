@@ -92,7 +92,11 @@
     nexus-iq-namespace: 'onap-'
     project: dmaap/messagerouter/messageservice
     project-name: 'dmaap-messagerouter-messageservice'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     java-version: openjdk11
 
