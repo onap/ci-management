@@ -61,7 +61,7 @@
             branch: 'master'
             files: ''
     docker-build-args: '-f ./Dockerfile'
-    docker-name: 'data-provider'
+    docker-name: 'onap/data-provider'
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
