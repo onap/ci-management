@@ -63,8 +63,10 @@
     project: 'aai/graphadmin'
     project-name: 'aai-graphadmin'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-graphadmin-settings'
     mvn-version: 'mvn35'
     java-version: openjdk8

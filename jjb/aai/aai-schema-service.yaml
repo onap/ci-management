@@ -64,8 +64,10 @@
     project-name: 'aai-schema-service'
     java-version: openjdk11
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn36'
 
