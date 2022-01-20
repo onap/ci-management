@@ -64,7 +64,11 @@
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/collectors/hv-ves
     project-name: 'dcaegen2-collectors-hv-ves'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
 

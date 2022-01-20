@@ -67,7 +67,11 @@
     project: dcaegen2/analytics/tca-gen2
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-analytics-tca-gen2'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
     mvn-version: 'mvn35'
     maven-version: 'mvn35'

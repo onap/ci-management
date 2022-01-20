@@ -52,6 +52,10 @@
     project: 'dcaegen2/platform'
     project-name: dcaegen2-platform-mod-genprocessor-clm
     mvn-params: '-f mod/genprocessor/pom.xml'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-platform-settings'
 

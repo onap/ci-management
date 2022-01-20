@@ -87,5 +87,9 @@
     build-node: ubuntu1804-docker-8c-8g
     project-name: 'dcaegen2-services-slice-analysis-ms-clm'
     mvn-params: '-f components/slice-analysis-ms/pom.xml'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'dcaegen2-services-settings'
