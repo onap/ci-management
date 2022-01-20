@@ -65,7 +65,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/drools-pdp
     project-name: 'policy-drools-pdp'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-drools-pdp-settings'
     java-version: openjdk11
 

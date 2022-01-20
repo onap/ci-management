@@ -64,7 +64,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/xacml-pdp
     project-name: 'policy-xacml-pdp'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-xacml-pdp-settings'
     java-version: openjdk11
 

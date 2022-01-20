@@ -64,7 +64,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/api
     project-name: 'policy-api'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-api-settings'
     java-version: openjdk11
 

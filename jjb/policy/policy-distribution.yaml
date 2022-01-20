@@ -64,7 +64,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/distribution
     project-name: 'policy-distribution'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-distribution-settings'
     java-version: openjdk11
 

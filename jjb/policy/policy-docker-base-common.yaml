@@ -40,7 +40,13 @@
     nexus-iq-namespace: 'onap-'
     project: policy/docker
     project-name: 'policy-docker'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'policy-docker-settings'
 
 - project:
