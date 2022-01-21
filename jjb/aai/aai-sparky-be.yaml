@@ -65,8 +65,10 @@
     project: 'aai/sparky-be'
     project-name: 'aai-sparky-be'
     stream:
-      - 'master':
-          branch: 'master'
+        - 'master':
+              branch: 'master'
+        - 'istanbul':
+              branch: 'istanbul'
     mvn-settings: 'aai-sparky-be-settings'
     mvn-version: 'mvn36'
     java-version: openjdk11
