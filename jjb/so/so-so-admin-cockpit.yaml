@@ -36,8 +36,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
     mvn-settings: 'so-so-admin-cockpit-settings'
     files: '**'
@@ -105,4 +105,6 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'so-so-admin-cockpit-settings'
