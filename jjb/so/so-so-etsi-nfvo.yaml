@@ -36,8 +36,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
     mvn-settings: 'so-so-etsi-nfvo-settings'
     files: '**'
@@ -76,4 +76,8 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk11
+      - 'istanbul':
+          branch: 'istanbul'
+          java-version: openjdk11          
     mvn-settings: 'so-so-etsi-nfvo-settings'

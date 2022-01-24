@@ -36,8 +36,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
     mvn-settings: 'so-adapters-so-etsi-sol003-adapter-settings'
     files: '**'
@@ -76,4 +76,6 @@
     stream:
       - 'master':
           branch: 'master'
+     - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'so-adapters-so-etsi-sol003-adapter-settings'

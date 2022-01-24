@@ -16,8 +16,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
           java-version: openjdk11
     mvn-settings: 'so-libs-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -57,7 +57,11 @@
     project: so/libs
     project-name: 'so-libs'
     java-version: openjdk11
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'so-libs-settings'
 
 - project:
