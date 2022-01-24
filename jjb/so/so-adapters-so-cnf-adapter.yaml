@@ -16,6 +16,7 @@
 - project:
     name: so-adapters-so-cnf-adapter
     project-name: 'so-adapters-so-cnf-adapter'
+    java-version: openjdk11
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -35,10 +36,8 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
-          java-version: openjdk11
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'so-adapters-so-cnf-adapter-settings'
     files: '**'
     archive-artifacts: ''
@@ -63,3 +62,19 @@
     mvn-settings: 'so-adapters-so-cnf-adapter-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: so-adapters-so-cnf-adapter-clm
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'so/adapters/so-cnf-adapter'
+    project-name: 'so-adapters-so-cnf-adapter'
+    build-node: ubuntu1804-docker-v1-8c-8g
+    stream:
+      - 'master':
+          branch: 'master'
+     - 'istanbul':
+          branch: 'istanbul'
+    mvn-settings: 'so-adapters-so-cnf-adapter-settings'

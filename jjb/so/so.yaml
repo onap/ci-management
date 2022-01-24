@@ -29,14 +29,11 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
-          java-version: openjdk11
       - 'istanbul':
           branch: 'istanbul'
           java-version: openjdk11
-      - 'Custom_Workflow':
-          branch: 'Custom_Workflow'
+      - 'recursive-orch':
+          branch: 'recursive-orch'
           java-version: openjdk11
     mvn-settings: 'so-settings'
     files: '**'
@@ -104,6 +101,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'so-settings'
 
 - project:
@@ -117,9 +116,6 @@
     stream:
       - 'master':
           branch: 'master'
-          java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
           java-version: openjdk11
       - 'istanbul':
           branch: 'istanbul'
