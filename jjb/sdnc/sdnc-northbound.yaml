@@ -68,6 +68,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdnc-northbound-settings'
     java-version: openjdk11
     mvn-version: 'mvn36'

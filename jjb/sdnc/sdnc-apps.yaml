@@ -106,6 +106,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-version : "mvn36"
     mvn-settings: 'sdnc-apps-settings'
