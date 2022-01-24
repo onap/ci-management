@@ -64,8 +64,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
     mvn-settings: 'policy-gui-settings'
