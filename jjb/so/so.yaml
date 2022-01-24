@@ -35,8 +35,8 @@
       - 'istanbul':
           branch: 'istanbul'
           java-version: openjdk11
-      - 'Custom_Workflow':
-          branch: 'Custom_Workflow'
+      - 'recursive-orch':
+          branch: 'recursive-orch'
           java-version: openjdk11
     mvn-settings: 'so-settings'
     files: '**'
