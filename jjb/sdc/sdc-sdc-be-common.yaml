@@ -55,7 +55,11 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/sdc-be-common
     project-name: 'sdc-sdc-be-common'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-be-common-settings'
 
 - project:

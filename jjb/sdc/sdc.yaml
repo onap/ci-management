@@ -109,7 +109,11 @@
     project: sdc
     project-name: 'sdc'
     build-node: ubuntu1804-docker-8c-8g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-version: 'mvn36'
     mvn-settings: 'sdc-settings'
     java-version: openjdk11
