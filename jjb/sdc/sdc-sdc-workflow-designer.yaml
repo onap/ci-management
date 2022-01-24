@@ -65,7 +65,11 @@
     project: sdc/sdc-workflow-designer
     project-name: 'sdc-sdc-workflow-designer'
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
 
 - project:

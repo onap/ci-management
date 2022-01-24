@@ -78,7 +78,11 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/sdc-distribution-client
     project-name: 'sdc-sdc-distribution-client'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     java-version: openjdk11
 

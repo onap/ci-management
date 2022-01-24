@@ -56,7 +56,11 @@
     nexus-iq-namespace: 'onap-'
     project: sdc/sdc-tosca
     project-name: 'sdc-sdc-tosca'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-tosca-settings'
 
 - project:

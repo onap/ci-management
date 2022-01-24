@@ -71,5 +71,9 @@
     nexus-iq-namespace: 'onap-'
     project: 'sdc/sdc-helm-validator'
     project-name: 'sdc-sdc-helm-validator'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'sdc-sdc-helm-validator-settings'
