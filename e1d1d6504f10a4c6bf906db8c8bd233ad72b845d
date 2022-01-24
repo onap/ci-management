@@ -16,6 +16,24 @@
       "revId": "e1d1d6504f10a4c6bf906db8c8bd233ad72b845d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad1b392e_860cac69",
+        "filename": "jjb/ccsdk/cds.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2022-01-24T17:28:05Z",
+      "side": 1,
+      "message": "Thanks - I removed the honolulu branch jobs.",
+      "parentUuid": "13a7929e_347cc2cd",
+      "revId": "e1d1d6504f10a4c6bf906db8c8bd233ad72b845d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
