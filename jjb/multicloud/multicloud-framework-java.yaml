@@ -87,8 +87,12 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: multicloud/framework
-    project-name: 'multicloud-framework-multivimbroker'
-    branch: 'master'
+    project-name: 'multicloud-framework-multivimbroker'   
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-params: '-f multivimbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
 
@@ -119,7 +123,11 @@
     nexus-iq-namespace: 'onap-'
     project: multicloud/framework
     project-name: 'multicloud-framework-artifactbroker'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     java-version: openjdk11
     mvn-params: '-f artifactbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'

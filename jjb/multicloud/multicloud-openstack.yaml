@@ -161,7 +161,11 @@
     project: multicloud/openstack
     project-name: 'multicloud-openstack'
     build-node: ubuntu1804-memcached-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'multicloud-openstack-settings'
 
 - project:

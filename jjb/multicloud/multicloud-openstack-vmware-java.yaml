@@ -81,7 +81,11 @@
     project: multicloud/openstack/vmware
     project-name: 'multicloud-openstack-vmware'
     build-node: 'ubuntu1804-builder-4c-4g'
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'multicloud-openstack-vmware-settings'
 
 - project:
