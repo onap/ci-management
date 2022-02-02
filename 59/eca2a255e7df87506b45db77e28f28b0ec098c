@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Toine Siebelink <toine.siebelink@est.tech>
+Code-Review+1: Ajay Deep Singh <ajay.deep.singh@est.tech>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-at: Wed, 02 Feb 2022 10:04:33 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/126925
+Project: ci-management
+Branch: refs/heads/master
