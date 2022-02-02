@@ -43,7 +43,7 @@
         # To simplify the references inside tox.ini and tests/settings.py
         docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" netconf-pnp-simulator:latest
         tox
-    build-node: centos7-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     build-timeout: 20
     jobs:
       - gerrit-docker-verify
