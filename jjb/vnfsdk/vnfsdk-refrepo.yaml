@@ -67,5 +67,9 @@
     project: vnfsdk/refrepo
     project-name: 'vnfsdk-refrepo'
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'vnfsdk-refrepo-settings'

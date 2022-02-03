@@ -36,5 +36,9 @@
     project: vnfsdk/functest
     project-name: 'vnfsdk-functest'
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'vnfsdk-functest-settings'

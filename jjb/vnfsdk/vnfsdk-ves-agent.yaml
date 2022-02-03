@@ -51,5 +51,9 @@
     project: vnfsdk/ves-agent
     project-name: 'vnfsdk-ves-agent'
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'istanbul':
+          branch: 'istanbul'
     mvn-settings: 'vnfsdk-ves-agent-settings'
