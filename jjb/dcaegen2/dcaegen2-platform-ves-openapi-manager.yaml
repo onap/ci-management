@@ -55,6 +55,20 @@
       mvn-goals: 'clean install'
       mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
+- project:
+    name: dcaegen2-platform-ves-openapi-clm
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: dcaegen2/platform/ves-openapi-manager
+    build-node: ubuntu1804-docker-8c-8g
+    project-name: 'dcaegen2-platform-ves-openapi-manager'
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'dcaegen2-platform-ves-openapi-manager-settings'
+
 
 - project:
     name: dcaegen2-platform-ves-openapi-manager-project-view
