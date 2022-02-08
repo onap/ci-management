@@ -45,6 +45,10 @@
           tox-dir: '.'
           tox-envs: 'md'
           pattern: '**/*.md'
+      - 'cov':
+          tox-dir: '.'
+          tox-envs: 'cov'
+          pattern: '**/*.py'
     stream:
       - 'master':
           branch: 'master'
