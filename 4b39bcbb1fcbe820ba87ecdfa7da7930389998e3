@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d5a49c7b_c91a604c",
+        "filename": "shell/onap-gerrit-review-wrapper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-02-08T20:56:44Z",
+      "side": 1,
+      "message": "Remove trailing space",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 8
+      },
+      "revId": "4b39bcbb1fcbe820ba87ecdfa7da7930389998e3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dcec48c6_e0d4ebb5",
+        "filename": "shell/onap-gerrit-review-wrapper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-02-08T20:56:44Z",
+      "side": 1,
+      "message": "Remove trailing space",
+      "range": {
+        "startLine": 26,
+        "startChar": 52,
+        "endLine": 26,
+        "endChar": 53
+      },
+      "revId": "4b39bcbb1fcbe820ba87ecdfa7da7930389998e3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
