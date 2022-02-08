@@ -22,6 +22,30 @@
       "revId": "ef544ae68e33842ce43dd6d7af45cb3bb4bacd18",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "66088f05_6c17b39a",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-ves-openapi-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2022-02-08T15:37:26Z",
+      "side": 1,
+      "message": "Good point; will add istanbul.",
+      "parentUuid": "a1f3c966_c67dc40a",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 26
+      },
+      "revId": "ef544ae68e33842ce43dd6d7af45cb3bb4bacd18",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
