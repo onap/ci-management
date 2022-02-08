@@ -15,7 +15,8 @@
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:
-      - '{project-name}-python-jobs'
+      - '{project-name}-python-jobs':
+               post-build-script: ../../shell/onap-gerrit-review-wrapper.sh
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
