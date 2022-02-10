@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de4912b6_05b6e51c",
+        "filename": "jjb/so/so-adapters-so-cnf-adapter.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-02-10T14:32:43Z",
+      "side": 1,
+      "message": "wrong indentation in this line, it looks like the cause of the failing job",
+      "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
