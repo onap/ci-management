@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41ffb33d_44bae5b9",
+        "filename": "jjb/so/so-adapters-so-oof-adapter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-02-10T14:39:43Z",
+      "side": 1,
+      "message": "I believe the error message is pretty clear stating that you are using a project name that is already defined in the same file, you will have to use a different project name for your new definition:\nERROR:jenkins_jobs.parser:Duplicate entry found in \u0027/w/workspace/ci-management-jjb-verify/jjb/so/so-adapters-so-oof-adapter.yaml: \u0027so-adapters-so-oof-adapter\u0027 already defined",
+      "revId": "1b6dfee62e63f87876e14253ee33d15a8dc9f28f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
