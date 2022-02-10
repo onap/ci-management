@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ecf9f95_115602b2",
+        "filename": "jjb/so/so-adapters-so-etsi-sol005-adapter.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-02-10T14:34:49Z",
+      "side": 1,
+      "message": "wrong indentation in this line, it looks like the cause of the failing job",
+      "revId": "24636893534404275abce88141bcb549339f8c2c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
