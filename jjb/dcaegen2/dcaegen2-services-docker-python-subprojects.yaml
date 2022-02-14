@@ -77,8 +77,8 @@
               DNAME={container-snapshot-registry}/{docker-name}
               docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
               docker push $DNAME:$DOCKER_IMAGE_TAG2
-          stream: honolulu
-          branch: honolulu
+          stream: istanbul
+          branch: istanbul
           cron: ''
       - gerrit-whitesource-scan:
           build-timeout: 120
@@ -101,11 +101,12 @@
       - dcaegen2-services-pmsh:
           src-dir: components/pm-subscription-handler
           docker-name: onap/org.onap.dcaegen2.services.pmsh
+      - dcaegen2-services-ml-prediction-ms:
+          src-dir: components/ml-prediction-ms
+          docker-name: onap/org.onap.dcaegen2.services.ml-prediction-ms 
     stream:
       - master:
           branch: master
-      - honolulu:
-          branch: honolulu
       - istanbul:
           branch: istanbul
     views:
