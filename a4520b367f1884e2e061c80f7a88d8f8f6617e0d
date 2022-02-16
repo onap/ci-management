@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "994ba797_cf89f9c6",
+        "filename": "global-jjb",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-02-16T20:39:54Z",
+      "side": 1,
+      "message": "Is this needed?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 58
+      },
+      "revId": "a4520b367f1884e2e061c80f7a88d8f8f6617e0d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
