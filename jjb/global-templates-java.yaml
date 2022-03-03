@@ -19,6 +19,7 @@
     mvn-opts: ''
     java-opts: ''
     java-version: openjdk8
+    pre_build_script: "# pre build script goes here"
     properties:
       - infra-properties:
           build-days-to-keep: '{build-days-to-keep}'
@@ -53,6 +54,7 @@
 
     builders:
       - lf-infra-pre-build
+      - shell: "{pre_build_script}"
       - lf-update-java-alternatives:
           java-version: "{java-version}"
       - provide-maven-settings:
