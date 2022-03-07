@@ -41,3 +41,22 @@
                 branch: 'master'
           - 'istanbul':
                 branch: 'istanbul'
+
+- project:
+      name: offline-installer-pytest
+      project: oom/offline-installer
+      project-name: offline-installer
+      build-node: ubuntu1804-docker-8c-8g
+      python-version: python3
+      jobs:
+          - integration-tox-verify
+      subproject:
+          - 'docker-downloader':
+                tox-dir: 'build/download'
+                tox-envs: 'pytest'
+                pattern: '**/*'
+      stream:
+          - 'master':
+                branch: 'master'
+          - 'istanbul':
+                branch: 'istanbul'
