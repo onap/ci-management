@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "866f699a_ceba1adb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2022-03-11T23:15:50Z",
+      "side": 1,
+      "message": "Good practice: prefix the commit summary with: [CPS]",
+      "revId": "37f21070e1d4e104d8c8973f99e65738745edbca",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ccc8eaac_72db9795",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2022-03-11T23:15:50Z",
+      "side": 1,
+      "message": "From what I can see in dmi-plugin pom file, `docker.repository.push` variable is not needed here as it will not be used. dmi-plugin is using `docker.push.registry` that I think is provided by onap infra.\n\nSee https://github.com/onap/cps-ncmp-dmi-plugin/blob/master/pom.xml#L466",
+      "range": {
+        "startLine": 7,
+        "startChar": 52,
+        "endLine": 7,
+        "endChar": 77
+      },
+      "revId": "37f21070e1d4e104d8c8973f99e65738745edbca",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f51a5ef0_d0687e0c",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5658
+      },
+      "writtenOn": "2022-03-11T23:15:50Z",
+      "side": 1,
+      "message": "Same comment as above.",
+      "range": {
+        "startLine": 10,
+        "startChar": 52,
+        "endLine": 10,
+        "endChar": 77
+      },
+      "revId": "37f21070e1d4e104d8c8973f99e65738745edbca",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
