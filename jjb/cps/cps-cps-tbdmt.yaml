@@ -74,9 +74,30 @@
       sonar-mvn-goal: '{sonar_mvn_goal}'
       cron: '@daily'
       build-node: centos7-docker-8c-8g
-      project: cps/cps-tbdmt
-      project-name: cps-cps-tbdmt
+      project: 'cps/cps-tbdmt'
+      project-name: 'cps-cps-tbdmt'
       branch: 'master'
       mvn-settings: 'cps-cps-tbdmt-settings'
       mvn-goals: 'clean install'
       mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: cps-tbdmt-sonar-verify
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-qualitygate-wait: true
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    build-node: centos7-docker-8c-8g
+    project: 'cps/cps-tbdmt'
+    project-name: 'cps-cps-tbdmt'
+    branch: 'master'
+    mvn-settings: 'cps-cps-tbdmt-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
