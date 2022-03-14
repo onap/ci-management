@@ -54,7 +54,7 @@
           - 'docker-downloader':
                 tox-dir: 'build/download'
                 tox-envs: 'pytest'
-                pattern: '**/*'
+                pattern: 'build/download/**'
       stream:
           - 'master':
                 branch: 'master'
