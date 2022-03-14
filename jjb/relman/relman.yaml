@@ -1,0 +1,14 @@
+---
+- project:
+    name: relman-project-view
+    project-name: relman
+    views:
+      - project-view
+
+- project:
+    name: relman-info
+    project: relman
+    project-name: relman
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
