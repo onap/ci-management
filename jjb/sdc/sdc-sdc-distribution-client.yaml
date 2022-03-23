@@ -23,8 +23,8 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
           java-version: openjdk11
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
@@ -81,8 +81,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     java-version: openjdk11
 

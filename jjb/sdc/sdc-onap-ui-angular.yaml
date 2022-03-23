@@ -24,8 +24,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'sdc-onap-ui-angular-settings'
     files: '**'
     archive-artifacts: ''
