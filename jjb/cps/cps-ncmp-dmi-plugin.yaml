@@ -44,6 +44,9 @@
       - 'istanbul':
           branch: 'istanbul'
           cron: ''
+      - 'jakarta':
+          branch: 'jakarta'
+          cron: ''
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: '**'
     archive-artifacts: ''
