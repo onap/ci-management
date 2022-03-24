@@ -42,6 +42,9 @@
       - 'istanbul':
           branch: 'istanbul'
           cron: ''
+      - 'jakarta':
+          branch: 'jakarta'
+          cron: ''
     mvn-settings: cps-cps-temporal-settings
     files: '**'
     archive-artifacts: ''
