@@ -132,3 +132,22 @@
     trigger_jobs:
       - 'policy-api-{stream}-merge-java'
       - 'policy-docker-{stream}-merge-java'
+
+- project:
+    name: policy-clamp-project-csit
+    jobs:
+      - '{project-name}-{stream}-project-csit-verify-{functionality}'
+      - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-clamp'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech ajith.sreekumar@est.tech pd1248@att.com'
+    project: 'policy/docker'
+    stream:
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+    functionality:
+      - 'clamp'
+    trigger_jobs:
+      - 'policy-clamp-{stream}-merge-java'
+      - 'policy-docker-{stream}-merge-java'
