@@ -47,7 +47,7 @@
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
     cron: '@daily'
     mvn-params: '-f lcm/pom.xml'
-    build-node: centos7-redis-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'vfc/gvnfm/vnflcm'
     project-name: 'vfc-gvnfm-vnflcm-lcm'
     branch: 'master'
