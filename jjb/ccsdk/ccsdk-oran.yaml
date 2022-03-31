@@ -29,6 +29,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-oran-settings'
@@ -52,6 +54,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-oran-settings'

@@ -15,10 +15,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'ccsdk-distribution-settings'
     robot-options: ''
     branch: 'master'
@@ -37,10 +37,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'ccsdk-oran-settings'
     robot-options: ''
     branch: 'master'

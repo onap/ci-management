@@ -19,6 +19,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: "mvn36"
     mvn-settings: 'sdnc-northbound-settings'
@@ -68,6 +70,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'sdnc-northbound-settings'
     java-version: openjdk11
     mvn-version: 'mvn36'

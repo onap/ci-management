@@ -17,6 +17,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'sdnc-oam-settings'
     robot-options: ''
     branch: 'master'

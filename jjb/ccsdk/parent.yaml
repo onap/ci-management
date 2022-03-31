@@ -33,6 +33,8 @@
                 mvn-params: '-Drevision=3.0.0'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
@@ -56,6 +58,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: 'mvn36'
     mvn-settings: 'ccsdk-parent-settings'
