@@ -100,3 +100,23 @@
     build-node: centos7-builder-2c-1g
     project: cli
     branch: master
+
+- project:
+    name: cli-sonar-verify
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonar-mvn-goal: '{sonar_mvn_goal}'
+    build-node: ubuntu1804-docker-8c-8g
+    project: 'cli'
+    project-name: 'cli'
+    branch: 'master'
+    mvn-settings: 'cli-settings'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
