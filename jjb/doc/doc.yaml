@@ -6,22 +6,6 @@
       - project-view
 
 - project:
-    name: doc
-    project-name: 'doc'
-    python-version: python3
-    jobs:
-      - '{project-name}-{stream}-verify-rtd':
-          build-node: centos7-docker-8c-8g
-      - '{project-name}-{stream}-merge-rtd'
-
-    project: 'doc'
-    rtdproject: 'onap/58810/'
-    mvn-settings: 'doc-settings'
-    stream:
-      - frankfurt:
-          branch: 'frankfurt'
-
-- project:
     name: doc-info
     project-name: doc
     jobs:
