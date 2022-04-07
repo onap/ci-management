@@ -4,6 +4,7 @@
     project-name: sdc-sdc-tosca
     views:
       - project-view
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-tosca
@@ -29,6 +30,7 @@
     archive-artifacts: ''
     build-timeout: 60
     maven-version: 'mvn36'
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-tosca-sonar
@@ -48,6 +50,7 @@
     mvn-params: '-Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-tosca-clm
@@ -71,3 +74,4 @@
     build-node: centos7-builder-2c-1g
     project: sdc/sdc-tosca
     branch: master
+    java-version: openjdk11
