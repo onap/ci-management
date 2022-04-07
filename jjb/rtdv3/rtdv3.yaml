@@ -17,6 +17,9 @@
     tox-dir: "docs/"
     doc-dir: "_build/html"
     build-node: centos7-builder-2c-1g
+    # the jjb is very short and filtering docs falsy raises side effects in
+    # ONAP doc
+    gerrit_trigger_file_paths:
     # override the default to allow rechecking a patchset
     gerrit_verify_triggers:
       - patchset-created-event:
