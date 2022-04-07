@@ -41,5 +41,3 @@
     stream:
       - master:
           branch: '*'
-      - istanbul:
-          branch: 'istanbul'
