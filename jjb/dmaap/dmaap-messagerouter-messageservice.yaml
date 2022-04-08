@@ -95,8 +95,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     java-version: openjdk11
 

@@ -13,6 +13,7 @@
       - 'pnf-sw-upgrade':
           trigger_jobs:
     robot-options: ''
+    cron: ''
 
 - project:
     name: usecases-config-over-netconf
