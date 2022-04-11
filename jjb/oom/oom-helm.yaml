@@ -23,14 +23,15 @@
     stream:
       - "master":
           branch: "master"
+      - "jakarta":
+          branch: "jakarta"
       - "istanbul":
           branch: "istanbul"
-      - "honolulu":
-          branch: "honolulu"
+
 
     helm_bin:
       - helm3.5
-      - helm3.3
+      - helm3.6
 
     exclude: []
     subproject: []
@@ -41,17 +42,17 @@
       - "{project-name}-{stream}-verify-{helm_bin}":
           build_script: "{oom_build_script}"
           files: "**"
-          build-timeout: 600
+          build-timeout: 900
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
-          build-timeout: 600
+          build-timeout: 900
       - "{project-name}-{stream}-release-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
-          build-timeout: 600
+          build-timeout: 900
 
       # Below jobs disabled until future need.
       - "{project-name}-{subproject}-{stream}-verify-helm2":

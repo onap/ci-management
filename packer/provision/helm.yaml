@@ -6,10 +6,9 @@
   become_method: sudo
 
   vars:
-    kubectl_version: 1.15.11
-    helm_version: 2.16.6
-    helm3_3_version: 3.3.4
-    helm3_5_version: 3.5.1
+    kubectl_version: 1.19.11
+    helm3_6_version: 3.6.3
+    helm3_5_version: 3.5.2
     chartmuseum_version: 0.12.0
 
   tasks:
@@ -20,55 +19,37 @@
         mode: 0775
       become: yes
 
-    - name: 'Install Helm {{helm_version}}'
+    - name: 'Install Helm 3.6 {{helm3_6_version}}'
       block:
-        - name: 'Fetch tar.gz for {{helm_version}}'
-          get_url:
-            url: "http://storage.googleapis.com/kubernetes-helm/helm-v{{helm_version}}-linux-amd64.tar.gz"
-            dest: "/tmp/helm-v{{helm_version}}-linux-amd64.tar.gz"
-        - name: 'Unarchive {{helm_version}}'
-          unarchive:
-            src: "/tmp/helm-v{{helm_version}}-linux-amd64.tar.gz"
-            dest: /tmp
-            remote_src: true
-          become: yes
-        - name: 'Move {{helm_version}} bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/linux-amd64/helm /usr/local/bin/helm'
-          become: yes
-        - name: 'Check Helm {{helm_version}}'
-          command: 'which helm'
-
-    - name: 'Install Helm 3.3 {{helm3_3_version}}'
-      block:
-        - name: 'Create directory /tmp/helm3_3'
+        - name: 'Create directory /tmp/helm3_6'
           file:
-            path: /tmp/helm3_3
+            path: /tmp/helm3_6
             state: directory
-        - name: 'Fetch tar.gz for Helm 3.3'
+        - name: 'Fetch tar.gz for Helm 3.6'
           get_url:
-            url: "https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3_3
-        - name: 'Unarchive Helm 3.3'
+            url: "https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3_6
+        - name: 'Unarchive Helm 3.6'
           unarchive:
-            src: "/tmp/helm3_3/helm-v{{helm3_3_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3_3
+            src: "/tmp/helm3_6/helm-v{{helm3_6_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3_6
             remote_src: true
           become: yes
-        - name: 'Move Helm 3.3 bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3_3/linux-amd64/helm /usr/local/bin/helm3.3'
+        - name: 'Move Helm 3.6 bin to /usr/local/bin and set as executable'
+          command: 'mv /tmp/helm3_6/linux-amd64/helm /usr/local/bin/helm3.6'
           become: yes
-        - name: 'Check Helm 3.3'
-          command: 'which helm3.3'
+        - name: 'Check Helm 3.6'
+          command: 'which helm3.6'
         - name: 'Check kubectl {{kubectl_version}}'
           command: 'which kubectl'
 
-        - name: 'Install Helm 3.3'
+        - name: 'Install Helm 3.6'
           shell: |
-             echo "----> Installing helm 3.3"
-             wget 'https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz'
-             tar -xvf 'https://get.helm.sh/helm-v{{helm3_3_version}}-linux-amd64.tar.gz'
-             mv linux-amd64/helm /usr/local/bin/helm3.3
-             which helm3.3
+             echo "----> Installing helm 3.6"
+             wget 'https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz'
+             tar -xvf 'https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz'
+             mv linux-amd64/helm /usr/local/bin/helm3.6
+             which helm3.6
           become: true
 
     - name: 'Install Helm3.5 {{helm3_5_version}}'
