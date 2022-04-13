@@ -87,7 +87,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     build-node: centos7-docker-8c-8g
-    project: 'vnfsdk-refrepo'
+    project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'
     mvn-settings: 'vnfsdk-refrepo-settings'

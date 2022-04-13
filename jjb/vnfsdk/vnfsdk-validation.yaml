@@ -96,7 +96,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     build-node: centos7-docker-8c-8g
-    project: 'vnfsdk-validation'
+    project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'
     mvn-settings: 'vnfsdk-validation-settings'
