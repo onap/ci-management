@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "395ccf3b_9f679f52",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2022-04-14T14:21:21Z",
+      "side": 1,
+      "message": "LF-JIRA IT-23362 do not work\nIssue-ids are strings matching Issue-ID: ([A-Z][A-Z0-9]{1,9}-\\d+)\nSaw that old entries used this CIMAN-33 IT-$$$$$ syntax, which worked",
+      "parentUuid": "e5d23527_218cd233",
+      "range": {
+        "startLine": 9,
+        "startChar": 19,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "a2fda26ee60efb34bb95d145ec352c1222a3c249",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "98adbe07_bff10e39",
         "filename": "jenkins-config/managed-config-files/mavenSettings/oom-settings/serverCredentialMappings.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2022-04-14T08:34:53Z",
       "side": 1,
       "message": "Have you verified if this works?",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "a2fda26ee60efb34bb95d145ec352c1222a3c249",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8850d9c_1c5dd502",
+        "filename": "jenkins-config/managed-config-files/mavenSettings/oom-settings/serverCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2022-04-14T14:21:21Z",
+      "side": 1,
+      "message": "Have not tested it on sandbox,\nThe jenkins config for this job requires the oom-helm server-id to be available though.\n\n09:45:02.357 SERVER_ID\u003doom-helm\n09:45:02.357 \n09:45:02.357 [EnvInject] - Variables injected successfully.\n09:45:02.367 [oom-master-merge-helm] $ /bin/bash /tmp/jenkins5956762131875368456.sh\n09:45:02.385 ---\u003e oom-create-netrc.sh\n09:45:02.410 ERROR: Credential not found.",
+      "parentUuid": "98adbe07_bff10e39",
       "range": {
         "startLine": 19,
         "startChar": 1,
