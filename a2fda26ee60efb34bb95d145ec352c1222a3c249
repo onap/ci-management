@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5d23527_218cd233",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2022-04-14T08:34:53Z",
+      "side": 1,
+      "message": "Use entire URL or just \"LF-JIRA IT-23362\"",
+      "range": {
+        "startLine": 9,
+        "startChar": 19,
+        "endLine": 9,
+        "endChar": 27
+      },
+      "revId": "a2fda26ee60efb34bb95d145ec352c1222a3c249",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "98adbe07_bff10e39",
+        "filename": "jenkins-config/managed-config-files/mavenSettings/oom-settings/serverCredentialMappings.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2022-04-14T08:34:53Z",
+      "side": 1,
+      "message": "Have you verified if this works?",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 20,
+        "endChar": 30
+      },
+      "revId": "a2fda26ee60efb34bb95d145ec352c1222a3c249",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
