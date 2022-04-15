@@ -4,6 +4,7 @@
     project-name: sdc-sdc-workflow
     views:
       - project-view
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-workflow-designer
@@ -23,6 +24,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+    java-version: openjdk11
 
     project: 'sdc/sdc-workflow-designer'
     stream:
@@ -56,6 +58,7 @@
     mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch}'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m'
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-workflow-designer-clm
@@ -71,6 +74,7 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
+    java-version: openjdk11
 
 - project:
     name: sdc-sdc-workflow-designer-info
@@ -80,3 +84,4 @@
     build-node: centos7-builder-2c-1g
     project: sdc/sdc-workflow-designer
     branch: master
+    java-version: openjdk11
