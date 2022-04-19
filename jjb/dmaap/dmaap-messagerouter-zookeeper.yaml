@@ -23,30 +23,6 @@
     build-node: ubuntu1804-docker-8c-8g
 
 - project:
-    name: dmaap-zookeeper-maintenance
-    project-name: 'dmaap-zookeeper-maintenance'
-    jobs:
-      - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-    project: 'dmaap/zookeeper'
-    stream:
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
-    mvn-settings: 'dmaap-zookeeper-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: 'docker'
-    build-node: ubuntu1804-docker-8c-8g
-    cron: ''
-
-- project:
     name: dmaap-zookeeper-info
     project-name: dmaap-zookeeper
     jobs:
