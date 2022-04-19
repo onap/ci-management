@@ -36,10 +36,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/datarouter'
     stream:
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'dmaap-datarouter-settings'
     files: '**'
     archive-artifacts: ''

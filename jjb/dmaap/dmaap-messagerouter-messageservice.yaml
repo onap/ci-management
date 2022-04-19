@@ -38,8 +38,8 @@
           container-staging-registry: 'nexus3.onap.org:10003'
     project: 'dmaap/messagerouter/messageservice'
     stream:
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     java-version: openjdk11
     files: '**'
