@@ -19,24 +19,24 @@
         mode: 0775
       become: yes
 
-    - name: 'Install Helm 3.6 {{helm3_6_version}}'
+    - name: 'Install Helm3.6 {{helm3_6_version}}'
       block:
-        - name: 'Create directory /tmp/helm3_6'
+        - name: 'Create directory /tmp/helm3.6'
           file:
-            path: /tmp/helm3_6
+            path: /tmp/helm3.6
             state: directory
         - name: 'Fetch tar.gz for Helm 3.6'
           get_url:
             url: "https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3_6
+            dest: /tmp/helm3.6
         - name: 'Unarchive Helm 3.6'
           unarchive:
-            src: "/tmp/helm3_6/helm-v{{helm3_6_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3_6
+            src: "/tmp/helm3.6/helm-v{{helm3_6_version}}-linux-amd64.tar.gz"
+            dest: /tmp/helm3.6
             remote_src: true
           become: yes
         - name: 'Move Helm 3.6 bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3_6/linux-amd64/helm /usr/local/bin/helm3.6'
+          command: 'mv /tmp/helm3.6/linux-amd64/helm /usr/local/bin/helm3.6'
           become: yes
         - name: 'Check Helm 3.6'
           command: 'which helm3.6'
@@ -45,7 +45,7 @@
 
         - name: 'Install Helm 3.6'
           shell: |
-             echo "----> Installing helm 3.6"
+             echo "----> Installing helm3.6"
              wget 'https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz'
              tar -xvf 'https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz'
              mv linux-amd64/helm /usr/local/bin/helm3.6
