@@ -1,7 +1,7 @@
 ---
 - project:
-    name: dmaap-messagerouter-messageservice-java-11
-    project-name: 'dmaap-messagerouter-messageservice-java-11'
+    name: dmaap-messagerouter-messageservice-java
+    project-name: 'dmaap-messagerouter-messageservice-java'
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
@@ -17,36 +17,14 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'dmaap-messagerouter-messageservice-settings'
     java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: 'docker'
-
-- project:
-    name: dmaap-messagerouter-messageservice-maintenance
-    project-name: 'dmaap-messagerouter-messageservice-maintenance'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-    project: 'dmaap/messagerouter/messageservice'
-    stream:
-      - 'istanbul':
-          branch: 'istanbul'
-    mvn-settings: 'dmaap-messagerouter-messageservice-settings'
-    java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
-    mvn-profile: 'docker'
-    cron: ''
 
 - project:
     name: dmaap-csit
