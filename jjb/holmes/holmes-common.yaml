@@ -29,6 +29,8 @@
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'holmes-common-settings'
     files: '**'
     archive-artifacts: ''

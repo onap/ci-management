@@ -27,6 +27,8 @@
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'holmes-engine-management-settings'
     files: '**'
     archive-artifacts: ''
