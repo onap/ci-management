@@ -14,11 +14,12 @@
       set -e -o pipefail
       cd kubernetes/
       make HELM_BIN=$HELM_BIN all
-    subproject_build_script: |
+    oom_build_script_skip_lint: |
       #!/bin/bash
+      source helm.prop
+      set -e -o pipefail
       cd kubernetes/
-      make HELM_BIN=$HELM_BIN common
-      make HELM_BIN=$HELM_BIN {subproject}
+      make HELM_BIN=$HELM_BIN SKIP_LINT=TRUE all
 
     stream:
       - "master":
@@ -30,7 +31,6 @@
 
 
     helm_bin:
-      - helm3.5
       - helm3.6
 
     exclude: []
@@ -49,18 +49,7 @@
           files: "**"
           build-timeout: 900
       - "{project-name}-{stream}-release-helm":
-          build_script: "{oom_build_script}"
+          build_script: "{oom_build_script_skip_lint}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "**"
           build-timeout: 900
-
-      # Below jobs disabled until future need.
-      - "{project-name}-{subproject}-{stream}-verify-helm2":
-          build_script: "{subproject_build_script}"
-      - "{project-name}-{subproject}-{stream}-verify-helm":
-          build_script: "{subproject_build_script}"
-      - "{project-name}-{subproject}-{stream}-merge-helm":
-          build_script: "{subproject_build_script}"
-      - "{project-name}-{stream}-update-helm-weekly":
-          build_script: "{oom_build_script}"
-          files: "**"
