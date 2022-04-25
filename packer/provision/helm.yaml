@@ -8,7 +8,6 @@
   vars:
     kubectl_version: 1.19.11
     helm3_6_version: 3.6.3
-    helm3_5_version: 3.5.2
     chartmuseum_version: 0.12.0
 
   tasks:
@@ -50,39 +49,6 @@
              tar -xvf 'https://get.helm.sh/helm-v{{helm3_6_version}}-linux-amd64.tar.gz'
              mv linux-amd64/helm /usr/local/bin/helm3.6
              which helm3.6
-          become: true
-
-    - name: 'Install Helm3.5 {{helm3_5_version}}'
-      block:
-        - name: 'Create directory /tmp/helm3.5'
-          file:
-            path: /tmp/helm3.5
-            state: directory
-        - name: 'Fetch tar.gz for Helm 3.5'
-          get_url:
-            url: "https://get.helm.sh/helm-v{{helm3_5_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3.5
-        - name: 'Unarchive Helm 3.5'
-          unarchive:
-            src: "/tmp/helm3.5/helm-v{{helm3_5_version}}-linux-amd64.tar.gz"
-            dest: /tmp/helm3.5
-            remote_src: true
-          become: yes
-        - name: 'Move Helm 3.5 bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3.5/linux-amd64/helm /usr/local/bin/helm3.5'
-          become: yes
-        - name: 'Check Helm 3.5'
-          command: 'which helm3.5'
-        - name: 'Check kubectl {{kubectl_version}}'
-          command: 'which kubectl'
-
-        - name: 'Install Helm 3.5'
-          shell: |
-             echo "----> Installing helm3.5"
-             wget 'https://get.helm.sh/helm-v{{helm3_5_version}}-linux-amd64.tar.gz'
-             tar -xvf 'https://get.helm.sh/helm-v{{helm3_5_version}}-linux-amd64.tar.gz'
-             mv linux-amd64/helm /usr/local/bin/helm3.5
-             which helm3.5
           become: true
 
     - name: 'Install ChartMuseum {{chartmuseum_version}}'

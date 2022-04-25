@@ -36,8 +36,6 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'frankfurt':
-                branch: 'frankfurt'
 
 
 - project:
