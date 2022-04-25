@@ -22,7 +22,7 @@ for chart in "${helm_charts[@]}"; do
       ;;
     'release')
       echo "  * release build, pushing to https://nexus3.onap.org/repository/onap-helm-release/"
-      curl -n --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-release/"
+      curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-release/"
         ;;
     *)
       echo "You must set BUILD_TYPE to one of (snapshot, staging, release)."
