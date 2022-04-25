@@ -8,8 +8,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     # apply to all jobs
     project: 'dcaegen2/collectors/datafile'

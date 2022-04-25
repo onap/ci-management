@@ -22,10 +22,10 @@
       stream:
           - 'master':
               branch: 'master'
-          - 'honolulu':
-              branch: 'honolulu'
           - 'istanbul':
               branch: 'istanbul'
+          - 'jakarta':
+              branch: 'jakarta'
       mvn-settings: 'dcaegen2-platform-ves-openapi-manager-settings'
       # due to a strange macro / variable translation problem this needs
       # to be passed as a string block to properly get the properties

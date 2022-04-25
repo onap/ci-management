@@ -8,8 +8,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     # apply to all jobs
     java-version: openjdk11
     project: 'dcaegen2/collectors/hv-ves'

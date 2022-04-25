@@ -17,8 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
       - 'istanbul':
           branch: 'istanbul'
     mvn-settings: 'dcaegen2-settings'

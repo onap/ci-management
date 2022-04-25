@@ -10,8 +10,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:

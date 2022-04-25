@@ -15,8 +15,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     maven-version: 'mvn35'
     mvn-settings: 'dcaegen2-services-settings'
@@ -50,8 +50,8 @@
          branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
@@ -84,8 +84,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
@@ -118,8 +118,8 @@
          branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
