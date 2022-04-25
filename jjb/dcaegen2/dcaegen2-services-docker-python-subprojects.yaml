@@ -109,6 +109,8 @@
           branch: master
       - istanbul:
           branch: istanbul
+      - jakarta:
+          branch: jakarta
     views:
       - project-view:
           project-name: dcaegen2-services-pmsh

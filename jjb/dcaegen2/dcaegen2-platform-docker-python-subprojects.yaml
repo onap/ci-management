@@ -97,8 +97,8 @@
           branch: master
       - istanbul:
           branch: istanbul
-      - honolulu:
-          branch: honolulu
+      - jakarta:
+          branch: jakarta
 
     views:
       - project-view:

@@ -25,8 +25,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-analytics-tca-gen2-settings'
     mvn-version: 'mvn35'

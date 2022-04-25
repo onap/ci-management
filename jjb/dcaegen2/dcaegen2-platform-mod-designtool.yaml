@@ -17,8 +17,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
-      - 'honolulu':
-          branch: 'honolulu'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: dcaegen2-platform-settings
     files: '**'
     archive-artifacts: ''
