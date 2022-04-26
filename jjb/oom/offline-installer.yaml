@@ -8,8 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
 
     jobs:
       - '{project-name}-{stream}-review':
@@ -39,8 +39,8 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'istanbul':
-                branch: 'istanbul'
+          - 'jakarta':
+                branch: 'jakarta'
 
 - project:
       name: offline-installer-pytest
@@ -58,5 +58,5 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'istanbul':
-                branch: 'istanbul'
+          - 'jakarta':
+                branch: 'jakarta'

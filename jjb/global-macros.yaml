@@ -370,8 +370,9 @@
           trigger-on:
             - patchset-created-event:
                 exclude-drafts: 'false'
-                exclude-trivial-rebase: 'false'
                 exclude-no-code-change: 'false'
+                exclude-trivial-rebase: 'true'
+                exclude-wip: 'true'
             - draft-published-event
             - comment-added-contains-event:
                 comment-contains-value: '^Patch Set\s+\d+:\s+(recheck|reverify|verify-helm)\s*$'
