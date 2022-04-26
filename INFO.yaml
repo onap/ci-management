@@ -61,5 +61,10 @@ committers:
       company: 'samsung'
       id: 'kaihlavi'
       timezone: 'Europe/Helsinki'
+    - name: 'Kevin Sandi'
+      email: 'ksandi@contractor.linuxfoundation.org'
+      company: 'LF'
+      id: 'kevin.sandi'
+      timezone: 'America/Costa_Rica'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
