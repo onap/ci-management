@@ -115,7 +115,7 @@
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
       - oom-create-netrc:
@@ -164,7 +164,7 @@
           properties-content: 'HELM_MODULE={helm-module}'
       - shell: !include-raw-escape: shell/apply-submodule-patch-oom.sh
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
 
@@ -207,7 +207,7 @@
           global-settings-file: 'global-settings'
           settings-file: '{mvn-settings}'
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
       - oom-create-netrc:
@@ -252,7 +252,7 @@
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
       - oom-create-netrc:
@@ -273,7 +273,7 @@
     builders:
       - lf-infra-pre-build
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - shell: '{post_build_script}'
@@ -288,7 +288,7 @@
     builders:
       - lf-infra-pre-build
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - inject:
@@ -319,7 +319,7 @@
     builders:
       - lf-infra-pre-build
       - shell: |
-          echo "export HELM_BIN=helm3.5" > helm.prop
+          echo "export HELM_BIN=helm3.6" > helm.prop
       - shell: '{pre_build_script}'
       - shell: '{build_script}'
       - shell: '{post_build_script}'
