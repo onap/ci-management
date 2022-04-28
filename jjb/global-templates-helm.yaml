@@ -210,7 +210,7 @@
           echo "export HELM_BIN=helm3.5" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
-      - lf-infra-create-netrc:
+      - oom-create-netrc:
           server-id: oom-helm
       - inject:
           properties-content: |
@@ -255,7 +255,7 @@
           echo "export HELM_BIN=helm3.5" > helm.prop
       - shell: '{obj:pre_build_script}'
       - shell: '{obj:build_script}'
-      - lf-infra-create-netrc:
+      - oom-create-netrc:
           server-id: oom-helm
       - inject:
           properties-content: |
