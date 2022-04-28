@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Thu, 28 Apr 2022 14:37:12 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/128946
+Project: ci-management
+Branch: refs/heads/master
