@@ -26,6 +26,8 @@
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'policy-models-settings'
     java-version: openjdk11
     files: '**'
@@ -63,6 +65,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'policy-models-settings'
     java-version: openjdk11
 
