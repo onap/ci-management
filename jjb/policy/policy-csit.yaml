@@ -11,6 +11,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'distribution'
     trigger_jobs:
@@ -32,6 +36,8 @@
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'xacml-pdp'
     trigger_jobs:
@@ -51,6 +57,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'drools-applications'
     trigger_jobs:
@@ -70,6 +80,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'drools-pdp'
     trigger_jobs:
@@ -89,6 +103,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'apex-pdp'
     trigger_jobs:
@@ -108,6 +126,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'pap'
     trigger_jobs:
@@ -127,6 +149,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'api'
     trigger_jobs:
@@ -146,6 +172,10 @@
           branch: 'master'
       - 'honolulu':
           branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     functionality:
       - 'clamp'
     trigger_jobs:

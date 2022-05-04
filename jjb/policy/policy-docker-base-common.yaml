@@ -28,6 +28,8 @@
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'policy-docker-settings'
     files: '**'
     archive-artifacts: ''
@@ -45,6 +47,8 @@
           branch: 'master'
       - 'istanbul':
           branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'policy-docker-settings'
 
 - project:
