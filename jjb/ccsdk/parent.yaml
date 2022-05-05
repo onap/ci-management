@@ -31,6 +31,8 @@
                 mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0'
             - '{project-name}-gerrit-release-jobs':
                 mvn-params: '-Drevision=3.0.0'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -56,6 +58,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
