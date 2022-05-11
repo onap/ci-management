@@ -7,8 +7,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'optf-osdf-settings'
     subproject:
       - 'osdf':
@@ -67,8 +67,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'optf-osdf-settings'
 
 - project:
