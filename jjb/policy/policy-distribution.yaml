@@ -26,9 +26,7 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
-      - 'honolulu':
+	  - 'honolulu':
           branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
