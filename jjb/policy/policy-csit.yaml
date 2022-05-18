@@ -9,8 +9,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -32,8 +30,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -55,8 +51,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -78,8 +72,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -101,8 +93,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -124,8 +114,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -147,8 +135,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
@@ -170,8 +156,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
       - 'istanbul':
           branch: 'istanbul'
       - 'jakarta':
