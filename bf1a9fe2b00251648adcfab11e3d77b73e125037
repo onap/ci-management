@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7967497_03d92a3b",
+        "filename": "jjb/policy/policy-apex-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c068a667_1801da3b",
+        "filename": "jjb/policy/policy-api.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93cb0eec_fa436ff7",
+        "filename": "jjb/policy/policy-clamp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4138c76b_ebe96961",
+        "filename": "jjb/policy/policy-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48083b60_4a492fa5",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not change this file.",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b67b47d0_9b33628f",
+        "filename": "jjb/policy/policy-distribution.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "288998cb_9677ea75",
+        "filename": "jjb/policy/policy-docker-base-common.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f12239b_b9ea4d90",
+        "filename": "jjb/policy/policy-drools-applications.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2042db39_9972ab2c",
+        "filename": "jjb/policy/policy-drools-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f9495d8_79338a85",
+        "filename": "jjb/policy/policy-models.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2fb95fe7_b7e43df0",
+        "filename": "jjb/policy/policy-pap.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "43dc08a2_a41e9196",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4f8bda40_2cab727a",
+        "filename": "jjb/policy/policy-xacml-pdp.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2787
+      },
+      "writtenOn": "2022-05-18T16:57:26Z",
+      "side": 0,
+      "message": "Do not remove Honolulu",
+      "revId": "bf1a9fe2b00251648adcfab11e3d77b73e125037",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
