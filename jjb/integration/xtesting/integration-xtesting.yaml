@@ -41,8 +41,8 @@
                 branch: 'master'
           - 'istanbul':
                 branch: 'istanbul'
-          - 'honolulu':
-                branch: 'honolulu'
+          - 'jakarta':
+                branch: 'jakarta'
 
 - project:
     name: integration-xtesting-release
@@ -123,6 +123,9 @@
             files: ''
       - 'istanbul':
             branch: 'istanbul'
+            files: ''
+      - 'jakarta':
+            branch: 'jakarta'
             files: ''
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
