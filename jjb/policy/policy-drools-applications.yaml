@@ -7,8 +7,7 @@
       - '{project-name}-{stream}-merge-java':
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
-          mvn-params: "-P docker"
-          java-opts: '-Djava.net.preferIPv4Stack=true'
+          mvn-params: "-P docker -Djava.net.preferIPv4Stack=true"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
@@ -56,6 +55,7 @@
     branch: 'master'
     mvn-settings: 'policy-drools-applications-settings'
     java-version: openjdk11
+    java-opts: '-Djava.net.preferIPv4Stack=true'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
 
@@ -76,6 +76,7 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'policy-drools-applications-settings'
+    mvn-params: "-Djava.net.preferIPv4Stack=true"
     java-version: openjdk11
     build-node: ubuntu1804-docker-8c-8g
 
