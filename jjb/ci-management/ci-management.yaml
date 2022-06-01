@@ -30,7 +30,7 @@
     branch: 'master'
     build-timeout: '60'
     build-node: 'centos7-builder-2c-1g'
-    jjb-version: 3.5.0
+    jjb-version: 4.1.0
     # configure the gerrit-jjb-verify job
     build-node-label-check: true
     build-node-label-list: ""
