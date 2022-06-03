@@ -3,6 +3,8 @@
     name: dcaegen2-deployments
     project-name: 'dcaegen2-deployments'
     jobs:
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'

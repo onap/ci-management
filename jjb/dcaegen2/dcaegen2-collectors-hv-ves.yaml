@@ -20,9 +20,10 @@
     archive-artifacts: 'hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html'
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-verify-java':
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
           mvn-goals: 'clean install'
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-merge:
           mvn-goals: 'clean deploy'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g

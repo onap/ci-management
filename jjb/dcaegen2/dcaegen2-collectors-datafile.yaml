@@ -20,6 +20,11 @@
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
     jobs:
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+          mvn-goals: 'clean install'
+      - gerrit-maven-merge:
+          mvn-goals: 'clean deploy'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -31,10 +36,6 @@
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImageTag'
-      - '{project-name}-{stream}-verify-java':
-          mvn-goals: 'clean install'
-      - '{project-name}-{stream}-merge-java':
-          mvn-goals: 'clean deploy'
 
 - project:
     name: dcaegen2-collectors-datafile-sonar

@@ -3,8 +3,9 @@
     name: dcaegen2-analytics-tca-gen2
     # apply to all jobs
     jobs:
-      - '{project-name}-{stream}-verify-java':
-      - '{project-name}-{stream}-merge-java':
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge:
           mvn-goals: 'clean install'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g

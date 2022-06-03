@@ -20,10 +20,11 @@
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-verify-java':
-        mvn-goals: 'clean install docker:build'
-      - '{project-name}-{stream}-merge-java':
-        mvn-goals: 'clean deploy'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+          mvn-goals: 'clean install docker:build'
+      - gerrit-maven-merge:
+          mvn-goals: 'clean deploy'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
