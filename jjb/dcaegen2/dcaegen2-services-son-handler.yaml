@@ -3,8 +3,9 @@
     name: dcaegen2-services-son-handler
     project-name: 'dcaegen2-services-son-handler'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -16,7 +17,6 @@
           mvn-goals: 'clean package docker:build -DpushImageTag'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'dcaegen2/services/son-handler'
     stream:
       - 'master':
@@ -27,6 +27,8 @@
           branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-son-handler-settings'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'

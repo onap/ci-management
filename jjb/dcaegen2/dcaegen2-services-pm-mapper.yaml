@@ -14,16 +14,19 @@
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-      - '{project-name}-{stream}-verify-java':
-        mvn-goals: 'clean install docker:build'
-      - '{project-name}-{stream}-merge-java':
-        mvn-goals: 'clean deploy'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+          mvn-goals: 'clean install docker:build'
+      - gerrit-maven-merge:
+          mvn-goals: 'clean deploy'
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g

@@ -5,10 +5,11 @@
     python-version: python3
 
     jobs:
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - '{project-name}-{stream}-release-version-java-daily'
-
     project: 'dcaegen2/utils'
     stream:
       - 'master':
@@ -18,6 +19,8 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'dcaegen2-utils-settings'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
     # correctly defined in the job
