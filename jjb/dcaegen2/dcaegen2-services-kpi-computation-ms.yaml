@@ -4,8 +4,9 @@
     project-name: 'dcaegen2-services'
     project: 'dcaegen2/services'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
     subproject:
       - 'kpi-computation-ms':
           pom: 'components/kpi-computation-ms/pom.xml'
@@ -22,6 +23,13 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
+    container-public-registry: 'nexus3.onap.org:10001'
+    container-staging-registry: 'nexus3.onap.org:10003'
+    mvn-goals: 'clean package docker:build'
+    mvn-params: '-f components/kpi-computation-ms/pom.xml'
+    pattern: 'components/kpi-computation-ms/**'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     maven-deploy-properties: |
       deployAtEnd=true
 
