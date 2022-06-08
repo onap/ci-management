@@ -4,8 +4,9 @@
     project-name: 'dcaegen2-collectors-restconf'
     java-version: openjdk11
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos7-docker-8c-8g
@@ -17,7 +18,6 @@
           mvn-goals: 'clean package docker:build -DpushImageTag'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'dcaegen2/collectors/restconf'
     stream:
       - 'master':
@@ -26,6 +26,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     mvn-settings: 'dcaegen2-collectors-restconf-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
