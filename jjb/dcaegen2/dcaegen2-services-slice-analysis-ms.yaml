@@ -1,15 +1,12 @@
 ---
 - project:
     name: dcaegen2-services-slice-analysis-ms-verify
-    project-name: 'dcaegen2-services'
+    project-name: 'dcaegen2-services-slice-analysis-ms'
     project: 'dcaegen2/services'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    subproject:
-      - 'slice-analysis-ms':
-          pom: 'components/slice-analysis-ms/pom.xml'
-          pattern: 'components/slice-analysis-ms/**'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
     stream:
       - 'master':
           branch: 'master'
@@ -19,6 +16,12 @@
           branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
+    container-public-registry: 'nexus3.onap.org:10001'
+    container-staging-registry: 'nexus3.onap.org:10003'
+    mvn-params: '-f components/slice-analysis-ms/pom.xml'
+    pattern: 'components/slice-analysis-ms/**'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
