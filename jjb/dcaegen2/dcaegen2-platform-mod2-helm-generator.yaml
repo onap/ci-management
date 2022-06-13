@@ -1,26 +1,19 @@
 ---
 - project:
     name: dcaegen2-platform-mod2-helm-generator
-    project-name: dcaegen2-platform-mod2
+    project-name: dcaegen2-platform-mod2-helm-generator
     # git repo
     project: dcaegen2/platform
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java':
-          mvn-goals: 'clean install'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
       - gerrit-maven-stage:
-          project-name: dcaegen2-platform-mod2-helm-generator
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           version-properties-file: 'mod2/helm-generator/version.properties'
           mvn-pom: 'mod2/helm-generator/pom.xml'
-          mvn-params: '-f mod2/helm-generator/pom.xml'
-          pattern: 'mod2/helm-generator/**'
-    subproject:
-      - helm-generator:
-          pom: 'mod2/helm-generator/pom.xml'
-          pattern: 'mod2/helm-generator/**'
     stream:
       - 'master':
           branch: 'master'
@@ -28,6 +21,12 @@
           branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
+    container-public-registry: 'nexus3.onap.org:10001'
+    container-staging-registry: 'nexus3.onap.org:10003'
+    mvn-params: '-f mod2/helm-generator/pom.xml'
+    pattern: 'mod2/helm-generator/**'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     maven-version: 'mvn35'
     maven-deploy-properties: |
       deployAtEnd=true
