@@ -1,15 +1,12 @@
 ---
 - project:
-    name: dcaegen2-services-datalake-handler
+    name: dcaegen2-services-datalake-handler-verify-merge
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-datalake-handler'
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-    subproject:
-      - 'datalake-handler':
-          pom: 'components/datalake-handler/pom.xml'
-          pattern: 'components/datalake-handler/**'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
     stream:
       - 'master':
           branch: 'master'
@@ -20,6 +17,12 @@
     java-version: openjdk11
     maven-version: 'mvn35'
     mvn-settings: 'dcaegen2-services-settings'
+    container-public-registry: 'nexus3.onap.org:10001'
+    container-staging-registry: 'nexus3.onap.org:10003'
+    mvn-params: '-f components/datalake-handler/pom.xml'
+    pattern: 'components/datalake-handler/**'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'

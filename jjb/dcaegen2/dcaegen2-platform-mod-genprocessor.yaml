@@ -1,17 +1,13 @@
 ---
 - project:
     name: dcaegen2-platform-mod-genprocessor
-    project-name: dcaegen2-platform-mod
+    project-name: dcaegen2-platform-mod-genprocessor
     # git repo
     project: dcaegen2/platform
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java':
-          mvn-goals: 'clean install'
-    subproject:
-      - genprocessor:
-          pom: 'mod/genprocessor/pom.xml'
-          pattern: 'mod/genprocessor/**'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
     stream:
       - 'master':
           branch: 'master'
@@ -20,6 +16,13 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: dcaegen2-platform-settings
+    container-public-registry: 'nexus3.onap.org:10001'
+    container-staging-registry: 'nexus3.onap.org:10003'
+    mvn-goals: 'clean package install'
+    mvn-params: '-f mod/genprocessor/pom.xml'
+    pattern: 'mod/genprocessor/**'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-docker-8c-8g
