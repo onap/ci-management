@@ -3,12 +3,11 @@
     name: dcaegen2-services-heartbeat
     project-name: 'dcaegen2-services-heartbeat'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - '{project-name}-python-jobs':
+               pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - '{project-name}-{stream}-release-version-java-daily'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
-
     project: 'dcaegen2/services/heartbeat'
     stream:
       - 'master':
