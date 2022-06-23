@@ -31,7 +31,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: "mvn36"
+    mvn-version: "mvn38"
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
     archive-artifacts: ''
@@ -75,7 +75,7 @@
           branch: 'jakarta'
     mvn-settings: 'sdnc-oam-settings'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
 
 - project:
     name: sdnc-oam-info

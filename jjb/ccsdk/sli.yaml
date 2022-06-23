@@ -25,7 +25,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-sli-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -53,7 +53,7 @@
     project-name: 'ccsdk-sli'
     branch: 'master'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-sli-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -73,7 +73,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-sli-settings'
     build-node: centos7-builder-4c-4g
 
@@ -92,7 +92,7 @@
     jobs:
       - gerrit-whitesource-scan
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-sli-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

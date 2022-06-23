@@ -33,7 +33,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
     archive-artifacts: ''
@@ -76,7 +76,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: centos7-docker-8c-8g
 
@@ -98,7 +98,7 @@
       - gerrit-whitesource-scan:
           java-opts: '-Xmx2048m'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-distribution-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

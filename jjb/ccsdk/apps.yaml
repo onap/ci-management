@@ -37,7 +37,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-apps-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -65,7 +65,7 @@
     project-name: 'ccsdk-apps'
     branch: 'master'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -85,7 +85,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-apps-settings'
     build-node: ubuntu1804-builder-4c-4g
 
@@ -121,7 +121,7 @@
     jobs:
       - gerrit-whitesource-scan
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-apps-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

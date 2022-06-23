@@ -31,7 +31,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -70,7 +70,7 @@
       - 'frankfurt':
           branch: 'frankfurt'
     java-version: openjdk8
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -98,7 +98,7 @@
     project-name: 'ccsdk-cds'
     branch: 'master'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
@@ -118,7 +118,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     build-node: centos7-builder-4c-4g
 
@@ -137,7 +137,7 @@
     jobs:
       - gerrit-whitesource-scan
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true

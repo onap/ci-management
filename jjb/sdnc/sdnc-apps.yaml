@@ -41,7 +41,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version : "mvn36"
+    mvn-version : "mvn38"
     mvn-settings: 'sdnc-apps-settings'
 
     # due to a strange macro / variable translation problem this needs to be
@@ -51,7 +51,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    maven-version: "mvn36"
+    maven-version: "mvn38"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -71,11 +71,11 @@
     project-name: 'sdnc-apps'
     branch: 'master'
     java-version: openjdk11
-    mvn-version : "mvn36"
+    mvn-version : "mvn38"
     mvn-settings: 'sdnc-apps-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    maven-version: "mvn36"
+    maven-version: "mvn38"
 
 #
 #- project:
@@ -111,7 +111,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version : "mvn36"
+    mvn-version : "mvn38"
     mvn-settings: 'sdnc-apps-settings'
 
 - project:

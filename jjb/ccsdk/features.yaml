@@ -25,7 +25,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -54,7 +54,7 @@
     project-name: 'ccsdk-features'
     branch: 'master'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
@@ -74,7 +74,7 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
     build-node: centos7-builder-4c-4g
@@ -95,7 +95,7 @@
     jobs:
       - gerrit-whitesource-scan
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     wss-product-name: ccsdk
     mvn-clean-install: true
