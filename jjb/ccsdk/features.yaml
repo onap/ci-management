@@ -13,6 +13,7 @@
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
+          sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
 

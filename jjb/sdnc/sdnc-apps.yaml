@@ -22,6 +22,7 @@
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
+          sbom-generator: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'

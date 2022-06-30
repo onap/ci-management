@@ -13,6 +13,7 @@
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
+          sbom-generator: true
       - gerrit-maven-docker-stage:
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
