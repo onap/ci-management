@@ -15,6 +15,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          sbom-generator: true
       - gerrit-maven-docker-stage:
           mvn-params: '-P docker -Dmaven.test.skip=true'
           build-node: ubuntu1804-docker-8c-8g

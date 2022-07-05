@@ -15,6 +15,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     project: 'aai/logging-service'

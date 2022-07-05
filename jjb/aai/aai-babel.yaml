@@ -16,6 +16,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          sbom-generator: true
       - gerrit-maven-docker-stage:
           mvn-params: '-P docker -B -Dmaven.test.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
           build-node: ubuntu1804-docker-8c-8g
