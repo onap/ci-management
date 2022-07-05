@@ -1,0 +1,15 @@
+---
+- project:
+    name: usecase-ui-intent-analysis-project-view
+    project-name: usecase-ui-intent-analysis
+    views:
+      - project-view
+
+- project:
+    name: usecase-ui-intent-analysis-info
+    project: usecase-ui/intent-analysis
+    project-name: usecase-ui-intent-analysis
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
