@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-pipelines-chained-ci-project-view
+    project-name: integration-pipelines-chained-ci
+    views:
+      - project-view
+
+- project:
+    name: integration-pipelines-chained-ci-info
+    project: integration/pipelines/chained-ci
+    project-name: integration-pipelines-chained-ci
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
