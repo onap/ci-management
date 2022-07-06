@@ -6,7 +6,7 @@
   become_method: sudo
   vars:
     apt_file: /etc/apt/sources.list.d/google-chrome.list
-    docker_compose_version: 1.17.1
+    docker_compose_version: 1.29.2
     glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
     glide_version: v0.13.1
     golang_version: 1.9.1
