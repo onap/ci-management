@@ -17,6 +17,9 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
+    mvn-settings: 'policy-docker-settings'
+    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    java-version: openjdk11
 
     project: 'policy/docker'
     stream:
@@ -29,6 +32,8 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'policy-docker-settings'
+    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    java-version: openjdk11
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
@@ -50,6 +55,8 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'policy-docker-settings'
+    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    java-version: openjdk11
 
 - project:
     name: policy-docker-info
