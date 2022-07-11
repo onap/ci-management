@@ -233,26 +233,15 @@
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
-    - name: Clone rebar3
-      git:
-        repo: 'https://github.com/erlang/rebar3.git'
-        dest: /tmp/rebar3
-        version: v3.13
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Install rebar3 to bin
-      copy:
-        src: /tmp/rebar3/rebar3
-        dest: /usr/bin/rebar3
-        mode: 0755
-        remote_src: true
+    - name: 'Download latest rebar3 bin'
+      command: curl -o /usr/bin/rebar3 -L "https://s3.amazonaws.com/rebar3/rebar3"
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
-    - name: Remove unused rebar3 source
-      file:
-        path: /tmp/rebar3
-        state: absent
+    - file:
+        path: /usr/bin/rebar3
+        mode: "+x"
+      become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
     - name: Download geckodriver
