@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6edd8628_c68d52d9",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-designtool.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-07-15T16:59:00Z",
+      "side": 1,
+      "message": "Can you please remove these empty spaces?",
+      "range": {
+        "startLine": 25,
+        "startChar": 36,
+        "endLine": 25,
+        "endChar": 40
+      },
+      "revId": "e4408adad1950a50a0d1b633910a2bb0e46ab31e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
