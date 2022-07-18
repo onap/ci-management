@@ -8,6 +8,13 @@
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - gerrit-maven-merge
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          sbom-generator: true
+          sbom-path: 'mod/runtimeapi/'
+          maven-versions-plugin: true
+          version-properties-file: 'mod/genprocessor/version.properties'
+          mvn-pom: 'mod/genprocessor/pom.xml' 
     stream:
       - 'master':
           branch: 'master'
