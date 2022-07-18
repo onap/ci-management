@@ -22,6 +22,30 @@
       "revId": "1c4c35c51015bc3ce0d282bd0748bb5097f5dc79",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4c936f03_80bb78b3",
+        "filename": "jjb/dcaegen2/dcaegen2-platform-mod-genprocessor.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2022-07-18T16:05:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b1cffef6_83d6c29d",
+      "range": {
+        "startLine": 17,
+        "startChar": 45,
+        "endLine": 17,
+        "endChar": 46
+      },
+      "revId": "1c4c35c51015bc3ce0d282bd0748bb5097f5dc79",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
