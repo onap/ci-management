@@ -36,6 +36,8 @@
     jobs:
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true
+          sbom-path: 'components/datalake-handler/'
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'components/datalake-handler/pom.xml'
@@ -69,6 +71,8 @@
     project-name: 'dcaegen2-services-datalake-handler-admin-ui'
     jobs:
       - gerrit-maven-stage:
+          sbom-generator: true
+          sbom-path: 'components/datalake-handler/'
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
@@ -103,6 +107,8 @@
     project-name: 'dcaegen2-services-datalake-handler-des'
     jobs:
       - gerrit-maven-stage:
+          sbom-generator: true 
+          sbom-path: 'components/datalake-handler/'
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true

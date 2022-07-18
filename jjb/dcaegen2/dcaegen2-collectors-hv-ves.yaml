@@ -31,6 +31,7 @@
           build-node: centos7-docker-8c-8g
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true 
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           mvn-goals: 'clean deploy -Ddocker.skip'

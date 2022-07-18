@@ -35,6 +35,8 @@
     jobs:
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true
+          sbom-path: 'components/slice-analysis-ms/'
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           mvn-pom: 'components/slice-analysis-ms/pom.xml'
