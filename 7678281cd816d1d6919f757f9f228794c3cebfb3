@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b88a28f_4846db6c",
+        "filename": "jjb/dcaegen2/dcaegen2-services-datalake-handler.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-07-18T16:15:47Z",
+      "side": 1,
+      "message": "This needs to be fixed too please",
+      "range": {
+        "startLine": 110,
+        "startChar": 30,
+        "endLine": 110,
+        "endChar": 31
+      },
+      "revId": "7678281cd816d1d6919f757f9f228794c3cebfb3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
