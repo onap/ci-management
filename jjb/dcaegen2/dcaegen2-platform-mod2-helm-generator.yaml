@@ -10,6 +10,8 @@
       - gerrit-maven-merge
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true
+          sbom-path: 'mod2/helm-generator/'
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           version-properties-file: 'mod2/helm-generator/version.properties'

@@ -16,6 +16,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
     project: 'dcaegen2/analytics/tca-gen2'

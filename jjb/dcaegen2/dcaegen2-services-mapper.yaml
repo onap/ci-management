@@ -9,6 +9,7 @@
       - gerrit-maven-merge
       - gerrit-maven-stage:
           sign-artifacts: true
+          sbom-generator: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
