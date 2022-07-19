@@ -32,5 +32,7 @@ rm -Rf /tmp/ogr
 export PATH=$PATH:/tmp/ogr/onap-gerrit-review/bin
 
 # Execute OGR
-onap-gerrit-review -E git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
+onap-gerrit-review -S git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
+# Use -E flag for non-blocking report
+# onap-gerrit-review -S -E git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
 
