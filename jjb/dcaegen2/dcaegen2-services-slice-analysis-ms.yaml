@@ -19,7 +19,9 @@
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-params: '-f components/slice-analysis-ms/pom.xml'
-    pattern: 'components/slice-analysis-ms/**'
+    gerrit_trigger_file_paths: 
+      - compare-type: REG_EXP
+        pattern: 'components/slice-analysis-ms/**'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
     files: '**'
@@ -41,14 +43,12 @@
           maven-versions-plugin: true
           mvn-pom: 'components/slice-analysis-ms/pom.xml'
           mvn-params: '-f components/slice-analysis-ms/pom.xml'
-          pattern: 'components/slice-analysis-ms/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImageTag'
           mvn-params: '-f components/slice-analysis-ms/pom.xml'
-          pattern: 'components/slice-analysis-ms/**'
     stream:
       - 'master':
           branch: 'master'
@@ -56,6 +56,9 @@
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'
     archive-artifacts: ''
+    gerrit_trigger_file_paths: 
+      - compare-type: REG_EXP
+        pattern: 'components/slice-analysis-ms/**'
     build-node: 'ubuntu1804-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
