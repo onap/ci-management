@@ -1,6 +1,6 @@
 ---
 - project:
-    name: dcaegen2-services-datalake-handler-verify-merge
+    name: dcaegen2-services-datalake-handler
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-datalake-handler'
     jobs:
@@ -20,7 +20,9 @@
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-params: '-f components/datalake-handler/pom.xml'
-    pattern: 'components/datalake-handler/**'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/datalake-handler/**'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
     maven-deploy-properties: |
@@ -43,13 +45,11 @@
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
-          pattern: 'components/datalake-handler/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/feeder/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'components/datalake-handler/**'
     stream:
       - 'master':
          branch: 'master'
@@ -58,6 +58,9 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/datalake-handler/feeder/**'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -79,13 +82,11 @@
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
-          pattern: 'components/datalake-handler/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/admin/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'components/datalake-handler/**'
     stream:
       - 'master':
           branch: 'master'
@@ -94,6 +95,9 @@
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/datalake-handler/admin/**'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
       deployAtEnd=true
@@ -115,13 +119,11 @@
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
-          pattern: 'components/datalake-handler/**'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/des/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
-          pattern: 'components/datalake-handler/**'
     stream:
       - 'master':
          branch: 'master'
@@ -134,6 +136,9 @@
     maven-deploy-properties: |
       deployAtEnd=true
     files: '**'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'components/datalake-handler/des/**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
 
