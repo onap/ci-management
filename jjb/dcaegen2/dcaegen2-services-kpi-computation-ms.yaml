@@ -24,7 +24,7 @@
     mvn-goals: 'clean package docker:build'
     mvn-params: '-f components/kpi-computation-ms/pom.xml'
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/kpi-computation-ms/**'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -58,7 +58,7 @@
     files: '**'
     archive-artifacts: ''
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/kpi-computation-ms/**'
     build-node: 'ubuntu1804-docker-8c-8g'
     maven-deploy-properties: |
