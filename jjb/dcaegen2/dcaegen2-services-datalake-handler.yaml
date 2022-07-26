@@ -21,7 +21,7 @@
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-params: '-f components/datalake-handler/pom.xml'
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/datalake-handler/**'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -59,7 +59,7 @@
           branch: 'jakarta'
     java-version: openjdk11
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/datalake-handler/feeder/**'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
@@ -96,7 +96,7 @@
           branch: 'jakarta'
     java-version: openjdk11
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/datalake-handler/admin/**'
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |
@@ -137,7 +137,7 @@
       deployAtEnd=true
     files: '**'
     gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
+      - compare-type: ANT
         pattern: 'components/datalake-handler/des/**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
