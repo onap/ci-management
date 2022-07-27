@@ -32,6 +32,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: ubuntu1804-builder-4c-4g
+    disabled: true
 
 #- project:
 #    name: multicloud-openstack-vmware-arm64-java
@@ -72,6 +73,7 @@
     mvn-settings: 'multicloud-openstack-vmware-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    disabled: true
 
 - project:
     name: multicloud-openstack-vmware-java-clm
@@ -87,6 +89,7 @@
       - 'istanbul':
           branch: 'istanbul'
     mvn-settings: 'multicloud-openstack-vmware-settings'
+    disabled: true
 
 - project:
     name: multicloud-openstack-vmware-info
@@ -96,3 +99,4 @@
     build-node: centos7-builder-2c-1g
     project: multicloud/openstack/vmware
     branch: master
+    disabled: true

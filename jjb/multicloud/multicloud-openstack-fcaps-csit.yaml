@@ -12,3 +12,4 @@
           trigger_jobs:
     robot-options: ''
     branch: 'master'
+    disabled: true

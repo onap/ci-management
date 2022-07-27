@@ -14,3 +14,4 @@
           pattern: 'vio/**'
     jobs:
       - '{project-name}-{stream}-{subproject}-verify-python'
+    disabled: true
