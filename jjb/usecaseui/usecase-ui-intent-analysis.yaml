@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
     mvn-settings: 'usecase-ui-intent-analysis-settings'
     jobs:
       - '{project-name}-{stream}-verify-java'
@@ -60,8 +58,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
     mvn-settings: 'usecase-ui-intent-analysis-settings'
     java-version: openjdk11
 

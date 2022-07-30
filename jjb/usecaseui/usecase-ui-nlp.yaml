@@ -7,8 +7,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'usecase-ui-nlp-settings'
     jobs:
       - '{project-name}-{stream}-verify-java'
