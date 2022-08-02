@@ -44,6 +44,7 @@
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           sbom-generator: true
+          sbom-generator-version: "v2.2"
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
