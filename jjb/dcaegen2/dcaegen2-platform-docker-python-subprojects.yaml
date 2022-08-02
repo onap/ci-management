@@ -46,10 +46,10 @@
       - compare-type: REG_EXP
         pattern: '{src-dir}/.*'
     jobs:
-      - '{project-name}-python-jobs':
-               pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
-               stream: all
-               branch: '*'
+      - gerrit-tox-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+          stream: all
+          branch: '*'
       - gerrit-docker-verify
       - gerrit-docker-merge:
           post_docker_build_script: |
