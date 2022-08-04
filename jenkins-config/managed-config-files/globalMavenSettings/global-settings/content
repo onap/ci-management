@@ -148,7 +148,22 @@
         </pluginRepository>
       </pluginRepositories>
     </profile>
-
+    <profile>
+      <id>local_m2</id>
+      <repositories>
+        <repository>
+          <id>local_m2</id>
+          <name>local_m2</name>
+            <url>file:///tmp/r</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
   </profiles>
 
   <activeProfiles>
@@ -156,5 +171,6 @@
     <activeProfile>onap-settings</activeProfile>
     <activeProfile>releases</activeProfile>
     <activeProfile>snapshots</activeProfile>
+    <activeProfile>local_m2</activeProfile>
   </activeProfiles>
 </settings>
