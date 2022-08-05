@@ -20,6 +20,7 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'ccsdk-distribution-settings'
+    mvn-version: 'mvn38'
     robot-options: ''
     branch: 'master'
 
@@ -42,5 +43,6 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'ccsdk-oran-settings'
+    mvn-version: 'mvn38'
     robot-options: ''
     branch: 'master'

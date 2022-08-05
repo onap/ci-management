@@ -20,5 +20,6 @@
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'sdnc-oam-settings'
+    mvn-version: 'mvn38'
     robot-options: ''
     branch: 'master'
