@@ -23,6 +23,9 @@
           branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: 'mod2/helm-generator/**'
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-params: '-f mod2/helm-generator/pom.xml'

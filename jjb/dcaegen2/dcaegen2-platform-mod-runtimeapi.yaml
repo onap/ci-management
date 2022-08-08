@@ -24,6 +24,9 @@
           branch: 'jakarta'
     java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: 'mod/runtimeapi/**'
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-goals: 'clean package install'
