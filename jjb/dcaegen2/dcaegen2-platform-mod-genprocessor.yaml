@@ -27,6 +27,9 @@
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-goals: 'clean package install'
     mvn-params: '-f mod/genprocessor/pom.xml'
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: 'mod/genprocessor/**'
     pattern: 'mod/genprocessor/**'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
