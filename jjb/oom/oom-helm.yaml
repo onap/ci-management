@@ -32,6 +32,7 @@
 
     helm_bin:
       - helm3.6
+      - helm3.8
 
     exclude: []
     subproject: []
