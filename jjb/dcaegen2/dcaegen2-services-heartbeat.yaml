@@ -25,6 +25,7 @@
     files: '**'
     archive-artifacts: ''
     build-node: 'ubuntu1804-docker-8c-8g'
+    build-timeout: 60
 
 - project:
     name: dcaegen2-services-heartbeat-sonar
