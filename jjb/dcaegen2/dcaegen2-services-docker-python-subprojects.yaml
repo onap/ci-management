@@ -41,7 +41,7 @@
     docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
     nexus-iq-namespace: 'onap-'
     tox-dir: '{src-dir}'
-    tox-envs: 'py3.9'
+    tox-envs: 'py3'
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
