@@ -142,7 +142,15 @@
         update_cache: yes
         state: fixed
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install libnode-dev dep for npm
+      apt:
+        name: libnode-dev
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Install supporting packages
       apt:
