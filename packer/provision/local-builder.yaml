@@ -26,7 +26,6 @@
           - tox-pyenv
           - virtualenv
           - more-itertools~=5.0.0
-          - zipp==1.0.0
         state: present
       become: true
 
