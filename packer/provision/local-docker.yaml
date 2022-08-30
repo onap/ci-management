@@ -142,7 +142,7 @@
         update_cache: yes
         state: fixed
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
     - name: Install supporting packages
       apt:
