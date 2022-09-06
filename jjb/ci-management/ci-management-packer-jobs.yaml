@@ -15,7 +15,7 @@
 
     platforms:
       - centos-7
-      - centos-8
+      - centos-cs-8
       - ubuntu-18.04
       - ubuntu-20.04
     templates: builder
@@ -37,7 +37,7 @@
 
     platforms:
       - centos-7
-      - centos-8
+      - centos-cs-8
       - ubuntu-18.04-arm64
       - ubuntu-18.04
       - ubuntu-20.04
@@ -80,7 +80,7 @@
 
     platforms:
       - centos-7
-      - centos-8
+      - centos-cs-8
     templates: redis
     update-cloud-image: true
 
