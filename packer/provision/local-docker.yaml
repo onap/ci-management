@@ -152,7 +152,7 @@
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-    - name: Install supporting packages
+    - name: Install supporting packages (Ubuntu 18.04)
       apt:
         name:
           - unzip
@@ -169,15 +169,31 @@
           - crudini
           - maven
           - python-ncclient
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install supporting packages (Ubuntu 20.04)
+      apt:
+        name:
+          - unzip
+          - xz-utils
+          - libxml-xpath-perl
+          - wget
+          - make
+          - sshuttle
+          - netcat
+          - libssl-dev
+          - libffi-dev
           - xmlstarlet
           - xvfb
           - crudini
           - maven
-          - python-ncclient
         update_cache: yes
         state: fixed
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Install npm and addon packages
       apt:
