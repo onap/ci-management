@@ -111,15 +111,30 @@
           - xvfb
           - crudini
           - maven
-          - python-ncclient
           - xmlstarlet
           - xvfb
           - crudini
           - maven
-          - python-ncclient
         update_cache: yes
       become: true
       when: ansible_distribution == 'Ubuntu'
+
+    - name: Install python-ncclient on Ubuntu 18.04
+      apt:
+        name: python-ncclient
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install python3-ncclient on Ubuntu 20.04
+      apt:
+        name: python3-ncclient
+        update_cache: yes
+        state: fixed
+      become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+
 
     - name: Install npm and addon packages
       apt:
