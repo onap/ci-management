@@ -209,14 +209,17 @@
     - name: npm self-update
       command: npm install npm@{{ npm_version }} -g
       become: true
+      when: ansible_distribution == 'Ubuntu'
 
     - name: npm install n module
       command: npm install n -g
       become: true
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Upgrade latest stable node version
       command: n stable | PATH="$PATH"
       become: true
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Add Google Chrome key
       apt_key:
