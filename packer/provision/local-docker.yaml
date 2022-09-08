@@ -190,6 +190,7 @@
           - xvfb
           - crudini
           - maven
+          - python3-ncclient
         update_cache: yes
         state: fixed
       become: true
