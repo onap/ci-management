@@ -248,11 +248,24 @@
     - name: Install Erlang dependency packages
       apt:
         name:
-          - libwxgtk3.0-0v5
           - libsctp1
           - libwxbase3.0-0v5
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+    - name: Install Erlang dependency package libwxgtk3 for 18.04
+      apt:
+        name:
+          - libwxgtk3.0-0v5
+      become: true
+      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install Erlang dependency package libwxgtk3 for 20.04
+      apt:
+        name:
+          - libwxgtk3.0-gtk3-0v5
+      become: true
+      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Install Erlang
       apt:
