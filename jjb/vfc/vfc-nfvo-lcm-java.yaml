@@ -24,7 +24,7 @@
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: centos7-redis-4c-4g
+    build-node: centos8-redis-4c-4g
 
 - project:
     name: vfc-nfvo-lcm-sonar
@@ -51,7 +51,7 @@
     nexus-iq-namespace: 'onap-'
     project: vfc/nfvo/lcm
     project-name: 'vfc-nfvo-lcm'
-    build-node: centos7-redis-4c-4g
+    build-node: centos8-redis-4c-4g
     branch: 'master'
     mvn-settings: 'vfc-nfvo-lcm-settings'
 

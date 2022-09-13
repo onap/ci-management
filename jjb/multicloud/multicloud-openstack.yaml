@@ -160,7 +160,7 @@
     nexus-iq-namespace: 'onap-'
     project: multicloud/openstack
     project-name: 'multicloud-openstack'
-    build-node: ubuntu1804-memcached-4c-4g
+    build-node: ubuntu2004-memcached-4c-4g
     stream:
       - 'master':
           branch: 'master'

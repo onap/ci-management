@@ -57,7 +57,7 @@
     nexus-iq-namespace: 'onap-'
     project: modeling/etsicatalog
     project-name: 'modeling-etsicatalog'
-    build-node: centos7-redis-4c-4g
+    build-node: centos8-redis-4c-4g
     branch: 'master'
     mvn-settings: 'modeling-etsicatalog-settings'
 
