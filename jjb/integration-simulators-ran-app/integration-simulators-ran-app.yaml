@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-simulators-ran-app-project-view
+    project-name: integration-simulators-ran-app
+    views:
+      - project-view
+
+- project:
+    name: integration-simulators-ran-app-info
+    project: integration/simulators/ran-app
+    project-name: integration-simulators-ran-app
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
