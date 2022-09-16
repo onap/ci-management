@@ -9,7 +9,7 @@
           cron: '@daily'
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-stage:
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           mvn-opts: '-Ddocker.skip=true'
@@ -61,13 +61,13 @@
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-oran-settings'
     mvn-opts: '-Ddocker.skip=true'
-    build-node: centos7-builder-4c-4g
+    build-node: centos8-builder-4c-4g
 
 - project:
     name: ccsdk-oran-info
     project: ccsdk/oran
     project-name: ccsdk-oran
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
 
