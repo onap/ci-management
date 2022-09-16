@@ -7,7 +7,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
     project: 'msb/swagger-sdk'
     stream:
@@ -50,6 +50,6 @@
     project-name: msb-swagger-sdk
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: msb/swagger-sdk
     branch: master
