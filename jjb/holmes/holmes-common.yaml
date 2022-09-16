@@ -13,7 +13,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           maven-versions-plugin: true
           java-version: openjdk11
       - '{project-name}-gerrit-release-jobs':
@@ -70,6 +70,6 @@
     project-name: holmes-common
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: holmes/common
     branch: master
