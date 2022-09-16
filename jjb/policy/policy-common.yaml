@@ -7,7 +7,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           maven-versions-plugin: true
           mvn-params: '-Dmaven.test.skip=true'
       - '{project-name}-gerrit-release-jobs':
@@ -72,6 +72,6 @@
     project-name: policy-common
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: policy/common
     branch: master
