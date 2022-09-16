@@ -15,7 +15,7 @@
     name: vnfsdk-lctest-info
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: 'vnfsdk/lctest'
     project-name: 'vnfsdk-lctest'
     branch: 'master'

@@ -7,10 +7,10 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
           mvn-goals: 'clean package -Pdocker'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -49,7 +49,7 @@
     name: vnfsdk-refrepo-info
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'
@@ -79,7 +79,7 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
-    build-node: centos7-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     project: 'vnfsdk/refrepo'
     project-name: 'vnfsdk-refrepo'
     branch: 'master'
