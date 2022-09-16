@@ -16,7 +16,7 @@
     default-version: latest
     tox-dir: "docs/"
     doc-dir: "_build/html"
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     # the jjb is very short and filtering docs falsy raises side effects in
     # ONAP doc
     gerrit_trigger_file_paths:
