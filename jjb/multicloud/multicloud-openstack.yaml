@@ -60,10 +60,10 @@
       - '{project-name}-{stream}-{subproject}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-goals: install
           mvn-params: '-P docker'
           maven-versions-plugin: true
@@ -73,7 +73,7 @@
           build-node: centos7-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: 'centos7-builder-4c-4g'
+    build-node: 'centos8-builder-4c-4g'
 
 #- project:
 #    name: multicloud-openstack-arm64
@@ -220,6 +220,6 @@
     project-name: multicloud-openstack
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: multicloud/openstack
     branch: master
