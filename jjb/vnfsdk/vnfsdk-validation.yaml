@@ -7,7 +7,7 @@
     - '{project-name}-{stream}-merge-java'
     - gerrit-maven-stage:
         sign-artifacts: true
-        build-node: centos7-builder-4c-4g
+        build-node: centos8-docker-4c-4g
         maven-versions-plugin: true
     - '{project-name}-gerrit-release-jobs':
         build-node: centos7-docker-8c-8g
@@ -43,7 +43,7 @@
     name: vnfsdk-validation-info
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'
@@ -88,7 +88,7 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
-    build-node: centos7-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     project: 'vnfsdk/validation'
     project-name: 'vnfsdk-validation'
     branch: 'master'
