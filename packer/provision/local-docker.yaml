@@ -61,14 +61,6 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Install python-tox and deps
-      pip:
-        name:
-          - tox
-          - tox-pyenv
-        state: present
-      become: true
-
     - apt_repository:
         repo: ppa:deadsnakes/ppa
         state: present
