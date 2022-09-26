@@ -1,0 +1,15 @@
+---
+- project:
+    name: ccsdk-odl-legacy-project-view
+    project-name: ccsdk-odl-legacy
+    views:
+      - project-view
+
+- project:
+    name: ccsdk-odl-legacy-info
+    project: ccsdk/odl-legacy
+    project-name: ccsdk-odl-legacy
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
