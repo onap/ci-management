@@ -19,7 +19,7 @@
           sbom-generator: true
       - gerrit-maven-docker-stage:
           mvn-params: '-f sparkybe-onap-application/pom.xml -P docker -B -Dmaven.test.skip=true'
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
@@ -86,7 +86,7 @@
 - project:
     name: 'aai-sparky-be-whitesource'
     project-name: 'aai-sparky-be'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-settings: 'aai-sparky-be-settings'
