@@ -6,7 +6,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           mvn-params: '-P docker -Dmaven.test.skip=true'
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
