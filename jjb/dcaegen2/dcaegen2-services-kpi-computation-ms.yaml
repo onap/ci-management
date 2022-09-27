@@ -18,7 +18,7 @@
     mvn-settings: 'dcaegen2-services-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'
     mvn-goals: 'clean package docker:build'
@@ -45,7 +45,7 @@
           mvn-pom: 'components/kpi-computation-ms/pom.xml'
           mvn-params: '-f components/kpi-computation-ms/pom.xml'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImageTag'
@@ -60,7 +60,7 @@
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: 'components/kpi-computation-ms/**'
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
 
@@ -75,7 +75,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-kpi-computation-ms'
     branch: 'master'
@@ -91,7 +91,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/services
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project-name: 'dcaegen2-services-kpi-computation-ms-clm'
     mvn-params: '-f components/kpi-computation-ms/pom.xml'
     stream:

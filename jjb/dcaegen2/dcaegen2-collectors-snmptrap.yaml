@@ -12,7 +12,7 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-snmptrap-settings'
     jobs:
       - '{project-name}-python-jobs':

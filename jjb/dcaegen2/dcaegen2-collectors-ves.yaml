@@ -12,10 +12,10 @@
       - gerrit-maven-stage:
           sign-artifacts: false
           sbom-generator: true
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-goals: 'clean package docker:build -DpushImageTag'
@@ -38,7 +38,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
     mvn-snapshot-id: 'ecomp-snapshots'
     mvn-version: 'mvn36'
     nexus-snapshot-repo: 'snapshots'
@@ -54,7 +54,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'dcaegen2/collectors/ves'
     project-name: 'dcaegen2-collectors-ves'
     branch: 'master'
@@ -69,7 +69,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/collectors/ves
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project-name: 'dcaegen2-collectors-ves'
     stream:
       - 'master':

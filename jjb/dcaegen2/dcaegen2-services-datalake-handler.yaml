@@ -29,7 +29,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
 
 - project:
     name: dcaegen2-services-datalake-handler-release
@@ -46,7 +46,7 @@
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/feeder/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -66,7 +66,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
 
 - project:
     name: dcaegen2-services-datalake-handler-admin-ui-release
@@ -83,7 +83,7 @@
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/admin/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -103,7 +103,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
 
 - project:
     name: dcaegen2-services-datalake-handler-des-release
@@ -120,7 +120,7 @@
           mvn-params: '-f components/datalake-handler/pom.xml'
           version-properties-file: 'components/datalake-handler/version.properties'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           mvn-goals: 'clean package dockerfile:build dockerfile:push -f components/datalake-handler/des/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -140,7 +140,7 @@
       - compare-type: ANT
         pattern: 'components/datalake-handler/des/**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
 
 - project:
     name: dcaegen2-services-datalake-handler-sonar
@@ -153,7 +153,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'dcaegen2/services'
     project-name: 'dcaegen2-services-datalake-handler'
     branch: 'master'

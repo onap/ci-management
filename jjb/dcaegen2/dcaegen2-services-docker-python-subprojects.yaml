@@ -97,7 +97,7 @@
     name: dcaegen2-services-docker-python-subprojects
     project: dcaegen2/services
     mvn-settings: dcaegen2-services-settings
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project-name:
       - dcaegen2-services-pmsh:
           src-dir: components/pm-subscription-handler

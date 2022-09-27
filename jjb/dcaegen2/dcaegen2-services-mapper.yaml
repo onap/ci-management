@@ -13,7 +13,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           mvn-goals: 'clean package docker:build -DpushImageTag'
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
@@ -33,7 +33,7 @@
     nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
+    build-node: 'ubuntu2004-docker-8c-8g'
     maven-deploy-properties: |
       deployAtEnd=true
 
@@ -63,7 +63,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: dcaegen2/services/mapper
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project-name: 'dcaegen2-services-mapper'
     stream:
       - 'master':

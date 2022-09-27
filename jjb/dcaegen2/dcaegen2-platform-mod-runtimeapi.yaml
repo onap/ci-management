@@ -36,7 +36,7 @@
     nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
 
 - project:
     name: dcaegen2-platform-mod-runtimeapi-sonar
@@ -49,7 +49,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'dcaegen2/platform'
     project-name: 'dcaegen2-platform-mod-runtimeapi'
     branch: 'master'
@@ -64,7 +64,7 @@
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'dcaegen2/platform'
     project-name: dcaegen2-platform-mod-runtimeapi-clm
     mvn-params: '-f mod/runtimeapi/pom.xml'
