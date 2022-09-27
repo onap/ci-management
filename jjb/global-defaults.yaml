@@ -41,7 +41,7 @@
 
     # Timeout in minutes
     build-timeout: 90
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
     archive-artifacts: ''
 
