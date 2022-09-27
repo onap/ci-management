@@ -10,7 +10,7 @@
     project-name: 'sdnc-apps'
     jobs:
       - gerrit-maven-verify:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Ddocker.skip.push=true -Pdocker'
@@ -24,7 +24,7 @@
           cron: ''
           sbom-generator: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -Pdocker'
@@ -94,7 +94,7 @@
 #    mvn-settings: 'sdnc-apps-settings'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
 
 - project:
     name: sdnc-apps-clm

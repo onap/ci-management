@@ -5,14 +5,14 @@
     project-name: 'sdc-sdc-docker-base'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          build-node: 'ubuntu1804-docker-v1-8c-8g'
+          build-node: 'ubuntu2004-docker-v1-8c-8g'
           docker-pom: 'pom.xml'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-8c-8g'
+          build-node: 'ubuntu2004-docker-8c-8g'
           docker-pom: 'pom.xml'
           mvn-profile: 'default'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P default'
           container-public-registry: 'nexus3.onap.org:10001'
