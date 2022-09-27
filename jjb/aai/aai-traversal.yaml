@@ -10,9 +10,9 @@
     project-name: 'aai-traversal'
     jobs:
       - '{project-name}-{stream}-verify-java':
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
       - '{project-name}-{stream}-merge-java':
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
       - gerrit-maven-stage:
           mvn-params: '-DskipTests'
           sign-artifacts: true
@@ -21,7 +21,7 @@
           sbom-generator: true
       - gerrit-maven-docker-stage:
           mvn-params: '-P docker -Dmaven.test.skip=true'
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
       - '{project-name}-gerrit-release-jobs':
@@ -49,7 +49,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     project: 'aai/traversal'
     project-name: 'aai-traversal'
     branch: 'master'
