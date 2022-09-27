@@ -7,7 +7,7 @@
     stream:
       - 'master':
           branch: 'master'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     jobs:
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'

@@ -17,5 +17,5 @@
           build-node: ubuntu1804-docker-8c-8g
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
