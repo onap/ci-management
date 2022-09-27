@@ -58,4 +58,4 @@
     docker-build-args: '-f ./Dockerfile'
     docker-root: '$WORKSPACE'
     mvn-settings: 'oom-settings'
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g

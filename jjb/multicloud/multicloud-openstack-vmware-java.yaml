@@ -17,7 +17,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-goals: install
           mvn-params: '-P docker'
           maven-versions-plugin: true
@@ -52,7 +52,7 @@
 #          mvn-goals: 'install'
 #          script:
 #            !include-raw-escape: 'build-multicloud-openstack-vmware-docker-image.sh'
-#          build-node: ubuntu1804-docker-arm64-4c-2g
+#          build-node: ubuntu2004-docker-arm64-4c-2g
 #    files: '**'
 #    archive-artifacts: ''
 #

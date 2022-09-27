@@ -16,7 +16,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-versions-plugin: true
           mvn-pom: 'distributions/msb-apigateway/pom.xml'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -52,7 +52,7 @@
 #    mvn-settings: 'msb-apigateway-settings'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
 #
 - project:
     name: msb-apigateway-sonar

@@ -32,7 +32,7 @@
       maven-deploy-properties: |
           deployAtEnd=true
       archive-artifacts: ''
-      build-node: ubuntu1804-docker-8c-8g
+      build-node: ubuntu2004-docker-8c-8g
       jobs:
           - '{project-name}-{stream}-verify-java':
                 mvn-goals: 'clean install'
@@ -46,7 +46,7 @@
                 maven-versions-plugin: true
                 mvn-goals: 'clean deploy -P docker'
           - gerrit-maven-docker-stage:
-                build-node: ubuntu1804-docker-8c-8g
+                build-node: ubuntu2004-docker-8c-8g
                 container-public-registry: 'nexus3.onap.org:10001'
                 container-staging-registry: 'nexus3.onap.org:10003'
                 mvn-params: '-P docker -DskipTests=true -DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
@@ -64,7 +64,7 @@
       sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
       sonar-mvn-goal: '{sonar_mvn_goal}'
       cron: '@daily'
-      build-node: ubuntu1804-docker-8c-8g
+      build-node: ubuntu2004-docker-8c-8g
       project: 'oom/platform/cert-service'
       project-name: 'oom-platform-cert-service'
       branch: 'master'
@@ -82,5 +82,5 @@
       project: oom/platform/cert-service
       project-name: 'oom-platform-cert-service'
       branch: 'master'
-      build-node: ubuntu1804-docker-8c-8g
+      build-node: ubuntu2004-docker-8c-8g
       mvn-settings: 'oom-platform-cert-service-settings'

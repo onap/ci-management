@@ -24,7 +24,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-goals: install
           mvn-params: '-P docker'
           maven-versions-plugin: true
@@ -60,7 +60,7 @@
 #            !include-raw-escape: 'build-multicloud-framework-docker-image.sh'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
 #
 - project:
     name: multicloud-framework-multivimbroker-sonar

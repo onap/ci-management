@@ -57,4 +57,4 @@
 #    mvn-settings: 'multicloud-k8s-settings'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
