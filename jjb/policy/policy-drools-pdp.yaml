@@ -14,7 +14,7 @@
           maven-versions-plugin: true
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker  -Dmaven.test.skip=true'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -36,7 +36,7 @@
     java-version: openjdk11
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
 
 - project:
     name: policy-drools-pdp-sonar
