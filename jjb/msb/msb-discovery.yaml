@@ -27,7 +27,7 @@
     mvn-settings: 'msb-discovery-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
 #- project:
 #    name: msb-discovery-arm64
@@ -57,7 +57,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     project: 'msb/discovery'
     project-name: 'msb-discovery'
     branch: 'master'
