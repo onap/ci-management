@@ -62,7 +62,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     project: 'ccsdk/apps'
     project-name: 'ccsdk-apps'
     branch: 'master'
@@ -89,7 +89,7 @@
     java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-apps-settings'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
 #- project:
 #    name: ccsdk-apps-arm64-docker

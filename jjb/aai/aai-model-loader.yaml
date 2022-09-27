@@ -33,7 +33,7 @@
     mvn-settings: 'aai-model-loader-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     mvn-version: 'mvn36'
     java-version: openjdk11
     nexus-snapshot-repo: 'snapshots'
@@ -49,7 +49,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     project: 'aai/model-loader'
     project-name: 'aai-model-loader'
     branch: 'master'
