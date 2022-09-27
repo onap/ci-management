@@ -31,7 +31,7 @@
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dmaven.test.skip=true'
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
 #- project:
 #    name: vnfsdk-dovetail-integration-arm64
 #    project-name: 'vnfsdk-dovetail-integration-arm64'
@@ -44,7 +44,7 @@
 #      - 'master':
 #          branch: 'master'
 #    mvn-settings: 'vnfsdk-dovetail-integration-settings'
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
 #    jobs:
 #      - '{project-name}-{stream}-docker-java-daily':
 #          docker-pom: 'pom.xml'
