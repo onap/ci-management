@@ -23,6 +23,7 @@
       - compare-type: ANT
         pattern: 'components/slice-analysis-ms/**'
     mvn-snapshot-id: 'ecomp-snapshots'
+    mvn-version: 'mvn36'
     nexus-snapshot-repo: 'snapshots'
     files: '**'
     archive-artifacts: ''
@@ -54,6 +55,7 @@
           branch: 'master'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
+    mvn-version: 'mvn36'
     files: '**'
     archive-artifacts: ''
     gerrit_trigger_file_paths:
