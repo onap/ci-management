@@ -4,7 +4,7 @@
     description: '{job-desc}'
     disabled: false
     project-type: freestyle
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
     properties:
       - lf-infra-properties:

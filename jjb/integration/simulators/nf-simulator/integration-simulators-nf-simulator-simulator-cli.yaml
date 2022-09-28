@@ -14,7 +14,7 @@
           - 'master':
                 branch: 'master'
       mvn-settings: 'integration-simulators-nf-simulator-settings'
-      build-node: ubuntu1804-builder-4c-4g
+      build-node: ubuntu2004-builder-4c-4g
       jobs:
           - '{project-name}-{stream}-{subproject}-verify-python'
 
@@ -23,7 +23,7 @@
       jobs:
           - gerrit-tox-sonar
       cron: '@daily'
-      build-node: ubuntu1804-builder-4c-4g
+      build-node: ubuntu2004-builder-4c-4g
       project: 'integration/simulators/nf-simulator'
       project-name: 'integration-simulators-nf-simulator'
       branch: 'master'
