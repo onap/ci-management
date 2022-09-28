@@ -14,8 +14,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'dcaegen2-utils-settings'
