@@ -24,7 +24,7 @@
     archive-artifacts: ''
     docker-pom: 'pom.xml'
     mvn-profile: docker
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
 - project:
     name: usecase-ui-nlp-sonar
@@ -36,7 +36,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     project: 'usecase-ui/nlp'
     project-name: 'usecase-ui-nlp'
     branch: 'master'
@@ -51,7 +51,7 @@
     nexus-iq-namespace: 'onap-'
     project: usecase-ui/nlp
     project-name: 'usecase-ui-nlp'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     branch: 'master'
     mvn-settings: 'usecase-ui-nlp-settings'
 
