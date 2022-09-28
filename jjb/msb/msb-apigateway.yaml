@@ -33,7 +33,7 @@
     mvn-settings: 'msb-apigateway-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
 
 #- project:
 #    name: msb-apigateway-arm64
@@ -64,7 +64,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2004-builder-4c-4g
     project: 'msb/apigateway'
     project-name: 'msb-apigateway'
     branch: 'master'
