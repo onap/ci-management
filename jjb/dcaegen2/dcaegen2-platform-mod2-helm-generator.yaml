@@ -72,6 +72,4 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'dcaegen2-platform-settings'

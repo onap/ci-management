@@ -26,8 +26,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'dcaegen2-collectors-ves-settings'
@@ -74,8 +72,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'dcaegen2-collectors-ves-settings'
 
 - project:

@@ -23,8 +23,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
     mvn-snapshot-id: 'ecomp-snapshots'
@@ -70,8 +68,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'dcaegen2-collectors-restconf-settings'
 
 - project:

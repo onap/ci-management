@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
     java-version: openjdk11
@@ -70,8 +68,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-pm-mapper-settings'
 

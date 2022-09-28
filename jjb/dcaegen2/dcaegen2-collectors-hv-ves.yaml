@@ -6,8 +6,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
     # apply to all jobs
@@ -71,8 +69,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
 
