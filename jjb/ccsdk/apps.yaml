@@ -106,7 +106,7 @@
 #    archive-artifacts: ''
 #    docker-pom: 'pom.xml'
 #    mvn-profile: docker
-#    build-node: ubuntu1804-docker-arm64-4c-2g
+#    build-node: ubuntu2004-docker-arm64-4c-2g
 
 - project:
     name: ccsdk-apps-info
