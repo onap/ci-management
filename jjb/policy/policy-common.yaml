@@ -58,12 +58,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'policy-common-settings'
     java-version: openjdk11
 

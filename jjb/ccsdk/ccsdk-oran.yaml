@@ -53,10 +53,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-oran-settings'

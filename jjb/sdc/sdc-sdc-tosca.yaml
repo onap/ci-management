@@ -62,8 +62,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'sdc-sdc-tosca-settings'
     java-version: openjdk11
 

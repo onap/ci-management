@@ -65,8 +65,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-params: '-P spring-boot-2-1'
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'

@@ -59,8 +59,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-settings: 'aai-graphgraph-settings'
 
 - project:

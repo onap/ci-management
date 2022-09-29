@@ -66,8 +66,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'optf-has-settings'
 
 - project:
