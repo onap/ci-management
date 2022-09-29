@@ -70,10 +70,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'sdnc-oam-settings'
     java-version: openjdk11
     mvn-version: 'mvn38'

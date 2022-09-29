@@ -68,10 +68,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'policy-clamp-settings'
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk11

@@ -39,10 +39,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'policy-parent-settings'
     java-version: openjdk11
 

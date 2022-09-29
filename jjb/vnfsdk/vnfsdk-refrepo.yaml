@@ -70,8 +70,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'vnfsdk-refrepo-settings'
 
 - project:

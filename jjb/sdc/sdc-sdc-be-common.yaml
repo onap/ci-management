@@ -58,8 +58,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'sdc-sdc-be-common-settings'
 
 - project:

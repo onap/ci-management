@@ -48,12 +48,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'policy-docker-settings'
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk11

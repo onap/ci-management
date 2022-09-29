@@ -69,8 +69,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-settings: 'aai-traversal-settings'
     mvn-version: 'mvn35'
     java-version: openjdk8

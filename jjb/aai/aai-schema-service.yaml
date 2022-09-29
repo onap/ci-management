@@ -67,8 +67,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn36'
 

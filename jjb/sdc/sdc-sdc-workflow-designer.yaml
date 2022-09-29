@@ -71,8 +71,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     java-version: openjdk11
 

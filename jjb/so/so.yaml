@@ -101,8 +101,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-settings: 'so-settings'
 
 - project:

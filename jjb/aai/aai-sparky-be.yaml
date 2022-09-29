@@ -68,8 +68,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-settings: 'aai-sparky-be-settings'
     mvn-version: 'mvn36'
     java-version: openjdk11

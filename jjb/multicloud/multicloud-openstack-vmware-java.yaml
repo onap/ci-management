@@ -86,8 +86,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'multicloud-openstack-vmware-settings'
     disabled: true
 

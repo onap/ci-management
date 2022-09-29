@@ -69,8 +69,6 @@
     stream:
         - 'master':
               branch: 'master'
-        - 'istanbul':
-              branch: 'istanbul'
     mvn-settings: 'aai-model-loader-settings'
     mvn-version: 'mvn36'
     java-version: openjdk11

@@ -112,8 +112,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
     mvn-version: 'mvn36'
     mvn-settings: 'sdc-settings'
     java-version: openjdk11
