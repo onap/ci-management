@@ -24,7 +24,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu2004-docker-v1-8c-8g
+          build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -DskipTests'
           container-public-registry: 'nexus3.onap.org:10001'
@@ -42,7 +42,7 @@
     mvn-settings: 'so-adapters-so-oof-adapter-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu2004-docker-v1-8c-8g
+    build-node: ubuntu1804-docker-v1-8c-8g
 
 - project:
     name: so-adapters-so-oof-adapter-sonar
@@ -56,7 +56,7 @@
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     max-git-repo-age-hours: 48
-    build-node: ubuntu2004-docker-v1-8c-8g
+    build-node: ubuntu1804-docker-v1-8c-8g
     project: 'so/adapters/so-oof-adapter'
     project-name: 'so-adapters-so-oof-adapter'
     branch: 'master'

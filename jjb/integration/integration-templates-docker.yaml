@@ -3,7 +3,7 @@
     name: '{project-name}-{stream}-{subproject}-docker-merge'
     id: integration-docker-merge
     project-type: freestyle
-    node: 'ubuntu2004-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
     mvn-goals: 'clean package docker:build docker:push'
 
@@ -65,7 +65,7 @@
     name: '{project-name}-{stream}-{subproject}-docker-verify'
     id: integration-docker-verify
     project-type: freestyle
-    node: 'ubuntu2004-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     docker-image-name: ''
     mvn-goals: 'clean package docker:build'
     post-docker-verify-script: ''
@@ -130,7 +130,7 @@
     id: integration-docker-compose-verify
     project-type: freestyle
     description: 'This job validates Docker Compose based projects'
-    node: 'ubuntu2004-docker-8c-8g'
+    node: 'ubuntu1804-docker-8c-8g'
     docker_root: '$WORKSPACE'
     post_script: ''
     netconf_sim_service_name: ''

@@ -88,7 +88,7 @@
       - '{project-name}-{stream}-merge-docker'
       - gerrit-maven-docker-stage:
           mvn-params: '-P docker -Dmaven.test.skip=true'
-          build-node: ubuntu2004-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
     project-name: 'aai-aai-common'
@@ -104,13 +104,13 @@
     mvn-settings: 'aai-aai-common-settings'
     mvn-version: 'mvn35'
     files: 'Dockerfiles/aai-common/**'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk8
 
 - project:
     name: 'aai-aai-common-whitesource'
     project-name: 'aai-aai-common'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan
     mvn-params: '-P spring-boot-2-1'

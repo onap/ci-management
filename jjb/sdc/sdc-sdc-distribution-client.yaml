@@ -37,7 +37,7 @@
     java-version: openjdk11
     jobs:
        - '{project-name}-{stream}-integration-pairwise'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'sdc/sdc-distribution-client'
     project-name: 'sdc-sdc-distribution-client'
     stream:

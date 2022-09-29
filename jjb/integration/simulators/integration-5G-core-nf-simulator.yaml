@@ -17,7 +17,7 @@
           branch: 'master'
     mvn-settings: 'integration-simulators-5G-core-nf-simulator-settings'
     archive-artifacts: ''
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     subproject:
       - 'AMF':
           path: 'coresim/AMF/'

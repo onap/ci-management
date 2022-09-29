@@ -10,7 +10,7 @@
       maven-deploy-properties: |
           deployAtEnd=true
       archive-artifacts: ''
-      build-node: ubuntu2004-docker-8c-8g
+      build-node: ubuntu1804-docker-8c-8g
       jobs:
           - '{project-name}-{stream}-verify-java':
                 mvn-goals: 'clean install'

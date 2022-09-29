@@ -30,9 +30,9 @@
       - '{project-name}-{stream}-verify-java':
           # this build is unit test only (Verify 1/2)
           mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
-          build-node: 'ubuntu2004-docker-8c-8g'
+          build-node: 'ubuntu1804-docker-8c-8g'
       - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu2004-docker-8c-16g'
+          build-node: 'ubuntu1804-docker-8c-16g'
           docker-pom: 'pom.xml'
           mvn-profile: 'docker'
           mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -P integration-tests-with-helm-validator'
@@ -53,7 +53,7 @@
           maven-versions-plugin: true
           mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
       - gerrit-maven-docker-stage:
-          build-node: ubuntu2004-docker-v1-8c-8g
+          build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
           mvn-version: 'mvn36'
@@ -73,7 +73,7 @@
     mvn-settings: 'sdc-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     maven-version: 'mvn36'
 
 - project:
@@ -87,7 +87,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-docker-8c-16g
+    build-node: ubuntu1804-docker-8c-16g
     project: 'sdc'
     project-name: 'sdc'
     branch: 'master'
@@ -108,7 +108,7 @@
     nexus-iq-namespace: 'onap-'
     project: sdc
     project-name: 'sdc'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     stream:
       - 'master':
           branch: 'master'
@@ -130,7 +130,7 @@
 - project:
     name: 'sdc-whitesource'
     project-name: 'sdc'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-whitesource-scan:
           build-timeout: 120

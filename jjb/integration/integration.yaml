@@ -65,7 +65,7 @@
       - 'test-security-sslendpoints':
           path: 'test/security/sslendpoints'
           pattern: '{path}/**'
-          build-node: ubuntu2004-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
           script: |
               #!/bin/bash
               set -ex # Fail build if any setup step fails

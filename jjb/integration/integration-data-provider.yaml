@@ -72,7 +72,7 @@
     docker-name: 'onap/data-provider'
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
 
 - project:
     name: integration-data-provider-release

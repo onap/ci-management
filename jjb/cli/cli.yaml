@@ -29,7 +29,7 @@
           pom: 'deployment/docker/pom.xml'
           mvn-goals: 'docker:build'
           docker-image-name: 'onap/cli'
-          build-node: ubuntu2004-docker-8c-8g
+          build-node: ubuntu1804-docker-8c-8g
     project: 'cli'
     stream:
         - 'master':
@@ -59,7 +59,7 @@
 #    mvn-settings: 'cli-settings'
 #    files: '**'
 #    archive-artifacts: ''
-#    build-node: ubuntu2004-docker-arm64-4c-2g
+#    build-node: ubuntu1804-docker-arm64-4c-2g
 #
 - project:
     name: cli-sonar
@@ -113,7 +113,7 @@
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     project: 'cli'
     project-name: 'cli'
     branch: 'master'
