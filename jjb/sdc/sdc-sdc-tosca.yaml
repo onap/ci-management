@@ -25,6 +25,8 @@
           branch: 'master'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'sdc-sdc-tosca-settings'
     files: '**'
     archive-artifacts: ''

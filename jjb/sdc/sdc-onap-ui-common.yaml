@@ -20,6 +20,8 @@
           branch: 'master'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'sdc-onap-ui-common-settings'
     files: '**'
     archive-artifacts: ''
