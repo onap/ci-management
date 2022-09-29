@@ -9,6 +9,7 @@
                 mvn-goals: clean install
                 mvn-params: '-Dmaven.test.skip=true -Ddocker.repository.push='
       project-name: 'cps'
+      build-node: ubuntu1804-docker-8c-8g
       recipients: 'toine.siebelink@est.tech'
       # project name in gerrit
       project: 'cps'
