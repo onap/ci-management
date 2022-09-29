@@ -23,6 +23,8 @@
                 branch: 'master'
           - 'jakarta':
                 branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'
       java-version: openjdk11
       maven-version: 'mvn36'
       mvn-settings: 'sdc-settings'

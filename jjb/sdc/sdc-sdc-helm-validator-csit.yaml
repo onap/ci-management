@@ -8,6 +8,8 @@
       stream:
           - "master":
                 branch: "master"
+          - "kohn":
+                branch: "kohn"
       functionality:
           - "sdc-helm-validator":
                 trigger_jobs:

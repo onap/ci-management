@@ -32,6 +32,8 @@
           branch: 'master'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     files: '**'
     archive-artifacts: ''
@@ -73,6 +75,8 @@
           branch: 'master'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'sdc-sdc-workflow-designer-settings'
     java-version: openjdk11
 
