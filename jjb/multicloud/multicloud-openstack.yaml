@@ -106,7 +106,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-windriver'
     branch: 'master'
@@ -125,7 +125,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-pike'
     branch: 'master'
@@ -144,7 +144,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-starlingx'
     branch: 'master'
@@ -178,7 +178,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-fcaps'
     branch: 'master'
@@ -197,7 +197,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
 #    cron: '@daily'
-#    build-node: ubuntu2004-builder-4c-4g
+#    build-node: ubuntu1804-builder-4c-4g
 #    project: 'multicloud/openstack'
 #    project-name: 'multicloud-openstack-lenovo'
 #    branch: 'master'
@@ -216,7 +216,7 @@
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     project: 'multicloud/openstack'
     project-name: 'multicloud-openstack-hpa'
     branch: 'master'

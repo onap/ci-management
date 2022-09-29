@@ -9,7 +9,7 @@
       - 'guilin':
           branch: 'guilin'
     mvn-settings: 'multicloud-framework-settings'
-    build-node: 'ubuntu2004-builder-4c-4g'
+    build-node: 'ubuntu1804-builder-4c-4g'
     subproject:
       - 'multivimbroker':
           path: 'multivimbroker'

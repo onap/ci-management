@@ -22,7 +22,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'integration-settings'
-    build-node: 'ubuntu2004-builder-4c-4g'
+    build-node: 'ubuntu1804-builder-4c-4g'
     subproject:
       - 'test-vcpe':
           path: 'test/vcpe'
@@ -56,7 +56,7 @@
       - 'test-security-k8s':
           path: 'test/security/k8s'
           pattern: '{path}/**'
-          build-node: ubuntu2004-builder-4c-4g
+          build-node: ubuntu1804-builder-4c-4g
           script: |
               #!/bin/bash
               set -ex # Fail build if any setup step fails

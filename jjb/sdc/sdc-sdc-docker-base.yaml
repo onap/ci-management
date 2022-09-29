@@ -28,7 +28,7 @@
     mvn-settings: 'sdc-sdc-docker-base-settings'
     files: '**'
     archive-artifacts: ''
-    build-node: ubuntu2004-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g
     maven-version: 'mvn36'
 
 - project:
