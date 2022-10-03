@@ -16,6 +16,16 @@
 # limitations under the License.
 # ============LICENSE_END=========================================================
 
+# Note that all arguments passed to this script are passed on to
+# onap-gerrit-review (OGR) tool
+
+# You can invoke this script with the -E flag to give a non-blocking report.
+# You can also pass in arguments to turn off certain messages using the -m option, such as:
+# -m text-before-copyright -m misnamed-license-txt
+
+# These options can be included in project job templates where the wrapper script
+# is being invoked under pre-build-script hooks
+
 set -eu
 echo "--> onap-gerrit-review-wrapper.sh"
 
@@ -32,7 +42,4 @@ rm -Rf /tmp/ogr
 export PATH=$PATH:/tmp/ogr/onap-gerrit-review/bin
 
 # Execute OGR
-onap-gerrit-review -S git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
-# Use -E flag for non-blocking report
-# onap-gerrit-review -S -E git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
-
+onap-gerrit-review -S -G "$@"
