@@ -32,7 +32,9 @@ rm -Rf /tmp/ogr
 export PATH=$PATH:/tmp/ogr/onap-gerrit-review/bin
 
 # Execute OGR
-onap-gerrit-review -S git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
-# Use -E flag for non-blocking report
-# onap-gerrit-review -S -E git pull "https://gerrit.onap.org/r/$GERRIT_PROJECT" "$GERRIT_REFSPEC"
-
+# You can invoke this script with the -E flag to give a non-blocking report.
+# You can also pass in arguments to turn off certain messages using the -m option, such as:
+# -m text-before-copyright -m misnamed-license-txt 
+# These options can be included in project job templates where wrapper script 
+# is being invoked under pre-build-script hooks
+onap-gerrit-review -S -G "$@"
