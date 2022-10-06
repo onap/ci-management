@@ -75,6 +75,9 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'a1-policy-management/.*'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
     build-node: centos7-docker-8c-8g
@@ -86,4 +89,5 @@
     mvn-settings: 'ccsdk-oran-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
+    mvn-opts: '-Ddocker.skip=true'
+    mvn-params: '-f a1-policy-management'
