@@ -16,6 +16,23 @@
       "revId": "46f714056b3c2e3a4f863e421f3fb50c57e580f4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c031f9d0_ca72e136",
+        "filename": "packer/common-packer",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-10-06T16:26:18Z",
+      "side": 1,
+      "message": "same here, you are changing the version of common-packer which doesn\u0027t seem required for disabling sbom-generator. Running git submodule update --init at the root path of you cloned repo will update the common-packer submodule in your local environment properly.",
+      "revId": "46f714056b3c2e3a4f863e421f3fb50c57e580f4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
