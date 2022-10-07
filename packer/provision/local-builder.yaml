@@ -139,4 +139,20 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+    - name: Install enchant2 package for Ubuntu
+      apt:
+        name:
+          - enchant-2
+        update_cache: yes
+        state: present
+      become: true
+      when: ansible_distribution == 'Ubuntu'
 
+    - name: Install enchant2 package for CentOS
+      dnf:
+        name:
+          - enchant2
+        update_cache: yes
+        state: present
+      become: true
+      when: ansible_distribution == 'CentOS'
