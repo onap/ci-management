@@ -139,4 +139,15 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
+#Install enchant2 package for both Ubuntu and CentOS, needed for ONAP/Doc
+    - name: Install enchant2
+      apt:
+        name:
+          - enchant-2
+        state: latest
+      yum:
+        name:
+          - enchant2
+        state: latest
+      become: true
 
