@@ -14,7 +14,7 @@
           mvn-params: '-Dmaven.test.skip=true'
           maven-versions-plugin: true
           cron: ''
-          sbom-generator: true
+          sbom-generator: false
       - gerrit-maven-docker-stage:
           build-node: centos7-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
