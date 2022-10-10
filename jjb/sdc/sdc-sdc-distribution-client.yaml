@@ -26,6 +26,9 @@
       - 'jakarta':
           branch: 'jakarta'
           java-version: openjdk11
+      - 'kohn':
+          branch: 'kohn'
+          java-version: openjdk11
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
@@ -44,6 +47,7 @@
         - 'master':
             branch: 'master'
             java-version: openjdk11
+
     mvn-settings: 'sdc-sdc-distribution-client-settings'
     files: '**'
     archive-artifacts: ''
