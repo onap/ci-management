@@ -22,8 +22,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'dmaap-buscontroller-settings'
     files: '**'
     archive-artifacts: ''
