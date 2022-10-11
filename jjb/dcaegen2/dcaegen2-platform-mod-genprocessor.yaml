@@ -18,8 +18,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: dcaegen2-platform-settings
     container-public-registry: 'nexus3.onap.org:10001'
     container-staging-registry: 'nexus3.onap.org:10003'

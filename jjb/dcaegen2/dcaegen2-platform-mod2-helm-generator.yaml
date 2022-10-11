@@ -19,8 +19,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     mvn-settings: dcaegen2-platform-settings
     gerrit_trigger_file_paths:

@@ -18,8 +18,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-sdk-settings'
     mvn-snapshot-id: 'ecomp-snapshots'

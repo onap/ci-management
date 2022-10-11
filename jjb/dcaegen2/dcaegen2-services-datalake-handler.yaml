@@ -10,8 +10,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     maven-version: 'mvn35'
     mvn-settings: 'dcaegen2-services-settings'
@@ -51,8 +51,8 @@
     stream:
       - 'master':
          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     gerrit_trigger_file_paths:
       - compare-type: ANT
@@ -86,8 +86,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     gerrit_trigger_file_paths:
       - compare-type: ANT
@@ -121,8 +121,8 @@
     stream:
       - 'master':
          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     maven-deploy-properties: |

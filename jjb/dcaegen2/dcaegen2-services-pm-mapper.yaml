@@ -6,8 +6,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     # apply to all jobs
     project: 'dcaegen2/services/pm-mapper'
