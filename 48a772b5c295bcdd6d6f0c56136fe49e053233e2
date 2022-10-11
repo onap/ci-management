@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6e84f87_9d46e703",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-10-11T15:26:02Z",
+      "side": 1,
+      "message": "Hi Bengt,\nHave you tested mixing apt and yum modules in the same task works? first time I see something like this.",
+      "revId": "48a772b5c295bcdd6d6f0c56136fe49e053233e2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
