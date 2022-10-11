@@ -17,6 +17,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'kohn':
+          branch: 'kohn'
       - 'jakarta':
           branch: 'jakarta'
     mvn-settings: 'dcaegen2-settings'

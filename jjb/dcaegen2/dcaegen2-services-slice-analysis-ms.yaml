@@ -10,8 +10,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     mvn-settings: 'dcaegen2-services-settings'
     container-public-registry: 'nexus3.onap.org:10001'

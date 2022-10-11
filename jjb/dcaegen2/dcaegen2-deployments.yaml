@@ -14,10 +14,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'dcaegen2-deployments-settings'
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'

@@ -78,8 +78,8 @@
               DNAME={container-snapshot-registry}/{docker-name}
               docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
               docker push $DNAME:$DOCKER_IMAGE_TAG2
-          stream: jakarta
-          branch: jakarta
+          stream: kohn
+          branch: kohn
           cron: ''
       - gerrit-whitesource-scan:
           build-timeout: 120
@@ -108,8 +108,8 @@
     stream:
       - master:
           branch: master
-      - jakarta:
-          branch: jakarta
+      - kohn:
+          branch: kohn
     views:
       - project-view:
           project-name: dcaegen2-services-pmsh
