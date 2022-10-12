@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-python-onapsdk-project-view
+    project-name: integration-python-onapsdk
+    views:
+      - project-view
+
+- project:
+    name: integration-python-onapsdk-info
+    project: integration/python-onapsdk
+    project-name: integration-python-onapsdk
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
