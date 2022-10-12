@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "274b6712_d7adb2af",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-10-12T17:09:15Z",
+      "side": 1,
+      "message": "besides \u0027fixed\u0027 is a valid state for apt module, I believe \u0027present\u0027 makes more sense",
+      "revId": "7bff60a80e41f78c5bcde2aba78550656599d2cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e000a96d_9708a109",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2022-10-12T17:09:15Z",
+      "side": 1,
+      "message": "according to the documentation this is not a valid state, \u0027present\u0027 makes more sense here",
+      "revId": "7bff60a80e41f78c5bcde2aba78550656599d2cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
