@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "707c7045_225e9892",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2022-10-12T21:08:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "274b6712_d7adb2af",
+      "revId": "7bff60a80e41f78c5bcde2aba78550656599d2cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e000a96d_9708a109",
         "filename": "packer/provision/local-builder.yaml",
         "patchSetId": 3
@@ -33,6 +51,24 @@
       "revId": "7bff60a80e41f78c5bcde2aba78550656599d2cc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "43ccdcf4_258f9c03",
+        "filename": "packer/provision/local-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2022-10-12T21:08:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e000a96d_9708a109",
+      "revId": "7bff60a80e41f78c5bcde2aba78550656599d2cc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
