@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-pipelines-xtesting-onap-project-view
+    project-name: integration-pipelines-xtesting-onap
+    views:
+      - project-view
+
+- project:
+    name: integration-pipelines-xtesting-onap-info
+    project: integration/pipelines/xtesting-onap
+    project-name: integration-pipelines-xtesting-onap
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
