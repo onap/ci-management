@@ -37,6 +37,7 @@
 
 - project:
     name: builder-openstack
+    disabled: true
     jobs:
       - gerrit-openstack-cron
 
