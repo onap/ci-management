@@ -55,11 +55,11 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
-          cron: ''
       - 'jakarta':
           branch: 'jakarta'
+          cron: ''
+      - 'kohn':
+          branch: 'kohn'
           cron: ''
     mvn-settings: 'cps-settings'
     files: '**'

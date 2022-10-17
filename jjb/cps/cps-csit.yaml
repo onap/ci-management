@@ -16,10 +16,10 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'honolulu':
-                branch: 'honolulu'
-          - 'istanbul':
-                branch: 'istanbul'
+          - 'jakarta':
+                branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'
       mvn-settings: 'cps-settings'
       robot-options: ''
       branch: 'master'
