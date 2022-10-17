@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Priyank Maheshwari <priyank.maheshwari@est.tech>
+Code-Review+1: Luke Gleeson <luke.gleeson@est.tech>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 17 Oct 2022 17:14:33 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/131503
+Project: ci-management
+Branch: refs/heads/master
