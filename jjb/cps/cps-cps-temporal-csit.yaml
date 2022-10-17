@@ -15,7 +15,9 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'istanbul':
-                branch: 'istanbul'
+          - 'jakarta':
+                branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'
       mvn-settings: 'cps-cps-temporal-settings'
       robot-options: ''
