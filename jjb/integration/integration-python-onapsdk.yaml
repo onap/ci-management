@@ -1,0 +1,50 @@
+---
+- project:
+    name: integration-python-onapsdk-project-view
+    project-name: integration-python-onapsdk
+    views:
+      - project-view
+
+- project:
+    name: integration-python-onapsdk-info
+    project: integration/python-onapsdk
+    project-name: integration-python-onapsdk
+    build-node: centos8-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
+    name: integration-python-onapsdk-linters
+    project: 'integration/python-onapsdk'
+    project-name: 'integration-python-onapsdk'
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - 'python3.7':
+          tox-dir: '.'
+          tox-envs: 'py37'
+          pattern: '**/*.py'
+      - 'python3.8':
+          tox-dir: '.'
+          tox-envs: 'py38'
+          pattern: '**/*.py'
+      - 'python3.9':
+          tox-dir: '.'
+          tox-envs: 'py39'
+          pattern: '**/*.py'
+      - 'python3.10':
+          tox-dir: '.'
+          tox-envs: 'py310'
+          pattern: '**/*.py'
+      - 'pylint':
+          tox-dir: '.'
+          tox-envs: 'pylint'
+          pattern: '**/*.py'
+      - 'pydocstyle':
+          tox-dir: '.'
+          tox-envs: 'pydocstyle'
+          pattern: '**/*.py'
+    stream:
+      - 'master':
+          branch: 'master'
