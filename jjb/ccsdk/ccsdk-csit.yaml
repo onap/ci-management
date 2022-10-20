@@ -19,6 +19,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'ccsdk-distribution-settings'
     mvn-version: 'mvn38'
     robot-options: ''
@@ -42,6 +44,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'ccsdk-oran-settings'
     mvn-version: 'mvn38'
     robot-options: ''

@@ -38,6 +38,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-parent-settings'
