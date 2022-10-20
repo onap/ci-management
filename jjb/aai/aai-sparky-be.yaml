@@ -80,15 +80,3 @@
     build-node: centos8-builder-2c-1g
     project: aai/sparky-be
     branch: master
-
-- project:
-    name: 'aai-sparky-be-whitesource'
-    project-name: 'aai-sparky-be'
-    build-node: ubuntu1804-docker-8c-8g
-    jobs:
-      - gerrit-whitesource-scan
-    mvn-settings: 'aai-sparky-be-settings'
-    wss-product-name: 'aai'
-    mvn-clean-install: true
-    project: 'aai/sparky-be'
-    branch: master

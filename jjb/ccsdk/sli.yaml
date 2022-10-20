@@ -84,16 +84,3 @@
     build-node: centos7-builder-2c-1g
     project: ccsdk/sli
     branch: master
-
-- project:
-    name: ccsdk-sli-whitesource
-    project-name: ccsdk-sli
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-sli-settings'
-    wss-product-name: ccsdk
-    mvn-clean-install: true
-    project: ccsdk/sli
-    branch: master

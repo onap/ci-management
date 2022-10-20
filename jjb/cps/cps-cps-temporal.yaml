@@ -105,17 +105,3 @@
     mvn-settings: 'cps-cps-temporal-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: cps-cps-temporal-whitesource
-    project-name: cps-cps-temporal
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: mvn36
-    mvn-settings: cps-cps-temporal-settings
-    wss-product-name: cps-cps-temporal
-    mvn-clean-install: true
-    project: cps/cps-temporal
-    branch: master
-    build-node: centos7-docker-8c-8g

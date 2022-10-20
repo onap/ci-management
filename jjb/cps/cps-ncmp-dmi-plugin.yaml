@@ -108,17 +108,3 @@
     mvn-settings: 'cps-ncmp-dmi-plugin-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-- project:
-    name: cps-ncmp-dmi-plugin-whitesource
-    project-name: cps-ncmp-dmi-plugin
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: mvn36
-    mvn-settings: cps-ncmp-dmi-plugin-settings
-    wss-product-name: cps-ncmp-dmi-plugin
-    mvn-clean-install: true
-    project: cps/ncmp-dmi-plugin
-    branch: master
-    build-node: centos7-docker-8c-8g

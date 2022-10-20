@@ -83,15 +83,3 @@
     project: aai/resources
     branch: master
     java-version: openjdk8
-
-- project:
-    name: 'aai-resources-whitesource'
-    project-name: 'aai-resources'
-    build-node: ubuntu1804-docker-8c-8g
-    jobs:
-      - gerrit-whitesource-scan
-    mvn-settings: 'aai-resources-settings'
-    wss-product-name: 'aai'
-    mvn-clean-install: true
-    project: 'aai/resources'
-    branch: master

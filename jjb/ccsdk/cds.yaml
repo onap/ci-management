@@ -129,16 +129,3 @@
     build-node: centos8-builder-2c-1g
     project: ccsdk/cds
     branch: master
-
-- project:
-    name: ccsdk-cds-whitesource
-    project-name: ccsdk-cds
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-cds-settings'
-    wss-product-name: ccsdk
-    mvn-clean-install: true
-    project: ccsdk/cds
-    branch: master

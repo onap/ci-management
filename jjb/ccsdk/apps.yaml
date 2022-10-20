@@ -114,16 +114,3 @@
     build-node: centos8-builder-2c-1g
     project: ccsdk/apps
     branch: master
-
-- project:
-    name: ccsdk-apps-whitesource
-    project-name: ccsdk-apps
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-apps-settings'
-    wss-product-name: ccsdk
-    mvn-clean-install: true
-    project: ccsdk/apps
-    branch: master

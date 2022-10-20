@@ -127,19 +127,3 @@
     build-node: centos7-builder-2c-1g
     project: sdc
     branch: master
-
-- project:
-    name: 'sdc-whitesource'
-    project-name: 'sdc'
-    build-node: ubuntu1804-docker-8c-8g
-    jobs:
-      - gerrit-whitesource-scan:
-          build-timeout: 120
-          submodule-timeout: 30
-          java-opts: '-Xmx2048m'
-    mvn-settings: 'sdc-settings'
-    wss-product-name: 'sdc'
-    mvn-clean-install: true
-    project: 'sdc'
-    branch: master
-    java-version: openjdk11

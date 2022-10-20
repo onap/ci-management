@@ -81,11 +81,6 @@
           stream: kohn
           branch: kohn
           cron: ''
-      - gerrit-whitesource-scan:
-          build-timeout: 120
-          submodule-timeout: 30
-          java-opts: '-Xmx2048m'
-          mvn-pom: '{src-dir}/pom.xml'
       - gerrit-tox-sonar:
           # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
           sonar-mvn-goal: '-f {src-dir}/pom.xml sonar:sonar'

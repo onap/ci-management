@@ -86,18 +86,3 @@
     build-node: centos7-builder-2c-1g
     project: ccsdk/features
     branch: master
-
-- project:
-    name: ccsdk-features-whitesource
-    build-node: centos7-builder-4c-4g
-    project-name: ccsdk-features
-    jobs:
-      - gerrit-whitesource-scan
-    java-version: openjdk11
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-features-settings'
-    wss-product-name: ccsdk
-    mvn-clean-install: true
-    mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'
-    project: ccsdk/features
-    branch: master
