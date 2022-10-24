@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-pipelines-oom-automatic-installation-project-view
+    project-name: integration-pipelines-oom-automatic-installation
+    views:
+      - project-view
+
+- project:
+    name: integration-pipelines-oom-automatic-installation-info
+    project: integration/pipelines/oom-automatic-installation
+    project-name: integration-pipelines-oom-automatic-installation
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
