@@ -32,6 +32,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'policy-pap-settings'
     java-version: openjdk11
     files: '**'

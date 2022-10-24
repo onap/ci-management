@@ -30,6 +30,8 @@
           branch: 'istanbul'
       - 'jakarta':
           branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'policy-gui-settings'
     java-version: openjdk11
     files: '**'

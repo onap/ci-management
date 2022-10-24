@@ -25,14 +25,16 @@
 
     project: 'policy/clamp'
     stream:
-        - 'master':
-              branch: 'master'
-        - 'honolulu':
-              branch: 'honolulu'
-        - 'istanbul':
-              branch: 'istanbul'
-        - 'jakarta':
-              branch: 'jakarta'
+      - 'master':
+          branch: 'master'
+      - 'honolulu':
+          branch: 'honolulu'
+      - 'istanbul':
+          branch: 'istanbul'
+      - 'jakarta':
+          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'policy-clamp-settings'
     java-version: openjdk11
     files: '**'
