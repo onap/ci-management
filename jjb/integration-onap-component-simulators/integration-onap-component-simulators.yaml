@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-onap-component-simulators-project-view
+    project-name: integration-onap-component-simulators
+    views:
+      - project-view
+
+- project:
+    name: integration-onap-component-simulators-info
+    project: integration/onap-component-simulators
+    project-name: integration-onap-component-simulators
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
