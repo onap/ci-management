@@ -27,8 +27,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'aai-schema-service-settings'
     mvn-version: 'mvn36'
     files: '**'
