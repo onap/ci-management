@@ -31,8 +31,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
     files: '**'
