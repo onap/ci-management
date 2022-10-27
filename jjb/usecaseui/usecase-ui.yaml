@@ -12,6 +12,8 @@
     stream:
       - 'master':
           branch: 'master'
+      - 'kohn':
+          branch: 'kohn'
     mvn-settings: 'usecase-ui-settings'
     jobs:
       - '{project-name}-{stream}-verify-java'
