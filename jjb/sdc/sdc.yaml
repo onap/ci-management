@@ -51,6 +51,7 @@
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
+          mvn-version: 'mvn36'
           mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-v1-8c-8g
