@@ -32,6 +32,9 @@
       - 'jakarta':
           branch: 'jakarta'
           java-version: openjdk11
+      - 'kohn':
+          branch: 'kohn'
+          java-version: openjdk11
       - 'recursive-orch':
           branch: 'recursive-orch'
           java-version: openjdk11
@@ -117,4 +120,7 @@
           java-version: openjdk11
       - 'jakarta':
           branch: 'jakarta'
+          java-version: openjdk11
+      - 'kohn':
+          branch: 'kohn'
           java-version: openjdk11
