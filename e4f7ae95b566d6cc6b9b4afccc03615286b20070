@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "66255b1a_d8a4496f",
+        "filename": "jjb/so/so-adapters-so-nssmf-adapter.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-11-01T17:51:13Z",
+      "side": 1,
+      "message": "Please remove these",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 10
+      },
+      "revId": "e4f7ae95b566d6cc6b9b4afccc03615286b20070",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d2c73a43_68385a6f",
+        "filename": "jjb/so/so.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-11-01T17:51:13Z",
+      "side": 1,
+      "message": "Please remove these",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 10
+      },
+      "revId": "e4f7ae95b566d6cc6b9b4afccc03615286b20070",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
