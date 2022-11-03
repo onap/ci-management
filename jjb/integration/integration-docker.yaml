@@ -48,3 +48,31 @@
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge
+
+- project:
+      name: integration-ran-nssmf-simulator
+      project: integration
+      stream:
+          - 'master':
+                branch: 'master'
+      # Required by verifier
+      mvn-settings: 'integration-settings'
+      project-name: 'integration-ran-nssmf-simulator'
+      gerrit_trigger_file_paths:
+          - compare-type: REG_EXP
+            pattern: 'test/mocks/ran-nssmf-simulator/.*'
+      docker-name: 'onap/ran-nssmf-simulator'
+      docker-root: test/mocks/ran-nssmf-simulator
+      container-tag-method: yaml-file
+      post_docker_build_script: |
+          #!/bin/bash
+          set -eux
+          cd "$DOCKER_ROOT"
+          # To simplify the references inside tox.ini and tests/settings.py
+          docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" ran-nssmf-simulator:latest
+          tox
+      build-node: ubuntu1804-docker-8c-8g
+      build-timeout: 20
+      jobs:
+          - gerrit-docker-verify
+          - gerrit-docker-merge
