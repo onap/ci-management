@@ -25,8 +25,14 @@
             mvn-goals: 'clean install'
         - '{project-name}-{stream}-merge-java':
             mvn-goals: 'clean deploy'
-        -  '{project-name}-gerrit-release-jobs':
+        - '{project-name}-gerrit-release-jobs':
             build-node: centos7-docker-8c-8g
+        - gerrit-maven-docker-stage:
+            build-node: centos7-docker-8c-8g
+            maven-versions-plugin: true
+            container-public-registry: 'nexus3.onap.org:10001'
+            container-staging-registry: 'nexus3.onap.org:10003'
+            mvn-params: '-P docker'
         - gerrit-maven-stage:
             sign-artifacts: true
             build-node: centos7-docker-8c-8g
