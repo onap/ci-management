@@ -23,6 +23,9 @@
       - 'master':
           branch: 'master'
           mvn-params: '-P spring-boot-2-1'
+      - 'jakarta':
+          branch: 'jakarta'
+          mvn-params: '-P spring-boot-2-1'
       - 'kohn':
           branch: 'kohn'
           mvn-params: '-P spring-boot-2-1'

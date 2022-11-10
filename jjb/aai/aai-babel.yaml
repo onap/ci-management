@@ -26,6 +26,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/babel'
     stream:
+      - 'jakarta':
+          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
       - 'master':

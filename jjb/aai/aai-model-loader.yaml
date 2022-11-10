@@ -26,6 +26,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/model-loader'
     stream:
+      - 'jakarta':
+          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
       - 'master':

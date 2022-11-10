@@ -20,6 +20,8 @@
           build-node: centos7-docker-8c-8g
     project: 'aai/logging-service'
     stream:
+      - 'jakarta':
+          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
       - 'master':

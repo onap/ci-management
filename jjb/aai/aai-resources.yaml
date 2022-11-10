@@ -33,6 +33,8 @@
           branch: 'master'
       - 'kohn':
           branch: 'kohn'
+      - 'jakarta':
+          branch: 'jakarta'
     mvn-settings: 'aai-resources-settings'
     mvn-version: 'mvn35'
     files: '**'
