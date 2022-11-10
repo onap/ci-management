@@ -20,11 +20,8 @@
           -   'master':
                   branch: 'master'
                   java-version: openjdk11
-          -   'istanbul':
-                  branch: 'istanbul'
-                  java-version: openjdk11
-          -   'honolulu':
-                  branch: 'honolulu'
+          -   'kohn':
+                  branch: 'kohn'
                   java-version: openjdk11
       project: 'oom/platform/cert-service'
       mvn-settings: 'oom-platform-cert-service-settings'

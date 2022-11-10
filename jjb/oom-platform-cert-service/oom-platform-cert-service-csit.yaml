@@ -8,10 +8,8 @@
       stream:
           - "master":
                 branch: "master"
-          - "istanbul":
-                branch: "istanbul"
-          - "honolulu":
-                branch: "honolulu"
+          - "kohn":
+                branch: "kohn"
       functionality:
           - "certservice":
                 trigger_jobs:

@@ -8,8 +8,8 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+      - 'kohn':
+          branch: 'kohn'
 
     jobs:
       - '{project-name}-{stream}-review':
@@ -39,8 +39,8 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'jakarta':
-                branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'
 
 - project:
       name: offline-installer-pytest
@@ -58,5 +58,5 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'jakarta':
-                branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'

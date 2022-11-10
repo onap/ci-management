@@ -24,17 +24,13 @@
     stream:
       - "master":
           branch: "master"
+      - "kohn":
+          branch: "kohn"
       - "jakarta":
           branch: "jakarta"
-      - "istanbul":
-          branch: "istanbul"
-
 
     helm_bin:
       - helm3.8
-
-    exclude: []
-    subproject: []
 
     jobs:
       - "{project-name}-{stream}-image-verify":
@@ -46,10 +42,10 @@
       - "{project-name}-{stream}-merge-helm":
           build_script: "{oom_build_script}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
-          files: "**"
+          files: "kubernetes/**"
           build-timeout: 900
       - "{project-name}-{stream}-release-helm":
           build_script: "{oom_build_script_skip_lint}"
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
-          files: "**"
+          files: "kubernetes/**"
           build-timeout: 900

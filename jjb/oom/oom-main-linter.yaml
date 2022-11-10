@@ -30,7 +30,7 @@
     stream:
       - "master":
           branch: "master"
-      - "istanbul":
-          branch: "istanbul"
+      - "kohn":
+          branch: "kohn"
       - "jakarta":
           branch: "jakarta"
