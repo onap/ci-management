@@ -31,8 +31,6 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'jakarta':
-                branch: 'jakarta'
 
 - project:
     name: oom-readiness-release

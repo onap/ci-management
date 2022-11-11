@@ -371,7 +371,7 @@
             - patchset-created-event:
                 exclude-drafts: 'false'
                 exclude-no-code-change: 'false'
-                exclude-trivial-rebase: 'true'
+                exclude-trivial-rebase: 'false'
                 exclude-wip: 'true'
             - draft-published-event
             - comment-added-contains-event:
