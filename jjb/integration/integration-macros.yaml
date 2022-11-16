@@ -39,6 +39,13 @@
           - include-raw-integration-install-robotframework.sh
 
 - builder:
+    name: integration-install-robotframework-py3
+    builders:
+      - shell:
+          !include-raw:
+          - include-raw-integration-install-robotframework-py3.sh
+
+- builder:
     name: integration-run-test
     builders:
       - shell: "${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
