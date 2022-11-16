@@ -1,118 +1,123 @@
 ---
 - parameter:
-    name: integration-test-plan
-    parameters:
-      - string:
-          name: TESTPLAN
-          default: '{test-plan}'
-          description: 'General test plan we will run unless stream-specific one is found'
+      name: integration-test-plan
+      parameters:
+          - string:
+                name: TESTPLAN
+                default: "{test-plan}"
+                description: "General test plan we will run unless stream-specific one is found"
 
 - parameter:
-    name: integration-test-options
-    parameters:
-      - string:
-          name: TESTOPTIONS
-          default: '{test-options}'
-          description: 'Robot command options'
+      name: integration-test-options
+      parameters:
+          - string:
+                name: TESTOPTIONS
+                default: "{test-options}"
+                description: "Robot command options"
 
 - parameter:
-    name: html-publisher-dir
-    parameters:
-      - string:
-          name: HTMLDIR
-          default: '{html-dir}'
-          description: 'Directory location to be used by HTML publisher plugin'
+      name: html-publisher-dir
+      parameters:
+          - string:
+                name: HTMLDIR
+                default: "{html-dir}"
+                description: "Directory location to be used by HTML publisher plugin"
 
 - parameter:
-    name: html-publisher-files
-    parameters:
-      - string:
-          name: HTMLFILES
-          default: '{html-files}'
-          description: 'File name to be used by HTML publisher plugin to produce the report'
+      name: html-publisher-files
+      parameters:
+          - string:
+                name: HTMLFILES
+                default: "{html-files}"
+                description: "File name to be used by HTML publisher plugin to produce the report"
 
 - builder:
-    name: integration-install-robotframework
-    builders:
-      - shell:
-          !include-raw:
-          - include-raw-integration-install-robotframework.sh
+      name: integration-install-robotframework
+      builders:
+          - shell: !include-raw:
+                - include-raw-integration-install-robotframework.sh
 
 - builder:
-    name: integration-run-test
-    builders:
-      - shell: "${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+      name: integration-install-robotframework-py3
+      builders:
+          - shell: !include-raw:
+                - include-raw-integration-install-robotframework-py3.sh
 
 - builder:
-    name: integration-run-project-test
-    builders:
-      - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTOPTIONS}"
+      name: integration-run-test
+      builders:
+          - shell: "${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
 
 - builder:
-    name: integration-autorelease-fix-relativepaths
-    builders:
-      - shell: "${WORKSPACE}/autorelease/scripts/fix-relativepaths.sh"
+      name: integration-run-project-test
+      builders:
+          - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTOPTIONS}"
 
 - builder:
-    name: integration-autorelease-set-version
-    builders:
-      - shell: "${WORKSPACE}/autorelease/scripts/set-version.sh"
+      name: integration-autorelease-fix-relativepaths
+      builders:
+          - shell: "${WORKSPACE}/autorelease/scripts/fix-relativepaths.sh"
 
 - builder:
-    name: integration-install-vagrant
-    builders:
-      - shell: |
-          #!/bin/bash
-          set -ex # Fail build if any setup step fails
-          sudo add-apt-repository --yes ppa:tiagohillebrandt/vagrant
-          sudo apt update
-          sudo apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
-          vagrant plugin install vagrant-libvirt
-          vagrant plugin install vagrant-disksize
-          vagrant plugin install vagrant-sshfs
-          vagrant plugin install vagrant-reload
-          mkdir -p ~/.ssh
+      name: integration-autorelease-set-version
+      builders:
+          - shell: "${WORKSPACE}/autorelease/scripts/set-version.sh"
 
 - builder:
-    name: integration-docker-compose-logs
-    builders:
-      - shell: !include-raw: shell/docker-compose-logs.sh
+      name: integration-install-vagrant
+      builders:
+          - shell: |
+                #!/bin/bash
+                set -ex # Fail build if any setup step fails
+                sudo add-apt-repository --yes ppa:tiagohillebrandt/vagrant
+                sudo apt update
+                sudo apt --yes install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev vagrant
+                vagrant plugin install vagrant-libvirt
+                vagrant plugin install vagrant-disksize
+                vagrant plugin install vagrant-sshfs
+                vagrant plugin install vagrant-reload
+                mkdir -p ~/.ssh
+
+- builder:
+      name: integration-docker-compose-logs
+      builders:
+          - shell: !include-raw: shell/docker-compose-logs.sh
 
 - publisher:
-    name: integration-robot
-    publishers:
-      - robot:
-          output-path: 'archives'
-          output-xml: '**/output.xml'
-          report-html: '**/report.html'
-          log-html: '**/log.html'
-          other-files: ''
-          unstable-threshold: '{unstable-if}'
-          pass-threshold: '{pass-if}'
-          only-critical: false
+      name: integration-robot
+      publishers:
+          - robot:
+                output-path: "archives"
+                output-xml: "**/output.xml"
+                report-html: "**/report.html"
+                log-html: "**/log.html"
+                other-files: ""
+                unstable-threshold: "{unstable-if}"
+                pass-threshold: "{pass-if}"
+                only-critical: false
 
 - publisher:
-    name: integration-project-robot
-    publishers:
-      - robot:
-          output-path: 'csit/archives'
-          output-xml: '**/output.xml'
-          report-html: '**/report.html'
-          log-html: '**/log.html'
-          other-files: ''
-          unstable-threshold: '{unstable-if}'
-          pass-threshold: '{pass-if}'
-          only-critical: false
+      name: integration-project-robot
+      publishers:
+          - robot:
+                output-path: "csit/archives"
+                output-xml: "**/output.xml"
+                report-html: "**/report.html"
+                log-html: "**/log.html"
+                other-files: ""
+                unstable-threshold: "{unstable-if}"
+                pass-threshold: "{pass-if}"
+                only-critical: false
 
 - publisher:
-    name: integration-docker-compose-logs
-    publishers:
-      - postbuildscript:
-          builders:
-            - role: BOTH
-              build-on:
-                - FAILURE
-                - SUCCESS
-                - UNSTABLE
-              build-steps:
-                - integration-docker-compose-logs
+      name: integration-docker-compose-logs
+      publishers:
+          - postbuildscript:
+                builders:
+                    - role: BOTH
+                      build-on:
+                          - FAILURE
+                          - SUCCESS
+                          - UNSTABLE
+                      build-steps:
+                          - integration-docker-compose-logs
