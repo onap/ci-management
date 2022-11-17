@@ -22,6 +22,7 @@
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
           sign-artifacts: true
+          show-generator: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           mvn-goals: 'clean deploy'

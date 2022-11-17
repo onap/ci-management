@@ -49,6 +49,7 @@
       - gerrit-maven-stage:
           build-timeout: 90
           sign-artifacts: true
+          show-generator: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           mvn-version: 'mvn36'
