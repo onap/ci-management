@@ -39,10 +39,10 @@
       stream:
           - 'master':
                 branch: 'master'
-          - 'istanbul':
-                branch: 'istanbul'
           - 'jakarta':
                 branch: 'jakarta'
+          - 'kohn':
+                branch: 'kohn'
 
 - project:
     name: integration-xtesting-release
@@ -121,11 +121,11 @@
       - 'master':
             branch: 'master'
             files: ''
-      - 'istanbul':
-            branch: 'istanbul'
-            files: ''
       - 'jakarta':
             branch: 'jakarta'
+            files: ''
+      - 'kohn':
+            branch: 'kohn'
             files: ''
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
