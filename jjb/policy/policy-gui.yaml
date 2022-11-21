@@ -44,7 +44,6 @@
       - gerrit-maven-sonar-prescan-script
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     sonar-mvn-goal: '{sonar_mvn_goal}'
     cron: '@daily'
