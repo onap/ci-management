@@ -1,0 +1,10 @@
+Code-Review+1: Matthew Watkins <mwatkins@linuxfoundation.org>
+Code-Review+1: Fabio Palumbo <fpalumbo@contractor.linuxfoundation.org>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Thu, 24 Nov 2022 21:45:40 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/132443
+Project: ci-management
+Branch: refs/heads/master
