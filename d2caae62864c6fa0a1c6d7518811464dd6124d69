@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f18cee26_23323325",
+        "filename": "jjb/integration/include-raw-integration-install-robotframework-py3.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2022-11-24T13:42:14Z",
+      "side": 0,
+      "message": "Unpinning these versions (they came from the ODL repository).\nrequirements.txt changes tested under CentOS-8 and Ubuntu-20.04.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 30
+      },
+      "revId": "d2caae62864c6fa0a1c6d7518811464dd6124d69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
