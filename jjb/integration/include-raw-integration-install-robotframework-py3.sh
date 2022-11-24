@@ -37,9 +37,9 @@ pyhocon
 requests
 robotframework
 robotframework-httplibrary
-robotframework-requests==0.9.3
+robotframework-requests
 robotframework-selenium2library
-robotframework-sshlibrary==3.8.0
+robotframework-sshlibrary
 scapy
 # Module jsonpath is needed by current AAA idmlite suite.
 jsonpath-rw
@@ -54,8 +54,22 @@ isodate
 jmespath
 # Module for backup-restore support library
 jsonpatch
+# Additional package dependencies for ONAP project
+pbr
+deepdiff
+dnspython
+future
+jinja2
+kafka-python
+# Protobuf requires Python >=3.7
+protobuf
+pyyaml
+robotlibcore-temp
+more-itertools
+xvfbwrapper
+PyVirtualDisplay
 EOF
 
 python -m pip install -r requirements.txt
-pip freeze
+python -m pip freeze
 python -m robot.run --version || :
