@@ -39,6 +39,7 @@ robotframework
 robotframework-httplibrary
 robotframework-requests
 robotframework-selenium2library
+robotframework-extendedselenium2library
 robotframework-sshlibrary
 scapy
 # Module jsonpath is needed by current AAA idmlite suite.
@@ -55,6 +56,8 @@ jmespath
 # Module for backup-restore support library
 jsonpatch
 # Additional package dependencies for ONAP project
+# odltools for extra debugging
+odltools
 pbr
 deepdiff
 dnspython
