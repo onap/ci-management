@@ -29,12 +29,16 @@ set -exu
 
 echo "Installing Python Requirements"
 cat << 'EOF' > "requirements.txt"
+paramiko
+six
+urllib3
 docker-py
 ipaddr
 netaddr
 netifaces
 pyhocon
 requests
+selenium<4.6.0,>=4.0.0
 robotframework
 robotframework-httplibrary
 robotframework-requests
@@ -44,7 +48,7 @@ scapy
 # Module jsonpath is needed by current AAA idmlite suite.
 jsonpath-rw
 # Modules for longevity framework robot library
-elasticsearch
+elasticsearch<8.0.0,>=7.0.0
 elasticsearch-dsl
 # Module for pyangbind used by lispflowmapping project
 pyangbind
@@ -54,7 +58,6 @@ isodate
 jmespath
 # Module for backup-restore support library
 jsonpatch
-# Additional package dependencies for ONAP project
 pbr
 deepdiff
 dnspython
@@ -68,6 +71,12 @@ robotlibcore-temp
 more-itertools
 xvfbwrapper
 PyVirtualDisplay
+# Additional package dependencies for ONAP project
+# odltools for extra debugging
+# Generates warning:
+# ERROR: odltools 0.1.34 has requirement requests~=2.19.1,
+#  but you'll have requests 2.28.1 which is incompatible.
+odltools
 EOF
 
 python -m pip install -r requirements.txt
