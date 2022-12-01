@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5159d1b6_38c4646a",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2022-12-01T20:59:38Z",
+      "side": 1,
+      "message": "Are we no longer using this macro?\nWe seem to have switched to the code to use gerrit-trigger-patch-submitted",
+      "range": {
+        "startLine": 366,
+        "startChar": 9,
+        "endLine": 366,
+        "endChar": 45
+      },
+      "revId": "47574f16cad38a07746c26a7a875138ebe14fe15",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
