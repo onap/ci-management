@@ -7,19 +7,8 @@
     mvn-global-settings: global-settings
     archive-artifacts: ""
     build-node: ubuntu1804-helm-2c-1g
-    pre_build_script: !include-raw-escape: shell/helm-repo-init.sh
-    oom_build_script: |
-      #!/bin/bash
-      source helm.prop
-      set -e -o pipefail
-      cd kubernetes/
-      make HELM_BIN=$HELM_BIN all
-    oom_build_script_skip_lint: |
-      #!/bin/bash
-      source helm.prop
-      set -e -o pipefail
-      cd kubernetes/
-      make HELM_BIN=$HELM_BIN SKIP_LINT=TRUE all
+    helm_bin: helm3.8
+    pre_build_script: !include-raw-escape: shell/helm/helm-repo-init.sh
 
     stream:
       - "master":
@@ -29,23 +18,20 @@
       - "jakarta":
           branch: "jakarta"
 
-    helm_bin:
-      - helm3.8
-
     jobs:
       - "{project-name}-{stream}-image-verify":
           files: "**"
       - "{project-name}-{stream}-verify-{helm_bin}":
-          build_script: "{oom_build_script}"
+          build_script: !include-raw-escape: shell/helm/make-helm-all.sh
           files: "kubernetes/**"
           build-timeout: 900
       - "{project-name}-{stream}-merge-helm":
-          build_script: "{oom_build_script}"
+          build_script: !include-raw-escape: shell/helm/make-helm-all.sh
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "kubernetes/**"
           build-timeout: 900
       - "{project-name}-{stream}-release-helm":
-          build_script: "{oom_build_script_skip_lint}"
+          build_script: !include-raw-escape: shell/helm/make-helm-skip-lint.sh
           post_build_script: !include-raw-escape: shell/publish_helm_charts.sh
           files: "kubernetes/**"
           build-timeout: 900

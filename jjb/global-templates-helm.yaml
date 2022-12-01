@@ -21,16 +21,15 @@
     ######################
 
     branch: master
-    submodule-recursive: true
+    submodule-recursive: false
 
     # default params for helm jobs
     build_script: ''
     git-url: '$GIT_URL/$PROJECT'
     post_build_script: ''
     pre_build_script: ''
-    submodule-disable: false
-    submodule-timeout: 10
     build-timeout: 240
+    helm_bin: '{helm_bin}'
 
     #####################
     # Job Configuration #
@@ -49,11 +48,26 @@
           project: '{project}'
           stream: '{stream}'
           lftools-version: '{lftools-version}'
+      - string:
+          name: HELM_BIN
+          default: '{helm_bin|helm3.8}'
 
     wrappers:
       - lf-infra-wrappers:
           build-timeout: '{build-timeout}'
           jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - lf-infra-pre-build
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - shell: '{obj:pre_build_script}'
+      - shell: '{obj:build_script}'
+      - oom-create-netrc:
+          server-id: oom-helm
+      - shell: '{obj:post_build_script}'
+      - lf-provide-maven-settings-cleanup
 
     publishers:
       - lf-infra-publish
@@ -75,20 +89,11 @@
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
-      - gerrit-trigger-helm-patch-submitted:
-          status-context: '{project}-Helm-Verify'
+      - gerrit-trigger-patch-submitted:
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          helm_bin: '{helm_bin}'
           files: '{files}'
-
-    builders:
-      - lf-infra-pre-build
-      - shell: |
-          echo "export HELM_BIN={helm_bin}" > helm.prop
-      - shell: '{obj:pre_build_script}'
-      - shell: '{obj:build_script}'
 
 - job-template:
     name: '{project-name}-{stream}-merge-helm'
@@ -103,29 +108,16 @@
           submodule-recursive: '{submodule-recursive}'
 
     triggers:
-      - gerrit-trigger-helm-patch-merged:
+      - gerrit-trigger-patch-merged:
           server: '{server-name}'
           project: '{project}'
           branch: '{branch}'
-          helm_bin: '{helm_bin}'
           files: '{files}'
 
     builders:
-      - lf-infra-pre-build
-      - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      - shell: |
-          echo "export HELM_BIN={helm_bin}" > helm.prop
-      - shell: '{obj:pre_build_script}'
-      - shell: '{obj:build_script}'
-      - oom-create-netrc:
-          server-id: oom-helm
       - inject:
           properties-content: |
             BUILD_TYPE=snapshot
-      - shell: '{obj:post_build_script}'
-      - lf-provide-maven-settings-cleanup
 
 - job-template:
     name: '{project-name}-{stream}-release-helm'
@@ -141,7 +133,6 @@
 
     triggers:
       - gerrit:
-          helm_bin: '{helm_bin}'
           server-name: '{gerrit-server-name}'
           trigger-on:
             - comment-added-contains-event:
@@ -157,18 +148,6 @@
                   pattern: '**'
 
     builders:
-      - lf-infra-pre-build
-      - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      - shell: |
-          echo "export HELM_BIN={helm_bin}" > helm.prop
-      - shell: '{obj:pre_build_script}'
-      - shell: '{obj:build_script}'
-      - oom-create-netrc:
-          server-id: oom-helm
       - inject:
           properties-content: |
             BUILD_TYPE=release
-      - shell: '{obj:post_build_script}'
-      - lf-provide-maven-settings-cleanup
