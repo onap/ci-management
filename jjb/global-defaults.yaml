@@ -58,7 +58,6 @@
 
     # SonarCloud
     sonarcloud_project_organization: onap
-    sonarcloud_api_token: da97604dfdc36ec82488a97ebea96ad01f7b10ff
     sonar_mvn_goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar"
 
     # Nexus3 docker registries
