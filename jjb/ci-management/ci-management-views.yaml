@@ -130,3 +130,11 @@
     view-name: Verify-Jobs
     view-description: 'List of Verify jobs'
     view-regex: '^.*-verify-.*'
+
+- project:
+    name: Release-Jobs
+    views:
+      - common-view
+    view-name: Release-Jobs
+    view-description: 'List of Release Merge jobs'
+    view-regex: '.*release-merge.*'
