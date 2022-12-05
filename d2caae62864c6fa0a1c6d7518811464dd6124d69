@@ -22,6 +22,30 @@
       "revId": "d2caae62864c6fa0a1c6d7518811464dd6124d69",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68ecf51d_9706e80e",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2022-12-05T10:43:15Z",
+      "side": 0,
+      "message": "Re added but again, why the need for a specific comment-contains value?",
+      "parentUuid": "9bea4076_4381537a",
+      "range": {
+        "startLine": 378,
+        "startChar": 70,
+        "endLine": 378,
+        "endChar": 78
+      },
+      "revId": "d2caae62864c6fa0a1c6d7518811464dd6124d69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
