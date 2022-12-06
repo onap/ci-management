@@ -36,9 +36,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
-          java-version: openjdk11
       - 'jakarta':
           branch: 'jakarta'
           java-version: openjdk11
