@@ -16,9 +16,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
-          java-version: openjdk11
     mvn-settings: 'so-libs-settings'
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
