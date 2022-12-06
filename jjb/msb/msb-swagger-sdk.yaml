@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'msb-swagger-sdk-settings'
     files: '**'
     archive-artifacts: ''
