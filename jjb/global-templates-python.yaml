@@ -59,12 +59,25 @@
           settings-file: '{mvn-settings}'
       - shell: |
           #!/bin/bash
-          virtualenv $WORKSPACE/venv-tox
-          source $WORKSPACE/venv-tox/bin/activate
-          pip install --upgrade pip
-          pip install --upgrade tox argparse
-          pip freeze
-          cd $WORKSPACE/{path}
+          # shellcheck disable=SC1090
+          source ~/lf-env.sh
+
+          lf-activate-venv --python python3.8 --venv-file /tmp/.toxenv \
+            tox tox-pyenv virtualenv
+
+          if [[ -d /opt/pyenv ]]; then
+            echo "---> Setting up pyenv"
+            export PYENV_ROOT="/opt/pyenv"
+            export PATH="$PYENV_ROOT/bin:$PATH"
+            PYTHONPATH="$(pwd)"
+            export PYTHONPATH
+            export TOX_TESTENV_PASSENV=PYTHONPATH
+          fi
+
+          # Useful debugging
+          python --version
+          tox --version
+
           tox
 
     publishers:
