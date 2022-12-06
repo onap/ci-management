@@ -12,8 +12,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'elalto':
-          branch: 'elalto'
     mvn-settings: 'multicloud-openstack-settings'
     subproject:
       - 'pike':
