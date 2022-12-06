@@ -22,8 +22,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'msb-discovery-settings'
     files: '**'
     archive-artifacts: ''
