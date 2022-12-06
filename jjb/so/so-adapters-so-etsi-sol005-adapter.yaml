@@ -36,9 +36,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'honolulu':
-          branch: 'honolulu'
-          java-version: openjdk11
     mvn-settings: 'so-adapters-so-etsi-sol005-adapter-settings'
     files: '**'
     archive-artifacts: ''
