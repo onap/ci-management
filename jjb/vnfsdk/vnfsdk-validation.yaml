@@ -16,9 +16,6 @@
         - 'master':
             branch: 'master'
             java-version: openjdk11
-        - 'frankfurt':
-            branch: 'frankfurt'
-            java-version: openjdk8
     mvn-settings: 'vnfsdk-validation-settings'
     files: '**'
     archive-artifacts: ''
