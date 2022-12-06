@@ -7,9 +7,6 @@
       - 'master':
           branch: 'master'
           java-version: openjdk11
-      - 'guilin':
-          branch: 'guilin'
-          java-version: openjdk11
     mvn-settings: 'multicloud-framework-settings'
     subproject:
       - 'multivimbroker':
@@ -122,8 +119,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     java-version: openjdk11
     mvn-params: '-f artifactbroker/pom.xml'
     mvn-settings: 'multicloud-framework-settings'
