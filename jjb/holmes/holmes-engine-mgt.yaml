@@ -22,12 +22,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'guilin':
-          branch: 'guilin'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'holmes-engine-management-settings'
     files: '**'
     archive-artifacts: ''
