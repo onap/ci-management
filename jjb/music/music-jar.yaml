@@ -20,10 +20,6 @@
     stream:
       - 'jar-master':
           branch: 'master'
-      - 'jar-casablanca':
-          branch: 'casablanca'
-      - 'jar-release-2.5.5':
-          branch: 'release-2.5.5'
     mvn-settings: 'music-settings'
     files: '**'
     archive-artifacts: ''
