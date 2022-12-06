@@ -13,8 +13,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'istanbul':
-          branch: 'istanbul'
     mvn-settings: 'msb-java-sdk-settings'
     files: '**'
     archive-artifacts: ''
