@@ -46,6 +46,30 @@
       "revId": "d2caae62864c6fa0a1c6d7518811464dd6124d69",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a7c1976c_8927d5ce",
+        "filename": "jjb/global-macros.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2022-12-07T09:32:43Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "68ecf51d_9706e80e",
+      "range": {
+        "startLine": 378,
+        "startChar": 70,
+        "endLine": 378,
+        "endChar": 78
+      },
+      "revId": "d2caae62864c6fa0a1c6d7518811464dd6124d69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
