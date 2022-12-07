@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e -o pipefail
-echo "*** starting releace process for $BUILD_TYPE"
+echo "*** starting chart publish process for $BUILD_TYPE"
 cd kubernetes/dist/packages/ || exit
 helm_charts=()
 while IFS= read -a line; do
@@ -16,19 +16,15 @@ for chart in "${helm_charts[@]}"; do
       echo "  * snapshot build, pushing to https://nexus3.onap.org/repository/onap-helm-testing/"
       curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
       ;;
-    'staging')
-      echo "  * staging build, pushing to https://nexus3.onap.org/repository/onap-helm-testing/"
-      curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-testing/"
-      ;;
     'release')
       echo "  * release build, pushing to https://nexus3.onap.org/repository/onap-helm-release/"
       curl -vn --upload-file "$chart" "https://nexus3.onap.org/repository/onap-helm-release/"
         ;;
     *)
-      echo "You must set BUILD_TYPE to one of (snapshot, staging, release)."
+      echo "You must set BUILD_TYPE to one of (snapshot, release)."
       exit 1
       ;;
   esac
 done
-echo "*** release process finished"
+echo "*** chart publish process finished"
 cd ../../../
