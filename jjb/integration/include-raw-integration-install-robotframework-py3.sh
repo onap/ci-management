@@ -41,7 +41,7 @@ requests
 selenium<4.6.0,>=4.0.0
 robotframework
 robotframework-httplibrary
-robotframework-requests
+robotframework-requests==0.9.3
 robotframework-selenium2library
 robotframework-sshlibrary
 scapy
@@ -79,6 +79,6 @@ PyVirtualDisplay
 odltools
 EOF
 
-python -m pip install -r requirements.txt
-python -m pip freeze
-python -m robot.run --version || :
+python3 -m pip install -r requirements.txt
+python3 -m pip freeze
+python3 -m robot.run --version || :
