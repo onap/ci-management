@@ -1,0 +1,8 @@
+Code-Review+1: Guangrong Fu <fu.guangrong@zte.com.cn>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Tue, 13 Dec 2022 04:23:39 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/132603
+Project: ci-management
+Branch: refs/heads/master
