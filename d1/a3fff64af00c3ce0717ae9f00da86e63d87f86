@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Tue, 13 Dec 2022 03:45:42 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/132600
+Project: ci-management
+Branch: refs/heads/master
