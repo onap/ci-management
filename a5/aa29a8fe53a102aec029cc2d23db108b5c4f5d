@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Cedric Ollivier <cedric.ollivier@orange.com>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Code-Review+1: Matthew Watkins <mwatkins@linuxfoundation.org>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Thu, 15 Dec 2022 20:43:14 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/132606
+Project: ci-management
+Branch: refs/heads/master
