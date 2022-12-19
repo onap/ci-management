@@ -9,9 +9,9 @@
     name: dcaegen2
     project-name: 'dcaegen2'
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-release-version-java-daily'
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-maven-merge
 
     project: 'dcaegen2'
     stream:
@@ -21,6 +21,8 @@
           branch: 'kohn'
       - 'jakarta':
           branch: 'jakarta'
+    mvn-snapshot-id: 'ecomp-snapshots'
+    nexus-snapshot-repo: 'snapshots'
     mvn-settings: 'dcaegen2-settings'
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
