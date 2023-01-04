@@ -15,12 +15,34 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# $1 project/functionality
-# $2 robot options
+# $1 project/functionality {TESTPLAN}
+# $2 robot options         {TESTOPTIONS}
 
 echo "---> run-csit.sh"
 
 WORKDIR=$(mktemp -d --suffix=-robot-workdir)
+
+# Exit if no arguments are provided and required varibles not set
+if [[ $# -eq 0 ]] && [[ -z "${TESTPLAN}" ]] && [[ -z "${TESTOPTIONS}" ]]; then
+    echo
+    echo "Usage: $0 plans/<project>/<functionality> [<robot-options>]"
+    echo
+    echo " <project>, <functionality>, <robot-options>:  "
+    echo "  The same values as for the JJB job template:"
+    echo '  {project}-csit-{functionality}'
+    echo
+    exit 1
+
+elif [[ $# -ne 2 ]] && [[ -z "${TESTPLAN}" ]] && [[ -z "${TESTOPTIONS}" ]]; then
+    echo
+    echo "Script called without arguments, but the following variables"
+    echo " should be set: {TESTPLAN} {TESTOPTIONS}"
+    echo
+    exit 1
+
+elif [[ $# -eq 2 ]]; then
+    export TESTPLAN=$1; export TESTOPTIONS=$2
+fi
 
 # Python version should match that used to setup
 #  robot-framework in other jobs/stages
@@ -45,9 +67,10 @@ fi
 
 # wrapper for sourcing a file
 function source_safely {
-    [ -z "$1" ] && return 1
+    [[ -z "$1" ]] && return 1
     relax_set
-    . "$1"
+    # shellcheck disable=SC1090
+    source "$1"
     load_set
 }
 
@@ -55,6 +78,10 @@ function on_exit {
     rc=$?
     if [[ ${WORKSPACE} ]]; then
         if [[ ${WORKDIR} ]]; then
+
+### To FIX - assumes rsync is installed!
+# ./run-csit.sh: line 80: rsync: command not found
+
             rsync -av "$WORKDIR/" "$WORKSPACE/archives/$TESTPLAN"
         fi
         # Record list of active docker containers
@@ -66,7 +93,7 @@ function on_exit {
     # Run teardown script plan if it exists
     cd "${TESTPLANDIR}"
     TEARDOWN="${TESTPLANDIR}/teardown.sh"
-    if [ -f "${TEARDOWN}" ]; then
+    if [[ -f "${TEARDOWN}" ]]; then
         echo "Running teardown script ${TEARDOWN}"
         source_safely "${TEARDOWN}"
     fi
@@ -108,15 +135,15 @@ function load_set {
 
     # bash shellopts
     for i in $(echo "$SHELLOPTS" | tr ':' ' ') ; do
-        set +o ${i}
+        set +o "${i}"
     done
     for i in $(echo "$RUN_CSIT_SHELLOPTS" | tr ':' ' ') ; do
-        set -o ${i}
+        set -o "${i}"
     done
 
     # other options
     for i in $(echo "$_setopts" | sed 's/./& /g') ; do
-        set +${i}
+        set +"${i}"
     done
     set -${RUN_CSIT_SAVE_SET}
 }
@@ -141,28 +168,20 @@ function relax_set {
 # set and save options for quick failure
 harden_set && save_set
 
-if [ $# -eq 0 ]; then
-    echo
-    echo "Usage: $0 plans/<project>/<functionality> [<robot-options>]"
-    echo
-    echo "    <project>, <functionality>, <robot-options>:  "
-    echo "        The same values as for the '{project}-csit-{functionality}' JJB job template."
-    echo
-    exit 1
+if [[ -z "${WORKSPACE}" ]]; then
+    if (git rev-parse --show-toplevel > /dev/null 2>&1); then
+        WORKSPACE=$(git rev-parse --show-toplevel)
+        export WORKSPACE
+    else
+        WORKSPACE=$(pwd)
+        export WORKSPACE
+    fi
 fi
 
-if [ -z "$WORKSPACE" ]; then
-    export WORKSPACE=$(git rev-parse --show-toplevel)
-fi
-
-if [ -f "${WORKSPACE}/${1}/testplan.txt" ]; then
-    export TESTPLAN="${1}"
-else
+if [[ ! -f "${WORKSPACE}/${TESTPLAN}/testplan.txt" ]]; then
     echo "testplan not found: ${WORKSPACE}/${TESTPLAN}/testplan.txt"
     exit 2
 fi
-
-export TESTOPTIONS="${2}"
 
 rm -rf "$WORKSPACE/archives/$TESTPLAN"
 mkdir -p "$WORKSPACE/archives/$TESTPLAN"
@@ -199,7 +218,8 @@ docker_stats | tee "$WORKSPACE/archives/$TESTPLAN/_sysinfo-1-after-setup.txt"
 # Run test plan
 cd "$WORKDIR"
 echo "Reading the testplan:"
-cat "${TESTPLANDIR}/testplan.txt" | egrep -v '(^[[:space:]]*#|^[[:space:]]*$)' | sed "s|^|${WORKSPACE}/tests/|" > testplan.txt
+grep -E -v '(^[[:space:]]*#|^[[:space:]]*$)' "${TESTPLANDIR}/testplan.txt" |\
+    sed "s|^|${WORKSPACE}/tests/|" > testplan.txt
 cat testplan.txt
 SUITES=$( xargs -a testplan.txt )
 
@@ -212,7 +232,7 @@ python3 --version
 pip freeze
 python3 -m robot.run --version || :
 
-python -m robot.run -N ${TESTPLAN} -v WORKSPACE:/tmp ${ROBOT_VARIABLES} ${TESTOPTIONS} ${SUITES}
+python -m robot.run -N "${TESTPLAN}" -v WORKSPACE:/tmp "${ROBOT_VARIABLES}" "${TESTOPTIONS}" "${SUITES}"
 RESULT=$?
 load_set
 echo "RESULT: $RESULT"
