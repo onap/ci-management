@@ -24,18 +24,43 @@ set -exo pipefail
 
 ROBOT_INSTALLER='include-raw-integration-install-robotframework-py3.sh'
 
-if !(which git > /dev/null 2>&1); then
-    echo "GIT binary not found current PATH"
-    echo $PATH; exit 1
+# Allows testing for root permissions
+REQ_USER=$(id -un)
+
+if ! (which git > /dev/null 2>&1); then
+    echo "GIT binary not found in current PATH"
+    # Add missing package to prevent script/job failures
+    if (grep Ubuntu /etc/os-release > /dev/null 2>&1) || \
+        (grep Debian /etc/os-release > /dev/null 2>&1); then
+        echo "Installing package dependency for Ubuntu/Debian"
+    if [[ "${REQ_USER}" == 'root' ]]; then
+            apt-get update
+            apt-get install -y git
+        else
+            sudo apt-get update
+            sudo apt-get install -y git
+        fi
+    elif (grep RedHat /etc/os-release > /dev/null 2>&1) || \
+        (grep CentOS /etc/os-release > /dev/null 2>&1); then
+        echo "Installing package dependency for CentOS/RedHat"
+    if [[ "${REQ_USER}" == 'root' ]]; then
+            yum install -y git
+        else
+            sudo yum install -y git
+        fi
+    else
+        echo "Warning: unmatched OS/distribution"
+        echo "Missing software will not be installed"
+    fi
 fi
 
-if [ -z "$WORKSPACE" ]; then
+if [[ -z "$WORKSPACE" ]]; then
     # shellcheck disable=SC2155
-    export WORKSPACE=`git rev-parse --show-toplevel`
+    export WORKSPACE=$(git rev-parse --show-toplevel)
 fi
 
 # shellcheck disable=SC2034
-TESTPLANDIR=${WORKSPACE}/${TESTPLAN}
+TESTPLANDIR="${WORKSPACE}/${TESTPLAN}"
 
 # Python version should match that used to setup
 #  robot-framework in other jobs/stages
@@ -56,22 +81,26 @@ fi
 
 # Assume that if ROBOT3_VENV is set, virtualenv
 #  with system site packages can be activated
-if [ -f ${WORKSPACE}/env.properties ]; then
-    source ${WORKSPACE}/env.properties
+if [[ -f "${WORKSPACE}/env.properties" ]]; then
+    source "${WORKSPACE}/env.properties"
+elif [[ -f /tmp/env.properties ]]; then
+    source /tmp/env.properties
 fi
-if [ -f ${ROBOT3_VENV}/bin/activate ]; then
-    source ${ROBOT3_VENV}/bin/activate
+
+if [[ -f "${ROBOT3_VENV}/bin/activate" ]]; then
+    source "${ROBOT3_VENV}/bin/activate"
 else
     # Robot framework was not found
     #  clone ci-management repository and use install script
     git clone "https://gerrit.onap.org/r/ci-management" \
         /tmp/ci-management
-    source /tmp/ci-management/jjb/integration/${ROBOT_INSTALLER}
+    # shellcheck disable=SC1090
+    source "/tmp/ci-management/jjb/integration/${ROBOT_INSTALLER}"
 fi
 
 # install eteutils
-mkdir -p ${ROBOT3_VENV}/src/onap
-rm -rf ${ROBOT3_VENV}/src/onap/testsuite
+mkdir -p "${ROBOT3_VENV}/src/onap"
+rm -rf "${ROBOT3_VENV}/src/onap/testsuite"
 # Source from the Nexus repository
 python3 -m pip install --upgrade \
     --extra-index-url="https://nexus3.onap.org/repository/PyPi.staging/simple" \
@@ -82,4 +111,3 @@ echo "Versioning information:"
 python3 --version
 pip freeze
 python3 -m robot.run --version || :
-
