@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "59d055ba_7b4449cf",
+        "filename": "jjb/integration/prepare-csit.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2023-01-11T23:27:07Z",
+      "side": 1,
+      "message": "should be indented... caused me to be very confused with the elif",
+      "revId": "c548920e6a465b241b725d9422cf03075ccde092",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "e2e0c14f_5b3e4bf3",
         "filename": "jjb/integration/prepare-csit.sh",
         "patchSetId": 8
