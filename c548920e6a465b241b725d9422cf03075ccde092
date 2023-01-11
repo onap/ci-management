@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2e0c14f_5b3e4bf3",
+        "filename": "jjb/integration/prepare-csit.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2023-01-11T23:23:51Z",
+      "side": 1,
+      "message": "wrong indent",
+      "revId": "c548920e6a465b241b725d9422cf03075ccde092",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f5b668d_b41ca937",
+        "filename": "jjb/integration/prepare-csit.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2023-01-11T23:23:51Z",
+      "side": 1,
+      "message": "getting confusion with where I am on the if/then",
+      "revId": "c548920e6a465b241b725d9422cf03075ccde092",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71830d82_a2c57d2c",
+        "filename": "jjb/integration/prepare-csit.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 4677
+      },
+      "writtenOn": "2023-01-11T23:23:51Z",
+      "side": 1,
+      "message": "these indents are ok",
+      "revId": "c548920e6a465b241b725d9422cf03075ccde092",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
