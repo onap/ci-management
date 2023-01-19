@@ -31,7 +31,7 @@
           branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -97,7 +97,7 @@
     project: 'ccsdk/cds'
     project-name: 'ccsdk-cds'
     branch: 'master'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     mvn-goals: 'clean install'
@@ -113,7 +113,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-cds-settings'
     build-node: centos8-builder-4c-4g

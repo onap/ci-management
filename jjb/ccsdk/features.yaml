@@ -25,7 +25,7 @@
           branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -53,7 +53,7 @@
     project: 'ccsdk/features'
     project-name: 'ccsdk-features'
     branch: 'master'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     mvn-goals: 'clean install'
@@ -69,7 +69,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
     mvn-opts: '-Xmx3072m -XX:MaxPermSize=1024m'

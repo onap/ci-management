@@ -31,7 +31,7 @@
           branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: 'sdnc-oam-settings'
     files: '**'
@@ -71,7 +71,7 @@
       - 'master':
           branch: 'master'
     mvn-settings: 'sdnc-oam-settings'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
 
 - project:

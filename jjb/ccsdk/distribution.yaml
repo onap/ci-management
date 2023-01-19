@@ -33,7 +33,7 @@
           branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-distribution-settings'
     files: '**'
@@ -72,7 +72,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-distribution-settings'
     build-node: centos7-docker-8c-8g
