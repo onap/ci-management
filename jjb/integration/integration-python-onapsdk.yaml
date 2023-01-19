@@ -5,7 +5,8 @@
     project-name: integration-python-onapsdk
     python-version: python3
     jobs:
-      - integration-linters
+      - '{project-name}-{subproject}-python-staging-{stream}'
+      - '{project-name}-{subproject}-python-release-{stream}'
     stream:
       - 'master':
           branch: 'master'
@@ -26,10 +27,6 @@
           tox-dir: '.'
           tox-envs: 'py310'
           pattern: '**/*.py'
-      - 'python3.11':
-          tox-dir: '.'
-          tox-envs: 'py311'
-          pattern: '**/*.py'
       - 'pylint':
           tox-dir: '.'
           tox-envs: 'pylint'
@@ -38,10 +35,9 @@
           tox-dir: '.'
           tox-envs: 'pydocstyle'
           pattern: '**/*.py'
-      - 'bandit':
-          tox-dir: '.'
-          tox-envs: 'bandit'
-          pattern: '**/*.py'
+    stream:
+      - 'master':
+          branch: 'master'
 
 - project:
     name: integration-python-onapsdk-project-view
