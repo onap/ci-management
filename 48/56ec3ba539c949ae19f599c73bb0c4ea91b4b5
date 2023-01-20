@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Fri, 20 Jan 2023 19:48:27 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/132975
+Project: ci-management
+Branch: refs/heads/master
