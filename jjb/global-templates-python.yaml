@@ -63,7 +63,7 @@
           source ~/lf-env.sh
 
           lf-activate-venv --python python3.8 --venv-file /tmp/.toxenv \
-            tox==3.27.1 tox-pyenv virtualenv
+            tox==3.27.1 tox-pyenv virtualenv argparse webtest
 
           if [[ -d /opt/pyenv ]]; then
             echo "---> Setting up pyenv"
@@ -75,7 +75,6 @@
           fi
 
           python -m pip install --upgrade pip
-          python -m pip install --upgrade tox argparse
 
           # Useful debugging
           python --version
