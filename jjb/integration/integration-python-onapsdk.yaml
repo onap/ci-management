@@ -56,3 +56,32 @@
     build-node: centos8-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: integration-python-onapsdk-pypi-build
+    project: integration/python-onapsdk
+    project-name: integration-python-onapsdk
+    stream:
+      - 'master':
+          branch: 'master'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'src/onapsdk/version.py'
+    jobs:
+      - gerrit-pypi-verify
+      - gerrit-pypi-merge:
+          pypi-repo: pypi-test
+
+- project:
+    name: integration-python-onapsdk-pypi-release
+    project: integration/python-onapsdk
+    project-name: integration-python-onapsdk
+    stream:
+      - 'master':
+          branch: 'master'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'src/onapsdk/version.py'
+    jobs:
+      - gerrit-pypi-release-verify
+      - gerrit-pypi-release-merge
