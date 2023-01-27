@@ -84,4 +84,6 @@
         pattern: 'src/onapsdk/version.py'
     jobs:
       - gerrit-pypi-release-verify
-      - gerrit-pypi-release-merge
+      - gerrit-pypi-release-merge:
+          pypi-repo: pypi-onapsdk
+
