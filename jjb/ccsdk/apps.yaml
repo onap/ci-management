@@ -15,7 +15,7 @@
           cron: '@daily'
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-stage:
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
@@ -28,14 +28,12 @@
           maven-versions-plugin: true
           cron: '@daily'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
 
     project: 'ccsdk/apps'
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
     java-version: openjdk17
@@ -48,7 +46,7 @@
       deployAtEnd=true
     files: '**'
     archive-artifacts: ''
-    build-node: centos7-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
 
