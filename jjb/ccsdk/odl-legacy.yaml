@@ -27,7 +27,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-odl-legacy-settings'
     # due to a strange macro / variable translation problem this needs to be
@@ -54,7 +54,7 @@
     project: 'ccsdk/odl-legacy'
     project-name: 'ccsdk-odl-legacy'
     branch: 'master'
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-odl-legacy-settings'
     mvn-goals: 'clean install'
@@ -70,7 +70,7 @@
     stream:
       - 'master':
           branch: 'master'
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-odl-legacy-settings'
     build-node: centos7-builder-4c-4g
