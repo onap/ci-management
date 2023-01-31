@@ -29,8 +29,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
     java-version: openjdk17
