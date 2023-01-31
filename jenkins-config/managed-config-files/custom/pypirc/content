@@ -29,3 +29,8 @@ password: $PYPI_TEST_TOKEN
 repository: https://pypi.org/
 username: __token__
 password: $PYPI_TOKEN
+
+[pypi-onapsdk]
+repository: https://pypi.org/
+username: __token__
+password: $ONAP_PYPI_TOKEN
