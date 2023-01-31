@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fde585ba_657786b6",
+        "filename": "jjb/ccsdk/parent.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-01-31T17:14:24Z",
+      "side": 1,
+      "message": "This will not work since only centos has sigul. \nEither we can roll back to centos, or set sign-artifacts to false",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "d65b74125efd1365374ab65b09045559aec6045f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae1025af_59111db8",
+        "filename": "jjb/ccsdk/sli.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-01-31T17:14:24Z",
+      "side": 1,
+      "message": "This will not work since only centos has sigul. \nEither we can roll back to centos, or set sign-artifacts to false",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "d65b74125efd1365374ab65b09045559aec6045f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
