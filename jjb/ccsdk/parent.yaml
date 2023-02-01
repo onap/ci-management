@@ -9,13 +9,13 @@
           cron: '@daily'
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-stage:
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-builder-4c-4g
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
           sbom-generator: false
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
 
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
@@ -60,13 +60,13 @@
     java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-parent-settings'
-    build-node: centos7-builder-4c-4g
+    build-node: centos8-builder-4c-4g
 
 - project:
     name: ccsdk-parent-info
     project-name: ccsdk-parent
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: ccsdk/parent
     branch: master
