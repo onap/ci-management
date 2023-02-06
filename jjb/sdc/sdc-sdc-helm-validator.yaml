@@ -27,6 +27,7 @@
           maven-versions-plugin: true
           mvn-goals: 'clean deploy'
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-goals: 'clean install docker:build docker:push'
