@@ -9,11 +9,13 @@
           mvn-params: '-P docker'
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'

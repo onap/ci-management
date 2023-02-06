@@ -4,11 +4,13 @@
     project-name: 'policy-clamp'
     jobs:
       - gerrit-maven-stage:
+          sbom-generator: true
           build-node: centos7-docker-8c-8g
           maven-versions-plugin: true
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
