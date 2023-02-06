@@ -5,10 +5,12 @@
     jobs:
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
+          sbom-generator: true
           maven-versions-plugin: true
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
