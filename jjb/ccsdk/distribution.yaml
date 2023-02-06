@@ -16,6 +16,7 @@
           cron: ''
           sbom-generator: false
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: centos8-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'

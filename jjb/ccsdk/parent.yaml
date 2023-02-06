@@ -29,6 +29,7 @@
             - gerrit-maven-merge:
                 mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0-SNAPSHOT'
             - gerrit-maven-stage:
+                sbom-generator: true
                 mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0'
             - '{project-name}-gerrit-release-jobs':
                 mvn-params: '-Drevision=3.0.0'

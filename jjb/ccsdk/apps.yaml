@@ -22,6 +22,7 @@
           sbom-generator: false
 
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           container-public-registry: 'nexus3.onap.org:10001'
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-Dmaven.test.skip=true -Pdocker'
