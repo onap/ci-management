@@ -59,11 +59,13 @@
       - '{project-name}-{stream}-{subproject}-verify-java'
       - '{project-name}-{stream}-{subproject}-merge-java'
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: centos8-docker-8c-8g
+          sbom-generator: true
           maven-goals: install
           mvn-params: '-P docker'
           maven-versions-plugin: true

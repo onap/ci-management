@@ -13,10 +13,12 @@
           pattern: 'vio/**'
     jobs:
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-goals: install
           mvn-params: '-P docker'
