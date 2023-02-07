@@ -10,7 +10,7 @@
           sign-artifacts: true
           build-node: centos8-builder-4c-4g
           cron: ''
-          sbom-generator: false
+          sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos8-docker-8c-8g
 
