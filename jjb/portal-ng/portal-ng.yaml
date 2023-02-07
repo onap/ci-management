@@ -1,0 +1,15 @@
+---
+- project:
+    name: portal-ng-project-view
+    project-name: portal-ng
+    views:
+      - project-view
+
+- project:
+    name: portal-ng-info
+    project: portal-ng
+    project-name: portal-ng
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
