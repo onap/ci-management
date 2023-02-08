@@ -15,8 +15,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
     mvn-settings: 'ccsdk-distribution-settings'
@@ -38,8 +36,6 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
     mvn-settings: 'ccsdk-oran-settings'
