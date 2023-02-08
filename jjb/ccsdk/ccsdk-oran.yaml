@@ -28,11 +28,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+          java-version: openjdk17
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk17
+          java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-oran-settings'
     files: '**'
@@ -87,6 +86,6 @@
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-oran-settings'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'
     mvn-opts: '-Ddocker.skip=true'
     mvn-params: '-f a1-policy-management'
