@@ -18,6 +18,7 @@
           build-node: centos7-builder-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
