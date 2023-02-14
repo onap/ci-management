@@ -55,6 +55,12 @@
     builders:
       - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTOPTIONS}"
 
+
+- builder:
+      name: integration-run-project-k8s-test
+      builders:
+          - shell: "${WORKSPACE}/csit/run-k8s-csit.sh install ${TESTOPTIONS}"
+
 - builder:
     name: integration-autorelease-fix-relativepaths
     builders:
