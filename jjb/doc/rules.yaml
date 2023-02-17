@@ -1,0 +1,60 @@
+- scm:
+    name: doc-scm
+    scm:
+      - git:
+          url: 'https://gerrit.onap.org/gerrit/{project}'
+          refspec: '+refs/heads/*:refs/remotes/origin/* +refs/changes/*:refs/changes/*'
+          branches:
+            - '{ref}'
+
+- trigger:
+    name: doc-rules-patchset-created
+    triggers:
+      - gerrit:
+          trigger-on:
+            - patchset-created-event
+            - comment-added-contains-event:
+                comment-contains-value: recheck
+            - comment-added-contains-event:
+                comment-contains-value: reverify
+          server-name: gerrit.onap.org
+          projects:
+            - project-compare-type: 'REG_EXP'
+              project-pattern: '*'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: master
+                - branch-compare-type: 'ANT'
+                  branch-pattern: kohn
+
+- parameter:
+    name: doc-rules-node
+    parameters:
+      - label:
+          name: node
+          default: '{node}'
+
+- builder:
+    name: doc-rules
+    builders:
+      - shell: |
+          find -name tox.ini |xargs grep sphinx-build | grep -v \\-W > /dev/null && exit 1 || exit 0
+
+- job-template:
+    name: doc-rules
+    triggers:
+      - doc-rules-patchset-created
+    scm:
+      - doc-scm:
+          ref: $GERRIT_REFSPEC
+          project: $GERRIT_PROJECT
+    parameters:
+      - doc-rules-node:
+          node: centos7-builder-2c-1g
+    builders:
+      - doc-rules
+
+- project:
+    name: 'doc-rules'
+    jobs:
+      - 'doc-rules'
