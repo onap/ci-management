@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-pipelines-build-integration-project-view
+    project-name: integration-pipelines-build-integration
+    views:
+      - project-view
+
+- project:
+    name: integration-pipelines-build-integration-info
+    project: integration/pipelines/build-integration
+    project-name: integration-pipelines-build-integration
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
