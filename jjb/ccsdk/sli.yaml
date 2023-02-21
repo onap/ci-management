@@ -9,7 +9,7 @@
           cron: '@daily'
           mvn-params: '-Dmaven.test.skip=true'
       - gerrit-maven-stage:
-          build-node: centos8-builder-4c-4g
+          build-node: centos8-docker-8c-8g
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
           cron: ''
