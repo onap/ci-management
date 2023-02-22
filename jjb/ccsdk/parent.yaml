@@ -15,7 +15,7 @@
           cron: ''
           sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos8-docker-8c-8g
+          build-node: centos7-docker-2c-1g
 
     mvn-snapshot-id: 'ecomp-snapshots'
     nexus-snapshot-repo: 'snapshots'
