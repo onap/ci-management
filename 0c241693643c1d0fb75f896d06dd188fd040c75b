@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1efa76ae_0577991e",
+        "filename": "jenkins-config/clouds/openstack/cattle/centos7-docker-2c-1g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2023-02-23T00:52:58Z",
+      "side": 1,
+      "message": "Hi Jessica,\nAccording to https://vexxhost.com/pricing/ the v3-standard-2 size includes 2 cores and 8 GB of memory, so I would recommend either updating the label to \"centos7-docker-2c-8g\" or use a smaller hardware (btw, none provides 1GB of RAM, the minimum is 4GB for standard type and 2GB for starter type)",
+      "revId": "0c241693643c1d0fb75f896d06dd188fd040c75b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ff3b2d6_0632e29f",
+        "filename": "jenkins-config/clouds/openstack/cattle/centos8-docker-2c-1g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2023-02-23T00:52:58Z",
+      "side": 1,
+      "message": "Hi Jessica,\nAccording to https://vexxhost.com/pricing/ the v3-standard-2 size includes 2 cores and 8 GB of memory, so I would recommend either updating the label to \"centos7-docker-2c-8g\" or use a smaller hardware (btw, none provides 1GB of RAM, the minimum is 4GB for standard type and 2GB for starter type)",
+      "revId": "0c241693643c1d0fb75f896d06dd188fd040c75b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
