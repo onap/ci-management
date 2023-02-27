@@ -37,11 +37,10 @@
     stream:
       - 'master':
           branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
+          java-version: openjdk17
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk17
+          java-version: openjdk11
     mvn-version : "mvn38"
     mvn-settings: 'sdnc-apps-settings'
 
@@ -74,7 +73,7 @@
     mvn-version : "mvn38"
     mvn-settings: 'sdnc-apps-settings'
     mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-opts: '-Xmx1024m'
     maven-version: "mvn38"
 
 #

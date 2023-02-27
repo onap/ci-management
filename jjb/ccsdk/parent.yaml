@@ -23,6 +23,7 @@
     stream:
       - 'master':
           branch: 'master'
+          java-version: openjdk17
           jobs:
             - gerrit-maven-verify:
                 mvn-params: '-Drevision=3.0.0-SNAPSHOT'
@@ -32,11 +33,9 @@
                 mvn-params: '-Dmaven.test.skip=true -Drevision=3.0.0'
             - '{project-name}-gerrit-release-jobs':
                 mvn-params: '-Drevision=3.0.0'
-      - 'jakarta':
-          branch: 'jakarta'
       - 'kohn':
           branch: 'kohn'
-    java-version: openjdk17
+          java-version: openjdk11
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-parent-settings'
     # due to a strange macro / variable translation problem this needs to be
