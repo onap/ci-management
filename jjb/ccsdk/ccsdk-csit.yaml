@@ -35,8 +35,10 @@
     project: 'ccsdk/oran'
     stream:
       - 'master':
+          java-version: openjdk17
           branch: 'master'
       - 'kohn':
+          java-version: openjdk11
           branch: 'kohn'
     mvn-settings: 'ccsdk-oran-settings'
     mvn-version: 'mvn38'
