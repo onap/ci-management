@@ -22,14 +22,15 @@
           tox-dir: '.'
           tox-envs: 'py39'
           pattern: '**/*.py'
-      - 'python3.10':
-          tox-dir: '.'
-          tox-envs: 'py310'
-          pattern: '**/*.py'
-      - 'python3.11':
-          tox-dir: '.'
-          tox-envs: 'py311'
-          pattern: '**/*.py'
+      # Disable due to https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/IT-25247
+      # - 'python3.10':
+      #     tox-dir: '.'
+      #     tox-envs: 'py310'
+      #     pattern: '**/*.py'
+      # - 'python3.11':
+      #     tox-dir: '.'
+      #     tox-envs: 'py311'
+      #     pattern: '**/*.py'
       - 'pylint':
           tox-dir: '.'
           tox-envs: 'pylint'
