@@ -55,7 +55,7 @@
     java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-oran-settings'
-    mvn-opts: '-Ddocker.skip=true'
+    mvn-opts: '-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED'
     build-node: centos8-builder-4c-4g
 
 - project:

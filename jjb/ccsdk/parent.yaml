@@ -59,6 +59,7 @@
     java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-parent-settings'
+    mvn-opts: '--add-opens=java.base/java.util=ALL-UNNAMED'
     build-node: centos8-builder-4c-4g
 
 - project:

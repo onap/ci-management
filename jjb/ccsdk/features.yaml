@@ -72,7 +72,7 @@
     java-version: openjdk17
     mvn-version: 'mvn38'
     mvn-settings: 'ccsdk-features-settings'
-    mvn-opts: '-Xmx3072m'
+    mvn-opts: '-Xmx3072m --add-opens=java.base/java.util=ALL-UNNAMED'
     build-node: centos8-builder-4c-4g
 
 - project:

@@ -70,6 +70,7 @@
     mvn-settings: 'sdnc-northbound-settings'
     java-version: openjdk17
     mvn-version: 'mvn38'
+    mvn-opts: '--add-opens=java.base/java.util=ALL-UNNAMED'
 
 - project:
     name: sdnc-northbound-info
