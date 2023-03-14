@@ -19,4 +19,6 @@
           trigger_jobs:
       - 'macroflow':
           trigger_jobs:
+      - 'integration-cnfm-testing':
+          trigger_jobs:
     robot-options: ''
