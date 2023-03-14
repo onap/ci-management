@@ -17,22 +17,15 @@
                 comment-contains-value: recheck
             - comment-added-contains-event:
                 comment-contains-value: reverify
-          server-name: Primary
+          server-name: 'Primary'
           projects:
-            - project-compare-type: 'REG_EXP'
-              project-pattern: '*'
+            - project-compare-type: 'ANT'
+              project-pattern: '**'
               branches:
                 - branch-compare-type: 'ANT'
-                  branch-pattern: master
+                  branch-pattern: '**/*'
                 - branch-compare-type: 'ANT'
-                  branch-pattern: kohn
-
-- parameter:
-    name: doc-rules-node
-    parameters:
-      - label:
-          name: node
-          default: '{node}'
+                  branch-pattern: 'refs/tags/**'
 
 - builder:
     name: doc-rules
@@ -42,15 +35,13 @@
 
 - job-template:
     name: doc-rules
+    node: centos7-builder-2c-1g
     triggers:
       - doc-rules-patchset-created
     scm:
       - doc-scm:
           ref: $GERRIT_REFSPEC
           project: $GERRIT_PROJECT
-    parameters:
-      - doc-rules-node:
-          node: centos7-builder-2c-1g
     builders:
       - doc-rules
 
