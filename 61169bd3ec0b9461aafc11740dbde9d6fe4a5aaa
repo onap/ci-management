@@ -81,6 +81,30 @@
       "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5d7eba3c_8e3a2e1b",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1201
+      },
+      "writtenOn": "2023-03-15T16:16:21Z",
+      "side": 1,
+      "message": "Please check the builder part too. Thank you in advance.\nI don\u0027t understand why you prefer not to merge the fix. Right now it votes -1",
+      "parentUuid": "de3ed981_859be96d",
+      "range": {
+        "startLine": 23,
+        "startChar": 32,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
