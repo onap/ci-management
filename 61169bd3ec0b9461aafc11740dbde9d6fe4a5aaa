@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7d18dcf_3a8fa8af",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-03-15T14:03:37Z",
+      "side": 1,
+      "message": "This should be https://gerrit.onap.org/r/{project}",
+      "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
