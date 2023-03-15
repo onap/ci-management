@@ -16,6 +16,24 @@
       "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0a2baaf5_78cebdb0",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1201
+      },
+      "writtenOn": "2023-03-15T14:20:24Z",
+      "side": 1,
+      "message": "both should work. updating anyway. why not gerrit as OPNFV ?",
+      "parentUuid": "e7d18dcf_3a8fa8af",
+      "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
