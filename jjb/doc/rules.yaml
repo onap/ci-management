@@ -31,7 +31,8 @@
     name: doc-rules
     builders:
       - shell: |
-          find -name tox.ini |xargs grep sphinx-build | grep -v \\-W > /dev/null && exit 1 || exit 0
+          echo Checking if all Sphinx warnings are treated as errors
+          find -name tox.ini |xargs grep sphinx-build | grep -v spelling | grep -v \\-W  && exit 1 || exit 0
 
 - job-template:
     name: doc-rules
