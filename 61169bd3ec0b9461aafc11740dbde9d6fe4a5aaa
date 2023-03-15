@@ -57,6 +57,30 @@
       "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de3ed981_859be96d",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-03-15T15:59:17Z",
+      "side": 1,
+      "message": "Yes, we can add that regex here. \nCan this be also tested in the sandbox?",
+      "parentUuid": "468e207c_9b315624",
+      "range": {
+        "startLine": 23,
+        "startChar": 32,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
