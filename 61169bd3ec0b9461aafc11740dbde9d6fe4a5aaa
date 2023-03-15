@@ -34,6 +34,29 @@
       "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "468e207c_9b315624",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2023-03-15T15:52:25Z",
+      "side": 1,
+      "message": "could this be used to target only one pilot project until we know the new job is working satisfactory?",
+      "range": {
+        "startLine": 23,
+        "startChar": 32,
+        "endLine": 23,
+        "endChar": 34
+      },
+      "revId": "61169bd3ec0b9461aafc11740dbde9d6fe4a5aaa",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
