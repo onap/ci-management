@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10067ec1_7d58ba4a",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6639
+      },
+      "writtenOn": "2023-03-15T15:50:26Z",
+      "side": 1,
+      "message": "could this be used to target only one pilot project until we know the new job is working satisfactory?",
+      "range": {
+        "startLine": 23,
+        "startChar": 30,
+        "endLine": 23,
+        "endChar": 35
+      },
+      "revId": "132ab1a346685a74b7f52347e302857bc922d51c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
