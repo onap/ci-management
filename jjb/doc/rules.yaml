@@ -2,7 +2,7 @@
     name: doc-scm
     scm:
       - git:
-          url: 'https://gerrit.onap.org/gerrit/{project}'
+          url: 'https://gerrit.onap.org/r/{project}'
           refspec: '+refs/heads/*:refs/remotes/origin/* +refs/changes/*:refs/changes/*'
           branches:
             - '{ref}'
