@@ -39,9 +39,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "scripts": [
-        "common-packer/provision/install-python.sh"
-      ],
+      "scripts": ["common-packer/provision/install-python.sh"],
       "execute_command": "chmod +x {{ .Path }}; if [ \"$UID\" == \"0\" ]; then {{ .Vars }} '{{ .Path }}'; else {{ .Vars }} sudo -E '{{ .Path }}'; fi"
     },
     {
@@ -50,7 +48,9 @@
     },
     {
       "type": "ansible",
-      "playbook_file": "provision/redis.yaml",
+      "command": "./common-packer/ansible-playbook.sh",
+      "skip_version_check": true,
+      "playbook_file": "provision/local-builder.yaml",
       "ansible_env_vars": [
         "ANSIBLE_NOCOWS=1",
         "ANSIBLE_PIPELINING=True",
