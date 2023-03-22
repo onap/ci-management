@@ -96,9 +96,13 @@ if [[ -f "${ROBOT3_VENV}/bin/activate" ]]; then
     source "${ROBOT3_VENV}/bin/activate"
 else
     # Robot framework was not found
-    #  clone ci-management repository and use install script
-    git clone "https://gerrit.onap.org/r/ci-management" \
+    #  Clone/update ci-management repository and invoke install script
+    if [[ ! -d /tmp/ci-management ]]; then
+        git clone "https://gerrit.onap.org/r/ci-management" \
         /tmp/ci-management
+    else
+        git pull /tmp/ci-management
+    fi
     # shellcheck disable=SC1090
     source "/tmp/ci-management/jjb/integration/${ROBOT_INSTALLER}"
 fi
