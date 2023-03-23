@@ -59,3 +59,17 @@
     mvn-settings: 'so-adapters-so-oof-adapter-settings'
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+
+- project:
+    name: so-adapters-so-oof-adapter-clm
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: 'onap-'
+    project: 'so/adapters/so-oof-adapter'
+    project-name: 'so-adapters-so-oof-adapter'
+    build-node: ubuntu1804-docker-v1-8c-8g
+    stream:
+      - 'master':
+          branch: 'master'
+    mvn-settings: 'so-adapters-so-oof-adapter-settings'
