@@ -28,8 +28,6 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-xacml-pdp'
     recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
     project: 'policy/docker'
@@ -80,8 +78,6 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-drools-pdp'
     recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
     project: 'policy/docker'
@@ -107,8 +103,6 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-apex-pdp'
     recipients: 'liam.fallon@est.tech ram_krishna.verma@bell.ca'
     project: 'policy/docker'
@@ -134,8 +128,6 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-pap'
     recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     project: 'policy/docker'
@@ -161,8 +153,6 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-api'
     recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
     project: 'policy/docker'
@@ -188,10 +178,8 @@
     jobs:
       - '{project-name}-{stream}-project-csit-verify-{functionality}'
       - '{project-name}-{stream}-project-csit-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-k8s-csit-{functionality}'
     project-name: 'policy-clamp'
-    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech ajith.sreekumar@est.tech pd1248@att.com'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com'
     project: 'policy/docker'
     stream:
       - 'master':
