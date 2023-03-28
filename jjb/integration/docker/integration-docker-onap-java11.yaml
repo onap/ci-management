@@ -1,7 +1,7 @@
 ---
 - project:
-    name: integration-docker-onap-java11-info
-    project-name: integration-docker-onap-java11
+    name: integration-docker-onap-java-info
+    project-name: integration-docker-onap-java
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos7-builder-2c-1g
@@ -9,9 +9,9 @@
     branch: master
 
 - project:
-      name: integration-docker-onap-java11-linters
+      name: integration-docker-onap-java-linters
       project: integration/docker/onap-java11
-      project-name: integration-docker-onap-java11
+      project-name: integration-docker-onap-java
       python-version: python3
       jobs:
           - integration-linters
@@ -37,8 +37,8 @@
                 branch: 'master'
 
 - project:
-    name: integration-docker-onap-java11-release
-    project-name: 'integration-docker-onap-java11'
+    name: integration-docker-onap-java-release
+    project-name: 'integration-docker-onap-java'
     project: 'integration/docker/onap-java11'
     mvn-settings: 'integration-settings'
     jobs:
@@ -46,18 +46,27 @@
           build-node: centos7-docker-8c-8g
 
 - project:
-    name: 'integration-docker-onap-java11-docker'
+    name: 'integration-docker-onap-java-docker'
     jobs:
-      - gerrit-docker-verify
-      - gerrit-docker-merge
-    project-name: 'integration-docker-onap-java11'
+      - gerrit-docker-verify:
+          project-name: 'integration-docker-onap-java11'
+          docker-name: 'onap/integration-java11'
+      - gerrit-docker-merge:
+          project-name: 'integration-docker-onap-java11'
+          docker-name: 'onap/integration-java11'
+      - gerrit-docker-verify:
+          project-name: 'integration-docker-onap-java17'
+          docker-name: 'onap/integration-java17'
+          docker-build-args: '--build-arg java_ver=onap-java17'
+      - gerrit-docker-merge:
+          project-name: 'integration-docker-onap-java17'
+          docker-name: 'onap/integration-java17'
+          docker-build-args: '--build-arg java_ver=onap-java17'
     project: 'integration/docker/onap-java11'
     stream:
       - 'master':
             branch: 'master'
             files: ''
-    docker-name: 'onap/integration-java11'
-    docker-build-args: '-f ./Dockerfile'
     docker-root: '$WORKSPACE'
     mvn-settings: 'integration-settings'
     build-node: ubuntu1804-docker-8c-8g
