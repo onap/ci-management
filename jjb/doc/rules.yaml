@@ -31,8 +31,35 @@
     name: doc-rules
     builders:
       - shell: |
-          echo Checking if all Sphinx warnings are treated as errors
-          find -name tox.ini |xargs grep sphinx-build | grep -v spelling | grep -v \\-W  && exit 1 || exit 0
+          #!/bin/bash
+
+          . /lib/lsb/init-functions || exit 0
+
+          exitstatus="0"
+          if [ ! -d docs ] ; then
+            log_warning_msg "Directory docs not found. Skipping further checks."
+            exit 0
+          fi
+          for i in docs/index.rst docs/conf.py; do
+            if [ ! -f $i ] ; then
+              log_failure_msg "$i missing. Please add it or remove the full docs directory."
+              exitstatus="1"
+            else
+              log_success_msg "$i found."
+            fi
+          done
+          log_action_begin_msg "Checking if all Sphinx warnings are treated as errors"
+          log=$(mktemp)
+          find -name tox.ini |xargs grep sphinx-build | grep -v spelling | grep -v \\-W > $log
+          if [[ $? == 0 ]]; then
+            log_end_msg 1
+            cat $log
+            exitstatus="1"
+          else
+            log_end_msg 0
+          fi
+          rm $log
+          exit $exitstatus
 
 - job-template:
     name: doc-rules
