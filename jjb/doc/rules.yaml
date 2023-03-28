@@ -31,8 +31,91 @@
     name: doc-rules
     builders:
       - shell: |
-          echo Checking if all Sphinx warnings are treated as errors
-          find -name tox.ini |xargs grep sphinx-build | grep -v spelling | grep -v \\-W  && exit 1 || exit 0
+          #!/bin/bash
+          . /lib/lsb/init-functions || exit 0
+          exitstatus="0"
+          warning="0"
+          log_success_msg "Starting additional checks related to documentation."
+          log_success_msg "See https://git.onap.org/doc/doc-best-practice for example config files (master branch)."
+          log_success_msg "Modify example config files if you like to use them in a release branch."
+          log_success_msg "See https://wiki.onap.org/x/w4IEBw for the detailed procedure #02."
+          log_success_msg "In case of questions please contact the ONAP documentation team."
+          if [ ! -d docs ] ; then
+            log_success_msg "Directory docs not found. Skipping further checks."
+            exit 0
+          fi
+          for i in docs/index.rst docs/conf.py docs/requirements-docs.txt docs/_static/css/ribbon.css; do
+            if [ ! -f $i ] ; then
+              log_failure_msg "$i missing. Please add it or remove the full docs directory."
+              exitstatus="1"
+            else
+              log_success_msg "$i found."
+            fi
+          done
+          for i in docs/conf.yaml; do
+            if [ -f $i ] ; then
+              log_failure_msg "$i found. It is no longer required. Please remove it."
+              exitstatus="1"
+            else
+              log_success_msg "$i not found."
+            fi
+          done
+          filename="docs/tox.ini"
+          if [ ! -f $filename ] ; then
+              log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+              exitstatus="1"
+          else
+              log_success_msg "$filename found."
+              sphinxbuild_detected=0
+              linenumber=0
+              while IFS="" read -r line || [ -n "$line" ] ; do
+                  linenumber=$((linenumber+1))
+                  if echo $line | grep -q '^[ \t]*sphinx-build.*' ; then
+                  sphinxbuild_detected="1"
+                      if echo $line | grep -q '^[ \t]*sphinx-build.* -W ' ; then
+                          log_success_msg "sphinx-build option '-W' used in $filename, line $linenumber."
+                      elif echo $line | grep -q ' \-b spelling ' ; then
+                          log_success_msg "sphinx-build option '-W' not used for spellcheck in $filename, line $linenumber."
+                      else
+                          log_failure_msg "sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
+                          exitstatus="1"
+                      fi
+                  fi
+              done < $filename
+              if [ "$sphinxbuild_detected" = "0" ]; then
+                  log_failure_msg "Sphinx-build command(s) missing in $filename. Please add it."
+                  exitstatus="1"
+              fi
+              unset sphinxbuild_detected
+              unset linenumber
+          fi
+          unset filename
+          filename="docs/_static/css/ribbon.css"
+          if [ ! -f $filename ]; then
+              log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+              exitstatus="1"
+          else
+              log_success_msg "$filename found."
+              cssmaxwidth=$(grep '^[ \t]*max-width:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+              if [[ ! $cssmaxwidth == *"max-width: 800px"* ]]; then
+                  log_failure_msg "Setting 'max-width: 800px' missing in $filename. Please add it."
+                  exitstatus="1"
+              else
+                  log_success_msg "Setting 'max-width: 800px' found in $filename."
+              fi
+              unset cssmaxwidth
+          fi
+          unset filename
+          if [ "$exitstatus" = "0" ]; then
+              if [ "$warning" = "0" ]; then
+                  log_success_msg "Congratulations! No documentation problem(s) detected."
+              else
+                  log_failure_msg "WARN No major documentation problem(s) detected but there are warnings!"
+              fi
+          else
+              log_failure_msg "Please fix the detected documentation problem(s)!"
+          fi
+          exit $exitstatus
 
 - job-template:
     name: doc-rules
