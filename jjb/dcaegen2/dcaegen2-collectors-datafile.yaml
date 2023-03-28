@@ -28,7 +28,7 @@
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
@@ -75,6 +75,6 @@
     project-name: dcaegen2-collectors-datafile
     jobs:
       - gerrit-info-yaml-verify
-    build-node: centos7-builder-2c-1g
+    build-node: centos8-builder-2c-1g
     project: dcaegen2/collectors/datafile
     branch: master
