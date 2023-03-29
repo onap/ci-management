@@ -8,7 +8,7 @@
   vars:
     kubectl_version: 1.23.8
     helm3_8_version: 3.8.2
-    chartmuseum_version: 0.12.0
+    chartmuseum_version: 0.15.0
 
   tasks:
     - name: 'Install kubectl {{kubectl_version}}'
@@ -55,10 +55,11 @@
     - name: 'Install ChartMuseum {{chartmuseum_version}}'
       block:
         - name: 'Fetch bin for ChartMuseum'
-          get_url:
-            url: "https://s3.amazonaws.com/chartmuseum/release/v{{ chartmuseum_version }}/bin/linux/amd64/chartmuseum"
-            dest: /usr/local/bin/chartmuseum
+          unarchive:
+            src: "https://get.helm.sh/chartmuseum-v{{ chartmuseum_version }}-linux-amd64.tar.gz"
+            dest: /usr/local/bin
             mode: "0755"
+            remote_src: yes
           become: yes
         - name: 'Check ChartMuseum {{chartmuseum_version}}'
           command: 'which chartmuseum'
