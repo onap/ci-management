@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d1850297_ddca223d",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2023-03-29T20:25:19Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be \u0027false\u0027?",
+      "revId": "8fba185f710452f75e374168c1f33f6d11554b1b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
