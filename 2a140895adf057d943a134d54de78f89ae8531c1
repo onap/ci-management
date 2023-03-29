@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "52dda4f6_a0fda9c8",
+        "filename": "jjb/doc/rules.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1201
+      },
+      "writtenOn": "2023-03-29T14:40:56Z",
+      "side": 1,
+      "message": "remove PASS or FAIL which are defined in lsb functions helpers.",
+      "revId": "2a140895adf057d943a134d54de78f89ae8531c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
