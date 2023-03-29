@@ -16,6 +16,24 @@
       "revId": "8fba185f710452f75e374168c1f33f6d11554b1b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d2a813b5_f568c769",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2023-03-29T20:58:36Z",
+      "side": 1,
+      "message": "I was wrong, this flag indicates the file we want to unarchive is already present at the managed node, so \u0027true\u0027 value is correct",
+      "parentUuid": "d1850297_ddca223d",
+      "revId": "8fba185f710452f75e374168c1f33f6d11554b1b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
