@@ -54,12 +54,22 @@
 
     - name: 'Install ChartMuseum {{chartmuseum_version}}'
       block:
-        - name: 'Fetch bin for ChartMuseum'
+        - name: 'Create directory /tmp/chartmuseum'
+          file:
+            path: /tmp/chartmuseum
+            state: directory
+        - name: 'Fetch tar.gz for chartmuseum'
+          get_url:
+            url: "https://get.helm.sh/chartmuseum-v{{chartmuseum_version}}-linux-amd64.tar.gz"
+            dest: /tmp/chartmuseum
+        - name: 'Unarchive chartmuseum'
           unarchive:
-            src: "https://get.helm.sh/chartmuseum-v{{ chartmuseum_version }}-linux-amd64.tar.gz"
-            dest: /usr/local/bin
-            mode: "0755"
-            remote_src: yes
+            src: "/tmp/chartmuseum/chartmuseum-v{{chartmuseum_version}}-linux-amd64.tar.gz"
+            dest: /tmp/chartmuseum
+            remote_src: true
+          become: yes
+        - name: 'Move chartmuseum bin to /usr/local/bin and set as executable'
+          command: 'mv /tmp/chartmuseum/linux-amd64/chartmuseum /usr/local/bin/chartmuseum'
           become: yes
         - name: 'Check ChartMuseum {{chartmuseum_version}}'
           command: 'which chartmuseum'
