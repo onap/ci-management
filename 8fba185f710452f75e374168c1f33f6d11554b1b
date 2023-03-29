@@ -34,6 +34,24 @@
       "revId": "8fba185f710452f75e374168c1f33f6d11554b1b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b3ff8f0_bd6a14f8",
+        "filename": "packer/provision/helm.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2023-03-29T20:59:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2a813b5_f568c769",
+      "revId": "8fba185f710452f75e374168c1f33f6d11554b1b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
