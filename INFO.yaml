@@ -66,5 +66,10 @@ committers:
       company: 'LF'
       id: 'kevin.sandi'
       timezone: 'America/Costa_Rica'
+    - name: 'Matt Watkins'
+      email: 'mwatkins@linuxfoundation.org'
+      company: 'LF'
+      id: 'modeSevenindustrialsolutions'
+      timezone: 'Europe/London'
 tsc:
     approval: 'https://lists.onap.org/pipermail/onap-tsc'
