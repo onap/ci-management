@@ -119,7 +119,7 @@
 
 - job-template:
     name: doc-rules
-    node: centos7-builder-2c-1g
+    node: ubuntu1804-docker-8c-8g
     triggers:
       - doc-rules-patchset-created
     scm:
