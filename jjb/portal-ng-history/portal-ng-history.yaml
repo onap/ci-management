@@ -1,0 +1,15 @@
+---
+- project:
+    name: portal-ng-history-project-view
+    project-name: portal-ng-history
+    views:
+      - project-view
+
+- project:
+    name: portal-ng-history-info
+    project: portal-ng/history
+    project-name: portal-ng-history
+    build-node: centos7-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
