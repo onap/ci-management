@@ -62,59 +62,59 @@
           done
           filename="docs/tox.ini"
           if [ ! -f $filename ] ; then
-              log_failure_msg "$filename missing. Please add it or remove the full docs directory."
-              exitstatus="1"
+            log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+            exitstatus="1"
           else
-              log_success_msg "$filename found."
-              sphinxbuild_detected=0
-              linenumber=0
-              while IFS="" read -r line || [ -n "$line" ] ; do
-                  linenumber=$((linenumber+1))
-                  if echo $line | grep -q '^[ \t]*sphinx-build.*' ; then
-                  sphinxbuild_detected="1"
-                      if echo $line | grep -q '^[ \t]*sphinx-build.* -W ' ; then
-                          log_success_msg "sphinx-build option '-W' used in $filename, line $linenumber."
-                      elif echo $line | grep -q ' \-b spelling ' ; then
-                          log_warning_msg "sphinx-build option '-W' not used for spellcheck in $filename, line $linenumber."
-                          warning="1"
-                      else
-                          log_failure_msg "sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
-                          exitstatus="1"
-                      fi
-                  fi
-              done < $filename
-              if [ "$sphinxbuild_detected" = "0" ]; then
-                  log_failure_msg "Sphinx-build command(s) missing in $filename. Please add it."
+            log_success_msg "$filename found."
+            sphinxbuild_detected=0
+            linenumber=0
+            while IFS="" read -r line || [ -n "$line" ] ; do
+              linenumber=$((linenumber+1))
+              if echo $line | grep -q '^[ \t]*sphinx-build.*' ; then
+                sphinxbuild_detected="1"
+                if echo $line | grep -q '^[ \t]*sphinx-build.* -W ' ; then
+                  log_success_msg "sphinx-build option '-W' used in $filename, line $linenumber."
+                elif echo $line | grep -q ' \-b spelling ' ; then
+                  log_warning_msg "sphinx-build option '-W' not used for spellcheck in $filename, line $linenumber."
+                  warning="1"
+                else
+                  log_failure_msg "sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
                   exitstatus="1"
+                fi
               fi
-              unset sphinxbuild_detected
-              unset linenumber
+            done < $filename
+            if [ "$sphinxbuild_detected" = "0" ]; then
+              log_failure_msg "Sphinx-build command(s) missing in $filename. Please add it."
+              exitstatus="1"
+            fi
+            unset sphinxbuild_detected
+            unset linenumber
           fi
           unset filename
           filename="docs/_static/css/ribbon.css"
           if [ ! -f $filename ]; then
-              log_failure_msg "$filename missing. Please add it or remove the full docs directory."
-              exitstatus="1"
+            log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+            exitstatus="1"
           else
-              log_success_msg "$filename found."
-              cssmaxwidth=$(grep '^[ \t]*max-width:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
-              if [[ ! $cssmaxwidth == *"max-width: 800px"* ]]; then
-                  log_failure_msg "Setting 'max-width: 800px' missing in $filename. Please add it."
-                  exitstatus="1"
-              else
-                  log_success_msg "Setting 'max-width: 800px' found in $filename."
-              fi
-              unset cssmaxwidth
+            log_success_msg "$filename found."
+            cssmaxwidth=$(grep '^[ \t]*max-width:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ ! $cssmaxwidth == *"max-width: 800px"* ]]; then
+              log_failure_msg "Setting 'max-width: 800px' missing in $filename. Please add it."
+              exitstatus="1"
+            else
+              log_success_msg "Setting 'max-width: 800px' found in $filename."
+            fi
+            unset cssmaxwidth
           fi
           unset filename
           if [ "$exitstatus" = "0" ]; then
-              if [ "$warning" = "0" ]; then
-                  log_success_msg "Congratulations! No documentation problem(s) detected."
-              else
-                  log_warning_msg "No major documentation problem(s) detected but there are warnings!"
-              fi
+            if [ "$warning" = "0" ]; then
+              log_success_msg "Congratulations! No documentation problem(s) detected."
+            else
+              log_warning_msg "No major documentation problem(s) detected but there are warnings!"
+            fi
           else
-              log_failure_msg "Please fix the detected documentation problem(s)!"
+            log_failure_msg "Please fix the detected documentation problem(s)!"
           fi
           exit $exitstatus
 
