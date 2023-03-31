@@ -75,7 +75,8 @@
                       if echo $line | grep -q '^[ \t]*sphinx-build.* -W ' ; then
                           log_success_msg "sphinx-build option '-W' used in $filename, line $linenumber."
                       elif echo $line | grep -q ' \-b spelling ' ; then
-                          log_success_msg "sphinx-build option '-W' not used for spellcheck in $filename, line $linenumber."
+                          log_warning_msg "sphinx-build option '-W' not used for spellcheck in $filename, line $linenumber."
+                          warning="1"
                       else
                           log_failure_msg "sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
                           exitstatus="1"
@@ -110,7 +111,7 @@
               if [ "$warning" = "0" ]; then
                   log_success_msg "Congratulations! No documentation problem(s) detected."
               else
-                  log_failure_msg "WARN No major documentation problem(s) detected but there are warnings!"
+                  log_warning_msg "No major documentation problem(s) detected but there are warnings!"
               fi
           else
               log_failure_msg "Please fix the detected documentation problem(s)!"
