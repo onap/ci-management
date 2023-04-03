@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Pawel Pawlak <p.pawlak@f5.com>
+Code-Review+1: Magnus Buhrgard <magnus.buhrgard@ericsson.com>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-at: Mon, 03 Apr 2023 14:21:28 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/133952
+Project: ci-management
+Branch: refs/heads/master
