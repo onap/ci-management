@@ -4,7 +4,7 @@
     project-name: 'policy-clamp'
     jobs:
       - gerrit-maven-stage:
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
           sign-artifacts: true
           mvn-params: '-Dmaven.test.skip=true'
