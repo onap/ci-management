@@ -38,7 +38,7 @@
           sign-artifacts: true
           sbom-generator: true
           sbom-path: 'components/datalake-handler/'
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
@@ -73,7 +73,7 @@
           sbom-generator: true
           sbom-path: 'components/datalake-handler/'
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
@@ -108,7 +108,7 @@
           sbom-generator: true
           sbom-path: 'components/datalake-handler/'
           sign-artifacts: true
-          build-node: centos7-builder-4c-4g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           mvn-pom: 'components/datalake-handler/pom.xml'
           mvn-params: '-f components/datalake-handler/pom.xml'
