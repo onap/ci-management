@@ -21,12 +21,14 @@
       - '{project-name}-{stream}-{subproject}-merge-java':
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           container-public-registry: 'nexus3.onap.org:10001'
