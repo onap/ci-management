@@ -6,11 +6,13 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: centos8-docker-8c-8g
+          sbom-generator: true
           maven-versions-plugin: true
           mvn-goals: 'clean package -Pdocker'
           container-public-registry: 'nexus3.onap.org:10001'
