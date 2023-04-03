@@ -14,6 +14,7 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
