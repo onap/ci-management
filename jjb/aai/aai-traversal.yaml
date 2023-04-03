@@ -20,6 +20,7 @@
           maven-versions-plugin: true
           sbom-generator: true
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'

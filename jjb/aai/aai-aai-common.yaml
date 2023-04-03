@@ -12,10 +12,10 @@
       - '{project-name}-{stream}-verify-java'
       - '{project-name}-{stream}-merge-java'
       - gerrit-maven-stage:
+          sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
           build-node: centos7-docker-8c-8g
     project: 'aai/aai-common'
@@ -87,6 +87,7 @@
       - '{project-name}-{stream}-verify-docker'
       - '{project-name}-{stream}-merge-docker'
       - gerrit-maven-docker-stage:
+          sbom-generator: true
           mvn-params: '-P docker -Dmaven.test.skip=true'
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: 'nexus3.onap.org:10001'
