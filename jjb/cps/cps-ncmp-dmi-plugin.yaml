@@ -48,6 +48,9 @@
       - 'kohn':
           branch: 'kohn'
           cron: ''
+      - 'london':
+          branch: 'london'
+          cron: ''
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: '**'
     archive-artifacts: ''
