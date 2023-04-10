@@ -26,7 +26,7 @@
         - '{project-name}-{stream}-merge-java':
             mvn-goals: 'clean deploy'
         - '{project-name}-gerrit-release-jobs':
-            build-node: centos7-docker-8c-8g
+            build-node: centos7-docker-2c-1g
         - gerrit-maven-docker-stage:
             build-node: centos8-docker-8c-8g
             maven-versions-plugin: true

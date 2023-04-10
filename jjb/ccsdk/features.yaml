@@ -15,7 +15,7 @@
           cron: ''
           sbom-generator: true
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-2c-8g
+          build-node: centos7-docker-2c-1g
 
     project: 'ccsdk/features'
     stream:

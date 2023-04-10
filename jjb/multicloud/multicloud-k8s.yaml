@@ -18,7 +18,7 @@
           script:
             !include-raw-escape: 'kud-deployment.sh'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     project: 'multicloud/k8s'
     subproject:
       - validation-scripts:

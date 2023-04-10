@@ -19,7 +19,7 @@
           mvn-pom: 'distributions/msb-discovery/pom.xml'
           mvn-params: '-f distributions/msb-discovery/pom.xml -Dmaven.test.skip=true -P linux,docker'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     project: 'msb/discovery'
     stream:
       - 'master':

@@ -26,7 +26,7 @@
       - gerrit-maven-merge:
           mvn-goals: 'clean deploy'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true

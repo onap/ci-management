@@ -23,7 +23,7 @@
           build-node: ubuntu1804-docker-8c-16g
           mvn-params: '-P docker'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
 
     project: 'policy/clamp'
     stream:
