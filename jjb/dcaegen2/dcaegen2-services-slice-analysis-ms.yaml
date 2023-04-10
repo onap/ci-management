@@ -38,7 +38,7 @@
           sign-artifacts: true
           sbom-generator: true
           sbom-path: 'components/slice-analysis-ms/'
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
           maven-versions-plugin: true
           mvn-pom: 'components/slice-analysis-ms/pom.xml'
           mvn-params: '-f components/slice-analysis-ms/pom.xml'

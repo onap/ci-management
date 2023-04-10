@@ -20,7 +20,7 @@
           container-staging-registry: 'nexus3.onap.org:10003'
           mvn-params: '-f pom.xml -Dmaven.test.skip=true -P linux,docker'
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     project: 'oom/registrator'
     stream:
       - 'master':
