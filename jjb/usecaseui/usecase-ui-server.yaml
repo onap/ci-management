@@ -22,7 +22,7 @@
           mvn-params: '-Dmaven.test.skip=true'
           build-node: ubuntu1804-docker-8c-8g
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     files: '**'
     archive-artifacts: ''
     docker-pom: 'pom.xml'

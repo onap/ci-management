@@ -39,7 +39,7 @@
     mvn-settings: 'oom-settings'
     jobs:
       - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-8c-8g
+          build-node: centos7-docker-2c-1g
 
 - project:
     name: 'oom-readiness-docker'
