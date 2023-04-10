@@ -38,7 +38,7 @@
           sign-artifacts: true
           sbom-generator: true
           sbom-path: 'components/kpi-computation-ms/'
-          build-node: centos7-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
           mvn-pom: 'components/kpi-computation-ms/pom.xml'
           mvn-params: '-f components/kpi-computation-ms/pom.xml'
