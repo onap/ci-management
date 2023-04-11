@@ -65,13 +65,8 @@
     stream:
       - 'master':
           branch: 'master'
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'src/onapsdk/version.py'
     jobs:
       - gerrit-pypi-verify
-      - gerrit-pypi-merge:
-          pypi-repo: pypi-test
 
 - project:
     name: integration-python-onapsdk-pypi-release
@@ -80,11 +75,7 @@
     stream:
       - 'master':
           branch: 'master'
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'src/onapsdk/version.py'
     jobs:
       - gerrit-pypi-release-verify
       - gerrit-pypi-release-merge:
           pypi-repo: pypi-onapsdk
-
