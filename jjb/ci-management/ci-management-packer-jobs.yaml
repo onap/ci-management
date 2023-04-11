@@ -14,7 +14,6 @@
     build-timeout: 90
 
     platforms:
-      - centos-7
       - centos-cs-8
       - ubuntu-18.04
       - ubuntu-20.04
@@ -38,10 +37,8 @@
     platforms:
       - centos-7
       - centos-cs-8
-      - ubuntu-18.04-arm64
       - ubuntu-18.04
       - ubuntu-20.04
-      - ubuntu-20.04-arm64
     templates: docker
     update-cloud-image: true
 
@@ -60,7 +57,6 @@
     build-timeout: 90
 
     platforms:
-      - ubuntu-18.04
       - ubuntu-20.04
     templates: memcached
     update-cloud-image: true
@@ -79,7 +75,6 @@
     build-node: centos8-builder-2c-1g
 
     platforms:
-      - centos-7
       - centos-cs-8
     templates: redis
     update-cloud-image: true
@@ -98,7 +93,6 @@
     build-node: centos8-builder-2c-1g
 
     platforms:
-      - ubuntu-18.04
       - ubuntu-20.04
     templates: helm
     update-cloud-image: true
