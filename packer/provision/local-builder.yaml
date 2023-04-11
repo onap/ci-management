@@ -115,7 +115,8 @@
     - name: Install nodejs and npm
       block:
         - name: 'Pull latest nodejs version'
-          command: 'curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs'
+          shell: |
+            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
           become: yes
         - name: 'Check nodejs version'
           command: node --version
