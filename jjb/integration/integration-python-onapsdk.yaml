@@ -4,6 +4,7 @@
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
     python-version: python3
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - integration-linters
     stream:
