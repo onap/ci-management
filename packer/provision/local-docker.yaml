@@ -194,6 +194,25 @@
         update_cache: yes
         state: fixed
       become: true
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+    - name: Install nodejs and npm
+      block:
+        - name: 'Pull latest nodejs version'
+          command: 'curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs'
+          become: yes
+        - name: 'Check nodejs version'
+          command: node --version
+        - name: 'Check npm version'
+          command: npm --version
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install npm build tools
+      apt:
+        name: build-essential
+        update_cache: yes
+        state: fixed
+      become: true
       when: ansible_distribution == 'Ubuntu'
 
     - name: npm self-update
