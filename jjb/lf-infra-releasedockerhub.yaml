@@ -64,5 +64,5 @@
       - lf-infra-docker-login:
           global-settings-file: 'global-settings'
           settings-file: 'onap-releasedockerhub-authz-settings'
-      - lf-onap-releasedockerhub-macro:
+      - lf-onap-releasedockerhub-macro
 
