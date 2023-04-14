@@ -1,5 +1,5 @@
 ---
-- releng_view: &releng_view_common
+- _releng_view: &releng_view_common
     name: releng-view-common
     view-type: list
     filter-executors: false

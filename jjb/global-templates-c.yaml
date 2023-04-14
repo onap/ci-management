@@ -3,7 +3,7 @@
 # COMMON FUNCTIONS #
 ####################
 
-- c_job_common: &c_job_common
+- _c_job_common: &c_job_common
     name: c-job-common
 
     ######################
