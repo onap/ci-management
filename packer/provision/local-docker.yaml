@@ -206,7 +206,7 @@
         - name: add nodejs repository
           apt_repository:
             repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
-            state: latest
+            state: present
             update_cache: yes
           become: true
         - name: install nodejs
