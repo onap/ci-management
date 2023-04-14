@@ -296,7 +296,7 @@
 
     - name: Download and install libssl Ubuntu 20.04
       apt:
-        deb: http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.10_amd64.deb
+        deb: http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.11_amd64.deb
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
