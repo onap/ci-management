@@ -58,7 +58,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: '**/*.log'
-    jenkins-ssh-credential: "{jenkins-ssh-credential}"
+    jenkins-ssh-credential: onap-jenkins-ssh
 
     build-node: centos8-builder-2c-1g
     # update-cloud-image: true

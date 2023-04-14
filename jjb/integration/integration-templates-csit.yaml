@@ -1,7 +1,7 @@
 ---
 - job-template:
     name: '{project-name}-{stream}-verify-csit-{functionality}'
-    disabled: '{disabled}'
+    disabled: false
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -64,7 +64,7 @@
 
 - job-template:
     name: '{project-name}-{stream}-csit-{functionality}'
-    disabled: '{disabled}'
+    disabled: false
 
     project-type: freestyle
     build-node: 'ubuntu1804-docker-8c-8g'
@@ -129,7 +129,7 @@
           notify-every-unstable-build: false
           send-to-individuals: true
 
-- verification_maven_job_boiler_plate: &verification_maven_job_boiler_plate
+- _verification_maven_job_boiler_plate: &verification_maven_job_boiler_plate
     name: verification_maven_job_boiler_plate
 
     ######################
@@ -157,7 +157,7 @@
     submodule-timeout: 10
     submodule-disable: false
 
-    disabled: '{disabled}'
+    disabled: false
     archive-artifacts: >
       **/*.log
       **/hs_err_*.log

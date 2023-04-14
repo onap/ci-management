@@ -1,6 +1,6 @@
 ---
 # Job definition Anchors
-- pypi_job_boiler_plate: &pypi_job_boiler_plate
+- _pypi_job_boiler_plate: &pypi_job_boiler_plate
     name: pypi_job_boiler_plate
 
     #####################
