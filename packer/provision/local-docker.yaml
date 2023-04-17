@@ -10,7 +10,6 @@
     glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
     glide_version: v0.13.1
     golang_version: 1.9.1
-    npm_version: "6.14.13"
 
   tasks:
     - name: "Checking for x86_64"
@@ -115,24 +114,6 @@
       become: true
       when: ansible_distribution == 'Ubuntu'
 
-    - name: Install nodejs-dev libssl1.0-dev dep
-      apt:
-        name:
-          - libssl1.0-dev
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
-    - name: Install nodejs-dev dep for npm
-      apt:
-        name:
-          - nodejs-dev
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
     - name: Install supporting packages (Ubuntu 18.04)
       apt:
         name:
@@ -177,17 +158,6 @@
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-    - name: Install npm and addon packages
-      apt:
-        name:
-          - nodejs
-          - npm
-          - node-gyp
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
     - name: Install nodejs
       block:
         - name: install nodejs prerequisites
@@ -215,7 +185,7 @@
               - nodejs
             state: present
           become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Check nodejs and npm versions
       block:
