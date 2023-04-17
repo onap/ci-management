@@ -36,41 +36,41 @@
           exitstatus="0"
           warning="0"
           # message, begin
-          log_success_msg "Starting additional checks related to documentation."
-          log_success_msg "See https://git.onap.org/doc/doc-best-practice for example config files (master branch)."
-          log_success_msg "Modify example config files if you like to use them in a release branch."
-          log_success_msg "See https://wiki.onap.org/x/w4IEBw for the detailed procedure #02."
-          log_success_msg "In case of questions please contact the ONAP documentation team."
+          log_success_msg "INFO Starting additional checks related to documentation."
+          log_success_msg "INFO See https://git.onap.org/doc/doc-best-practice for example config files (master branch)."
+          log_success_msg "INFO Modify example config files if you like to use them in a release branch."
+          log_success_msg "INFO See https://wiki.onap.org/x/w4IEBw for the detailed procedure #02."
+          log_success_msg "INFO In case of questions please contact the ONAP documentation team."
           # docs directory
           if [ ! -d docs ] ; then
-            log_success_msg "Directory docs not found. Skipping further checks."
+            log_success_msg "INFO Directory docs not found. Skipping further checks."
             exit 0
           fi
           # config files, required
           for i in docs/index.rst docs/conf.py docs/requirements-docs.txt docs/_static/css/ribbon.css; do
             if [ ! -f $i ] ; then
-              log_failure_msg "$i missing. Please add it or remove the full docs directory."
+              log_failure_msg "FAIL $i missing. Please add it or remove the full docs directory."
               exitstatus="1"
             else
-              log_success_msg "$i found."
+              log_success_msg "INFO $i found."
             fi
           done
           # config files, no longer required
           for i in docs/conf.yaml; do
             if [ -f $i ] ; then
-              log_failure_msg "$i found. It is no longer required. Please remove it."
+              log_failure_msg "FAIL $i found. It is no longer required. Please remove it."
               exitstatus="1"
             else
-              log_success_msg "$i not found."
+              log_success_msg "INFO $i not found."
             fi
           done
           # tox.ini @ docs directory
           filename="docs/tox.ini"
           if [ ! -f $filename ] ; then
-            log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+            log_failure_msg "FAIL $filename missing. Please add it or remove the full docs directory."
             exitstatus="1"
           else
-            log_success_msg "$filename found."
+            log_success_msg "INFO $filename found."
             # sphinx-build command and -W option
             sphinxbuild_detected=0
             linenumber=0
@@ -79,25 +79,25 @@
               if echo $line | grep -q '^[ \t]*sphinx-build.*' ; then
                 sphinxbuild_detected="1"
                 if echo $line | grep -q '^[ \t]*sphinx-build.* -W ' ; then
-                  log_success_msg "sphinx-build option '-W' used in $filename, line $linenumber."
+                  log_success_msg "INFO sphinx-build option '-W' used in $filename, line $linenumber."
                 elif echo $line | grep -q ' \-b spelling ' ; then
-                  log_warning_msg "sphinx-build option '-W' missing for spellcheck in $filename, line $linenumber."
+                  log_warning_msg "WARN sphinx-build option '-W' missing for spellcheck in $filename, line $linenumber."
                   warning="1"
                 else
-                  log_failure_msg "sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
+                  log_failure_msg "FAIL sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
                   exitstatus="1"
                 fi
               fi
             done < $filename
             if [ "$sphinxbuild_detected" = "0" ]; then
-              log_failure_msg "Sphinx-build command(s) missing in $filename. Please add it."
+              log_failure_msg "FAIL Sphinx-build command(s) missing in $filename. Please add it."
               exitstatus="1"
             fi
             # second tox.ini @ root directory
             if [ -f ./tox.ini ] ; then
               # sphinx-build command
               if cat ./tox.ini | grep -q '^[ \t]*sphinx-build.*' ; then
-                log_warning_msg "tox.ini also exists in root directory and contains sphinx-build command(s). Please check for redundancies."
+                log_warning_msg "WARN tox.ini also exists in root directory and contains sphinx-build command(s). Please check for redundancies."
                 warning="1"
               fi
             fi
@@ -108,17 +108,17 @@
           # ribbon.css
           filename="docs/_static/css/ribbon.css"
           if [ ! -f $filename ]; then
-            log_failure_msg "$filename missing. Please add it or remove the full docs directory."
+            log_failure_msg "FAIL $filename missing. Please add it or remove the full docs directory."
             exitstatus="1"
           else
-            log_success_msg "$filename found."
+            log_success_msg "INFO $filename found."
             # max-width parameter
             cssmaxwidth=$(grep '^[ \t]*max-width:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
             if [[ ! $cssmaxwidth == *"max-width: 800px"* ]]; then
-              log_failure_msg "Setting 'max-width: 800px' missing in $filename. Please add it."
+              log_failure_msg "FAIL Setting 'max-width: 800px' missing in $filename. Please add it."
               exitstatus="1"
             else
-              log_success_msg "Setting 'max-width: 800px' found in $filename."
+              log_success_msg "INFO Setting 'max-width: 800px' found in $filename."
             fi
             unset cssmaxwidth
           fi
@@ -126,15 +126,15 @@
           # message, end
           if [ "$exitstatus" = "0" ]; then
             if [ "$warning" = "0" ]; then
-              log_success_msg "Congratulations! No documentation problem(s) detected."
+              log_success_msg "INFO Congratulations! No documentation problem(s) detected."
             else
-              log_warning_msg "No major documentation problem(s) detected but there are warnings!"
+              log_warning_msg "WARN No major documentation problem(s) detected but there are warnings!"
             fi
           else
             if [ ! "$warning" = "0" ]; then
-              log_warning_msg "Please check the detected documentation warning(s)!"
+              log_warning_msg "WARN Please check the detected documentation warning(s)!"
             fi
-            log_failure_msg "Please fix the detected documentation problem(s)!"
+            log_failure_msg "FAIL Please fix the detected documentation problem(s)!"
           fi
           exit $exitstatus
 
