@@ -2,7 +2,7 @@
 ###########
 # ANCHORS #
 ###########
-- docker_job_boiler_plate: &docker_job_boiler_plate
+- _docker_job_boiler_plate: &docker_job_boiler_plate
     name: docker_job_boiler_plate
 
     project-type: freestyle
@@ -50,7 +50,7 @@
     publishers:
       - lf-infra-publish
 
-- docker_verify_boiler_plate: &docker_verify_boiler_plate
+- _docker_verify_boiler_plate: &docker_verify_boiler_plate
     name: docker_verify_boiler_plate
 
     concurrent: true
@@ -69,7 +69,7 @@
           branch: '{branch}'
           files: '{files}'
 
-- docker_merge_boiler_plate: &docker_merge_boiler_plate
+- _docker_merge_boiler_plate: &docker_merge_boiler_plate
     name: docker_merge_boiler_plate
 
     scm:

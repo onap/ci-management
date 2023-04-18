@@ -65,7 +65,7 @@
     project: dcaegen2/utils
     branch: master
 
-- cbs_client_pypi_common: &cbs_client_pypi_common
+- _cbs_client_pypi_common: &cbs_client_pypi_common
     name: cbs-client-pypi-common
     # jenkins job prefix
     project-name: dcaegen2-platform-cbs-client
