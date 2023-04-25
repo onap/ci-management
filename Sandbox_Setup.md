@@ -1,4 +1,4 @@
-## ONAP Jenkins Sandbox Process:
+# ONAP Jenkins Sandbox Process
 
 ONAP Jenkins Sandbox provides you Jenkins Job testing/experimentation environment
 that can be used before pushing job templates to the production
@@ -23,23 +23,41 @@ required to access Gerrit & Jenkins. Also, to extend your permissions for upload
 Jenkins configurations to Sandbox environment, you must raise a ticket to
 [Linux Foundation Help Center](https://support.linuxfoundation.org)
 
+- [ONAP Jenkins Sandbox Process](#onap-jenkins-sandbox-process)
+  - [Setup](#setup)
+    - [Install JJB on your machine](#install-jjb-on-your-machine)
+    - [Make a copy of the example JJB config file (in the ci-management/ directory)](#make-a-copy-of-the-example-jjb-config-file-in-the-ci-management-directory)
+    - [Retrieve username and API token](#retrieve-username-and-api-token)
+  - [Working with jobs](#working-with-jobs)
+    - [Test a Job](#test-a-job)
+    - [Update a job](#update-a-job)
+    - [Trigger jobs from Jenkins Sandbox](#trigger-jobs-from-jenkins-sandbox)
+    - [Delete a Job](#delete-a-job)
+    - [Modify an Existing Job](#modify-an-existing-job)
+  - [More online documentation](#more-online-documentation)
+
+
+## Setup
+
 To download **ci-management**, execute the following command to clone the
 **ci-management** repository.
 
-`git clone https://gerrit.onap.org/r/ci-management && (cd ci-management && curl -Lo \
+```sh
+git clone https://gerrit.onap.org/r/ci-management && (cd ci-management && curl -Lo \
 $(git rev-parse --git-dir)/hooks/commit-msg https://gerrit.onap.org/r/tools/hooks/commit-msg; \
-chmod +x $(git rev-parse --git-dir)/hooks/commit-msg)`
+chmod +x $(git rev-parse --git-dir)/hooks/commit-msg)
+```
 
 Make sure to sync global-jjb submodule using:
 
 `git submodule update --init`
 
-Once you successfully clone the repository, next step is to install JJB
+Once you successfully cloned the repository, next step is to install JJB
 (Jenkins Job Builder) in order to experiment with Jenkins jobs.
 
-### Execute the following commands to install JJB on your machine:
+### Install JJB on your machine
 
-```
+```sh
 cd ci-management
 pip install virtualenv
 virtualenv onap_sandbox
@@ -51,15 +69,17 @@ jenkins-jobs test --recursive jjb/
 
 ### Make a copy of the example JJB config file (in the ci-management/ directory)
 
-Backup the jenkins.ini.example to jenkins.ini
+Place a copy of the `jenkins.ini.example` file as `jenkins.ini` in your home folder:  
 
-`mkdir -p ~/.config/jenkins_jobs`
-`cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini`
+```sh
+mkdir -p ~/.config/jenkins_jobs
+cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini
+```
 
-After copying the jenkins.ini.example, modify `jenkins.ini` with your
+Modify the resulting `~/.config/jenkins_jobs/jenkins_jobs.ini` with your
 **Jenkins LFID username** and **API token**
 
-```
+```ini
 [job_builder]
 ignore_cache=True
 keep_descriptions=False
@@ -73,23 +93,27 @@ password= <Refer below steps to get API token>
 url=https://jenkins.onap.org/sandbox
 query_plugins_info=False
 ```
-### How to retrieve username and API token?
+### Retrieve username and API token
 Login to the [Jenkins Sandbox](https://jenkins.onap.org/sandbox/), go to your user
 page by clicking on your username - `Jenkins User ID` on this page is your Jenkins
 Sandbox username. Click **Configure** and then click **Add new Token**.
 After that specify a token name (optional) and click on **Generate** to generate and show
 new token. Please note down your token and store it securely.
 
+## Working with jobs
+
 To work on existing jobs or create new jobs, navigate to the `ci-management/jjb/` directory where you
 will find all job templates for the project.  Follow the below commands to test,
 update or delete jobs in your sandbox environment.
 
-## To Test a Job:
+### Test a Job
 
 After you modify or create jobs in the above environment, it's good practice
-to test the job in sandbox environment before you submit this job to production CI environment.
+to test the job in the sandbox environment before you submit this job to the production CI environment.
 
-`jenkins-jobs test jjb/ <job-name>`
+```sh
+jenkins-jobs test jjb/ <job-name>
+```
 
 **Example:** `jenkins-jobs test jjb/ sdc-master-verify-java`
 
@@ -102,24 +126,28 @@ specified JJB job name.
 
 Execute the following command to pipe-out to a directory:
 
-`jenkins-jobs test jjb/ <job-name> -o <directoryname>`
+```sh
+jenkins-jobs test jjb/ <job-name> -o <directoryname>
+```
 
 The output directory will contain files with the XML configurations.
 
-## To Update a job:
+### Update a job
 
 Ensure you’ve configured your `jenkins_jobs.ini` and verified the changes by
 outputting valid XML descriptions of the relevant Jenkins jobs. Upon successful
 verification, execute the following command to update the job to the Jenkins sandbox.
 
-`jenkins-jobs update jjb/ <job-name>`
+```sh
+jenkins-jobs update jjb/ <job-name>
+```
 
 **Example:** `jenkins-jobs update jjb/ sdc-master-verify-java`
 
-## Trigger jobs from Jenkins Sandbox:
+### Trigger jobs from Jenkins Sandbox
 
 Once you push the Jenkins job configuration to the ONAP Sandbox environment,
-run the job from Jenkins Sandbox webUI. Follow the below process to trigger the build:
+run the job from the Jenkins Sandbox webUI. Follow the below process to trigger the build:
 
 Step 1: Login into the [Jenkins Sandbox WebUI](https://jenkins.onap.org/sandbox/)
 
@@ -133,26 +161,28 @@ you don't find many like in production CI environment.
 Once the job is triggered, click on the build number to view the job
 details and the console output.
 
-## To Delete a Job:
+### Delete a Job
 
 Execute the following command to Delete a job from Sandbox:
 
-`jenkins-jobs delete jjb/ <job-name>`
+```sh
+jenkins-jobs delete jjb/ <job-name>
+```
 
 **Example:** `jenkins-jobs delete jjb/ sdc-master-verify-java`
 
 The above command would delete the `sdc-master-verify-java` job.
 
-## Modify an Existing Job:
+### Modify an Existing Job
 
 In the ONAP Jenkins sandbox, you can directly edit or modify the job configuration
 by selecting the job name and clicking on the **Configure** button. Then, click the
 **Apply** and **Save** buttons to save the job.
 
 However, it is recommended to simply modify the job in your terminal and then follow
-the previously described steps in **To Test a Job** and **To Update a Job** to perform
+the previously described steps in [Test a Job](#test-a-job) and [Update a Job](#update-a-job) to perform
 your modifications.
 
-## More online documentation:
+## More online documentation
 
 https://docs.openstack.org/infra/jenkins-job-builder/
