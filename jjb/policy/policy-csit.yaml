@@ -197,3 +197,22 @@
     trigger_jobs:
       - 'policy-clamp-{stream}-merge-java'
       - 'policy-docker-{stream}-merge-java'
+
+- project:
+    name: policy-apex-pdp-postgres-project-csit
+    jobs:
+        - '{project-name}-{stream}-project-csit-verify-{functionality}'
+        - '{project-name}-{stream}-project-csit-{functionality}'
+    project-name: 'policy-apex-pdp'
+    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com'
+    project: 'policy/docker'
+    stream:
+        - 'master':
+              branch: 'master'
+        - 'kohn':
+              branch: 'kohn'
+    functionality:
+        - 'apex-pdp-postgres'
+    trigger_jobs:
+        - 'policy-apex-pdp-{stream}-merge-java'
+        - 'policy-docker-{stream}-merge-java'
