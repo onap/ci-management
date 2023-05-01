@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "71c3d2a5_3bb7d43f",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 56,
+        "startChar": 25,
+        "endLine": 56,
+        "endChar": 30
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ff31d2b_dd5c6d8c",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 57,
+        "startChar": 29,
+        "endLine": 57,
+        "endChar": 34
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54717b9a_bd59d58d",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "The secret you have for GERRIT_SSH_PRIVKEY should not have _NP in it. LFIT GH repos have it in their workflows as a holdover from a previous incarnation of how the gerrit-review-action operated.",
+      "range": {
+        "startLine": 58,
+        "startChar": 50,
+        "endLine": 58,
+        "endChar": 53
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71da1b2e_07080180",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 58,
+        "startChar": 27,
+        "endLine": 58,
+        "endChar": 32
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae9512dc_9aad5943",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 59,
+        "startChar": 32,
+        "endLine": 59,
+        "endChar": 37
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f1dfea9_9f8d10f8",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 105,
+        "startChar": 25,
+        "endLine": 105,
+        "endChar": 30
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "260ba024_4dac221f",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 106,
+        "startChar": 29,
+        "endLine": 106,
+        "endChar": 34
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba9c199a_37380967",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 107,
+        "startChar": 27,
+        "endLine": 107,
+        "endChar": 32
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40ab394d_75e5f3f0",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "The secret you have for GERRIT_SSH_PRIVKEY should not have _NP in it. LFIT GH repos have it in their workflows as a holdover from a previous incarnation of how the gerrit-review-action operated.",
+      "range": {
+        "startLine": 107,
+        "startChar": 50,
+        "endLine": 107,
+        "endChar": 53
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01e49a9f_06f85ee0",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-01T22:10:33Z",
+      "side": 1,
+      "message": "You should drop the LFIT, our examples in the LF Gerrit is because we have the potential to be dealing with multiple Gerrit systems! This does mean adjusting your vars / secrets.",
+      "range": {
+        "startLine": 108,
+        "startChar": 32,
+        "endLine": 108,
+        "endChar": 37
+      },
+      "revId": "0eeaa64762cadcf4c6033a12bf76a81a8734cb1e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
