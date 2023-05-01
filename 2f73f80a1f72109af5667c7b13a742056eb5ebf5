@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05b6f436_931b6503",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-05-01T23:56:47Z",
+      "side": 1,
+      "message": "I have some questions on this, we need to pass the jjbini file which in this case it should be stored in GH right? or how are we going to reference config files?",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 81
+      },
+      "revId": "2f73f80a1f72109af5667c7b13a742056eb5ebf5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
