@@ -85,7 +85,7 @@
       - gerrit-maven-clm
     nexus-iq-namespace: 'onap-'
     project: multicloud/framework
-    project-name: 'multicloud-framework-multivimbroker'   
+    project-name: 'multicloud-framework-multivimbroker'
     stream:
       - 'master':
           branch: 'master'

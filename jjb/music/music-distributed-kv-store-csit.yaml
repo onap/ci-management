@@ -1,10 +1,10 @@
-# Integration templates no longer support these 
+# Integration templates no longer support these
 # job definitions; if Music CSIT needs to be restored,
 # '{project-name}-review-verification-golang-{stream}'
 # '{project-name}-merge-verification-golag-{stream}'
-# would have to be added to integration templates and 
+# would have to be added to integration templates and
 # applied here
-#  
+#
 #---
 #- project:
 #    name: music-distributed-kv-store-csit

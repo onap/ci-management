@@ -69,7 +69,7 @@ jenkins-jobs test --recursive jjb/
 
 ### Make a copy of the example JJB config file (in the ci-management/ directory)
 
-Place a copy of the `jenkins.ini.example` file as `jenkins.ini` in your home folder:  
+Place a copy of the `jenkins.ini.example` file as `jenkins.ini` in your home folder:
 
 ```sh
 mkdir -p ~/.config/jenkins_jobs
