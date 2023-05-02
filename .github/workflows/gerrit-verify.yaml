@@ -78,22 +78,6 @@ jobs:
       - name: Run static analysis and format checkers
         run: pipx run tox -e pre-commit
 
-  tox:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lfit/checkout-gerrit-change-action@v0.2
-        with:
-          gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
-          delay: "0s"
-      - uses: actions/setup-python@v4
-        id: setup-python
-        with:
-          python-version: "3.11"
-      - name: Run tests
-        run: >-
-          TOX_SKIP_ENV=pre-commit pipx run tox
-
   jjb-validation:
     needs: prepare
     runs-on: ubuntu-latest
@@ -106,6 +90,8 @@ jobs:
         id: setup-python
         with:
           python-version: "3.11"
+      - name: Clone git submodules
+        run: git submodule update --init
       - name: Run JJB Verify
         run: |
           python -m pip install --upgrade pip
@@ -124,7 +110,7 @@ jobs:
 
   vote:
     if: ${{ always() }}
-    needs: [prepare, pre-commit, tox, jjb-validation]
+    needs: [prepare, pre-commit, jjb-validation]
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
