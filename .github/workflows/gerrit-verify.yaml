@@ -63,12 +63,27 @@ jobs:
       - name: Allow replication
         run: sleep 10s
 
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lfit/checkout-gerrit-change-action@v0.3
+        with:
+          gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
+          delay: "0s"
+      - name: Download actionlint
+        id: get_actionlint
+        run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+        shell: bash
+      - name: Check workflow files
+        run: ${{ steps.get_actionlint.outputs.executable }} -color
+        shell: bash
+
   # run pre-commit tox env separately to get use of more parallel processing
   pre-commit:
     needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - uses: lfit/checkout-gerrit-change-action@v0.2
+      - uses: lfit/checkout-gerrit-change-action@v0.3
         with:
           gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
           delay: "0s"
@@ -82,7 +97,7 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - uses: lfit/checkout-gerrit-change-action@v0.2
+      - uses: lfit/checkout-gerrit-change-action@v0.3
         with:
           gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
           delay: "0s"
@@ -110,7 +125,7 @@ jobs:
 
   vote:
     if: ${{ always() }}
-    needs: [prepare, pre-commit, jjb-validation]
+    needs: [prepare, actionlint, pre-commit, jjb-validation]
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
