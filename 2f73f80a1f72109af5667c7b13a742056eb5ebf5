@@ -22,6 +22,30 @@
       "revId": "2f73f80a1f72109af5667c7b13a742056eb5ebf5",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f7786f5d_faa6fe75",
+        "filename": ".github/workflows/gerrit-verify.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-05-02T16:15:46Z",
+      "side": 1,
+      "message": "We can use a generic jjbini file that has just the following section in it:\n\nI would add the following on the lines preceding the jjb test call.\n\n---%\u003c---\nmkdir -p \"${HOME}/.config/jenkins_jobs\"\ncat \u003c\u003c EOF \u003e \"${HOME}/.config/jenkins_jobs/jenkins_jobs.ini\"\n[job_builder]\nignore_cache\u003dTrue\nkeep_descriptions\u003dFalse\ninclude_path\u003d.\nrecursive\u003dTrue\nquery_plugins_info\u003dFalse\nconfig-xml\u003dTrue\nEOF\n---%\u003c---\n\nWith the above config file you can drop the --recursive and --config-xml parameters.  I\u0027ll note that the -o archives/job-configs isn\u0027t all that useful as we don\u0027t get access to the generated files after the job completes. That being said, not having it is going to spam the console IIRC so whatever.\n\nSetting query_plugins_info to False tells JJB to not talk to any jenkins server at all and find out what version of plugins may be installed. As such it just assumes that latest version of the needed plugin.",
+      "parentUuid": "05b6f436_931b6503",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 81
+      },
+      "revId": "2f73f80a1f72109af5667c7b13a742056eb5ebf5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
