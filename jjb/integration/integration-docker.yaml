@@ -1,48 +1,48 @@
 ---
 - project:
     name: integration-docker
-    project-name: 'integration'
+    project-name: "integration"
     jobs:
       - integration-docker-merge
       - integration-docker-verify
-    project: 'integration'
+    project: "integration"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     subproject:
-      - 'aai-simulator':
-          pom: 'test/mocks/aai-simulator/pom.xml'
-          pattern: 'test/mocks/aai-simulator/**'
-          mvn-goals: 'mvn clean install -Dcheckstyle.skip'
-      - 'sniroemulator':
-          pom: 'test/mocks/sniroemulator/pom.xml'
-          pattern: 'test/mocks/sniroemulator/**'
-    mvn-settings: 'integration-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "aai-simulator":
+          pom: "test/mocks/aai-simulator/pom.xml"
+          pattern: "test/mocks/aai-simulator/**"
+          mvn-goals: "mvn clean install -Dcheckstyle.skip"
+      - "sniroemulator":
+          pom: "test/mocks/sniroemulator/pom.xml"
+          pattern: "test/mocks/sniroemulator/**"
+    mvn-settings: "integration-settings"
+    files: "**"
+    archive-artifacts: ""
 
 - project:
     name: integration-netconf-pnp-simulator
     project: integration
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     # Required by verifier
-    mvn-settings: 'integration-settings'
-    project-name: 'integration-netconf-pnp-simulator'
+    mvn-settings: "integration-settings"
+    project-name: "integration-netconf-pnp-simulator"
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: 'test/mocks/netconf-pnp-simulator/engine/**'
-    docker-name: 'onap/integration/simulators/netconf-pnp-simulator'
+        pattern: "test/mocks/netconf-pnp-simulator/engine/**"
+    docker-name: "onap/integration/simulators/netconf-pnp-simulator"
     docker-root: test/mocks/netconf-pnp-simulator/engine
     container-tag-method: yaml-file
     post_docker_build_script: |
-        #!/bin/bash
-        set -eux
-        cd "$DOCKER_ROOT"
-        # To simplify the references inside tox.ini and tests/settings.py
-        docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" netconf-pnp-simulator:latest
-        tox
+      #!/bin/bash
+      set -eux
+      cd "$DOCKER_ROOT"
+      # To simplify the references inside tox.ini and tests/settings.py
+      docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" netconf-pnp-simulator:latest
+      tox
     build-node: ubuntu1804-docker-8c-8g
     build-timeout: 20
     jobs:
@@ -50,29 +50,29 @@
       - gerrit-docker-merge
 
 - project:
-      name: integration-ran-nssmf-simulator
-      project: integration
-      stream:
-          - 'master':
-                branch: 'master'
-      # Required by verifier
-      mvn-settings: 'integration-settings'
-      project-name: 'integration-ran-nssmf-simulator'
-      gerrit_trigger_file_paths:
-          - compare-type: REG_EXP
-            pattern: 'test/mocks/ran-nssmf-simulator/.*'
-      docker-name: 'onap/ran-nssmf-simulator'
-      docker-root: test/mocks/ran-nssmf-simulator
-      container-tag-method: yaml-file
-      post_docker_build_script: |
-          #!/bin/bash
-          set -eux
-          cd "$DOCKER_ROOT"
-          # To simplify the references inside tox.ini and tests/settings.py
-          docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" ran-nssmf-simulator:latest
-          tox
-      build-node: ubuntu1804-docker-8c-8g
-      build-timeout: 20
-      jobs:
-          - gerrit-docker-verify
-          - gerrit-docker-merge
+    name: integration-ran-nssmf-simulator
+    project: integration
+    stream:
+      - "master":
+          branch: "master"
+    # Required by verifier
+    mvn-settings: "integration-settings"
+    project-name: "integration-ran-nssmf-simulator"
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: "test/mocks/ran-nssmf-simulator/.*"
+    docker-name: "onap/ran-nssmf-simulator"
+    docker-root: test/mocks/ran-nssmf-simulator
+    container-tag-method: yaml-file
+    post_docker_build_script: |
+      #!/bin/bash
+      set -eux
+      cd "$DOCKER_ROOT"
+      # To simplify the references inside tox.ini and tests/settings.py
+      docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" ran-nssmf-simulator:latest
+      tox
+    build-node: ubuntu1804-docker-8c-8g
+    build-timeout: 20
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge

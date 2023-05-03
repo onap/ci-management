@@ -21,31 +21,30 @@
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
-      - 'js':
-          tox-dir: '.'
-          tox-envs: 'js'
-          pattern: '**/*.js'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
+      - "js":
+          tox-dir: "."
+          tox-envs: "js"
+          pattern: "**/*.js"
     stream:
-      - 'master':
-          branch: 'master'
-
+      - "master":
+          branch: "master"

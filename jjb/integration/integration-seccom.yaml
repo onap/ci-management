@@ -9,29 +9,29 @@
     branch: master
 
 - project:
-      name: integration-seccom-linters
-      project: integration/seccom
-      project-name: integration-seccom
-      python-version: python3
-      jobs:
-          - integration-linters
-      subproject:
-          - 'yaml':
-                tox-dir: '.'
-                tox-envs: 'yaml'
-                pattern: '**/*.yaml'
-          - 'yml':
-                tox-dir: '.'
-                tox-envs: 'yaml'
-                pattern: '**/*.yml'
-          - 'json':
-                tox-dir: '.'
-                tox-envs: 'json'
-                pattern: '**/*.json'
-          - 'md':
-              tox-dir: '.'
-              tox-envs: 'md'
-              pattern: '**/*.md'
-      stream:
-          - 'master':
-                branch: 'master'
+    name: integration-seccom-linters
+    project: integration/seccom
+    project-name: integration-seccom
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
+    stream:
+      - "master":
+          branch: "master"

@@ -1,52 +1,52 @@
 ---
 - project:
     name: integration-docker-compose
-    project-name: 'integration'
-    project: 'integration'
+    project-name: "integration"
+    project: "integration"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     jobs:
       - integration-docker-compose-verify
     subproject:
-      - 'netconf-pnp-simulator':
-          pattern: 'test/mocks/netconf-pnp-simulator/modules/**'
-          docker_root: 'test/mocks/netconf-pnp-simulator/modules'
-          netconf_sim_service_name: 'netconf-pnp-simulator'
+      - "netconf-pnp-simulator":
+          pattern: "test/mocks/netconf-pnp-simulator/modules/**"
+          docker_root: "test/mocks/netconf-pnp-simulator/modules"
+          netconf_sim_service_name: "netconf-pnp-simulator"
           script: |
             #!/bin/bash
             cd $DOCKER_ROOT
             docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
-      - 'emssimulator-swm-netconf':
-          pattern: 'test/mocks/emssimulator/swm-netconf/**'
-          docker_root: 'test/mocks/emssimulator/swm-netconf'
-          netconf_sim_service_name: 'ems-netconf-swm'
+      - "emssimulator-swm-netconf":
+          pattern: "test/mocks/emssimulator/swm-netconf/**"
+          docker_root: "test/mocks/emssimulator/swm-netconf"
+          netconf_sim_service_name: "ems-netconf-swm"
           script: |
             #!/bin/bash
             cd $DOCKER_ROOT
             docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
-      - 'pmsh-pnf-sim':
-          pattern: 'test/mocks/pmsh-pnf-sim/docker-compose/**'
-          docker_root: 'test/mocks/pmsh-pnf-sim/docker-compose'
-          netconf_sim_service_name: 'netopeer2'
+      - "pmsh-pnf-sim":
+          pattern: "test/mocks/pmsh-pnf-sim/docker-compose/**"
+          docker_root: "test/mocks/pmsh-pnf-sim/docker-compose"
+          netconf_sim_service_name: "netopeer2"
           script: |
             #!/bin/bash
             cd $DOCKER_ROOT
             docker-compose up -d
           post_script: !include-raw-escape: netconf-pnp-simulator-verify.sh
-      - 'datafilecollector-testharness':
-          pattern: 'test/mocks/datafilecollector-testharness/**'
-          docker_root: 'test/mocks/datafilecollector-testharness/simulator-group'
+      - "datafilecollector-testharness":
+          pattern: "test/mocks/datafilecollector-testharness/**"
+          docker_root: "test/mocks/datafilecollector-testharness/simulator-group"
           script: |
             #!/bin/bash
             cd $DOCKER_ROOT
             ./prepare-images.sh
             ./docker-compose-setup.sh
-      - 'prov-mns-provider':
-          pattern: 'test/mocks/prov-mns-provider/**'
-          docker_root: 'test/mocks/prov-mns-provider'
+      - "prov-mns-provider":
+          pattern: "test/mocks/prov-mns-provider/**"
+          docker_root: "test/mocks/prov-mns-provider"
           script: |
             #!/bin/bash
             cd $DOCKER_ROOT

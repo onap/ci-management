@@ -15,70 +15,70 @@
 
 - project:
     name: integration-data-provider-linters
-    project: 'integration/data-provider'
-    project-name: 'integration-data-provider'
+    project: "integration/data-provider"
+    project-name: "integration-data-provider"
     python-version: python3
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'rst':
-          tox-dir: '.'
-          tox-envs: 'rst'
-          pattern: '**/*.rst'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
-      - 'cov':
-          tox-dir: '.'
-          tox-envs: 'cov'
-          pattern: '**/*.py'
-      - 'mypy':
-          tox-dir: '.'
-          tox-envs: 'mypy'
-          pattern: '**/*.py'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "rst":
+          tox-dir: "."
+          tox-envs: "rst"
+          pattern: "**/*.rst"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
+      - "cov":
+          tox-dir: "."
+          tox-envs: "cov"
+          pattern: "**/*.py"
+      - "mypy":
+          tox-dir: "."
+          tox-envs: "mypy"
+          pattern: "**/*.py"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
 
 - project:
-    name: 'integration-data-provider-docker-verify'
+    name: "integration-data-provider-docker-verify"
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge
-    project-name: 'integration-data-provider'
-    project: 'integration/data-provider'
+    project-name: "integration-data-provider"
+    project: "integration/data-provider"
     stream:
-      - 'master':
-            branch: 'master'
-            files: ''
-    docker-build-args: '-f ./Dockerfile'
-    docker-name: 'onap/data-provider'
-    docker-root: '$WORKSPACE'
-    mvn-settings: 'integration-settings'
+      - "master":
+          branch: "master"
+          files: ""
+    docker-build-args: "-f ./Dockerfile"
+    docker-name: "onap/data-provider"
+    docker-root: "$WORKSPACE"
+    mvn-settings: "integration-settings"
     build-node: ubuntu1804-docker-8c-8g
 
 - project:
     name: integration-data-provider-release
-    project-name: 'integration-data-provider'
-    project: 'integration/data-provider'
-    mvn-settings: 'integration-settings'
+    project-name: "integration-data-provider"
+    project: "integration/data-provider"
+    mvn-settings: "integration-settings"
     jobs:
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g

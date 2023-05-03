@@ -8,21 +8,21 @@
     jobs:
       - integration-linters
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     subproject:
-      - 'python3.7':
-          tox-dir: '.'
-          tox-envs: 'py37'
-          pattern: '**/*.py'
-      - 'python3.8':
-          tox-dir: '.'
-          tox-envs: 'py38'
-          pattern: '**/*.py'
-      - 'python3.9':
-          tox-dir: '.'
-          tox-envs: 'py39'
-          pattern: '**/*.py'
+      - "python3.7":
+          tox-dir: "."
+          tox-envs: "py37"
+          pattern: "**/*.py"
+      - "python3.8":
+          tox-dir: "."
+          tox-envs: "py38"
+          pattern: "**/*.py"
+      - "python3.9":
+          tox-dir: "."
+          tox-envs: "py39"
+          pattern: "**/*.py"
       # Disable due to https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/IT-25247
       # - 'python3.10':
       #     tox-dir: '.'
@@ -32,18 +32,18 @@
       #     tox-dir: '.'
       #     tox-envs: 'py311'
       #     pattern: '**/*.py'
-      - 'pylint':
-          tox-dir: '.'
-          tox-envs: 'pylint'
-          pattern: '**/*.py'
-      - 'pydocstyle':
-          tox-dir: '.'
-          tox-envs: 'pydocstyle'
-          pattern: '**/*.py'
-      - 'bandit':
-          tox-dir: '.'
-          tox-envs: 'bandit'
-          pattern: '**/*.py'
+      - "pylint":
+          tox-dir: "."
+          tox-envs: "pylint"
+          pattern: "**/*.py"
+      - "pydocstyle":
+          tox-dir: "."
+          tox-envs: "pydocstyle"
+          pattern: "**/*.py"
+      - "bandit":
+          tox-dir: "."
+          tox-envs: "bandit"
+          pattern: "**/*.py"
 
 - project:
     name: integration-python-onapsdk-project-view
@@ -64,8 +64,8 @@
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     jobs:
       - gerrit-pypi-verify
 
@@ -74,8 +74,8 @@
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     jobs:
       - gerrit-pypi-release-verify
       - gerrit-pypi-release-merge:

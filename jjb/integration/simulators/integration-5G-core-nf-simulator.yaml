@@ -13,27 +13,27 @@
     project-name: integration-5G-core-nf-simulator
     project: integration/simulators/5G-core-nf-simulator
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-simulators-5G-core-nf-simulator-settings'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+    mvn-settings: "integration-simulators-5G-core-nf-simulator-settings"
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
     subproject:
-      - 'AMF':
-          path: 'coresim/AMF/'
-          pattern: 'coresim/AMF/**'
-          pom: 'coresim/AMF/pom.xml'
-      - 'SMF':
-          path: 'coresim/SMF/'
-          pattern: 'coresim/SMF/**'
-          pom: 'coresim/SMF/pom.xml'
-      - 'UPF':
-          path: 'coresim/UPF/'
-          pattern: 'coresim/UPF/**'
-          pom: 'coresim/UPF/pom.xml'
+      - "AMF":
+          path: "coresim/AMF/"
+          pattern: "coresim/AMF/**"
+          pom: "coresim/AMF/pom.xml"
+      - "SMF":
+          path: "coresim/SMF/"
+          pattern: "coresim/SMF/**"
+          pom: "coresim/SMF/pom.xml"
+      - "UPF":
+          path: "coresim/UPF/"
+          pattern: "coresim/UPF/**"
+          pom: "coresim/UPF/pom.xml"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java':
-          mvn-goals: 'clean install'
+      - "{project-name}-{stream}-{subproject}-verify-java":
+          mvn-goals: "clean install"
 
 - project:
     name: integration-5G-core-nf-simulator-linters
@@ -43,26 +43,26 @@
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"

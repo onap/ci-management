@@ -19,97 +19,97 @@
     project-name: integration
     project: integration
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-settings'
-    build-node: 'ubuntu1804-builder-4c-4g'
+      - "master":
+          branch: "master"
+    mvn-settings: "integration-settings"
+    build-node: "ubuntu1804-builder-4c-4g"
     subproject:
-      - 'test-vcpe':
-          path: 'test/vcpe'
-          pattern: 'test/vcpe/**'
-      - 'ran-nssmf-simulator':
-          path: 'test/mocks/ran-nssmf-simulator'
-          pattern: 'test/mocks/ran-nssmf-simulator/**'
+      - "test-vcpe":
+          path: "test/vcpe"
+          pattern: "test/vcpe/**"
+      - "ran-nssmf-simulator":
+          path: "test/mocks/ran-nssmf-simulator"
+          pattern: "test/mocks/ran-nssmf-simulator/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - "{project-name}-{stream}-{subproject}-verify-python"
 
 - project:
     name: integration-verify-vagrantfile
-    project-name: 'integration'
-    project: 'integration'
+    project-name: "integration"
+    project: "integration"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     jobs:
-      - '{project-name}-{stream}-verify-vagrantfile'
+      - "{project-name}-{stream}-verify-vagrantfile"
 
 - project:
     name: integration-verify-golang
-    project-name: 'integration'
-    project: 'integration'
-    golangver: 'golang114'
-    mvn-settings: 'integration-settings'
-    archive-artifacts: ''
+    project-name: "integration"
+    project: "integration"
+    golangver: "golang114"
+    mvn-settings: "integration-settings"
+    archive-artifacts: ""
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-golang'
+      - "{project-name}-{stream}-{subproject}-verify-golang"
     subproject:
-      - 'test-security-k8s':
-          path: 'test/security/k8s'
-          pattern: '{path}/**'
+      - "test-security-k8s":
+          path: "test/security/k8s"
+          pattern: "{path}/**"
           build-node: ubuntu1804-builder-4c-4g
           script: |
-              #!/bin/bash
-              set -ex # Fail build if any setup step fails
-              cd $WORKSPACE/{path}
-              make test
-      - 'test-security-sslendpoints':
-          path: 'test/security/sslendpoints'
-          pattern: '{path}/**'
+            #!/bin/bash
+            set -ex # Fail build if any setup step fails
+            cd $WORKSPACE/{path}
+            make test
+      - "test-security-sslendpoints":
+          path: "test/security/sslendpoints"
+          pattern: "{path}/**"
           build-node: ubuntu1804-docker-8c-8g
           script: |
-              #!/bin/bash
-              set -ex # Fail build if any setup step fails
-              cd $WORKSPACE/{path}
-              rm -rf $WORKSPACE/{path}/bin
-              make docker-build
-              make test
-              make clean
+            #!/bin/bash
+            set -ex # Fail build if any setup step fails
+            cd $WORKSPACE/{path}
+            rm -rf $WORKSPACE/{path}/bin
+            make docker-build
+            make test
+            make clean
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
 
 - project:
     name: integration-linters
-    project: 'integration'
-    project-name: 'integration'
+    project: "integration"
+    project-name: "integration"
     python-version: python3
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'rst':
-          tox-dir: '.'
-          tox-envs: 'rst'
-          pattern: '**/*.rst'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "rst":
+          tox-dir: "."
+          tox-envs: "rst"
+          pattern: "**/*.rst"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"

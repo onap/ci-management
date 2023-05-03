@@ -1,31 +1,31 @@
 ---
 - project:
-      name: integration-simulators-ran-simulator
-      project-name: integration-simulators-ran-simulator
-      stream:
-          -   'master':
-                  branch: 'master'
-      project: 'integration/simulators/ran-simulator'
-      mvn-settings: 'integration-simulators-ran-simulator-settings'
-      maven-deploy-properties: |
-          deployAtEnd=true
-      archive-artifacts: ''
-      build-node: ubuntu1804-docker-8c-8g
-      jobs:
-          - '{project-name}-{stream}-verify-java':
-                mvn-goals: 'clean install'
-                pattern: 'ransim/**'
-                pom: 'ransim/pom.xml'
-          - '{project-name}-{stream}-merge-java':
-                mvn-goals: 'clean deploy'
-                pom: 'ransim/pom.xml'
-          -  '{project-name}-gerrit-release-jobs':
-                 build-node: centos7-docker-2c-1g
-          - gerrit-maven-stage:
-                sign-artifacts: true
-                build-node: centos8-docker-8c-8g
-                maven-versions-plugin: true
-                mvn-goals: 'clean deploy'
+    name: integration-simulators-ran-simulator
+    project-name: integration-simulators-ran-simulator
+    stream:
+      - "master":
+          branch: "master"
+    project: "integration/simulators/ran-simulator"
+    mvn-settings: "integration-simulators-ran-simulator-settings"
+    maven-deploy-properties: |
+      deployAtEnd=true
+    archive-artifacts: ""
+    build-node: ubuntu1804-docker-8c-8g
+    jobs:
+      - "{project-name}-{stream}-verify-java":
+          mvn-goals: "clean install"
+          pattern: "ransim/**"
+          pom: "ransim/pom.xml"
+      - "{project-name}-{stream}-merge-java":
+          mvn-goals: "clean deploy"
+          pom: "ransim/pom.xml"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos8-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-goals: "clean deploy"
 
 - project:
     name: integration-simulators-ran-simulator-info
@@ -44,18 +44,18 @@
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"

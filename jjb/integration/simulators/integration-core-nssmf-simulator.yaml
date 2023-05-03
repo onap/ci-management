@@ -12,30 +12,30 @@
     project: integration/simulators/core-nssmf-simulator
     project-name: integration-simulators-core-nssmf-simulator
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-simulators-core-nssmf-simulator-settings'
-    files: '**'
+      - "master":
+          branch: "master"
+    mvn-settings: "integration-simulators-core-nssmf-simulator-settings"
+    files: "**"
     maven-deploy-properties: |
-        deployAtEnd=true
-    archive-artifacts: ''
+      deployAtEnd=true
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-        - '{project-name}-{stream}-verify-java':
-            mvn-goals: 'clean install'
-        - '{project-name}-{stream}-merge-java':
-            mvn-goals: 'clean deploy'
-        - '{project-name}-gerrit-release-jobs':
-            build-node: centos7-docker-2c-1g
-        - gerrit-maven-docker-stage:
-            build-node: centos8-docker-8c-8g
-            maven-versions-plugin: true
-            container-public-registry: 'nexus3.onap.org:10001'
-            container-staging-registry: 'nexus3.onap.org:10003'
-            mvn-goals: 'clean deploy'
-            mvn-params: '-P docker'
-        - gerrit-maven-stage:
-            sign-artifacts: true
-            build-node: centos8-docker-8c-8g
-            maven-versions-plugin: true
-            mvn-goals: 'clean deploy'
+      - "{project-name}-{stream}-verify-java":
+          mvn-goals: "clean install"
+      - "{project-name}-{stream}-merge-java":
+          mvn-goals: "clean deploy"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+      - gerrit-maven-docker-stage:
+          build-node: centos8-docker-8c-8g
+          maven-versions-plugin: true
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-goals: "clean deploy"
+          mvn-params: "-P docker"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos8-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-goals: "clean deploy"

@@ -4,45 +4,43 @@
     parameters:
       - string:
           name: TESTPLAN
-          default: '{test-plan}'
-          description: 'General test plan we will run unless stream-specific one is found'
+          default: "{test-plan}"
+          description: "General test plan we will run unless stream-specific one is found"
 
 - parameter:
     name: integration-test-options
     parameters:
       - string:
           name: TESTOPTIONS
-          default: '{test-options}'
-          description: 'Robot command options'
+          default: "{test-options}"
+          description: "Robot command options"
 
 - parameter:
     name: html-publisher-dir
     parameters:
       - string:
           name: HTMLDIR
-          default: '{html-dir}'
-          description: 'Directory location to be used by HTML publisher plugin'
+          default: "{html-dir}"
+          description: "Directory location to be used by HTML publisher plugin"
 
 - parameter:
     name: html-publisher-files
     parameters:
       - string:
           name: HTMLFILES
-          default: '{html-files}'
-          description: 'File name to be used by HTML publisher plugin to produce the report'
+          default: "{html-files}"
+          description: "File name to be used by HTML publisher plugin to produce the report"
 
 - builder:
     name: integration-install-robotframework
     builders:
-      - shell:
-          !include-raw:
+      - shell: !include-raw:
           - include-raw-integration-install-robotframework.sh
 
 - builder:
     name: integration-install-robotframework-py3
     builders:
-      - shell:
-          !include-raw:
+      - shell: !include-raw:
           - include-raw-integration-install-robotframework-py3.sh
 
 - builder:
@@ -92,26 +90,26 @@
     name: integration-robot
     publishers:
       - robot:
-          output-path: 'archives'
-          output-xml: '**/output.xml'
-          report-html: '**/report.html'
-          log-html: '**/log.html'
-          other-files: ''
-          unstable-threshold: '{unstable-if}'
-          pass-threshold: '{pass-if}'
+          output-path: "archives"
+          output-xml: "**/output.xml"
+          report-html: "**/report.html"
+          log-html: "**/log.html"
+          other-files: ""
+          unstable-threshold: "{unstable-if}"
+          pass-threshold: "{pass-if}"
           only-critical: false
 
 - publisher:
     name: integration-project-robot
     publishers:
       - robot:
-          output-path: 'csit/archives'
-          output-xml: '**/output.xml'
-          report-html: '**/report.html'
-          log-html: '**/log.html'
-          other-files: ''
-          unstable-threshold: '{unstable-if}'
-          pass-threshold: '{pass-if}'
+          output-path: "csit/archives"
+          output-xml: "**/output.xml"
+          report-html: "**/report.html"
+          log-html: "**/log.html"
+          other-files: ""
+          unstable-threshold: "{unstable-if}"
+          pass-threshold: "{pass-if}"
           only-critical: false
 
 - publisher:

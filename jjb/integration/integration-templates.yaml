@@ -5,41 +5,41 @@
     # The purpose of this job template is to run:
     # vagrant validate
 
-    name: '{project-name}-{stream}-verify-vagrantfile'
+    name: "{project-name}-{stream}-verify-vagrantfile"
     project-type: freestyle
-    description: 'Job intended for validating vagrantfiles'
+    description: "Job intended for validating vagrantfiles"
     node: ubuntu1804-builder-4c-4g
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
+          project: "{project}"
+          stream: "{stream}"
+          branch: "{branch}"
 
     properties:
       - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: "{build-days-to-keep}"
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "gerrit"
+          submodule-recursive: "{submodule-recursive}"
 
     wrappers:
       - infra-wrappers:
-          build-timeout: '{build-timeout}'
+          build-timeout: "{build-timeout}"
 
     triggers:
       - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '**/Vagrantfile'
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "**/Vagrantfile"
 
     builders:
       - integration-install-vagrant
-      - shell: !include-raw-escape: 'vagrantfile-verify.sh'
+      - shell: !include-raw-escape: "vagrantfile-verify.sh"
 
     publishers:
       - lf-infra-publish
@@ -53,84 +53,84 @@
     #     tox-dir:        Directory containing the project's tox.ini
     #     pattern:        List of file patterns to scan
 
-    name: '{project-name}-{stream}-{subproject}-lint'
+    name: "{project-name}-{stream}-{subproject}-lint"
     id: integration-linters
     project-type: freestyle
-    description: 'Job intended for running linters with Tox and Coala'
+    description: "Job intended for running linters with Tox and Coala"
     build-node: centos8-builder-2c-1g
-    node: '{build-node}'
+    node: "{build-node}"
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
+          project: "{project}"
+          stream: "{stream}"
+          branch: "{branch}"
       - lf-infra-tox-parameters:
-          tox-dir: '{tox-dir}'
-          tox-envs: '{tox-envs}'
+          tox-dir: "{tox-dir}"
+          tox-envs: "{tox-envs}"
 
     properties:
       - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: "{build-days-to-keep}"
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "gerrit"
+          submodule-recursive: "{submodule-recursive}"
 
     wrappers:
       - infra-wrappers:
-          build-timeout: '{build-timeout}'
+          build-timeout: "{build-timeout}"
 
     triggers:
       - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{pattern}'
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{pattern}"
 
     builders:
       - lf-infra-tox-install:
-          python-version: '{python-version}'
+          python-version: "{python-version}"
       - lf-infra-tox-run:
-          parallel: 'false'
+          parallel: "false"
 
     publishers:
       - lf-infra-publish
 
 - job-template:
     <<: *tox_verify_boilerplate
-    name: '{project-name}-{stream}-{subproject}-tox-verify'
+    name: "{project-name}-{stream}-{subproject}-tox-verify"
     id: integration-tox-verify
-    description: 'Job intended for running tox'
+    description: "Job intended for running tox"
 
 - job-template:
     <<: *tox_verify_boilerplate
-    name: '{project-name}-{stream}-{subproject}-terraform-verify'
+    name: "{project-name}-{stream}-{subproject}-terraform-verify"
     terraform-version: 0.13.2
     terragrunt-version: 0.24.1
     python-version: python3
     id: integration-terraform-verify
-    description: 'Job intended for validating terraform modules'
+    description: "Job intended for validating terraform modules"
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
+          project: "{project}"
+          stream: "{stream}"
+          branch: "{branch}"
       - lf-infra-tox-parameters:
-          tox-dir: '{tox-dir}'
-          tox-envs: '{tox-envs}'
+          tox-dir: "{tox-dir}"
+          tox-envs: "{tox-envs}"
       - integration-terraform-version:
-          terraform-version: '{terraform-version}'
+          terraform-version: "{terraform-version}"
       - integration-terragrunt-version:
-          terragrunt-version: '{terragrunt-version}'
+          terragrunt-version: "{terragrunt-version}"
 
     builders:
       - integration-install-terraform
       - integration-install-terragrunt
       - lf-infra-tox-install:
-          python-version: '{python-version}'
+          python-version: "{python-version}"
       - lf-infra-tox-run:
-          parallel: 'false'
+          parallel: "false"

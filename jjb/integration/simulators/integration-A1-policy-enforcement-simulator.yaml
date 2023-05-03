@@ -1,5 +1,4 @@
 ---
-
 - project:
     name: integration-simulators-A1-policy-enforcement-simulator-info
     project: integration/simulators/A1-policy-enforcement-simulator
@@ -14,15 +13,15 @@
     project-name: integration-simulators-A1-policy-enforcement-simulator
     java-version: openjdk11
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'integration-simulators-A1-policy-enforcement-simulator-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+    mvn-settings: "integration-simulators-A1-policy-enforcement-simulator-settings"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-        - '{project-name}-{stream}-verify-java':
-            mvn-goals: 'clean install'
+      - "{project-name}-{stream}-verify-java":
+          mvn-goals: "clean install"
 
 - project:
     name: integration-simulators-A1-policy-enforcement-simulator-linters
@@ -32,26 +31,26 @@
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
