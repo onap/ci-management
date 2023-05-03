@@ -11,65 +11,64 @@
     chartmuseum_version: 0.15.0
 
   tasks:
-    - name: 'Install kubectl {{kubectl_version}}'
+    - name: "Install kubectl {{kubectl_version}}"
       get_url:
         url: "https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/linux/amd64/kubectl"
         dest: /usr/local/bin/kubectl
         mode: 0775
-      become: yes
+      become: true
 
-    - name: 'Install Helm3.8 {{helm3_8_version}}'
+    - name: "Install Helm3.8 {{helm3_8_version}}"
       block:
-        - name: 'Create directory /tmp/helm3.8'
+        - name: "Create directory /tmp/helm3.8"
           file:
             path: /tmp/helm3.8
             state: directory
-        - name: 'Fetch tar.gz for Helm 3.8'
+        - name: "Fetch tar.gz for Helm 3.8"
           get_url:
             url: "https://get.helm.sh/helm-v{{helm3_8_version}}-linux-amd64.tar.gz"
             dest: /tmp/helm3.8
-        - name: 'Unarchive Helm 3.8'
+        - name: "Unarchive Helm 3.8"
           unarchive:
             src: "/tmp/helm3.8/helm-v{{helm3_8_version}}-linux-amd64.tar.gz"
             dest: /tmp/helm3.8
             remote_src: true
-          become: yes
-        - name: 'Move Helm 3.8 bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/helm3.8/linux-amd64/helm /usr/local/bin/helm3.8'
-          become: yes
-        - name: 'Check Helm 3.8'
-          command: 'which helm3.8'
-        - name: 'Check kubectl {{kubectl_version}}'
-          command: 'which kubectl'
+          become: true
+        - name: "Move Helm 3.8 bin to /usr/local/bin and set as executable"
+          command: "mv /tmp/helm3.8/linux-amd64/helm /usr/local/bin/helm3.8"
+          become: true
+        - name: "Check Helm 3.8"
+          command: "which helm3.8"
+        - name: "Check kubectl {{kubectl_version}}"
+          command: "which kubectl"
 
-        - name: 'Install Helm 3.8'
+        - name: "Install Helm 3.8"
           shell: |
-             echo "----> Installing helm3.8"
-             wget 'https://get.helm.sh/helm-v{{helm3_8_version}}-linux-amd64.tar.gz'
-             tar -xvf 'https://get.helm.sh/helm-v{{helm3_8_version}}-linux-amd64.tar.gz'
-             mv linux-amd64/helm /usr/local/bin/helm3.8
-             which helm3.8
+            echo "----> Installing helm3.8"
+            wget 'https://get.helm.sh/helm-v{{helm3_8_version}}-linux-amd64.tar.gz'
+            tar -xvf 'https://get.helm.sh/helm-v{{helm3_8_version}}-linux-amd64.tar.gz'
+            mv linux-amd64/helm /usr/local/bin/helm3.8
+            which helm3.8
           become: true
 
-
-    - name: 'Install ChartMuseum {{chartmuseum_version}}'
+    - name: "Install ChartMuseum {{chartmuseum_version}}"
       block:
-        - name: 'Create directory /tmp/chartmuseum'
+        - name: "Create directory /tmp/chartmuseum"
           file:
             path: /tmp/chartmuseum
             state: directory
-        - name: 'Fetch tar.gz for chartmuseum'
+        - name: "Fetch tar.gz for chartmuseum"
           get_url:
             url: "https://get.helm.sh/chartmuseum-v{{chartmuseum_version}}-linux-amd64.tar.gz"
             dest: /tmp/chartmuseum
-        - name: 'Unarchive chartmuseum'
+        - name: "Unarchive chartmuseum"
           unarchive:
             src: "/tmp/chartmuseum/chartmuseum-v{{chartmuseum_version}}-linux-amd64.tar.gz"
             dest: /tmp/chartmuseum
             remote_src: true
-          become: yes
-        - name: 'Move chartmuseum bin to /usr/local/bin and set as executable'
-          command: 'mv /tmp/chartmuseum/linux-amd64/chartmuseum /usr/local/bin/chartmuseum'
-          become: yes
-        - name: 'Check ChartMuseum {{chartmuseum_version}}'
-          command: 'which chartmuseum'
+          become: true
+        - name: "Move chartmuseum bin to /usr/local/bin and set as executable"
+          command: "mv /tmp/chartmuseum/linux-amd64/chartmuseum /usr/local/bin/chartmuseum"
+          become: true
+        - name: "Check ChartMuseum {{chartmuseum_version}}"
+          command: "which chartmuseum"

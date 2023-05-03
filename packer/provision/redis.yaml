@@ -6,19 +6,19 @@
   become_method: sudo
 
   tasks:
-    - name: 'Install Redis'
+    - name: "Install Redis"
       package:
         name: redis
         state: present
       become: true
 
-    - name: 'Enable service redis'
+    - name: "Enable service redis"
       service:
         name: redis
-        enabled: yes
+        enabled: true
       become: true
 
-    - name: 'Start service redis'
+    - name: "Start service redis"
       service:
         name: redis
         state: started
@@ -29,6 +29,6 @@
         name:
           - epel-release
           - python36
-        update_cache: yes
+        update_cache: true
         state: latest
       become: true

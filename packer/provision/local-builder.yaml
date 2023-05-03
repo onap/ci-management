@@ -14,8 +14,8 @@
 
     - name: Update and upgrade apt packages
       apt:
-        upgrade: 'yes'
-        update_cache: yes
+        upgrade: "yes"
+        update_cache: true
       become: true
       when: ansible_distribution == 'Ubuntu'
 
@@ -63,7 +63,7 @@
     - name: Install libssl1.0-dev dep
       apt:
         name: libssl1.0-dev
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
@@ -85,7 +85,7 @@
           - crudini
           - maven
           - python-ncclient
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
@@ -107,27 +107,27 @@
           - crudini
           - maven
           - python3-ncclient
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Install nodejs and npm
       block:
-        - name: 'Pull latest nodejs version'
+        - name: "Pull latest nodejs version"
           shell: |
             curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
-          become: yes
-        - name: 'Check nodejs version'
+          become: true
+        - name: "Check nodejs version"
           command: node --version
-        - name: 'Check npm version'
+        - name: "Check npm version"
           command: npm --version
       when: ansible_distribution == 'Ubuntu'
 
     - name: Install npm build tools
       apt:
         name: build-essential
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu'
@@ -136,7 +136,7 @@
       apt:
         name:
           - enchant-2
-        update_cache: yes
+        update_cache: true
         state: present
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
@@ -145,7 +145,7 @@
       apt:
         name:
           - enchant
-        update_cache: yes
+        update_cache: true
         state: present
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
@@ -154,7 +154,7 @@
       dnf:
         name:
           - enchant2
-        update_cache: yes
+        update_cache: true
         state: present
       become: true
       when: ansible_distribution == 'CentOS'

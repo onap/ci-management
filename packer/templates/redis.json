@@ -24,9 +24,7 @@
       "tenant_name": "{{user `cloud_tenant`}}",
       "domain_name": "Default",
       "region": "ca-ymq-1",
-      "networks": [
-        "{{user `cloud_network`}}"
-      ],
+      "networks": ["{{user `cloud_network`}}"],
       "user_data_file": "{{user `cloud_user_data`}}",
       "ssh_username": "{{user `ssh_user`}}",
       "ssh_proxy_host": "{{user `ssh_proxy_host`}}",

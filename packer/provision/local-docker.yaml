@@ -25,7 +25,8 @@
         golang_checksum: sha256:d31ecae36efea5197af271ccce86ccc2baf10d2e04f20d0fb75556ecf0614dad
       when: "'aarch64' in ansible_architecture"
 
-    - name: 'Install Docker Compose {{docker_compose_version}}'
+    - name: "Install Docker Compose {{docker_compose_version}}"
+      # yamllint disable-line rule:line-length
       command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
       become: true
 
@@ -34,16 +35,16 @@
         mode: "+x"
       become: true
 
-    - name: 'Install GoLang {{golang_version}}'
+    - name: "Install GoLang {{golang_version}}"
       block:
-        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
+        - name: "Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
           get_url:
-            url: 'https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-            dest: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-            checksum: '{{golang_checksum}}'
-        - name: 'Install golang {{golang_version}} to /usr/local'
+            url: "https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+            dest: "/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+            checksum: "{{golang_checksum}}"
+        - name: "Install golang {{golang_version}} to /usr/local"
           unarchive:
-            src: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
+            src: "/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
             dest: /usr/local
             remote_src: true
           become: true
@@ -69,8 +70,8 @@
 
     - name: Update and upgrade apt packages
       apt:
-        upgrade: 'yes'
-        update_cache: yes
+        upgrade: "yes"
+        update_cache: true
       become: true
       when: ansible_distribution == 'Ubuntu'
 
@@ -132,7 +133,7 @@
           - crudini
           - maven
           - python-ncclient
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
@@ -154,7 +155,7 @@
           - crudini
           - maven
           - python3-ncclient
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
@@ -166,7 +167,7 @@
             name:
               - apt-transport-https
               - g++
-            update_cache: yes
+            update_cache: true
             state: present
           become: true
         - name: add nodejs apt key
@@ -178,7 +179,7 @@
           apt_repository:
             repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
             state: present
-            update_cache: yes
+            update_cache: true
           become: true
         - name: install nodejs
           apt:
@@ -190,16 +191,16 @@
 
     - name: Check nodejs and npm versions
       block:
-        - name: 'Check nodejs version'
+        - name: "Check nodejs version"
           command: node --version
-        - name: 'Check npm version'
+        - name: "Check npm version"
           command: npm --version
       when: ansible_distribution == 'Ubuntu'
 
     - name: Install npm build tools
       apt:
         name: build-essential
-        update_cache: yes
+        update_cache: true
         state: fixed
       become: true
       when: ansible_distribution == 'Ubuntu'
@@ -227,6 +228,7 @@
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
     - name: Add Google Chrome repo
+      # yamllint disable-line rule:line-length
       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
@@ -256,6 +258,7 @@
         name:
           - libwxgtk3.0-0v5
       become: true
+      # yamllint disable-line rule:line-length
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
     - name: Install Erlang dependency package libwxgtk3 for 20.04
@@ -263,12 +266,14 @@
         name:
           - libwxgtk3.0-gtk3-0v5
       become: true
+      # yamllint disable-line rule:line-length
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Download and install libssl Ubuntu 20.04
       apt:
         deb: http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.11_amd64.deb
       become: true
+      # yamllint disable-line rule:line-length
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Install Erlang
@@ -277,7 +282,7 @@
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
-    - name: 'Download latest rebar3 bin'
+    - name: "Download latest rebar3 bin"
       command: curl -o /usr/bin/rebar3 -L "https://s3.amazonaws.com/rebar3/rebar3"
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
@@ -293,16 +298,17 @@
         src: https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
         dest: /usr/bin
         mode: 0755
-        remote_src: yes
+        remote_src: true
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
     - name: Download Firefox version 55.0.3
       unarchive:
+        # yamllint disable-line rule:line-length
         src: https://download-installer.cdn.mozilla.net/pub/firefox/releases/55.0.3/linux-x86_64/en-US/firefox-55.0.3.tar.bz2
         dest: /opt
         mode: 0755
-        remote_src: yes
+        remote_src: true
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
