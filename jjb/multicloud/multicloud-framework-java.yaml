@@ -1,20 +1,20 @@
 ---
 - project:
     name: multicloud-framework-java
-    project-name: 'multicloud-framework'
-    project: 'multicloud/framework'
+    project-name: "multicloud-framework"
+    project: "multicloud/framework"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
           java-version: openjdk11
-    mvn-settings: 'multicloud-framework-settings'
+    mvn-settings: "multicloud-framework-settings"
     subproject:
-      - 'multivimbroker':
-          pom: 'multivimbroker/pom.xml'
-          pattern: 'multivimbroker/**'
-      - 'artifactbroker':
-          pom: 'artifactbroker/pom.xml'
-          pattern: 'artifactbroker/**'
+      - "multivimbroker":
+          pom: "multivimbroker/pom.xml"
+          pattern: "multivimbroker/**"
+      - "artifactbroker":
+          pom: "artifactbroker/pom.xml"
+          pattern: "artifactbroker/**"
     jobs:
       - gerrit-maven-stage:
           sbom-generator: true
@@ -25,102 +25,80 @@
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-goals: install
-          mvn-params: '-P docker'
+          mvn-params: "-P docker"
           maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-gerrit-release-jobs':
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - "{project-name}-{stream}-{subproject}-verify-java"
+      - "{project-name}-{stream}-{subproject}-merge-java"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
-#- project:
-#    name: multicloud-framework-arm64-java
-#    project-name: 'multicloud-framework-arm64'
-#    project: 'multicloud/framework'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'multicloud-framework-settings'
-#    subproject:
-#      - 'multivimbroker':
-#          pom: 'multivimbroker/pom.xml'
-#          pattern: 'multivimbroker/**'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-version-shell-daily':
-#          docker-pom: 'pom.xml'
-#          mvn-goals: 'install'
-#          script:
-#            !include-raw-escape: 'build-multicloud-framework-docker-image.sh'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#
 - project:
     name: multicloud-framework-multivimbroker-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/framework'
-    project-name: 'multicloud-framework-multivimbroker'
-    branch: 'master'
-    mvn-params: '-f multivimbroker/pom.xml'
-    mvn-settings: 'multicloud-framework-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/framework"
+    project-name: "multicloud-framework-multivimbroker"
+    branch: "master"
+    mvn-params: "-f multivimbroker/pom.xml"
+    mvn-settings: "multicloud-framework-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-framework-multivimbroker-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: multicloud/framework
-    project-name: 'multicloud-framework-multivimbroker'
+    project-name: "multicloud-framework-multivimbroker"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-params: '-f multivimbroker/pom.xml'
-    mvn-settings: 'multicloud-framework-settings'
+      - "master":
+          branch: "master"
+    mvn-params: "-f multivimbroker/pom.xml"
+    mvn-settings: "multicloud-framework-settings"
 
 - project:
     name: multicloud-framework-artifactbroker-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/framework'
-    project-name: 'multicloud-framework-artifactbroker'
-    branch: 'master'
+    project: "multicloud/framework"
+    project-name: "multicloud-framework-artifactbroker"
+    branch: "master"
     java-version: openjdk11
-    mvn-params: '-f artifactbroker/pom.xml'
-    mvn-settings: 'multicloud-framework-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-params: "-f artifactbroker/pom.xml"
+    mvn-settings: "multicloud-framework-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-framework-artifactbroker-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: multicloud/framework
-    project-name: 'multicloud-framework-artifactbroker'
+    project-name: "multicloud-framework-artifactbroker"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     java-version: openjdk11
-    mvn-params: '-f artifactbroker/pom.xml'
-    mvn-settings: 'multicloud-framework-settings'
+    mvn-params: "-f artifactbroker/pom.xml"
+    mvn-settings: "multicloud-framework-settings"

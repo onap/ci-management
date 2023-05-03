@@ -2,13 +2,13 @@
 - project:
     name: multicloud-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'multicloud'
-    recipients: 'bin.yang@windriver.com'
-    stream: 'master'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "multicloud"
+    recipients: "bin.yang@windriver.com"
+    stream: "master"
     functionality:
-      - 'functionality1':
+      - "functionality1":
           trigger_jobs:
-    robot-options: ''
-    branch: 'master'
+    robot-options: ""
+    branch: "master"

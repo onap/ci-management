@@ -7,215 +7,144 @@
 
 - project:
     name: multicloud-openstack
-    project-name: 'multicloud-openstack'
-    project: 'multicloud/openstack'
+    project-name: "multicloud-openstack"
+    project: "multicloud/openstack"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-openstack-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "multicloud-openstack-settings"
     subproject:
-      - 'pike':
-          path: 'pike'
-          pattern: 'pike/**'
-          pom: 'pike/pom.xml'
-      - 'pike_share':
-          path: 'pike'
-          pattern: 'share/**'
-          pom: 'pike/pom.xml'
-      - 'starlingx':
-          path: 'starlingx'
-          pattern: 'starlingx/**'
-          pom: 'starlingx/pom.xml'
-      - 'starlingx_share':
-          path: 'starlingx'
-          pattern: 'share/**'
-          pom: 'starlingx/pom.xml'
-      - 'windriver':
-          path: 'windriver'
-          pattern: 'windriver/**'
-          pom: 'windriver/pom.xml'
-      - 'windriver_share':
-          path: 'windriver'
-          pattern: 'share/**'
-          pom: 'windriver/pom.xml'
-      - 'fcaps':
-          path: 'fcaps'
-          pattern: 'fcaps/**'
-          pom: 'fcaps/pom.xml'
-#      - 'lenovo':
-#          path: 'lenovo'
-#          pattern: 'lenovo/**'
-#          pom: 'lenovo/pom.xml'
-#      - 'lenovo_share':
-#          path: 'lenovo'
-#          pattern: 'share/**'
-#          pom: 'lenovo/pom.xml'
-      - 'hpa':
-          path: 'hpa'
-          pattern: 'hpa/**'
-          pom: 'hpa/pom.xml'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          build-node: centos8-docker-8c-8g
-          sbom-generator: true
-          maven-goals: install
-          mvn-params: '-P docker'
-          maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'centos8-builder-4c-4g'
-
-#- project:
-#    name: multicloud-openstack-arm64
-#    project-name: 'multicloud-openstack-arm64'
-#    project: 'multicloud/openstack'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'multicloud-openstack-settings'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-version-shell-daily':
-#          docker-pom: 'pom.xml'
-#          mvn-goals: 'install'
-#          script:
-#            !include-raw-escape: 'build-multicloud-openstack-docker-image.sh'
-#          build-node: ubuntu1804-docker-arm64-4c-2g
-#    files: '**'
-#    archive-artifacts: ''
-#
+      - "pike":
+          path: "pike"
+          pattern: "pike/**"
+          pom: "pike/pom.xml"
+      - "pike_share":
+          path: "pike"
+          pattern: "share/**"
+          pom: "pike/pom.xml"
+      - "starlingx":
+          path: "starlingx"
+          pattern: "starlingx/**"
+          pom: "starlingx/pom.xml"
+      - "starlingx_share":
+          path: "starlingx"
+          pattern: "share/**"
+          pom: "starlingx/pom.xml"
+      - "windriver":
+          path: "windriver"
+          pattern: "windriver/**"
+          pom: "windriver/pom.xml"
+      - "windriver_share":
+          path: "windriver"
+          pattern: "share/**"
+          pom: "windriver/pom.xml"
+      - "fcaps":
+          path: "fcaps"
+          pattern: "fcaps/**"
+          pom: "fcaps/pom.xml"
 
 - project:
     name: multicloud-openstack-windriver-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-windriver'
-    branch: 'master'
-    mvn-params: '-f windriver/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack"
+    project-name: "multicloud-openstack-windriver"
+    branch: "master"
+    mvn-params: "-f windriver/pom.xml"
+    mvn-settings: "multicloud-openstack-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-openstack-pike-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-pike'
-    branch: 'master'
-    mvn-params: '-f pike/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack"
+    project-name: "multicloud-openstack-pike"
+    branch: "master"
+    mvn-params: "-f pike/pom.xml"
+    mvn-settings: "multicloud-openstack-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-openstack-starlingx-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-starlingx'
-    branch: 'master'
-    mvn-params: '-f starlingx/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack"
+    project-name: "multicloud-openstack-starlingx"
+    branch: "master"
+    mvn-params: "-f starlingx/pom.xml"
+    mvn-settings: "multicloud-openstack-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-openstack-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: multicloud/openstack
-    project-name: 'multicloud-openstack'
+    project-name: "multicloud-openstack"
     build-node: ubuntu2004-memcached-4c-4g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-openstack-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "multicloud-openstack-settings"
 
 - project:
     name: multicloud-openstack-fcaps-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-fcaps'
-    branch: 'master'
-    mvn-params: '-f fcaps/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-
-#- project:
-#    name: multicloud-openstack-lenovo-sonar
-#    jobs:
-#      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-#    cron: '@daily'
-#    build-node: ubuntu1804-builder-4c-4g
-#    project: 'multicloud/openstack'
-#    project-name: 'multicloud-openstack-lenovo'
-#    branch: 'master'
-#    mvn-params: '-f lenovo/pom.xml'
-#    mvn-settings: 'multicloud-openstack-settings'
-#    mvn-goals: 'clean install'
-#    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack"
+    project-name: "multicloud-openstack-fcaps"
+    branch: "master"
+    mvn-params: "-f fcaps/pom.xml"
+    mvn-settings: "multicloud-openstack-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-openstack-hpa-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack'
-    project-name: 'multicloud-openstack-hpa'
-    branch: 'master'
-    mvn-params: '-f hpa/pom.xml'
-    mvn-settings: 'multicloud-openstack-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack"
+    project-name: "multicloud-openstack-hpa"
+    branch: "master"
+    mvn-params: "-f hpa/pom.xml"
+    mvn-settings: "multicloud-openstack-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-openstack-info

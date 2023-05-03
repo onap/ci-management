@@ -1,56 +1,32 @@
 ---
 - project:
     name: multicloud-k8s
-    project-name: 'multicloud-k8s'
-    path: 'src'
-    golangver: 'golang114'
+    project-name: "multicloud-k8s"
+    path: "src"
+    golangver: "golang114"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{stream}-verify-golang'
-      - '{project-name}-{stream}-merge-golang'
-      - '{project-name}-{stream}-docker-golang-shell-daily':
-          script:
-            !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
-      - '{project-name}-{stream}-{area}-verify-shell':
-          disable-job: '{disable-kud}'
+      - "{project-name}-{stream}-{subproject}-verify-python"
+      - "{project-name}-{stream}-verify-golang"
+      - "{project-name}-{stream}-merge-golang"
+      - "{project-name}-{stream}-docker-golang-shell-daily":
+          script: !include-raw-escape: "build-multicloud-k8s-docker-image.sh"
+      - "{project-name}-{stream}-{area}-verify-shell":
+          disable-job: "{disable-kud}"
           area: kud-deployment
           build-timeout: 45
-          script:
-            !include-raw-escape: 'kud-deployment.sh'
-      - '{project-name}-gerrit-release-jobs':
+          script: !include-raw-escape: "kud-deployment.sh"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'multicloud/k8s'
+    project: "multicloud/k8s"
     subproject:
       - validation-scripts:
-          path: '.'
-          pattern: '**'
+          path: "."
+          pattern: "**"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-k8s-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "multicloud-k8s-settings"
     disable-kud: false
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-
-#- project:
-#    name: multicloud-k8s-arm64
-#    project-name: 'multicloud-k8s-arm64'
-#    path: 'src/k8splugin'
-#    golangver: 'golang114'
-#    jobs:
-#      - '{project-name}-{stream}-docker-golang-shell-daily':
-#          script:
-#            !include-raw-escape: 'build-multicloud-k8s-docker-image.sh'
-#    project: 'multicloud/k8s'
-#    subproject:
-#      - validation-scripts:
-#          path: '.'
-#          pattern: '**'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'multicloud-k8s-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g

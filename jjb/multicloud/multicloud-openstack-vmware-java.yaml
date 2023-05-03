@@ -1,16 +1,16 @@
 ---
 - project:
     name: multicloud-openstack-vmware-java
-    project-name: 'multicloud-openstack-vmware'
-    project: 'multicloud/openstack/vmware'
+    project-name: "multicloud-openstack-vmware"
+    project: "multicloud/openstack/vmware"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-openstack-vmware-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "multicloud-openstack-vmware-settings"
     subproject:
-      - 'vio':
-          pom: 'vio/pom.xml'
-          pattern: 'vio/**'
+      - "vio":
+          pom: "vio/pom.xml"
+          pattern: "vio/**"
     jobs:
       - gerrit-maven-stage:
           sbom-generator: true
@@ -21,73 +21,51 @@
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-goals: install
-          mvn-params: '-P docker'
+          mvn-params: "-P docker"
           maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - '{project-name}-gerrit-release-jobs':
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - "{project-name}-{stream}-{subproject}-verify-java"
+      - "{project-name}-{stream}-{subproject}-merge-java"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
     disabled: true
 
-#- project:
-#    name: multicloud-openstack-vmware-arm64-java
-#    project-name: 'multicloud-openstack-vmware-arm64'
-#    project: 'multicloud/openstack/vmware'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'multicloud-openstack-vmware-settings'
-#    subproject:
-#      - 'vio':
-#          pom: 'vio/pom.xml'
-#          pattern: 'vio/**'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-version-shell-daily':
-#          docker-pom: 'pom.xml'
-#          mvn-goals: 'install'
-#          script:
-#            !include-raw-escape: 'build-multicloud-openstack-vmware-docker-image.sh'
-#          build-node: ubuntu1804-docker-arm64-4c-2g
-#    files: '**'
-#    archive-artifacts: ''
-#
 - project:
     name: multicloud-openstack-vmware-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'multicloud/openstack/vmware'
-    project-name: 'multicloud-openstack-vmware'
-    branch: 'master'
-    mvn-settings: 'multicloud-openstack-vmware-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "multicloud/openstack/vmware"
+    project-name: "multicloud-openstack-vmware"
+    branch: "master"
+    mvn-settings: "multicloud-openstack-vmware-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     disabled: true
 
 - project:
     name: multicloud-openstack-vmware-java-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: multicloud/openstack/vmware
-    project-name: 'multicloud-openstack-vmware'
-    build-node: 'ubuntu1804-builder-4c-4g'
+    project-name: "multicloud-openstack-vmware"
+    build-node: "ubuntu1804-builder-4c-4g"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'multicloud-openstack-vmware-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "multicloud-openstack-vmware-settings"
     disabled: true
 
 - project:
