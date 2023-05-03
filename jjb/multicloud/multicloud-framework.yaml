@@ -1,9 +1,9 @@
 ---
 - project:
-      name: multicloud-framework-info
-      project-name: multicloud-framework
-      jobs:
-          - gerrit-info-yaml-verify
-      build-node: centos8-builder-2c-1g
-      project: multicloud/framework
-      branch: master
+    name: multicloud-framework-info
+    project-name: multicloud-framework
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos8-builder-2c-1g
+    project: multicloud/framework
+    branch: master

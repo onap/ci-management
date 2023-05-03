@@ -1,48 +1,48 @@
 ---
 - project:
     name: policy-parent
-    project-name: 'policy-parent'
+    project-name: "policy-parent"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-Dmaven.test.skip=true"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'policy/parent'
+    project: "policy/parent"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'policy-parent-settings'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "policy-parent-settings"
     java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: policy-parent-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: policy/parent
-    project-name: 'policy-parent'
+    project-name: "policy-parent"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'policy-parent-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-parent-settings"
     java-version: openjdk11
 
 - project:

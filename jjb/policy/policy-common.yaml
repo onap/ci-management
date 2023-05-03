@@ -1,35 +1,35 @@
 ---
 - project:
     name: policy-common
-    project-name: 'policy-common'
+    project-name: "policy-common"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-Dmaven.test.skip=true'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-Dmaven.test.skip=true"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'policy/common'
+    project: "policy/common"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'policy-common-settings'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "policy-common-settings"
     java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -37,30 +37,30 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'policy/common'
-    project-name: 'policy-common'
-    branch: 'master'
-    mvn-settings: 'policy-common-settings'
+    project: "policy/common"
+    project-name: "policy-common"
+    branch: "master"
+    mvn-settings: "policy-common-settings"
     java-version: openjdk11
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: policy-common-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: policy/common
-    project-name: 'policy-common'
+    project-name: "policy-common"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'policy-common-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-common-settings"
     java-version: openjdk11
 
 - project:

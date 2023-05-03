@@ -1,25 +1,25 @@
 ---
 - project:
-      name: cps-csit
-      jobs:
-          - "{project-name}-review-verification-maven-{stream}":
-                mvn-goals: clean install
-                mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
-          - "{project-name}-merge-verification-maven-{stream}":
-                mvn-goals: clean install
-                mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
-      project-name: "cps"
-      build-node: ubuntu1804-docker-8c-8g
-      recipients: "toine.siebelink@est.tech"
-      # project name in gerrit
-      project: "cps"
-      stream:
-          - "master":
-                branch: "master"
-          - "jakarta":
-                branch: "jakarta"
-          - "kohn":
-                branch: "kohn"
-      mvn-settings: "cps-settings"
-      robot-options: ""
-      branch: "master"
+    name: cps-csit
+    jobs:
+      - "{project-name}-review-verification-maven-{stream}":
+          mvn-goals: clean install
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
+      - "{project-name}-merge-verification-maven-{stream}":
+          mvn-goals: clean install
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
+    project-name: "cps"
+    build-node: ubuntu1804-docker-8c-8g
+    recipients: "toine.siebelink@est.tech"
+    # project name in gerrit
+    project: "cps"
+    stream:
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "cps-settings"
+    robot-options: ""
+    branch: "master"

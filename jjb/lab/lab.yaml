@@ -1,12 +1,12 @@
 ---
 - project:
-      name: lab
-      jobs:
-          - "lab-{job-name}"
-      job-name:
-          - "windriver-oom-daily":
-                job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Daily tenant"
-          - "windriver-oom-staging-daily":
-                job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Staging-Daily tenant"
-          - "tlab-oom-daily":
-                job-desc: "OOM-based deployment into AT&T TLAB Integration-OOM-Test tenant"
+    name: lab
+    jobs:
+      - "lab-{job-name}"
+    job-name:
+      - "windriver-oom-daily":
+          job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Daily tenant"
+      - "windriver-oom-staging-daily":
+          job-desc: "OOM-based deployment into Wind River lab Integration-OOM-Staging-Daily tenant"
+      - "tlab-oom-daily":
+          job-desc: "OOM-based deployment into AT&T TLAB Integration-OOM-Test tenant"

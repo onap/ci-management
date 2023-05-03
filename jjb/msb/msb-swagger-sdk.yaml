@@ -1,56 +1,56 @@
 ---
 - project:
-      name: msb-swagger-sdk
-      project-name: "msb-swagger-sdk"
-      jobs:
-          - "{project-name}-{stream}-verify-java"
-          - "{project-name}-{stream}-merge-java"
-          - gerrit-maven-stage:
-                sbom-generator: true
-                sign-artifacts: true
-                build-node: centos8-docker-4c-4g
-                maven-versions-plugin: true
-      project: "msb/swagger-sdk"
-      stream:
-          - "master":
-                branch: "master"
-      mvn-settings: "msb-swagger-sdk-settings"
-      files: "**"
-      archive-artifacts: ""
-      build-node: ubuntu1804-builder-4c-4g
+    name: msb-swagger-sdk
+    project-name: "msb-swagger-sdk"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+    project: "msb/swagger-sdk"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "msb-swagger-sdk-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-builder-4c-4g
 
 - project:
-      name: msb-swagger-sdk-sonar
-      jobs:
-          - gerrit-maven-sonar
-      sonarcloud: true
-      sonarcloud-project-organization: "{sonarcloud_project_organization}"
-      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-      sonar-mvn-goal: "{sonar_mvn_goal}"
-      cron: "@daily"
-      build-node: ubuntu1804-builder-4c-4g
-      project: "msb/swagger-sdk"
-      project-name: "msb-swagger-sdk"
-      branch: "master"
-      mvn-settings: "msb-swagger-sdk-settings"
-      mvn-goals: "clean install"
-      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    name: msb-swagger-sdk-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
+    build-node: ubuntu1804-builder-4c-4g
+    project: "msb/swagger-sdk"
+    project-name: "msb-swagger-sdk"
+    branch: "master"
+    mvn-settings: "msb-swagger-sdk-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-      name: msb-swagger-sdk-clm
-      jobs:
-          - gerrit-maven-clm
-      nexus-iq-namespace: "onap-"
-      project: msb/swagger-sdk
-      project-name: "msb-swagger-sdk"
-      branch: "master"
-      mvn-settings: "msb-swagger-sdk-settings"
+    name: msb-swagger-sdk-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: "onap-"
+    project: msb/swagger-sdk
+    project-name: "msb-swagger-sdk"
+    branch: "master"
+    mvn-settings: "msb-swagger-sdk-settings"
 
 - project:
-      name: msb-swagger-sdk-info
-      project-name: msb-swagger-sdk
-      jobs:
-          - gerrit-info-yaml-verify
-      build-node: centos8-builder-2c-1g
-      project: msb/swagger-sdk
-      branch: master
+    name: msb-swagger-sdk-info
+    project-name: msb-swagger-sdk
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos8-builder-2c-1g
+    project: msb/swagger-sdk
+    branch: master

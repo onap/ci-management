@@ -1,82 +1,81 @@
 ---
 - project:
     name: policy-drools-applications
-    project-name: 'policy-drools-applications'
+    project-name: "policy-drools-applications"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
           mvn-params: "-P docker -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-params: '-Dmaven.test.skip=true'
+          mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker  -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-P docker  -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'policy/drools-applications'
+    project: "policy/drools-applications"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'policy-drools-applications-settings'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
-
 
 - project:
     name: policy-drools-applications-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'policy/drools-applications'
-    project-name: 'policy-drools-applications'
-    branch: 'master'
-    mvn-settings: 'policy-drools-applications-settings'
+    project: "policy/drools-applications"
+    project-name: "policy-drools-applications"
+    branch: "master"
+    mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     java-version: openjdk11
-    java-opts: '-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: policy-drools-applications-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: policy/drools-applications
-    project-name: 'policy-drools-applications'
+    project-name: "policy-drools-applications"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'policy-drools-applications-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-drools-applications-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     mvn-version: "mvn36"
     maven-version: "mvn36"

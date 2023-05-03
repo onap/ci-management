@@ -1,81 +1,81 @@
 ---
 - project:
-      name: demo-project-view
-      project-name: demo
-      views:
-          - project-view
+    name: demo-project-view
+    project-name: demo
+    views:
+      - project-view
 
 - project:
-      name: demo
-      project-name: "demo"
-      jobs:
-          - "{project-name}-{stream}-verify-java"
-          - "{project-name}-{stream}-merge-java"
-          - gerrit-maven-stage:
-                sign-artifacts: true
-                build-node: centos8-docker-4c-4g
-                maven-versions-plugin: true
-          - "{project-name}-gerrit-release-jobs":
-                build-node: centos7-docker-2c-1g
+    name: demo
+    project-name: "demo"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
 
-      project: "demo"
-      stream:
-          - "master":
-                branch: "master"
-      mvn-settings: "demo-settings"
-      files: "**"
-      archive-artifacts: ""
-
-- project:
-      name: demo-sonar
-      jobs:
-          - gerrit-maven-sonar
-      sonarcloud: true
-      sonarcloud-project-organization: "{sonarcloud_project_organization}"
-      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-      sonar-mvn-goal: "{sonar_mvn_goal}"
-      cron: "@daily"
-      build-node: ubuntu1804-builder-4c-4g
-      project: "demo"
-      project-name: "demo"
-      branch: "master"
-      mvn-settings: "demo-settings"
-      mvn-goals: "clean install"
-      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    project: "demo"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "demo-settings"
+    files: "**"
+    archive-artifacts: ""
 
 - project:
-      name: demo-info
-      project-name: demo
-      jobs:
-          - gerrit-info-yaml-verify
-      build-node: centos8-builder-2c-1g
-      project: demo
-      branch: master
+    name: demo-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
+    build-node: ubuntu1804-builder-4c-4g
+    project: "demo"
+    project-name: "demo"
+    branch: "master"
+    mvn-settings: "demo-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-      name: demo-linters
-      project: "demo"
-      project-name: "demo"
-      python-version: python3
-      jobs:
-          - integration-linters
-      subproject:
-          - "yaml":
-                tox-dir: "."
-                tox-envs: "yaml"
-                pattern: "**/*.yaml"
-          - "yml":
-                tox-dir: "."
-                tox-envs: "yaml"
-                pattern: "**/*.yml"
-          - "json":
-                tox-dir: "."
-                tox-envs: "json"
-                pattern: "**/*.json"
-          - "python":
-                tox-dir: "."
-                tox-envs: "py"
-                pattern: "**/*.py"
-      stream:
-          - "master":
-                branch: "master"
+    name: demo-info
+    project-name: demo
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos8-builder-2c-1g
+    project: demo
+    branch: master
+
+- project:
+    name: demo-linters
+    project: "demo"
+    project-name: "demo"
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+    stream:
+      - "master":
+          branch: "master"

@@ -1,35 +1,35 @@
 ---
 - job-template:
-      name: "lab-{job-name}"
-      description: "{job-desc}"
-      disabled: false
-      project-type: freestyle
-      build-node: ubuntu1804-builder-4c-4g
+    name: "lab-{job-name}"
+    description: "{job-desc}"
+    disabled: false
+    project-type: freestyle
+    build-node: ubuntu1804-builder-4c-4g
 
-      properties:
-          - lf-infra-properties:
-                project: "integration"
-                build-days-to-keep: "{build-days-to-keep}"
+    properties:
+      - lf-infra-properties:
+          project: "integration"
+          build-days-to-keep: "{build-days-to-keep}"
 
-      parameters:
-          - string:
-                name: LOG_DIR_URL
-                description: "URL for the log directory produced by the external job"
-          - string:
-                name: SRC_BUILD_URL
-                description: "URL for the external Jenkins build triggering this build"
+    parameters:
+      - string:
+          name: LOG_DIR_URL
+          description: "URL for the log directory produced by the external job"
+      - string:
+          name: SRC_BUILD_URL
+          description: "URL for the external Jenkins build triggering this build"
 
-      wrappers:
-          - lf-infra-wrappers:
-                build-timeout: "{build-timeout}"
-                jenkins-ssh-credential: "{jenkins-ssh-credential}"
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
-      builders:
-          - shell: !include-raw:
-                - include-raw-lab-retrieve-logs.sh
+    builders:
+      - shell: !include-raw:
+          - include-raw-lab-retrieve-logs.sh
 
-      publishers:
-          - integration-robot:
-                unstable-if: 60.0
-                pass-if: 100.0
-          - lf-infra-publish
+    publishers:
+      - integration-robot:
+          unstable-if: 60.0
+          pass-if: 100.0
+      - lf-infra-publish

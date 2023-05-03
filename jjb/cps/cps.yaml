@@ -1,110 +1,110 @@
 ---
 - project:
-      name: cps-project-view
-      project-name: cps
-      views:
-          - project-view
+    name: cps-project-view
+    project-name: cps
+    views:
+      - project-view
 
 - project:
-      name: cps-info
-      project: cps
-      project-name: cps
-      build-node: centos8-builder-2c-1g
-      jobs:
-          - gerrit-info-yaml-verify
+    name: cps-info
+    project: cps
+    project-name: cps
+    build-node: centos8-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
 
 - project:
-      name: cps-clm
-      java-version: openjdk11
-      mvn-version: "mvn36"
-      maven-version: "mvn36"
-      jobs:
-          - gerrit-maven-clm
-      nexus-iq-namespace: "onap-"
-      project: "cps"
-      project-name: "cps"
-      branch: "master"
-      mvn-settings: "cps-settings"
-      build-node: centos8-docker-8c-8g
+    name: cps-clm
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: "onap-"
+    project: "cps"
+    project-name: "cps"
+    branch: "master"
+    mvn-settings: "cps-settings"
+    build-node: centos8-docker-8c-8g
 
 - project:
-      name: cps
-      java-version: openjdk11
-      mvn-version: "mvn36"
-      maven-version: "mvn36"
-      project-name: "cps"
-      project: "cps"
-      jobs:
-          - "{project-name}-{stream}-verify-java"
-          - "{project-name}-{stream}-merge-java":
-                docker-pom: "pom.xml"
-                mvn-params: "-P cps-ncmp-docker"
-          - gerrit-maven-stage:
-                sign-artifacts: true
-                build-node: centos8-docker-8c-8g
-                maven-versions-plugin: true
-                sbom-generator: true
-          - gerrit-maven-docker-stage:
-                build-node: centos8-docker-8c-8g
-                maven-versions-plugin: true
-                mvn-params: "-P cps-ncmp-docker"
-                container-public-registry: "nexus3.onap.org:10001"
-                container-staging-registry: "nexus3.onap.org:10003"
-          - "{project-name}-gerrit-release-jobs":
-                build-node: centos7-docker-2c-1g
-      stream:
-          - "master":
-                branch: "master"
-          - "jakarta":
-                branch: "jakarta"
-                cron: ""
-          - "kohn":
-                branch: "kohn"
-                cron: ""
-          - "london":
-                branch: "london"
-                cron: ""
-      mvn-settings: "cps-settings"
-      files: "**"
-      archive-artifacts: ""
-      build-node: centos8-docker-8c-8g
+    name: cps
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    project-name: "cps"
+    project: "cps"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-params: "-P cps-ncmp-docker"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos8-docker-8c-8g
+          maven-versions-plugin: true
+          sbom-generator: true
+      - gerrit-maven-docker-stage:
+          build-node: centos8-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-P cps-ncmp-docker"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+    stream:
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+          cron: ""
+      - "kohn":
+          branch: "kohn"
+          cron: ""
+      - "london":
+          branch: "london"
+          cron: ""
+    mvn-settings: "cps-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: centos8-docker-8c-8g
 
 - project:
-      name: cps-sonar
-      java-version: openjdk11
-      mvn-version: "mvn36"
-      maven-version: "mvn36"
-      jobs:
-          - gerrit-maven-sonar
-      sonarcloud: true
-      sonarcloud-project-organization: "{sonarcloud_project_organization}"
-      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-      sonar-mvn-goal: "{sonar_mvn_goal}"
-      cron: "@daily"
-      build-node: centos8-docker-8c-8g
-      project: "cps"
-      project-name: "cps"
-      branch: "master"
-      mvn-settings: "cps-settings"
-      mvn-goals: "clean install"
-      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    name: cps-sonar
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
+    build-node: centos8-docker-8c-8g
+    project: "cps"
+    project-name: "cps"
+    branch: "master"
+    mvn-settings: "cps-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-      name: cps-sonar-verify
-      java-version: openjdk11
-      mvn-version: "mvn36"
-      maven-version: "mvn36"
-      jobs:
-          - gerrit-maven-sonar-verify
-      sonarcloud: true
-      sonarcloud-project-organization: "{sonarcloud_project_organization}"
-      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-      sonarcloud-qualitygate-wait: true
-      sonar-mvn-goal: "{sonar_mvn_goal}"
-      build-node: centos8-docker-8c-8g
-      project: "cps"
-      project-name: "cps"
-      branch: "master"
-      mvn-settings: "cps-settings"
-      mvn-goals: "clean install"
-      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    name: cps-sonar-verify
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonarcloud-qualitygate-wait: true
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    build-node: centos8-docker-8c-8g
+    project: "cps"
+    project-name: "cps"
+    branch: "master"
+    mvn-settings: "cps-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"

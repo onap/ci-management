@@ -1,23 +1,23 @@
 ---
 - project:
-      name: cps-cps-temporal-csit
-      jobs:
-          - "{project-name}-review-verification-maven-{stream}":
-                mvn-goals: clean install
-                mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push= -Pdocker"
-          - "{project-name}-merge-verification-maven-{stream}":
-                mvn-goals: clean install
-                mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push= -Pdocker"
-      project-name: "cps-cps-temporal"
-      recipients: "toine.siebelink@est.tech"
-      # project name in gerrit
-      project: "cps/cps-temporal"
-      stream:
-          - "master":
-                branch: "master"
-          - "jakarta":
-                branch: "jakarta"
-          - "kohn":
-                branch: "kohn"
-      mvn-settings: "cps-cps-temporal-settings"
-      robot-options: ""
+    name: cps-cps-temporal-csit
+    jobs:
+      - "{project-name}-review-verification-maven-{stream}":
+          mvn-goals: clean install
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push= -Pdocker"
+      - "{project-name}-merge-verification-maven-{stream}":
+          mvn-goals: clean install
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push= -Pdocker"
+    project-name: "cps-cps-temporal"
+    recipients: "toine.siebelink@est.tech"
+    # project name in gerrit
+    project: "cps/cps-temporal"
+    stream:
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "cps-cps-temporal-settings"
+    robot-options: ""

@@ -1,57 +1,54 @@
 ---
 - project:
     name: policy-docker-base-common
-    project-name: 'policy-docker'
+    project-name: "policy-docker"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java':
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
           mvn-params: "-P docker"
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    mvn-settings: 'policy-docker-settings'
+    mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk11
 
-    project: 'policy/docker'
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'policy-docker-settings'
-    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
-    java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: policy-docker-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: policy/docker
-    project-name: 'policy-docker'
+    project-name: "policy-docker"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'policy-docker-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk11
 

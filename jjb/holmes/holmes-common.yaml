@@ -1,69 +1,69 @@
 ---
 - project:
-      name: holmes-project-view
-      project-name: holmes
-      views:
-          - project-view
+    name: holmes-project-view
+    project-name: holmes
+    views:
+      - project-view
 
 - project:
-      name: holmes-common
-      project-name: "holmes-common"
-      jobs:
-          - "{project-name}-{stream}-verify-java"
-          - "{project-name}-{stream}-merge-java"
-          - gerrit-maven-stage:
-                sign-artifacts: true
-                build-node: centos8-docker-4c-4g
-                maven-versions-plugin: true
-                java-version: openjdk11
-                sbom-generator: true
-          - "{project-name}-gerrit-release-jobs":
-                build-node: centos7-docker-2c-1g
-                java-version: openjdk11
-      project: "holmes/common"
-      stream:
-          - "master":
-                branch: "master"
-      mvn-settings: "holmes-common-settings"
-      files: "**"
-      archive-artifacts: ""
-      build-node: ubuntu1804-builder-4c-4g
-      java-version: openjdk11
+    name: holmes-common
+    project-name: "holmes-common"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+          java-version: openjdk11
+          sbom-generator: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+          java-version: openjdk11
+    project: "holmes/common"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "holmes-common-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk11
 
 - project:
-      name: holmes-common-sonar
-      jobs:
-          - gerrit-maven-sonar
-      sonarcloud: true
-      sonarcloud-project-organization: "{sonarcloud_project_organization}"
-      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-      sonar-mvn-goal: "{sonar_mvn_goal}"
-      cron: "@daily"
-      build-node: ubuntu1804-builder-4c-4g
-      project: "holmes/common"
-      project-name: "holmes-common"
-      branch: "master"
-      mvn-settings: "holmes-common-settings"
-      mvn-goals: "clean install"
-      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-      java-version: openjdk11
+    name: holmes-common-sonar
+    jobs:
+      - gerrit-maven-sonar
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
+    build-node: ubuntu1804-builder-4c-4g
+    project: "holmes/common"
+    project-name: "holmes-common"
+    branch: "master"
+    mvn-settings: "holmes-common-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    java-version: openjdk11
 
 - project:
-      name: holmes-common-clm
-      jobs:
-          - gerrit-maven-clm
-      nexus-iq-namespace: "onap-"
-      project: holmes/common
-      project-name: "holmes-common"
-      branch: "master"
-      mvn-settings: "holmes-common-settings"
-      java-version: openjdk11
+    name: holmes-common-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: "onap-"
+    project: holmes/common
+    project-name: "holmes-common"
+    branch: "master"
+    mvn-settings: "holmes-common-settings"
+    java-version: openjdk11
 
 - project:
-      name: holmes-common-info
-      project-name: holmes-common
-      jobs:
-          - gerrit-info-yaml-verify
-      build-node: centos8-builder-2c-1g
-      project: holmes/common
-      branch: master
+    name: holmes-common-info
+    project-name: holmes-common
+    jobs:
+      - gerrit-info-yaml-verify
+    build-node: centos8-builder-2c-1g
+    project: holmes/common
+    branch: master

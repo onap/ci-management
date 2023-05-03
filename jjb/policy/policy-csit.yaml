@@ -1,218 +1,219 @@
+---
 - project:
     name: policy-distribution-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-distribution'
-    recipients: 'ram_krishna.verma@bell.ca'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-distribution"
+    recipients: "ram_krishna.verma@bell.ca"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'distribution'
+      - "distribution"
     trigger_jobs:
-      - 'policy-distribution-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-distribution-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-xacml-pdp-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-xacml-pdp'
-    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-xacml-pdp"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'xacml-pdp'
+      - "xacml-pdp"
     trigger_jobs:
-      - 'policy-xacml-pdp-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-xacml-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-drools-applications-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-drools-applications'
-    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-drools-applications"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'drools-applications'
+      - "drools-applications"
     trigger_jobs:
-      - 'policy-drools-applications-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-drools-applications-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-drools-pdp-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-drools-pdp'
-    recipients: 'jrh3@att.com jorge.hernandez-herrero@att.com'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-drools-pdp"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'drools-pdp'
+      - "drools-pdp"
     trigger_jobs:
-      - 'policy-drools-pdp-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-drools-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-apex-pdp-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-apex-pdp'
-    recipients: 'liam.fallon@est.tech ram_krishna.verma@bell.ca'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-apex-pdp"
+    recipients: "liam.fallon@est.tech ram_krishna.verma@bell.ca"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'apex-pdp'
+      - "apex-pdp"
     trigger_jobs:
-      - 'policy-apex-pdp-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-apex-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-pap-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-pap'
-    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-pap"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'pap'
+      - "pap"
     trigger_jobs:
-      - 'policy-pap-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-pap-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-api-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-api'
-    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-api"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'api'
+      - "api"
     trigger_jobs:
-      - 'policy-api-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-api-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-clamp-project-csit
     jobs:
-      - '{project-name}-{stream}-project-csit-verify-{functionality}'
-      - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-clamp'
-    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-clamp"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
+    project: "policy/docker"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'honolulu':
-          branch: 'honolulu'
-      - 'istanbul':
-          branch: 'istanbul'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "honolulu":
+          branch: "honolulu"
+      - "istanbul":
+          branch: "istanbul"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
     functionality:
-      - 'clamp'
+      - "clamp"
     trigger_jobs:
-      - 'policy-clamp-{stream}-merge-java'
-      - 'policy-docker-{stream}-merge-java'
+      - "policy-clamp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-apex-pdp-postgres-project-csit
     jobs:
-        - '{project-name}-{stream}-project-csit-verify-{functionality}'
-        - '{project-name}-{stream}-project-csit-{functionality}'
-    project-name: 'policy-apex-pdp'
-    recipients: 'jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com'
-    project: 'policy/docker'
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-apex-pdp"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
+    project: "policy/docker"
     stream:
-        - 'master':
-              branch: 'master'
-        - 'kohn':
-              branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
     functionality:
-        - 'apex-pdp-postgres'
+      - "apex-pdp-postgres"
     trigger_jobs:
-        - 'policy-apex-pdp-{stream}-merge-java'
-        - 'policy-docker-{stream}-merge-java'
+      - "policy-apex-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
