@@ -28,10 +28,10 @@
     ######################
     branch: master
     # default params for helm jobs
-    build_script: ''
-    git-url: '$GIT_URL/$PROJECT'
-    post_build_script: ''
-    pre_build_script: ''
+    build_script: ""
+    git-url: "$GIT_URL/$PROJECT"
+    post_build_script: ""
+    pre_build_script: ""
     build-timeout: 240
 
     #####################
@@ -39,40 +39,40 @@
     #####################
 
     project-type: freestyle
-    node: '{build-node}'
+    node: "{build-node}"
 
     properties:
       - lf-infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: "{build-days-to-keep}"
 
     parameters:
       - lf-infra-parameters:
-          branch: '{branch}'
-          project: '{project}'
-          stream: '{stream}'
-          lftools-version: '{lftools-version}'
+          branch: "{branch}"
+          project: "{project}"
+          stream: "{stream}"
+          lftools-version: "{lftools-version}"
       - string:
           name: HELM_BIN
-          default: '{helm_bin|helm3.8}'
+          default: "{helm_bin|helm3.8}"
       - string:
           name: BUILD_TYPE
-          default: '{build_type|snapshot}'
+          default: "{build_type|snapshot}"
 
     wrappers:
       - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     builders:
       - lf-infra-pre-build
       - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      - shell: '{obj:pre_build_script}'
-      - shell: '{obj:build_script}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
+      - shell: "{obj:pre_build_script}"
+      - shell: "{obj:build_script}"
       - oom-create-netrc:
           server-id: oom-helm
-      - shell: '{obj:post_build_script}'
+      - shell: "{obj:post_build_script}"
       - lf-provide-maven-settings-cleanup
 
     publishers:
@@ -82,7 +82,7 @@
 # JOB TEMPLATES #
 #################
 - job-template:
-    name: '{project-name}-{stream}-verify-{helm_bin}'
+    name: "{project-name}-{stream}-verify-{helm_bin}"
     # Job template for helm verify jobs
 
     <<: *helm_job_boiler_plate
@@ -90,94 +90,94 @@
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "gerrit"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit-trigger-helm-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{files}'
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{files}"
 
 - job-template:
-    name: '{project-name}-{stream}-merge-helm'
+    name: "{project-name}-{stream}-merge-helm"
     # Job template for Helm merge jobs
 
     <<: *helm_job_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: ""
+          choosing-strategy: "default"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit-trigger-helm-patch-merged:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{files}'
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{files}"
 
 - job-template:
-    name: '{project-name}-{stream}-release-helm'
+    name: "{project-name}-{stream}-release-helm"
     # Job template for Helm stage jobs
 
     <<: *helm_job_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: ""
+          choosing-strategy: "default"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit:
-          server-name: '{gerrit-server-name}'
+          server-name: "{gerrit-server-name}"
           trigger-on:
             - comment-added-contains-event:
                 comment-contains-value: '^Patch Set\s+\d+:\s+release-helm\s*$'
           projects:
-            - project-compare-type: 'ANT'
-              project-pattern: '{project}'
+            - project-compare-type: "ANT"
+              project-pattern: "{project}"
               branches:
-                - branch-compare-type: 'ANT'
-                  branch-pattern: '**/{branch}'
+                - branch-compare-type: "ANT"
+                  branch-pattern: "**/{branch}"
               file-paths:
-                - compare-type: 'ANT'
-                  pattern: '**'
+                - compare-type: "ANT"
+                  pattern: "**"
 
 - job-template:
-    name: '{project-name}-{stream}-verify-make-{helm_bin}'
+    name: "{project-name}-{stream}-verify-make-{helm_bin}"
 
     <<: *helm_job_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: ""
+          choosing-strategy: "default"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit:
-          server-name: '{gerrit-server-name}'
+          server-name: "{gerrit-server-name}"
           trigger-on:
             - comment-added-contains-event:
                 comment-contains-value: '^Patch Set\s+\d+:\s+helm-latest\s*$'
           projects:
-            - project-compare-type: 'ANT'
-              project-pattern: '{project}'
+            - project-compare-type: "ANT"
+              project-pattern: "{project}"
               branches:
-                - branch-compare-type: 'ANT'
-                  branch-pattern: '**/{branch}'
+                - branch-compare-type: "ANT"
+                  branch-pattern: "**/{branch}"
               file-paths:
-                - compare-type: 'ANT'
-                  pattern: '**'
+                - compare-type: "ANT"
+                  pattern: "**"
 
     builders:
       - lf-infra-pre-build
       - helm-install:
           helm_ver: 3.10.2
-      - shell: '{obj:pre_build_script}'
-      - shell: '{obj:build_script}'
+      - shell: "{obj:pre_build_script}"
+      - shell: "{obj:build_script}"

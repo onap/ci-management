@@ -21,40 +21,39 @@
     packer-version: 1.3.1
 
     # default gerrit server definition
-    server-name: 'Primary'
-    gerrit-server-name: 'Primary'
+    server-name: "Primary"
+    gerrit-server-name: "Primary"
 
     # Java
-    jdk: ''
+    jdk: ""
 
     # Maven
-    mvn-params: ''
-    mvn-staging-id: 'ecomp-staging'
+    mvn-params: ""
+    mvn-staging-id: "ecomp-staging"
     onap-infra-mvn-opts: |
-        --show-version
-        --batch-mode
-        -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
-        -Djenkins
-        -Dmaven.repo.local=/tmp/r
-        -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
+      --show-version
+      --batch-mode
+      -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+      -Djenkins
+      -Dmaven.repo.local=/tmp/r
+      -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
     staging-profile-id: 176c31dfe190a
-
     # Timeout in minutes
     build-timeout: 90
     build-node: ubuntu1804-builder-4c-4g
 
-    archive-artifacts: ''
+    archive-artifacts: ""
 
     # Set default maven version used for everything
-    maven-version: 'mvn33'
+    maven-version: "mvn33"
 
     # git submodule attributes
     submodule-recursive: true
     submodule-disable: false
 
     # Jenkins
-    jenkins-ssh-credential: 'onap-jenkins-ssh'
-    jenkins-ssh-release-credential: 'jenkins-release'
+    jenkins-ssh-credential: "onap-jenkins-ssh"
+    jenkins-ssh-release-credential: "jenkins-release"
 
     # SonarCloud
     sonarcloud_project_organization: onap
@@ -65,4 +64,4 @@
     container-snapshot-registry: nexus3.onap.org:10003
     container-staging-registry: nexus3.onap.org:10004
     # the quotes here are REQUIRED
-    container-push-registry: '{container-snapshot-registry}'
+    container-push-registry: "{container-snapshot-registry}"

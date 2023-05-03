@@ -6,7 +6,7 @@
     name: docker_job_boiler_plate
 
     project-type: freestyle
-    node: '{build-node}'
+    node: "{build-node}"
 
     ######################
     # Default parameters #
@@ -16,14 +16,14 @@
     submodule-recursive: true
 
     # default params for docker jobs
-    pre_build_script: ''
-    post_build_script: ''
-    docker_root: '$WORKSPACE'
-    docker_build_args: ''
-    docker_name: 'unnamed'
+    pre_build_script: ""
+    post_build_script: ""
+    docker_root: "$WORKSPACE"
+    docker_build_args: ""
+    docker_name: "unnamed"
     # Default to LF standard 'snapshots' docker registry
-    docker_registry: '$DOCKER_REGISTRY:10003'
-    docker_tag: 'latest'
+    docker_registry: "$DOCKER_REGISTRY:10003"
+    docker_tag: "latest"
     submodule-disable: false
     submodule-timeout: 10
 
@@ -33,19 +33,19 @@
 
     properties:
       - lf-infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: "{build-days-to-keep}"
 
     parameters:
       - lf-infra-parameters:
-          branch: '{branch}'
-          project: '{project}'
-          stream: '{stream}'
-          lftools-version: '{lftools-version}'
+          branch: "{branch}"
+          project: "{project}"
+          stream: "{stream}"
+          lftools-version: "{lftools-version}"
 
     wrappers:
       - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     publishers:
       - lf-infra-publish
@@ -57,41 +57,41 @@
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "default"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit-trigger-patch-submitted:
-          status-context: '{project}-Docker-Verify'
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{files}'
+          status-context: "{project}-Docker-Verify"
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{files}"
 
 - _docker_merge_boiler_plate: &docker_merge_boiler_plate
     name: docker_merge_boiler_plate
 
     scm:
       - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          refspec: "$GERRIT_REFSPEC"
+          choosing-strategy: "default"
+          submodule-recursive: "{submodule-recursive}"
 
     triggers:
       - gerrit-trigger-patch-merged:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{files}'
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{files}"
       - pollscm:
-          cron: ''
+          cron: ""
 
 #################
 # JOB TEMPLATES #
 #################
 - job-template:
-    name: '{project-name}-{stream}-merge-docker'
+    name: "{project-name}-{stream}-merge-docker"
     # Job template for Docker merge jobs
     #
     # The purpose of this job template is to run a docker build, and potentially
@@ -104,9 +104,9 @@
     builders:
       - lf-infra-pre-build
       - lf-infra-docker-login:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-      - shell: '{pre_build_script}'
+          global-settings-file: "global-settings"
+          settings-file: "{mvn-settings}"
+      - shell: "{pre_build_script}"
       - inject:
           # Docker registry is purposely not using an '_' so as to not conflict
           # with the Jenkins global env var
@@ -121,14 +121,14 @@
       - shell: !include-raw: ../shell/docker-build.sh
       - inject:
           # Import the docker image information from the build step
-          properties-file: 'env_inject.txt'
+          properties-file: "env_inject.txt"
       # Execute any post build clean-up or testing
-      - shell: '{post_build_script}'
+      - shell: "{post_build_script}"
       # Provided all steps have already passed, push the docker image
       - shell: !include-raw: ../shell/docker-push.sh
 
 - job-template:
-    name: '{project-name}-{stream}-verify-docker'
+    name: "{project-name}-{stream}-verify-docker"
     # Job template for Docker verify jobs
     #
     # The purpose of this job template is to run a docker build, and potentially
@@ -145,9 +145,9 @@
     builders:
       - lf-infra-pre-build
       - lf-infra-docker-login:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-      - shell: '{pre_build_script}'
+          global-settings-file: "global-settings"
+          settings-file: "{mvn-settings}"
+      - shell: "{pre_build_script}"
       - inject:
           # Docker registry is purposely not using an '_' so as to not conflict
           # with the Jenkins global env var
@@ -162,9 +162,9 @@
       - shell: !include-raw: ../shell/docker-build.sh
       - inject:
           # Import the docker image information from the build step
-          properties-file: 'env_inject.txt'
+          properties-file: "env_inject.txt"
       # Execute any post build clean-up or testing
-      - shell: '{post_build_script}'
+      - shell: "{post_build_script}"
 
 - job-template:
     # Job template for creating a docker manifest list
@@ -173,38 +173,37 @@
     # 1. docker_push_manifest.sh script (which needs to exist in the
     #    project implementation repo)
 
-    name: '{project-name}-docker-manifest-{stream}'
+    name: "{project-name}-docker-manifest-{stream}"
     <<: *docker_job_boiler_plate
-    node: '{build-node}'
+    node: "{build-node}"
     build-timeout: 15
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
+          project: "{project}"
+          stream: "{stream}"
+          branch: "{branch}"
       - string:
           name: PARENT_JOB_NAME
-          default: 'none'
+          default: "none"
 
-    disabled: '{obj:disabled}'
+    disabled: "{obj:disabled}"
 
     scm:
       - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '$GIT_URL/$PROJECT'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "$GIT_URL/$PROJECT"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
           submodule-recursive: true
-          submodule-disable: '{submodule-disable}'
-          submodule-timeout: '{submodule-timeout}'
+          submodule-disable: "{submodule-disable}"
+          submodule-timeout: "{submodule-timeout}"
           choosing-strategy: default
-
 
     builders:
       - lf-infra-docker-login:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "global-settings"
+          settings-file: "{mvn-settings}"
       - shell: |
           #!/bin/bash -ex
           export PARENT_JOB_NAME
@@ -218,84 +217,82 @@
     # 2. Build and push a docker manifest list for the images created by
     #    the previous jobs
 
-    name: '{project-name}-multiarch-docker-stage-{stream}'
-    node: '{build-node}'
+    name: "{project-name}-multiarch-docker-stage-{stream}"
+    node: "{build-node}"
     project-type: multijob
-    disabled: '{obj:disabled}'
+    disabled: "{obj:disabled}"
     build-timeout: 15
-    pattern: '**'
+    pattern: "**"
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
+          project: "{project}"
+          stream: "{stream}"
+          branch: "{branch}"
       - string:
           name: DOCKER_REGISTRY
-          default: 'none'
+          default: "none"
       - string:
           name: DOCKERHUB_REGISTRY
-          default: 'registry-1.docker.io'
-
-    disabled: '{obj:disabled}'
+          default: "registry-1.docker.io"
 
     properties:
       - throttle:
           max-per-node: 1
-          option: 'project'
+          option: "project"
       - build-blocker:
           use-build-blocker: true
           blocking-jobs:
-            - '{project-name}-.*-docker-.*'
-          blocking-level: 'NODE'
+            - "{project-name}-.*-docker-.*"
+          blocking-level: "NODE"
 
     scm:
       - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '$GIT_URL/$PROJECT'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "$GIT_URL/$PROJECT"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
           submodule-recursive: true
           submodule-timeout: 10
           submodule-disable: false
           choosing-strategy: default
 
     triggers:
-      - timed: '@daily'
+      - timed: "@daily"
       - gerrit:
-          server-name: '{gerrit-server-name}'
+          server-name: "{gerrit-server-name}"
           trigger-on:
-             - comment-added-contains-event:
-                 comment-contains-value: '^Patch Set\s+\d+:\s+stage-(docker-)?release\s*$'
+            - comment-added-contains-event:
+              comment-contains-value: '^Patch Set\s+\d+:\s+stage-(docker-)?release\s*$'
 
           projects:
             - project-compare-type: ANT
-              project-pattern: '{project}'
+              project-pattern: "{project}"
               branches:
                 - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
+                  branch-pattern: "**/{branch}"
               file-paths:
-                 - compare-type: ANT
-                   pattern: "**"
+                - compare-type: ANT
+                  pattern: "**"
 
     builders:
       - multijob:
-          name: 'build docker images'
+          name: "build docker images"
           condition: ALWAYS
           execution-type: PARALLEL
           projects:
-            - name: '{project-name}-amd64-maven-docker-stage-{stream}'
+            - name: "{project-name}-amd64-maven-docker-stage-{stream}"
               kill-phase-on: FAILURE
               current-parameters: true
-            - name: '{project-name}-arm64-maven-docker-stage-{stream}'
+            - name: "{project-name}-arm64-maven-docker-stage-{stream}"
               kill-phase-on: NEVER
               current-parameters: true
       - multijob:
-          name: 'publish docker manifest'
+          name: "publish docker manifest"
           condition: SUCCESSFUL
           execution-type: PARALLEL
           projects:
-            - name: '{project-name}-docker-manifest-{stream}'
+            - name: "{project-name}-docker-manifest-{stream}"
               current-parameters: true
               predefined-parameters: |
                 PARENT_JOB_NAME=$JOB_NAME
