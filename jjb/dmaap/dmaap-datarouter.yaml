@@ -1,74 +1,74 @@
 ---
 - project:
     name: dmaap-datarouter-java
-    project-name: 'dmaap-datarouter'
+    project-name: "dmaap-datarouter"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-goals: 'clean package -P docker docker:build docker:push'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          cron: ''
-      - '{project-name}-gerrit-release-jobs':
+          mvn-goals: "clean package -P docker docker:build docker:push"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          cron: ""
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'dmaap/datarouter'
+    project: "dmaap/datarouter"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'dmaap-datarouter-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "dmaap-datarouter-settings"
+    files: "**"
+    archive-artifacts: ""
     java-version: openjdk11
 
 - project:
     name: dmaap-datarouter-csit-ssl
     jobs:
-      - '{project-name}-review-verification-maven-{stream}':
-            mvn-goals: clean package
-            mvn-params: '-P docker docker:build -DskipTests=false'
-      - '{project-name}-merge-verification-maven-{stream}':
-            mvn-goals: clean package
-            mvn-params: '-P docker docker:build'
-    project-name: 'dmaap-datarouter'
-    recipients: 'fiachra.corcoran@est.tech'
-    project: 'dmaap/datarouter'
+      - "{project-name}-review-verification-maven-{stream}":
+          mvn-goals: clean package
+          mvn-params: "-P docker docker:build -DskipTests=false"
+      - "{project-name}-merge-verification-maven-{stream}":
+          mvn-goals: clean package
+          mvn-params: "-P docker docker:build"
+    project-name: "dmaap-datarouter"
+    recipients: "fiachra.corcoran@est.tech"
+    project: "dmaap/datarouter"
     stream:
-      - 'master':
-            branch: 'master'
-    mvn-settings: 'dmaap-datarouter-settings'
-    robot-options: ''
+      - "master":
+          branch: "master"
+    mvn-settings: "dmaap-datarouter-settings"
+    robot-options: ""
 
 - project:
     name: dmaap-datarouter-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'dmaap/datarouter'
-    project-name: 'dmaap-datarouter'
-    branch: 'master'
-    mvn-settings: 'dmaap-datarouter-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "dmaap/datarouter"
+    project-name: "dmaap-datarouter"
+    branch: "master"
+    mvn-settings: "dmaap-datarouter-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk11
 
 - project:
     name: dmaap-datarouter-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: dmaap/datarouter
-    project-name: 'dmaap-datarouter'
-    branch: 'master'
-    mvn-settings: 'dmaap-datarouter-settings'
+    project-name: "dmaap-datarouter"
+    branch: "master"
+    mvn-settings: "dmaap-datarouter-settings"
     java-version: openjdk11
 
 - project:
