@@ -7,57 +7,57 @@
 
 - project:
     name: aai-rest-client-master
-    project-name: 'aai-rest-client'
+    project-name: "aai-rest-client"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           sbom-generator: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'aai/rest-client'
+    project: "aai/rest-client"
     stream:
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'aai-rest-client-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-rest-client-settings"
+    files: "**"
+    archive-artifacts: ""
 
 - project:
     name: aai-rest-client-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'aai/rest-client'
-    project-name: 'aai-rest-client'
-    branch: 'master'
-    mvn-settings: 'aai-rest-client-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "aai/rest-client"
+    project-name: "aai-rest-client"
+    branch: "master"
+    mvn-settings: "aai-rest-client-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: aai-rest-client-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'aai/rest-client'
-    project-name: 'aai-rest-client'
+    nexus-iq-namespace: "onap-"
+    project: "aai/rest-client"
+    project-name: "aai-rest-client"
     stream:
-        - 'master':
-              branch: 'master'
-    mvn-settings: 'aai-rest-client-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-rest-client-settings"
 
 - project:
     name: aai-rest-client-info

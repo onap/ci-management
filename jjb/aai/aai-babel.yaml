@@ -7,11 +7,11 @@
 
 - project:
     name: aai-babel
-    project-name: 'aai-babel'
+    project-name: "aai-babel"
     jobs:
       - gerrit-maven-verify
       - gerrit-maven-merge:
-          cron: '@daily'
+          cron: "@daily"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
@@ -19,63 +19,63 @@
           sbom-generator: true
       - gerrit-maven-docker-stage:
           sbom-generator: true
-          mvn-params: '-P docker -B -Dmaven.test.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+          # yamllint disable-line rule:line-length
+          mvn-params: "-P docker -B -Dmaven.test.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'aai/babel'
+    project: "aai/babel"
     stream:
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'aai-babel-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-babel-settings"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
     java-version: openjdk11
-    mvn-version: 'mvn36'
-    nexus-snapshot-repo: 'snapshots'
-    mvn-snapshot-id: 'ecomp-snapshots'
+    mvn-version: "mvn36"
+    nexus-snapshot-repo: "snapshots"
+    mvn-snapshot-id: "ecomp-snapshots"
 
 - project:
     name: aai-babel-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'aai/babel'
-    project-name: 'aai-babel'
-    branch: 'master'
-    mvn-settings: 'aai-babel-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "aai/babel"
+    project-name: "aai-babel"
+    branch: "master"
+    mvn-settings: "aai-babel-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk11
-    mvn-version: 'mvn36'
+    mvn-version: "mvn36"
 
 - project:
     name: aai-babel-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'aai/babel'
-    project-name: 'aai-babel'
+    nexus-iq-namespace: "onap-"
+    project: "aai/babel"
+    project-name: "aai-babel"
     stream:
-        - 'master':
-              branch: 'master'
-    mvn-settings: 'aai-babel-settings'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-babel-settings"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk11
-    mvn-version: 'mvn36'
-
+    mvn-version: "mvn36"
 
 - project:
     name: aai-babel-info

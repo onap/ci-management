@@ -7,32 +7,32 @@
 
 - project:
     name: aai-aai-common-master
-    project-name: 'aai-aai-common'
+    project-name: "aai-aai-common"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'aai/aai-common'
+    project: "aai/aai-common"
     stream:
-      - 'master':
-          branch: 'master'
-          mvn-params: '-P spring-boot-2-1'
-      - 'jakarta':
-          branch: 'jakarta'
-          mvn-params: '-P spring-boot-2-1'
-      - 'kohn':
-          branch: 'kohn'
-          mvn-params: '-P spring-boot-2-1'
-    mvn-settings: 'aai-aai-common-settings'
-    mvn-version: 'mvn35'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+          mvn-params: "-P spring-boot-2-1"
+      - "jakarta":
+          branch: "jakarta"
+          mvn-params: "-P spring-boot-2-1"
+      - "kohn":
+          branch: "kohn"
+          mvn-params: "-P spring-boot-2-1"
+    mvn-settings: "aai-aai-common-settings"
+    mvn-version: "mvn35"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
     java-version: openjdk8
 
@@ -41,35 +41,35 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'aai/aai-common'
-    project-name: 'aai-aai-common'
-    branch: 'master'
-    mvn-params: '-P spring-boot-2-1'
-    mvn-settings: 'aai-aai-common-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-version: 'mvn35'
+    project: "aai/aai-common"
+    project-name: "aai-aai-common"
+    branch: "master"
+    mvn-params: "-P spring-boot-2-1"
+    mvn-settings: "aai-aai-common-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-version: "mvn35"
     java-version: openjdk8
 
 - project:
     name: aai-aai-common-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'aai/aai-common'
-    project-name: 'aai-aai-common'
+    project: "aai/aai-common"
+    project-name: "aai-aai-common"
     stream:
-        - 'master':
-              branch: 'master'
-    mvn-params: '-P spring-boot-2-1'
-    mvn-settings: 'aai-aai-common-settings'
-    mvn-version: 'mvn35'
+      - "master":
+          branch: "master"
+    mvn-params: "-P spring-boot-2-1"
+    mvn-settings: "aai-aai-common-settings"
+    mvn-version: "mvn35"
     java-version: openjdk8
 
 - project:
@@ -82,36 +82,36 @@
     branch: master
 
 - project:
-    name: 'aai-aai-common-docker'
+    name: "aai-aai-common-docker"
     jobs:
-      - '{project-name}-{stream}-verify-docker'
-      - '{project-name}-{stream}-merge-docker'
+      - "{project-name}-{stream}-verify-docker"
+      - "{project-name}-{stream}-merge-docker"
       - gerrit-maven-docker-stage:
           sbom-generator: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
+          mvn-params: "-P docker -Dmaven.test.skip=true"
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-    project-name: 'aai-aai-common'
-    project: 'aai/aai-common'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+    project-name: "aai-aai-common"
+    project: "aai/aai-common"
     stream:
-      - 'master':
-          branch: 'master'
-          distro: 'alpine'
-          mvn-params: '-P spring-boot-2-1,docker'
-      - 'jakarta':
-          branch: 'jakarta'
-          distro: 'alpine'
-          mvn-params: '-P spring-boot-2-1,docker'
-      - 'kohn':
-          branch: 'kohn'
-          distro: 'alpine'
-          mvn-params: '-P spring-boot-2-1,docker'
-    docker_name: 'onap/aai-common-{distro}'
-    docker_build_args: '-f ./Dockerfile.{distro}'
-    docker_root: '$WORKSPACE/Dockerfiles/aai-common/'
-    mvn-settings: 'aai-aai-common-settings'
-    mvn-version: 'mvn35'
-    files: 'Dockerfiles/aai-common/**'
+      - "master":
+          branch: "master"
+          distro: "alpine"
+          mvn-params: "-P spring-boot-2-1,docker"
+      - "jakarta":
+          branch: "jakarta"
+          distro: "alpine"
+          mvn-params: "-P spring-boot-2-1,docker"
+      - "kohn":
+          branch: "kohn"
+          distro: "alpine"
+          mvn-params: "-P spring-boot-2-1,docker"
+    docker_name: "onap/aai-common-{distro}"
+    docker_build_args: "-f ./Dockerfile.{distro}"
+    docker_root: "$WORKSPACE/Dockerfiles/aai-common/"
+    mvn-settings: "aai-aai-common-settings"
+    mvn-version: "mvn35"
+    files: "Dockerfiles/aai-common/**"
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk8

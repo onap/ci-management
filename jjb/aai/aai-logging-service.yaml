@@ -7,57 +7,57 @@
 
 - project:
     name: aai-logging-service-master
-    project-name: 'aai-logging-service'
+    project-name: "aai-logging-service"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           sbom-generator: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'aai/logging-service'
+    project: "aai/logging-service"
     stream:
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'aai-logging-service-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-logging-service-settings"
+    files: "**"
+    archive-artifacts: ""
 
 - project:
     name: aai-logging-service-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'aai/logging-service'
-    project-name: 'aai-logging-service'
-    branch: 'master'
-    mvn-settings: 'aai-logging-service-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "aai/logging-service"
+    project-name: "aai-logging-service"
+    branch: "master"
+    mvn-settings: "aai-logging-service-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: aai-logging-service-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'aai/logging-service'
-    project-name: 'aai-logging-service'
+    nexus-iq-namespace: "onap-"
+    project: "aai/logging-service"
+    project-name: "aai-logging-service"
     stream:
-        - 'master':
-              branch: 'master'
-    mvn-settings: 'aai-logging-service-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-logging-service-settings"
 
 - project:
     name: aai-logging-service-info

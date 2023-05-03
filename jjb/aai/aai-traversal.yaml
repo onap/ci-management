@@ -7,38 +7,38 @@
 
 - project:
     name: aai-traversal-master
-    project-name: 'aai-traversal'
+    project-name: "aai-traversal"
     jobs:
-      - '{project-name}-{stream}-verify-java':
+      - "{project-name}-{stream}-verify-java":
           build-node: ubuntu1804-docker-8c-8g
-      - '{project-name}-{stream}-merge-java':
+      - "{project-name}-{stream}-merge-java":
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
-          mvn-params: '-DskipTests'
+          mvn-params: "-DskipTests"
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           sbom-generator: true
       - gerrit-maven-docker-stage:
           sbom-generator: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
+          mvn-params: "-P docker -Dmaven.test.skip=true"
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'aai/traversal'
+    project: "aai/traversal"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
-      - 'jakarta':
-          branch: 'jakarta'
-    mvn-settings: 'aai-traversal-settings'
-    mvn-version: 'mvn35'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+      - "jakarta":
+          branch: "jakarta"
+    mvn-settings: "aai-traversal-settings"
+    mvn-version: "mvn35"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
     java-version: openjdk8
 
@@ -47,32 +47,32 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'aai/traversal'
-    project-name: 'aai-traversal'
-    branch: 'master'
-    mvn-settings: 'aai-traversal-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-version: 'mvn35'
+    project: "aai/traversal"
+    project-name: "aai-traversal"
+    branch: "master"
+    mvn-settings: "aai-traversal-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-version: "mvn35"
     java-version: openjdk8
 
 - project:
     name: aai-traversal-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'aai/traversal'
-    project-name: 'aai-traversal'
+    nexus-iq-namespace: "onap-"
+    project: "aai/traversal"
+    project-name: "aai-traversal"
     stream:
-        - 'master':
-              branch: 'master'
-    mvn-settings: 'aai-traversal-settings'
-    mvn-version: 'mvn35'
+      - "master":
+          branch: "master"
+    mvn-settings: "aai-traversal-settings"
+    mvn-version: "mvn35"
     java-version: openjdk8
 
 - project:
