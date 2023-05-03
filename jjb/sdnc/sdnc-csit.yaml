@@ -2,22 +2,22 @@
 - project:
     name: sdnc-oam-csit
     jobs:
-      - '{project-name}-review-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
+      - "{project-name}-review-verification-maven-{stream}":
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
           maven-versions-plugin: true
-      - '{project-name}-merge-verification-maven-{stream}':
-          mvn-params: '-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker'
+      - "{project-name}-merge-verification-maven-{stream}":
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
           maven-versions-plugin: true
-    project-name: 'sdnc-oam'
-    recipients: 'dtimoney@att.com'
+    project-name: "sdnc-oam"
+    recipients: "dtimoney@att.com"
     # project name in gerrit
-    project: 'sdnc/oam'
+    project: "sdnc/oam"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'sdnc-oam-settings'
-    mvn-version: 'mvn38'
-    robot-options: ''
-    branch: 'master'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "sdnc-oam-settings"
+    mvn-version: "mvn38"
+    robot-options: ""
+    branch: "master"
