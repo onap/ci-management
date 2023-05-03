@@ -1,9 +1,9 @@
 ---
 - project:
     name: vvp-engagementmgr
-    project-name: 'vvp-engagementmgr'
-    project: 'vvp/engagementmgr'
-    mvn-settings: 'vvp-engagementmgr-settings'
+    project-name: "vvp-engagementmgr"
+    project: "vvp/engagementmgr"
+    mvn-settings: "vvp-engagementmgr-settings"
     branch: master
     jobs:
       - gerrit-info-yaml-verify

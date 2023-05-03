@@ -1,9 +1,9 @@
 ---
 - project:
     name: vvp-oom
-    project-name: 'vvp-oom'
-    project: 'vvp/oom'
-    mvn-settings: 'vvp-oom-settings'
+    project-name: "vvp-oom"
+    project: "vvp/oom"
+    mvn-settings: "vvp-oom-settings"
     branch: master
     jobs:
       - gerrit-info-yaml-verify

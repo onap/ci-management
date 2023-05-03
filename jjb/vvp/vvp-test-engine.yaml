@@ -1,9 +1,9 @@
 ---
 - project:
     name: vvp-test-engine-info
-    project-name: 'vvp-test-engine'
-    project: 'vvp/test-engine'
-    mvn-settings: 'vvp-test-engine-settings'
+    project-name: "vvp-test-engine"
+    project: "vvp/test-engine"
+    mvn-settings: "vvp-test-engine-settings"
     branch: master
     jobs:
       - gerrit-info-yaml-verify
@@ -14,30 +14,30 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'vvp/test-engine'
-    project-name: 'vvp-test-engine'
-    branch: 'master'
-    mvn-settings: 'vvp-test-engine-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vvp/test-engine"
+    project-name: "vvp-test-engine"
+    branch: "master"
+    mvn-settings: "vvp-test-engine-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vvp-test-engine-verify
-    project-name: 'vvp-test-engine'
-    project: 'vvp/test-engine'
+    project-name: "vvp-test-engine"
+    project: "vvp/test-engine"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vvp-test-engine-settings'
-    build-node: 'centos8-builder-4c-4g'
+      - "master":
+          branch: "master"
+    mvn-settings: "vvp-test-engine-settings"
+    build-node: "centos8-builder-4c-4g"
     subproject:
-      - 'onap-client':
-          path: 'onap-client'
-          pattern: 'onap-client/**'
+      - "onap-client":
+          path: "onap-client"
+          pattern: "onap-client/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - "{project-name}-{stream}-{subproject}-verify-python"

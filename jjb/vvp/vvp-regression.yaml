@@ -1,9 +1,9 @@
 ---
 - project:
     name: vvp-regression-tests
-    project-name: 'vvp-regression-tests'
-    project: 'vvp/regression-tests'
-    mvn-settings: 'vvp-regression-tests-settings'
+    project-name: "vvp-regression-tests"
+    project: "vvp/regression-tests"
+    mvn-settings: "vvp-regression-tests-settings"
     branch: master
     jobs:
       - gerrit-info-yaml-verify

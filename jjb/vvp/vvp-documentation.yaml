@@ -1,9 +1,9 @@
 ---
 - project:
     name: vvp-documentation
-    project-name: 'vvp-documentation'
-    project: 'vvp/documentation'
-    mvn-settings: 'vvp-documentation-settings'
+    project-name: "vvp-documentation"
+    project: "vvp/documentation"
+    mvn-settings: "vvp-documentation-settings"
     branch: master
     jobs:
       - gerrit-info-yaml-verify
