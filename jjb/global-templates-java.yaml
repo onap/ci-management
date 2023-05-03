@@ -1,1108 +1,1108 @@
 ---
 - job-template: &verify_java_defaults
-    # Job template for Java verify jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean install
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
+      # Job template for Java verify jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean install
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project-name}-{stream}-verify-java'
+      name: "{project-name}-{stream}-verify-java"
 
-    project-type: freestyle
-    concurrent: true
-    node: '{build-node}'
-    build-env-variables: ''
-    pattern: '**'
-    pom:
-    mvn-opts: ''
-    java-opts: ''
-    java-version: openjdk8
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      project-type: freestyle
+      concurrent: true
+      node: "{build-node}"
+      build-env-variables: ""
+      pattern: "**"
+      pom:
+      mvn-opts: ""
+      java-opts: ""
+      java-version: openjdk8
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-      - maven-params:
-          mvn-params: '{mvn-params}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+          - maven-params:
+                mvn-params: "{mvn-params}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: '$GERRIT_REFSPEC'
-          choosing-strategy: 'gerrit'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: "$GERRIT_REFSPEC"
+                choosing-strategy: "gerrit"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-    triggers:
-      - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{obj:pattern}'
+      triggers:
+          - gerrit-trigger-patch-submitted:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+                files: "{obj:pattern}"
 
-    builders:
-      - lf-infra-pre-build
-      - lf-update-java-alternatives:
-          java-version: "{java-version}"
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-      - inject:
-          properties-content: "{build-env-variables}"
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{obj:pom}'
-          goals: 'clean install -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn {mvn-params}'
-          properties:
-            - MAVEN_OPTS='{mvn-opts}'
-          java-opts:
-            - "{java-opts}"
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
+      builders:
+          - lf-infra-pre-build
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+          - inject:
+                properties-content: "{build-env-variables}"
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "{obj:pom}"
+                # yamllint disable rule:line-length
+                goals: "clean install -B
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn {mvn-params}"
+                # yamlline enable
+                properties:
+                    - MAVEN_OPTS='{mvn-opts}'
+                java-opts:
+                    - "{java-opts}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
 
-    publishers:
-      - lf-infra-publish
-
-- job-template:
-    # Job template for Java verify jobs running checkstyle at the end
-    # When checkstyle will be fully incorporated, it is meant to replace
-    #  '{project-name}-{stream}-verify-java-checkstyle'
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean install
-    #
-    # This job publishes checkstyle results.
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-
-    <<: *verify_java_defaults
-    name: '{project-name}-{stream}-verify-java-checkstyle'
-
-    publishers:
-      - lf-infra-publish
-      - checkstyle-result
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for Java verify jobs with POM not at the root
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean install
-    #
-    # This job supports subprojects.
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
+      # Job template for Java verify jobs running checkstyle at the end
+      # When checkstyle will be fully incorporated, it is meant to replace
+      #  '{project-name}-{stream}-verify-java-checkstyle'
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean install
+      #
+      # This job publishes checkstyle results.
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    <<: *verify_java_defaults
-    name: '{project-name}-{stream}-{subproject}-verify-java'
+      <<: *verify_java_defaults
+      name: "{project-name}-{stream}-verify-java-checkstyle"
 
-- job-template:
-    # Job template for Java integration pairwise jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean install
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-
-    <<: *verify_java_defaults
-    name: '{project-name}-{stream}-integration-pairwise'
-    triggers:
-      - timed: '@daily'
-      - gerrit-trigger-patch-submitted:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{obj:pattern}'
+      publishers:
+          - lf-infra-publish
+          - checkstyle-result
 
 - job-template:
-    # Job template for Java daily release jobs running checkstyle at the end
-    # When checkstyle will be fully incorporated, it is meant to replace
-    #  '{project-name}-{stream}-release-java-daily'
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy with Sonar scans
-    #
-    # This job publishes checkstyle results.
-    # This job uses a conditional regex match step to set versions.
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
+      # Job template for Java verify jobs with POM not at the root
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean install
+      #
+      # This job supports subprojects.
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     pattern:   ant file-path pattern relative to the workspace used to
+      #                trigger the job
 
-    name: '{project-name}-{stream}-release-java-daily-checkstyle'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    maven-deploy-properties:
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-    triggers:
-      # 11 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-      - conditional-step:
-          condition-kind: regex-match
-          regex: DoSetVersion
-          label: '{setVersion}'
-          steps:
-            - inject:
+      <<: *verify_java_defaults
+      name: "{project-name}-{stream}-{subproject}-verify-java"
+
+- job-template:
+      # Job template for Java integration pairwise jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean install
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+
+      <<: *verify_java_defaults
+      name: "{project-name}-{stream}-integration-pairwise"
+      triggers:
+          - timed: "@daily"
+          - gerrit-trigger-patch-submitted:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+                files: "{obj:pattern}"
+
+- job-template:
+      # Job template for Java daily release jobs running checkstyle at the end
+      # When checkstyle will be fully incorporated, it is meant to replace
+      #  '{project-name}-{stream}-release-java-daily'
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy with Sonar scans
+      #
+      # This job publishes checkstyle results.
+      # This job uses a conditional regex match step to set versions.
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+
+      name: "{project-name}-{stream}-release-java-daily-checkstyle"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      maven-deploy-properties:
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
+      triggers:
+          # 11 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+          - conditional-step:
+                condition-kind: regex-match
+                regex: DoSetVersion
+                label: "{setVersion}"
+                steps:
+                    - inject:
+                          properties-file: version.properties
+                    - maven-set-release-version:
+                          maven-version: "{maven-version}"
+                          mvn-settings: "{mvn-settings}"
+                          pom:
+          - maven-target:
+                maven-version: "{maven-version}"
+                goals: "clean deploy -B
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+                properties: "{obj:mvn_properties}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+
+      publishers:
+          - lf-infra-publish
+          - checkstyle-result-daily
+
+- job-template:
+      # Job template for Java daily release jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. maven set versions
+      # 2. maven clean deploy with Sonar scans
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+
+      name: "{project-name}-{stream}-release-version-java-daily"
+
+      project-type: freestyle
+      disabled: false
+      node: "{build-node}"
+      maven-deploy-properties:
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
+
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
+
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
+
+      triggers:
+          # 11 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+
+          - inject:
                 properties-file: version.properties
-            - maven-set-release-version:
-                maven-version: '{maven-version}'
-                mvn-settings: '{mvn-settings}'
+          - maven-set-release-version:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
                 pom:
-      - maven-target:
-          maven-version: '{maven-version}'
-          goals: 'clean deploy -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          properties: '{obj:mvn_properties}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
 
-    publishers:
-      - lf-infra-publish
-      - checkstyle-result-daily
+          - maven-target:
+                maven-version: "{maven-version}"
+                goals: "clean deploy -B
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+                properties:
+                    - "{maven-deploy-properties}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
 
-- job-template:
-    # Job template for Java daily release jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. maven set versions
-    # 2. maven clean deploy with Sonar scans
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-
-    name: '{project-name}-{stream}-release-version-java-daily'
-
-    project-type: freestyle
-    disabled: false
-    node: '{build-node}'
-    maven-deploy-properties:
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      # 11 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-
-      - inject:
-          properties-file: version.properties
-      - maven-set-release-version:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom:
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          goals: 'clean deploy -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          properties:
-            - '{maven-deploy-properties}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-
-    publishers:
-      - lf-infra-publish
+      publishers:
+          - lf-infra-publish
 
 - job-template: &merge_java_defaults
-    # Job template for Java merge jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
+      # Job template for Java merge jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project-name}-{stream}-merge-java'
+      name: "{project-name}-{stream}-merge-java"
 
-    project-type: freestyle
-    node: '{build-node}'
-    pattern: '**'
-    pom:
-    mvn_properties: []
-    mvn-params: ''
-    mvn-opts: ''
-    java-opts: ''
-    java-version: openjdk8
+      project-type: freestyle
+      node: "{build-node}"
+      pattern: "**"
+      pom:
+      mvn_properties: []
+      mvn-params: ""
+      mvn-opts: ""
+      java-opts: ""
+      java-version: openjdk8
 
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+      wrappers:
+          - lf-infra-wrappers:
+                build-timeout: "{build-timeout}"
+                jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
-    triggers:
-      - gerrit-trigger-patch-merged:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{pattern}'
+      triggers:
+          - gerrit-trigger-patch-merged:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+                files: "{pattern}"
 
-    builders:
-      - lf-infra-pre-build
-      - lf-update-java-alternatives:
-          java-version: "{java-version}"
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-      - conditional-step:
-          condition-kind: regex-match
-          regex: .*(amd64|arm64).*
-          label: '{project-name}'
-          steps:
-            - shell: !include-raw-escape: global-jjb/shell/docker-login.sh
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{obj:pom}'
-          goals: 'clean deploy -B {mvn-params}
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          properties:
-            - MAVEN_OPTS='{mvn-opts}'
-          java-opts:
-            - "{java-opts}"
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-          properties: '{obj:mvn_properties}'
+      builders:
+          - lf-infra-pre-build
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+          - conditional-step:
+                condition-kind: regex-match
+                regex: .*(amd64|arm64).*
+                label: "{project-name}"
+                steps:
+                    - shell: !include-raw-escape: global-jjb/shell/docker-login.sh
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "{obj:pom}"
+                goals: "clean deploy -B {mvn-params}
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+                java-opts:
+                    - "{java-opts}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+                properties: "{obj:mvn_properties}"
 
-    publishers:
-      - lf-infra-publish
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for Java merge jobs based on
-    #   '{project-name}-{stream}-merge-java'
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy
-    #
-    # This project supports maven properties.
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-    #     maven-properties: properties passed to maven
+      # Job template for Java merge jobs based on
+      #   '{project-name}-{stream}-merge-java'
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy
+      #
+      # This project supports maven properties.
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+      #     maven-properties: properties passed to maven
 
-    <<: *merge_java_defaults
-    name: '{project-name}-{stream}-merge-properties-java'
+      <<: *merge_java_defaults
+      name: "{project-name}-{stream}-merge-properties-java"
 
-    wrappers:
-      - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-
-- job-template:
-    # Job template for Java merge jobs that takes a maven template
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy -P {mvn-profile}
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-
-    <<: *merge_java_defaults
-    name: '{project-name}-{stream}-merge-profile-java'
-
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-
-      - docker-login
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          goals: 'clean deploy -P {mvn-profile} -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-          properties:
-            - docker.pull.registry=nexus3.onap.org:10001
-            - docker.push.registry=nexus3.onap.org:10003
+      wrappers:
+          - lf-infra-wrappers:
+                build-timeout: "{build-timeout}"
+                jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
 - job-template:
-    # Job template for Java merge jobs with POM not at the root
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy
-    #
-    # This job supports subprojects.
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     pattern:   ant file-path pattern relative to the workspace used to
-    #                trigger the job
+      # Job template for Java merge jobs that takes a maven template
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy -P {mvn-profile}
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    <<: *merge_java_defaults
-    name: '{project-name}-{stream}-{subproject}-merge-java'
+      <<: *merge_java_defaults
+      name: "{project-name}-{stream}-merge-profile-java"
+
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+
+          - docker-login
+
+          - maven-target:
+                maven-version: "{maven-version}"
+                goals: "clean deploy -P {mvn-profile} -B
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+                properties:
+                    - docker.pull.registry=nexus3.onap.org:10001
+                    - docker.push.registry=nexus3.onap.org:10003
+
+- job-template:
+      # Job template for Java merge jobs with POM not at the root
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy
+      #
+      # This job supports subprojects.
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     pattern:   ant file-path pattern relative to the workspace used to
+      #                trigger the job
+
+      <<: *merge_java_defaults
+      name: "{project-name}-{stream}-{subproject}-merge-java"
 
 - job-template: &docker_java_defaults
-    # Job template for Docker daily jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. login to the docker registry
-    # 2. docker push
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
+      # Job template for Docker daily jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. login to the docker registry
+      # 2. docker push
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project-name}-{stream}-docker-java-daily'
-    id: '{project-name}-{stream}-docker-java-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    java-version: openjdk8
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      name: "{project-name}-{stream}-docker-java-daily"
+      id: "{project-name}-{stream}-docker-java-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      java-version: openjdk8
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-      - maven-params:
-          mvn-params: '{mvn-params}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+          - maven-params:
+                mvn-params: "{mvn-params}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
 
-    builders:
-      - lf-infra-pre-build
-      - lf-update-java-alternatives:
-          java-version: "{java-version}"
+      builders:
+          - lf-infra-pre-build
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
 
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
 
-      - docker-login
+          - docker-login
 
-      - maven-docker-push-daily:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom: '{docker-pom}'
-          # use default as mvn-profile if profile is not needed
-          mvn-profile: '{mvn-profile}'
-          mvn-params: '{mvn-params}'
+          - maven-docker-push-daily:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom: "{docker-pom}"
+                # use default as mvn-profile if profile is not needed
+                mvn-profile: "{mvn-profile}"
+                mvn-params: "{mvn-params}"
 
-    publishers:
-      - lf-infra-publish
-
-- job-template:
-    # Job template for Docker daily jobs
-    #
-    # The purpose of this job template is to run:
-    # 1. login to the docker registry
-    # 2. docker push
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
-
-    <<: *docker_java_defaults
-    name: '{project-name}-{stream}-docker-java-daily'
-    id: docker-java-daily
-    node: '{build-node}'
-    wrappers:
-      - infra-wrappers-docker-build:
-          build-timeout: '{build-timeout}'
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. run a specified shell builder
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     maven-properties: properties passed to maven
+      # Job template for Docker daily jobs
+      #
+      # The purpose of this job template is to run:
+      # 1. login to the docker registry
+      # 2. docker push
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project-name}-{stream}-docker-java-shell-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-
-      - docker-login
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          goals: '{mvn-goals}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-
-      - shell: '{script}'
-
-    publishers:
-      - lf-infra-publish
+      <<: *docker_java_defaults
+      name: "{project-name}-{stream}-docker-java-daily"
+      id: docker-java-daily
+      node: "{build-node}"
+      wrappers:
+          - infra-wrappers-docker-build:
+                build-timeout: "{build-timeout}"
 
 - job-template:
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. run a specified shell builder
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     maven-properties: properties passed to maven
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. run a specified shell builder
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     maven-properties: properties passed to maven
 
-    name: '{project-name}-{stream}-{subproject}-docker-java-shell-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      name: "{project-name}-{stream}-docker-java-shell-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
 
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
 
-      - docker-login
+          - docker-login
 
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{pom}'
-          goals: '{mvn-goals}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
+          - maven-target:
+                maven-version: "{maven-version}"
+                goals: "{mvn-goals}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
 
-      - shell: '{script}'
+          - shell: "{script}"
 
-    publishers:
-      - lf-infra-publish
-
-- job-template:
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. inject a version.properties file and set versions
-    #  3. run a specified shell builder
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     maven-properties: properties passed to maven
-
-    name: '{project-name}-{stream}-docker-java-version-shell-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-
-      - inject:
-          properties-file: version.properties
-      - maven-set-release-version:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom:
-
-      - docker-login
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          goals: '{mvn-goals}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-
-      - shell: '{script}'
-
-    publishers:
-      - lf-infra-publish
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. inject a version.properties file and set versions
-    #  3. run a specified shell builder
-    #
-    # This template supports subprojects.
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     maven-properties: properties passed to maven
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. run a specified shell builder
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     maven-properties: properties passed to maven
 
-    name: '{project-name}-{stream}-{subproject}-docker-java-version-shell-daily'
-    project-type: freestyle
-    node: 'ubuntu1804-docker-8c-8g'
-    disabled: false
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      name: "{project-name}-{stream}-{subproject}-docker-java-shell-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
 
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
 
-      - inject:
-          properties-file: version.properties
-      - maven-set-release-version:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom: '{pom}'
+          - docker-login
 
-      - docker-login
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "{pom}"
+                goals: "{mvn-goals}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
 
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{pom}'
-          goals: '{mvn-goals}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
+          - shell: "{script}"
 
-      - shell: '{script}'
+      publishers:
+          - lf-infra-publish
 
-    publishers:
-      - lf-infra-publish
+- job-template:
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. inject a version.properties file and set versions
+      #  3. run a specified shell builder
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     maven-properties: properties passed to maven
+
+      name: "{project-name}-{stream}-docker-java-version-shell-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
+
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
+
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
+
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+
+          - inject:
+                properties-file: version.properties
+          - maven-set-release-version:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom:
+
+          - docker-login
+
+          - maven-target:
+                maven-version: "{maven-version}"
+                goals: "{mvn-goals}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+
+          - shell: "{script}"
+
+      publishers:
+          - lf-infra-publish
+
+- job-template:
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. inject a version.properties file and set versions
+      #  3. run a specified shell builder
+      #
+      # This template supports subprojects.
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     maven-properties: properties passed to maven
+
+      name: "{project-name}-{stream}-{subproject}-docker-java-version-shell-daily"
+      project-type: freestyle
+      node: "ubuntu1804-docker-8c-8g"
+      disabled: false
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
+
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
+
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
+
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+
+          - inject:
+                properties-file: version.properties
+          - maven-set-release-version:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom: "{pom}"
+
+          - docker-login
+
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "{pom}"
+                goals: "{mvn-goals}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+
+          - shell: "{script}"
+
+      publishers:
+          - lf-infra-publish
 
 - job-template: &docker_version_java_defaults
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. inject a version.properties file and set versions
-    #  3. run a docker push
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     profile:   the docker profile defined in the pom
-    #     maven-properties: properties passed to maven
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. inject a version.properties file and set versions
+      #  3. run a docker push
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     profile:   the docker profile defined in the pom
+      #     maven-properties: properties passed to maven
 
-    name: '{project-name}-{stream}-docker-version-java-daily'
-    id: '{project-name}-{stream}-docker-version-java-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    disabled: false
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      name: "{project-name}-{stream}-docker-version-java-daily"
+      id: "{project-name}-{stream}-docker-version-java-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      disabled: false
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-      - maven-params:
-          mvn-params: '{mvn-params}'
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+          - maven-params:
+                mvn-params: "{mvn-params}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
 
-    builders:
-      - lf-infra-pre-build
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+      builders:
+          - lf-infra-pre-build
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
 
-      - inject:
-          properties-file: version.properties
-      - maven-set-release-version:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom:
+          - inject:
+                properties-file: version.properties
+          - maven-set-release-version:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom:
 
-      - docker-login
+          - docker-login
 
-      - maven-docker-push-daily:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom: '{docker-pom}'
-          # use default as mvn-profile if profile is not needed
-          mvn-profile: '{mvn-profile}'
-          mvn-params: '{mvn-params}'
+          - maven-docker-push-daily:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom: "{docker-pom}"
+                # use default as mvn-profile if profile is not needed
+                mvn-profile: "{mvn-profile}"
+                mvn-params: "{mvn-params}"
 
-    publishers:
-      - lf-infra-publish
-
-- job-template:
-    # Job template for building & pushing docker images
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. inject a version.properties file and set versions
-    #  3. run a docker push
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     profile:   the docker profile defined in the pom
-    #     maven-properties: properties passed to maven
-
-    <<: *docker_version_java_defaults
-    name: '{project-name}-{stream}-docker-version-java-daily'
-    id: 'docker-version-java-daily'
-    node: '{build-node}'
-    wrappers:
-      - infra-wrappers-docker-build:
-          build-timeout: '{build-timeout}'
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for building & pushing docker images for AAI specific repos
-    #
-    # The purpose of this job template is to run:
-    #  1. login to the docker registry
-    #  2. run maven goals
-    #  3. run include-docker-push.sh
-    #
-    # Required Variables:
-    #     pom:       name/location of the pom.xml file relative to the workspace
-    #     maven-properties: properties passed to maven
+      # Job template for building & pushing docker images
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. inject a version.properties file and set versions
+      #  3. run a docker push
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     profile:   the docker profile defined in the pom
+      #     maven-properties: properties passed to maven
 
-    name: '{project-name}-{stream}-aai-docker-java-daily'
-    project-type: freestyle
-    node: '{build-node}'
-    docker-image-name: ''
-    disabled: false
-    java-version: 'openjdk8'
-    properties:
-      - infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
-
-    parameters:
-      - infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          refspec: 'refs/heads/{branch}'
-          artifacts: '{archive-artifacts}'
-      - maven-exec:
-          maven-version: '{maven-version}'
-      - docker-image-name:
-          docker-image-name: '{docker-image-name}'
-
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
-
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
-
-    triggers:
-      # 12 AM UTC
-      - timed: '@daily'
-      - gerrit-trigger-release-manually:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-
-    builders:
-      - lf-infra-pre-build
-      - lf-update-java-alternatives:
-          java-version: "{java-version}"
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
-
-      - docker-login
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: 'pom.xml'
-          goals: 'clean install -DskipTests -B
-            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-
-      - maven-target:
-          maven-version: '{maven-version}'
-          pom: '{pom}'
-          goals: '{mvn-goals}'
-          settings: '{mvn-settings}'
-          settings-type: cfp
-          global-settings: 'global-settings'
-          global-settings-type: cfp
-          properties:
-            - maven.test.skip=true
-            - docker.pull.registry=nexus3.onap.org:10001
-            - docker.push.registry=nexus3.onap.org:10003
-
-      - shell: !include-raw-escape: include-docker-push.sh
-
-    publishers:
-      - lf-infra-publish
+      <<: *docker_version_java_defaults
+      name: "{project-name}-{stream}-docker-version-java-daily"
+      id: "docker-version-java-daily"
+      node: "{build-node}"
+      wrappers:
+          - infra-wrappers-docker-build:
+                build-timeout: "{build-timeout}"
 
 - job-template:
-    # Job template for Java merge jobs for SDC specific repos
-    #
-    # The purpose of this job template is to run:
-    # 1. maven clean deploy
-    #
-    # Required Variables:
-    #     branch:    git branch (eg. stable/lithium or master)
+      # Job template for building & pushing docker images for AAI specific repos
+      #
+      # The purpose of this job template is to run:
+      #  1. login to the docker registry
+      #  2. run maven goals
+      #  3. run include-docker-push.sh
+      #
+      # Required Variables:
+      #     pom:       name/location of the pom.xml file relative to the workspace
+      #     maven-properties: properties passed to maven
 
-    <<: *merge_java_defaults
-    name: '{project-name}-{stream}-sdc-merge-java'
+      name: "{project-name}-{stream}-aai-docker-java-daily"
+      project-type: freestyle
+      node: "{build-node}"
+      docker-image-name: ""
+      disabled: false
+      java-version: "openjdk8"
+      properties:
+          - infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    node: '{build-node}'
-    build-timeout: 120
+      parameters:
+          - infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                refspec: "refs/heads/{branch}"
+                artifacts: "{archive-artifacts}"
+          - maven-exec:
+                maven-version: "{maven-version}"
+          - docker-image-name:
+                docker-image-name: "{docker-image-name}"
 
-    builders:
-      - lf-infra-pre-build
-      - lf-update-java-alternatives:
-          java-version: "{java-version}"
-      - provide-maven-settings:
-          global-settings-file: 'global-settings'
-          settings-file: '{mvn-settings}'
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
 
-      - docker-login
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
 
-      - maven-docker-push-daily:
-          maven-version: '{maven-version}'
-          mvn-settings: '{mvn-settings}'
-          pom: '{docker-pom}'
-          # use default as mvn-profile if profile is not needed
-          mvn-profile: '{mvn-profile}'
-          mvn-params: ''
+      triggers:
+          # 12 AM UTC
+          - timed: "@daily"
+          - gerrit-trigger-release-manually:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+
+      builders:
+          - lf-infra-pre-build
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
+
+          - docker-login
+
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "pom.xml"
+                goals: "clean install -DskipTests -B
+                    -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+
+          - maven-target:
+                maven-version: "{maven-version}"
+                pom: "{pom}"
+                goals: "{mvn-goals}"
+                settings: "{mvn-settings}"
+                settings-type: cfp
+                global-settings: "global-settings"
+                global-settings-type: cfp
+                properties:
+                    - maven.test.skip=true
+                    - docker.pull.registry=nexus3.onap.org:10001
+                    - docker.push.registry=nexus3.onap.org:10003
+
+          - shell: !include-raw-escape: include-docker-push.sh
+
+      publishers:
+          - lf-infra-publish
 
 - job-template:
-    # Job template for Java merge jobs on multiple architectures
-    #
-    # The purpose of this job template is to:
-    # 1. Run parallel {project-name}-{stream}-verify-java jobs for each supported architecture
-    # 2. Build and push a docker manifest list for the images created by
-    #    the previous jobs
+      # Job template for Java merge jobs for SDC specific repos
+      #
+      # The purpose of this job template is to run:
+      # 1. maven clean deploy
+      #
+      # Required Variables:
+      #     branch:    git branch (eg. stable/lithium or master)
 
-    name: '{project-name}-multiarch-{stream}-merge-java'
-    node: '{build-node}'
-    project-type: multijob
-    disabled: '{obj:disabled}'
-    pattern: '**'
+      <<: *merge_java_defaults
+      name: "{project-name}-{stream}-sdc-merge-java"
 
-    parameters:
-      - lf-infra-parameters:
-          project: '{project}'
-          stream: '{stream}'
-          branch: '{branch}'
-      - string:
-          name: DOCKER_REGISTRY
-          default: 'none'
-      - string:
-          name: DOCKERHUB_REGISTRY
-          default: 'registry-1.docker.io'
+      node: "{build-node}"
+      build-timeout: 120
 
-    properties:
-      - throttle:
-          max-per-node: 1
-          option: 'project'
-      - build-blocker:
-          use-build-blocker: true
-          blocking-jobs:
-            - '{project-name}-.*-merge-.*'
-          blocking-level: 'NODE'
+      builders:
+          - lf-infra-pre-build
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
+          - provide-maven-settings:
+                global-settings-file: "global-settings"
+                settings-file: "{mvn-settings}"
 
-    scm:
-      - gerrit-trigger-scm:
-          refspec: ''
-          choosing-strategy: 'default'
-          submodule-recursive: '{submodule-recursive}'
+          - docker-login
 
-    wrappers:
-      - infra-wrappers:
-          build-timeout: '{build-timeout}'
+          - maven-docker-push-daily:
+                maven-version: "{maven-version}"
+                mvn-settings: "{mvn-settings}"
+                pom: "{docker-pom}"
+                # use default as mvn-profile if profile is not needed
+                mvn-profile: "{mvn-profile}"
+                mvn-params: ""
 
-    triggers:
-      - gerrit-trigger-patch-merged:
-          server: '{server-name}'
-          project: '{project}'
-          branch: '{branch}'
-          files: '{pattern}'
+- job-template:
+      # Job template for Java merge jobs on multiple architectures
+      #
+      # The purpose of this job template is to:
+      # 1. Run parallel {project-name}-{stream}-verify-java jobs for each supported architecture
+      # 2. Build and push a docker manifest list for the images created by
+      #    the previous jobs
 
-    builders:
-      - multijob:
-          name: 'build docker images'
-          condition: ALWAYS
-          execution-type: PARALLEL
-          projects:
-            - name: '{project-name}-amd64-{stream}-merge-java'
-              kill-phase-on: FAILURE
-              current-parameters: true
-            - name: '{project-name}-arm64-{stream}-merge-java'
-              kill-phase-on: NEVER
-              current-parameters: true
-      - multijob:
-          name: 'publish docker manifest'
-          condition: SUCCESSFUL
-          execution-type: PARALLEL
-          projects:
-            - name: '{project-name}-docker-manifest-{stream}'
-              current-parameters: true
-              predefined-parameters: |
-                PARENT_JOB_NAME=$JOB_NAME
-                DOCKERHUB_REGISTRY=docker.io
+      name: "{project-name}-multiarch-{stream}-merge-java"
+      node: "{build-node}"
+      project-type: multijob
+      disabled: "{obj:disabled}"
+      pattern: "**"
+
+      parameters:
+          - lf-infra-parameters:
+                project: "{project}"
+                stream: "{stream}"
+                branch: "{branch}"
+          - string:
+                name: DOCKER_REGISTRY
+                default: "none"
+          - string:
+                name: DOCKERHUB_REGISTRY
+                default: "registry-1.docker.io"
+
+      properties:
+          - throttle:
+                max-per-node: 1
+                option: "project"
+          - build-blocker:
+                use-build-blocker: true
+                blocking-jobs:
+                    - "{project-name}-.*-merge-.*"
+                blocking-level: "NODE"
+
+      scm:
+          - gerrit-trigger-scm:
+                refspec: ""
+                choosing-strategy: "default"
+                submodule-recursive: "{submodule-recursive}"
+
+      wrappers:
+          - infra-wrappers:
+                build-timeout: "{build-timeout}"
+
+      triggers:
+          - gerrit-trigger-patch-merged:
+                server: "{server-name}"
+                project: "{project}"
+                branch: "{branch}"
+                files: "{pattern}"
+
+      builders:
+          - multijob:
+                name: "build docker images"
+                condition: ALWAYS
+                execution-type: PARALLEL
+                projects:
+                    - name: "{project-name}-amd64-{stream}-merge-java"
+                      kill-phase-on: FAILURE
+                      current-parameters: true
+                    - name: "{project-name}-arm64-{stream}-merge-java"
+                      kill-phase-on: NEVER
+                      current-parameters: true
+          - multijob:
+                name: "publish docker manifest"
+                condition: SUCCESSFUL
+                execution-type: PARALLEL
+                projects:
+                    - name: "{project-name}-docker-manifest-{stream}"
+                      current-parameters: true
+                      predefined-parameters: |
+                          PARENT_JOB_NAME=$JOB_NAME
+                          DOCKERHUB_REGISTRY=docker.io

@@ -1,84 +1,66 @@
 ---
 - project:
-    name: msb-discovery
-    project-name: 'msb-discovery'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          sbom-generator: true
-          build-node: ubuntu1804-docker-8c-8g
-          maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-pom: 'distributions/msb-discovery/pom.xml'
-          mvn-params: '-f distributions/msb-discovery/pom.xml -Dmaven.test.skip=true -P linux,docker'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-2c-1g
-    project: 'msb/discovery'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'msb-discovery-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
-
-#- project:
-#    name: msb-discovery-arm64
-#    project-name: 'msb-discovery-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-version-shell-daily':
-#          docker-pom: 'pom.xml'
-#          mvn-goals: 'install'
-#          script:
-#            !include-raw-escape: 'build-discovery-docker-image.sh'
-#          build-node: ubuntu1804-docker-arm64-4c-2g
-#    project: 'msb/discovery'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'msb-discovery-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#
-- project:
-    name: msb-discovery-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
-    project: 'msb/discovery'
-    project-name: 'msb-discovery'
-    branch: 'master'
-    mvn-settings: 'msb-discovery-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+      name: msb-discovery
+      project-name: "msb-discovery"
+      jobs:
+          - "{project-name}-{stream}-verify-java"
+          - "{project-name}-{stream}-merge-java"
+          - gerrit-maven-stage:
+                sbom-generator: true
+                sign-artifacts: true
+                build-node: centos8-docker-4c-4g
+                maven-versions-plugin: true
+          - gerrit-maven-docker-stage:
+                sbom-generator: true
+                build-node: ubuntu1804-docker-8c-8g
+                maven-versions-plugin: true
+                container-public-registry: "nexus3.onap.org:10001"
+                container-staging-registry: "nexus3.onap.org:10003"
+                mvn-pom: "distributions/msb-discovery/pom.xml"
+                mvn-params: "-f distributions/msb-discovery/pom.xml -Dmaven.test.skip=true -P linux,docker"
+          - "{project-name}-gerrit-release-jobs":
+                build-node: centos7-docker-2c-1g
+      project: "msb/discovery"
+      stream:
+          - "master":
+                branch: "master"
+      mvn-settings: "msb-discovery-settings"
+      files: "**"
+      archive-artifacts: ""
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: msb-discovery-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: msb/discovery
-    project-name: 'msb-discovery'
-    branch: 'master'
-    mvn-settings: 'msb-discovery-settings'
+      name: msb-discovery-sonar
+      jobs:
+          - gerrit-maven-sonar
+      sonarcloud: true
+      sonarcloud-project-organization: "{sonarcloud_project_organization}"
+      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+      sonar-mvn-goal: "{sonar_mvn_goal}"
+      cron: "@daily"
+      build-node: ubuntu1804-builder-4c-4g
+      project: "msb/discovery"
+      project-name: "msb-discovery"
+      branch: "master"
+      mvn-settings: "msb-discovery-settings"
+      mvn-goals: "clean install"
+      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-    name: msb-discovery-info
-    project-name: msb-discovery
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: msb/discovery
-    branch: master
+      name: msb-discovery-clm
+      jobs:
+          - gerrit-maven-clm
+      nexus-iq-namespace: "onap-"
+      project: msb/discovery
+      project-name: "msb-discovery"
+      branch: "master"
+      mvn-settings: "msb-discovery-settings"
+
+- project:
+      name: msb-discovery-info
+      project-name: msb-discovery
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos8-builder-2c-1g
+      project: msb/discovery
+      branch: master

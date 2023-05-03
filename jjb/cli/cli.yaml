@@ -1,117 +1,100 @@
 ---
 - project:
-    name: cli-project-view
-    project-name: cli
-    views:
-      - project-view
+      name: cli-project-view
+      project-name: cli
+      views:
+          - project-view
 
 - project:
-    name: cli
-    java-version: openjdk11
-    project-name: 'cli'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          sign-artifacts: true
-          build-node: centos8-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-params: '-Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-2c-1g
-      - '{project-name}-{stream}-aai-docker-java-daily':
-          pom: 'deployment/docker/pom.xml'
-          mvn-goals: 'docker:build'
-          docker-image-name: 'onap/cli'
-          build-node: ubuntu1804-docker-8c-8g
-    project: 'cli'
-    stream:
-        - 'master':
-                branch: 'master'
+      name: cli
+      java-version: openjdk11
+      project-name: "cli"
+      jobs:
+          - "{project-name}-{stream}-verify-java"
+          - "{project-name}-{stream}-merge-java"
+          - gerrit-maven-stage:
+                sign-artifacts: true
+                build-node: centos8-docker-4c-4g
+                maven-versions-plugin: true
+          - gerrit-maven-docker-stage:
+                sign-artifacts: true
+                build-node: centos8-docker-8c-8g
+                maven-versions-plugin: true
+                # yamllint disable-line rule:line-length
+                mvn-params: "-Dskip.docker.build=false -Dskip.docker.push=false -Dskip.docker.tag=false -Ddocker.push.registry=nexus3.onap.org:10003"
+                container-public-registry: "nexus3.onap.org:10001"
+                container-staging-registry: "nexus3.onap.org:10003"
+          - "{project-name}-gerrit-release-jobs":
+                build-node: centos7-docker-2c-1g
+          - "{project-name}-{stream}-aai-docker-java-daily":
+                pom: "deployment/docker/pom.xml"
+                mvn-goals: "docker:build"
+                docker-image-name: "onap/cli"
+                build-node: ubuntu1804-docker-8c-8g
+      project: "cli"
+      stream:
+          - "master":
+                branch: "master"
                 java-version: openjdk11
-    mvn-settings: 'cli-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
-
-#- project:
-#    name: cli-arm64
-#    project-name: 'cli-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-aai-docker-java-daily':
-#          pom: 'deployment/docker/pom.xml'
-#          mvn-goals: 'docker:build'
-#          docker-image-name: 'onap/cli'
-#
-#    project: 'cli'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'cli-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#
-- project:
-    name: cli-sonar
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
-    project: 'cli'
-    project-name: 'cli'
-    branch: 'master'
-    mvn-settings: 'cli-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+      mvn-settings: "cli-settings"
+      files: "**"
+      archive-artifacts: ""
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: cli-clm
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'cli'
-    project-name: 'cli'
-    branch: 'master'
-    mvn-settings: 'cli-settings'
-    build-node: ubuntu1804-builder-4c-4g
+      name: cli-sonar
+      java-version: openjdk11
+      jobs:
+          - gerrit-maven-sonar
+      sonarcloud: true
+      sonarcloud-project-organization: "{sonarcloud_project_organization}"
+      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+      sonar-mvn-goal: "{sonar_mvn_goal}"
+      cron: "@daily"
+      build-node: ubuntu1804-builder-4c-4g
+      project: "cli"
+      project-name: "cli"
+      branch: "master"
+      mvn-settings: "cli-settings"
+      mvn-goals: "clean install"
+      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-    name: cli-info
-    project-name: cli
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: cli
-    branch: master
+      name: cli-clm
+      java-version: openjdk11
+      jobs:
+          - gerrit-maven-clm
+      nexus-iq-namespace: "onap-"
+      project: "cli"
+      project-name: "cli"
+      branch: "master"
+      mvn-settings: "cli-settings"
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: cli-sonar-verify
-    java-version: openjdk11
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    jobs:
-      - gerrit-maven-sonar-verify
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    build-node: ubuntu1804-docker-8c-8g
-    project: 'cli'
-    project-name: 'cli'
-    branch: 'master'
-    mvn-settings: 'cli-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+      name: cli-info
+      project-name: cli
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos8-builder-2c-1g
+      project: cli
+      branch: master
+
+- project:
+      name: cli-sonar-verify
+      java-version: openjdk11
+      mvn-version: "mvn36"
+      maven-version: "mvn36"
+      jobs:
+          - gerrit-maven-sonar-verify
+      sonarcloud: true
+      sonarcloud-project-organization: "{sonarcloud_project_organization}"
+      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+      sonar-mvn-goal: "{sonar_mvn_goal}"
+      build-node: ubuntu1804-docker-8c-8g
+      project: "cli"
+      project-name: "cli"
+      branch: "master"
+      mvn-settings: "cli-settings"
+      mvn-goals: "clean install"
+      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"

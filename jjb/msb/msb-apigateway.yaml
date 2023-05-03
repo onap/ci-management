@@ -1,91 +1,72 @@
 ---
 - project:
-    name: msb-project-view
-    project-name: msb
-    views:
-      - project-view
+      name: msb-project-view
+      project-name: msb
+      views:
+          - project-view
 
 - project:
-    name: msb-apigateway
-    project-name: 'msb-apigateway'
-    jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-      - gerrit-maven-docker-stage:
-          sbom-generator: true
-          build-node: ubuntu1804-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-pom: 'distributions/msb-apigateway/pom.xml'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-f distributions/msb-apigateway/pom.xml -Dmaven.test.skip=true -P linux,docker'
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-2c-1g
-    project: 'msb/apigateway'
-    stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'msb-apigateway-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
-
-#- project:
-#    name: msb-apigateway-arm64
-#    project-name: 'msb-apigateway-arm64'
-#    jobs:
-#      - '{project-name}-{stream}-docker-java-version-shell-daily':
-#          docker-pom: 'pom.xml'
-#          mvn-goals: 'install'
-#          script:
-#            !include-raw-escape: 'build-apigateway-docker-image.sh'
-#
-#    project: 'msb/apigateway'
-#    stream:
-#      - 'master':
-#          branch: 'master'
-#    mvn-settings: 'msb-apigateway-settings'
-#    files: '**'
-#    archive-artifacts: ''
-#    build-node: ubuntu1804-docker-arm64-4c-2g
-#
-- project:
-    name: msb-apigateway-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
-    build-node: ubuntu1804-builder-4c-4g
-    project: 'msb/apigateway'
-    project-name: 'msb-apigateway'
-    branch: 'master'
-    mvn-settings: 'msb-apigateway-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+      name: msb-apigateway
+      project-name: "msb-apigateway"
+      jobs:
+          - "{project-name}-{stream}-verify-java"
+          - "{project-name}-{stream}-merge-java"
+          - gerrit-maven-stage:
+                sbom-generator: true
+                sign-artifacts: true
+                build-node: centos8-docker-4c-4g
+                maven-versions-plugin: true
+          - gerrit-maven-docker-stage:
+                sbom-generator: true
+                build-node: ubuntu1804-docker-8c-8g
+                maven-versions-plugin: true
+                mvn-pom: "distributions/msb-apigateway/pom.xml"
+                container-public-registry: "nexus3.onap.org:10001"
+                container-staging-registry: "nexus3.onap.org:10003"
+                mvn-params: "-f distributions/msb-apigateway/pom.xml -Dmaven.test.skip=true -P linux,docker"
+          - "{project-name}-gerrit-release-jobs":
+                build-node: centos7-docker-2c-1g
+      project: "msb/apigateway"
+      stream:
+          - "master":
+                branch: "master"
+      mvn-settings: "msb-apigateway-settings"
+      files: "**"
+      archive-artifacts: ""
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: msb-apigateway-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: msb/apigateway
-    project-name: 'msb-apigateway'
-    branch: 'master'
-    mvn-settings: 'msb-apigateway-settings'
+      name: msb-apigateway-sonar
+      jobs:
+          - gerrit-maven-sonar
+      sonarcloud: true
+      sonarcloud-project-organization: "{sonarcloud_project_organization}"
+      sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+      sonar-mvn-goal: "{sonar_mvn_goal}"
+      cron: "@daily"
+      build-node: ubuntu1804-builder-4c-4g
+      project: "msb/apigateway"
+      project-name: "msb-apigateway"
+      branch: "master"
+      mvn-settings: "msb-apigateway-settings"
+      mvn-goals: "clean install"
+      mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-    name: msb-apigateway-info
-    project-name: msb-apigateway
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: msb/apigateway
-    branch: master
+      name: msb-apigateway-clm
+      jobs:
+          - gerrit-maven-clm
+      nexus-iq-namespace: "onap-"
+      project: msb/apigateway
+      project-name: "msb-apigateway"
+      branch: "master"
+      mvn-settings: "msb-apigateway-settings"
+
+- project:
+      name: msb-apigateway-info
+      project-name: msb-apigateway
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos8-builder-2c-1g
+      project: msb/apigateway
+      branch: master

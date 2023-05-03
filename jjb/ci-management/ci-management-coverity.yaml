@@ -2,152 +2,152 @@
 # Coverity Scan static analysis
 
 - job-template:
-    name: '{project-name}-coverity'
-    id: onap-gerrit-maven-coverity
-    description: >
-      <hr/>
-      <h2>How to access Coverity Scan static analysis results</h2>
-      <ol>
-        <li>Visit <a href="https://scan.coverity.com/projects/{coverity-project-name}">Coverity Scan
-          project page</a>.</li>
-        <li>If you have not been added to the project on Coverity Scan service yet:
+      name: "{project-name}-coverity"
+      id: onap-gerrit-maven-coverity
+      description: >
+          <hr/>
+          <h2>How to access Coverity Scan static analysis results</h2>
           <ol>
-            <li>Click on <a href="https://scan.coverity.com/memberships/new?project_id={coverity-project-name}">
-              Add me to project</a>.</li>
-            <li>Wait till the project administrators grant you appropriate permissions.</li>
+            <li>Visit <a href="https://scan.coverity.com/projects/{coverity-project-name}">Coverity Scan
+              project page</a>.</li>
+            <li>If you have not been added to the project on Coverity Scan service yet:
+              <ol>
+                <li>Click on <a href="https://scan.coverity.com/memberships/new?project_id={coverity-project-name}">
+                  Add me to project</a>.</li>
+                <li>Wait till the project administrators grant you appropriate permissions.</li>
+              </ol>
+            <li>Click on <a href="https://scan.coverity.com/projects/{coverity-project-name}/view_defects">
+              View Defects</a>.</li>
           </ol>
-        <li>Click on <a href="https://scan.coverity.com/projects/{coverity-project-name}/view_defects">
-          View Defects</a>.</li>
-      </ol>
-      <p>Please note that processing data takes some time. You will get an email when it's done.</p>
-      <p>See more <a href="https://wiki.onap.org/x/Y6vQAw">Coverity Scan HOWTOs</a> on ONAP Developer Wiki.</p>
-      <hr/>
+          <p>Please note that processing data takes some time. You will get an email when it's done.</p>
+          <p>See more <a href="https://wiki.onap.org/x/Y6vQAw">Coverity Scan HOWTOs</a> on ONAP Developer Wiki.</p>
+          <hr/>
 
-    project-type: freestyle
-    node: '{build-node}'
-    branch: master
-    build-days-to-keep: 7
-    build-timeout: 240
-    cron: '@daily'
-    disabled: false
-    dry-run: false
-    git-url: '$GIT_URL/$PROJECT'
-    java-version: openjdk8
-    mvn-global-settings: global-settings
-    mvn-opts: ''
-    mvn-params: ''
-    mvn-version: mvn35
-    coverity-project-name: ''
-    coverity-token: ''
-    coverity-user-email: ''
-    coverity-search-paths: ''
-    coverity-search-exclude-regexs: ''
-    max-git-repo-age-hours: 0
-    stream: master
-    submodule-recursive: true
-    submodule-timeout: 10
-    submodule-disable: false
-    archive-artifacts: >
-      cov-int/BUILD.metrics.xml
-      cov-int/build-log.txt
-      cov-int/build-timings.txt
-      cov-int/cov-import-scm-timings.txt
-      cov-int/coverity-scan-analysed-files.txt
-      cov-int/scm-untracked-files.txt
-      cov-int/failed_jsp/*
-      cov-int/java-security-da-input.dat
-      cov-int/java-security-da-whitelist.dat
-      cov-int/jsp-compilation-log.txt
-      cov-int/jsp-debug-log.txt
-      cov-int/security.log
+      project-type: freestyle
+      node: "{build-node}"
+      branch: master
+      build-days-to-keep: 7
+      build-timeout: 240
+      cron: "@daily"
+      disabled: false
+      dry-run: false
+      git-url: "$GIT_URL/$PROJECT"
+      java-version: openjdk8
+      mvn-global-settings: global-settings
+      mvn-opts: ""
+      mvn-params: ""
+      mvn-version: mvn35
+      coverity-project-name: ""
+      coverity-token: ""
+      coverity-user-email: ""
+      coverity-search-paths: ""
+      coverity-search-exclude-regexs: ""
+      max-git-repo-age-hours: 0
+      stream: master
+      submodule-recursive: true
+      submodule-timeout: 10
+      submodule-disable: false
+      archive-artifacts: >
+          cov-int/BUILD.metrics.xml
+          cov-int/build-log.txt
+          cov-int/build-timings.txt
+          cov-int/cov-import-scm-timings.txt
+          cov-int/coverity-scan-analysed-files.txt
+          cov-int/scm-untracked-files.txt
+          cov-int/failed_jsp/*
+          cov-int/java-security-da-input.dat
+          cov-int/java-security-da-whitelist.dat
+          cov-int/jsp-compilation-log.txt
+          cov-int/jsp-debug-log.txt
+          cov-int/security.log
 
-    properties:
-      - lf-infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+      properties:
+          - lf-infra-properties:
+                build-days-to-keep: "{build-days-to-keep}"
 
-    parameters:
-      - lf-infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          stream: '{stream}'
-      - lf-infra-maven-parameters:
-          mvn-opts: '{mvn-opts}'
-          mvn-params: '{mvn-params}'
-          mvn-version: '{mvn-version}'
-      - string:
-          name: ARCHIVE_ARTIFACTS
-          default: '{archive-artifacts}'
-          description: Artifacts to archive to the logs server.
-      - string:
-          name: SEARCH_PATHS
-          default: '{coverity-search-paths}'
-          description: >
-            Additional directories to search for files to analyse by Coverity
-            Scan service (space separated).
-      - string:
-          name: SEARCH_EXCLUDE_REGEXS
-          default: '{coverity-search-exclude-regexs}'
-          description: >
-            File path patterns to exclude from analysis by Coverity Scan
-            service (e.g. 3rd-party or auto-generated sources, space
-            separated).
-      - string:
-          name: COVERITY_USER_EMAIL
-          default: '{coverity-user-email}'
-          description: >
-            E-mail address to receive analysis status report after submittion.
-            It must be a registered user on Coverity Scan service added as a
-            member to appropriate Coverity Scan project with "Maintainer/Owner"
-            role.
-      - bool:
-          name: DRY_RUN
-          default: '{dry-run}'
-          description: Do not submit results to Coverity Scan server at the end of the build.
-      - string:
-          name: 'MAX_GIT_REPO_AGE_HOURS'
-          default: '{max-git-repo-age-hours}'
-          description: >
-            If set to non-zero run the code scan only if there were no git
-            repository commits last MAX_GIT_REPO_AGE_HOURS hours.
-            It makes sense to set the value twice the 'cron' interval for the
-            job (e.g. if 'cron: @daily', then MAX_GIT_REPO_AGE_HOURS=48)
+      parameters:
+          - lf-infra-parameters:
+                project: "{project}"
+                branch: "{branch}"
+                stream: "{stream}"
+          - lf-infra-maven-parameters:
+                mvn-opts: "{mvn-opts}"
+                mvn-params: "{mvn-params}"
+                mvn-version: "{mvn-version}"
+          - string:
+                name: ARCHIVE_ARTIFACTS
+                default: "{archive-artifacts}"
+                description: Artifacts to archive to the logs server.
+          - string:
+                name: SEARCH_PATHS
+                default: "{coverity-search-paths}"
+                description: >
+                    Additional directories to search for files to analyse by Coverity
+                    Scan service (space separated).
+          - string:
+                name: SEARCH_EXCLUDE_REGEXS
+                default: "{coverity-search-exclude-regexs}"
+                description: >
+                    File path patterns to exclude from analysis by Coverity Scan
+                    service (e.g. 3rd-party or auto-generated sources, space
+                    separated).
+          - string:
+                name: COVERITY_USER_EMAIL
+                default: "{coverity-user-email}"
+                description: >
+                    E-mail address to receive analysis status report after submittion.
+                    It must be a registered user on Coverity Scan service added as a
+                    member to appropriate Coverity Scan project with "Maintainer/Owner"
+                    role.
+          - bool:
+                name: DRY_RUN
+                default: "{dry-run}"
+                description: Do not submit results to Coverity Scan server at the end of the build.
+          - string:
+                name: "MAX_GIT_REPO_AGE_HOURS"
+                default: "{max-git-repo-age-hours}"
+                description: >
+                    If set to non-zero run the code scan only if there were no git
+                    repository commits last MAX_GIT_REPO_AGE_HOURS hours.
+                    It makes sense to set the value twice the 'cron' interval for the
+                    job (e.g. if 'cron: @daily', then MAX_GIT_REPO_AGE_HOURS=48)
 
-    triggers:
-      - timed: '{obj:cron}'
+      triggers:
+          - timed: "{obj:cron}"
 
-    wrappers:
-      - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+      wrappers:
+          - lf-infra-wrappers:
+                build-timeout: "{build-timeout}"
+                jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
-    builders:
-      - lf-infra-pre-build
-      - lf-maven-install:
-          mvn-version: '{mvn-version}'
-      - lf-update-java-alternatives:
-          java-version: '{java-version}'
-      - lf-provide-maven-settings:
-          global-settings-file: global-settings
-          settings-file: '{mvn-settings}'
-      - inject:
-          properties-content: |
-            COVERITY_PROJECT_NAME={coverity-project-name}
-            COVERITY_TOKEN={coverity-token}
-      - shell: !include-raw-escape:
-          - ../../global-jjb/shell/common-variables.sh
-          - ../../shell/maven-coverity.sh
-      - lf-provide-maven-settings-cleanup
+      builders:
+          - lf-infra-pre-build
+          - lf-maven-install:
+                mvn-version: "{mvn-version}"
+          - lf-update-java-alternatives:
+                java-version: "{java-version}"
+          - lf-provide-maven-settings:
+                global-settings-file: global-settings
+                settings-file: "{mvn-settings}"
+          - inject:
+                properties-content: |
+                    COVERITY_PROJECT_NAME={coverity-project-name}
+                    COVERITY_TOKEN={coverity-token}
+          - shell: !include-raw-escape:
+                - ../../global-jjb/shell/common-variables.sh
+                - ../../shell/maven-coverity.sh
+          - lf-provide-maven-settings-cleanup
 
-    publishers:
-      - lf-infra-publish
+      publishers:
+          - lf-infra-publish
 
-    scm:
-      - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: $GERRIT_REFSPEC
-          branch: $GERRIT_BRANCH
-          submodule-recursive: '{submodule-recursive}'
-          submodule-timeout: '{submodule-timeout}'
-          submodule-disable: '{submodule-disable}'
-          choosing-strategy: default
+      scm:
+          - lf-infra-gerrit-scm:
+                jenkins-ssh-credential: "{jenkins-ssh-credential}"
+                git-url: "{git-url}"
+                refspec: $GERRIT_REFSPEC
+                branch: $GERRIT_BRANCH
+                submodule-recursive: "{submodule-recursive}"
+                submodule-timeout: "{submodule-timeout}"
+                submodule-disable: "{submodule-disable}"
+                choosing-strategy: default

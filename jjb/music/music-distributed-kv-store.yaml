@@ -1,29 +1,28 @@
 ---
 - project:
-    name: music-distributed-kv-store
-    project-name: 'music-distributed-kv-store'
-    path: 'src/dkv'
-    jobs:
-      - '{project-name}-{stream}-verify-golang'
-      - '{project-name}-{stream}-merge-golang'
-      - '{project-name}-{stream}-docker-golang-shell-daily':
-          script:
-            !include-raw-escape: 'build-music-distributed-kv-store-image.sh'
-    project: 'music/distributed-kv-store'
-    stream:
-      - 'master':
-          branch: 'master'
-    artifact-type: 'golang'
-    mvn-settings: 'music-distributed-kv-store-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
+      name: music-distributed-kv-store
+      project-name: "music-distributed-kv-store"
+      path: "src/dkv"
+      jobs:
+          - "{project-name}-{stream}-verify-golang"
+          - "{project-name}-{stream}-merge-golang"
+          - "{project-name}-{stream}-docker-golang-shell-daily":
+                script: !include-raw-escape: "build-music-distributed-kv-store-image.sh"
+      project: "music/distributed-kv-store"
+      stream:
+          - "master":
+                branch: "master"
+      artifact-type: "golang"
+      mvn-settings: "music-distributed-kv-store-settings"
+      files: "**"
+      archive-artifacts: ""
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: music-distributed-kv-store-info
-    project-name: music-distributed-kv-store
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: music/distributed-kv-store
-    branch: master
+      name: music-distributed-kv-store-info
+      project-name: music-distributed-kv-store
+      jobs:
+          - gerrit-info-yaml-verify
+      build-node: centos8-builder-2c-1g
+      project: music/distributed-kv-store
+      branch: master

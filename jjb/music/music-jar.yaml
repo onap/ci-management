@@ -1,39 +1,38 @@
 ---
 - project:
-    name: music-jar
-    project-name: 'music'
-    subproject:
-      - 'music-jar':
-          pom: 'jar/pom.xml'
-          pattern: 'jar/**'
-    jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-version-plugin: true
-          mvn-pom: 'jar/pom.xml'
-          mvn-params: '-f jar/pom.xml'
-          pattern: 'jar/**'
-    project: 'music'
-    stream:
-      - 'jar-master':
-          branch: 'master'
-    mvn-settings: 'music-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: ubuntu1804-builder-4c-4g
-
+      name: music-jar
+      project-name: "music"
+      subproject:
+          - "music-jar":
+                pom: "jar/pom.xml"
+                pattern: "jar/**"
+      jobs:
+          - "{project-name}-{stream}-{subproject}-verify-java"
+          - "{project-name}-{stream}-{subproject}-merge-java"
+          - gerrit-maven-stage:
+                sbom-generator: true
+                sign-artifacts: true
+                build-node: centos8-docker-4c-4g
+                maven-version-plugin: true
+                mvn-pom: "jar/pom.xml"
+                mvn-params: "-f jar/pom.xml"
+                pattern: "jar/**"
+      project: "music"
+      stream:
+          - "jar-master":
+                branch: "master"
+      mvn-settings: "music-settings"
+      files: "**"
+      archive-artifacts: ""
+      build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: music-jar-clm
-    jobs:
-      - gerrit-maven-clm:
-          mvn-params: '-f jar/pom.xml'
-    nexus-iq-namespace: 'onap-'
-    project: music
-    project-name: 'music-jar'
-    branch: 'master'
-    mvn-settings: 'music-settings'
+      name: music-jar-clm
+      jobs:
+          - gerrit-maven-clm:
+                mvn-params: "-f jar/pom.xml"
+      nexus-iq-namespace: "onap-"
+      project: music
+      project-name: "music-jar"
+      branch: "master"
+      mvn-settings: "music-settings"

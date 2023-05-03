@@ -2,22 +2,22 @@
 - project:
       name: cps-ncmp-dmi-plugin-csit
       jobs:
-          - '{project-name}-review-verification-maven-{stream}':
+          - "{project-name}-review-verification-maven-{stream}":
                 mvn-goals: clean install
-                mvn-params: '-Dmaven.test.skip=true -Pdocker'
-          - '{project-name}-merge-verification-maven-{stream}':
+                mvn-params: "-Dmaven.test.skip=true -Pdocker"
+          - "{project-name}-merge-verification-maven-{stream}":
                 mvn-goals: clean install
-                mvn-params: '-Dmaven.test.skip=true -Pdocker'
-      project-name: 'cps-ncmp-dmi-plugin'
-      recipients: 'toine.siebelink@est.tech'
+                mvn-params: "-Dmaven.test.skip=true -Pdocker"
+      project-name: "cps-ncmp-dmi-plugin"
+      recipients: "toine.siebelink@est.tech"
       # project name in gerrit
-      project: 'cps/ncmp-dmi-plugin'
+      project: "cps/ncmp-dmi-plugin"
       stream:
-          - 'master':
-                branch: 'master'
-          - 'jakarta':
-                branch: 'jakarta'
-          - 'kohn':
-                branch: 'kohn'
-      mvn-settings: 'cps-ncmp-dmi-plugin-settings'
-      robot-options: ''
+          - "master":
+                branch: "master"
+          - "jakarta":
+                branch: "jakarta"
+          - "kohn":
+                branch: "kohn"
+      mvn-settings: "cps-ncmp-dmi-plugin-settings"
+      robot-options: ""
