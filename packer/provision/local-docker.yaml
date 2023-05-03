@@ -5,318 +5,346 @@
   become_user: root
   become_method: sudo
   vars:
-    apt_file: /etc/apt/sources.list.d/google-chrome.list
-    docker_compose_version: 1.29.2
-    glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
-    glide_version: v0.13.1
-    golang_version: 1.9.1
-    npm_version: "9.6.4"
+      apt_file: /etc/apt/sources.list.d/google-chrome.list
+      docker_compose_version: 1.29.2
+      # yamllint disable-line rule:line-length
+      glide_checksum: sha256:c403933503ea40308ecfadcff581ff0dc3190c57958808bb9eed016f13f6f32c
+      glide_version: v0.13.1
+      golang_version: 1.9.1
+      npm_version: "9.6.4"
 
   tasks:
-    - name: "Checking for x86_64"
-      set_fact:
-        host_arch: "amd64"
-        golang_checksum: sha256:07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7
-      when: "'x86_64' in ansible_architecture"
+      - name: "Checking for x86_64"
+        set_fact:
+            host_arch: "amd64"
+            # yamllint disable-line rule:line-length
+            golang_checksum: sha256:07d81c6b6b4c2dcf1b5ef7c27aaebd3691cdb40548500941f92b221147c5d9c7
+        when: "'x86_64' in ansible_architecture"
 
-    - name: "Checking for aarch64"
-      set_fact:
-        host_arch: "arm64"
-        golang_checksum: sha256:d31ecae36efea5197af271ccce86ccc2baf10d2e04f20d0fb75556ecf0614dad
-      when: "'aarch64' in ansible_architecture"
+      - name: "Checking for aarch64"
+        set_fact:
+            host_arch: "arm64"
+            # yamllint disable-line rule:line-length
+            golang_checksum: sha256:d31ecae36efea5197af271ccce86ccc2baf10d2e04f20d0fb75556ecf0614dad
+        when: "'aarch64' in ansible_architecture"
 
-    - name: 'Install Docker Compose {{docker_compose_version}}'
-      command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
-      become: true
+      - name: "Install Docker Compose {{docker_compose_version}}"
+        # yamllint disable-line rule:line-length
+        command: curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-Linux-x86_64"
+        become: true
 
-    - file:
-        path: /usr/local/bin/docker-compose
-        mode: "+x"
-      become: true
+      - file:
+            path: /usr/local/bin/docker-compose
+            mode: "+x"
+        become: true
 
-    - name: 'Install GoLang {{golang_version}}'
-      block:
-        - name: 'Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-          get_url:
-            url: 'https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-            dest: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-            checksum: '{{golang_checksum}}'
-        - name: 'Install golang {{golang_version}} to /usr/local'
-          unarchive:
-            src: '/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz'
-            dest: /usr/local
+      - name: "Install GoLang {{golang_version}}"
+        block:
+            # yamllint disable-line rule:line-length
+            - name: "Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+              get_url:
+                  # yamllint disable-line rule:line-length
+                  url: "https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+                  dest: "/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+                  checksum: "{{golang_checksum}}"
+            - name: "Install golang {{golang_version}} to /usr/local"
+              unarchive:
+                  src: "/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+                  dest: /usr/local
+                  remote_src: true
+              become: true
+            - name: Create symbolic link to go bin
+              file:
+                  src: "/usr/local/go/bin/go"
+                  dest: "/usr/bin/go"
+                  state: link
+              become: true
+
+      - name: Install libxml2-utils
+        apt:
+            name: libxml2-utils
+            state: present
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - apt_repository:
+            repo: ppa:deadsnakes/ppa
+            state: present
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Update and upgrade apt packages
+        apt:
+            upgrade: "yes"
+            update_cache: true
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install Python 3.6 and packages
+        apt:
+            name:
+                - python3.6
+                - python3.6-dev
+                - python3.6-tk
+                - libssl-dev
+                - libmysqlclient-dev
+                - gcc
+                - python3-venv
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install Python 3.7
+        apt:
+            name:
+                - python3.7
+                - python3.7-dev
+                - python3.7-tk
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install Python 3.8
+        apt:
+            name:
+                - python3.8
+                - python3.8-dev
+                - python3.8-tk
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install Python 3.9
+        apt:
+            name:
+                - python3.9
+                - python3.9-dev
+                - python3.9-tk
+                - python3.9-distutils
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install supporting packages (Ubuntu 18.04)
+        apt:
+            name:
+                - unzip
+                - xz-utils
+                - libxml-xpath-perl
+                - wget
+                - make
+                - sshuttle
+                - netcat
+                - libssl-dev
+                - libffi-dev
+                - xmlstarlet
+                - xvfb
+                - crudini
+                - maven
+                - python-ncclient
+            update_cache: true
+            state: fixed
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+      - name: Install supporting packages (Ubuntu 20.04)
+        apt:
+            name:
+                - unzip
+                - xz-utils
+                - libxml-xpath-perl
+                - wget
+                - make
+                - sshuttle
+                - netcat
+                - libssl-dev
+                - libffi-dev
+                - xmlstarlet
+                - xvfb
+                - crudini
+                - maven
+                - python3-ncclient
+            update_cache: true
+            state: fixed
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+
+      - name: Install nodejs
+        block:
+            - name: install nodejs prerequisites
+              apt:
+                  name:
+                      - apt-transport-https
+                      - g++
+                  update_cache: true
+                  state: present
+              become: true
+            - name: add nodejs apt key
+              apt_key:
+                  url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+                  state: present
+              become: true
+            - name: add nodejs repository
+              apt_repository:
+                  # yamllint disable-line rule:line-length
+                  repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
+                  state: present
+                  update_cache: true
+              become: true
+            - name: install nodejs
+              apt:
+                  name:
+                      - nodejs
+                  state: present
+              become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Check nodejs and npm versions
+        block:
+            - name: "Check nodejs version"
+              command: node --version
+            - name: "Check npm version"
+              command: npm --version
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install npm build tools
+        apt:
+            name: build-essential
+            update_cache: true
+            state: fixed
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: npm self-update
+        command: npm install npm@{{ npm_version }} -g
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: npm install n module
+        command: npm install n -g
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Upgrade latest stable node version
+        command: n stable | PATH="$PATH"
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Add Google Chrome key
+        apt_key:
+            url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+            state: present
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Add Google Chrome repo
+        # yamllint disable-line rule:line-length
+        copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Update apt cache
+        apt: update_cache=yes
+        become: true
+        when: ansible_distribution == 'Ubuntu'
+
+      - name: Install Google Chrome
+        apt:
+            name: google-chrome-stable
+            state: present
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Install Erlang dependency packages
+        apt:
+            name:
+                - libsctp1
+                - libwxbase3.0-0v5
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Install Erlang dependency package libwxgtk3 for 18.04
+        apt:
+            name:
+                - libwxgtk3.0-0v5
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+      - name: Install Erlang dependency package libwxgtk3 for 20.04
+        apt:
+            name:
+                - libwxgtk3.0-gtk3-0v5
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+
+      - name: Download and install libssl Ubuntu 20.04
+        apt:
+            # yamllint disable-line rule:line-length
+            deb: http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.11_amd64.deb
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+
+      - name: Install Erlang
+        apt:
+            # yamllint disable-line rule:line-length
+            deb: https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_24.1-1~ubuntu~trusty_amd64.deb
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: "Download latest rebar3 bin"
+        # yamllint disable-line rule:line-length
+        command: curl -o /usr/bin/rebar3 -L "https://s3.amazonaws.com/rebar3/rebar3"
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - file:
+            path: /usr/bin/rebar3
+            mode: "+x"
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Download geckodriver
+        unarchive:
+            # yamllint disable-line rule:line-length
+            src: https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+            dest: /usr/bin
+            mode: 0755
             remote_src: true
-          become: true
-        - name: Create symbolic link to go bin
-          file:
-            src: "/usr/local/go/bin/go"
-            dest: "/usr/bin/go"
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Download Firefox version 55.0.3
+        unarchive:
+            # yamllint disable-line rule:line-length
+            src: https://download-installer.cdn.mozilla.net/pub/firefox/releases/55.0.3/linux-x86_64/en-US/firefox-55.0.3.tar.bz2
+            dest: /opt
+            mode: 0755
+            remote_src: true
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+
+      - name: Create symbolic link to firefox bin
+        file:
+            src: "/opt/firefox/firefox"
+            dest: "/usr/bin/firefox"
             state: link
-          become: true
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
 
-    - name: Install libxml2-utils
-      apt:
-        name: libxml2-utils
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - apt_repository:
-        repo: ppa:deadsnakes/ppa
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Update and upgrade apt packages
-      apt:
-        upgrade: 'yes'
-        update_cache: yes
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install Python 3.6 and packages
-      apt:
-        name:
-          - python3.6
-          - python3.6-dev
-          - python3.6-tk
-          - libssl-dev
-          - libmysqlclient-dev
-          - gcc
-          - python3-venv
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install Python 3.7
-      apt:
-        name:
-          - python3.7
-          - python3.7-dev
-          - python3.7-tk
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install Python 3.8
-      apt:
-        name:
-          - python3.8
-          - python3.8-dev
-          - python3.8-tk
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install Python 3.9
-      apt:
-        name:
-          - python3.9
-          - python3.9-dev
-          - python3.9-tk
-          - python3.9-distutils
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install supporting packages (Ubuntu 18.04)
-      apt:
-        name:
-          - unzip
-          - xz-utils
-          - libxml-xpath-perl
-          - wget
-          - make
-          - sshuttle
-          - netcat
-          - libssl-dev
-          - libffi-dev
-          - xmlstarlet
-          - xvfb
-          - crudini
-          - maven
-          - python-ncclient
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
-    - name: Install supporting packages (Ubuntu 20.04)
-      apt:
-        name:
-          - unzip
-          - xz-utils
-          - libxml-xpath-perl
-          - wget
-          - make
-          - sshuttle
-          - netcat
-          - libssl-dev
-          - libffi-dev
-          - xmlstarlet
-          - xvfb
-          - crudini
-          - maven
-          - python3-ncclient
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
-
-    - name: Install nodejs
-      block:
-        - name: install nodejs prerequisites
-          apt:
-            name:
-              - apt-transport-https
-              - g++
-            update_cache: yes
+      - name: Install jinja2
+        pip:
+            name: jinja2
             state: present
-          become: true
-        - name: add nodejs apt key
-          apt_key:
-            url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-            state: present
-          become: true
-        - name: add nodejs repository
-          apt_repository:
-            repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
-            state: present
-            update_cache: yes
-          become: true
-        - name: install nodejs
-          apt:
-            name:
-              - nodejs
-            state: present
-          become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Check nodejs and npm versions
-      block:
-        - name: 'Check nodejs version'
-          command: node --version
-        - name: 'Check npm version'
-          command: npm --version
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install npm build tools
-      apt:
-        name: build-essential
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: npm self-update
-      command: npm install npm@{{ npm_version }} -g
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: npm install n module
-      command: npm install n -g
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Upgrade latest stable node version
-      command: n stable | PATH="$PATH"
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Add Google Chrome key
-      apt_key:
-        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
-        state: present
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Add Google Chrome repo
-      copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Update apt cache
-      apt: update_cache=yes
-      become: true
-      when: ansible_distribution == 'Ubuntu'
-
-    - name: Install Google Chrome
-      apt:
-        name: google-chrome-stable
-        state: present
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Install Erlang dependency packages
-      apt:
-        name:
-          - libsctp1
-          - libwxbase3.0-0v5
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Install Erlang dependency package libwxgtk3 for 18.04
-      apt:
-        name:
-          - libwxgtk3.0-0v5
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
-    - name: Install Erlang dependency package libwxgtk3 for 20.04
-      apt:
-        name:
-          - libwxgtk3.0-gtk3-0v5
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
-
-    - name: Download and install libssl Ubuntu 20.04
-      apt:
-        deb: http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.11_amd64.deb
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
-
-    - name: Install Erlang
-      apt:
-        deb: https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_24.1-1~ubuntu~trusty_amd64.deb
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: 'Download latest rebar3 bin'
-      command: curl -o /usr/bin/rebar3 -L "https://s3.amazonaws.com/rebar3/rebar3"
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - file:
-        path: /usr/bin/rebar3
-        mode: "+x"
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Download geckodriver
-      unarchive:
-        src: https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
-        dest: /usr/bin
-        mode: 0755
-        remote_src: yes
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Download Firefox version 55.0.3
-      unarchive:
-        src: https://download-installer.cdn.mozilla.net/pub/firefox/releases/55.0.3/linux-x86_64/en-US/firefox-55.0.3.tar.bz2
-        dest: /opt
-        mode: 0755
-        remote_src: yes
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Create symbolic link to firefox bin
-      file:
-        src: "/opt/firefox/firefox"
-        dest: "/usr/bin/firefox"
-        state: link
-      become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Install jinja2
-      pip:
-        name: jinja2
-        state: present
-      become: true
-      when: ansible_architecture == 'x86_64'
+        become: true
+        when: ansible_architecture == 'x86_64'

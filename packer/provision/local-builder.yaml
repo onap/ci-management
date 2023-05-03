@@ -6,155 +6,162 @@
   become_method: sudo
 
   tasks:
-    - apt_repository:
-        repo: ppa:deadsnakes/ppa
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - apt_repository:
+            repo: ppa:deadsnakes/ppa
+            state: present
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Update and upgrade apt packages
-      apt:
-        upgrade: 'yes'
-        update_cache: yes
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Update and upgrade apt packages
+        apt:
+            upgrade: "yes"
+            update_cache: true
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install Python 3.6 and packages
-      apt:
-        name:
-          - python3.6
-          - python3.6-dev
-          - python3.6-tk
-          - libssl-dev
-          - libmysqlclient-dev
-          - gcc
-          - python3-venv
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install Python 3.6 and packages
+        apt:
+            name:
+                - python3.6
+                - python3.6-dev
+                - python3.6-tk
+                - libssl-dev
+                - libmysqlclient-dev
+                - gcc
+                - python3-venv
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install Python 3.7
-      apt:
-        name:
-          - python3.7
-          - python3.7-dev
-          - python3.7-tk
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install Python 3.7
+        apt:
+            name:
+                - python3.7
+                - python3.7-dev
+                - python3.7-tk
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install Python 3.8
-      apt:
-        name:
-          - python3.8
-          - python3.8-dev
-          - python3.8-tk
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install Python 3.8
+        apt:
+            name:
+                - python3.8
+                - python3.8-dev
+                - python3.8-tk
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install Python 3.9
-      apt:
-        name:
-          - python3.9
-          - python3.9-dev
-          - python3.9-tk
-          - python3.9-distutils
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install Python 3.9
+        apt:
+            name:
+                - python3.9
+                - python3.9-dev
+                - python3.9-tk
+                - python3.9-distutils
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install libssl1.0-dev dep
-      apt:
-        name: libssl1.0-dev
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+      - name: Install libssl1.0-dev dep
+        apt:
+            name: libssl1.0-dev
+            update_cache: true
+            state: fixed
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
-    - name: Install supporting packages (Ubuntu 18.04)
-      apt:
-        name:
-          - unzip
-          - xz-utils
-          - libxml-xpath-perl
-          - wget
-          - make
-          - sshuttle
-          - netcat
-          - libssl-dev
-          - libffi-dev
-          - xmlstarlet
-          - xvfb
-          - crudini
-          - maven
-          - python-ncclient
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+      - name: Install supporting packages (Ubuntu 18.04)
+        apt:
+            name:
+                - unzip
+                - xz-utils
+                - libxml-xpath-perl
+                - wget
+                - make
+                - sshuttle
+                - netcat
+                - libssl-dev
+                - libffi-dev
+                - xmlstarlet
+                - xvfb
+                - crudini
+                - maven
+                - python-ncclient
+            update_cache: true
+            state: fixed
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
-    - name: Install supporting packages (Ubuntu 20.04)
-      apt:
-        name:
-          - unzip
-          - xz-utils
-          - libxml-xpath-perl
-          - wget
-          - make
-          - sshuttle
-          - netcat
-          - libssl-dev
-          - libffi-dev
-          - xmlstarlet
-          - xvfb
-          - crudini
-          - maven
-          - python3-ncclient
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+      - name: Install supporting packages (Ubuntu 20.04)
+        apt:
+            name:
+                - unzip
+                - xz-utils
+                - libxml-xpath-perl
+                - wget
+                - make
+                - sshuttle
+                - netcat
+                - libssl-dev
+                - libffi-dev
+                - xmlstarlet
+                - xvfb
+                - crudini
+                - maven
+                - python3-ncclient
+            update_cache: true
+            state: fixed
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-    - name: Install nodejs and npm
-      block:
-        - name: 'Pull latest nodejs version'
-          shell: |
-            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
-          become: yes
-        - name: 'Check nodejs version'
-          command: node --version
-        - name: 'Check npm version'
-          command: npm --version
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install nodejs and npm
+        block:
+            - name: "Pull latest nodejs version"
+              # yamllint disable rule:line-length
+              shell: |
+                  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
+              # yamllint enable
+              become: true
+            - name: "Check nodejs version"
+              command: node --version
+            - name: "Check npm version"
+              command: npm --version
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install npm build tools
-      apt:
-        name: build-essential
-        update_cache: yes
-        state: fixed
-      become: true
-      when: ansible_distribution == 'Ubuntu'
+      - name: Install npm build tools
+        apt:
+            name: build-essential
+            update_cache: true
+            state: fixed
+        become: true
+        when: ansible_distribution == 'Ubuntu'
 
-    - name: Install enchant2 package for Ubuntu 20.04
-      apt:
-        name:
-          - enchant-2
-        update_cache: yes
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+      - name: Install enchant2 package for Ubuntu 20.04
+        apt:
+            name:
+                - enchant-2
+            update_cache: true
+            state: present
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-    - name: Install enchant package for Ubuntu 18.04
-      apt:
-        name:
-          - enchant
-        update_cache: yes
-        state: present
-      become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+      - name: Install enchant package for Ubuntu 18.04
+        apt:
+            name:
+                - enchant
+            update_cache: true
+            state: present
+        become: true
+        # yamllint disable-line rule:line-length
+        when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
-    - name: Install enchant2 package for CentOS
-      dnf:
-        name:
-          - enchant2
-        update_cache: yes
-        state: present
-      become: true
-      when: ansible_distribution == 'CentOS'
+      - name: Install enchant2 package for CentOS
+        dnf:
+            name:
+                - enchant2
+            update_cache: true
+            state: present
+        become: true
+        when: ansible_distribution == 'CentOS'

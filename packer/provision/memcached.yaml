@@ -6,8 +6,8 @@
   become_method: sudo
 
   tasks:
-    - name: 'Install Memcached'
-      package:
-        name: memcached
-        state: present
-      become: true
+      - name: "Install Memcached"
+        package:
+            name: memcached
+            state: present
+        become: true

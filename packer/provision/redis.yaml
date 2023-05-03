@@ -6,29 +6,29 @@
   become_method: sudo
 
   tasks:
-    - name: 'Install Redis'
-      package:
-        name: redis
-        state: present
-      become: true
+      - name: "Install Redis"
+        package:
+            name: redis
+            state: present
+        become: true
 
-    - name: 'Enable service redis'
-      service:
-        name: redis
-        enabled: yes
-      become: true
+      - name: "Enable service redis"
+        service:
+            name: redis
+            enabled: true
+        become: true
 
-    - name: 'Start service redis'
-      service:
-        name: redis
-        state: started
-      become: true
+      - name: "Start service redis"
+        service:
+            name: redis
+            state: started
+        become: true
 
-    - name: Install Python 3.6
-      yum:
-        name:
-          - epel-release
-          - python36
-        update_cache: yes
-        state: latest
-      become: true
+      - name: Install Python 3.6
+        yum:
+            name:
+                - epel-release
+                - python36
+            update_cache: true
+            state: latest
+        become: true
