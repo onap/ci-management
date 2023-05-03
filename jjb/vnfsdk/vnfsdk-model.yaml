@@ -1,7 +1,7 @@
 ---
 - project:
     name: vnfsdk-model
-    project: 'vnfsdk/model'
+    project: "vnfsdk/model"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g

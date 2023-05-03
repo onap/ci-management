@@ -1,25 +1,25 @@
 ---
 - project:
     name: vnfsdk-validation
-    project-name: 'vnfsdk-validation'
+    project-name: "vnfsdk-validation"
     jobs:
-    - '{project-name}-{stream}-verify-java'
-    - '{project-name}-{stream}-merge-java'
-    - gerrit-maven-stage:
-        sbom-generator: true
-        sign-artifacts: true
-        build-node: centos8-docker-4c-4g
-        maven-versions-plugin: true
-    - '{project-name}-gerrit-release-jobs':
-        build-node: centos7-docker-2c-1g
-    project: 'vnfsdk/validation'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+    project: "vnfsdk/validation"
     stream:
-        - 'master':
-            branch: 'master'
-            java-version: openjdk11
-    mvn-settings: 'vnfsdk-validation-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+          java-version: openjdk11
+    mvn-settings: "vnfsdk-validation-settings"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -28,55 +28,55 @@
       - gerrit-maven-sonar
     java-version: openjdk11
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'vnfsdk/validation'
-    project-name: 'vnfsdk-validation'
-    branch: 'master'
-    mvn-settings: 'vnfsdk-validation-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vnfsdk/validation"
+    project-name: "vnfsdk-validation"
+    branch: "master"
+    mvn-settings: "vnfsdk-validation-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vnfsdk-validation-info
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project: 'vnfsdk/validation'
-    project-name: 'vnfsdk-validation'
-    branch: 'master'
+    project: "vnfsdk/validation"
+    project-name: "vnfsdk-validation"
+    branch: "master"
 
 - project:
     name: vnfsdk-validation-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: vnfsdk/validation
-    project-name: 'vnfsdk-validation'
+    project-name: "vnfsdk-validation"
     build-node: ubuntu1804-builder-4c-4g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vnfsdk-validation-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vnfsdk-validation-settings"
 
 - project:
-      name: vnfsdk-validation-upload-docs
-      project: 'vnfsdk/validation'
-      project-name: 'vnfsdk-requirements'
-      mvn-settings: 'vnfsdk-validation-settings'
-      mvn-global-settings: 'global-settings'
-      stream:
-          - 'master':
-                branch: 'master'
-      jobs:
-          - '{project-name}-{stream}-build-and-upload':
-                pre_script: !include-raw-escape: ./generate-dosc.sh
-                project_id: org.onap.vnfsdk.validation
-                post_script: !include-raw-escape: ./upload-artifact.sh
+    name: vnfsdk-validation-upload-docs
+    project: "vnfsdk/validation"
+    project-name: "vnfsdk-requirements"
+    mvn-settings: "vnfsdk-validation-settings"
+    mvn-global-settings: "global-settings"
+    stream:
+      - "master":
+          branch: "master"
+    jobs:
+      - "{project-name}-{stream}-build-and-upload":
+          pre_script: !include-raw-escape: ./generate-dosc.sh
+          project_id: org.onap.vnfsdk.validation
+          post_script: !include-raw-escape: ./upload-artifact.sh
 
 - project:
     name: vnfsdk-validation-sonar-verify
@@ -86,13 +86,13 @@
     jobs:
       - gerrit-maven-sonar-verify
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: centos8-docker-8c-8g
-    project: 'vnfsdk/validation'
-    project-name: 'vnfsdk-validation'
-    branch: 'master'
-    mvn-settings: 'vnfsdk-validation-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vnfsdk/validation"
+    project-name: "vnfsdk-validation"
+    branch: "master"
+    mvn-settings: "vnfsdk-validation-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"

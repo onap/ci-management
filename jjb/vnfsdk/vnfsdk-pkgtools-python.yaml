@@ -1,43 +1,43 @@
 ---
 - project:
     name: vnfsdk-pkgtools
-    project-name: 'vnfsdk-pkgtools'
+    project-name: "vnfsdk-pkgtools"
     python-version: python3
-    tox-dir: '.'
-    tox-envs: ''
+    tox-dir: "."
+    tox-envs: ""
     subproject:
       - pkgtools:
-          path: '.'
-          pattern: '**'
-    project: 'vnfsdk/pkgtools'
+          path: "."
+          pattern: "**"
+    project: "vnfsdk/pkgtools"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vnfsdk-pkgtools-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vnfsdk-pkgtools-settings"
     build-node: ubuntu1804-builder-4c-4g
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
-      - '{project-name}-{subproject}-python-staging-{stream}'
-      - '{project-name}-{subproject}-python-release-{stream}'
+      - "{project-name}-{stream}-{subproject}-verify-python"
+      - "{project-name}-{subproject}-python-staging-{stream}"
+      - "{project-name}-{subproject}-python-release-{stream}"
 
 - project:
     name: vnfsdk-pkgtools-tox-sonar
     jobs:
       - gerrit-tox-sonar
-    cron: '@daily'
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'vnfsdk/pkgtools'
-    project-name: 'vnfsdk-pkgtools'
-    branch: 'master'
-    mvn-settings: 'vnfsdk-pkgtools-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vnfsdk/pkgtools"
+    project-name: "vnfsdk-pkgtools"
+    branch: "master"
+    mvn-settings: "vnfsdk-pkgtools-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vnfsdk-pkgtools-info
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project: 'vnfsdk/pkgtools'
-    project-name: 'vnfsdk-pkgtools'
-    branch: 'master'
+    project: "vnfsdk/pkgtools"
+    project-name: "vnfsdk-pkgtools"
+    branch: "master"
