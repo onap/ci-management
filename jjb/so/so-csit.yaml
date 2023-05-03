@@ -3,22 +3,22 @@
     name: so-csit
     java-version: openjdk11
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'so'
-    recipients: 'seshu.kumar.m@huawei.com'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "so"
+    recipients: "seshu.kumar.m@huawei.com"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
           java-version: openjdk11
-      - 'Custom_Workflow':
-          branch: 'Custom_Workflow'
+      - "Custom_Workflow":
+          branch: "Custom_Workflow"
           java-version: openjdk11
     functionality:
-      - 'integration-etsi-testing':
+      - "integration-etsi-testing":
           trigger_jobs:
-      - 'macroflow':
+      - "macroflow":
           trigger_jobs:
-      - 'integration-cnfm-testing':
+      - "integration-cnfm-testing":
           trigger_jobs:
-    robot-options: ''
+    robot-options: ""
