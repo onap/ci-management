@@ -1,10 +1,10 @@
 ---
 - project:
     name: vnfrqts-guidelines
-    project: 'vnfrqts/guidelines'
+    project: "vnfrqts/guidelines"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project-name: 'vnfrqts-guidelines'
-    branch: 'master'
-    mvn-settings: 'vnfrqts-guidelines-settings'
+    project-name: "vnfrqts-guidelines"
+    branch: "master"
+    mvn-settings: "vnfrqts-guidelines-settings"

@@ -1,10 +1,10 @@
 ---
 - project:
     name: vnfrqts-testcases
-    project: 'vnfrqts/testcases'
+    project: "vnfrqts/testcases"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project-name: 'vnfrqts-testcases'
-    branch: 'master'
-    mvn-settings: 'vnfrqts-testcases-settings'
+    project-name: "vnfrqts-testcases"
+    branch: "master"
+    mvn-settings: "vnfrqts-testcases-settings"

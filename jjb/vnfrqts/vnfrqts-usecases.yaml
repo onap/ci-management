@@ -1,10 +1,10 @@
 ---
 - project:
     name: vnfrqts-usecases
-    project: 'vnfrqts/usecases'
+    project: "vnfrqts/usecases"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project-name: 'vnfrqts-usecases'
-    branch: 'master'
-    mvn-settings: 'vnfrqts-usecases-settings'
+    project-name: "vnfrqts-usecases"
+    branch: "master"
+    mvn-settings: "vnfrqts-usecases-settings"

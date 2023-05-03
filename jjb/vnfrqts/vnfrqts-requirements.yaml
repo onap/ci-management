@@ -1,25 +1,25 @@
 ---
 - project:
     name: vnfrqts-requirements
-    project: 'vnfrqts/requirements'
+    project: "vnfrqts/requirements"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project-name: 'vnfrqts-requirements'
-    branch: 'master'
-    mvn-settings: 'vnfrqts-requirements-settings'
+    project-name: "vnfrqts-requirements"
+    branch: "master"
+    mvn-settings: "vnfrqts-requirements-settings"
 
 - project:
     name: vnfrqts-requirements-upload-json
-    project: 'vnfrqts/requirements'
-    project-name: 'vnfrqts-requirements'
-    mvn-settings: 'vnfrqts-requirements-settings'
-    mvn-global-settings: 'global-settings'
+    project: "vnfrqts/requirements"
+    project-name: "vnfrqts-requirements"
+    mvn-settings: "vnfrqts-requirements-settings"
+    mvn-global-settings: "global-settings"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     jobs:
-      - '{project-name}-{stream}-build-and-upload':
+      - "{project-name}-{stream}-build-and-upload":
           pre_script: !include-raw-escape: pre-build-needs.sh
           artifact_name: needs.json
           project_id: org.onap.vnfrqts.requirements
