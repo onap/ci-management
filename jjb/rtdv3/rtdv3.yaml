@@ -40,4 +40,4 @@
           build-timeout: 30
     stream:
       - master:
-          branch: '*'
+          branch: "*"
