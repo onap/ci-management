@@ -36,7 +36,6 @@ Jenkins configurations to Sandbox environment, you must raise a ticket to
     - [Modify an Existing Job](#modify-an-existing-job)
   - [More online documentation](#more-online-documentation)
 
-
 ## Setup
 
 To download **ci-management**, execute the following command to clone the
@@ -93,7 +92,9 @@ password= <Refer below steps to get API token>
 url=https://jenkins.onap.org/sandbox
 query_plugins_info=False
 ```
+
 ### Retrieve username and API token
+
 Login to the [Jenkins Sandbox](https://jenkins.onap.org/sandbox/), go to your user
 page by clicking on your username - `Jenkins User ID` on this page is your Jenkins
 Sandbox username. Click **Configure** and then click **Add new Token**.
@@ -103,7 +104,7 @@ new token. Please note down your token and store it securely.
 ## Working with jobs
 
 To work on existing jobs or create new jobs, navigate to the `ci-management/jjb/` directory where you
-will find all job templates for the project.  Follow the below commands to test,
+will find all job templates for the project. Follow the below commands to test,
 update or delete jobs in your sandbox environment.
 
 ### Test a Job
