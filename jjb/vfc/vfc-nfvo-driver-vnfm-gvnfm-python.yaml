@@ -1,17 +1,16 @@
 ---
-
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-python
-    project-name: 'vfc-nfvo-driver-vnfm-gvnfm'
-    project: 'vfc/nfvo/driver/vnfm/gvnfm'
+    project-name: "vfc-nfvo-driver-vnfm-gvnfm"
+    project: "vfc/nfvo/driver/vnfm/gvnfm"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-gvnfm-settings"
     build-node: ubuntu1804-builder-4c-4g
     subproject:
-      - 'gvnfmadapter':
-          path: 'gvnfmadapter'
-          pattern: 'gvnfmadapter/**'
+      - "gvnfmadapter":
+          path: "gvnfmadapter"
+          pattern: "gvnfmadapter/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - "{project-name}-{stream}-{subproject}-verify-python"

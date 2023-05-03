@@ -1,37 +1,35 @@
 ---
-
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-java
-    project-name: 'vfc-nfvo-driver-vnfm-gvnfm'
-    project: 'vfc/nfvo/driver/vnfm/gvnfm'
+    project-name: "vfc-nfvo-driver-vnfm-gvnfm"
+    project: "vfc/nfvo/driver/vnfm/gvnfm"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-gvnfm-settings"
     subproject:
-      - 'gvnfmadapter':
-          pom: 'gvnfmadapter/pom.xml'
-          pattern: 'gvnfmadapter/**'
+      - "gvnfmadapter":
+          pom: "gvnfmadapter/pom.xml"
+          pattern: "gvnfmadapter/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - "{project-name}-{stream}-{subproject}-verify-java"
+      - "{project-name}-{stream}-{subproject}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-pom: 'gvnfmadapter/pom.xml'
-          mvn-params: '-f gvnfmadapter/pom.xml'
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-gvnfm-driver-docker-image.sh'
+          mvn-pom: "gvnfmadapter/pom.xml"
+          mvn-params: "-f gvnfmadapter/pom.xml"
+      - "{project-name}-{stream}-docker-java-version-shell-daily":
+          docker-pom: "pom.xml"
+          mvn-goals: "install"
+          script: !include-raw-escape: "build-gvnfm-driver-docker-image.sh"
           build-node: ubuntu1804-docker-8c-8g
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -39,29 +37,29 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
-    cron: '@daily'
-    mvn-params: '-f gvnfmadapter/pom.xml'
+    cron: "@daily"
+    mvn-params: "-f gvnfmadapter/pom.xml"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'vfc/nfvo/driver/vnfm/gvnfm'
-    project-name: 'vfc-nfvo-driver-vnfm-gvnfm-gvnfmadapter'
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vfc/nfvo/driver/vnfm/gvnfm"
+    project-name: "vfc-nfvo-driver-vnfm-gvnfm-gvnfmadapter"
+    branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-gvnfm-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-java-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: vfc/nfvo/driver/vnfm/gvnfm
-    project-name: 'vfc-nfvo-driver-vnfm-gvnfm'
+    project-name: "vfc-nfvo-driver-vnfm-gvnfm"
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-gvnfm-settings'
+    branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-gvnfm-settings"
 
 - project:
     name: vfc-nfvo-driver-vnfm-gvnfm-info

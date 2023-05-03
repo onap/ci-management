@@ -1,30 +1,28 @@
 ---
 - project:
     name: vfc-nfvo-db
-    project: 'vfc/nfvo/db'
-    project-name: 'vfc-nfvo-db'
-    mvn-settings: 'vfc-nfvo-db-settings'
+    project: "vfc/nfvo/db"
+    project-name: "vfc-nfvo-db"
+    mvn-settings: "vfc-nfvo-db-settings"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     build-node: ubuntu1804-builder-4c-4g
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-nfvo-db-docker-image.sh'
+      - "{project-name}-{stream}-docker-java-version-shell-daily":
+          docker-pom: "pom.xml"
+          mvn-goals: "install"
+          script: !include-raw-escape: "build-nfvo-db-docker-image.sh"
           build-node: ubuntu1804-docker-8c-8g
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-
 
 - project:
     name: vfc-nfvo-db-info

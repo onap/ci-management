@@ -1,17 +1,16 @@
 ---
-
 - project:
     name: vfc-gvnfm-vnfmgr
-    project-name: 'vfc-gvnfm-vnfmgr'
-    project: 'vfc/gvnfm/vnfmgr'
+    project-name: "vfc-gvnfm-vnfmgr"
+    project: "vfc/gvnfm/vnfmgr"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-gvnfm-vnfmgr-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vfc-gvnfm-vnfmgr-settings"
     build-node: ubuntu1804-builder-4c-4g
     subproject:
-      - 'mgr':
-          path: 'mgr'
-          pattern: 'mgr/**'
+      - "mgr":
+          path: "mgr"
+          pattern: "mgr/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - "{project-name}-{stream}-{subproject}-verify-python"

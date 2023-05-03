@@ -1,31 +1,31 @@
 ---
 - project:
     name: vfc-nfvo-driver-svnfm-huawei
-    project-name: 'vfc-nfvo-driver-svnfm-huawei'
+    project-name: "vfc-nfvo-driver-svnfm-huawei"
     java-version: openjdk11
-    project: 'vfc/nfvo/driver/vnfm/svnfm'
+    project: "vfc/nfvo/driver/vnfm/svnfm"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-svnfm-settings"
     subproject:
-      - 'drv-vnfm-huawei':
-          pom: 'huawei/pom.xml'
-          pattern: 'huawei/**'
+      - "drv-vnfm-huawei":
+          pom: "huawei/pom.xml"
+          pattern: "huawei/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - "{project-name}-{stream}-{subproject}-verify-java"
+      - "{project-name}-{stream}-{subproject}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-pom: 'huawei/pom.xml'
-          mvn-params: '-f huawei/pom.xml'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-pom: "huawei/pom.xml"
+          mvn-params: "-f huawei/pom.xml"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -34,31 +34,31 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
-    cron: '@daily'
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    mvn-params: '-f huawei/pom.xml'
-    project: 'vfc/nfvo/driver/vnfm/svnfm'
-    project-name: 'vfc-nfvo-driver-svnfm-huawei'
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-params: "-f huawei/pom.xml"
+    project: "vfc/nfvo/driver/vnfm/svnfm"
+    project-name: "vfc-nfvo-driver-svnfm-huawei"
+    branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-svnfm-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vfc-nfvo-driver-svnfm-huawei-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm:
-          mvn-params: '-f huawei/pom.xml'
-    nexus-iq-namespace: 'onap-'
+          mvn-params: "-f huawei/pom.xml"
+    nexus-iq-namespace: "onap-"
     project: vfc/nfvo/driver/vnfm/svnfm
-    project-name: 'vfc-nfvo-driver-svnfm-huawei'
+    project-name: "vfc-nfvo-driver-svnfm-huawei"
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
-    mvn-settings: 'vfc-nfvo-driver-vnfm-svnfm-settings'
+    branch: "master"
+    mvn-settings: "vfc-nfvo-driver-vnfm-svnfm-settings"
 
 - project:
     name: vfc-nfvo-driver-svnfm-huawei-info

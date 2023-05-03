@@ -1,35 +1,33 @@
 ---
-
 - project:
     name: vfc-gvnfm-vnfres-java
-    project-name: 'vfc-gvnfm-vnfres'
-    project: 'vfc/gvnfm/vnfres'
+    project-name: "vfc-gvnfm-vnfres"
+    project: "vfc/gvnfm/vnfres"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "vfc-gvnfm-vnfres-settings"
     subproject:
-      - 'res':
-          pom: 'res/pom.xml'
-          pattern: 'res/**'
+      - "res":
+          pom: "res/pom.xml"
+          pattern: "res/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-java'
-      - '{project-name}-{stream}-{subproject}-merge-java'
+      - "{project-name}-{stream}-{subproject}-verify-java"
+      - "{project-name}-{stream}-{subproject}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-docker-java-version-shell-daily':
-          docker-pom: 'pom.xml'
-          mvn-goals: 'install'
-          script:
-            !include-raw-escape: 'build-gvnfm-vnfres-docker-image.sh'
+      - "{project-name}-{stream}-docker-java-version-shell-daily":
+          docker-pom: "pom.xml"
+          mvn-goals: "install"
+          script: !include-raw-escape: "build-gvnfm-vnfres-docker-image.sh"
           build-node: ubuntu1804-docker-8c-8g
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -37,29 +35,29 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar"
-    cron: '@daily'
-    mvn-params: '-f res/pom.xml'
+    cron: "@daily"
+    mvn-params: "-f res/pom.xml"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'vfc/gvnfm/vnfres'
-    project-name: 'vfc-gvnfm-vnfres-res'
-    branch: 'master'
-    mvn-settings: 'vfc-gvnfm-vnfres-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "vfc/gvnfm/vnfres"
+    project-name: "vfc-gvnfm-vnfres-res"
+    branch: "master"
+    mvn-settings: "vfc-gvnfm-vnfres-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: vfc-gvnfm-vnfres-java-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: vfc/gvnfm/vnfres
-    project-name: 'vfc-gvnfm-vnfres'
+    project-name: "vfc-gvnfm-vnfres"
     build-node: ubuntu1804-builder-4c-4g
-    branch: 'master'
-    mvn-settings: 'vfc-gvnfm-vnfres-settings'
+    branch: "master"
+    mvn-settings: "vfc-gvnfm-vnfres-settings"
 
 - project:
     name: vfc-gvnfm-vnfres-info
