@@ -7,85 +7,85 @@
 
 - project:
     name: sdc-sdc-distribution-client
-    project-name: 'sdc-sdc-distribution-client'
+    project-name: "sdc-sdc-distribution-client"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'sdc/sdc-distribution-client'
+    project: "sdc/sdc-distribution-client"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
           java-version: openjdk11
-      - 'jakarta':
-          branch: 'jakarta'
+      - "jakarta":
+          branch: "jakarta"
           java-version: openjdk11
-      - 'kohn':
-          branch: 'kohn'
+      - "kohn":
+          branch: "kohn"
           java-version: openjdk11
-    mvn-settings: 'sdc-sdc-distribution-client-settings'
-    files: '**'
-    archive-artifacts: ''
+    mvn-settings: "sdc-sdc-distribution-client-settings"
+    files: "**"
+    archive-artifacts: ""
     build-timeout: 60
-    maven-version: 'mvn36'
+    maven-version: "mvn36"
 
 - project:
     name: sdc-sdc-distribution-client-integration-pairwise
     java-version: openjdk11
     jobs:
-       - '{project-name}-{stream}-integration-pairwise'
+      - "{project-name}-{stream}-integration-pairwise"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'sdc/sdc-distribution-client'
-    project-name: 'sdc-sdc-distribution-client'
+    project: "sdc/sdc-distribution-client"
+    project-name: "sdc-sdc-distribution-client"
     stream:
-        - 'master':
-            branch: 'master'
-            java-version: openjdk11
+      - "master":
+          branch: "master"
+          java-version: openjdk11
 
-    mvn-settings: 'sdc-sdc-distribution-client-settings'
-    files: '**'
-    archive-artifacts: ''
+    mvn-settings: "sdc-sdc-distribution-client-settings"
+    files: "**"
+    archive-artifacts: ""
     build-timeout: 60
-    maven-version: 'mvn36'
-    mvn-params: ' -P integration-pairwise'
+    maven-version: "mvn36"
+    mvn-params: " -P integration-pairwise"
 
 - project:
     name: sdc-sdc-distribution-client-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'sdc/sdc-distribution-client'
-    project-name: 'sdc-sdc-distribution-client'
-    branch: 'master'
-    mvn-settings: 'sdc-sdc-distribution-client-settings'
+    project: "sdc/sdc-distribution-client"
+    project-name: "sdc-sdc-distribution-client"
+    branch: "master"
+    mvn-settings: "sdc-sdc-distribution-client-settings"
     java-version: openjdk11
-    mvn-params: '-Dsonar.branch={branch}'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
+    mvn-params: "-Dsonar.branch={branch}"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m"
 
 - project:
     name: sdc-sdc-distribution-client-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: sdc/sdc-distribution-client
-    project-name: 'sdc-sdc-distribution-client'
+    project-name: "sdc-sdc-distribution-client"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdc-sdc-distribution-client-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-sdc-distribution-client-settings"
     java-version: openjdk11
 
 - project:

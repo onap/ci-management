@@ -1,16 +1,16 @@
 ---
 - project:
-      name: sdc-sdc-helm-validator-csit
-      jobs:
-          - "{project-name}-{stream}-verify-csit-{functionality}"
-          - "{project-name}-{stream}-csit-{functionality}"
-      project-name: "sdc"
-      stream:
-          - "master":
-                branch: "master"
-          - "kohn":
-                branch: "kohn"
-      functionality:
-          - "sdc-helm-validator":
-                trigger_jobs:
-      robot-options: ""
+    name: sdc-sdc-helm-validator-csit
+    jobs:
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "sdc"
+    stream:
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+    functionality:
+      - "sdc-helm-validator":
+          trigger_jobs:
+    robot-options: ""

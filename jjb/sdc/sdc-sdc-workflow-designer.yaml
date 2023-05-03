@@ -8,10 +8,10 @@
 
 - project:
     name: sdc-sdc-workflow-designer
-    project-name: 'sdc-sdc-workflow-designer'
+    project-name: "sdc-sdc-workflow-designer"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
@@ -21,60 +21,60 @@
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
     java-version: openjdk11
 
-    project: 'sdc/sdc-workflow-designer'
+    project: "sdc/sdc-workflow-designer"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'sdc-sdc-workflow-designer-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "sdc-sdc-workflow-designer-settings"
+    files: "**"
+    archive-artifacts: ""
+    docker-pom: "pom.xml"
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
-    maven-version: 'mvn36'
+    maven-version: "mvn36"
 
 - project:
     name: sdc-sdc-workflow-designer-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'sdc/sdc-workflow-designer'
-    project-name: 'sdc-sdc-workflow-designer'
-    branch: 'master'
-    mvn-settings: 'sdc-sdc-workflow-designer-settings'
-    mvn-params: '-Djacoco.skip=false -Dsonar.branch={branch}'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
+    project: "sdc/sdc-workflow-designer"
+    project-name: "sdc-sdc-workflow-designer"
+    branch: "master"
+    mvn-settings: "sdc-sdc-workflow-designer-settings"
+    mvn-params: "-Djacoco.skip=false -Dsonar.branch={branch}"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m"
     java-version: openjdk11
 
 - project:
     name: sdc-sdc-workflow-designer-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: sdc/sdc-workflow-designer
-    project-name: 'sdc-sdc-workflow-designer'
+    project-name: "sdc-sdc-workflow-designer"
     build-node: ubuntu1804-builder-4c-4g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdc-sdc-workflow-designer-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-sdc-workflow-designer-settings"
     java-version: openjdk11
 
 - project:

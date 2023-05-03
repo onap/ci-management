@@ -1,47 +1,47 @@
 ---
 - project:
     name: sdc-sdc-pubsub-info
-    project-name: 'sdc-sdc-pubsub'
+    project-name: "sdc-sdc-pubsub"
     jobs:
       - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g
-    project: 'sdc/sdc-pubsub'
-    branch: 'master'
+    project: "sdc/sdc-pubsub"
+    branch: "master"
 
 - project:
     name: sdc-sdc-pubsub
-    project-name: 'sdc-sdc-pubsub'
+    project-name: "sdc-sdc-pubsub"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
-    project: 'sdc/sdc-pubsub'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+    project: "sdc/sdc-pubsub"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'sdc-sdc-pubsub-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "sdc-sdc-pubsub-settings"
+    files: "**"
+    archive-artifacts: ""
     build-timeout: 60
-    maven-version: 'mvn36'
+    maven-version: "mvn36"
 
 - project:
     name: sdc-sdc-pubsub-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'sdc/sdc-pubsub'
-    project-name: 'sdc-sdc-pubsub'
-    branch: 'master'
-    mvn-settings: 'sdc-sdc-pubsub-settings'
-    mvn-params: '-Dsonar.branch={branch}'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
+    project: "sdc/sdc-pubsub"
+    project-name: "sdc-sdc-pubsub"
+    branch: "master"
+    mvn-settings: "sdc-sdc-pubsub-settings"
+    mvn-params: "-Dsonar.branch={branch}"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m"

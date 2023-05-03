@@ -1,31 +1,32 @@
 ---
 - project:
-      name: sdc-csit
-      jobs:
-          - '{project-name}-{stream}-verify-java':
-                # this build is integration test only - CSIT (Verify 2/2)
-                mvn-goals: clean install
-                mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only,integration-tests-with-helm-validator'
-                build-node: 'ubuntu1804-docker-8c-16g'
-                archive-artifacts: >
-                    **/*.log
-                    **/hs_err_*.log
-                    **/target/**/feature.xml
-                    **/target/failsafe-reports/failsafe-summary.xml
-                    integration-tests/target/ExtentReport/API/*.html
-                    integration-tests/target/ExtentReport/UI/*.html
-                    integration-tests/target/ExtentReport/UI/screenshots/*.png
-      project-name: 'sdc-integration-tests'
-      # project name in gerrit
-      project: 'sdc'
-      stream:
-          - 'master':
-                branch: 'master'
-          - 'jakarta':
-                branch: 'jakarta'
-          - 'kohn':
-                branch: 'kohn'
-      java-version: openjdk11
-      maven-version: 'mvn36'
-      mvn-settings: 'sdc-settings'
-      mvn-global-settings: global-settings
+    name: sdc-csit
+    jobs:
+      - "{project-name}-{stream}-verify-java":
+          # this build is integration test only - CSIT (Verify 2/2)
+          mvn-goals: clean install
+          # yamllint disable-line rule:line-length
+          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,all-for-integration-tests-only,integration-tests-with-helm-validator"
+          build-node: "ubuntu1804-docker-8c-16g"
+          archive-artifacts: >
+            **/*.log
+            **/hs_err_*.log
+            **/target/**/feature.xml
+            **/target/failsafe-reports/failsafe-summary.xml
+            integration-tests/target/ExtentReport/API/*.html
+            integration-tests/target/ExtentReport/UI/*.html
+            integration-tests/target/ExtentReport/UI/screenshots/*.png
+    project-name: "sdc-integration-tests"
+    # project name in gerrit
+    project: "sdc"
+    stream:
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+      - "kohn":
+          branch: "kohn"
+    java-version: openjdk11
+    maven-version: "mvn36"
+    mvn-settings: "sdc-settings"
+    mvn-global-settings: global-settings

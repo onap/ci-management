@@ -25,62 +25,63 @@
 
 - project:
     name: sdc
-    project-name: 'sdc'
+    project-name: "sdc"
     jobs:
-      - '{project-name}-{stream}-verify-java':
+      - "{project-name}-{stream}-verify-java":
           # this build is unit test only (Verify 1/2)
-          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
-          build-node: 'ubuntu1804-docker-8c-8g'
-      - '{project-name}-{stream}-sdc-merge-java':
-          build-node: 'ubuntu1804-docker-8c-16g'
-          docker-pom: 'pom.xml'
-          mvn-profile: 'docker'
-          mvn-params: '-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -P integration-tests-with-helm-validator'
+          mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
+          build-node: "ubuntu1804-docker-8c-8g"
+      - "{project-name}-{stream}-sdc-merge-java":
+          build-node: "ubuntu1804-docker-8c-16g"
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
+          # yamllint disable-line rule:line-length
+          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -P integration-tests-with-helm-validator"
           # running everything (unit tests and integration tests in a single job for merge, as we don't need // run
           # for merge, but still saving integration tests results and report.
           archive-artifacts: >
-              **/*.log
-              **/hs_err_*.log
-              **/target/**/feature.xml
-              **/target/failsafe-reports/failsafe-summary.xml
-              integration-tests/target/ExtentReport/API/*.html
-              integration-tests/target/ExtentReport/UI/*.html
-              integration-tests/target/ExtentReport/UI/screenshots/*.png
+            **/*.log
+            **/hs_err_*.log
+            **/target/**/feature.xml
+            **/target/failsafe-reports/failsafe-summary.xml
+            integration-tests/target/ExtentReport/API/*.html
+            integration-tests/target/ExtentReport/UI/*.html
+            integration-tests/target/ExtentReport/UI/screenshots/*.png
       - gerrit-maven-stage:
           build-timeout: 90
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          mvn-version: 'mvn36'
-          mvn-params: '-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
+          mvn-version: "mvn36"
+          mvn-params: "-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
-          mvn-params: '-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
-          mvn-version: 'mvn36'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
+          mvn-version: "mvn36"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'sdc'
+    project: "sdc"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
           java-version: openjdk11
-      - 'jakarta':
-          branch: 'jakarta'
+      - "jakarta":
+          branch: "jakarta"
           java-version: openjdk11
-      - 'kohn':
-          branch: 'kohn'
+      - "kohn":
+          branch: "kohn"
           java-version: openjdk11
-    mvn-settings: 'sdc-settings'
-    files: '**'
-    archive-artifacts: ''
+    mvn-settings: "sdc-settings"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
-    maven-version: 'mvn36'
+    maven-version: "mvn36"
 
 - project:
     name: sdc-sonar
@@ -88,20 +89,20 @@
       - gerrit-maven-sonar:
           build-timeout: 120
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-16g
-    project: 'sdc'
-    project-name: 'sdc'
-    branch: 'master'
-    mvn-settings: 'sdc-settings'
+    project: "sdc"
+    project-name: "sdc"
+    branch: "master"
+    mvn-settings: "sdc-settings"
     java-version: openjdk11
-    mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
-    mvn-version: 'mvn36'
+    mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m"
+    mvn-version: "mvn36"
 
 - project:
     name: sdc-clm
@@ -109,16 +110,16 @@
       - gerrit-maven-clm:
           build-timeout: 120
           submodule-timeout: 30
-          mvn-params: '-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/'
-    nexus-iq-namespace: 'onap-'
+          mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
+    nexus-iq-namespace: "onap-"
     project: sdc
-    project-name: 'sdc'
+    project-name: "sdc"
     build-node: ubuntu1804-docker-8c-8g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-version: 'mvn36'
-    mvn-settings: 'sdc-settings'
+      - "master":
+          branch: "master"
+    mvn-version: "mvn36"
+    mvn-settings: "sdc-settings"
     java-version: openjdk11
 
 - project:

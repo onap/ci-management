@@ -15,35 +15,34 @@
 
 - project:
     name: sdc-sdc-helm-validator
-    project-name: 'sdc-sdc-helm-validator'
+    project-name: "sdc-sdc-helm-validator"
     java-version: openjdk11
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
-          mvn-goals: 'clean deploy'
+          mvn-goals: "clean deploy"
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-goals: 'clean install docker:build docker:push'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-goals: "clean install docker:build docker:push"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'sdc/sdc-helm-validator'
-    mvn-settings: 'sdc-sdc-helm-validator-settings'
+    project: "sdc/sdc-helm-validator"
+    mvn-settings: "sdc-sdc-helm-validator-settings"
     stream:
-      - 'master':
-            branch: 'master'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-docker-8c-8g
-
 
 - project:
     name: sdc-sdc-helm-validator-sonar
@@ -51,28 +50,28 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'sdc/sdc-helm-validator'
-    project-name: 'sdc-sdc-helm-validator'
-    branch: 'master'
-    mvn-settings: 'sdc-sdc-helm-validator-settings'
-    mvn-params: '-Dsonar.branch={branch}'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
+    project: "sdc/sdc-helm-validator"
+    project-name: "sdc-sdc-helm-validator"
+    branch: "master"
+    mvn-settings: "sdc-sdc-helm-validator-settings"
+    mvn-params: "-Dsonar.branch={branch}"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m"
 
 - project:
     name: sdc-sdc-helm-validator-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'sdc/sdc-helm-validator'
-    project-name: 'sdc-sdc-helm-validator'
+    nexus-iq-namespace: "onap-"
+    project: "sdc/sdc-helm-validator"
+    project-name: "sdc-sdc-helm-validator"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'sdc-sdc-helm-validator-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-sdc-helm-validator-settings"
