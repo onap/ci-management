@@ -7,27 +7,26 @@
 
 - project:
     name: testsuite-release
-    project-name: 'testsuite'
-    project: 'testsuite'
-    mvn-settings: 'testsuite-settings'
+    project-name: "testsuite"
+    project: "testsuite"
+    mvn-settings: "testsuite-settings"
     jobs:
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
 - project:
     name: testsuite
-    project-name: 'testsuite'
+    project-name: "testsuite"
     jobs:
-      - '{project-name}-{stream}-3scm-docker-shell-daily':
-          script:
-            !include-raw-escape: 'testsuite-docker.sh'
+      - "{project-name}-{stream}-3scm-docker-shell-daily":
+          script: !include-raw-escape: "testsuite-docker.sh"
 
-    project: 'testsuite'
+    project: "testsuite"
 
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'testsuite-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "testsuite-settings"
 
 - project:
     name: testsuite-info
@@ -40,28 +39,28 @@
 
 - project:
     name: testsuite-linters
-    project: 'testsuite'
-    project-name: 'testsuite'
+    project: "testsuite"
+    project-name: "testsuite"
     python-version: python3
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'robot':
-          tox-dir: '.'
-          tox-envs: 'robot'
-          pattern: 'robot/testsuites/usecases/*.robot'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "robot":
+          tox-dir: "."
+          tox-envs: "robot"
+          pattern: "robot/testsuites/usecases/*.robot"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"

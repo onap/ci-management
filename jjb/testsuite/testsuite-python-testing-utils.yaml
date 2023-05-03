@@ -1,39 +1,39 @@
 ---
 - project:
     name: testsuite-python-testing-utils
-    project-name: 'testsuite-python-testing-utils'
+    project-name: "testsuite-python-testing-utils"
     python-version: python3
     jobs:
-      - '{project-name}-{subproject}-python-staging-{stream}'
-      - '{project-name}-{subproject}-python-release-{stream}'
-    project: 'testsuite/python-testing-utils'
+      - "{project-name}-{subproject}-python-staging-{stream}"
+      - "{project-name}-{subproject}-python-release-{stream}"
+    project: "testsuite/python-testing-utils"
     subproject:
-      - 'robotframework-onap':
-          tox-dir: './robotframework-onap/'
-          tox-envs: 'py3'
+      - "robotframework-onap":
+          tox-dir: "./robotframework-onap/"
+          tox-envs: "py3"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'testsuite-python-testing-utils-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1804-builder-4c-4g'
+      - "master":
+          branch: "master"
+    mvn-settings: "testsuite-python-testing-utils-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: "ubuntu1804-builder-4c-4g"
 
 - project:
     name: testsuite-python-testing-utils-verify
-    project-name: 'testsuite-python-testing-utils'
-    project: 'testsuite/python-testing-utils'
+    project-name: "testsuite-python-testing-utils"
+    project: "testsuite/python-testing-utils"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'testsuite-python-testing-utils-settings'
-    build-node: 'ubuntu1804-builder-4c-4g'
+      - "master":
+          branch: "master"
+    mvn-settings: "testsuite-python-testing-utils-settings"
+    build-node: "ubuntu1804-builder-4c-4g"
     subproject:
-      - 'robotframework-onap':
-          path: 'robotframework-onap'
-          pattern: 'robotframework-onap/**'
+      - "robotframework-onap":
+          path: "robotframework-onap"
+          pattern: "robotframework-onap/**"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python'
+      - "{project-name}-{stream}-{subproject}-verify-python"
 
 - project:
     name: testsuite-python-testing-utils-info

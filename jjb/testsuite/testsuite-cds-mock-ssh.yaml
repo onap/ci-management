@@ -15,33 +15,32 @@
 
 - project:
     name: testsuite-cds-mock-ssh-linters
-    project: 'testsuite/cds-mock-ssh'
-    project-name: 'testsuite-cds-mock-ssh'
+    project: "testsuite/cds-mock-ssh"
+    project-name: "testsuite-cds-mock-ssh"
     python-version: python3
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
     stream:
-      - 'master':
-          branch: 'master'
-
+      - "master":
+          branch: "master"

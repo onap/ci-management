@@ -10,36 +10,36 @@
 
 - project:
     name: testsuite-pythonsdk-tests-linters
-    project: 'testsuite/pythonsdk-tests'
-    project-name: 'testsuite-pythonsdk-tests'
+    project: "testsuite/pythonsdk-tests"
+    project-name: "testsuite-pythonsdk-tests"
     python-version: python3
     jobs:
       - integration-linters
     subproject:
-      - 'yaml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yaml'
-      - 'yml':
-          tox-dir: '.'
-          tox-envs: 'yaml'
-          pattern: '**/*.yml'
-      - 'json':
-          tox-dir: '.'
-          tox-envs: 'json'
-          pattern: '**/*.json'
-      - 'python':
-          tox-dir: '.'
-          tox-envs: 'py'
-          pattern: '**/*.py'
-      - 'rst':
-          tox-dir: '.'
-          tox-envs: 'rst'
-          pattern: '**/*.rst'
-      - 'md':
-          tox-dir: '.'
-          tox-envs: 'md'
-          pattern: '**/*.md'
+      - "yaml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yaml"
+      - "yml":
+          tox-dir: "."
+          tox-envs: "yaml"
+          pattern: "**/*.yml"
+      - "json":
+          tox-dir: "."
+          tox-envs: "json"
+          pattern: "**/*.json"
+      - "python":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+      - "rst":
+          tox-dir: "."
+          tox-envs: "rst"
+          pattern: "**/*.rst"
+      - "md":
+          tox-dir: "."
+          tox-envs: "md"
+          pattern: "**/*.md"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
