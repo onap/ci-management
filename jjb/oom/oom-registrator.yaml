@@ -1,44 +1,44 @@
 ---
 - project:
     name: oom-registrator
-    project-name: 'oom-registrator'
+    project-name: "oom-registrator"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-{stream}-release-version-java-daily'
+      - "{project-name}-{stream}-release-version-java-daily"
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          mvn-pom: 'pom.xml'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-f pom.xml -Dmaven.test.skip=true -P linux,docker'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-pom: "pom.xml"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-params: "-f pom.xml -Dmaven.test.skip=true -P linux,docker"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'oom/registrator'
+    project: "oom/registrator"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'oom-registrator-settings'
-    files: '**'
-    archive-artifacts: ''
+      - "master":
+          branch: "master"
+    mvn-settings: "oom-registrator-settings"
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: oom-registrator-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: oom/registrator
-    project-name: 'oom-registrator'
-    branch: 'master'
-    mvn-settings: 'oom-registrator-settings'
+    project-name: "oom-registrator"
+    branch: "master"
+    mvn-settings: "oom-registrator-settings"
 
 - project:
     name: oom-registrator-info

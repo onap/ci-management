@@ -1,19 +1,19 @@
 ---
 - project:
     name: offline-installer
-    project-name: 'offline-installer'
-    build-node: 'ubuntu1804-docker-8c-8g'
+    project-name: "offline-installer"
+    build-node: "ubuntu1804-docker-8c-8g"
     offline_review_bootstrap: !include-raw-escape: offline-installer-review-bootstrap.sh
 
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
 
     jobs:
-      - '{project-name}-{stream}-review':
-          build_script: '{offline_review_bootstrap}'
+      - "{project-name}-{stream}-review":
+          build_script: "{offline_review_bootstrap}"
 
 - project:
     name: offline-installer-info
@@ -25,38 +25,38 @@
     branch: master
 
 - project:
-      name: offline-installer-linters
-      project: oom/offline-installer
-      project-name: offline-installer
-      python-version: python3
-      jobs:
-          - integration-linters
-      subproject:
-          - 'py':
-              tox-dir: '.'
-              tox-envs: 'py'
-              pattern: '**/*.py'
-      stream:
-          - 'master':
-                branch: 'master'
-          - 'kohn':
-                branch: 'kohn'
+    name: offline-installer-linters
+    project: oom/offline-installer
+    project-name: offline-installer
+    python-version: python3
+    jobs:
+      - integration-linters
+    subproject:
+      - "py":
+          tox-dir: "."
+          tox-envs: "py"
+          pattern: "**/*.py"
+    stream:
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
 
 - project:
-      name: offline-installer-pytest
-      project: oom/offline-installer
-      project-name: offline-installer
-      build-node: ubuntu1804-docker-8c-8g
-      python-version: python3
-      jobs:
-          - integration-tox-verify
-      subproject:
-          - 'docker-downloader':
-                tox-dir: 'build/download'
-                tox-envs: 'pytest'
-                pattern: 'build/download/**'
-      stream:
-          - 'master':
-                branch: 'master'
-          - 'kohn':
-                branch: 'kohn'
+    name: offline-installer-pytest
+    project: oom/offline-installer
+    project-name: offline-installer
+    build-node: ubuntu1804-docker-8c-8g
+    python-version: python3
+    jobs:
+      - integration-tox-verify
+    subproject:
+      - "docker-downloader":
+          tox-dir: "build/download"
+          tox-envs: "pytest"
+          pattern: "build/download/**"
+    stream:
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
