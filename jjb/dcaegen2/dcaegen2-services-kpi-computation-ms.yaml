@@ -1,64 +1,64 @@
 ---
 - project:
     name: dcaegen2-services-kpi-computation-ms
-    project-name: 'dcaegen2-services-kpi-computation-ms'
-    project: 'dcaegen2/services'
+    project-name: "dcaegen2-services-kpi-computation-ms"
+    project: "dcaegen2/services"
     jobs:
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - gerrit-maven-merge
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
     java-version: openjdk11
-    mvn-settings: 'dcaegen2-services-settings'
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
-    container-public-registry: 'nexus3.onap.org:10001'
-    container-staging-registry: 'nexus3.onap.org:10003'
-    mvn-goals: 'clean package docker:build'
-    mvn-params: '-f components/kpi-computation-ms/pom.xml'
+    mvn-settings: "dcaegen2-services-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: "ubuntu1804-docker-8c-8g"
+    container-public-registry: "nexus3.onap.org:10001"
+    container-staging-registry: "nexus3.onap.org:10003"
+    mvn-goals: "clean package docker:build"
+    mvn-params: "-f components/kpi-computation-ms/pom.xml"
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: 'components/kpi-computation-ms/**'
-    mvn-snapshot-id: 'ecomp-snapshots'
-    nexus-snapshot-repo: 'snapshots'
+        pattern: "components/kpi-computation-ms/**"
+    mvn-snapshot-id: "ecomp-snapshots"
+    nexus-snapshot-repo: "snapshots"
     maven-deploy-properties: |
       deployAtEnd=true
 
 - project:
     name: dcaegen2-services-kpi-computation-ms-release
-    project-name: 'dcaegen2-services-kpi-computation-ms'
-    project: 'dcaegen2/services'
+    project-name: "dcaegen2-services-kpi-computation-ms"
+    project: "dcaegen2/services"
     jobs:
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
-          sbom-path: 'components/kpi-computation-ms/'
+          sbom-path: "components/kpi-computation-ms/"
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
-          mvn-pom: 'components/kpi-computation-ms/pom.xml'
-          mvn-params: '-f components/kpi-computation-ms/pom.xml'
+          mvn-pom: "components/kpi-computation-ms/pom.xml"
+          mvn-params: "-f components/kpi-computation-ms/pom.xml"
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-goals: 'clean package docker:build -DpushImageTag'
-          mvn-params: '-f components/kpi-computation-ms/pom.xml'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-goals: "clean package docker:build -DpushImageTag"
+          mvn-params: "-f components/kpi-computation-ms/pom.xml"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     java-version: openjdk11
-    mvn-settings: 'dcaegen2-services-settings'
-    files: '**'
-    archive-artifacts: ''
+    mvn-settings: "dcaegen2-services-settings"
+    files: "**"
+    archive-artifacts: ""
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: 'components/kpi-computation-ms/**'
-    build-node: 'ubuntu1804-docker-8c-8g'
+        pattern: "components/kpi-computation-ms/**"
+    build-node: "ubuntu1804-docker-8c-8g"
     maven-deploy-properties: |
       deployAtEnd=true
 
@@ -68,30 +68,30 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'dcaegen2/services'
-    project-name: 'dcaegen2-services-kpi-computation-ms'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
-    mvn-goals: 'clean install'
-    mvn-params: '-f components/kpi-computation-ms/pom.xml'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "dcaegen2/services"
+    project-name: "dcaegen2-services-kpi-computation-ms"
+    branch: "master"
+    mvn-settings: "dcaegen2-services-settings"
+    mvn-goals: "clean install"
+    mvn-params: "-f components/kpi-computation-ms/pom.xml"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: dcaegen2-services-kpi-computation-ms-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: dcaegen2/services
     build-node: ubuntu1804-docker-8c-8g
-    project-name: 'dcaegen2-services-kpi-computation-ms-clm'
-    mvn-params: '-f components/kpi-computation-ms/pom.xml'
+    project-name: "dcaegen2-services-kpi-computation-ms-clm"
+    mvn-params: "-f components/kpi-computation-ms/pom.xml"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'dcaegen2-services-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "dcaegen2-services-settings"

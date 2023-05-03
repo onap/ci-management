@@ -1,7 +1,7 @@
 ---
 - project:
     name: dcaegen2-collectors-ves
-    project-name: 'dcaegen2-collectors-ves'
+    project-name: "dcaegen2-collectors-ves"
     java-version: openjdk11
     jobs:
       - gerrit-maven-verify:
@@ -16,30 +16,30 @@
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-goals: 'clean package docker:build -DpushImageTag'
-      - '{project-name}-gerrit-release-jobs':
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-goals: "clean package docker:build -DpushImageTag"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'dcaegen2/collectors/ves'
+    project: "dcaegen2/collectors/ves"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'dcaegen2-collectors-ves-settings'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "dcaegen2-collectors-ves-settings"
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
     # correctly defined in the job
     maven-deploy-properties: |
       deployAtEnd=true
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1804-docker-8c-8g'
-    mvn-snapshot-id: 'ecomp-snapshots'
-    mvn-version: 'mvn36'
-    nexus-snapshot-repo: 'snapshots'
+    files: "**"
+    archive-artifacts: ""
+    build-node: "ubuntu1804-docker-8c-8g"
+    mvn-snapshot-id: "ecomp-snapshots"
+    mvn-version: "mvn36"
+    nexus-snapshot-repo: "snapshots"
 
 - project:
     name: dcaegen2-collectors-ves-sonar
@@ -47,31 +47,31 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'dcaegen2/collectors/ves'
-    project-name: 'dcaegen2-collectors-ves'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-collectors-ves-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "dcaegen2/collectors/ves"
+    project-name: "dcaegen2-collectors-ves"
+    branch: "master"
+    mvn-settings: "dcaegen2-collectors-ves-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: dcaegen2-collectors-ves-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: dcaegen2/collectors/ves
     build-node: ubuntu1804-docker-8c-8g
-    project-name: 'dcaegen2-collectors-ves'
+    project-name: "dcaegen2-collectors-ves"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'dcaegen2-collectors-ves-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "dcaegen2-collectors-ves-settings"
 
 - project:
     name: dcaegen2-collectors-ves-info

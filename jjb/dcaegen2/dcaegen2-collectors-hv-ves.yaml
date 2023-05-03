@@ -2,42 +2,42 @@
 - project:
     name: dcaegen2-collectors-hv-ves
     # job template iterators
-    project-name: 'dcaegen2-collectors-hv-ves'
+    project-name: "dcaegen2-collectors-hv-ves"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
     # apply to all jobs
     java-version: openjdk11
-    project: 'dcaegen2/collectors/hv-ves'
-    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
-    files: '**'
+    project: "dcaegen2/collectors/hv-ves"
+    mvn-settings: "dcaegen2-collectors-hv-ves-settings"
+    files: "**"
     maven-deploy-properties: |
       deployAtEnd=true
-    archive-artifacts: 'hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html'
-    mvn-snapshot-id: 'ecomp-snapshots'
-    nexus-snapshot-repo: 'snapshots'
+    archive-artifacts: "hv-collector-coverage/target/site/jacoco-aggregate,**/target/reports/detekt-report.html"
+    mvn-snapshot-id: "ecomp-snapshots"
+    nexus-snapshot-repo: "snapshots"
     build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
-          mvn-goals: 'clean install'
+          mvn-goals: "clean install"
       - gerrit-maven-merge:
-          mvn-goals: 'clean deploy'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-goals: "clean deploy"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
-          mvn-goals: 'clean deploy -Ddocker.skip'
+          mvn-goals: "clean deploy -Ddocker.skip"
       - gerrit-maven-docker-stage:
           build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-DskipNexusStagingDeployMojo=true -DskipDockerPush=false'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-params: "-DskipNexusStagingDeployMojo=true -DskipDockerPush=false"
 
 - project:
     name: dcaegen2-collectors-hv-ves-sonar
@@ -45,32 +45,31 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'dcaegen2/collectors/hv-ves'
-    project-name: 'dcaegen2-collectors-hv-ves'
-    branch: 'master'
-    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "dcaegen2/collectors/hv-ves"
+    project-name: "dcaegen2-collectors-hv-ves"
+    branch: "master"
+    mvn-settings: "dcaegen2-collectors-hv-ves-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: dcaegen2-collectors-hv-ves-clm
     java-version: openjdk11
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: dcaegen2/collectors/hv-ves
-    project-name: 'dcaegen2-collectors-hv-ves'
+    project-name: "dcaegen2-collectors-hv-ves"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     build-node: ubuntu1804-docker-8c-8g
-    mvn-settings: 'dcaegen2-collectors-hv-ves-settings'
-
+    mvn-settings: "dcaegen2-collectors-hv-ves-settings"
 
 - project:
     name: dcaegen2-collectors-hv-ves-info

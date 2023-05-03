@@ -1,15 +1,16 @@
+---
 - project:
     name: dcaegen2-collectors-restconf-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'dcaegen2-collectors-restconf'
-    recipients: 'vv770d@att.com swarup.nayak1@huawei.com'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "dcaegen2-collectors-restconf"
+    recipients: "vv770d@att.com swarup.nayak1@huawei.com"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     functionality:
-      - 'testsuites':
+      - "testsuites":
           trigger_jobs:
-            - '{project-name}-{stream}-merge-java'
-    robot-options: ''
+            - "{project-name}-{stream}-merge-java"
+    robot-options: ""

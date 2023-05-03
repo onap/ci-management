@@ -1,15 +1,16 @@
+---
 - project:
     name: dcaegen2-services-pmsh-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
     project-name: dcaegen2-services-pmsh
-    recipients: 'lego@est.tech'
+    recipients: "lego@est.tech"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     functionality:
-      - 'testsuite':
+      - "testsuite":
           trigger_jobs:
-            - '{project-name}-docker-merge-master'
-    robot-options: ''
+            - "{project-name}-docker-merge-master"
+    robot-options: ""

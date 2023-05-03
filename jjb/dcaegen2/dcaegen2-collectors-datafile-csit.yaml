@@ -1,17 +1,18 @@
+---
 - project:
     name: dcaegen2-collectors-datafile-csit
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'dcaegen2-collectors-datafile'
-    recipients: 'vv770d@att.com lego@est.tech rajendra.jaiswal@ericsson.com'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "dcaegen2-collectors-datafile"
+    recipients: "vv770d@att.com lego@est.tech rajendra.jaiswal@ericsson.com"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     functionality:
-      - 'ManagementInterface-suite':
+      - "ManagementInterface-suite":
           trigger_jobs:
-      - 'Functional-suite':
+      - "Functional-suite":
           trigger_jobs:
-    robot-options: ''
-    branch: 'master'
+    robot-options: ""
+    branch: "master"

@@ -35,43 +35,43 @@
     #    jobs:
     #      - dcaegen2-docker-python-jobs
 
-    name: '{project-name}-docker-python-jobs'
+    name: "{project-name}-docker-python-jobs"
     container-tag-method: latest
-    docker-get-container-tag-script: '../../shell/docker-ts-tag-override.sh'
-    nexus-iq-namespace: 'onap-'
-    tox-dir: '{src-dir}'
-    tox-envs: 'py3'
+    docker-get-container-tag-script: "../../shell/docker-ts-tag-override.sh"
+    nexus-iq-namespace: "onap-"
+    tox-dir: "{src-dir}"
+    tox-envs: "py3"
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     python-version: python3
-    wss-product-name: '{project-name}'
-    docker-root: '{src-dir}'
+    wss-product-name: "{project-name}"
+    docker-root: "{src-dir}"
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: '{src-dir}/.*'
+        pattern: "{src-dir}/.*"
     jobs:
       - gerrit-tox-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
           stream: all
-          branch: '*'
+          branch: "*"
       - gerrit-docker-verify
       - gerrit-docker-merge:
           post_docker_build_script: |
-              #!/bin/bash
-              set -uex -o pipefail
-              DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
-              DNAME={container-snapshot-registry}/{docker-name}
-              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
-              docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
-              docker push $DNAME:$DOCKER_IMAGE_TAG2
-              docker push $DNAME:latest
+            #!/bin/bash
+            set -uex -o pipefail
+            DOCKER_IMAGE_TAG2=${{DOCKER_IMAGE_TAG%-*}}
+            DNAME={container-snapshot-registry}/{docker-name}
+            docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:$DOCKER_IMAGE_TAG2
+            docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
+            docker push $DNAME:$DOCKER_IMAGE_TAG2
+            docker push $DNAME:latest
           stream: master
           branch: master
       - gerrit-tox-sonar:
           # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
-          sonar-mvn-goal: '-f {src-dir}/pom.xml sonar:sonar'
-          cron: '@daily'
+          sonar-mvn-goal: "-f {src-dir}/pom.xml sonar:sonar"
+          cron: "@daily"
           stream: master
           branch: master
 
@@ -90,7 +90,7 @@
       - kohn:
           branch: kohn
     jobs:
-      - '{project-name}-docker-python-jobs'
+      - "{project-name}-docker-python-jobs"
 
 - project:
     name: dcaegen2-services-ml
@@ -107,7 +107,7 @@
       - kohn:
           branch: kohn
     jobs:
-      - '{project-name}-docker-python-jobs'
+      - "{project-name}-docker-python-jobs"
 
 - project:
     name: dcaegen2-services-subprojects-view

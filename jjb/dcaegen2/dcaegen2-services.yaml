@@ -12,7 +12,7 @@
     project-name: dcaegen2-services
     mvn-settings: dcaegen2-services-settings
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"
     build-node: centos7-docker-2c-1g
     project: dcaegen2/services
     branch: master
