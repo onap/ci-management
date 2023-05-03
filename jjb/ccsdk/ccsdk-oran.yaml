@@ -1,61 +1,61 @@
 ---
 - project:
     name: ccsdk-oran
-    project-name: 'ccsdk-oran'
+    project-name: "ccsdk-oran"
     jobs:
       - gerrit-maven-verify:
-          cron: ''
+          cron: ""
       - gerrit-maven-merge:
-          cron: '@daily'
-          mvn-params: '-Dmaven.test.skip=true'
+          cron: "@daily"
+          mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
           sign-artifacts: true
-          mvn-params: '-Dmaven.test.skip=true'
-          mvn-opts: '-Ddocker.skip=true'
-          cron: ''
+          mvn-params: "-Dmaven.test.skip=true"
+          mvn-opts: "-Ddocker.skip=true"
+          cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
           build-node: centos8-docker-8c-8g
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          mvn-params: '-Dmaven.test.skip=true -Pdocker'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-params: "-Dmaven.test.skip=true -Pdocker"
           maven-versions-plugin: true
-          cron: '@daily'
-      - '{project-name}-gerrit-release-jobs':
+          cron: "@daily"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    project: 'ccsdk/oran'
+    project: "ccsdk/oran"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
           java-version: openjdk17
-      - 'kohn':
-          branch: 'kohn'
+      - "kohn":
+          branch: "kohn"
           java-version: openjdk11
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-oran-settings'
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
+    mvn-version: "mvn38"
+    mvn-settings: "ccsdk-oran-settings"
+    files: "**"
+    archive-artifacts: ""
+    docker-pom: "pom.xml"
     mvn-profile: docker
     build-node: centos8-docker-8c-8g
-    mvn-snapshot-id: 'ecomp-snapshots'
-    nexus-snapshot-repo: 'snapshots'
+    mvn-snapshot-id: "ecomp-snapshots"
+    nexus-snapshot-repo: "snapshots"
 
 - project:
     name: ccsdk-oran-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
-    project: 'ccsdk/oran'
-    project-name: 'ccsdk-oran'
+    nexus-iq-namespace: "onap-"
+    project: "ccsdk/oran"
+    project-name: "ccsdk-oran"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     java-version: openjdk17
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-oran-settings'
-    mvn-opts: '-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED'
+    mvn-version: "mvn38"
+    mvn-settings: "ccsdk-oran-settings"
+    mvn-opts: "-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g
 
 - project:
@@ -71,21 +71,20 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'a1-policy-management/.*'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+        pattern: "a1-policy-management/.*"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: centos8-docker-8c-8g
-    project: 'ccsdk/oran'
-    project-name: 'ccsdk-oran'
-    branch: 'master'
+    project: "ccsdk/oran"
+    project-name: "ccsdk-oran"
+    branch: "master"
     java-version: openjdk17
-    mvn-version: 'mvn38'
-    mvn-settings: 'ccsdk-oran-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m'
-    mvn-opts: '-Ddocker.skip=true'
-    mvn-params: '-f a1-policy-management'
+    mvn-version: "mvn38"
+    mvn-settings: "ccsdk-oran-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -Ddocker.skip=true"
+    mvn-params: "-f a1-policy-management"
