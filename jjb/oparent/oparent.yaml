@@ -7,39 +7,39 @@
 
 - project:
     name: oparent
-    project-name: 'oparent'
+    project-name: "oparent"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-    project: 'oparent'
+    project: "oparent"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'istanbul':
-          branch:  'istanbul'
-    mvn-settings: 'oparent-settings'
+      - "master":
+          branch: "master"
+      - "istanbul":
+          branch: "istanbul"
+    mvn-settings: "oparent-settings"
     java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
+    files: "**"
+    archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
     name: oparent-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: oparent
-    project-name: 'oparent'
-    branch: 'master'
-    mvn-settings: 'oparent-settings'
+    project-name: "oparent"
+    branch: "master"
+    mvn-settings: "oparent-settings"
 
 - project:
     name: oparent-info

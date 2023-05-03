@@ -2,26 +2,26 @@
 - project:
     name: openci-onap
 
-    project: '{name}'
+    project: "{name}"
 
     stream:
       - master:
-          branch: '{stream}'
-          gs-pathname: ''
+          branch: "{stream}"
+          gs-pathname: ""
           disabled: false
 
     jobs:
-      - 'openci-onap-autorelease-daily-{stream}'
-      - 'openci-onap-promote-daily-{stream}'
+      - "openci-onap-autorelease-daily-{stream}"
+      - "openci-onap-promote-daily-{stream}"
 
 # This job gets triggered manually for the demo purposes.
 #
 # In prototype, either what this job does needs to be integrated to
 # ONAP autorelease job or triggered by the upstream autorelease job.
 - job-template:
-    name: 'openci-onap-autorelease-daily-{stream}'
+    name: "openci-onap-autorelease-daily-{stream}"
 
-    disabled: '{obj:disabled}'
+    disabled: "{obj:disabled}"
 
     concurrent: false
 
@@ -31,19 +31,19 @@
       - string:
           name: PUBLISH_EVENT_TYPE
           default: ArtifactPublishedEvent
-          description: 'The type of the event this job publishes'
+          description: "The type of the event this job publishes"
       - string:
           name: PUBLISH_EVENT_ORIGIN
           default: ONAP
-          description: 'Originating community'
+          description: "Originating community"
       - string:
           name: ARTIFACT_LOCATION
           default: https://url/to/artifact/on/onap/nexus/$BUILD_NUMBER
-          description: 'The location of the artifact on ONAP Nexus'
+          description: "The location of the artifact on ONAP Nexus"
       - string:
           name: CONFIDENCE_LEVEL
           default: "'autorelease': 'SUCCESS'"
-          description: 'The confidence level the published artifact gained'
+          description: "The confidence level the published artifact gained"
 
     wrappers:
       - credentials-binding:
@@ -56,8 +56,7 @@
     builders:
       # this build step in the job executes create-ape.sh to construct the
       # ArtifactPublishedEvent (ape) and publish it using the python utility
-      - shell:
-          !include-raw-escape: ./create-ape.sh
+      - shell: !include-raw-escape: ./create-ape.sh
 
 # This job gets triggered by a ConfidenceLevelModifiedEvent published
 # by OPNFV jobs so ONAP can promote the autorelease artifact even further.
@@ -65,9 +64,9 @@
 # This job is created for the demo purposes and might not be there for
 # the prototype.
 - job-template:
-    name: 'openci-onap-promote-daily-{stream}'
+    name: "openci-onap-promote-daily-{stream}"
 
-    disabled: '{obj:disabled}'
+    disabled: "{obj:disabled}"
 
     concurrent: false
 
@@ -76,6 +75,7 @@
     triggers:
       - jms-messaging:
           provider-name: openci.activemq
+          # yamllint disable-line rule:line-length
           selector: JMSType = 'ConfidenceLevelModifiedEvent' and JMSOrigin = 'OPNFV' and JMSScenario = 'k8-nosdn-onap-ha'
 
     builders:

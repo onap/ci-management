@@ -1,74 +1,74 @@
 ---
 - project:
     name: optf-osdf
-    project-name: 'optf-osdf'
-    project: 'optf/osdf'
+    project-name: "optf-osdf"
+    project: "optf/osdf"
     python-version: python3
     stream:
-      - 'master':
-          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
-    mvn-settings: 'optf-osdf-settings'
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+    mvn-settings: "optf-osdf-settings"
     subproject:
-      - 'osdf':
-          path: '.'
-          pattern: '**'
-          pom: 'pom.xml'
+      - "osdf":
+          path: "."
+          pattern: "**"
+          pom: "pom.xml"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python':
+      - "{project-name}-{stream}-{subproject}-verify-python":
           build-node: ubuntu1804-builder-4c-4g
-      - '{project-name}-{stream}-{subproject}-merge-java':
+      - "{project-name}-{stream}-{subproject}-merge-java":
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          docker-pom: 'pom.xml'
-          mvn-params: '-Dmaven.test.skip=true -P docker'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          docker-pom: "pom.xml"
+          mvn-params: "-Dmaven.test.skip=true -P docker"
 
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1804-builder-4c-4g'
+    files: "**"
+    archive-artifacts: ""
+    build-node: "ubuntu1804-builder-4c-4g"
 
 - project:
     name: optf-osdf-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'optf/osdf'
-    project-name: 'optf-osdf'
-    branch: 'master'
-    mvn-settings: 'optf-osdf-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "optf/osdf"
+    project-name: "optf-osdf"
+    branch: "master"
+    mvn-settings: "optf-osdf-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: optf-osdf-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: optf/osdf
     build-node: ubuntu1804-docker-8c-8g
-    project-name: 'optf-osdf'
+    project-name: "optf-osdf"
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'optf-osdf-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "optf-osdf-settings"
 
 - project:
     name: optf-osdf-info

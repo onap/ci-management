@@ -1,73 +1,73 @@
 ---
 - project:
     name: optf-has
-    project-name: 'optf-has'
-    project: 'optf/has'
+    project-name: "optf-has"
+    project: "optf/has"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
-    mvn-settings: 'optf-has-settings'
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+    mvn-settings: "optf-has-settings"
     subproject:
-      - 'conductor':
-          path: 'conductor'
-          pattern: 'conductor/**'
-          pom: 'pom.xml'
+      - "conductor":
+          path: "conductor"
+          pattern: "conductor/**"
+          pom: "pom.xml"
     jobs:
-      - '{project-name}-{stream}-{subproject}-verify-python':
+      - "{project-name}-{stream}-{subproject}-verify-python":
           build-node: ubuntu1804-builder-4c-4g
-      - '{project-name}-{stream}-{subproject}-merge-java':
+      - "{project-name}-{stream}-{subproject}-merge-java":
           build-node: ubuntu1804-docker-8c-8g
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
-      - '{project-name}-gerrit-release-jobs':
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-          docker-pom: 'conductor/pom.xml'
-          mvn-params: '-Dmaven.test.skip=true -P docker'
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          docker-pom: "conductor/pom.xml"
+          mvn-params: "-Dmaven.test.skip=true -P docker"
 
-    files: '**'
-    archive-artifacts: ''
-    build-node: 'ubuntu1804-builder-4c-4g'
+    files: "**"
+    archive-artifacts: ""
+    build-node: "ubuntu1804-builder-4c-4g"
 
 - project:
     name: optf-has-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-docker-8c-8g
-    project: 'optf/has'
-    project-name: 'optf-has'
-    branch: 'master'
-    mvn-settings: 'optf-has-settings'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    project: "optf/has"
+    project-name: "optf-has"
+    branch: "master"
+    mvn-settings: "optf-has-settings"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: optf-has-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: optf/has
-    project-name: 'optf-has'
+    project-name: "optf-has"
     build-node: ubuntu1804-docker-8c-8g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'optf-has-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "optf-has-settings"
 
 - project:
     name: optf-has-info

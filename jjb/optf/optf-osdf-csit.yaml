@@ -1,17 +1,18 @@
+---
 - project:
     name: optf-osdf-csit
     jobs:
-      - '{project-name}-review-verification-maven-{stream}':
+      - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install
-      - '{project-name}-merge-verification-maven-{stream}':
+      - "{project-name}-merge-verification-maven-{stream}":
           mvn-goals: clean install
     project-name: optf-osdf
-    recipients: 'snarayanan@research.att.com'
+    recipients: "snarayanan@research.att.com"
     project: optf/osdf
     stream:
-      - 'master':
-          branch: 'master'
-      - 'jakarta':
-          branch: 'jakarta'
-    mvn-settings: 'optf-osdf-settings'
-    robot-options: ''
+      - "master":
+          branch: "master"
+      - "jakarta":
+          branch: "jakarta"
+    mvn-settings: "optf-osdf-settings"
+    robot-options: ""
