@@ -2,30 +2,30 @@
 - project:
     name: usecases-pnf-sw-upgrade
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'usecases-pnf-sw-upgrade'
-    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "usecases-pnf-sw-upgrade"
+    recipients: "morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     functionality:
-      - 'pnf-sw-upgrade':
+      - "pnf-sw-upgrade":
           trigger_jobs:
-    robot-options: ''
-    disabled: 'true'
+    robot-options: ""
+    disabled: "true"
 
 - project:
     name: usecases-config-over-netconf
     jobs:
-      - '{project-name}-{stream}-verify-csit-{functionality}'
-      - '{project-name}-{stream}-csit-{functionality}'
-    project-name: 'usecases-config-over-netconf'
-    recipients: 'morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech'
+      - "{project-name}-{stream}-verify-csit-{functionality}"
+      - "{project-name}-{stream}-csit-{functionality}"
+    project-name: "usecases-config-over-netconf"
+    recipients: "morgan.richomm@orange.com bf1936@att.com rahul.tyagi@est.tech"
     stream:
-      - 'master':
-          branch: 'master'
+      - "master":
+          branch: "master"
     functionality:
-      - 'config-over-netconf':
+      - "config-over-netconf":
           trigger_jobs:
-    robot-options: ''
+    robot-options: ""

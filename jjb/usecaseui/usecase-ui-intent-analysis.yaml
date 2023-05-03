@@ -1,18 +1,17 @@
 ---
-
 - project:
     name: usecase-ui-intent-analysis
-    project-name: 'usecase-ui-intent-analysis'
-    project: 'usecase-ui/intent-analysis'
+    project-name: "usecase-ui-intent-analysis"
+    project: "usecase-ui/intent-analysis"
     stream:
-      - 'master':
-          branch: 'master'
-      - 'kohn':
-          branch: 'kohn'
-    mvn-settings: 'usecase-ui-intent-analysis-settings'
+      - "master":
+          branch: "master"
+      - "kohn":
+          branch: "kohn"
+    mvn-settings: "usecase-ui-intent-analysis-settings"
     jobs:
-      - '{project-name}-{stream}-verify-java'
-      - '{project-name}-{stream}-merge-java'
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
@@ -21,15 +20,15 @@
       - gerrit-maven-docker-stage:
           sbom-generator: true
           build-node: ubuntu1804-docker-8c-8g
-          mvn-params: '-P docker -Dmaven.test.skip=true'
-          container-public-registry: 'nexus3.onap.org:10001'
-          container-staging-registry: 'nexus3.onap.org:10003'
-      - '{project-name}-gerrit-release-jobs':
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
     java-version: openjdk11
-    files: '**'
-    archive-artifacts: ''
-    docker-pom: 'pom.xml'
+    files: "**"
+    archive-artifacts: ""
+    docker-pom: "pom.xml"
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
@@ -37,31 +36,31 @@
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
-    sonar-mvn-goal: '{sonar_mvn_goal}'
-    cron: '@daily'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
-    project: 'usecase-ui/intent-analysis'
-    project-name: 'usecase-ui-intent-analysis'
-    branch: 'master'
-    mvn-settings: 'usecase-ui-intent-analysis-settings'
+    project: "usecase-ui/intent-analysis"
+    project-name: "usecase-ui-intent-analysis"
+    branch: "master"
+    mvn-settings: "usecase-ui-intent-analysis-settings"
     java-version: openjdk11
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: usecase-ui-intent-analysis-clm
     jobs:
       - gerrit-maven-clm
-    nexus-iq-namespace: 'onap-'
+    nexus-iq-namespace: "onap-"
     project: usecase-ui/intent-analysis
-    project-name: 'usecase-ui-intent-analysis'
+    project-name: "usecase-ui-intent-analysis"
     build-node: ubuntu1804-builder-4c-4g
     stream:
-      - 'master':
-          branch: 'master'
-    mvn-settings: 'usecase-ui-intent-analysis-settings'
+      - "master":
+          branch: "master"
+    mvn-settings: "usecase-ui-intent-analysis-settings"
     java-version: openjdk11
 
 - project:
