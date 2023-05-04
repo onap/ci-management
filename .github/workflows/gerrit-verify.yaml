@@ -92,7 +92,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Run static analysis and format checkers
-        run: pipx run tox -e pre-commit
+        run: pipx run pre-commit run --all-files --show-diff-on-failure
 
   jjb-validation:
     needs: prepare
