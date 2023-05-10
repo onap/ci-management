@@ -23,8 +23,8 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
     mvn-settings: "dcaegen2-collectors-restconf-settings"

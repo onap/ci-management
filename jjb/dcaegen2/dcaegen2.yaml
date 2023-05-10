@@ -17,10 +17,10 @@
     stream:
       - "master":
           branch: "master"
+      - "london":
+          branch: "london"
       - "kohn":
           branch: "kohn"
-      - "jakarta":
-          branch: "jakarta"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
     mvn-settings: "dcaegen2-settings"

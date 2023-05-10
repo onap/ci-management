@@ -26,8 +26,8 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "dcaegen2-collectors-ves-settings"
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties
