@@ -1,5 +1,5 @@
 [nexus]
-username=$JENKINS_RELEASE_USR
+user=$JENKINS_RELEASE_USR
 password=$JENKINS_RELEASE_PSW
 [nexus.onap.org]
 username=$LFTOOLSINI_NEXUS_USR
