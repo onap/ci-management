@@ -76,7 +76,7 @@ cp jenkins.ini.example ~/.config/jenkins_jobs/jenkins_jobs.ini
 ```
 
 Modify the resulting `~/.config/jenkins_jobs/jenkins_jobs.ini` with your
-**Jenkins LFID username** and **API token**
+**Jenkins LFID username** and **API token**. Make sure that your account has the necessary permissions (request them via the [LFN help desk](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/create/35) if not)!
 
 ```ini
 [job_builder]
