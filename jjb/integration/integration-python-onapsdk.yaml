@@ -73,6 +73,7 @@
     name: integration-python-onapsdk-pypi-release
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
+    build-node: centos8-builder-2c-1g
     stream:
       - "master":
           branch: "master"
