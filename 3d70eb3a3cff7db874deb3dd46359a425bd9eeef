@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10d66b0c_642ba83b",
+        "filename": "jjb/sdnc/sdnc-oam.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-05-15T21:03:07Z",
+      "side": 1,
+      "message": "We need to set this to false for ubuntu nodes since SIGUL only works in Centos",
+      "range": {
+        "startLine": 13,
+        "startChar": 10,
+        "endLine": 13,
+        "endChar": 30
+      },
+      "revId": "3d70eb3a3cff7db874deb3dd46359a425bd9eeef",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
