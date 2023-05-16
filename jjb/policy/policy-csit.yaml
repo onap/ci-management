@@ -210,8 +210,6 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
     functionality:
       - "apex-pdp-postgres"
     trigger_jobs:
