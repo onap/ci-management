@@ -35,6 +35,7 @@
     mvn-settings: "sdnc-oam-settings"
     files: "**"
     archive-artifacts: ""
+    sign-artifacts: false
     build-node: ubuntu1804-builder-4c-4g
     shallow-clone: true
     mvn-snapshot-id: "ecomp-snapshots"
