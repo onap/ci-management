@@ -37,6 +37,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "policy-clamp-settings"
     java-version: openjdk11
     files: "**"

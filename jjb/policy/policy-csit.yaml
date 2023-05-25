@@ -18,6 +18,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "distribution"
     trigger_jobs:
@@ -43,6 +45,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "xacml-pdp"
     trigger_jobs:
@@ -68,6 +72,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "drools-applications"
     trigger_jobs:
@@ -93,6 +99,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "drools-pdp"
     trigger_jobs:
@@ -118,6 +126,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "apex-pdp"
     trigger_jobs:
@@ -143,6 +153,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "pap"
     trigger_jobs:
@@ -168,6 +180,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "api"
     trigger_jobs:
@@ -193,6 +207,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "clamp"
     trigger_jobs:

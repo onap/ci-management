@@ -36,6 +36,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"

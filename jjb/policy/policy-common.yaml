@@ -26,6 +26,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "policy-common-settings"
     java-version: openjdk11
     files: "**"

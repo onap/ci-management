@@ -34,6 +34,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
