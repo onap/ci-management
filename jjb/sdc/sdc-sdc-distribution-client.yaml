@@ -30,6 +30,9 @@
       - "kohn":
           branch: "kohn"
           java-version: openjdk11
+      - "london":
+          branch: "london"
+          java-version: openjdk11
     mvn-settings: "sdc-sdc-distribution-client-settings"
     files: "**"
     archive-artifacts: ""

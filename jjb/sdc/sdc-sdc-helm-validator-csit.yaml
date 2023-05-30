@@ -10,6 +10,8 @@
           branch: "master"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     functionality:
       - "sdc-helm-validator":
           trigger_jobs:

@@ -36,6 +36,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "sdc-sdc-workflow-designer-settings"
     files: "**"
     archive-artifacts: ""

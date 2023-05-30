@@ -26,6 +26,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "sdc-sdc-be-common-settings"
     files: "**"
     archive-artifacts: ""
