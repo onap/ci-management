@@ -8,6 +8,8 @@
           branch: "master"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "usecase-ui-server-settings"
     jobs:
       - "{project-name}-{stream}-verify-java"
