@@ -28,6 +28,8 @@
           branch: "jakarta"
       - "kohn":
           branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "sdc-sdc-tosca-settings"
     files: "**"
     archive-artifacts: ""
