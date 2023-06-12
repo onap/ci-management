@@ -31,8 +31,8 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
           java-version: openjdk11
       - "kohn":
           branch: "kohn"
@@ -119,8 +119,8 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
           java-version: openjdk11
       - "kohn":
           branch: "kohn"
