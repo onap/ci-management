@@ -8,7 +8,7 @@ project_lead: &onap_releng_ptl
   email: "jwagantall@linuxfoundation.org"
   id: "jwagantall"
   company: "LF"
-  timezone: "America/Los_Angeles"
+  timezone: "USA"
 primary_contact: *onap_releng_ptl
 issue_tracking:
   type: "jira"
