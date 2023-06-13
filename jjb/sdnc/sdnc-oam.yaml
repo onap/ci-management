@@ -28,6 +28,9 @@
       - "master":
           branch: "master"
           java-version: openjdk17
+      - "london":
+          branch: "london"
+          java-version: openjdk17
       - "kohn":
           branch: "kohn"
           java-version: openjdk11

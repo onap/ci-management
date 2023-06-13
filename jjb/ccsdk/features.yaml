@@ -23,6 +23,10 @@
           branch: "master"
           java-version: openjdk17
           mvn-opts: "-Xmx3072m"
+      - "london":
+          branch: "london"
+          java-version: openjdk17
+          mvn-opts: "-Xmx3072m"
       - "kohn":
           branch: "kohn"
           java-version: openjdk11

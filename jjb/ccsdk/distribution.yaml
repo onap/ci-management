@@ -29,10 +29,13 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
+      - "london":
+          branch: "london"
+          java-version: openjdk17
       - "kohn":
           branch: "kohn"
-          java-version: openjdk17
+          java-version: openjdk11
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
