@@ -1,0 +1,63 @@
+---
+name: Call Gerrit ci-management Verify
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+    inputs:
+      GERRIT_BRANCH:
+        description: "Branch that change is against"
+        required: true
+        type: string
+      GERRIT_CHANGE_ID:
+        description: "The ID for the change"
+        required: true
+        type: string
+      GERRIT_CHANGE_NUMBER:
+        description: "The Gerrit number"
+        required: true
+        type: string
+      GERRIT_CHANGE_URL:
+        description: "URL to the change"
+        required: true
+        type: string
+      GERRIT_EVENT_TYPE:
+        description: "Type of Gerrit event"
+        required: true
+        type: string
+      GERRIT_PATCHSET_NUMBER:
+        description: "The patch number for the change"
+        required: true
+        type: string
+      GERRIT_PATCHSET_REVISION:
+        description: "The revision sha"
+        required: true
+        type: string
+      GERRIT_PROJECT:
+        description: "Project in Gerrit"
+        required: true
+        type: string
+      GERRIT_REFSPEC:
+        description: "Gerrit refspec of change"
+        required: true
+        type: string
+
+jobs:
+  call-gerrit-ci-management-verify:
+    # yamllint disable-line rule:line-length
+    uses: lfit/releng-reusable-workflows/.github/workflows/gerrit-ci-management-verify.yaml@4763193f992b39532dd373a268ed6d6fe11f8b72
+    with:
+      gerrit-branch: ${{ inputs.GERRIT_BRANCH }}
+      gerrit-change-id: ${{ inputs.GERRIT_CHANGE_ID }}
+      gerrit-change-number: ${{ inputs.GERRIT_CHANGE_NUMBER }}
+      gerrit-change-url: ${{ inputs.GERRIT_CHANGE_URL }}
+      gerrit-event-type: ${{ inputs.GERRIT_EVENT_TYPE }}
+      gerrit-patchset-number: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
+      gerrit-patchset-revision: ${{ inputs.GERRIT_PATCHSET_REVISION }}
+      gerrit-project: ${{ inputs.GERRIT_PROJECT }}
+      gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
+      host: ${{ vars.GERRIT_SERVER }}
+      username: ${{ vars.GERRIT_SSH_USER }}
+      known_hosts: ${{ vars.GERRIT_KNOWN_HOSTS }}
+    secrets:
+      key: ${{ secrets.GERRIT_SSH_PRIVKEY }}
