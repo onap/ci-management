@@ -47,17 +47,14 @@ jobs:
     # yamllint disable-line rule:line-length
     uses: lfit/releng-reusable-workflows/.github/workflows/gerrit-ci-management-verify.yaml@4763193f992b39532dd373a268ed6d6fe11f8b72
     with:
-      gerrit-branch: ${{ inputs.GERRIT_BRANCH }}
-      gerrit-change-id: ${{ inputs.GERRIT_CHANGE_ID }}
-      gerrit-change-number: ${{ inputs.GERRIT_CHANGE_NUMBER }}
-      gerrit-change-url: ${{ inputs.GERRIT_CHANGE_URL }}
-      gerrit-event-type: ${{ inputs.GERRIT_EVENT_TYPE }}
-      gerrit-patchset-number: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
-      gerrit-patchset-revision: ${{ inputs.GERRIT_PATCHSET_REVISION }}
-      gerrit-project: ${{ inputs.GERRIT_PROJECT }}
-      gerrit-refspec: ${{ inputs.GERRIT_REFSPEC }}
-      host: ${{ vars.GERRIT_SERVER }}
-      username: ${{ vars.GERRIT_SSH_USER }}
-      known_hosts: ${{ vars.GERRIT_KNOWN_HOSTS }}
+      GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
+      GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
+      GERRIT_CHANGE_NUMBER: ${{ inputs.GERRIT_CHANGE_NUMBER }}
+      GERRIT_CHANGE_URL: ${{ inputs.GERRIT_CHANGE_URL }}
+      GERRIT_EVENT_TYPE: ${{ inputs.GERRIT_EVENT_TYPE }}
+      GERRIT_PATCHSET_NUMBER: ${{ inputs.GERRIT_PATCHSET_NUMBER }}
+      GERRIT_PATCHSET_REVISION: ${{ inputs.GERRIT_PATCHSET_REVISION }}
+      GERRIT_PROJECT: ${{ inputs.GERRIT_PROJECT }}
+      GERRIT_REFSPEC: ${{ inputs.GERRIT_REFSPEC }}
     secrets:
-      key: ${{ secrets.GERRIT_SSH_PRIVKEY }}
+      GERRIT_SSH_PRIVKEY: ${{ secrets.GERRIT_SSH_PRIVKEY }}
