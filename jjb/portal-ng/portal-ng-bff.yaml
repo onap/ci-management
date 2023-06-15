@@ -13,3 +13,32 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- job-template:
+    name: "{project-name}-gradle-shell-job"
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "{git-url}"
+          refspec: $GERRIT_REFSPEC
+          branch: $GERRIT_BRANCH
+          submodule-recursive: "{submodule-recursive}"
+          submodule-timeout: "{submodule-timeout}"
+          submodule-disable: "{submodule-disable}"
+          choosing-strategy: default
+
+    builders:
+      - shell: |
+          ./gradlew build
+
+- project:
+    name: portal-ng-bff-shell
+    project-name: "portal-ng-bff"
+    project: "portal-ng/bff"
+    branch: "master"
+    jobs:
+      - gerrit-gradle-build
+    stream:
+      - "master":
+          branch: "master"
