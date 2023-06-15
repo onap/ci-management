@@ -13,3 +13,14 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: portal-ng-bff-shell
+    project-name: "portal-ng-bff"
+    project: "portal-ng/bff"
+    branch: "master"
+    jobs:
+      - gerrit-gradle-build
+    stream:
+      - "master":
+          branch: "master"
