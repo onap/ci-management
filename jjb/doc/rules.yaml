@@ -49,7 +49,7 @@
             exit 0
           fi
           # config files, required
-          for i in docs/index.rst docs/conf.py docs/requirements-docs.txt docs/_static/css/ribbon.css; do
+          for i in docs/index.rst docs/conf.py docs/requirements-docs.txt docs/_static/css/ribbon.css .readthedocs.yaml; do
             if [ ! -f $i ] ; then
               log_failure_msg "FAIL $i missing. Please add it or remove the full docs directory."
               exitstatus="1"
@@ -102,9 +102,9 @@
                 log_warning_msg "WARN tox.ini also exists in root directory and contains sphinx-build command(s). Please check for redundancies."
                 warning="1"
               fi
-            fi
+            fi          
             unset sphinxbuild_detected
-            unset linenumber
+            unset linenumber          
           fi
           unset filename
           # ribbon.css
@@ -124,6 +124,66 @@
             fi
             unset cssmaxwidth
           fi
+          unset filename
+          # readthedocs.yaml
+          filename=".readthedocs.yaml"
+          if [ ! -f $filename ]; then
+            log_failure_msg "FAIL $filename missing. Please add it or remove the full docs directory."
+            exitstatus="1"
+          else
+            log_success_msg "INFO $filename found."
+
+            # obsolete parameter: (build:) image: latest
+            buildimage=$(grep '^[ \t]*image:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ $buildimage == *"latest"* ]]; then
+              log_failure_msg "FAIL Setting '(build: image:) latest' found in $filename. Please remove it."
+              exitstatus="1"
+            else
+              log_success_msg "INFO Setting '(build: image:) latest' not found in $filename."
+            fi
+            unset buildimage
+
+            # obsolete parameter: (python:) version: 3.7
+            pythonversion=$(grep '^[ \t]*version:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ $pythonversion == *"3.7"* ]]; then
+              log_failure_msg "FAIL Setting '(python:) version: 3.7' found in $filename. Please remove it."
+              exitstatus="1"
+            else
+              log_success_msg "INFO Setting '(python:) version: 3.7' not found in $filename."
+            fi
+            unset pythonversion
+
+            # obsolete parameter: submodules:
+            submodules=$(grep '^[ \t]*submodules:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ $submodules == *"submodules:"* ]]; then
+              log_failure_msg "FAIL Setting 'submodules:' found in $filename. Please remove it."
+              exitstatus="1"
+            else
+              log_success_msg "INFO Setting 'submodules:' not found in $filename."
+            fi
+            unset submodules
+
+            # required parameter: (build:) os:
+            buildos=$(grep '^[ \t]*os:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ ! $buildos == *"ubuntu-20.04"* ]]; then
+              log_failure_msg "FAIL Setting '(build:) os: ubuntu-20.04' missing in $filename. Please add it."
+              exitstatus="1"
+            else
+              log_success_msg "INFO Setting '(build:) os: ubuntu-20.04' found in $filename."
+            fi
+            unset buildos
+
+            # required parameter: (build: tools:) python
+            buildtoolspython=$(grep '^[ \t]*python:' $filename | sed -e 's/^[ \t]*//' | sed -e 's/;$//');
+            if [[ ! $buildtoolspython == *\"3.8\"* ]]; then
+              log_failure_msg "FAIL Setting '(build: tools:) python: \"3.8\"' missing in $filename. Please add it."
+              exitstatus="1"
+            else
+              log_success_msg "INFO Setting '(build: tools:) python: \"3.8\"' found in $filename."
+            fi
+            unset buildtoolspython
+          fi
+
           unset filename
           # message, end
           if [ "$exitstatus" = "0" ]; then
