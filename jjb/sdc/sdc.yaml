@@ -27,6 +27,11 @@
     name: sdc
     project-name: "sdc"
     jobs:
+      - "{project-name}-{stream}-{area}-verify-shell" :
+          # This is to ensure all script are Python 3 compatible
+          area: verify
+          build-timeout: 45
+          script: !include-raw-escape: "python3-verify.sh"
       - "{project-name}-{stream}-verify-java":
           # this build is unit test only (Verify 1/2)
           mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
