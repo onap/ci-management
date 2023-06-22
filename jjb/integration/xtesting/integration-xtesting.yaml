@@ -39,8 +39,8 @@
     stream:
       - "master":
           branch: "master"
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
       - "kohn":
           branch: "kohn"
 
@@ -121,8 +121,8 @@
       - "master":
           branch: "master"
           files: ""
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
           files: ""
       - "kohn":
           branch: "kohn"
