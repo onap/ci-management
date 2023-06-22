@@ -1,0 +1,9 @@
+Verified+1: ONAP GitHub Actions <ecomp-jobbuilder@jenkins.openecomp.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Andreas Geissler <andreas-geissler@telekom.de>
+Code-Review+2: Cedric Ollivier <cedric.ollivier@orange.com>
+Submitted-by: Cedric Ollivier <cedric.ollivier@orange.com>
+Submitted-at: Thu, 22 Jun 2023 12:19:43 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/135087
+Project: ci-management
+Branch: refs/heads/master
