@@ -65,3 +65,7 @@
     container-staging-registry: nexus3.onap.org:10004
     # the quotes here are REQUIRED
     container-push-registry: "{container-snapshot-registry}"
+
+    os-cloud: vex
+    branch: master
+    distribution_branch: "$GERRIT_BRANCH"
