@@ -45,7 +45,7 @@ on:
 jobs:
   call-gerrit-ci-management-merge:
     # yamllint disable-line rule:line-length
-    uses: lfit/releng-reusable-workflows/.github/workflows/gerrit-ci-management-merge.yaml@3c77f3b31647e3494e7ca37602e4f31de0c52e28
+    uses: lfit/releng-reusable-workflows/.github/workflows/gerrit-ci-management-merge.yaml@main
     with:
       GERRIT_BRANCH: ${{ inputs.GERRIT_BRANCH }}
       GERRIT_CHANGE_ID: ${{ inputs.GERRIT_CHANGE_ID }}
