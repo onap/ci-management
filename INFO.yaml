@@ -31,11 +31,6 @@ repositories:
   - ci-management
 committers:
   - <<: *onap_releng_ptl
-  - name: "Bengt Thuree"
-    email: "bthuree@linuxfoundation.org"
-    company: "LF"
-    id: "bthuree"
-    timezone: "Australia/Melbourne"
   - name: "Andrew Grimberg"
     email: "agrimberg@linuxfoundation.org"
     company: "LF"
