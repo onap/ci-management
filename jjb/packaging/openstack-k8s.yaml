@@ -1,0 +1,28 @@
+---
+- project:
+    name: packaging-k8s
+    project: ci-management
+    project-name: ci-management
+    container-infra-prefix: "registry.public.yul1.vexxhost.net/magnum/"
+    cloud-provider-tag: "v1.18.0"
+    etcd-volume-size: "20"
+    build-node: ubuntu2004-helm-2c-1g
+    boot-volume-size: 40
+    cluster-settle-time: 1m
+    cluster-template-name: "k8s-v1.23.17"
+    helm-client-url: "https://get.helm.sh/helm-v3.8.2-linux-amd64.tar.gz"
+    helm-sha256: "6cb9a48f72ab9ddfecab88d264c2f6508ab3cd42d9c09666be16a7bf006bed7b"
+    helm-version: "v3.8.2"
+    k8s-version: v1.16.0
+    keypair: onap-k8s-ksandi
+    kube-tag: "v1.23.17"
+    master-count: 1
+    master-flavor: v3-standard-8
+    node-count: 2
+    node-flavor: v3-standard-8
+    openstack-cloud: vex
+    master-lb-floating-ip-enabled: "false"
+    build-timeout: 360
+    openstack-k8s-deploy-script: !include-raw-escape: openstack-k8s-deploy-helm.sh
+    jobs:
+      - "{project-name}-k8s-onap-deploy-test"
