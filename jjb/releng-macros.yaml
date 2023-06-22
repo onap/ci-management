@@ -1,0 +1,74 @@
+---
+- parameter:
+    name: onap-infra-parameters
+    parameters:
+      - string:
+          name: PROJECT
+          default: "{project}"
+          description: "Parameter to identify an ONAP Gerrit project"
+      - string:
+          name: ARCHIVE_ARTIFACTS
+          # Before adding more here, beware of https://jira.linuxfoundation.org/browse/RELENG-280
+          default: >
+            {artifacts}
+            **/target/surefire-reports/*-output.txt
+            **/target/failsafe-reports/failsafe-summary.xml
+            **/hs_err_*.log
+            **/target/feature/feature.xml
+          # TODO: **/*.hprof is too large, compress with xz first
+          description: |
+            Space separated glob patterns for artifacts to archive
+      - string:
+          name: GERRIT_PROJECT
+          default: "{project}"
+          description: "GERRIT_PROJECT parameter if not given by trigger"
+      - string:
+          name: GERRIT_BRANCH
+          default: "{branch}"
+          description: "JJB configured GERRIT_BRANCH parameter"
+      - string:
+          name: GERRIT_REFSPEC
+          default: "{refspec}"
+          description: |
+            Gerrit reference to checkout (ex: refs/heads/master,
+            refs/changes/48/61548/1 where 61548 is Gerrit change ID, 1 is
+            patch number and 48 is last two digits of change ID)
+      - string:
+          name: STACK_NAME
+          default: "$SILO-$JOB_NAME-$BUILD_NUMBER"
+          description: "Used by Heat to generate a unique stack & vm name"
+      - string:
+          name: OS_CLOUD
+          default: "{os-cloud}"
+          description: |
+            The name of a cloud configuration in clouds.yaml. OS_CLOUD is a
+            variable name that is significant to openstack client as a
+            environment variable. Please refer to the documentation for
+            further details.
+            https://docs.openstack.org/developer/python-openstackclient/
+
+- wrapper:
+    # This wrapper is required for all jobs as it configures the wrappers
+    # needed by ONAP infra.
+    name: onap-infra-wrappers
+    wrappers:
+      - mask-passwords
+      - config-file-provider:
+          files:
+            - file-id: npmrc
+              target: "$HOME/.npmrc"
+            - file-id: pipconf
+              target: "$HOME/.config/pip/pip.conf"
+            - file-id: clouds-yaml
+              target: "$HOME/.config/openstack/clouds.yaml"
+      - timeout:
+          type: absolute
+          timeout: "{build-timeout}"
+          timeout-var: "BUILD_TIMEOUT"
+          fail: true
+      - timestamps
+      - ssh-agent-credentials:
+          users:
+            - "onap-jenkins-ssh"
+      - openstack:
+          single-use: true
