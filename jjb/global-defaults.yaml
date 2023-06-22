@@ -65,3 +65,65 @@
     container-staging-registry: nexus3.onap.org:10004
     # the quotes here are REQUIRED
     container-push-registry: "{container-snapshot-registry}"
+
+    os-cloud: vex
+    branch: master
+    distribution_branch: "$GERRIT_BRANCH"
+
+    # defaults for parameters installing openstack for csit jobs
+    devstack-hash: ""
+    create-initial-networks: "False"
+    disable-onap-l3-service-plugin: "no"
+    disable-openstack-services: ""
+    enable-networking-l2gw: "no"
+    enable-openstack-plugins: "networking-onap"
+    enable-openstack-services: ""
+    enable-openstack-compute-services: ""
+    enable-openstack-network-services: "neutron,neutron-api,neutron-dhcp,neutron-metadata-agent"
+    enable-gre-type-driver: "no"
+    ipsec-vxlan-tunnels-enabled: "no"
+    lbaas-service-provider: ""
+    num-openstack-sites: 1
+    onap-ml2-driver-version: "v1"
+    onap-ml2-port-binding: "network-topology"
+    public-bridge: "br-physnet1"
+    public-physical-network: "physnet1"
+    security-group-mode: "none"
+    tenant-network-type: "vxlan"
+    onap-sfc-driver: "onap"
+    onap-snat-mode: "controller"
+    group-add-mod-enabled: "false"
+    enable-itm-direct-tunnels: "false"
+    openstack_legacy_default_network_services: "q-dhcp,q-meta,q-svc"
+    os-cmb-cnt: 1
+    os-ctl-cnt: 0
+    os-cmp-cnt: 0
+    os-std-topo: "0cmb-1ctl-2cmp"
+    ovs-install: ""
+
+    # Distribution bundle URL
+    bundle-url: "last"
+    repo-url: ""
+    install-features: ""
+    sm-repos: ""
+    sm-features: ""
+
+    # Elasticsearch attribute
+    elasticsearch-attribute: "disabled"
+
+    # CSIT configuration
+    onap_system_count: 1
+    onap_system_flavor: "v3-standard-4"
+    onap_system_image: "ZZCI - CentOS Stream 8 - builder - x86_64 - 20230610-033506.215"
+    controller-max-mem: "2048m"
+    openstack_system_count: 1
+    openstack_system_flavor: "v3-standard-4"
+    openstack_system_image: "ZZCI - CentOS 7 - devstack - x86_64 - 20230616-142246.919"
+    openstack_system2_count: 0
+    openstack_system2_flavor: "v3-standard-2"
+    openstack_system2_image: "ZZCI - CentOS 7 - devstack - x86_64 - 20230616-142246.919"
+    tools_system_count: 1
+    tools_system_flavor: "v3-standard-2"
+    tools_system_image: "ZZCI - Ubuntu 18.04 - mininet-ovs-28 - x86_64 - 20230401-180107.945"
+    openstack_stein_system_image: "ZZCI - CentOS 7 - devstack-stein - x86_64 - 20221101-010107.368"
+    openstack_rocky_system_image: "ZZCI - CentOS 7 - devstack-rocky - x86_64 - 20221101-000109.537"
