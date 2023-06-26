@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1de06a13_046970b5",
+        "filename": "jjb/sdc/sdc-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-06-26T16:33:37Z",
+      "side": 1,
+      "message": "There is no template defined for {project-name}-ui-{stream}-verify-java according to JJB or my own grepping of the code base.\n\nthe {project-name}-{stream}-verify-java is a custom job to ONAP defined in ./ci-management/jjb/global-templates-java.yaml and looking through that there is no \"ui\" version of it. Please select an already defined template for use, or develop the new \"ui\" template source first as a separate change before trying to use it.",
+      "revId": "4f38029b1cd480d93aa01e986996b0bba075e718",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
