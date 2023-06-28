@@ -7,7 +7,7 @@
           subproject: ui
           mvn-goals: clean install
           # yamllint disable-line rule:line-length
-          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,fast-build,run-integration-tests-ui"
+          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,run-integration-tests-ui"
           build-node: "ubuntu1804-docker-8c-16g"
           archive-artifacts: >
             **/*.log
@@ -21,7 +21,7 @@
           subproject: api
           mvn-goals: clean install
           # yamllint disable-line rule:line-length
-          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,fast-build,run-integration-tests-api"
+          mvn-params: "-Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/ -Ddocker.skip.push=true -P docker,run-integration-tests-api"
           build-node: "ubuntu1804-docker-8c-16g"
           archive-artifacts: >
             **/*.log
