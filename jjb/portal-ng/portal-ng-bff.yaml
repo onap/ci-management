@@ -24,3 +24,12 @@
     stream:
       - "master":
           branch: "master"
+
+- project:
+    name: portal-ng-bff-docker
+    project-name: "portal-ng-bff"
+    project: "portal-ng/bff"
+    branch: "master"
+    container-tag-method: latest
+    jobs:
+      - "{project-name}-gerrit-docker-jobs"
