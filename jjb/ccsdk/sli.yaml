@@ -37,6 +37,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
+    java-version: openjdk17
     build-node: centos8-builder-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
