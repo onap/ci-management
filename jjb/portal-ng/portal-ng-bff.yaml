@@ -24,6 +24,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-settings: "portal-ng-bff-settings"
 
 - project:
     name: portal-ng-bff-docker
@@ -37,4 +38,4 @@
     stream:
       - "master":
           branch: "master"
-    mvn-settings: "whatever"
+    mvn-settings: "portal-ng-bff-settings"
