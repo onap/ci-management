@@ -24,7 +24,7 @@
       - "master":
           branch: "master"
       - "kohn":
-          branch: "kohn"
+          branch: "london"
     mvn-settings: "dmaap-buscontroller-settings"
     files: "**"
     archive-artifacts: ""

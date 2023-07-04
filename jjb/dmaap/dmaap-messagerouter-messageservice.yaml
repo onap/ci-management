@@ -19,7 +19,7 @@
       - "master":
           branch: "master"
       - "kohn":
-          branch: "kohn"
+          branch: "london"
     mvn-settings: "dmaap-messagerouter-messageservice-settings"
     java-version: openjdk11
     files: "**"

@@ -19,7 +19,7 @@
       - "master":
           branch: "master"
       - "kohn":
-          branch: "kohn"
+          branch: "london"
     mvn-settings: "dmaap-datarouter-settings"
     files: "**"
     archive-artifacts: ""
