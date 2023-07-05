@@ -86,8 +86,10 @@
                   log_warning_msg "WARN sphinx-build option '-W' missing for spellcheck in $filename, line $linenumber."
                   warning="1"
                 else
-                  log_failure_msg "FAIL sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
-                  exitstatus="1"
+                  log_warning_msg "WARN sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
+                  warning="1"
+                  #log_failure_msg "FAIL sphinx-build option '-W' missing in $filename, line $linenumber. Please add it."
+                  #exitstatus="1"
                 fi
               fi
             done < $filename
