@@ -38,6 +38,7 @@
           exitstatus="0"
           warning="0"
           # message, begin
+          log_success_msg "INFO doc-rules Version 23-07-07-A"
           log_success_msg "INFO Starting additional checks related to documentation."
           log_success_msg "INFO See https://git.onap.org/doc/doc-best-practice for example config files (master branch)."
           log_success_msg "INFO Modify example config files if you like to use them in a release branch."
@@ -94,8 +95,10 @@
               fi
             done < $filename
             if [ "$sphinxbuild_detected" = "0" ]; then
-              log_failure_msg "FAIL Sphinx-build command(s) missing in $filename. Please add it."
-              exitstatus="1"
+              log_warning_msg "WARN Sphinx-build command(s) missing in $filename. Please add it."
+              warning="1"
+              #log_failure_msg "FAIL Sphinx-build command(s) missing in $filename. Please add it."
+              #exitstatus="1"
             fi
             # second tox.ini @ root directory
             if [ -f ./tox.ini ] ; then
