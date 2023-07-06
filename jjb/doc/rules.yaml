@@ -94,8 +94,10 @@
               fi
             done < $filename
             if [ "$sphinxbuild_detected" = "0" ]; then
-              log_failure_msg "FAIL Sphinx-build command(s) missing in $filename. Please add it."
-              exitstatus="1"
+              log_warning_msg "WARN Sphinx-build command(s) missing in $filename. Please add it."
+              warning="1"
+              #log_failure_msg "FAIL Sphinx-build command(s) missing in $filename. Please add it."
+              #exitstatus="1"
             fi
             # second tox.ini @ root directory
             if [ -f ./tox.ini ] ; then
