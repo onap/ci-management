@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Verified+1: ONAP GitHub Actions <ecomp-jobbuilder@jenkins.openecomp.org>
+Code-Review+2: Matthew Watkins <mwatkins@linuxfoundation.org>
+Submitted-by: Thomas Kulik <thomas.kulik@telekom.de>
+Submitted-at: Thu, 06 Jul 2023 04:03:49 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/135336
+Project: ci-management
+Branch: refs/heads/master
