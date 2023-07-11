@@ -19,6 +19,7 @@
     project-name: "portal-ng-bff"
     project: "portal-ng/bff"
     branch: "master"
+    build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-gradle-build
     stream:
