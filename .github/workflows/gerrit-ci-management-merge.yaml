@@ -58,3 +58,4 @@ jobs:
       GERRIT_REFSPEC: ${{ inputs.GERRIT_REFSPEC }}
     secrets:
       JOBBUILDER_PROD_PSW: ${{ secrets.JOBBUILDER_PROD_PSW }}
+      GERRIT_SSH_PRIVKEY: ${{ secrets.GERRIT_SSH_PRIVKEY }}
