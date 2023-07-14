@@ -2,9 +2,27 @@
 # Ensure we fail the job if any steps fail
 # Do not set -u as DOCKER_ARGS may be unbound
 set -e -o pipefail
+set -x
 
 FULL_DATE=`date +'%Y%m%dT%H%M%S'`
 IMAGE_VERSION=`xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
+
+function get_image_version_maven() {
+  echo `xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
+}
+function get_image_version_gradle() {
+  echo `cat build.gradle | grep -o 'version = [^,]*' | tr -d ' '| cut -d "=" -f 2`
+}
+
+if [ -f "pom.xml" ]; then
+    IMAGE_VERSION=`get_image_version_maven`
+    echo "Image version extracted from pom.xml"
+elif [ -f "build.gradle" ]; then
+    IMAGE_VERSION=`get_image_version_gradle`
+    echo "Image version extracted from build.gradle"
+else
+    echo "Could not extract image version from build file"
+fi
 
 case "$BUILD_MODE" in
    "STAGING")
