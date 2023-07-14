@@ -1,0 +1,7 @@
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Verified+1: ONAP GitHub Actions <ecomp-jobbuilder@jenkins.openecomp.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Fri, 14 Jul 2023 15:17:50 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/135473
+Project: ci-management
+Branch: refs/heads/master
