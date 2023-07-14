@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb1719d4_f9e58ab4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-07-14T15:36:32Z",
+      "side": 1,
+      "message": "I believe this is a local docker script that is no longer in use. Global-jjb uses https://github.com/lfit/releng-global-jjb/tree/master/shell",
+      "revId": "b266f65a843ef888fdf72bf39d64f9ad731063a6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
