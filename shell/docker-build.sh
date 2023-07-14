@@ -4,7 +4,16 @@
 set -e -o pipefail
 
 FULL_DATE=`date +'%Y%m%dT%H%M%S'`
-IMAGE_VERSION=`xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
+
+if [ -f "pom.xml" ]; then
+    IMAGE_VERSION=`xmlstarlet sel -N "x=http://maven.apache.org/POM/4.0.0" -t -v "/x:project/x:version" pom.xml | cut -c1-5`
+    echo "Image version extracted from pom.xml"
+elif [ -f "build.gradle" ]; then
+    IMAGE_VERSION=`cat build.gradle | grep -o 'version = [^,]*' | tr -d ' '| cut -d "=" -f 2`
+    echo "Image version extracted from build.gradle"
+else
+    echo "Could not extract image version from build file"
+fi
 
 case "$BUILD_MODE" in
    "STAGING")
