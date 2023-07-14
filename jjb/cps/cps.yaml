@@ -115,7 +115,6 @@
     branch: "master"
     mvn-settings: "cps-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: cps-sonar-verify
@@ -135,4 +134,3 @@
     branch: "master"
     mvn-settings: "cps-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
