@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e18fab2f_75d5e524",
+        "filename": "jjb/packaging/openstack-k8s-template.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-07-18T19:40:56Z",
+      "side": 1,
+      "message": "The latest jjb issue is that these values are not being accepted as default. In this part of the definition, you need to define actual default values instead of calling the variable recursively.",
+      "range": {
+        "startLine": 158,
+        "startChar": 0,
+        "endLine": 177,
+        "endChar": 40
+      },
+      "revId": "c997a316ba2ad2c4d76a11bb291b76ed8f0bb779",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
