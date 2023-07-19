@@ -1,0 +1,15 @@
+---
+- project:
+    name: portal-ng-e2e-project-view
+    project-name: portal-ng-e2e
+    views:
+      - project-view
+
+- project:
+    name: portal-ng-e2e-info
+    project: portal-ng/e2e
+    project-name: portal-ng-e2e
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
