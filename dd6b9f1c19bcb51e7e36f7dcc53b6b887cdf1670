@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "de4912b6_05b6e51c",
         "filename": "jjb/so/so-adapters-so-cnf-adapter.yaml",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "wrong indentation in this line, it looks like the cause of the failing job",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "9afb1e9a_6248149a",
         "filename": "jjb/so/so-adapters-so-etsi-sol003-adapter.yaml",
@@ -31,10 +32,10 @@
       "side": 1,
       "message": "wrong indentation in this line, it looks like the cause of the failing job",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "9bd774bf_bb45a552",
         "filename": "jjb/so/so-adapters-so-etsi-sol005-adapter.yaml",
@@ -48,10 +49,10 @@
       "side": 1,
       "message": "wrong indentation in this line, it looks like the cause of the failing job",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "82089d65_f024a933",
         "filename": "jjb/so/so-adapters-so-nssmf-adapter.yaml",
@@ -65,10 +66,10 @@
       "side": 1,
       "message": "this looks like a typo",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "64f23dbf_a8046bca",
         "filename": "jjb/so/so-adapters-so-nssmf-adapter.yaml",
@@ -82,10 +83,10 @@
       "side": 1,
       "message": "wrong indentation in this line, it looks like the cause of the failing job",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "0f438ffe_4704f95b",
         "filename": "jjb/so/so-so-etsi-nfvo.yaml",
@@ -99,8 +100,59 @@
       "side": 1,
       "message": "seems like there are unnecessary blank spaces at the end of this line",
       "revId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
-      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
-      "unresolved": true
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ],
+  "submitRequirementResults": [
+    {
+      "submitRequirement": {
+        "name": "Code-Review",
+        "description": {
+          "value": "A maximum \u0027Code-Review\u0027 vote from a non-uploader is required for the \u0027Code-Review\u0027 label. A minimum vote is blocking."
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Code-Review\u003dMAX,user\u003dnon_uploader AND -label:Code-Review\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": false
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX,user=non_uploader AND -label:Code-Review=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Code-Review=MAX,user=non_uploader","label:Code-Review=MIN"]}
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
+    },
+    {
+      "submitRequirement": {
+        "name": "Verified",
+        "description": {
+          "value": "A maximum \u0027Verified\u0027 vote from \u0027ONAP Required GHA\u0027 and one other CI or committer that is a non-uploader is required for the \u0027Verified\u0027 label. A minimum vote is blocking."
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Verified\u003dMAX,user\u003donap.required.gha AND label:Verified\u003dMAX,count\u003e\u003d2 AND label:Verified\u003dMAX,user\u003dnon_uploader AND -label:Verified\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": false
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Verified=MAX,user=onap.required.gha AND label:Verified=MAX,count>=2 AND label:Verified=MAX,user=non_uploader AND -label:Verified=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Verified=MIN"],"failingAtoms":["label:Verified=MAX,user=onap.required.gha","label:Verified=MAX,user=non_uploader","label:Verified=MAX,count>=2"]}
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": "dd6b9f1c19bcb51e7e36f7dcc53b6b887cdf1670",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
     }
   ]
 }
