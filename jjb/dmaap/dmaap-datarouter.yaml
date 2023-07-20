@@ -1,6 +1,30 @@
 ---
 - project:
-    name: dmaap-datarouter-java
+    name: dmaap-datarouter-java-11
+    project-name: "dmaap-datarouter"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-docker-stage:
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-goals: "clean package -P docker docker:build docker:push"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          cron: ""
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+    project: "dmaap/datarouter"
+    stream:
+      - "london":
+          branch: "london"
+    mvn-settings: "dmaap-datarouter-settings"
+    files: "**"
+    archive-artifacts: ""
+    java-version: openjdk11
+
+- project:
+    name: dmaap-datarouter-java-17
     project-name: "dmaap-datarouter"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -18,12 +42,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     mvn-settings: "dmaap-datarouter-settings"
     files: "**"
     archive-artifacts: ""
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: dmaap-datarouter-csit-ssl
@@ -58,7 +80,7 @@
     mvn-settings: "dmaap-datarouter-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: dmaap-datarouter-clm
@@ -69,7 +91,7 @@
     project-name: "dmaap-datarouter"
     branch: "master"
     mvn-settings: "dmaap-datarouter-settings"
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: dmaap-datarouter-info
