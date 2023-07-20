@@ -23,7 +23,7 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
+      - "london":
           branch: "london"
     mvn-settings: "dmaap-buscontroller-settings"
     files: "**"

@@ -16,7 +16,7 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
+      - "london":
           branch: "london"
     mvn-settings: "dmaap-messagerouter-dmaapclient-settings"
     files: "**"
