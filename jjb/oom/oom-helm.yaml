@@ -15,8 +15,8 @@
           branch: "master"
       - "kohn":
           branch: "kohn"
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
 
     jobs:
       - "{project-name}-{stream}-image-verify":
@@ -50,8 +50,8 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
 
     jobs:
       - "{project-name}-{stream}-verify-make-{helm_bin}":

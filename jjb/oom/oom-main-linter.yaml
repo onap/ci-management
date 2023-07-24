@@ -33,5 +33,5 @@
           branch: "master"
       - "kohn":
           branch: "kohn"
-      - "jakarta":
-          branch: "jakarta"
+      - "london":
+          branch: "london"
