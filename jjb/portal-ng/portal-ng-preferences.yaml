@@ -13,3 +13,32 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: portal-ng-preferences-gradle-build
+    project-name: "portal-ng-preferences"
+    project: "portal-ng/preferences"
+    branch: "master"
+    build-node: ubuntu1804-docker-8c-8g
+    jobs:
+      - gerrit-gradle-build
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-preferences-settings"
+    wrapper: true
+
+- project:
+    name: portal-ng-preferences-docker
+    project-name: "portal-ng-preferences"
+    project: "portal-ng/preferences"
+    branch: "master"
+    build-node: ubuntu1804-docker-8c-8g
+    docker-name: "onap/portal-ng/preferences"
+    container-tag-method: latest
+    jobs:
+      - "{project-name}-gerrit-docker-jobs"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-preferences-settings"

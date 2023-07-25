@@ -15,7 +15,7 @@
       - gerrit-info-yaml-verify
 
 - project:
-    name: portal-ng-bff-shell
+    name: portal-ng-bff-gradle-build
     project-name: "portal-ng-bff"
     project: "portal-ng/bff"
     branch: "master"
@@ -26,6 +26,7 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-bff-settings"
+    wrapper: true
 
 - project:
     name: portal-ng-bff-docker
