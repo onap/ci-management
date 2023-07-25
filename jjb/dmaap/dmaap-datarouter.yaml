@@ -79,7 +79,6 @@
     branch: "master"
     mvn-settings: "dmaap-datarouter-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk17
 
 - project:
@@ -92,6 +91,8 @@
     branch: "master"
     mvn-settings: "dmaap-datarouter-settings"
     java-version: openjdk17
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
 
 - project:
     name: dmaap-datarouter-info
