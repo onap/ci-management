@@ -76,5 +76,10 @@ committers:
     company: "Orange"
     id: "ollivier"
     timezone: "Europe/Paris"
+  - name: "Anil Belur"
+    email: "abelur@linuxfoundation.org"
+    company: "Linux Foundation"
+    id: "askb"
+    timezone: "Australia/Melbourne"
 tsc:
   approval: "https://lists.onap.org/pipermail/onap-tsc"
