@@ -13,3 +13,18 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: portal-ng-ui-docker
+    project-name: "portal-ng-ui"
+    project: "portal-ng/ui"
+    branch: "master"
+    build-node: ubuntu1804-docker-8c-8g
+    docker-name: "onap/portal-ng/ui"
+    container-tag-method: latest
+    jobs:
+      - "{project-name}-gerrit-docker-jobs"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-ui-settings"
