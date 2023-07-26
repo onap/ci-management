@@ -68,6 +68,7 @@
           branch: "master"
     jobs:
       - gerrit-pypi-verify
+      - gerrit-pypi-merge
 
 - project:
     name: integration-python-onapsdk-pypi-release
