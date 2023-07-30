@@ -9,6 +9,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
     build-timeout: 90
@@ -30,6 +31,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
     build-timeout: 90
@@ -52,6 +54,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
     build-timeout: 90
@@ -71,6 +74,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
     build-timeout: 90
@@ -90,6 +94,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
     build-timeout: 90
@@ -109,6 +114,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
 
@@ -127,6 +133,7 @@
     project-name: ci-management
     branch: master
     archive-artifacts: "**/*.log"
+    packer-cloud-settings: packer-cloud-env-hcl
 
     build-node: centos8-builder-2c-1g
 
