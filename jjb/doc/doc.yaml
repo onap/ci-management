@@ -4,12 +4,3 @@
     project-name: doc
     views:
       - project-view
-
-- project:
-    name: doc-info
-    project-name: doc
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: doc
-    branch: master

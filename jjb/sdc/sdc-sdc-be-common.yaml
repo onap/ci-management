@@ -63,12 +63,3 @@
       - "master":
           branch: "master"
     mvn-settings: "sdc-sdc-be-common-settings"
-
-- project:
-    name: sdc-sdc-be-common-info
-    project-name: sdc-sdc-be-common
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdc/sdc-be-common
-    branch: master

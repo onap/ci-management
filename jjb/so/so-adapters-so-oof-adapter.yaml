@@ -6,14 +6,6 @@
       - project-view
 
 - project:
-    name: so-adapters-so-oof-adapter-info
-    project: so/adapters/so-oof-adapter
-    project-name: so-adapters-so-oof-adapter
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: so-adapters-so-oof-adapter
     project-name: "so-adapters-so-oof-adapter"
     jobs:

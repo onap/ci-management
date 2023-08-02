@@ -71,12 +71,3 @@
           branch: "master"
     mvn-settings: "aai-schema-service-settings"
     mvn-version: "mvn36"
-
-- project:
-    name: aai-schema-service-info
-    project-name: aai-schema-service
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/schema-service
-    branch: master

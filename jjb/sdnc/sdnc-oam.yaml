@@ -94,12 +94,3 @@
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-
-- project:
-    name: sdnc-oam-info
-    project-name: sdnc-oam
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdnc/oam
-    branch: master

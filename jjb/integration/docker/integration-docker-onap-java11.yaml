@@ -1,14 +1,5 @@
 ---
 - project:
-    name: integration-docker-onap-java-info
-    project-name: integration-docker-onap-java
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration/docker/onap-java11
-    branch: master
-
-- project:
     name: integration-docker-onap-java-linters
     project: integration/docker/onap-java11
     project-name: integration-docker-onap-java

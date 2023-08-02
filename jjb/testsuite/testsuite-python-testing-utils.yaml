@@ -34,12 +34,3 @@
           pattern: "robotframework-onap/**"
     jobs:
       - "{project-name}-{stream}-{subproject}-verify-python"
-
-- project:
-    name: testsuite-python-testing-utils-info
-    project-name: testsuite-python-testing-utils
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: ubuntu1804-builder-4c-4g
-    project: testsuite/python-testing-utils
-    branch: master

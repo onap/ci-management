@@ -48,15 +48,6 @@
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-    name: vnfsdk-refrepo-info
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "vnfsdk/refrepo"
-    project-name: "vnfsdk-refrepo"
-    branch: "master"
-
-- project:
     name: vnfsdk-refrepo-clm
     java-version: openjdk11
     jobs:

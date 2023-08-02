@@ -46,15 +46,6 @@
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
-    name: vnfsdk-dovetail-integration-info
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "vnfsdk/dovetail-integration"
-    project-name: "vnfsdk-dovetail-integration"
-    branch: "master"
-
-- project:
     name: vnfsdk-dovetail-integration-clm
     jobs:
       - gerrit-maven-clm

@@ -59,12 +59,3 @@
     build-node: centos8-redis-4c-4g
     branch: "master"
     mvn-settings: "modeling-etsicatalog-settings"
-
-- project:
-    name: modeling-etsicatalog-info
-    project-name: modeling-etsicatalog
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: modeling/etsicatalog
-    branch: master

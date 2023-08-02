@@ -76,12 +76,3 @@
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk11
     mvn-version: "mvn36"
-
-- project:
-    name: aai-babel-info
-    project-name: aai-babel
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/babel
-    branch: master

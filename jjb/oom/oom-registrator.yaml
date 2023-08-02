@@ -39,12 +39,3 @@
     project-name: "oom-registrator"
     branch: "master"
     mvn-settings: "oom-registrator-settings"
-
-- project:
-    name: oom-registrator-info
-    project-name: oom-registrator
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: oom/registrator
-    branch: master

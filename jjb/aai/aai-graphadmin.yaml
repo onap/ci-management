@@ -71,12 +71,3 @@
     mvn-settings: "aai-graphadmin-settings"
     mvn-version: "mvn35"
     java-version: openjdk8
-
-- project:
-    name: aai-graphadmin-info
-    project-name: aai-graphadmin
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/graphadmin
-    branch: master

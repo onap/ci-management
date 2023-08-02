@@ -21,15 +21,6 @@
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: vnfsdk-functest-info
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "vnfsdk/functest"
-    project-name: "vnfsdk-functest"
-    branch: "master"
-
-- project:
     name: vnfsdk-functest-clm
     jobs:
       - gerrit-maven-clm

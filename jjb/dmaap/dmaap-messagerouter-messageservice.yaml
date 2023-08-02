@@ -74,12 +74,3 @@
           branch: "master"
     mvn-settings: "dmaap-messagerouter-messageservice-settings"
     java-version: openjdk11
-
-- project:
-    name: dmaap-messagerouter-messageservice-info
-    project-name: dmaap-messagerouter-messageservice
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dmaap/messagerouter/messageservice
-    branch: master

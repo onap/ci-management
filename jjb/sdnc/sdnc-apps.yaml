@@ -138,12 +138,3 @@
     mvn-version: "mvn38"
     mvn-settings: "sdnc-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-
-- project:
-    name: sdnc-apps-info
-    project-name: sdnc-apps
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdnc/apps
-    branch: master

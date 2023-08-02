@@ -1,14 +1,5 @@
 ---
 - project:
-    name: integration-seccom-info
-    project-name: integration-seccom
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration/seccom
-    branch: master
-
-- project:
     name: integration-seccom-linters
     project: integration/seccom
     project-name: integration-seccom
