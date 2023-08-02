@@ -97,16 +97,6 @@
     mvn-opts: "-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g
 
-- project:
-    name: ccsdk-oran-info
-    project: ccsdk/oran
-    project-name: ccsdk-oran
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: ccsdk-oran-sonar
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

@@ -7,14 +7,6 @@
 
 - project:
     name: so-so-admin-cockpit-info
-    project: so/so-admin-cockpit
-    project-name: so-so-admin-cockpit
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: so-so-admin-cockpit
     project-name: "so-so-admin-cockpit"
     jobs:
       - "{project-name}-{stream}-verify-java"

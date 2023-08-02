@@ -1,12 +1,4 @@
 ---
-- project:
-    name: integration-xtesting-info
-    project-name: integration-xtesting
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration/xtesting
-    branch: master
 
 - project:
     name: integration-xtesting-linters

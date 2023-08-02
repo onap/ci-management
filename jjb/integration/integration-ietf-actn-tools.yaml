@@ -9,14 +9,6 @@
     name: integration-ietf-actn-tools-info
     project: integration/ietf-actn-tools
     project-name: integration-ietf-actn-tools
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: integration-ietf-actn-tools-linters
-    project: integration/ietf-actn-tools
-    project-name: integration-ietf-actn-tools
     python-version: python3
     jobs:
       - integration-linters

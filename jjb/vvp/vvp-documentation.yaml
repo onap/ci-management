@@ -6,5 +6,4 @@
     mvn-settings: "vvp-documentation-settings"
     branch: master
     jobs:
-      - gerrit-info-yaml-verify
     build-node: centos8-builder-2c-1g

@@ -7,14 +7,6 @@
 
 - project:
     name: testsuite-cds-mock-ssh-info
-    project: testsuite/cds-mock-ssh
-    project-name: testsuite-cds-mock-ssh
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: testsuite-cds-mock-ssh-linters
     project: "testsuite/cds-mock-ssh"
     project-name: "testsuite-cds-mock-ssh"
     python-version: python3

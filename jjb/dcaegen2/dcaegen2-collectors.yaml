@@ -1,9 +1,1 @@
 ---
-- project:
-    name: dcaegen2-collectors-info
-    project-name: dcaegen2-collectors
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/collectors
-    branch: master

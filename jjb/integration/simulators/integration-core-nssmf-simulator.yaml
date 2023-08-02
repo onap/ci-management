@@ -3,14 +3,6 @@
     name: integration-simulators-core-nssmf-simulator-info
     project: integration/simulators/core-nssmf-simulator
     project-name: integration-simulators-core-nssmf-simulator
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: integration-simulators-core-nssmf-simulator
-    project: integration/simulators/core-nssmf-simulator
-    project-name: integration-simulators-core-nssmf-simulator
     stream:
       - "master":
           branch: "master"

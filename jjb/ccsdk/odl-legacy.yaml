@@ -85,4 +85,3 @@
     build-node: centos8-builder-2c-1g
     branch: master
     jobs:
-      - gerrit-info-yaml-verify

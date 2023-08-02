@@ -7,14 +7,6 @@
 
 - project:
     name: cps-info
-    project: cps
-    project-name: cps
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: cps-clm
     java-version: openjdk17
     mvn-version: "mvn36"
     maven-version: "mvn36"

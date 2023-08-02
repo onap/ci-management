@@ -9,14 +9,6 @@
     name: oom-consul-info
     project: oom/consul
     project-name: oom-consul
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: oom-consul-linters
-    project: oom/consul
-    project-name: oom-consul
     python-version: python3
     jobs:
       - oom-linters

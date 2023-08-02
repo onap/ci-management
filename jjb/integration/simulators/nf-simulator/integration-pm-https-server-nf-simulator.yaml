@@ -62,4 +62,3 @@
     project-name: integration-simulators-nf-simulator-pm-https-server
     build-node: centos8-builder-2c-1g
     jobs:
-      - gerrit-info-yaml-verify

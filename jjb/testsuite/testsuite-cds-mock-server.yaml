@@ -7,14 +7,6 @@
 
 - project:
     name: testsuite-cds-mock-server-info
-    project: testsuite/cds-mock-server
-    project-name: testsuite-cds-mock-server
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: testsuite-cds-mock-server-linters
     project: "testsuite/cds-mock-server"
     project-name: "testsuite-cds-mock-server"
     python-version: python3

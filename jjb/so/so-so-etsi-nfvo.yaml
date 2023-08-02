@@ -7,14 +7,6 @@
 
 - project:
     name: so-so-etsi-nfvo-info
-    project: so/so-etsi-nfvo
-    project-name: so-so-etsi-nfvo
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: so-so-etsi-nfvo
     project-name: "so-so-etsi-nfvo"
     jobs:
       - "{project-name}-{stream}-verify-java"

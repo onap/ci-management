@@ -9,14 +9,6 @@
     name: integration-simulators-ran-nssmf-simulator-info
     project: integration/simulators/ran-nssmf-simulator
     project-name: integration-simulators-ran-nssmf-simulator
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: integration-simulators-ran-nssmf-simulator-linters
-    project: integration/simulators/ran-nssmf-simulator
-    project-name: integration-simulators-ran-nssmf-simulator
     python-version: python3
     jobs:
       - integration-linters

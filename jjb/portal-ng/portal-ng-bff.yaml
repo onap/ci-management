@@ -8,14 +8,6 @@
 - project:
     name: portal-ng-bff-info
     project: portal-ng/bff
-    project-name: portal-ng-bff
-    build-node: centos8-builder-2c-1g
-    branch: master
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: portal-ng-bff-gradle-build
     project-name: "portal-ng-bff"
     project: "portal-ng/bff"
     branch: "master"

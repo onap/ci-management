@@ -11,4 +11,3 @@
     project-name: oom-platform-cert-manager
     build-node: centos8-builder-2c-1g
     jobs:
-      - gerrit-info-yaml-verify

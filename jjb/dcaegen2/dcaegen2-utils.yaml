@@ -56,14 +56,6 @@
     branch: "master"
     mvn-settings: "dcaegen2-utils-settings"
 
-- project:
-    name: dcaegen2-utils-info
-    project-name: dcaegen2-utils
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/utils
-    branch: master
 
 - _cbs_client_pypi_common: &cbs_client_pypi_common
     name: cbs-client-pypi-common

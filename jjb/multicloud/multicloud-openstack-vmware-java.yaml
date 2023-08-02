@@ -68,12 +68,4 @@
     mvn-settings: "multicloud-openstack-vmware-settings"
     disabled: true
 
-- project:
-    name: multicloud-openstack-vmware-info
-    project-name: multicloud-openstack-vmware
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: multicloud/openstack/vmware
-    branch: master
     disabled: true
