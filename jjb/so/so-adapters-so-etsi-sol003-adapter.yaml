@@ -6,14 +6,6 @@
       - project-view
 
 - project:
-    name: so-adapters-so-etsi-sol003-adapter-info
-    project: so/adapters/so-etsi-sol003-adapter
-    project-name: so-adapters-so-etsi-sol003-adapter
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: so-adapters-so-etsi-sol003-adapter
     project-name: "so-adapters-so-etsi-sol003-adapter"
     jobs:

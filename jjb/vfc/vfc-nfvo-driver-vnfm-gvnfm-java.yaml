@@ -61,11 +61,3 @@
     branch: "master"
     mvn-settings: "vfc-nfvo-driver-vnfm-gvnfm-settings"
 
-- project:
-    name: vfc-nfvo-driver-vnfm-gvnfm-info
-    project-name: vfc-nfvo-driver-vnfm-gvnfm
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: vfc/nfvo/driver/vnfm/gvnfm
-    branch: master

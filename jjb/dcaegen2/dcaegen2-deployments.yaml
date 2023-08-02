@@ -40,11 +40,3 @@
     branch: "master"
     mvn-settings: "dcaegen2-deployments-settings"
 
-- project:
-    name: dcaegen2-deployments-info
-    project-name: dcaegen2-deployments
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/deployments
-    branch: master

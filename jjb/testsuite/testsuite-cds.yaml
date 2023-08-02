@@ -1,13 +1,5 @@
 ---
 - project:
-    name: testsuite-cds-info
-    project: testsuite/cds
-    project-name: testsuite-cds
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: testsuite-cds-linters
     project: "testsuite/cds"
     project-name: "testsuite-cds"

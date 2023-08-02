@@ -1,12 +1,4 @@
 ---
-- project:
-    name: integration-5G-core-nf-simulator-info
-    project-name: integration-5G-core-nf-simulator
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration/simulators/5G-core-nf-simulator
-    branch: master
 
 - project:
     name: integration-5G-core-nf-simulator

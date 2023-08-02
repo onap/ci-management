@@ -1,12 +1,4 @@
 ---
-- project:
-    name: sdc-sdc-pubsub-info
-    project-name: "sdc-sdc-pubsub"
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "sdc/sdc-pubsub"
-    branch: "master"
 
 - project:
     name: sdc-sdc-pubsub

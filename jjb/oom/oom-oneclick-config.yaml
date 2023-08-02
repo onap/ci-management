@@ -48,11 +48,3 @@
       - shell: !include-raw-escape: oneclick-config-build-docker-image.sh
       - shell: !include-raw-escape: ../include-docker-push.sh
 
-- project:
-    name: oomconfig-info
-    project-name: oomconfig
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: oom
-    branch: master

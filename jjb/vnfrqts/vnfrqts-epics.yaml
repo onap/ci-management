@@ -4,13 +4,3 @@
     project-name: vnfrqts
     views:
       - project-view
-
-- project:
-    name: vnfrqts-epics
-    project: "vnfrqts/epics"
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project-name: "vnfrqts-epics"
-    branch: "master"
-    mvn-settings: "vnfrqts-epics-settings"

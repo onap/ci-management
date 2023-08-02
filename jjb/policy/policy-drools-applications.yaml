@@ -84,11 +84,3 @@
     java-version: openjdk11
     build-node: ubuntu1804-docker-8c-8g
 
-- project:
-    name: policy-drools-applications-info
-    project-name: policy-drools-applications
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: policy/drools-applications
-    branch: master

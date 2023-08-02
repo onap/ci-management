@@ -6,14 +6,6 @@
       - project-view
 
 - project:
-    name: integration-data-provider-info
-    project: integration/data-provider
-    project-name: integration-data-provider
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: integration-data-provider-linters
     project: "integration/data-provider"
     project-name: "integration-data-provider"

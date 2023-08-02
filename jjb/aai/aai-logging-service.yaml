@@ -59,11 +59,3 @@
           branch: "master"
     mvn-settings: "aai-logging-service-settings"
 
-- project:
-    name: aai-logging-service-info
-    project-name: aai-logging-service
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/logging-service
-    branch: master

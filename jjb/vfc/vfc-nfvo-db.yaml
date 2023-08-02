@@ -24,11 +24,3 @@
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
-- project:
-    name: vfc-nfvo-db-info
-    project-name: vfc-nfvo-db
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: vfc/nfvo/db
-    branch: master
