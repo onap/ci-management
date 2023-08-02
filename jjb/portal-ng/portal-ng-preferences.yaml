@@ -8,14 +8,7 @@
 - project:
     name: portal-ng-preferences-info
     project: portal-ng/preferences
-    project-name: portal-ng-preferences
-    build-node: centos8-builder-2c-1g
-    branch: master
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: portal-ng-preferences-gradle-build
     project-name: "portal-ng-preferences"
     project: "portal-ng/preferences"
     branch: "master"

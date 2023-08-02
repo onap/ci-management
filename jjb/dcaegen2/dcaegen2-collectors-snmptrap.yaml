@@ -47,11 +47,4 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
-- project:
-    name: dcaegen2-collectors-snmptrap-info
-    project-name: dcaegen2-collectors-snmptrap
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/collectors/snmptrap
-    branch: master

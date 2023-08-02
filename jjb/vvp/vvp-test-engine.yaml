@@ -2,14 +2,7 @@
 - project:
     name: vvp-test-engine-info
     project-name: "vvp-test-engine"
-    project: "vvp/test-engine"
-    mvn-settings: "vvp-test-engine-settings"
-    branch: master
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-
-- project:
     name: vvp-test-engine-sonar
     jobs:
       - gerrit-maven-sonar

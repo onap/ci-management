@@ -79,12 +79,5 @@
     mvn-settings: "sdc-sdc-workflow-designer-settings"
     java-version: openjdk11
 
-- project:
-    name: sdc-sdc-workflow-designer-info
-    project-name: sdc-sdc-workflow-designer
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdc/sdc-workflow-designer
-    branch: master
     java-version: openjdk11

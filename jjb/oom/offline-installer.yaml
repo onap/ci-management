@@ -15,14 +15,7 @@
       - "{project-name}-{stream}-review":
           build_script: "{offline_review_bootstrap}"
 
-- project:
-    name: offline-installer-info
-    project-name: offline-installer
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: oom/offline-installer
-    branch: master
 
 - project:
     name: offline-installer-linters

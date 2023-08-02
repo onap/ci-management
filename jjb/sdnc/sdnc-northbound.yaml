@@ -106,11 +106,4 @@
     mvn-version: "mvn38"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
 
-- project:
-    name: sdnc-northbound-info
-    project-name: sdnc-northbound
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdnc/northbound
-    branch: master

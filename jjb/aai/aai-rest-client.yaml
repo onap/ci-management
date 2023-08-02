@@ -59,11 +59,4 @@
           branch: "master"
     mvn-settings: "aai-rest-client-settings"
 
-- project:
-    name: aai-rest-client-info
-    project-name: aai-rest-client
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/rest-client
-    branch: master

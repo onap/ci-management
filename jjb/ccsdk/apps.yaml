@@ -128,11 +128,4 @@
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: ubuntu1804-builder-4c-4g
 
-- project:
-    name: ccsdk-apps-info
-    project-name: ccsdk-apps
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: ccsdk/apps
-    branch: master

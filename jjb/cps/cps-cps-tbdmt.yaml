@@ -7,14 +7,7 @@
 
 - project:
     name: cps-tbdmt-info
-    project: cps/cps-tbdmt
-    project-name: cps-cps-tbdmt
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: cps-tbdmt-clm
     java-version: openjdk11
     mvn-version: "mvn36"
     maven-version: "mvn36"

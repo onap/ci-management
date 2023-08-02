@@ -16,11 +16,4 @@
           trigger_jobs:
     robot-options: ""
 
-- project:
-    name: integration-csit-info
-    project-name: integration-csit
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration/csit
-    branch: master

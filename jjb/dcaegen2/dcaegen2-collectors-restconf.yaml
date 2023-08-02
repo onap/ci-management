@@ -70,11 +70,4 @@
     mvn-settings: "dcaegen2-collectors-restconf-settings"
 
 - project:
-    name: dcaegen2-collectors-restconf-info
-    project-name: dcaegen2-collectors-restconf
-    java-version: openjdk11
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/collectors/restconf
-    branch: master

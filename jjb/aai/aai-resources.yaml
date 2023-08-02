@@ -76,12 +76,4 @@
     mvn-version: "mvn35"
     java-version: openjdk8
 
-- project:
-    name: aai-resources-info
-    project-name: aai-resources
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/resources
-    branch: master
-    java-version: openjdk8

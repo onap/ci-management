@@ -5,14 +5,7 @@
     views:
       - project-view
 
-- project:
-    name: integration-info
-    project-name: integration
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: integration
-    branch: master
 
 - project:
     name: integration-verify-python

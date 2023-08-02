@@ -59,11 +59,4 @@
     branch: "master"
     mvn-settings: "vfc-gvnfm-vnfres-settings"
 
-- project:
-    name: vfc-gvnfm-vnfres-info
-    project-name: vfc-gvnfm-vnfres
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: vfc/gvnfm/vnfres
-    branch: master

@@ -65,11 +65,4 @@
     mvn-settings: "usecase-ui-intent-analysis-settings"
     java-version: openjdk11
 
-- project:
-    name: usecase-ui-intent-analysis-info
-    project-name: usecase-ui-intent-analysis
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: usecase-ui/intent-analysis
-    branch: master

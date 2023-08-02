@@ -69,12 +69,5 @@
     mvn-settings: "sdc-sdc-tosca-settings"
     java-version: openjdk11
 
-- project:
-    name: sdc-sdc-tosca-info
-    project-name: sdc-sdc-tosca
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdc/sdc-tosca
-    branch: master
     java-version: openjdk11

@@ -66,11 +66,4 @@
     java-version: openjdk11
     sonar-prescan-script: !include-raw-escape: ../ubuntu-latest-nodejs.sh
 
-- project:
-    name: externalapi-nbi-info
-    project-name: externalapi-nbi
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: externalapi/nbi
-    branch: master

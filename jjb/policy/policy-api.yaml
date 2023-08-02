@@ -75,11 +75,4 @@
     mvn-settings: "policy-api-settings"
     java-version: openjdk11
 
-- project:
-    name: policy-api-info
-    project-name: policy-api
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: policy/api
-    branch: master

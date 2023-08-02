@@ -5,14 +5,7 @@
     views:
       - project-view
 
-- project:
-    name: sdc-onap-ui-angular-info
-    project-name: "sdc-onap-ui-angular"
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "sdc/onap-ui-angular"
-    branch: "master"
 
 - project:
     name: sdc-onap-ui-angular

@@ -7,14 +7,7 @@
 
 - project:
     name: so-adapters-so-nssmf-adapter-info
-    project: so/adapters/so-nssmf-adapter
-    project-name: so-adapters-so-nssmf-adapter
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: so-adapters-so-nssmf-adapter
     project-name: "so-adapters-so-nssmf-adapter"
     jobs:
       - "{project-name}-{stream}-verify-java"

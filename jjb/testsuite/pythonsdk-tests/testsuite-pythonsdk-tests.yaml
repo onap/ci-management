@@ -1,12 +1,5 @@
 ---
-- project:
-    name: testsuite-pythonsdk-tests-info
-    project-name: testsuite-pythonsdk-tests
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: testsuite/pythonsdk-tests
-    branch: master
 
 - project:
     name: testsuite-pythonsdk-tests-linters

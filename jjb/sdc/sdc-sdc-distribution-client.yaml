@@ -91,11 +91,4 @@
     mvn-settings: "sdc-sdc-distribution-client-settings"
     java-version: openjdk11
 
-- project:
-    name: sdc-sdc-distribution-client-info
-    project-name: sdc-sdc-distribution-client
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdc/sdc-distribution-client
-    branch: master

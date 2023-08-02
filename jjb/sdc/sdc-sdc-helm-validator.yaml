@@ -7,14 +7,7 @@
 
 - project:
     name: sdc-sdc-helm-validator-info
-    project: sdc/sdc-helm-validator
-    project-name: sdc-sdc-helm-validator
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: sdc-sdc-helm-validator
     project-name: "sdc-sdc-helm-validator"
     java-version: openjdk11
     jobs:

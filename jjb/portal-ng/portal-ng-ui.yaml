@@ -8,14 +8,7 @@
 - project:
     name: portal-ng-ui-info
     project: portal-ng/ui
-    project-name: portal-ng-ui
-    build-node: centos8-builder-2c-1g
-    branch: master
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: portal-ng-ui-docker
     project-name: "portal-ng-ui"
     project: "portal-ng/ui"
     branch: "master"

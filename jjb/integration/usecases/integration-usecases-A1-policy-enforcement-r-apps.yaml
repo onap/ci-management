@@ -1,14 +1,7 @@
 ---
 - project:
     name: integration-usecases-A1-policy-enforcement-r-apps-info
-    project: integration/usecases/A1-policy-enforcement-r-apps
-    project-name: integration-usecases-A1-policy-enforcement-r-apps
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: integration-usecases-A1-policy-enforcement-r-apps-linters
     project: integration/usecases/A1-policy-enforcement-r-apps
     project-name: integration-usecases-A1-policy-enforcement-r-apps
     python-version: python3

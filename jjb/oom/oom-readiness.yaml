@@ -1,12 +1,5 @@
 ---
-- project:
-    name: oom-readiness-info
-    project-name: oom-readiness
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: oom/readiness
-    branch: master
 
 - project:
     name: oom-readiness-linters

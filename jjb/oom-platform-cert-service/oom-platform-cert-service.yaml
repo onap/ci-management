@@ -7,14 +7,7 @@
 
 - project:
     name: oom-platform-cert-service-info
-    project: oom/platform/cert-service
-    project-name: oom-platform-cert-service
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: oom-platform-cert-service
     project-name: "oom-platform-cert-service"
     stream:
       - "master":

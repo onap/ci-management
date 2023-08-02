@@ -58,14 +58,7 @@
     branch: "master"
     mvn-settings: "usecase-ui-nlp-settings"
 
-- project:
-    name: usecase-ui-nlp-info
-    project-name: usecase-ui-nlp
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: usecase-ui/nlp
-    branch: master
 
 - project:
     name: usecase-ui-nlp-project-view

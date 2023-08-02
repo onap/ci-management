@@ -72,14 +72,7 @@
     mvn-version: "mvn35"
     java-version: openjdk8
 
-- project:
-    name: aai-aai-common-info
-    project-name: aai-aai-common
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/aai-common
-    branch: master
 
 - project:
     name: "aai-aai-common-docker"

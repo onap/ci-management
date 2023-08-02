@@ -71,14 +71,7 @@
     mvn-settings: "cli-settings"
     build-node: ubuntu1804-builder-4c-4g
 
-- project:
-    name: cli-info
-    project-name: cli
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: cli
-    branch: master
 
 - project:
     name: cli-sonar-verify

@@ -8,14 +8,7 @@
 - project:
     name: portal-ng-history-info
     project: portal-ng/history
-    project-name: portal-ng-history
-    build-node: centos8-builder-2c-1g
-    branch: master
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: portal-ng-history-gradle-build
     project-name: "portal-ng-history"
     project: "portal-ng/history"
     branch: "master"

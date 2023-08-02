@@ -7,14 +7,7 @@
 
 - project:
     name: cps-ncmp-dmi-plugin-info
-    project: cps/ncmp-dmi-plugin
-    project-name: cps-ncmp-dmi-plugin
-    build-node: centos8-builder-2c-1g
-    jobs:
       - gerrit-info-yaml-verify
-
-- project:
-    name: cps-ncmp-dmi-plugin-java17
     java-version: openjdk17
     mvn-version: mvn36
     maven-version: mvn36

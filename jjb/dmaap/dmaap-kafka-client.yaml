@@ -49,11 +49,4 @@
     mvn-settings: "dmaap-kafka11aaf-settings"
     java-version: openjdk11
 
-- project:
-    name: dmaap-kafka-client-info
-    project-name: dmaap-kafka-client
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dmaap/kafka11aaf
-    branch: master

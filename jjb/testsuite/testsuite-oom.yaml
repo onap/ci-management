@@ -1,9 +1,2 @@
 ---
-- project:
-    name: testsuite-oom
-    project-name: testsuite-oom
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: testsuite/oom
-    branch: master

@@ -94,11 +94,4 @@
     mvn-version: "mvn36"
     maven-version: "mvn36"
 
-- project:
-    name: dmaap-datarouter-info
-    project-name: dmaap-datarouter
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dmaap/datarouter
-    branch: master

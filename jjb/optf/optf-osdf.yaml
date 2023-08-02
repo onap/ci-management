@@ -70,11 +70,4 @@
           branch: "master"
     mvn-settings: "optf-osdf-settings"
 
-- project:
-    name: optf-osdf-info
-    project-name: optf-osdf
-    jobs:
       - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: optf/osdf
-    branch: master
