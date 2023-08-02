@@ -75,11 +75,3 @@
     project-name: dcaegen2-platform-ves-openapi-manager
     views:
       - project-view
-
-- project:
-    name: dcaegen2-platform-ves-openapi-manager-info
-    project: dcaegen2/platform/ves-openapi-manager
-    project-name: dcaegen2-platform-ves-openapi-manager
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify

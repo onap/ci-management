@@ -1,13 +1,5 @@
 ---
 - project:
-    name: dcaegen2-services-info
-    project-name: dcaegen2-services
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/services
-    branch: master
-- project:
     name: dcaegen2-services-release
     project-name: dcaegen2-services
     mvn-settings: dcaegen2-services-settings

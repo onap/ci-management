@@ -120,11 +120,3 @@
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g
 
-- project:
-    name: ccsdk-cds-info
-    project-name: ccsdk-cds
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: ccsdk/cds
-    branch: master

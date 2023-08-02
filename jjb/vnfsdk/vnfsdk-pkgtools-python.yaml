@@ -32,12 +32,3 @@
     mvn-settings: "vnfsdk-pkgtools-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-
-- project:
-    name: vnfsdk-pkgtools-info
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: "vnfsdk/pkgtools"
-    project-name: "vnfsdk-pkgtools"
-    branch: "master"

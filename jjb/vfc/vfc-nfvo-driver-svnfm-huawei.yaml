@@ -59,13 +59,3 @@
     build-node: ubuntu1804-builder-4c-4g
     branch: "master"
     mvn-settings: "vfc-nfvo-driver-vnfm-svnfm-settings"
-
-- project:
-    name: vfc-nfvo-driver-svnfm-huawei-info
-    project-name: vfc-nfvo-driver-svnfm-huawei
-    java-version: openjdk11
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: vfc/nfvo/driver/vnfm/svnfm
-    branch: master

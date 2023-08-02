@@ -6,15 +6,7 @@
       - project-view
 
 - project:
-    name: cps-cps-temporal-info
-    project: cps/cps-temporal
-    project-name: cps-cps-temporal
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
-    name: cps-cps-temporal
+    name: cps-cps-temporal-clm
     java-version: openjdk11
     mvn-version: mvn36
     maven-version: mvn36

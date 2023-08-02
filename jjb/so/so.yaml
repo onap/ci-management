@@ -106,22 +106,3 @@
       - "master":
           branch: "master"
     mvn-settings: "so-settings"
-
-- project:
-    name: so-info
-    project-name: so
-    java-version: openjdk11
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: so
-    stream:
-      - "master":
-          branch: "master"
-          java-version: openjdk11
-      - "london":
-          branch: "london"
-          java-version: openjdk11
-      - "kohn":
-          branch: "kohn"
-          java-version: openjdk11

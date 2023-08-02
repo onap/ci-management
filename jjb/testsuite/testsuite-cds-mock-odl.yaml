@@ -6,14 +6,6 @@
       - project-view
 
 - project:
-    name: testsuite-cds-mock-odl-info
-    project: testsuite/cds-mock-odl
-    project-name: testsuite-cds-mock-odl
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: testsuite-cds-mock-odl-linters
     project: "testsuite/cds-mock-odl"
     project-name: "testsuite-cds-mock-odl"

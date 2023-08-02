@@ -108,11 +108,3 @@
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g
 
-- project:
-    name: ccsdk-sli-info
-    project-name: ccsdk-sli
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: ccsdk/sli
-    branch: master

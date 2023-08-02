@@ -74,11 +74,3 @@
     mvn-version: "mvn36"
     java-version: openjdk11
 
-- project:
-    name: aai-sparky-be-info
-    project-name: aai-sparky-be
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/sparky-be
-    branch: master

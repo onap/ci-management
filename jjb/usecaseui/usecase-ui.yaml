@@ -47,11 +47,3 @@
     branch: "master"
     mvn-settings: "usecase-ui-settings"
 
-- project:
-    name: usecase-ui-info
-    project-name: usecase-ui
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: usecase-ui
-    branch: master

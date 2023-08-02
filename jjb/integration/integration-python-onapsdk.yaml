@@ -52,14 +52,6 @@
       - project-view
 
 - project:
-    name: integration-python-onapsdk-info
-    project: integration/python-onapsdk
-    project-name: integration-python-onapsdk
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify
-
-- project:
     name: integration-python-onapsdk-pypi-build
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
