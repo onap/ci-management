@@ -75,8 +75,6 @@
 - project:
     name: "aai-aai-common-docker"
     jobs:
-      - gerrit-docker-verify
-      - gerrit-docker-merge
       - gerrit-maven-docker-stage:
           sbom-generator: true
           mvn-params: "-P docker -Dmaven.test.skip=true"
