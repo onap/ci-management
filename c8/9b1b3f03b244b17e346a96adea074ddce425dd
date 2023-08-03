@@ -1,0 +1,9 @@
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Verified+1: ONAP GitHub Actions <ecomp-jobbuilder@jenkins.openecomp.org>
+Submitted-by: Kevin Sandi <ksandi@contractor.linuxfoundation.org>
+Submitted-at: Thu, 03 Aug 2023 23:26:44 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/135672
+Project: ci-management
+Branch: refs/heads/master
