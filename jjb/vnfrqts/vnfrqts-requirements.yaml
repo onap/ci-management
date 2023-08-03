@@ -1,15 +1,5 @@
 ---
 - project:
-    name: vnfrqts-requirements
-    project: "vnfrqts/requirements"
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project-name: "vnfrqts-requirements"
-    branch: "master"
-    mvn-settings: "vnfrqts-requirements-settings"
-
-- project:
     name: vnfrqts-requirements-upload-json
     project: "vnfrqts/requirements"
     project-name: "vnfrqts-requirements"

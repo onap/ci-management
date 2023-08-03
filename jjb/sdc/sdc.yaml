@@ -129,12 +129,3 @@
     mvn-version: "mvn36"
     mvn-settings: "sdc-settings"
     java-version: openjdk11
-
-- project:
-    name: sdc-info
-    project-name: sdc
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sdc
-    branch: master

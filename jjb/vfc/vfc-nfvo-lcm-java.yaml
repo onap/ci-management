@@ -53,12 +53,3 @@
     build-node: centos8-redis-4c-4g
     branch: "master"
     mvn-settings: "vfc-nfvo-lcm-settings"
-
-- project:
-    name: vfc-nfvo-lcm-info
-    project-name: vfc-nfvo-lcm
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: vfc/nfvo/lcm
-    branch: master

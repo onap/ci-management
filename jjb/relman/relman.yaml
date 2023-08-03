@@ -4,11 +4,3 @@
     project-name: relman
     views:
       - project-view
-
-- project:
-    name: relman-info
-    project: relman
-    project-name: relman
-    build-node: centos8-builder-2c-1g
-    jobs:
-      - gerrit-info-yaml-verify

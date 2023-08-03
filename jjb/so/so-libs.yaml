@@ -54,13 +54,3 @@
     project-name: "so-libs"
     branch: "master"
     mvn-settings: "so-libs-settings"
-
-- project:
-    name: so-libs-info
-    project-name: so-libs
-    java-version: openjdk11
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: so/libs
-    branch: master

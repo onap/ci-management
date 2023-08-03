@@ -1,9 +1,0 @@
----
-- project:
-    name: sandbox-3
-    project-name: sandbox-3
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: sandbox-3
-    branch: master

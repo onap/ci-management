@@ -66,13 +66,3 @@
       - "master":
           branch: "master"
     mvn-settings: "dcaegen2-services-mapper-settings"
-
-- project:
-    name: dcaegen2-services-mapper-info
-    project-name: dcaegen2-services-mapper
-    java-version: openjdk11
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: dcaegen2/services/mapper
-    branch: master

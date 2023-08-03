@@ -25,15 +25,6 @@
     archive-artifacts: ""
 
 - project:
-    name: aai-sparky-fe-info
-    project-name: aai-sparky-fe
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: aai/sparky-fe
-    branch: master
-
-- project:
     name: aai-sparky-fe-sonar
     jobs:
       - gerrit-maven-sonar

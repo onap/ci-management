@@ -29,15 +29,6 @@
     mvn-settings: "testsuite-settings"
 
 - project:
-    name: testsuite-info
-    project-name: testsuite
-    jobs:
-      - gerrit-info-yaml-verify
-    build-node: centos8-builder-2c-1g
-    project: testsuite
-    branch: master
-
-- project:
     name: testsuite-linters
     project: "testsuite"
     project-name: "testsuite"
