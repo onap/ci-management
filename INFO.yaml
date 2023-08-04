@@ -4,7 +4,7 @@ project_creation_date: "2017-01-24"
 lifecycle_state: "Incubation"
 project_category: ""
 project_lead: &onap_releng_ptl
-  name: "Jessica Wagantall"
+  name: "Jessica"
   email: "jwagantall@linuxfoundation.org"
   id: "jwagantall"
   company: "LF"
