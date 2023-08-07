@@ -33,6 +33,23 @@
       "message": "@Fiete, I have reverted this change here\nhttps://gerrit.onap.org/r/c/ci-management/+/135680\n\nWe do not have a template called gerrit-gradle-publish-jar, unfortunately verify didn\u0027t caught this issue.",
       "revId": "f6a1f2a819d43bc61287b3e87d83000920c2ca79",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36900b73_104cee0c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2023-08-07T19:35:34Z",
+      "side": 1,
+      "message": "Sorry for the confusion, global-jjb had that template merged but ONAP hadn\u0027t been upgraded to catch it. \nHere  is the re-submit\nhttps://gerrit.onap.org/r/c/ci-management/+/135682",
+      "revId": "f6a1f2a819d43bc61287b3e87d83000920c2ca79",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ],
   "submitRequirementResults": [
