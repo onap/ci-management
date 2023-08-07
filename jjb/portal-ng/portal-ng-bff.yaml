@@ -20,20 +20,6 @@
     wrapper: true
 
 - project:
-    name: portal-ng-bff-gradle-publish-jar
-    project-name: "portal-ng-bff"
-    project: "portal-ng/bff"
-    branch: "master"
-    build-node: ubuntu1804-docker-8c-8g
-    jobs:
-      - gerrit-gradle-publish-jar
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "portal-ng-bff-settings"
-    wrapper: true
-
-- project:
     name: portal-ng-bff-docker
     project-name: "portal-ng-bff"
     project: "portal-ng/bff"
