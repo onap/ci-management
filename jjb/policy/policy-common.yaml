@@ -18,6 +18,31 @@
     stream:
       - "master":
           branch: "master"
+      - "java-17":
+          branch: "java-17"
+    mvn-settings: "policy-common-settings"
+    java-version: openjdk17
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-builder-4c-4g
+
+- project:
+    name: policy-common-java11
+    project-name: "policy-common"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+          mvn-params: "-Dmaven.test.skip=true"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+
+    project: "policy/common"
+    stream:
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -48,7 +73,7 @@
     project-name: "policy-common"
     branch: "master"
     mvn-settings: "policy-common-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -63,4 +88,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-common-settings"
-    java-version: openjdk11
+    java-version: openjdk17
