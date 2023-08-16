@@ -16,6 +16,24 @@
       "message": "can you remove this line, it actually broke one of the checks in github",
       "revId": "18b43f5af05830bcbb301c202f4e3f09b3923402",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92c06d42_4b75cc13",
+        "filename": "jjb/policy/policy-distribution.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 6722
+      },
+      "writtenOn": "2023-08-16T10:31:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e76511ef_f3945b91",
+      "revId": "18b43f5af05830bcbb301c202f4e3f09b3923402",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
