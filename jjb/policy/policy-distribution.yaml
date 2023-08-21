@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-distribution
+    name: policy-distribution-java-17
     project-name: "policy-distribution"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -26,8 +26,6 @@
 
     project: "policy/distribution"
     stream:
-      - "master":
-          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-distribution-settings"
@@ -63,6 +61,8 @@
 
     project: "policy/distribution"
     stream:
+      - "master":
+          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -93,7 +93,7 @@
     project-name: "policy-distribution"
     branch: "master"
     mvn-settings: "policy-distribution-settings"
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -108,4 +108,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-distribution-settings"
-    java-version: openjdk17
+    java-version: openjdk11
