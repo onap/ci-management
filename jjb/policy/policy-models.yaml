@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-models
+    name: policy-models-java-17
     project-name: "policy-models"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -26,8 +26,6 @@
 
     project: "policy/models"
     stream:
-      - "master":
-          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-models-settings"
@@ -63,6 +61,8 @@
 
     project: "policy/models"
     stream:
+      - "master":
+          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -93,7 +93,7 @@
     project-name: "policy-models"
     branch: "master"
     mvn-settings: "policy-models-settings"
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -108,4 +108,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-models-settings"
-    java-version: openjdk17
+    java-version: openjdk11

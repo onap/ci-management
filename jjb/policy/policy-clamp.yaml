@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-clamp
+    name: policy-clamp-java-17
     project-name: "policy-clamp"
     jobs:
       - gerrit-maven-stage:
@@ -27,8 +27,6 @@
 
     project: "policy/clamp"
     stream:
-      - "master":
-          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-clamp-settings"
@@ -65,6 +63,8 @@
 
     project: "policy/clamp"
     stream:
+      - "master":
+          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -97,7 +97,7 @@
     mvn-settings: "policy-clamp-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-    java-version: openjdk17
+    java-version: openjdk11
 
 - project:
     name: policy-clamp-clm
@@ -111,4 +111,4 @@
           branch: "master"
     mvn-settings: "policy-clamp-settings"
     build-node: ubuntu1804-docker-8c-8g
-    java-version: openjdk17
+    java-version: openjdk11
