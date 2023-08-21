@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-parent
+    name: policy-parent-java-17
     project-name: "policy-parent"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -16,8 +16,6 @@
 
     project: "policy/parent"
     stream:
-      - "master":
-          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-parent-settings"
@@ -43,6 +41,8 @@
 
     project: "policy/parent"
     stream:
+      - "master":
+          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -70,4 +70,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-parent-settings"
-    java-version: openjdk17
+    java-version: openjdk11

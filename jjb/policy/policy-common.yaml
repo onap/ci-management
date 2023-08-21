@@ -1,6 +1,6 @@
 ---
 - project:
-    name: policy-common
+    name: policy-common-java-17
     project-name: "policy-common"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -16,8 +16,6 @@
 
     project: "policy/common"
     stream:
-      - "master":
-          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-common-settings"
@@ -43,6 +41,8 @@
 
     project: "policy/common"
     stream:
+      - "master":
+          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -73,7 +73,7 @@
     project-name: "policy-common"
     branch: "master"
     mvn-settings: "policy-common-settings"
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -88,4 +88,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-common-settings"
-    java-version: openjdk17
+    java-version: openjdk11

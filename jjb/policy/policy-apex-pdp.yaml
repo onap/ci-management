@@ -6,6 +6,41 @@
       - project-view
 
 - project:
+    name: policy-apex-pdp-java-17
+    project-name: "policy-apex-pdp"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
+          mvn-params: "-P docker"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+          mvn-params: "-Dmaven.test.skip=true"
+      - gerrit-maven-docker-stage:
+          sbom-generator: true
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+
+    project: "policy/apex-pdp"
+    stream:
+      - "java-17":
+          branch: "java-17"
+    mvn-settings: "policy-apex-pdp-settings"
+    java-version: openjdk17
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-docker-8c-8g
+
+- project:
     name: policy-apex-pdp
     project-name: "policy-apex-pdp"
     jobs:
@@ -34,41 +69,6 @@
     stream:
       - "master":
           branch: "master"
-      - "java-17":
-          branch: "java-17"
-    mvn-settings: "policy-apex-pdp-settings"
-    java-version: openjdk17
-    files: "**"
-    archive-artifacts: ""
-    build-node: ubuntu1804-docker-8c-8g
-
-- project:
-    name: policy-apex-pdp-java11
-    project-name: "policy-apex-pdp"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java":
-          docker-pom: "pom.xml"
-          mvn-profile: "docker"
-          mvn-params: "-P docker"
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-          mvn-params: "-Dmaven.test.skip=true"
-      - gerrit-maven-docker-stage:
-          sbom-generator: true
-          build-node: ubuntu1804-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-params: "-P docker -Dmaven.test.skip=true"
-          container-public-registry: "nexus3.onap.org:10001"
-          container-staging-registry: "nexus3.onap.org:10003"
-      - "{project-name}-gerrit-release-jobs":
-          build-node: centos7-docker-2c-1g
-
-    project: "policy/apex-pdp"
-    stream:
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -99,7 +99,7 @@
     project-name: "policy-apex-pdp"
     branch: "master"
     mvn-settings: "policy-apex-pdp-settings"
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -114,4 +114,4 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-apex-pdp-settings"
-    java-version: openjdk17
+    java-version: openjdk11
