@@ -9,15 +9,15 @@
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
-          java-version: openjdk11
+          java-version: openjdk17
           sbom-generator: true
       - "{project-name}-{stream}-docker-java-daily":
           mvn-params: "-Dmaven.test.skip=true"
           build-node: ubuntu1804-docker-8c-8g
-          java-version: openjdk11
+          java-version: openjdk17
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-          java-version: openjdk11
+          java-version: openjdk17
     project: "holmes/rule-management"
     stream:
       - "master":
@@ -28,7 +28,7 @@
     docker-pom: "pom.xml"
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: holmes-rule-management-sonar
@@ -46,7 +46,7 @@
     mvn-settings: "holmes-rule-management-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: holmes-rule-management-clm
@@ -57,4 +57,4 @@
     project-name: "holmes-rule-management"
     branch: "master"
     mvn-settings: "holmes-rule-management-settings"
-    java-version: openjdk11
+    java-version: openjdk17
