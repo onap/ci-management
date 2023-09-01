@@ -1,6 +1,9 @@
 ---
 - project:
     name: cps-csit-java11
+    java-version: openjdk11
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install
@@ -21,6 +24,9 @@
     branch: "master"
 - project:
     name: cps-csit-java17
+    java-version: openjdk17
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install
