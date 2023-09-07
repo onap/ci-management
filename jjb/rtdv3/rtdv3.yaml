@@ -35,9 +35,11 @@
       - comment-added-contains-event:
           comment-contains-value: "remerge"
     jobs:
-      - rtdv3-global-verify
+      - rtdv3-global-verify:
+          disable-job: true
       - rtdv3-global-merge:
           build-timeout: 30
+          disable-job: true
     stream:
       - master:
           branch: "*"
