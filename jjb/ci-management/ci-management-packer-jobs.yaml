@@ -61,6 +61,7 @@
 
     platforms:
       - centos-cs-8
+      - ubuntu-20.04
     templates: devstack
     update-cloud-image: true
 
