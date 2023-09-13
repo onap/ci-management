@@ -23,6 +23,7 @@
     # configure the gerrit-jjb-verify job
     build-node-label-check: true
     build-node-label-list: ""
+    packer-cloud-settings: packer-cloud-env-hcl
 
 - project:
     name: builder-openstack
