@@ -26,8 +26,6 @@
 
     project: "policy/drools-pdp"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -71,8 +69,12 @@
 
     project: "policy/drools-pdp"
     stream:
+      - "master":
+          branch: "master"
       - "java-17":
           branch: "java-17"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-drools-pdp-settings"
     java-version: openjdk17
     files: "**"
@@ -92,8 +94,10 @@
     project: "policy/drools-pdp"
     project-name: "policy-drools-pdp"
     branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-drools-pdp-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -108,5 +112,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-drools-pdp-settings"
-    java-version: openjdk11
+    java-version: openjdk17

@@ -26,8 +26,12 @@
 
     project: "policy/pap"
     stream:
+      - "master":
+          branch: "master"
       - "java-17":
           branch: "java-17"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-pap-settings"
     java-version: openjdk17
     files: "**"
@@ -61,8 +65,6 @@
 
     project: "policy/pap"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -92,8 +94,10 @@
     project: "policy/pap"
     project-name: "policy-pap"
     branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-pap-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -107,5 +111,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-pap-settings"
-    java-version: openjdk11
+    java-version: openjdk17

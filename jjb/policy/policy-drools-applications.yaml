@@ -26,8 +26,6 @@
 
     project: "policy/drools-applications"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -73,11 +71,13 @@
 
     project: "policy/drools-applications"
     stream:
+      - "master":
+          branch: "master"
       - "java-17":
           branch: "java-17"
     mvn-settings: "policy-drools-applications-settings"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     java-version: openjdk17
     files: "**"
     archive-artifacts: ""
@@ -97,9 +97,9 @@
     project-name: "policy-drools-applications"
     branch: "master"
     mvn-settings: "policy-drools-applications-settings"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    java-version: openjdk11
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    java-version: openjdk17
     java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
@@ -116,7 +116,7 @@
           branch: "master"
     mvn-settings: "policy-drools-applications-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    java-version: openjdk11
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    java-version: openjdk17
     build-node: ubuntu1804-docker-8c-8g

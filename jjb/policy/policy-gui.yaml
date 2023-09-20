@@ -26,8 +26,6 @@
 
     project: "policy/gui"
     stream:
-      - "master":
-          branch: "master"
       - "istanbul":
           branch: "istanbul"
       - "jakarta":
@@ -69,8 +67,12 @@
 
     project: "policy/gui"
     stream:
+      - "master":
+          branch: "master"
       - "java-17":
           branch: "java-17"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-gui-settings"
     java-version: openjdk17
     files: "**"
@@ -90,8 +92,10 @@
     project: "policy/gui"
     project-name: "policy-gui"
     branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-gui-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     sonar-prescan-script: !include-raw-escape: ../ubuntu-latest-nodejs.sh
@@ -106,5 +110,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-gui-settings"
-    java-version: openjdk11
+    java-version: openjdk17
