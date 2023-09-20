@@ -16,8 +16,10 @@
 
     project: "policy/parent"
     stream:
-      - "java-17":
-          branch: "java-17"
+      - "master":
+          branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-parent-settings"
     java-version: openjdk17
     files: "**"
@@ -41,8 +43,6 @@
 
     project: "policy/parent"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -69,5 +69,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-parent-settings"
-    java-version: openjdk11
+    java-version: openjdk17

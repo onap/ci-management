@@ -32,8 +32,10 @@
 
     project: "policy/apex-pdp"
     stream:
-      - "java-17":
-          branch: "java-17"
+      - "master":
+          branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-apex-pdp-settings"
     java-version: openjdk17
     files: "**"
@@ -67,8 +69,6 @@
 
     project: "policy/apex-pdp"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -98,8 +98,10 @@
     project: "policy/apex-pdp"
     project-name: "policy-apex-pdp"
     branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-apex-pdp-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -113,5 +115,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-apex-pdp-settings"
-    java-version: openjdk11
+    java-version: openjdk17

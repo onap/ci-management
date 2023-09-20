@@ -24,8 +24,6 @@
 
     project: "policy/docker"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -59,14 +57,16 @@
           container-staging-registry: "nexus3.onap.org:10003"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk17
 
     project: "policy/docker"
     stream:
-      - "java-17":
-          branch: "java-17"
+      - "master":
+          branch: "master"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
@@ -81,6 +81,8 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
-    java-version: openjdk11
+    java-version: openjdk17
