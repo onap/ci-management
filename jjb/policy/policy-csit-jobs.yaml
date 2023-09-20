@@ -6,7 +6,7 @@
     build-node: "ubuntu1804-docker-8c-8g"
     node: "{build-node}"
     recipients: ""
-    java-version: "openjdk11"
+    java-version: "openjdk17"
     python-version: python3
 
     properties:
@@ -63,7 +63,7 @@
     build-node: "ubuntu1804-docker-8c-8g"
     node: "{build-node}"
     recipients: ""
-    java-version: "openjdk11"
+    java-version: "openjdk17"
     python-version: python3
 
     properties:

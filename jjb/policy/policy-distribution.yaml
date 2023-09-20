@@ -26,8 +26,10 @@
 
     project: "policy/distribution"
     stream:
-      - "java-17":
-          branch: "java-17"
+      - "master":
+          branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-distribution-settings"
     java-version: openjdk17
     files: "**"
@@ -61,8 +63,6 @@
 
     project: "policy/distribution"
     stream:
-      - "master":
-          branch: "master"
       - "honolulu":
           branch: "honolulu"
       - "istanbul":
@@ -92,8 +92,10 @@
     project: "policy/distribution"
     project-name: "policy-distribution"
     branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-distribution-settings"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
@@ -107,5 +109,7 @@
     stream:
       - "master":
           branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-distribution-settings"
-    java-version: openjdk11
+    java-version: openjdk17
