@@ -22,6 +22,30 @@
       },
       "revId": "02ab31d48e215dd129b681521618d8e238b1c4b7",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "261738ae_0bb8702e",
+        "filename": "jjb/policy/policy-apex-pdp.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 7625
+      },
+      "writtenOn": "2023-09-20T17:24:06Z",
+      "side": 0,
+      "message": "I didn\u0027t realise they were being deleted, that was probably vscode messing around. Fixed now",
+      "parentUuid": "8dfdfc0f_ce11ccfd",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "02ab31d48e215dd129b681521618d8e238b1c4b7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
