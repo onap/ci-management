@@ -60,6 +60,7 @@
           branch: "master"
     jobs:
       - gerrit-pypi-verify
+      - gerrit-pypi-stage
       - gerrit-pypi-merge
 
 - project:
