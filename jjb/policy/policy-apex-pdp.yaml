@@ -34,8 +34,8 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-apex-pdp-settings"
     java-version: openjdk17
     files: "**"
@@ -98,8 +98,8 @@
     project: "policy/apex-pdp"
     project-name: "policy-apex-pdp"
     branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-apex-pdp-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
@@ -115,7 +115,7 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-apex-pdp-settings"
     java-version: openjdk17

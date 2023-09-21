@@ -28,8 +28,8 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
     java-version: openjdk17
     files: "**"
@@ -93,8 +93,8 @@
     project: "policy/clamp"
     project-name: "policy-clamp"
     branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
@@ -110,8 +110,8 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk17

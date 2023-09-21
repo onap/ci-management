@@ -57,8 +57,8 @@
           container-staging-registry: "nexus3.onap.org:10003"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk17
@@ -81,8 +81,8 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk17
