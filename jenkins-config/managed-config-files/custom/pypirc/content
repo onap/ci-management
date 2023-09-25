@@ -4,6 +4,7 @@ index-servers =
    release
    pypi-test
    pypi
+   pypi-onapsdk
 
 [staging]
 repository: https://nexus3.onap.org/repository/PyPi.staging/
