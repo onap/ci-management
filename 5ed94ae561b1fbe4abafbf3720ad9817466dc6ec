@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba991e75_68b5160b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5029
+      },
+      "writtenOn": "2023-09-25T06:42:54Z",
+      "side": 1,
+      "message": "Could someone from the ci-management team help to review this patch?",
+      "revId": "5ed94ae561b1fbe4abafbf3720ad9817466dc6ec",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
