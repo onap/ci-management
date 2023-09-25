@@ -100,7 +100,6 @@
     java-version: openjdk17
     java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: policy-drools-applications-clm

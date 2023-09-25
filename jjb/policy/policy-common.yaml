@@ -77,7 +77,6 @@
     mvn-settings: "policy-common-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: policy-common-clm

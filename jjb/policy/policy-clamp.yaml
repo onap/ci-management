@@ -97,7 +97,6 @@
     maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     java-version: openjdk17
 
 - project:

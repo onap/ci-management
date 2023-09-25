@@ -95,7 +95,6 @@
     mvn-settings: "policy-gui-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     sonar-prescan-script: !include-raw-escape: ../ubuntu-latest-nodejs.sh
 
 - project:
