@@ -113,6 +113,7 @@
           branch: "master"
     mvn-settings: "policy-drools-applications-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     java-version: openjdk17

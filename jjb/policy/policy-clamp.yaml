@@ -112,5 +112,6 @@
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
+    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk17

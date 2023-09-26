@@ -111,4 +111,5 @@
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-api-settings"
+    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     java-version: openjdk17
