@@ -32,6 +32,6 @@ username: __token__
 password: $PYPI_TOKEN
 
 [pypi-onapsdk]
-repository: https://pypi.org/
+repository: https://upload.pypi.org/legacy/
 username: __token__
 password: $ONAP_PYPI_TOKEN
