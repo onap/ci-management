@@ -11,10 +11,6 @@
       - "master":
           branch: "master"
     subproject:
-      - "python3.7":
-          tox-dir: "."
-          tox-envs: "py37"
-          pattern: "**/*.py"
       - "python3.8":
           tox-dir: "."
           tox-envs: "py38"
