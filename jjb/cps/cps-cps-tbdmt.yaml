@@ -70,7 +70,6 @@
     branch: "master"
     mvn-settings: "cps-cps-tbdmt-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: cps-tbdmt-sonar-verify
@@ -90,4 +89,3 @@
     branch: "master"
     mvn-settings: "cps-cps-tbdmt-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
