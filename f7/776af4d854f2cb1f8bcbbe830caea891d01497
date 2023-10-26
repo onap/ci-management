@@ -1,0 +1,8 @@
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Code-Review+2: Matthew Watkins <mwatkins@linuxfoundation.org>
+Submitted-by: Matthew Watkins <mwatkins@linuxfoundation.org>
+Submitted-at: Thu, 26 Oct 2023 10:01:40 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/136323
+Project: ci-management
+Branch: refs/heads/master
