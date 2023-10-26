@@ -7,7 +7,7 @@
 
 - project:
     name: cps-tbdmt-clm
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
     maven-version: "mvn36"
     jobs:
@@ -21,7 +21,7 @@
 
 - project:
     name: cps-tbdmt
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
     maven-version: "mvn36"
     project-name: cps-cps-tbdmt
@@ -54,7 +54,7 @@
 
 - project:
     name: cps-tbdmt-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
     maven-version: "mvn36"
     jobs:
@@ -74,7 +74,7 @@
 
 - project:
     name: cps-tbdmt-sonar-verify
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
     maven-version: "mvn36"
     jobs:
