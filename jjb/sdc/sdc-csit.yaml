@@ -35,12 +35,10 @@
     stream:
       - "master":
           branch: "master"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     java-version: openjdk11
     maven-version: "mvn36"
     mvn-settings: "sdc-settings"

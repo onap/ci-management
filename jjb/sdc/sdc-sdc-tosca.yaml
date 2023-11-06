@@ -24,12 +24,10 @@
     stream:
       - "master":
           branch: "master"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "sdc-sdc-tosca-settings"
     files: "**"
     archive-artifacts: ""

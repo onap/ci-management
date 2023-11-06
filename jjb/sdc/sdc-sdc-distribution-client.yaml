@@ -24,14 +24,11 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "jakarta":
-          branch: "jakarta"
-          java-version: openjdk11
-      - "kohn":
-          branch: "kohn"
-          java-version: openjdk11
       - "london":
           branch: "london"
+          java-version: openjdk11
+      - "montreal":
+          branch: "montreal"
           java-version: openjdk11
     mvn-settings: "sdc-sdc-distribution-client-settings"
     files: "**"
