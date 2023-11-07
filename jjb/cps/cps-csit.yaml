@@ -42,6 +42,8 @@
     stream:
       - "master":
           branch: "master"
+      - 'montreal':
+          branch: 'montreal'
     mvn-settings: "cps-settings"
     robot-options: ""
     branch: "master"
