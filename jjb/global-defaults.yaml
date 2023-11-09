@@ -48,6 +48,9 @@
 
     archive-artifacts: ""
 
+    # Default branch value
+    branch: master
+
     # Set default maven version used for everything
     maven-version: "mvn33"
 
