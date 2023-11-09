@@ -39,5 +39,7 @@
     stream:
       - "master":
           branch: "master"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "cps-ncmp-dmi-plugin-settings"
     robot-options: ""
