@@ -71,6 +71,7 @@
     project-name: "integration-data-provider"
     project: "integration/data-provider"
     mvn-settings: "integration-settings"
+    branch: "master"
     jobs:
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
