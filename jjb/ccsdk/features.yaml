@@ -59,6 +59,9 @@
       - "master":
           branch: "master"
           mvn-opts: "-Xmx3072m"
+      - "montreal":
+          branch: "montreal"
+          mvn-opts: "-Xmx3072m"
       - "london":
           branch: "london"
           mvn-opts: "-Xmx3072m"

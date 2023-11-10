@@ -67,6 +67,8 @@
                 mvn-params: "-Dmaven.test.skip=true -Drevision=3.0.0"
             - "{project-name}-gerrit-release-jobs":
                 mvn-params: "-Drevision=3.0.0"
+      - "montreal":
+          branch: "montreal"
       - "london":
           branch: "london"
     java-version: openjdk17

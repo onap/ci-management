@@ -35,6 +35,8 @@
 
     project: "sdnc/apps"
     stream:
+      - "montreal":
+          branch: "montreal"
       - "london":
           branch: "london"
       - "kohn":
