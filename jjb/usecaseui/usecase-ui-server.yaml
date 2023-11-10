@@ -19,16 +19,20 @@
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
+          java-version: openjdk17
       - "{project-name}-{stream}-docker-java-daily":
           mvn-params: "-Dmaven.test.skip=true"
           build-node: ubuntu1804-docker-8c-8g
+          java-version: openjdk17
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
+          java-version: openjdk17
     files: "**"
     archive-artifacts: ""
     docker-pom: "pom.xml"
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
+    java-version: openjdk17
 
 - project:
     name: usecase-ui-server-sonar
@@ -46,6 +50,7 @@
     mvn-settings: "usecase-ui-server-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    java-version: openjdk17
 
 - project:
     name: usecase-ui-server-clm
@@ -57,3 +62,4 @@
     build-node: ubuntu1804-builder-4c-4g
     branch: "master"
     mvn-settings: "usecase-ui-server-settings"
+    java-version: openjdk17
