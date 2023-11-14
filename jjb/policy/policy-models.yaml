@@ -63,16 +63,10 @@
 
     project: "policy/models"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "policy-models-settings"
     java-version: openjdk11
     files: "**"

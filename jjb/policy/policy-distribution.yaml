@@ -63,16 +63,10 @@
 
     project: "policy/distribution"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "policy-distribution-settings"
     java-version: openjdk11
     files: "**"

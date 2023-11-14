@@ -26,16 +26,10 @@
 
     project: "policy/drools-pdp"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "policy-drools-pdp-settings"
     java-version: openjdk11
     files: "**"

@@ -24,16 +24,10 @@
 
     project: "policy/docker"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
