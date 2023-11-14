@@ -28,6 +28,8 @@
     stream:
       - "master":
           branch: "master"
+      - "montreal":
+          branch: "montreal"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
@@ -64,14 +66,6 @@
 
     project: "policy/clamp"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
     mvn-settings: "policy-clamp-settings"

@@ -26,14 +26,6 @@
 
     project: "policy/drools-applications"
     stream:
-      - "honolulu":
-          branch: "honolulu"
-      - "istanbul":
-          branch: "istanbul"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
     mvn-settings: "policy-drools-applications-settings"
@@ -73,6 +65,8 @@
     stream:
       - "master":
           branch: "master"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"
