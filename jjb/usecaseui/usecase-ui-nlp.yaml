@@ -6,10 +6,10 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
       - "london":
           branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "usecase-ui-nlp-settings"
     jobs:
       - "{project-name}-{stream}-verify-java"
