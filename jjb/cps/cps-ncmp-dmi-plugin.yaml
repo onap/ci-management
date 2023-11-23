@@ -92,6 +92,7 @@
     project-name: cps-ncmp-dmi-plugin
     branch: master
     mvn-settings: cps-ncmp-dmi-plugin-settings
+    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-docker-8c-8g
 
 - project:
