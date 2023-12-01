@@ -6,7 +6,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -41,7 +40,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g

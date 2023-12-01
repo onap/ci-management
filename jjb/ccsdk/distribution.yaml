@@ -6,7 +6,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -21,7 +20,6 @@
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
           maven-versions-plugin: true
-          cron: "@daily"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
@@ -47,7 +45,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -62,7 +59,6 @@
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
           maven-versions-plugin: true
-          cron: "@daily"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
