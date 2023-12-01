@@ -51,7 +51,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-windriver"
@@ -69,7 +68,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-pike"
@@ -87,7 +85,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-starlingx"
@@ -118,7 +115,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-fcaps"
@@ -136,7 +132,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-hpa"

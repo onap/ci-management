@@ -58,5 +58,4 @@
     docker-root: "$WORKSPACE"
     mvn-settings: "testsuite-cds-mock-odl-settings"
     build-node: ubuntu1804-docker-8c-8g
-    cron: "@daily"
     container-tag-method: stream

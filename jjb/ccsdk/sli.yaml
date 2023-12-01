@@ -6,7 +6,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -42,7 +41,6 @@
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -83,7 +81,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: centos8-builder-4c-4g
     project: "ccsdk/sli"
     project-name: "ccsdk-sli"

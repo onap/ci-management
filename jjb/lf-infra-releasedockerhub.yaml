@@ -16,7 +16,6 @@
 
     # Runs once a day
     triggers:
-      - timed: "@daily"
 
     #   Define needed parameters for lf-infra-docker-login
     parameters:

@@ -22,7 +22,6 @@
     name: integration-simulators-nf-simulator-sonar
     jobs:
       - gerrit-tox-sonar
-    cron: "@daily"
     build-node: ubuntu1804-builder-4c-4g
     project: "integration/simulators/nf-simulator"
     project-name: "integration-simulators-nf-simulator"
