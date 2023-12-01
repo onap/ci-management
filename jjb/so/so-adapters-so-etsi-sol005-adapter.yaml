@@ -44,7 +44,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     max-git-repo-age-hours: 48
     build-node: ubuntu1804-docker-v1-8c-8g
     project: "so/adapters/so-etsi-sol005-adapter"

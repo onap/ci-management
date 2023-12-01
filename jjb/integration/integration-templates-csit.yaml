@@ -106,7 +106,6 @@
           project: "integration/csit"
           branch: "{branch}"
           files: "*/{project-name}/**"
-      - timed: "@daily"
       - reverse:
           jobs: "{obj:trigger_jobs}"
 

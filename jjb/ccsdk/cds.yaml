@@ -6,7 +6,6 @@
       - gerrit-maven-verify:
           mvn-params: "-Ddocker.skip.push=true -Pdocker"
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -19,7 +18,6 @@
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Pdocker"
           maven-versions-plugin: true
-          cron: "@daily"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
@@ -48,7 +46,6 @@
       - gerrit-maven-verify:
           mvn-params: "-Ddocker.skip.push=true -Pdocker"
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -61,7 +58,6 @@
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Pdocker"
           maven-versions-plugin: true
-          cron: "@daily"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
 
@@ -95,7 +91,6 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
     build-node: centos8-builder-4c-4g
     project: "ccsdk/cds"
     project-name: "ccsdk-cds"

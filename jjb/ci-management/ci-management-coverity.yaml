@@ -28,7 +28,6 @@
     branch: master
     build-days-to-keep: 7
     build-timeout: 240
-    cron: "@daily"
     disabled: false
     dry-run: false
     git-url: "$GIT_URL/$PROJECT"
