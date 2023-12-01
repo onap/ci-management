@@ -35,7 +35,6 @@
           jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     triggers:
-      - timed: "@daily"
       - reverse:
           jobs: "{obj:trigger_jobs}"
 

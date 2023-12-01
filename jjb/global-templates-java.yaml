@@ -128,7 +128,6 @@
     <<: *verify_java_defaults
     name: "{project-name}-{stream}-integration-pairwise"
     triggers:
-      - timed: "@daily"
       - gerrit-trigger-patch-submitted:
           server: "{server-name}"
           project: "{project}"
@@ -175,7 +174,6 @@
           build-timeout: "{build-timeout}"
     triggers:
       # 11 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -251,7 +249,6 @@
 
     triggers:
       # 11 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -477,7 +474,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -563,7 +559,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -630,7 +625,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -699,7 +693,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -776,7 +769,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -856,7 +848,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
@@ -954,7 +945,6 @@
 
     triggers:
       # 12 AM UTC
-      - timed: "@daily"
       - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
