@@ -76,3 +76,29 @@
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge
+
+- project:
+    name: integration-k8s-toolbox
+    project: integration
+    stream:
+      - "master":
+          branch: "master"
+    # Required by verifier
+    mvn-settings: "integration-settings"
+    project-name: "integration-k8s-toolbox"
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: "pipelines/docker-onap-k8s-toolbox/.*"
+    docker-name: "onap/k8s-toolbox"
+    docker-root: pipelines/docker-onap-k8s-toolbox
+    container-tag-method: yaml-file
+    post_docker_build_script: |
+      #!/bin/bash
+      set -eux
+      cd "$DOCKER_ROOT"
+      docker tag "$CONTAINER_PUSH_REGISTRY/$DOCKER_NAME:$DOCKER_IMAGE_TAG" onap-k8s-toolbox:latest
+    build-node: ubuntu1804-docker-8c-8g
+    build-timeout: 20
+    jobs:
+      - gerrit-docker-verify
+      - gerrit-docker-merge
