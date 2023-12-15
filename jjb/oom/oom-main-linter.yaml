@@ -31,7 +31,7 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
+      - "montreal":
+          branch: "montreal"
       - "london":
           branch: "london"

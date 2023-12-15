@@ -50,8 +50,8 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
+      - "montreal":
+          branch: "montreal"
 
     jobs:
       - "{project-name}-{stream}-verify-make-{helm_bin}":
