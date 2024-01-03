@@ -17,8 +17,8 @@
     # project name in gerrit
     project: "cps"
     stream:
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "cps-settings"
     robot-options: ""
     branch: "master"
