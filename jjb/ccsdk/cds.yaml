@@ -40,7 +40,7 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: ccsdk-cds-java17
+    name: ccsdk-cds-released-java17
     project-name: "ccsdk-cds"
     jobs:
       - gerrit-maven-verify:
@@ -63,12 +63,52 @@
 
     project: "ccsdk/cds"
     stream:
-      - "master":
-          branch: "master"
       - "montreal":
           branch: "montreal"
       - "london":
           branch: "london"
+    java-version: openjdk17
+    mvn-version: "mvn38"
+    mvn-settings: "ccsdk-cds-settings"
+    # due to a strange macro / variable translation problem this needs to be
+    # passed as a string block to properly get the properties correctly defined
+    # in the job
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: "**"
+    archive-artifacts: ""
+    build-node: centos8-docker-8c-8g
+    mvn-snapshot-id: "ecomp-snapshots"
+    nexus-snapshot-repo: "snapshots"
+
+- project:
+    name: ccsdk-cds-current-java17
+    project-name: "ccsdk-cds"
+    jobs:
+      - gerrit-maven-verify:
+          mvn-params: "-Ddocker.skip.push=true -Pdocker"
+      - gerrit-maven-merge:
+          cron: "@daily"
+          mvn-params: "-Dmaven.test.skip=true"
+      - gerrit-maven-stage:
+          build-node: centos8-docker-8c-8g
+          sign-artifacts: true
+          mvn-params: "-Dmaven.test.skip=true"
+          cron: ""
+          sbom-generator: true
+      - gerrit-maven-docker-stage:
+          cron: "@daily"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+          mvn-params: "-Dmaven.test.skip=true -Pdocker"
+          maven-versions-plugin: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+
+    project: "ccsdk/cds"
+    stream:
+      - "master":
+          branch: "master"
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-cds-settings"
