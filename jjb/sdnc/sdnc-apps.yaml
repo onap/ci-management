@@ -65,6 +65,7 @@
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Ddocker.skip.push=true -Pdocker"
       - gerrit-maven-merge:
+          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
           build-node: centos8-docker-8c-8g
@@ -73,6 +74,7 @@
           cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
+          cron: "@daily"
           build-node: ubuntu1804-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
