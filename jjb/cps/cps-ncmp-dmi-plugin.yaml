@@ -34,9 +34,6 @@
     stream:
       - "master":
           branch: master
-      - "london":
-          branch: "london"
-          cron: ""
       - "montreal":
           branch: "montreal"
           cron: ""
@@ -72,8 +69,8 @@
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
     stream:
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
           cron: ""
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: "**"

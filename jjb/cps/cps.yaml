@@ -46,9 +46,6 @@
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
     stream:
-      - "kohn":
-          branch: "kohn"
-          cron: ""
       - "london":
           branch: "london"
           cron: ""

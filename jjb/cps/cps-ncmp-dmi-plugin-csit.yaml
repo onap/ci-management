@@ -16,8 +16,8 @@
     # project name in gerrit
     project: "cps/ncmp-dmi-plugin"
     stream:
-      - "kohn":
-          branch: "kohn"
+      - "london":
+          branch: "london"
     mvn-settings: "cps-ncmp-dmi-plugin-settings"
     robot-options: ""
 - project:
