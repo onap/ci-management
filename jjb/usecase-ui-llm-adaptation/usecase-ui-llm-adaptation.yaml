@@ -1,0 +1,15 @@
+---
+- project:
+    name: usecase-ui-llm-adaptation-project-view
+    project-name: usecase-ui-llm-adaptation
+    views:
+      - project-view
+
+- project:
+    name: usecase-ui-llm-adaptation-info
+    project: usecase-ui/llm-adaptation
+    project-name: usecase-ui-llm-adaptation
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
