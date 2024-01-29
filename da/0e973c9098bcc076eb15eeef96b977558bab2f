@@ -1,0 +1,8 @@
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Mon, 29 Jan 2024 23:54:52 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/137094
+Project: ci-management
+Branch: refs/heads/master
