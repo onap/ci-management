@@ -40,7 +40,7 @@
 - builder:
     name: integration-install-robotframework-py3
     builders:
-      - shell: !include-raw:
+      - shell: !include-raw-escape:
           - include-raw-integration-install-robotframework-py3.sh
 
 - builder:
@@ -48,13 +48,13 @@
     builders:
       - shell: |
           git clone https://gerrit.onap.org/r/ci-management /tmp/ci-management
-          cp /tmp/ci-management/jjb/integration/*csit.sh ${WORKSPACE}
-          ${WORKSPACE}/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}
+          cp /tmp/ci-management/jjb/integration/*csit.sh "$WORKSPACE"
+          "$WORKSPACE/run-csit.sh" "$TESTPLAN" "$TESTOPTIONS"
 
 - builder:
     name: integration-run-project-test
     builders:
-      - shell: "${WORKSPACE}/csit/run-project-csit.sh ${TESTOPTIONS}"
+      - shell: "$WORKSPACE/csit/run-project-csit.sh $TESTOPTIONS"
 
 - builder:
     name: integration-autorelease-fix-relativepaths
