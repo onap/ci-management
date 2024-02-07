@@ -25,7 +25,7 @@ DOCKER_COMPOSE_LOG="/tmp/docker-compose.log"
 DOCKER_COMPOSE_LOG_MSG=( "success:" "entered RUNNING state" )
 DOCKER_COMPOSE_SLEEP_INTERVAL=60
 
-if [ -z ${NETCONF_SIM_SERVICE_NAME} ];
+if [ -z "$NETCONF_SIM_SERVICE_NAME" ];
 then
     echo "ERROR: netconf-pnp-simulator service name not set."
     exit 1
@@ -34,17 +34,17 @@ fi
 pushd $DOCKER_ROOT
 
 # Dump container logs
-sleep ${DOCKER_COMPOSE_SLEEP_INTERVAL} # Hang for a while so the services settle
-docker-compose logs --no-color > ${DOCKER_COMPOSE_LOG}
+sleep "$DOCKER_COMPOSE_SLEEP_INTERVAL" # Hang for a while so the services settle
+docker-compose logs --no-color > "$DOCKER_COMPOSE_LOG"
 
 # Get the supervisord services running within container
-supervisord_services=($(docker-compose exec -T ${NETCONF_SIM_SERVICE_NAME} /bin/sh -c \
+supervisord_services=($(docker-compose exec -T "$NETCONF_SIM_SERVICE_NAME" /bin/sh -c \
     'cat /etc/supervisord.conf /etc/supervisord.d/*' | grep -ho "program:[-a-zA-Z0-9]*" | cut -d: -f 2))
 
 # Check all services are running and fail if not
-for service in ${supervisord_services[@]};
+for service in "${{supervisord_services[@]}}";
 do
-    if ! grep -q "${DOCKER_COMPOSE_LOG_MSG[0]} $service ${DOCKER_COMPOSE_LOG_MSG[1]}" ${DOCKER_COMPOSE_LOG};
+    if ! grep -q "${{DOCKER_COMPOSE_LOG_MSG[0]}} $service ${{DOCKER_COMPOSE_LOG_MSG[1]}}" "$DOCKER_COMPOSE_LOG";
     then
         echo "ERROR: Service $service is not running, failing the build."
         exit 1
