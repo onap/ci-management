@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d562408_6d032379",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2024-02-07T03:17:48Z",
+      "side": 1,
+      "message": "Waiting for the changes to go thru ODL! once comfirmed we can merge this.",
+      "revId": "c454e8e8bbec9762a71b4737f5e008231706066c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
