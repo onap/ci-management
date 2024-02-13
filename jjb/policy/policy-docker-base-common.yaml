@@ -79,4 +79,5 @@
     maven-version: "mvn36"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     java-version: openjdk17
