@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "efce69317c6b74c8f3f5c869efed5bc4f533dd7c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af2e7b83_d3d077f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2024-02-21T18:12:11Z",
+      "side": 1,
+      "message": "@Anil, I think this fixes ci-man in ONAP.. can we merge it pls?",
+      "revId": "efce69317c6b74c8f3f5c869efed5bc4f533dd7c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
