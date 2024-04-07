@@ -67,6 +67,23 @@
       "message": "jjb-deploy ci-management-jenkins-cfg-verify",
       "revId": "01326e104f8685e177e094625da27c19ae481bb2",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93b32f18_fbf3f0e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2024-04-07T19:51:15Z",
+      "side": 1,
+      "message": "jjb-deploy ci-management-jenkins-cfg-verify",
+      "revId": "01326e104f8685e177e094625da27c19ae481bb2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ],
   "submitRequirementResults": [
