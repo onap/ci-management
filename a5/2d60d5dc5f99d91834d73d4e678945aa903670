@@ -1,0 +1,8 @@
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Thu, 02 May 2024 21:00:28 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/137833
+Project: ci-management
+Branch: refs/heads/master
