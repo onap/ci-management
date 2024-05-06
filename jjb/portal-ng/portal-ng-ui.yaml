@@ -19,3 +19,18 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-ui-settings"
+
+- project:
+    name: portal-ng-ui-release
+    project-name: "portal-ng-ui"
+    project: "portal-ng/ui"
+    branch: "master"
+    build-node: centos7-docker-2c-1g
+    docker-name: "onap/portal-ng/ui"
+    container-tag-method: latest
+    jobs:
+      - "{project-name}-gerrit-release-jobs"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-ui-settings"

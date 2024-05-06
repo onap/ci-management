@@ -33,3 +33,18 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-preferences-settings"
+
+- project:
+    name: portal-ng-preferences-release
+    project-name: "portal-ng-preferences"
+    project: "portal-ng/preferences"
+    branch: "master"
+    build-node: centos7-docker-2c-1g
+    docker-name: "onap/portal-ng/preferences"
+    container-tag-method: latest
+    jobs:
+      - "{project-name}-gerrit-release-jobs"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-preferences-settings"
