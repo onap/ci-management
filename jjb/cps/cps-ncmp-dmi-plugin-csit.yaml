@@ -39,6 +39,8 @@
     stream:
       - "master":
           branch: "master"
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     mvn-settings: "cps-ncmp-dmi-plugin-settings"
