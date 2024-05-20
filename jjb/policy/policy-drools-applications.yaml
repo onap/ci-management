@@ -67,6 +67,8 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"

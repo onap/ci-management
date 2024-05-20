@@ -10,10 +10,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "distribution"
     trigger_jobs:
@@ -31,10 +31,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "xacml-pdp"
     trigger_jobs:
@@ -52,10 +52,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "drools-applications"
     trigger_jobs:
@@ -73,10 +73,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "drools-pdp"
     trigger_jobs:
@@ -94,10 +94,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "apex-pdp"
     trigger_jobs:
@@ -115,10 +115,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "pap"
     trigger_jobs:
@@ -136,10 +136,10 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "api"
     trigger_jobs:
@@ -159,6 +159,8 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     functionality:
       - "clamp"
     trigger_jobs:

@@ -30,6 +30,8 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-pap-settings"
