@@ -1,0 +1,10 @@
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Code-Review+1: Adheli Tavares <adheli.tavares@est.tech>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Code-Review+1: Liam Fallon <liam.fallon@est.tech>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 20 May 2024 16:15:52 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/138017
+Project: ci-management
+Branch: refs/heads/master
