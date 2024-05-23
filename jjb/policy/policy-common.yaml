@@ -31,31 +31,6 @@
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
-    name: policy-common-java11
-    project-name: "policy-common"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
-      - gerrit-maven-stage:
-          sbom-generator: true
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-          mvn-params: "-Dmaven.test.skip=true"
-      - "{project-name}-gerrit-release-jobs":
-          build-node: centos7-docker-2c-1g
-
-    project: "policy/common"
-    stream:
-      - "london":
-          branch: "london"
-    mvn-settings: "policy-common-settings"
-    java-version: openjdk11
-    files: "**"
-    archive-artifacts: ""
-    build-node: ubuntu1804-builder-4c-4g
-
-- project:
     name: policy-common-sonar
     jobs:
       - gerrit-maven-sonar
