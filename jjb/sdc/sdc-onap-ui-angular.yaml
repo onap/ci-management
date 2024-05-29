@@ -15,8 +15,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdc-onap-ui-angular-settings"

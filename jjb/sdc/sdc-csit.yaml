@@ -35,8 +35,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
     java-version: openjdk11

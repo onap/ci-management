@@ -30,10 +30,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
-      - "kohn":
-          branch: "kohn"
 
 - project:
     name: integration-xtesting-release
@@ -111,12 +107,6 @@
     stream:
       - "master":
           branch: "master"
-          files: ""
-      - "london":
-          branch: "london"
-          files: ""
-      - "kohn":
-          branch: "kohn"
           files: ""
     docker-root: "$WORKSPACE"
     mvn-settings: "integration-settings"

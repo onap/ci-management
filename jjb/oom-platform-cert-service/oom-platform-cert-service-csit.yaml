@@ -9,8 +9,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     functionality:
       - "certservice":
           trigger_jobs:

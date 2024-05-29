@@ -23,8 +23,6 @@
     stream:
       - "master":
           branch: "master"
-      - "istanbul":
-          branch: "istanbul"
     mvn-settings: "oparent-settings"
     java-version: openjdk11
     files: "**"

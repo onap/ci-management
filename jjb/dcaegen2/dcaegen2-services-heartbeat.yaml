@@ -12,8 +12,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     mvn-settings: "dcaegen2-services-heartbeat-settings"
     # due to a strange macro / variable translation problem this needs
     # to be passed as a string block to properly get the properties

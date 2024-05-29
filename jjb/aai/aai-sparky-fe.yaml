@@ -14,10 +14,6 @@
           build-node: centos7-docker-2c-1g
     project: "aai/sparky-fe"
     stream:
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
       - "master":
           branch: "master"
     mvn-settings: "aai-sparky-fe-settings"

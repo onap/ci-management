@@ -76,9 +76,6 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "london":
-          branch: "london"
-          java-version: openjdk11
       - "montreal":
           branch: "montreal"
           java-version: openjdk11

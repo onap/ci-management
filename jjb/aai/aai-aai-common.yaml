@@ -22,10 +22,6 @@
     stream:
       - "master":
           branch: "master"
-      - "jakarta":
-          branch: "jakarta"
-      - "kohn":
-          branch: "kohn"
     mvn-settings: "aai-aai-common-settings"
     mvn-version: "mvn35"
     files: "**"
@@ -82,14 +78,6 @@
     stream:
       - "master":
           branch: "master"
-          distro: "alpine"
-          mvn-params: "docker"
-      - "jakarta":
-          branch: "jakarta"
-          distro: "alpine"
-          mvn-params: "docker"
-      - "kohn":
-          branch: "kohn"
           distro: "alpine"
           mvn-params: "docker"
     docker-name: "onap/aai-common-{distro}"

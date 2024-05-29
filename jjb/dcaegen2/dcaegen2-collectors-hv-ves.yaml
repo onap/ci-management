@@ -6,8 +6,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     # apply to all jobs
     java-version: openjdk11
     project: "dcaegen2/collectors/hv-ves"
