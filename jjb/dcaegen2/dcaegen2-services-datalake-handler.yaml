@@ -10,8 +10,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     maven-version: "mvn35"
     mvn-settings: "dcaegen2-services-settings"
@@ -51,8 +49,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     gerrit_trigger_file_paths:
       - compare-type: ANT
@@ -86,8 +82,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     gerrit_trigger_file_paths:
       - compare-type: ANT
@@ -121,8 +115,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     mvn-settings: "dcaegen2-services-settings"
     maven-deploy-properties: |

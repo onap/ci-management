@@ -33,5 +33,3 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
-      - "london":
-          branch: "london"

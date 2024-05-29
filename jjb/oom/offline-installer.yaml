@@ -30,8 +30,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
 
 - project:
     name: offline-installer-pytest
@@ -49,5 +47,3 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"

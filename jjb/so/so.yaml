@@ -31,15 +31,6 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "london":
-          branch: "london"
-          java-version: openjdk11
-      - "kohn":
-          branch: "kohn"
-          java-version: openjdk11
-      - "recursive-orch":
-          branch: "recursive-orch"
-          java-version: openjdk11
     mvn-settings: "so-settings"
     files: "**"
     archive-artifacts: ""

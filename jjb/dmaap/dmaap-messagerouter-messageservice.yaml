@@ -18,8 +18,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     mvn-settings: "dmaap-messagerouter-messageservice-settings"
     java-version: openjdk11
     files: "**"

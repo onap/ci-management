@@ -17,31 +17,7 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
-      - "london":
-          branch: "london"
-      - "kohn":
-          branch: "kohn"
     mvn-settings: "ccsdk-distribution-settings"
-    mvn-version: "mvn38"
-    robot-options: ""
-    branch: "master"
-
-- project:
-    name: ccsdk-oran-csit-java11
-    jobs:
-      - "{project-name}-review-verification-maven-{stream}":
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
-      - "{project-name}-merge-verification-maven-{stream}":
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
-    project-name: "ccsdk-oran"
-    recipients: "bjorn.magnusson@est.tech martin.c.yan@est.tech"
-    # project name in gerrit
-    project: "ccsdk/oran"
-    stream:
-      - "kohn":
-          branch: "kohn"
-    java-version: openjdk11
-    mvn-settings: "ccsdk-oran-settings"
     mvn-version: "mvn38"
     robot-options: ""
     branch: "master"
@@ -60,8 +36,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk17
     mvn-settings: "ccsdk-oran-settings"
     mvn-version: "mvn38"

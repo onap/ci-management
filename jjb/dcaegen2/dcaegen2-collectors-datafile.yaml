@@ -6,8 +6,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     # apply to all jobs
     project: "dcaegen2/collectors/datafile"

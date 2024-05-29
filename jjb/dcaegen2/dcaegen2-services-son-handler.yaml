@@ -22,8 +22,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     mvn-settings: "dcaegen2-services-son-handler-settings"
     mvn-snapshot-id: "ecomp-snapshots"
