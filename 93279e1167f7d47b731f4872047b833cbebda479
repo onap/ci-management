@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5b85279_87baaaf1",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-05-30T15:33:22Z",
+      "side": 0,
+      "message": "Request to keep London for this job",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "93279e1167f7d47b731f4872047b833cbebda479",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "821717e8_a9b66e19",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-05-30T15:33:22Z",
+      "side": 0,
+      "message": "request to keep london for this job",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 26
+      },
+      "revId": "93279e1167f7d47b731f4872047b833cbebda479",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d165d4c0_015158dd",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-05-30T15:33:22Z",
+      "side": 0,
+      "message": "request to keep london for this repo/jobs",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 26
+      },
+      "revId": "93279e1167f7d47b731f4872047b833cbebda479",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
