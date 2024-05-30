@@ -17,8 +17,7 @@
     functionality:
       - "distribution"
     trigger_jobs:
-      - "policy-distribution-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-distribution-{stream}-verify-java"
 
 - project:
     name: policy-xacml-pdp-project-csit
@@ -38,8 +37,7 @@
     functionality:
       - "xacml-pdp"
     trigger_jobs:
-      - "policy-xacml-pdp-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-xacml-pdp-{stream}-verify-java"
 
 - project:
     name: policy-drools-applications-project-csit
@@ -59,8 +57,7 @@
     functionality:
       - "drools-applications"
     trigger_jobs:
-      - "policy-drools-applications-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-drools-applications-{stream}-verify-java"
 
 - project:
     name: policy-drools-pdp-project-csit
@@ -80,8 +77,7 @@
     functionality:
       - "drools-pdp"
     trigger_jobs:
-      - "policy-drools-pdp-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-drools-pdp-{stream}-verify-java"
 
 - project:
     name: policy-apex-pdp-project-csit
@@ -101,8 +97,7 @@
     functionality:
       - "apex-pdp"
     trigger_jobs:
-      - "policy-apex-pdp-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-apex-pdp-{stream}-verify-java"
 
 - project:
     name: policy-pap-project-csit
@@ -122,8 +117,7 @@
     functionality:
       - "pap"
     trigger_jobs:
-      - "policy-pap-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-pap-{stream}-verify-java"
 
 - project:
     name: policy-api-project-csit
@@ -143,8 +137,7 @@
     functionality:
       - "api"
     trigger_jobs:
-      - "policy-api-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-api-{stream}-verify-java"
 
 - project:
     name: policy-clamp-project-csit
@@ -165,7 +158,6 @@
       - "clamp"
     trigger_jobs:
       - "policy-clamp-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-apex-pdp-postgres-project-csit
@@ -181,5 +173,4 @@
     functionality:
       - "apex-pdp-postgres"
     trigger_jobs:
-      - "policy-apex-pdp-{stream}-merge-java"
-      - "policy-docker-{stream}-merge-java"
+      - "policy-apex-pdp-{stream}-verify-java"
