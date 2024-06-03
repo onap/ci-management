@@ -2,7 +2,7 @@
 - project:
     name: so-project-view
     project-name: so
-    java-version: openjdk11
+    java-version: openjdk17
     views:
       - project-view
 
@@ -30,7 +30,7 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
       - "london":
           branch: "london"
           java-version: openjdk11
@@ -47,7 +47,7 @@
 
 - project:
     name: so-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -65,7 +65,7 @@
 
 - project:
     name: "so-coverity"
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - "onap-gerrit-maven-coverity"
     build-node: "ubuntu1804-docker-v1-8c-8g"
@@ -93,7 +93,7 @@
 
 - project:
     name: so-clm
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
