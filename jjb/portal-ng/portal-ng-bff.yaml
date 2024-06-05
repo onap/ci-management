@@ -31,6 +31,10 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-bff-settings"
+    publish-credential: portal-ng-bff
+    publish-directory: /w/workspace/portal-ng-bff-gradle-publish-jar-master/lib/build/libs
+    publish-file-extension: jar
+    publish-url: https://nexus.onap.org/content/repositories/releases/org/onap/portal-ng-bff/
     wrapper: true
 
 - project:
