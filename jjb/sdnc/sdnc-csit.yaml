@@ -17,10 +17,6 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
-      - "london":
-          branch: "london"
-      - "kohn":
-          branch: "kohn"
     mvn-settings: "sdnc-oam-settings"
     mvn-version: "mvn38"
     robot-options: ""

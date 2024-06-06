@@ -12,8 +12,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
     mvn-settings: "usecase-ui-settings"

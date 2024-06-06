@@ -30,12 +30,6 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-      - "jakarta":
-          branch: "jakarta"
-          java-version: openjdk11
-      - "kohn":
-          branch: "kohn"
-          java-version: openjdk11
     mvn-settings: "so-adapters-so-nssmf-adapter-settings"
     files: "**"
     archive-artifacts: ""

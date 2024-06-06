@@ -10,8 +10,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     java-version: openjdk11
     mvn-settings: "dcaegen2-services-settings"
     container-public-registry: "nexus3.onap.org:10001"

@@ -1,28 +1,5 @@
 ---
 - project:
-    name: cps-csit-java11
-    java-version: openjdk11
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    jobs:
-      - "{project-name}-review-verification-maven-{stream}":
-          mvn-goals: clean install
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
-      - "{project-name}-merge-verification-maven-{stream}":
-          mvn-goals: clean install
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.repository.push="
-    project-name: "cps"
-    build-node: ubuntu1804-docker-8c-8g
-    recipients: "toine.siebelink@est.tech"
-    # project name in gerrit
-    project: "cps"
-    stream:
-      - "london":
-          branch: "london"
-    mvn-settings: "cps-settings"
-    robot-options: ""
-    branch: "master"
-- project:
     name: cps-csit-java17
     java-version: openjdk17
     mvn-version: "mvn36"

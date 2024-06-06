@@ -24,8 +24,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdc-sdc-tosca-settings"

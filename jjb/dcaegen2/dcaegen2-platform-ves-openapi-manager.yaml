@@ -24,8 +24,6 @@
     stream:
       - "master":
           branch: "master"
-      - "london":
-          branch: "london"
     mvn-settings: "dcaegen2-platform-ves-openapi-manager-settings"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"

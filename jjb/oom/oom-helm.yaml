@@ -13,10 +13,6 @@
     stream:
       - "master":
           branch: "master"
-      - "kohn":
-          branch: "kohn"
-      - "london":
-          branch: "london"
 
     jobs:
       - "{project-name}-{stream}-image-verify":
