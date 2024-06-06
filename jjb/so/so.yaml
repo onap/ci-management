@@ -2,7 +2,7 @@
 - project:
     name: so-project-view
     project-name: so
-    java-version: openjdk11
+    java-version: openjdk17
     views:
       - project-view
 
@@ -15,11 +15,11 @@
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           sbom-generator: true
-          build-node: ubuntu1804-docker-v1-8c-8g
+          build-node: centos8-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: "-P docker -DskipTests"
           container-public-registry: "nexus3.onap.org:10001"
@@ -30,15 +30,15 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
     mvn-settings: "so-settings"
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu1804-docker-v1-8c-8g
+    build-node: centos8-docker-8c-8g
 
 - project:
     name: so-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -46,7 +46,7 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     max-git-repo-age-hours: 48
-    build-node: ubuntu1804-docker-v1-8c-8g
+    build-node: centos8-docker-8c-8g
     project: "so"
     project-name: "so"
     branch: "master"
@@ -56,10 +56,10 @@
 
 - project:
     name: "so-coverity"
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - "onap-gerrit-maven-coverity"
-    build-node: "ubuntu1804-docker-v1-8c-8g"
+    build-node: "centos8-docker-8c-8g"
     project: "so"
     project-name: "so"
     branch: "master"
@@ -84,13 +84,13 @@
 
 - project:
     name: so-clm
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
     project: so
     project-name: "so"
-    build-node: ubuntu1804-docker-v1-8c-8g
+    build-node: centos8-docker-8c-8g
     stream:
       - "master":
           branch: "master"
