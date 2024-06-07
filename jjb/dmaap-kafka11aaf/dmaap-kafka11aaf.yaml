@@ -1,0 +1,15 @@
+---
+- project:
+    name: dmaap-kafka11aaf-project-view
+    project-name: dmaap-kafka11aaf
+    views:
+      - project-view
+
+- project:
+    name: dmaap-kafka11aaf-info
+    project: dmaap/kafka11aaf
+    project-name: dmaap-kafka11aaf
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
