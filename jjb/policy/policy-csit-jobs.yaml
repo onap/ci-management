@@ -36,8 +36,6 @@
 
     triggers:
       - timed: "@daily"
-      - reverse:
-          jobs: "{obj:trigger_jobs}"
 
     builders:
       - lf-infra-pre-build
@@ -96,7 +94,7 @@
           server: "{server-name}"
           project: "{project}"
           branch: "{branch}"
-          files: "**/csit/**"
+          files: "{pattern}"
 
     builders:
       - lf-infra-pre-build

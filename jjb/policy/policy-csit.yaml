@@ -16,8 +16,6 @@
           branch: "newdelhi"
     functionality:
       - "distribution"
-    trigger_jobs:
-      - "policy-distribution-{stream}-verify-java"
 
 - project:
     name: policy-xacml-pdp-project-csit
@@ -36,8 +34,6 @@
           branch: "newdelhi"
     functionality:
       - "xacml-pdp"
-    trigger_jobs:
-      - "policy-xacml-pdp-{stream}-verify-java"
 
 - project:
     name: policy-drools-applications-project-csit
@@ -56,8 +52,6 @@
           branch: "newdelhi"
     functionality:
       - "drools-applications"
-    trigger_jobs:
-      - "policy-drools-applications-{stream}-verify-java"
 
 - project:
     name: policy-drools-pdp-project-csit
@@ -76,8 +70,6 @@
           branch: "newdelhi"
     functionality:
       - "drools-pdp"
-    trigger_jobs:
-      - "policy-drools-pdp-{stream}-verify-java"
 
 - project:
     name: policy-apex-pdp-project-csit
@@ -96,8 +88,6 @@
           branch: "newdelhi"
     functionality:
       - "apex-pdp"
-    trigger_jobs:
-      - "policy-apex-pdp-{stream}-verify-java"
 
 - project:
     name: policy-pap-project-csit
@@ -116,8 +106,6 @@
           branch: "newdelhi"
     functionality:
       - "pap"
-    trigger_jobs:
-      - "policy-pap-{stream}-verify-java"
 
 - project:
     name: policy-api-project-csit
@@ -136,8 +124,6 @@
           branch: "newdelhi"
     functionality:
       - "api"
-    trigger_jobs:
-      - "policy-api-{stream}-verify-java"
 
 - project:
     name: policy-clamp-project-csit
@@ -156,8 +142,6 @@
           branch: "newdelhi"
     functionality:
       - "clamp"
-    trigger_jobs:
-      - "policy-clamp-{stream}-merge-java"
 
 - project:
     name: policy-apex-pdp-postgres-project-csit
@@ -172,5 +156,3 @@
           branch: "master"
     functionality:
       - "apex-pdp-postgres"
-    trigger_jobs:
-      - "policy-apex-pdp-{stream}-verify-java"
