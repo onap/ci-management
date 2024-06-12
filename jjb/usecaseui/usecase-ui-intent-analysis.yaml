@@ -6,8 +6,8 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
+      - "newdelhi":
+          branch: "newdelhi"
     mvn-settings: "usecase-ui-intent-analysis-settings"
     jobs:
       - "{project-name}-{stream}-verify-java"
