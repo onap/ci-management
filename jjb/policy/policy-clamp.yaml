@@ -43,7 +43,7 @@
 - project:
     name: policy-clamp-sonar
     jobs:
-      - gerrit-maven-sonar:
+      - gerrit-maven-sonar
     sonarcloud: true
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
