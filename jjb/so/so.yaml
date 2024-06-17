@@ -15,11 +15,9 @@
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - gerrit-maven-docker-stage:
           sbom-generator: true
-          build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: "-P docker -DskipTests"
           container-public-registry: "nexus3.onap.org:10001"
@@ -31,6 +29,17 @@
       - "master":
           branch: "master"
           java-version: openjdk11
+          gerrit-maven-stage:
+            build-node: centos8-docker-4c-4g
+          gerrit-maven-docker-stage:
+            build-node: ubuntu1804-docker-v1-8c-8g
+      - "java17":
+          branch: "java17"
+          java-version: openjdk17
+          gerrit-maven-stage:
+            build-node: centos8-docker-8c-8g
+          gerrit-maven-docker-stage:
+            build-node: centos8-docker-8c-8g
     mvn-settings: "so-settings"
     files: "**"
     archive-artifacts: ""
