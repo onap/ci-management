@@ -1,11 +1,10 @@
 ---
 - project:
-    name: policy-distribution-project-csit
+    name: policy-distribution-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-distribution"
-    recipients: "ram_krishna.verma@bell.ca"
-    project: "policy/docker"
+    project: "policy/distribution"
     stream:
       - "master":
           branch: "master"
@@ -17,12 +16,11 @@
       - "distribution"
 
 - project:
-    name: policy-xacml-pdp-project-csit
+    name: policy-xacml-pdp-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-xacml-pdp"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
-    project: "policy/docker"
+    project: "policy/xacml-pdp"
     stream:
       - "master":
           branch: "master"
@@ -34,12 +32,11 @@
       - "xacml-pdp"
 
 - project:
-    name: policy-drools-applications-project-csit
+    name: policy-drools-applications-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-drools-applications"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
-    project: "policy/docker"
+    project: "policy/drools-applications"
     stream:
       - "master":
           branch: "master"
@@ -51,12 +48,11 @@
       - "drools-applications"
 
 - project:
-    name: policy-drools-pdp-project-csit
+    name: policy-drools-pdp-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-drools-pdp"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
-    project: "policy/docker"
+    project: "policy/drools-pdp"
     stream:
       - "master":
           branch: "master"
@@ -68,12 +64,11 @@
       - "drools-pdp"
 
 - project:
-    name: policy-apex-pdp-project-csit
+    name: policy-apex-pdp-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-apex-pdp"
-    recipients: "liam.fallon@est.tech ram_krishna.verma@bell.ca"
-    project: "policy/docker"
+    project: "policy/apex-pdp"
     stream:
       - "master":
           branch: "master"
@@ -85,12 +80,11 @@
       - "apex-pdp"
 
 - project:
-    name: policy-pap-project-csit
+    name: policy-pap-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-pap"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
-    project: "policy/docker"
+    project: "policy/pap"
     stream:
       - "master":
           branch: "master"
@@ -102,12 +96,11 @@
       - "pap"
 
 - project:
-    name: policy-api-project-csit
+    name: policy-api-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-api"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
-    project: "policy/docker"
+    project: "policy/api"
     stream:
       - "master":
           branch: "master"
@@ -119,12 +112,11 @@
       - "api"
 
 - project:
-    name: policy-clamp-project-csit
+    name: policy-clamp-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-clamp"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
-    project: "policy/docker"
+    project: "policy/clamp"
     stream:
       - "master":
           branch: "master"
@@ -136,12 +128,11 @@
       - "clamp"
 
 - project:
-    name: policy-apex-pdp-postgres-project-csit
+    name: policy-apex-pdp-postgres-project-csit-verify
     jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-apex-pdp"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
-    project: "policy/docker"
+    project: "policy/apex-pdp"
     stream:
       - "master":
           branch: "master"
