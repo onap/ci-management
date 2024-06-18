@@ -13,7 +13,6 @@
           mvn-params: "-Dmaven.test.skip=true"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-
     project: "policy/common"
     stream:
       - "master":
@@ -47,6 +46,26 @@
     mvn-settings: "policy-common-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
+    cron: "@daily"
+
+- project:
+    name: policy-common-sonar-verify
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    build-node: ubuntu1804-docker-8c-8g
+    project: "policy/common"
+    project-name: "policy-common"
+    branch: "master"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    mvn-settings: "policy-common-settings"
+    mvn-goals: "clean install"
+    java-version: openjdk17
+    sonarcloud-qualitygate-wait: true
 
 - project:
     name: policy-common-clm

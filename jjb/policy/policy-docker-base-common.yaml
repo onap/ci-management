@@ -23,7 +23,6 @@
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     java-version: openjdk17
-
     project: "policy/docker"
     stream:
       - "master":

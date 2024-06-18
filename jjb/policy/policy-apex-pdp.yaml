@@ -29,7 +29,6 @@
           container-staging-registry: "nexus3.onap.org:10003"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-
     project: "policy/apex-pdp"
     stream:
       - "master":
@@ -63,6 +62,26 @@
     mvn-settings: "policy-apex-pdp-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
+    cron: "@daily"
+
+- project:
+    name: policy-apex-pdp-sonar-verify
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    build-node: ubuntu1804-builder-4c-4g
+    project: "policy/apex-pdp"
+    project-name: "policy-apex-pdp"
+    branch: "master"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    mvn-settings: "policy-apex-pdp-settings"
+    java-version: openjdk17
+    mvn-goals: "clean install"
+    sonarcloud-qualitygate-wait: true
 
 - project:
     name: policy-apex-pdp-clm

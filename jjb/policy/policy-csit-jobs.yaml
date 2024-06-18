@@ -36,6 +36,11 @@
 
     triggers:
       - timed: "@daily"
+      - gerrit-trigger-patch-submitted:
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "**/**"
 
     builders:
       - lf-infra-pre-build
