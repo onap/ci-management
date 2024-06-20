@@ -16,6 +16,23 @@
       "message": "This change is also adding Sonar jobs. Can we please isolate this change?",
       "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9d92075_3d28d699",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2024-06-20T17:32:34Z",
+      "side": 1,
+      "message": "Some files are just getting an empty line removed. Is this intentional? If so, can we please specify the reason in the commit message?",
+      "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
