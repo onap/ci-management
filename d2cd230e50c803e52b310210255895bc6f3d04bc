@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc060c1d_717efef8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 481
+      },
+      "writtenOn": "2024-06-20T17:31:07Z",
+      "side": 1,
+      "message": "This change is also adding Sonar jobs. Can we please isolate this change?",
+      "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
