@@ -33,6 +33,42 @@
       "message": "Some files are just getting an empty line removed. Is this intentional? If so, can we please specify the reason in the commit message?",
       "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b0b32e3_016b59c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7625
+      },
+      "writtenOn": "2024-06-21T08:48:18Z",
+      "side": 1,
+      "message": "removed that, will push as a second review.",
+      "parentUuid": "dc060c1d_717efef8",
+      "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d99c6208_c30a8e15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7625
+      },
+      "writtenOn": "2024-06-21T08:48:18Z",
+      "side": 1,
+      "message": "the blocks are from the same --project, but I can undo on the second review.",
+      "parentUuid": "d9d92075_3d28d699",
+      "revId": "d2cd230e50c803e52b310210255895bc6f3d04bc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
