@@ -36,11 +36,6 @@
 
     triggers:
       - timed: "@daily"
-      - gerrit-trigger-patch-submitted:
-          server: "{server-name}"
-          project: "{project}"
-          branch: "{branch}"
-          files: "**/**"
 
     builders:
       - lf-infra-pre-build
@@ -68,6 +63,8 @@
     recipients: ""
     java-version: "openjdk17"
     python-version: python3
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
 
     properties:
       - lf-infra-properties:
@@ -95,6 +92,8 @@
           jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     triggers:
+      - reverse:
+          jobs: "{project-name}-{stream}-verify-java"
       - gerrit-trigger-patch-submitted:
           server: "{server-name}"
           project: "{project}"
