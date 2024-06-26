@@ -4,7 +4,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-distribution"
-    project: "policy/distribution"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -20,7 +20,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-xacml-pdp"
-    project: "policy/xacml-pdp"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -36,7 +36,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-drools-applications"
-    project: "policy/drools-applications"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -52,7 +52,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-drools-pdp"
-    project: "policy/drools-pdp"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -68,7 +68,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-apex-pdp"
-    project: "policy/apex-pdp"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -84,7 +84,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-pap"
-    project: "policy/pap"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -100,7 +100,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-api"
-    project: "policy/api"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -116,7 +116,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-clamp"
-    project: "policy/clamp"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
@@ -132,7 +132,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
     project-name: "policy-apex-pdp"
-    project: "policy/apex-pdp"
+    project: "policy/docker"
     stream:
       - "master":
           branch: "master"
