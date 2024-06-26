@@ -57,6 +57,26 @@
     mvn-settings: "policy-models-settings"
     java-version: openjdk17
     mvn-goals: "clean install"
+    cron: "@daily"
+
+- project:
+    name: policy-models-sonar-verify
+    jobs:
+      - gerrit-maven-sonar-verify
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    sonar-mvn-goal: "{sonar_mvn_goal}"
+    build-node: ubuntu1804-docker-8c-8g
+    project: "policy/models"
+    project-name: "policy-models"
+    branch: "master"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    mvn-settings: "policy-models-settings"
+    mvn-goals: "clean install"
+    java-version: openjdk17
+    sonarcloud-qualitygate-wait: true
 
 - project:
     name: policy-models-clm
