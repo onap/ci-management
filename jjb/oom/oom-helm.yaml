@@ -46,6 +46,8 @@
     stream:
       - "master":
           branch: "master"
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
 
