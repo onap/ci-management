@@ -27,8 +27,8 @@
 # contrib=contrib-title-conventional-commits,contrib-body-requires-signed-off-by
 contrib=contrib-body-requires-signed-off-by
 
-# [title-max-length]
-# line-length=80
+[title-max-length]
+line-length=120
 
 # [title-must-not-contain-word]
 # Comma-separated list of words that should not occur in the title. Matching is
@@ -43,9 +43,9 @@ contrib=contrib-body-requires-signed-off-by
 # (e.g. title-must-not-contain-word).
 # regex=^US[0-9]*
 
-# [B1]
+[B1]
 # B1 = body-max-line-length
-# line-length=120
+line-length=140
 
 # [body-min-length]
 # min-length=5
