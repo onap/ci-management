@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b3a77b1_28b0a5f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2024-07-11T17:04:40Z",
+      "side": 1,
+      "message": "This includes a regression in global-jjb. Please be sure to update your submodules and amend your commit.",
+      "revId": "c7af9a9624997fb11c989a6d9a49fcc595c8bb92",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
