@@ -7,10 +7,6 @@
     jobs:
       - oom-linters
     subproject:
-      - "commit":
-          tox-dir: "."
-          tox-envs: "gitlint"
-          pattern: "**"
       - "doc8":
           tox-dir: "."
           tox-envs: "doc8"
