@@ -48,6 +48,30 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "e78e52be_9dfadd67",
+        "filename": ".gitlint",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7849
+      },
+      "writtenOn": "2024-07-11T08:03:38Z",
+      "side": 1,
+      "message": "Looking at ci-management, to me it seems that oom is the *only* project that is actually using that linter, isn\u0027t it?\n\nBut good that we enforce global standards...",
+      "parentUuid": "585b31f1_b096e5c7",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 15
+      },
+      "revId": "f68e5051cd782c1ec592cbf75dfb2a1370ad433a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e874cbf9_73fc1ef1",
