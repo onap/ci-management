@@ -24,6 +24,30 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "585b31f1_b096e5c7",
+        "filename": ".gitlint",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7849
+      },
+      "writtenOn": "2024-07-11T07:58:00Z",
+      "side": 1,
+      "message": "Alright, then I will open a CR that suggests to disable the commit lint for OOM",
+      "parentUuid": "1c25db2d_ab16b493",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 15
+      },
+      "revId": "f68e5051cd782c1ec592cbf75dfb2a1370ad433a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "e874cbf9_73fc1ef1",
