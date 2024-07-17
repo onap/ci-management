@@ -28,7 +28,7 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
           gerrit-maven-stage:
             build-node: centos8-docker-4c-4g
           gerrit-maven-docker-stage:
