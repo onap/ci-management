@@ -92,8 +92,6 @@
           jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     triggers:
-      - reverse:
-          jobs: "{project-name}-{stream}-verify-java"
       - gerrit-trigger-patch-submitted:
           server: "{server-name}"
           project: "{project}"
