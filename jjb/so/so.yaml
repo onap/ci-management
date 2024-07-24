@@ -36,10 +36,8 @@
       - "java17":
           branch: "java17"
           java-version: openjdk17
-          gerrit-maven-stage:
-            build-node: centos8-docker-8c-8g
-          gerrit-maven-docker-stage:
-            build-node: centos8-docker-8c-8g
+          build-node: centos8-docker-8c-8g
+          maven-version: mvn38
     mvn-settings: "so-settings"
     files: "**"
     archive-artifacts: ""
