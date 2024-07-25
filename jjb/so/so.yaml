@@ -37,7 +37,9 @@
           branch: "java17"
           java-version: openjdk17
           build-node: centos8-docker-8c-8g
+          # Define maven version for both ONAP and global-jjb jobs
           maven-version: mvn38
+          mvn-version: mvn38
     mvn-settings: "so-settings"
     files: "**"
     archive-artifacts: ""
