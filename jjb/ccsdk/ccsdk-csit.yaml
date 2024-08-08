@@ -15,10 +15,10 @@
     stream:
       - "master":
           branch: "master"
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
-      - "london":
-          branch: "london"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-version: "mvn38"
     robot-options: ""

@@ -30,6 +30,8 @@
 
     project: "ccsdk/apps"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     java-version: openjdk17

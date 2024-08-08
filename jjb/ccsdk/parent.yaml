@@ -20,6 +20,8 @@
     nexus-snapshot-repo: "snapshots"
     project: "ccsdk/parent"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     java-version: openjdk17

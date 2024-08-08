@@ -23,6 +23,8 @@
           build-node: centos7-docker-2c-1g
     project: "sdnc/oam"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     java-version: openjdk17

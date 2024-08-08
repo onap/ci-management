@@ -18,6 +18,9 @@
 
     project: "ccsdk/features"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
+          mvn-opts: "-Xmx3072m"
       - "montreal":
           branch: "montreal"
           mvn-opts: "-Xmx3072m"

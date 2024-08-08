@@ -23,6 +23,8 @@
 
     project: "ccsdk/cds"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     java-version: openjdk17
