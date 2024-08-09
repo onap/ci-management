@@ -33,8 +33,6 @@
 
     project: "sdnc/apps"
     stream:
-      - "newdelhi":
-          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
     java-version: openjdk11
@@ -83,6 +81,8 @@
 
     project: "sdnc/apps"
     stream:
+      - "newdelhi":
+          branch: "newdelhi"
       - "master":
           branch: "master"
     java-version: openjdk17
