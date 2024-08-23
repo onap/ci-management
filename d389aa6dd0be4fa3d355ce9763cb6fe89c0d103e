@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c46075e_4a5b30eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-08-23T11:14:30Z",
+      "side": 1,
+      "message": "Adding Dan - CCSDK project PTL",
+      "revId": "d389aa6dd0be4fa3d355ce9763cb6fe89c0d103e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
