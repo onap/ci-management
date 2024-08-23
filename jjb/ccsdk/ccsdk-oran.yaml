@@ -28,6 +28,8 @@
           branch: "newdelhi"
       - "montreal":
           branch: "montreal"
+      - "london":
+          branch: "london"
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-oran-settings"
