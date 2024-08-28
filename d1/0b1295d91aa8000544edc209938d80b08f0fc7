@@ -1,0 +1,13 @@
+Code-Review+1: Francesco Davide Lapenta <francesco.lapenta@est.tech>
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Code-Review+1: John Keeney <john.keeney@est.tech>
+Code-Review+1: Raviteja Karumuri <raviteja.karumuri@est.tech>
+Code-Review+1: Aravindhan Ayyanathan <aravindhan.a@est.tech>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Wed, 28 Aug 2024 17:31:23 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/138833
+Project: ci-management
+Branch: refs/heads/master
