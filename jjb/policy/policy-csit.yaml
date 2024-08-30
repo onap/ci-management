@@ -134,16 +134,3 @@
           branch: "newdelhi"
     functionality:
       - "clamp"
-
-- project:
-    name: policy-apex-pdp-postgres-project-csit
-    jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
-    project-name: "policy-apex-pdp"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
-    project: "policy/docker"
-    stream:
-      - "master":
-          branch: "master"
-    functionality:
-      - "apex-pdp-postgres"
