@@ -126,15 +126,3 @@
           branch: "newdelhi"
     functionality:
       - "clamp"
-
-- project:
-    name: policy-apex-pdp-postgres-project-csit-verify
-    jobs:
-      - "{project-name}-{stream}-project-csit-verify-{functionality}"
-    project-name: "policy-apex-pdp"
-    project: "policy/docker"
-    stream:
-      - "master":
-          branch: "master"
-    functionality:
-      - "apex-pdp-postgres"
