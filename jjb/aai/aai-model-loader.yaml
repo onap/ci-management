@@ -13,7 +13,6 @@
       - gerrit-maven-merge:
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           sbom-generator: true
       - gerrit-maven-docker-stage:
@@ -31,7 +30,7 @@
     mvn-settings: "aai-model-loader-settings"
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos8-docker-4c-4g
     mvn-version: "mvn36"
     java-version: openjdk11
     nexus-snapshot-repo: "snapshots"
