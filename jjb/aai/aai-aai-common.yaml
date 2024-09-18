@@ -27,7 +27,7 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk8
+    java-version: openjdk11
 
 - project:
     name: aai-aai-common-sonar
@@ -46,7 +46,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     mvn-version: "mvn35"
-    java-version: openjdk8
+    java-version: openjdk11
 
 - project:
     name: aai-aai-common-clm
@@ -62,7 +62,7 @@
     mvn-params: ""
     mvn-settings: "aai-aai-common-settings"
     mvn-version: "mvn35"
-    java-version: openjdk8
+    java-version: openjdk11
 
 - project:
     name: "aai-aai-common-docker"
@@ -87,4 +87,4 @@
     mvn-version: "mvn35"
     files: "Dockerfiles/aai-common/**"
     build-node: ubuntu1804-docker-8c-8g
-    java-version: openjdk8
+    java-version: openjdk11
