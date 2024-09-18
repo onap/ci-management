@@ -37,7 +37,7 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk8
+    java-version: openjdk11
 
 - project:
     name: aai-resources-sonar
@@ -55,7 +55,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     mvn-version: "mvn35"
-    java-version: openjdk8
+    java-version: openjdk11
 
 - project:
     name: aai-resources-clm
@@ -69,4 +69,4 @@
           branch: "master"
     mvn-settings: "aai-resources-settings"
     mvn-version: "mvn35"
-    java-version: openjdk8
+    java-version: openjdk11
