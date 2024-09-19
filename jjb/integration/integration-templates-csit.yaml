@@ -221,6 +221,7 @@
             CONTAINER_PULL_REGISTRY={container-public-registry}
       - lf-maven-build:
           mvn-goals: "{mvn-goals}"
+      - functional-test-case-run
       - integration-install-robotframework-py3
       - inject:
           properties-file: "env.properties"
