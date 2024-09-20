@@ -32,14 +32,6 @@
           description: "File name to be used by HTML publisher plugin to produce the report"
 
 - builder:
-    name: functional-test-case-run
-    builders:
-      - shell: |
-          git clone https://gerrit.o-ran-sc.org/r/nonrtric /tmp/nonrtric
-          cp /tmp/nonrtric "$WORKSPACE"
-          "$WORKSPACE/test/auto-test/verify-jobs-nonrtric.sh"
-
-- builder:
     name: integration-install-robotframework
     builders:
       - shell: !include-raw:
