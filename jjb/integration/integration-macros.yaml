@@ -36,7 +36,7 @@
     builders:
       - shell: |
           git clone https://gerrit.o-ran-sc.org/r/nonrtric /tmp/nonrtric
-          cp /tmp/nonrtric "$WORKSPACE"
+          cp -r /tmp/nonrtric "$WORKSPACE"
           "$WORKSPACE/test/auto-test/verify-jobs-nonrtric.sh"
 
 - builder:
