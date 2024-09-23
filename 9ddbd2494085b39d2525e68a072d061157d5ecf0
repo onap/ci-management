@@ -33,6 +33,23 @@
       "message": "Ref https://gerrit.onap.org/r/c/ci-management/+/138968",
       "revId": "9ddbd2494085b39d2525e68a072d061157d5ecf0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd48be23_6d3f1f0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-09-23T10:54:48Z",
+      "side": 1,
+      "message": "Ref Revert review: https://gerrit.onap.org/r/c/ci-management/+/138998",
+      "revId": "9ddbd2494085b39d2525e68a072d061157d5ecf0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
