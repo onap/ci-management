@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c76aca85_7ee564bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-09-23T10:59:11Z",
+      "side": 1,
+      "message": "Apologies, for the confusion about WIP. I raised a revert change for the commit \u0027138968: Update ONAP Maven Verify job to run FTC tests on a1pms patch set | https://gerrit.onap.org/r/c/ci-management/+/138968\u0027. The merged one needs a little more work.",
+      "revId": "a2d37fd72fb5c8d5df43f4e0be64c7dc249cc6b6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
