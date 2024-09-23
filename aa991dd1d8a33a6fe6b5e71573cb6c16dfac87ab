@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4ae4798_ee7ef37d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-09-23T09:23:05Z",
+      "side": 1,
+      "message": "jjb-deploy *-oran-review-verification-maven-master*",
+      "revId": "aa991dd1d8a33a6fe6b5e71573cb6c16dfac87ab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
