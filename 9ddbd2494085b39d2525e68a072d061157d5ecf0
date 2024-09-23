@@ -16,6 +16,23 @@
       "message": "Trying to revert original change.",
       "revId": "9ddbd2494085b39d2525e68a072d061157d5ecf0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11b807b0_724505b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-09-23T10:45:20Z",
+      "side": 1,
+      "message": "Ref https://gerrit.onap.org/r/c/ci-management/+/138968",
+      "revId": "9ddbd2494085b39d2525e68a072d061157d5ecf0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
