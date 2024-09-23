@@ -67,6 +67,23 @@
       "message": "Will try to revert this change. \nReview was still WIP. \nSorry for the confusion.",
       "revId": "408907e259a0ed1d012203ec3ed196167ac006e4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3f6a6fa_b7435015",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-09-23T10:55:15Z",
+      "side": 1,
+      "message": "Ref Revert: https://gerrit.onap.org/r/c/ci-management/+/138998",
+      "revId": "408907e259a0ed1d012203ec3ed196167ac006e4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ],
   "submitRequirementResults": [
