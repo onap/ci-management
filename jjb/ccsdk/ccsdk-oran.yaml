@@ -45,6 +45,15 @@
     name: ccsdk-oran-current-java17
     project-name: "ccsdk-oran"
     jobs:
+      - gerrit-maven-docker-verify:
+          post-build-script: |
+            #!/bin/bash
+            echo "Cloning"
+            git clone https://gerrit.o-ran-sc.org/r/nonrtric /tmp/nonrtric
+            echo "after Cloning copy"
+            cp -r /tmp/nonrtric "$WORKSPACE"
+            echo "After copy"
+            "$WORKSPACE/test/auto-test/verify-jobs-nonrtric.sh"
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
