@@ -45,8 +45,12 @@
     name: ccsdk-oran-current-java17
     project-name: "ccsdk-oran"
     jobs:
+      - gerrit-maven-docker-verify:
+          post-build-script: !include-raw-escape: ../../shell/ftc-run.sh
       - gerrit-maven-verify:
           cron: ""
+          mvn-opts: "-U"
+          post-build-script: !include-raw-escape: ../../shell/ftc-run.sh
       - gerrit-maven-merge:
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
