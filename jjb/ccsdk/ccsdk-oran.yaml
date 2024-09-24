@@ -45,6 +45,11 @@
     name: ccsdk-oran-current-java17
     project-name: "ccsdk-oran"
     jobs:
+      - gerrit-docker-verify:
+          docker-name: "ccsdk-oran-a1policymanagementservice"
+          docker-root: "$WORKSPACE"
+          container-public-registry: ""
+          container-push-registry: "onap"
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
