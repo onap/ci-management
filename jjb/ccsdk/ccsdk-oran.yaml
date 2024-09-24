@@ -47,6 +47,7 @@
     jobs:
       - gerrit-maven-verify:
           cron: ""
+          post-build-script: !include-raw-escape: ../../shell/ftc-run.sh
       - gerrit-maven-merge:
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
