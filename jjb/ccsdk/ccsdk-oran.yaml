@@ -45,6 +45,16 @@
     name: ccsdk-oran-current-java17
     project-name: "ccsdk-oran"
     jobs:
+      - gerrit-docker-verify:
+          docker-name: "ccsdk-oran-a1policymanagementservice"
+          docker-root: "$WORKSPACE/oran/a1-policy-management"
+          container-public-registry: ""
+          container-push-registry: "onap"
+          post_docker_build_script: |
+            #!/bin/bash
+            git clone https://gerrit.o-ran-sc.org/r/nonrtric /tmp/nonrtric
+            cp -r /tmp/nonrtric "$WORKSPACE"
+            "$WORKSPACE/test/auto-test/verify-jobs-nonrtric.sh"
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
