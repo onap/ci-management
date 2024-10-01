@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21afd8bd_04b62253",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-10-01T09:40:25Z",
+      "side": 1,
+      "message": "jjb-deploy ccsdk-oran-docker-verify-*",
+      "revId": "bba6efa154d2916a6013a40c6bb69fb55e553956",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
