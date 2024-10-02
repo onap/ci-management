@@ -64,6 +64,7 @@
     mvn-version: "mvn35"
     java-version: openjdk11
 
+
 - project:
     name: "aai-aai-common-docker"
     jobs:
