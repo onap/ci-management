@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34ee5ea3_7c63068b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-10-02T15:33:34Z",
+      "side": 1,
+      "message": "jjb-deploy ccsdk-oran-maven-verify-master*",
+      "revId": "814993cd57680d79e7268a63429cdbceb70c0ab4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
