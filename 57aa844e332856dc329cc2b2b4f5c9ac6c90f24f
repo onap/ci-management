@@ -16,6 +16,23 @@
       "message": "jjb-deploy ccsdk-oran-maven-docker-verify-*",
       "revId": "57aa844e332856dc329cc2b2b4f5c9ac6c90f24f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e71bbe0c_4e2ecc69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-10-02T12:35:06Z",
+      "side": 1,
+      "message": "jjb-deploy ccsdk-oran-maven-verify-*",
+      "revId": "57aa844e332856dc329cc2b2b4f5c9ac6c90f24f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
