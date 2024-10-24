@@ -1,0 +1,15 @@
+---
+- project:
+    name: policy-opa-pdp-project-view
+    project-name: policy-opa-pdp
+    views:
+      - project-view
+
+- project:
+    name: policy-opa-pdp-info
+    project: policy/opa-pdp
+    project-name: policy-opa-pdp
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
