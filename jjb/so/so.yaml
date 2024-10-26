@@ -61,7 +61,7 @@
     branch: "master"
     mvn-settings: "so-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: "so-coverity"
@@ -74,7 +74,7 @@
     branch: "master"
     mvn-settings: "so-settings"
     mvn-params: "-DskipTests"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     coverity-project-name: "onap-so"
     coverity-token: "SrGGJp9T1n1lhJn2sF72XQ"
     coverity-user-email: "A.Naluzhnyy@samsung.com"

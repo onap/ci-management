@@ -51,7 +51,7 @@
     java-version: openjdk11
     mvn-settings: "dcaegen2-collectors-datafile-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: dcaegen2-collectors-datafile-clm

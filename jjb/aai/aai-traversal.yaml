@@ -52,7 +52,7 @@
     branch: "master"
     mvn-settings: "aai-traversal-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn35"
     java-version: openjdk11
 

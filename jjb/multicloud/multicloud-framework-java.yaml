@@ -54,7 +54,7 @@
     mvn-params: "-f multivimbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-framework-multivimbroker-clm
@@ -85,7 +85,7 @@
     mvn-params: "-f artifactbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-framework-artifactbroker-clm

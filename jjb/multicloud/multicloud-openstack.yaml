@@ -58,7 +58,7 @@
     mvn-params: "-f windriver/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-openstack-pike-sonar
@@ -75,7 +75,7 @@
     mvn-params: "-f pike/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-openstack-starlingx-sonar
@@ -92,7 +92,7 @@
     mvn-params: "-f starlingx/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-openstack-clm
@@ -122,7 +122,7 @@
     mvn-params: "-f fcaps/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: multicloud-openstack-hpa-sonar
@@ -139,4 +139,4 @@
     mvn-params: "-f hpa/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"

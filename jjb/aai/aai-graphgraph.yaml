@@ -46,7 +46,7 @@
     branch: "master"
     mvn-settings: "aai-graphgraph-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: aai-graphgraph-clm

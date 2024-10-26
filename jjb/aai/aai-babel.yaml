@@ -52,7 +52,7 @@
     branch: "master"
     mvn-settings: "aai-babel-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     java-version: openjdk11
     mvn-version: "mvn36"
 
@@ -67,6 +67,6 @@
       - "master":
           branch: "master"
     mvn-settings: "aai-babel-settings"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     java-version: openjdk11
     mvn-version: "mvn36"

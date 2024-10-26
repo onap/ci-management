@@ -40,7 +40,7 @@
     branch: "master"
     mvn-settings: "aai-logging-service-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: aai-logging-service-clm

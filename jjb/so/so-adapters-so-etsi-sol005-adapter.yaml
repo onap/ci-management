@@ -51,7 +51,7 @@
     branch: "master"
     mvn-settings: "so-adapters-so-etsi-sol005-adapter-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
     name: so-adapters-so-etsi-sol005-adapter-clm
