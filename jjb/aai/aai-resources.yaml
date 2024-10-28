@@ -70,3 +70,4 @@
     mvn-settings: "aai-resources-settings"
     mvn-version: "mvn35"
     java-version: openjdk11
+    build-node: ubuntu1804-docker-8c-8g
