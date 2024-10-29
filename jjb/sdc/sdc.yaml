@@ -53,7 +53,7 @@
             integration-tests/target/ExtentReport/UI/*.html
             integration-tests/target/ExtentReport/UI/screenshots/*.png
       - gerrit-maven-stage:
-          build-timeout: 90
+          build-timeout: 120
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-4c-4g
