@@ -79,7 +79,7 @@
       - "master":
           branch: "master"
           distro: "alpine"
-          mvn-params: "docker"
+          mvn-params: "-P docker"
     docker-name: "onap/aai-common-{distro}"
     docker-build-args: "-f ./Dockerfile.{distro}"
     docker-root: "$WORKSPACE/Dockerfiles/aai-common/"
