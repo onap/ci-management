@@ -8,10 +8,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "distribution"
 
@@ -24,10 +24,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "xacml-pdp"
 
@@ -40,10 +40,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "drools-applications"
 
@@ -56,10 +56,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "drools-pdp"
 
@@ -72,10 +72,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "apex-pdp"
 
@@ -88,10 +88,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "pap"
 
@@ -104,10 +104,10 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "api"
 
@@ -120,9 +120,9 @@
     stream:
       - "master":
           branch: "master"
-      - "montreal":
-          branch: "montreal"
       - "newdelhi":
           branch: "newdelhi"
+      - "oslo":
+          branch: "oslo"
     functionality:
       - "clamp"
