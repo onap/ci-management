@@ -13,3 +13,21 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: policy-opa-pdp-go-v123
+    project: policy/opa-pdp
+    project-name: policy-opa-pdp
+    path: "."
+    golangver: "golang123"
+    build-node: ubuntu1804-docker-8c-8g
+    branch: master
+    jobs:
+      - "{project-name}-{stream}-verify-golang"
+      - "{project-name}-{stream}-merge-golang"
+      - "{project-name}-{stream}-docker-golang-shell-daily":
+          script: !include-raw-escape: "build-opa-pdp-docker-image.sh"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-opa-pdp-settings"
