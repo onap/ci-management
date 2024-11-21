@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb3d060f_e6e5f6c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2024-11-21T11:15:25Z",
+      "side": 1,
+      "message": "Glad to see you\u0027ve fixed the verification jobs. Syntactically this looks good. Have you been able to test any of these new Go jobs in the sandbox environment? https://jenkins.onap.org/sandbox/",
+      "revId": "a17c93a9095518bee8b90ec867701f5e5a49866e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
