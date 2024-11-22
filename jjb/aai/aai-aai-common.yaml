@@ -14,7 +14,6 @@
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
@@ -26,7 +25,7 @@
     mvn-version: "mvn35"
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos8-docker-4c-4g
     java-version: openjdk11
 
 - project:
