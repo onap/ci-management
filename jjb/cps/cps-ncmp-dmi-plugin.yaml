@@ -34,10 +34,10 @@
     stream:
       - "master":
           branch: master
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
           cron: ""
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: "**"
