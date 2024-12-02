@@ -48,10 +48,10 @@
     stream:
       - "master":
           branch: "master"
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     mvn-settings: "cps-settings"
     files: "**"
     archive-artifacts: ""
