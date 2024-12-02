@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b12362c3_9d784508",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2024-12-02T10:01:05Z",
+      "side": 1,
+      "message": "Looks like prettier is modifying a file when the pre-commit hooks run. Perhaps run pre-commit locally, add the change by prettier, and re-submit?",
+      "revId": "d11c61cfd58113891285f80fd2e07c0aca21c343",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
