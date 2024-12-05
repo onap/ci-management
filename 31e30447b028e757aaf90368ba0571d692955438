@@ -16,6 +16,23 @@
       "message": "jjb-deploy ccsdk-oran-maven-clm-master",
       "revId": "31e30447b028e757aaf90368ba0571d692955438",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d34a1fd_3f57c594",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-05T13:11:59Z",
+      "side": 1,
+      "message": "jjb-deploy policy-apex-pdp-maven-clm-master",
+      "revId": "31e30447b028e757aaf90368ba0571d692955438",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
