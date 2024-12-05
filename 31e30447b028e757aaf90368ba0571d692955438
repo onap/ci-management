@@ -33,6 +33,23 @@
       "message": "jjb-deploy policy-apex-pdp-maven-clm-master",
       "revId": "31e30447b028e757aaf90368ba0571d692955438",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19f35c88_4bec1fde",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-05T14:08:33Z",
+      "side": 1,
+      "message": "Working in sandbox: \nhttps://jenkins.onap.org/sandbox/job/ccsdk-oran-maven-clm-master/1/",
+      "revId": "31e30447b028e757aaf90368ba0571d692955438",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
