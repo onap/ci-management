@@ -37,6 +37,7 @@
           branch: "master"
       - "montreal":
           branch: "montreal"
+    build-timeout: 120
     java-version: openjdk11
     maven-version: "mvn36"
     mvn-settings: "sdc-settings"
