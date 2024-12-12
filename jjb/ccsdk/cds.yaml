@@ -23,6 +23,8 @@
 
     project: "ccsdk/cds"
     stream:
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
       - "montreal":
