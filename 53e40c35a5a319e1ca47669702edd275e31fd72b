@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f95c9929_eb027428",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8487
+      },
+      "writtenOn": "2024-12-12T08:57:18Z",
+      "side": 1,
+      "message": "Kindly review and Merge ASAP as we have dependent actions to be validated after this patch",
+      "revId": "53e40c35a5a319e1ca47669702edd275e31fd72b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
