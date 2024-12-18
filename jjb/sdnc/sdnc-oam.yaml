@@ -28,7 +28,7 @@
       - "montreal":
           branch: "montreal"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-oam-settings"
     files: "**"
     archive-artifacts: ""
@@ -67,7 +67,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-oam-settings"
     files: "**"
     archive-artifacts: ""
@@ -90,5 +90,5 @@
           branch: "master"
     mvn-settings: "sdnc-oam-settings"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

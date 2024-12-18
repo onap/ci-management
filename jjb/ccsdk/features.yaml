@@ -28,7 +28,7 @@
           branch: "montreal"
           mvn-opts: "-Xmx3072m"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-features-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -65,7 +65,7 @@
           branch: "master"
           mvn-opts: "-Xmx3072m"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-features-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -91,7 +91,7 @@
     project-name: "ccsdk-features"
     branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-features-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx3072m"
@@ -107,7 +107,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-features-settings"
     mvn-opts: "-Xmx3072m --add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g

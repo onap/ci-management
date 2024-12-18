@@ -36,7 +36,7 @@
       - "montreal":
           branch: "montreal"
     java-version: openjdk11
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
 
     # due to a strange macro / variable translation problem this needs to be
@@ -46,7 +46,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    maven-version: "mvn38"
+    maven-version: "mvn39"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
@@ -86,7 +86,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
 
     # due to a strange macro / variable translation problem this needs to be
@@ -96,7 +96,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    maven-version: "mvn38"
+    maven-version: "mvn39"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
@@ -114,11 +114,11 @@
     project-name: "sdnc-apps"
     branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
-    maven-version: "mvn38"
+    maven-version: "mvn39"
 
 - project:
     name: sdnc-apps-clm
@@ -132,6 +132,6 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

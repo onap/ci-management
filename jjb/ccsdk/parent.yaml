@@ -27,7 +27,7 @@
       - "montreal":
           branch: "montreal"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -71,7 +71,7 @@
             - "{project-name}-gerrit-release-jobs":
                 mvn-params: "-Drevision=3.0.0"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -92,7 +92,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-builder-4c-4g
