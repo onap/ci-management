@@ -34,6 +34,19 @@
       - "xacml-pdp"
 
 - project:
+    name: policy-opa-pdp-project-csit
+    jobs:
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-opa-pdp"
+    recipients: "dm00536893@techmahindra.com"
+    project: "policy/docker"
+    stream:
+      - "master":
+          branch: "master"
+    functionality:
+      - "policy-opa-pdp"
+
+- project:
     name: policy-drools-applications-project-csit
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"

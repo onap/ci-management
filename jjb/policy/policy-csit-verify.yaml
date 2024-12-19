@@ -32,6 +32,18 @@
       - "xacml-pdp"
 
 - project:
+    name: policy-opa-pdp-project-csit-verify
+    jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+    project-name: "policy-opa-pdp"
+    project: "policy/docker"
+    stream:
+      - "master":
+          branch: "master"
+    functionality:
+      - "opa-pdp"
+
+- project:
     name: policy-drools-applications-project-csit-verify
     jobs:
       - "{project-name}-{stream}-project-csit-verify-{functionality}"
