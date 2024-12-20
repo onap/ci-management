@@ -38,7 +38,7 @@
           build-node: "ubuntu1804-docker-8c-8g"
       - "{project-name}-{stream}-sdc-merge-java":
           build-node: "ubuntu1804-docker-8c-16g"
-          build-timeout: 120
+          build-timeout: 180
           docker-pom: "pom.xml"
           mvn-profile: "docker"
           # yamllint disable-line rule:line-length
