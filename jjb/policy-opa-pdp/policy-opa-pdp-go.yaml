@@ -1,0 +1,16 @@
+---
+- project:
+    name: policy-opa-pdp-go-template
+    project: policy/opa-pdp
+    project-name: policy-opa-pdp
+    path: "."
+    go-root: "."
+    golangver: "golang123"
+    build-node: ubuntu1804-docker-8c-8g
+    branch: master
+    jobs:
+      - "gerrit-go-verify"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "policy-opa-pdp-settings"
