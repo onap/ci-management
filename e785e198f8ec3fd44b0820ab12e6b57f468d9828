@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "030a2033_db0f7151",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8487
+      },
+      "writtenOn": "2024-12-23T07:45:25Z",
+      "side": 1,
+      "message": "Hi @KevinSandi, as discussed for Ticket IT-27520.\nive uploaded my changes with this patch. kindly pull these changes and test from your side.",
+      "revId": "e785e198f8ec3fd44b0820ab12e6b57f468d9828",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
