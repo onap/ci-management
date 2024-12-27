@@ -31,3 +31,14 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-opa-pdp-settings"
+
+- project:
+    name: policy-opa-pdp-clm
+    project: policy/opa-pdp
+    project-name: policy-opa-pdp
+    build-node: ubuntu2004-builder-4c-4g
+    nexus-iq-namespace: onap-
+    golang-version: "1.23"
+    jobs:
+      - gerrit-nexus-iq-go-clm
+    branch: "master"
