@@ -62,6 +62,7 @@
           mvn-version: "mvn36"
           mvn-params: "-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
       - gerrit-maven-docker-stage:
+          build-timeout: 120
           sbom-generator: true
           build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
