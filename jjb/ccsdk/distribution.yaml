@@ -25,6 +25,9 @@
 
     project: "ccsdk/distribution"
     stream:
+      - "oslo":
+          branch: "oslo"
+          java-version: openjdk17
       - "newdelhi":
           branch: "newdelhi"
           java-version: openjdk17

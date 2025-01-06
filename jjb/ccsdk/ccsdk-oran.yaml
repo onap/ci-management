@@ -24,6 +24,8 @@
           build-node: centos7-docker-2c-1g
     project: "ccsdk/oran"
     stream:
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
       - "montreal":

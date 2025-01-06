@@ -18,6 +18,8 @@
 
     project: "ccsdk/sli"
     stream:
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
       - "montreal":

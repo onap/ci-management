@@ -20,6 +20,8 @@
     nexus-snapshot-repo: "snapshots"
     project: "ccsdk/parent"
     stream:
+      - "oslo":
+          branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
       - "montreal":
