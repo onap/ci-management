@@ -37,7 +37,7 @@
       - "montreal":
           branch: "montreal"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -80,7 +80,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -106,7 +106,7 @@
     project-name: "ccsdk-apps"
     branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
@@ -122,7 +122,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: ubuntu1804-builder-4c-4g

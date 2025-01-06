@@ -34,7 +34,7 @@
       - "montreal":
           branch: "montreal"
           java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
     archive-artifacts: ""
@@ -75,7 +75,7 @@
       - "master":
           branch: "master"
           java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
     archive-artifacts: ""
@@ -96,7 +96,7 @@
       - "master":
           branch: "master"
     java-version: openjdk17
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: centos8-docker-8c-8g

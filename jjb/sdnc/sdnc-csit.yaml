@@ -20,6 +20,6 @@
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdnc-oam-settings"
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     robot-options: ""
     branch: "master"
