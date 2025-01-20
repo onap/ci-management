@@ -51,6 +51,24 @@
       "message": "As per my recent comment in IT-27520, the new opa-pdp jobs need to be moved so they sit alongside the existing ONAP policy sub-projects, i.e. from jjb/policy-opa-pdp -\u003e jjb/policy. This respects (and mirrors) the code hierarchy in Gerrit. We may end up with automation failures and other issues while these exist here.",
       "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98e9d5a3_67c8f81e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8491
+      },
+      "writtenOn": "2025-01-20T12:18:18Z",
+      "side": 1,
+      "message": "We will be doing that change in another Jira ticket, Matthew. This ticket is just limited to adding gerrit release job. Kindly approve this.",
+      "parentUuid": "c005446b_04b2b24f",
+      "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
