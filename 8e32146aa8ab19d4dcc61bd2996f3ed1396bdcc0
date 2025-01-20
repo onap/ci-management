@@ -16,6 +16,24 @@
       "message": "Wondering, do we need a stage job for opa-pdp similar to other components?",
       "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "027d0484_2b357e91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8487
+      },
+      "writtenOn": "2025-01-20T10:40:03Z",
+      "side": 1,
+      "message": "Hi Ramesh, we checked https://github.com/lfit/releng-global-jjb/blob/master/docs/jjb/lf-maven-jobs.rst?plain\u003d1 for jobs related to stage. they have mentioned that these are for Java based Projects with Maven as build engine.\n\nFor Self Release Jobs, https://github.com/lfit/releng-global-jjb/blob/master/jjb/lf-release-job-groups.yaml we found \"{project-name}-gerrit-release-jobs\" as relevant so we have added these alone as of now.",
+      "parentUuid": "4c9111f8_77ee0d19",
+      "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
