@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c9111f8_77ee0d19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6070
+      },
+      "writtenOn": "2025-01-20T09:52:06Z",
+      "side": 1,
+      "message": "Wondering, do we need a stage job for opa-pdp similar to other components?",
+      "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
