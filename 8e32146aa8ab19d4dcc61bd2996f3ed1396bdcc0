@@ -69,6 +69,24 @@
       "parentUuid": "c005446b_04b2b24f",
       "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2c910c4_07cd3433",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8491
+      },
+      "writtenOn": "2025-01-20T12:43:00Z",
+      "side": 1,
+      "message": "The Jira ticket for your comment, Matthew, in IT-27520, for opa-pdp jobs movement is https://lf-onap.atlassian.net/browse/POLICY-5248",
+      "parentUuid": "98e9d5a3_67c8f81e",
+      "revId": "8e32146aa8ab19d4dcc61bd2996f3ed1396bdcc0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
