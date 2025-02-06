@@ -29,11 +29,11 @@
       - "master":
           branch: "master"
     mvn-settings: "aai-graphadmin-settings"
-    mvn-version: "mvn35"
+    mvn-version: "mvn36"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: aai-graphadmin-sonar
@@ -50,8 +50,8 @@
     mvn-settings: "aai-graphadmin-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    mvn-version: "mvn35"
-    java-version: openjdk11
+    mvn-version: "mvn36"
+    java-version: openjdk17
 
 - project:
     name: aai-graphadmin-clm
@@ -64,5 +64,5 @@
       - "master":
           branch: "master"
     mvn-settings: "aai-graphadmin-settings"
-    mvn-version: "mvn35"
-    java-version: openjdk11
+    mvn-version: "mvn36"
+    java-version: openjdk17
