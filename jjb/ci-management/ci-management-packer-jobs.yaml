@@ -18,6 +18,7 @@
       - centos-cs-8
       - ubuntu-18.04
       - ubuntu-20.04
+      - ubuntu-22.04
     templates: builder
     update-cloud-image: true
 
@@ -41,6 +42,7 @@
       - centos-cs-8
       - ubuntu-18.04
       - ubuntu-20.04
+      - ubuntu-22.04
     templates: docker
     update-cloud-image: true
 
@@ -62,6 +64,7 @@
     platforms:
       - centos-cs-8
       - ubuntu-20.04
+      - ubuntu-22.04
     templates: devstack
     update-cloud-image: true
 
@@ -102,6 +105,7 @@
 
     platforms:
       - ubuntu-20.04
+      - ubuntu-22.04
     templates: memcached
     update-cloud-image: true
 
@@ -140,5 +144,6 @@
 
     platforms:
       - ubuntu-20.04
+      - ubuntu-22.04
     templates: helm
     update-cloud-image: true
