@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c020b9f6_7da0ccf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2025-02-17T12:08:06Z",
+      "side": 1,
+      "message": "jjb-deploy portal-ng-ui-release-merge-master",
+      "revId": "4f1387d20d3e720f300d3f06929dbd99e5d5fda1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
