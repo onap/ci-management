@@ -16,6 +16,23 @@
       "message": "jjb-deploy portal-ng-ui-release-merge-master",
       "revId": "4f1387d20d3e720f300d3f06929dbd99e5d5fda1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61c2f8eb_6dc67507",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2025-02-17T12:09:50Z",
+      "side": 1,
+      "message": "jjb-deploy policy-opa-pdp-master-project-csit-verify-opa-pdp",
+      "revId": "4f1387d20d3e720f300d3f06929dbd99e5d5fda1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
