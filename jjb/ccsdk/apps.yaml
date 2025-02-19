@@ -6,7 +6,7 @@
       - project-view
 
 - project:
-    name: ccsdk-apps-released-java17
+    name: ccsdk-apps-released-java21
     project-name: "ccsdk-apps"
     jobs:
       - gerrit-maven-verify:
@@ -36,7 +36,7 @@
           branch: "newdelhi"
       - "montreal":
           branch: "montreal"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
@@ -51,7 +51,7 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: ccsdk-apps-current-java17
+    name: ccsdk-apps-current-java21
     project-name: "ccsdk-apps"
     jobs:
       - gerrit-maven-verify:
@@ -79,7 +79,7 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
@@ -105,7 +105,7 @@
     project: "ccsdk/apps"
     project-name: "ccsdk-apps"
     branch: "master"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
     mvn-goals: "clean install"
@@ -121,7 +121,7 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
