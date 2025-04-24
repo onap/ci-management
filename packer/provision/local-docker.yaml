@@ -66,7 +66,7 @@
         repo: ppa:deadsnakes/ppa
         state: present
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
 
     - name: Update and upgrade apt packages
       apt:
@@ -86,7 +86,7 @@
           - gcc
           - python3-venv
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
 
     - name: Install Python 3.7
       apt:
@@ -95,7 +95,7 @@
           - python3.7-dev
           - python3.7-tk
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
 
     - name: Install Python 3.8
       apt:
@@ -104,7 +104,7 @@
           - python3.8-dev
           - python3.8-tk
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
 
     - name: Install Python 3.9
       apt:
@@ -114,7 +114,7 @@
           - python3.9-tk
           - python3.9-distutils
       become: true
-      when: ansible_distribution == 'Ubuntu'
+      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
 
     - name: Install supporting packages (Ubuntu 18.04)
       apt:
@@ -280,7 +280,8 @@
       apt:
         deb: https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_24.1-1~ubuntu~trusty_amd64.deb
       become: true
-      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
+      # yamllint disable-line rule:line-length
+      when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: "Download latest rebar3 bin"
       command: curl -o /usr/bin/rebar3 -L "https://s3.amazonaws.com/rebar3/rebar3"
@@ -319,10 +320,3 @@
         state: link
       become: true
       when: ansible_architecture == 'x86_64' and ansible_distribution == 'Ubuntu'
-
-    - name: Install jinja2
-      pip:
-        name: jinja2
-        state: present
-      become: true
-      when: ansible_architecture == 'x86_64'
