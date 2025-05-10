@@ -89,7 +89,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
