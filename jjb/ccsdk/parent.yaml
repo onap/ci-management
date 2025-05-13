@@ -38,7 +38,7 @@
     archive-artifacts: ""
 
 - project:
-    name: ccsdk-parent-current-java17
+    name: ccsdk-parent-current-java21
     project-name: "ccsdk-parent"
     jobs:
       - gerrit-maven-verify:
@@ -47,7 +47,7 @@
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2204-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -70,8 +70,8 @@
                 mvn-params: "-Dmaven.test.skip=true -Drevision=3.0.0"
             - "{project-name}-gerrit-release-jobs":
                 mvn-params: "-Drevision=3.0.0"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -91,8 +91,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: centos8-builder-4c-4g
+    build-node: ubuntu2204-docker-8c-8g
