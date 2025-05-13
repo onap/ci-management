@@ -17,7 +17,7 @@
       - gerrit-maven-merge:
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -36,7 +36,7 @@
       - "montreal":
           branch: "montreal"
     java-version: openjdk11
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
 
     # due to a strange macro / variable translation problem this needs to be
@@ -46,13 +46,13 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    maven-version: "mvn38"
+    maven-version: "mvn39"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: sdnc-apps-java17
+    name: sdnc-apps-java21
     project-name: "sdnc-apps"
     jobs:
       - gerrit-maven-verify:
@@ -64,7 +64,7 @@
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -87,8 +87,8 @@
           branch: "newdelhi"
       - "master":
           branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
 
     # due to a strange macro / variable translation problem this needs to be
@@ -98,7 +98,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    maven-version: "mvn38"
+    maven-version: "mvn39"
     build-node: ubuntu1804-builder-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
@@ -115,12 +115,12 @@
     project: "sdnc/apps"
     project-name: "sdnc-apps"
     branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
-    maven-version: "mvn38"
+    maven-version: "mvn39"
 
 - project:
     name: sdnc-apps-clm
@@ -133,7 +133,7 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

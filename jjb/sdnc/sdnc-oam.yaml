@@ -1,6 +1,6 @@
 ---
 - project:
-    name: sdnc-oam-released-java17
+    name: sdnc-oam-released-java21
     project-name: "sdnc-oam"
     jobs:
       - gerrit-maven-verify:
@@ -8,13 +8,13 @@
       - gerrit-maven-merge:
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
@@ -29,19 +29,19 @@
           branch: "newdelhi"
       - "montreal":
           branch: "montreal"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-oam-settings"
     files: "**"
     archive-artifacts: ""
     sign-artifacts: true
-    build-node: centos8-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     shallow-clone: true
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: sdnc-oam-current-java17
+    name: sdnc-oam-current-java21
     project-name: "sdnc-oam"
     jobs:
       - gerrit-maven-verify:
@@ -50,14 +50,14 @@
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
           cron: "@daily"
-          build-node: centos8-docker-8c-8g
+          build-node: ubuntu2004-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
@@ -68,13 +68,13 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "sdnc-oam-settings"
     files: "**"
     archive-artifacts: ""
     sign-artifacts: true
-    build-node: centos8-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     shallow-clone: true
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
@@ -86,11 +86,11 @@
     nexus-iq-namespace: "onap-"
     project: sdnc/oam
     project-name: "sdnc-oam"
-    build-node: centos8-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     stream:
       - "master":
           branch: "master"
     mvn-settings: "sdnc-oam-settings"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

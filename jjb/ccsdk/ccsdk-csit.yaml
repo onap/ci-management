@@ -22,12 +22,13 @@
       - "montreal":
           branch: "montreal"
     mvn-settings: "ccsdk-distribution-settings"
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
+    build-node: ubuntu2204-docker-8c-8g
     robot-options: ""
     branch: "master"
 
 - project:
-    name: ccsdk-oran-csit-java17
+    name: ccsdk-oran-csit-java21
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
@@ -48,8 +49,9 @@
           branch: "montreal"
       - "london":
           branch: "london"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-settings: "ccsdk-oran-settings"
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
+    build-node: ubuntu2204-docker-8c-8g
     robot-options: ""
     branch: "master"
