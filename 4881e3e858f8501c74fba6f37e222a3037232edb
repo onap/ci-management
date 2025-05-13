@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8faf54b_a3c66b4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-13T21:59:58Z",
+      "side": 1,
+      "message": "Please use the correct build node \"ubuntu2204\" not ubuntu2004, as per only 2204 version has OpenJDK 21 available. Make sure all files you modified are using the correct build node.",
+      "revId": "4881e3e858f8501c74fba6f37e222a3037232edb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c76439ea_39e5ad17",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-13T21:59:58Z",
+      "side": 1,
+      "message": "typo here, ubuntu2204 has OpenJDK21, not ubuntu 20-04",
+      "revId": "4881e3e858f8501c74fba6f37e222a3037232edb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
