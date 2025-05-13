@@ -6,7 +6,7 @@
       - project-view
 
 - project:
-    name: ccsdk-apps-released-java21
+    name: ccsdk-apps-released-java17
     project-name: "ccsdk-apps"
     jobs:
       - gerrit-maven-verify:
@@ -14,7 +14,7 @@
       - gerrit-maven-merge:
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: ubuntu2004-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -36,7 +36,7 @@
           branch: "newdelhi"
       - "montreal":
           branch: "montreal"
-    java-version: openjdk21
+    java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
@@ -46,7 +46,7 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu2004-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
@@ -60,7 +60,7 @@
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: ubuntu2004-docker-8c-8g
+          build-node: ubuntu2204-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -80,7 +80,7 @@
       - "master":
           branch: "master"
     java-version: openjdk21
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -106,7 +106,7 @@
     project-name: "ccsdk-apps"
     branch: "master"
     java-version: openjdk21
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
@@ -122,7 +122,7 @@
       - "master":
           branch: "master"
     java-version: openjdk21
-    mvn-version: "mvn38"
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-apps-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
     build-node: ubuntu1804-builder-4c-4g
