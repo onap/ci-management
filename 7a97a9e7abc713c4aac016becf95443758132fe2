@@ -18,6 +18,23 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "141e6c4e_ee0916d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2025-05-14T19:42:08Z",
+      "side": 1,
+      "message": "I\u0027ll abandon this review and start separate ones for CCSDK and SDNC.  The intent is that CCSDK and SDNC will both use Java 21 and Maven 3.9 only for the current (Paris ) release.",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4e4cfc1_d72d2a9f",
