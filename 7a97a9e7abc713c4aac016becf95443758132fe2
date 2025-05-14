@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8af97ea3_a0f66459",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "@Dan this change is too big for an accurate review.\nPlease make it more granular into multiple changes so we can review them accordingly.\nLet me give you an idea, you can split this change per project, a set of changes for ccsdk and another set for sdnc. For each set you can create 1 change modifying jobs for old releases (e.g. montreal, oslo, and so on), another change for modifying jobs using master branch. This way we can provide more accurate reviews and faster.",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4e4cfc1_d72d2a9f",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases above, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f4352e0_1a58cbc9",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases above, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76bb4905_a4a730f3",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases above, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07b439f6_f5a3024c",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases above, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "721f8604_0657e8b2",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases below, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0b1d5c3_19f7f210",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases below, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4443d4e_d7af2fa4",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-14T17:35:35Z",
+      "side": 1,
+      "message": "This change will impact all releases above, e.g. oslo, newdelhi, montreal, are you sure about this?",
+      "revId": "7a97a9e7abc713c4aac016becf95443758132fe2",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
