@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb22688e_27db6813",
+        "filename": "jjb/ccsdk/apps.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-05-15T14:28:07Z",
+      "side": 1,
+      "message": "This line is duplicate, it is already set at line 93",
+      "revId": "03fc7cd1ed89a35ae10df6a21195355a5c4a4d2f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
