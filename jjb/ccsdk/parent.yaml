@@ -73,6 +73,7 @@
     java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-parent-settings"
+    build-node: ubuntu2204-docker-8c-8g
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
     # in the job
