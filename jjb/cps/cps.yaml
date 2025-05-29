@@ -48,6 +48,8 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
       - "oslo":
           branch: "oslo"
       - "newdelhi":
