@@ -95,8 +95,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-builder-4c-4g
