@@ -92,11 +92,11 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk17
-    mvn-version: "mvn38"
+    java-version: openjdk21
+    mvn-version: "mvn39"
     mvn-settings: "ccsdk-oran-settings"
     mvn-opts: "-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: centos8-builder-4c-4g
+    build-node: ubuntu2204-docker-8c-8g
 
 - project:
     name: ccsdk-oran-sonar
