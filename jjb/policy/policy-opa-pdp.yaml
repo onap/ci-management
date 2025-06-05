@@ -42,5 +42,6 @@
     nexus-iq-namespace: onap-
     golang-version: "1.23"
     jobs:
-      - gerrit-nexus-iq-go-clm
+      - gerrit-nexus-iq-go-clm:
+          nexus-iq-use-cli: false
     branch: "master"
