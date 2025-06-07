@@ -103,6 +103,16 @@
           docker-root: ./smoke-usecases-robot-py3
           docker-name: "onap/xtesting-smoke-usecases-robot-py3"
           docker-build-args: "-f ./docker/Dockerfile"
+      - gerrit-docker-verify:
+          project-name: "integration-xtesting-testkube-executor"
+          docker-root: ./testkube-executor
+          docker-name: "onap/xtesting-testkube-executor"
+          docker-build-args: "-f ./docker/Dockerfile"
+      - gerrit-docker-merge:
+          project-name: "integration-xtesting-testkube-executor"
+          docker-root: ./testkube-executor
+          docker-name: "onap/xtesting-testkube-executor"
+          docker-build-args: "-f ./docker/Dockerfile"
     project: "integration/xtesting"
     stream:
       - "master":
