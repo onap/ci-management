@@ -15,12 +15,12 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
       - "oslo":
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-version: "mvn38"
     robot-options: ""
@@ -40,14 +40,12 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
       - "oslo":
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
-      - "london":
-          branch: "london"
     java-version: openjdk17
     mvn-settings: "ccsdk-oran-settings"
     mvn-version: "mvn38"

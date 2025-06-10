@@ -34,8 +34,6 @@
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-apps-settings"
@@ -77,6 +75,8 @@
 
     project: "ccsdk/apps"
     stream:
+      - "paris":
+          branch: "paris"
       - "master":
           branch: "master"
     java-version: openjdk21

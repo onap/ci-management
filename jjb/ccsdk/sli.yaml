@@ -22,8 +22,6 @@
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-sli-settings"
@@ -60,6 +58,8 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
     java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-sli-settings"

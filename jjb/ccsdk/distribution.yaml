@@ -31,9 +31,6 @@
       - "newdelhi":
           branch: "newdelhi"
           java-version: openjdk17
-      - "montreal":
-          branch: "montreal"
-          java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
@@ -74,6 +71,9 @@
     stream:
       - "master":
           branch: "master"
+          java-version: openjdk21
+      - "paris":
+          branch: "paris"
           java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-distribution-settings"
