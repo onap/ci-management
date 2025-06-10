@@ -22,7 +22,5 @@
           branch: "paris"
       - "oslo":
           branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
     mvn-settings: "cps-ncmp-dmi-plugin-settings"
     robot-options: ""

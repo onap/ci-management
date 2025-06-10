@@ -38,8 +38,6 @@
           branch: "paris"
       - "oslo":
           branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
           cron: ""
     mvn-settings: cps-ncmp-dmi-plugin-settings
     files: "**"

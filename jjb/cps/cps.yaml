@@ -52,8 +52,6 @@
           branch: "paris"
       - "oslo":
           branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
     mvn-settings: "cps-settings"
     files: "**"
     archive-artifacts: ""

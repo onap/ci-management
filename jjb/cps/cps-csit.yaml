@@ -23,8 +23,6 @@
           branch: "paris"
       - "oslo":
           branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
     mvn-settings: "cps-settings"
     robot-options: ""
     branch: "master"
