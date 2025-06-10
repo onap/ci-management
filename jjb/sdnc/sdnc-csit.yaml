@@ -15,12 +15,12 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
       - "oslo":
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     mvn-settings: "sdnc-oam-settings"
     mvn-version: "mvn38"
     robot-options: ""

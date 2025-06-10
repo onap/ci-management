@@ -27,8 +27,6 @@
           branch: "oslo"
       - "newdelhi":
           branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
     java-version: openjdk17
     mvn-version: "mvn38"
     mvn-settings: "sdnc-oam-settings"
@@ -66,6 +64,8 @@
           build-node: centos7-docker-2c-1g
     project: "sdnc/oam"
     stream:
+      - "paris":
+          branch: "paris"
       - "master":
           branch: "master"
     java-version: openjdk21
