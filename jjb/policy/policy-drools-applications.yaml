@@ -28,10 +28,10 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
       - "oslo":
           branch: "oslo"
+      - "paris":
+          branch: "paris"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"
