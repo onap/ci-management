@@ -18,10 +18,10 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
       - "oslo":
           branch: "oslo"
+      - "paris":
+          branch: "paris"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-common-settings"

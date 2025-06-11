@@ -32,6 +32,8 @@
     stream:
       - "master":
           branch: "master"
+      - "paris":
+          branch: "paris"
     mvn-settings: "policy-opa-pdp-settings"
 
 - project:
