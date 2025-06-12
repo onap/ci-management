@@ -39,7 +39,7 @@
     archive-artifacts: ""
     docker-pom: "pom.xml"
     mvn-profile: docker
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: centos8-docker-4c-4g
     maven-version: "mvn36"
 
 - project:
