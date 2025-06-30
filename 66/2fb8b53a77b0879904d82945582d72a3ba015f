@@ -1,0 +1,12 @@
+Verified+1: ONAP GitHub Actions <collab-it+ecomp-jobbuilder@linuxfoundation.org>
+Code-Review+1: Adam Kenihan <adam.kenihan@est.tech>
+Verified+1: ONAP Bypass GHA <releng+onap.bypass.gha@linuxfoundation.org>
+Code-Review+1: Francesco Fiora <francesco.fiora@est.tech>
+Code-Review+2: Matthew Watkins <mwatkins@linuxfoundation.org>
+Code-Review+1: Wayne Dunican <wayne.dunican@est.tech>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Submitted-by: Matthew Watkins <mwatkins@linuxfoundation.org>
+Submitted-at: Mon, 30 Jun 2025 13:15:44 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ci-management/+/141240
+Project: ci-management
+Branch: refs/heads/master
