@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a2eff14_7899d89c",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu2204-docker-v1-8c-8g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2025-07-08T23:14:12Z",
+      "side": 1,
+      "message": "Why is this one double-quoted, without the equal sign escaped, when the other two are single-quoted and escaped?",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 57
+      },
+      "revId": "1b28fc17c0347d1282019035e99b2a833ec90dd9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
