@@ -46,6 +46,30 @@
       },
       "revId": "1b28fc17c0347d1282019035e99b2a833ec90dd9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edd8a4cd_5e7a6c10",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu2204-docker-v1-8c-8g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4711
+      },
+      "writtenOn": "2025-07-09T20:23:46Z",
+      "side": 1,
+      "message": "Ok, makes sense.",
+      "parentUuid": "464c5ae0_b4390672",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 57
+      },
+      "revId": "1b28fc17c0347d1282019035e99b2a833ec90dd9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
