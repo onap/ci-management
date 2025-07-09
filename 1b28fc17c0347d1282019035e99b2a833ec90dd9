@@ -22,6 +22,30 @@
       },
       "revId": "1b28fc17c0347d1282019035e99b2a833ec90dd9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "464c5ae0_b4390672",
+        "filename": "jenkins-config/clouds/openstack/cattle/ubuntu2204-docker-v1-8c-8g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-07-09T07:24:02Z",
+      "side": 1,
+      "message": "Hi Eric,\nThese are different tries to attempt escaping the equal sign, we are not sure which one will work as per documentation is not clear about it, that\u0027s why I\u0027m using single and double quotas in different places also \\ sign in a couple of places, we will test which one works.",
+      "parentUuid": "7a2eff14_7899d89c",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 57
+      },
+      "revId": "1b28fc17c0347d1282019035e99b2a833ec90dd9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
