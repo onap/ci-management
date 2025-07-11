@@ -46,10 +46,10 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
-      - "montreal":
-          branch: "montreal"
+      - "paris":
+          branch: "paris"
+      - "oslo":
+          branch: "oslo"
 
     jobs:
       - "{project-name}-{stream}-verify-make-{helm_bin}":
