@@ -1,0 +1,15 @@
+---
+- project:
+    name: multicloud-project-view
+    project-name: multicloud
+    views:
+      - project-view
+
+- project:
+    name: multicloud-info
+    project: multicloud
+    project-name: multicloud
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
