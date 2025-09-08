@@ -33,7 +33,7 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: aai-schema-service-sonar
@@ -44,7 +44,7 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
+    java-version: openjdk17
     project: "aai/schema-service"
     project-name: "aai-schema-service"
     branch: "master"
@@ -60,7 +60,7 @@
     nexus-iq-namespace: "onap-"
     project: "aai/schema-service"
     project-name: "aai-schema-service"
-    java-version: openjdk11
+    java-version: openjdk17
     stream:
       - "master":
           branch: "master"
