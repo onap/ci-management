@@ -33,7 +33,7 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
     nexus-snapshot-repo: "snapshots"
     mvn-snapshot-id: "ecomp-snapshots"
@@ -53,7 +53,7 @@
     mvn-settings: "aai-babel-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
 
 - project:
@@ -68,5 +68,5 @@
           branch: "master"
     mvn-settings: "aai-babel-settings"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-version: "mvn36"
