@@ -19,10 +19,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.run_id }}
   cancel-in-progress: true
 
+env:
+  SET_ISSUE_ID: "CIMAN-33"
+
 jobs:
   call-in-g2g-workflow:
-    env: 
-      SET_ISSUE_ID: "CIMAN-33"
     if: false
     permissions:
       contents: read
