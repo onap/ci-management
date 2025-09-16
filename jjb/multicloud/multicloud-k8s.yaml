@@ -14,6 +14,7 @@
           disable-job: "{disable-kud}"
           area: kud-deployment
           build-timeout: 45
+          build-node: ubuntu2204-docker-4c-4g
           script: !include-raw-escape: "kud-deployment.sh"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
