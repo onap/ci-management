@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0ee01709_ed241869",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2025-09-16T13:16:42Z",
+      "side": 1,
+      "message": "For some reason, I do not have permission to submit this, even though all submit criteria are met (must be something new?).  Can someone please submit this for me?",
+      "revId": "c010503c031542e9567ba7068a8a002febe624e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
