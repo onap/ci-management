@@ -1,6 +1,6 @@
 ---
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2024 The Linux Foundation <abelur@linux.com>
+# Copyright 2025 The Linux Foundation <abelur@linux.com>
 
 name: call-github2gerrit-reusable-workflow
 
