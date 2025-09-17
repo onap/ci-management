@@ -13,6 +13,10 @@ on:
       - master
       - main
 
+env:
+  SET_ISSUE_ID: "CIMAN-77"
+  DUMMY_VAR: "invalid"
+
 concurrency:
   # yamllint disable-line rule:line-length
   group: ${{ github.workflow }}-${{ github.run_id }}
