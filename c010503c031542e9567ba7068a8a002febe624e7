@@ -16,6 +16,23 @@
       "message": "For some reason, I do not have permission to submit this, even though all submit criteria are met (must be something new?).  Can someone please submit this for me?",
       "revId": "c010503c031542e9567ba7068a8a002febe624e7",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f556cdaa_b8acbd77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2025-09-23T10:03:49Z",
+      "side": 1,
+      "message": "Can we merge this? \nThanks.",
+      "revId": "c010503c031542e9567ba7068a8a002febe624e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ],
   "submitRequirementResults": [
