@@ -22,6 +22,30 @@
       },
       "revId": "491c4eb82d78d8a16f27fc5a624b0f2cd51ada4f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8147de6d_30416a21",
+        "filename": "jjb/multicloud/multicloud-k8s.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2025-09-24T11:58:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70da7ab7_84f9b051",
+      "range": {
+        "startLine": 11,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 45
+      },
+      "revId": "491c4eb82d78d8a16f27fc5a624b0f2cd51ada4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
