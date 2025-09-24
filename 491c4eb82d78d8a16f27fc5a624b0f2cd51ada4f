@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70da7ab7_84f9b051",
+        "filename": "jjb/multicloud/multicloud-k8s.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2025-09-24T07:13:27Z",
+      "side": 1,
+      "message": "Do you really need 8c-8g for docker merge jobs? It\u0027s typically more expensive and mostly used for CSIT/multinode jobs.",
+      "range": {
+        "startLine": 11,
+        "startChar": 40,
+        "endLine": 11,
+        "endChar": 45
+      },
+      "revId": "491c4eb82d78d8a16f27fc5a624b0f2cd51ada4f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
