@@ -28,6 +28,7 @@
     project-name: oom-readiness
     project: oom/readiness
     mvn-settings: "oom-settings"
+    path: "."
     golangver: "golang124"
     build-node: ubuntu2204-builder-4c-4g
     jobs:
