@@ -8,15 +8,15 @@
       - oom-linters
     subproject:
       - "yaml":
-          tox-dir: "."
+          tox-dir: "./readiness-python"
           tox-envs: "yaml"
           pattern: "**/*.yaml"
       - "yml":
-          tox-dir: "."
+          tox-dir: "./readiness-python"
           tox-envs: "yaml"
           pattern: "**/*.yml"
       - "py":
-          tox-dir: "."
+          tox-dir: "./readiness-python"
           tox-envs: "python"
           pattern: "**/*.python"
     stream:
