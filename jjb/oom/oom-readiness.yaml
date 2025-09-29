@@ -29,7 +29,7 @@
     project: oom/readiness
     mvn-settings: "oom-settings"
     path: "."
-    golangver: "golang124"
+    golangver: "golang123"
     build-node: ubuntu2204-docker-4c-4g
     jobs:
       - "{project-name}-{stream}-verify-golang"
