@@ -46,6 +46,30 @@
       },
       "revId": "90545b23d1d09c986e6ca2caec15368007484cf1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a20ec7a7_2d532c5f",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2025-09-30T03:52:20Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "717b0943_d671e73b",
+      "range": {
+        "startLine": 260,
+        "startChar": 23,
+        "endLine": 260,
+        "endChar": 39
+      },
+      "revId": "90545b23d1d09c986e6ca2caec15368007484cf1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
