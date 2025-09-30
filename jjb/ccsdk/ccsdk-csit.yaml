@@ -65,7 +65,7 @@
       - "master":
           branch: "master"
     java-version: openjdk21
-    build-node: ubuntu2204-builder-4c-4g
+    build-node: ubuntu2204-docker-4c-4g
     mvn-snapshot-id: "ecomp-snapshots"
     mvn-settings: "ccsdk-oran-settings"
     mvn-version: "mvn39"
