@@ -22,6 +22,30 @@
       },
       "revId": "90545b23d1d09c986e6ca2caec15368007484cf1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "717b0943_d671e73b",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2025-09-30T03:35:33Z",
+      "side": 1,
+      "message": "ONAP requested for this job to be triggered manually as well but we are not sure if it will pick up correctly the specific patch or branch we will call it from, so we are reusing this existing reusable trigger and if works as expected we will create another one with a name that makes more sense.",
+      "parentUuid": "b20681e2_33a4ac72",
+      "range": {
+        "startLine": 260,
+        "startChar": 23,
+        "endLine": 260,
+        "endChar": 39
+      },
+      "revId": "90545b23d1d09c986e6ca2caec15368007484cf1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
