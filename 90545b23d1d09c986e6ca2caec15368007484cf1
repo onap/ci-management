@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b20681e2_33a4ac72",
+        "filename": "jjb/integration/integration-templates-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 47
+      },
+      "writtenOn": "2025-09-30T03:18:31Z",
+      "side": 1,
+      "message": "When the name suggested \"-release-manually\", why this being treated as a periodic job or this dosen\u0027t match \"-review-verification-manve\" job nomenclature. Not really a release jobs, is it?",
+      "range": {
+        "startLine": 260,
+        "startChar": 23,
+        "endLine": 260,
+        "endChar": 39
+      },
+      "revId": "90545b23d1d09c986e6ca2caec15368007484cf1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
