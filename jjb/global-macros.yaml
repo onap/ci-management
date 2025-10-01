@@ -475,6 +475,78 @@
             </org.jenkinsci.plugins.golang.GolangBuildWrapper>
 
 - wrapper:
+    name: golang115
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.15</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang116
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.16</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang117
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.17</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang118
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.18</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang119
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.19</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang120
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.20</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang121
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.21</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
+    name: golang122
+    wrappers:
+      - raw:
+          xml: |
+            <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
+            <goVersion>Golang 1.22</goVersion>
+            </org.jenkinsci.plugins.golang.GolangBuildWrapper>
+
+- wrapper:
     name: golang123
     wrappers:
       - raw:
