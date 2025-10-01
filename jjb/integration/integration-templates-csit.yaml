@@ -256,11 +256,11 @@
           choosing-strategy: "gerrit"
           submodule-recursive: "{submodule-recursive}"
     triggers:
-      - gerrit-trigger-patch-submitted:
+      - timed: "@midnight"
+      - gerrit-trigger-release-manually:
           server: "{server-name}"
           project: "{project}"
           branch: "{branch}"
-          files: "**"
 
 - job-template:
     # Job template for unified merge verification jobs in
