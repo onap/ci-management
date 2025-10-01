@@ -1,6 +1,6 @@
 ---
 - project:
-    name: ccsdk-distribution-released-java17
+    name: ccsdk-distribution-java11
     project-name: "ccsdk-distribution"
     jobs:
       - gerrit-maven-verify:
@@ -25,12 +25,9 @@
 
     project: "ccsdk/distribution"
     stream:
-      - "oslo":
-          branch: "oslo"
-          java-version: openjdk17
-      - "newdelhi":
-          branch: "newdelhi"
-          java-version: openjdk17
+      - "kohn":
+          branch: "kohn"
+    java-version: openjdk11
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
@@ -42,24 +39,22 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: ccsdk-distribution-current-java21
+    name: ccsdk-distribution-java17
     project-name: "ccsdk-distribution"
     jobs:
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           maven-versions-plugin: true
           cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
-          cron: "@daily"
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
@@ -71,17 +66,20 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk21
-      - "paris":
-          branch: "paris"
-          java-version: openjdk21
-    mvn-version: "mvn39"
+          java-version: openjdk17
+      - "montreal":
+          branch: "montreal"
+          java-version: openjdk17
+      - "london":
+          branch: "london"
+          java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     files: "**"
     archive-artifacts: ""
     docker-pom: "pom.xml"
     mvn-profile: docker
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
@@ -95,8 +93,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-docker-8c-8g

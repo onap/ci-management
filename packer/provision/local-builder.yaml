@@ -30,7 +30,7 @@
           - gcc
           - python3-venv
       become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install Python 3.7
       apt:
@@ -39,7 +39,7 @@
           - python3.7-dev
           - python3.7-tk
       become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install Python 3.8
       apt:
@@ -48,7 +48,7 @@
           - python3.8-dev
           - python3.8-tk
       become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install Python 3.9
       apt:
@@ -58,7 +58,7 @@
           - python3.9-tk
           - python3.9-distutils
       become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version <= '18.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install libssl1.0-dev dep
       apt:
@@ -122,7 +122,7 @@
           command: node --version
         - name: "Check npm version"
           command: npm --version
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install npm build tools
       apt:
@@ -130,7 +130,7 @@
         update_cache: true
         state: fixed
       become: true
-      when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+      when: ansible_distribution == 'Ubuntu'
 
     - name: Install enchant2 package for Ubuntu 20.04
       apt:

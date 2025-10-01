@@ -31,10 +31,6 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-bff-settings"
-    publish-credential: portal-ng-bff
-    publish-directory: /w/workspace/portal-ng-bff-gradle-publish-jar-master/lib/build/libs
-    publish-file-extension: jar
-    publish-url: https://nexus.onap.org/content/repositories/releases/org/onap/portal-ng-bff/
     wrapper: true
 
 - project:
@@ -47,21 +43,6 @@
     container-tag-method: latest
     jobs:
       - "{project-name}-gerrit-docker-jobs"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "portal-ng-bff-settings"
-
-- project:
-    name: portal-ng-bff-release
-    project-name: "portal-ng-bff"
-    project: "portal-ng/bff"
-    branch: "master"
-    build-node: centos7-docker-2c-1g
-    docker-name: "onap/portal-ng/bff"
-    container-tag-method: latest
-    jobs:
-      - "{project-name}-gerrit-release-jobs"
     stream:
       - "master":
           branch: "master"

@@ -35,10 +35,9 @@
       - "{project-name}-{stream}-verify-java":
           # this build is unit test only (Verify 1/3)
           mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
-          build-node: "ubuntu2204-docker-8c-8g"
+          build-node: "ubuntu1804-docker-8c-8g"
       - "{project-name}-{stream}-sdc-merge-java":
-          build-node: "ubuntu2204-docker-8c-8g"
-          build-timeout: 180
+          build-node: "ubuntu1804-docker-8c-16g"
           docker-pom: "pom.xml"
           mvn-profile: "docker"
           # yamllint disable-line rule:line-length
@@ -54,7 +53,7 @@
             integration-tests/target/ExtentReport/UI/*.html
             integration-tests/target/ExtentReport/UI/screenshots/*.png
       - gerrit-maven-stage:
-          build-timeout: 120
+          build-timeout: 90
           sign-artifacts: true
           sbom-generator: true
           build-node: centos8-docker-4c-4g
@@ -62,9 +61,8 @@
           mvn-version: "mvn36"
           mvn-params: "-DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
       - gerrit-maven-docker-stage:
-          build-timeout: 120
           sbom-generator: true
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: ubuntu1804-docker-v1-8c-8g
           maven-versions-plugin: true
           mvn-params: "-P docker -DskipTests=true -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
           mvn-version: "mvn36"
@@ -78,13 +76,16 @@
       - "master":
           branch: "master"
           java-version: openjdk11
+      - "london":
+          branch: "london"
+          java-version: openjdk11
       - "montreal":
           branch: "montreal"
           java-version: openjdk11
     mvn-settings: "sdc-settings"
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     maven-version: "mvn36"
 
 - project:
@@ -96,7 +97,7 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-16g
     project: "sdc"
     project-name: "sdc"
     branch: "master"
@@ -117,7 +118,7 @@
     nexus-iq-namespace: "onap-"
     project: sdc
     project-name: "sdc"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: ubuntu1804-docker-8c-8g
     stream:
       - "master":
           branch: "master"

@@ -1,6 +1,6 @@
 ---
 - project:
-    name: ccsdk-oran-released-java17
+    name: ccsdk-oran-java11
     project-name: "ccsdk-oran"
     jobs:
       - gerrit-maven-verify:
@@ -24,11 +24,9 @@
           build-node: centos7-docker-2c-1g
     project: "ccsdk/oran"
     stream:
-      - "oslo":
-          branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
-    java-version: openjdk17
+      - "kohn":
+          branch: "kohn"
+    java-version: openjdk11
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-oran-settings"
     files: "**"
@@ -40,23 +38,22 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: ccsdk-oran-current-java21
+    name: ccsdk-oran-java17
     project-name: "ccsdk-oran"
     jobs:
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           mvn-opts: "-Ddocker.skip=true"
-          cron: "@daily"
+          cron: ""
           sbom-generator: true
       - gerrit-maven-docker-stage:
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
           mvn-params: "-Dmaven.test.skip=true -Pdocker"
@@ -67,16 +64,18 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+      - "montreal":
+          branch: "montreal"
+      - "london":
+          branch: "london"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-oran-settings"
     files: "**"
     archive-artifacts: ""
     docker-pom: "pom.xml"
     mvn-profile: docker
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
 
@@ -90,11 +89,11 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-oran-settings"
     mvn-opts: "-Ddocker.skip=true --add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-builder-4c-4g
 
 - project:
     name: ccsdk-oran-sonar
@@ -107,12 +106,12 @@
       - compare-type: REG_EXP
         pattern: "a1-policy-management/.*"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-docker-8c-8g
     project: "ccsdk/oran"
     project-name: "ccsdk-oran"
     branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-oran-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -Ddocker.skip=true"

@@ -86,6 +86,8 @@
     stream:
       - master:
           branch: master
+      - london:
+          branch: london
     jobs:
       - "{project-name}-docker-python-jobs"
 
@@ -101,6 +103,8 @@
     stream:
       - master:
           branch: master
+      - london:
+          branch: london
     jobs:
       - "{project-name}-docker-python-jobs"
 

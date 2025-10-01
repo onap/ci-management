@@ -6,36 +6,6 @@
       - project-view
 
 - project:
-    name: aai-graphadmin-1-15
-    project-name: "aai-graphadmin"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos8-docker-4c-4g
-          maven-versions-plugin: true
-          sbom-generator: true
-      - gerrit-maven-docker-stage:
-          sbom-generator: true
-          mvn-params: "-P docker -Dmaven.test.skip=true"
-          build-node: ubuntu1804-docker-8c-8g
-          container-public-registry: "nexus3.onap.org:10001"
-          container-staging-registry: "nexus3.onap.org:10003"
-      - "{project-name}-gerrit-release-jobs":
-          build-node: centos7-docker-2c-1g
-    project: "aai/graphadmin"
-    stream:
-      - "1-15":
-          branch: "1-15"
-    mvn-settings: "aai-graphadmin-settings"
-    mvn-version: "mvn36"
-    files: "**"
-    archive-artifacts: ""
-    build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk11
-
-- project:
     name: aai-graphadmin-master
     project-name: "aai-graphadmin"
     jobs:
@@ -58,12 +28,16 @@
     stream:
       - "master":
           branch: "master"
+      - "kohn":
+          branch: "kohn"
+      - "jakarta":
+          branch: "jakarta"
     mvn-settings: "aai-graphadmin-settings"
-    mvn-version: "mvn36"
+    mvn-version: "mvn35"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk17
+    java-version: openjdk8
 
 - project:
     name: aai-graphadmin-sonar
@@ -79,9 +53,9 @@
     branch: "master"
     mvn-settings: "aai-graphadmin-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    mvn-version: "mvn36"
-    java-version: openjdk17
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-version: "mvn35"
+    java-version: openjdk8
 
 - project:
     name: aai-graphadmin-clm
@@ -94,5 +68,5 @@
       - "master":
           branch: "master"
     mvn-settings: "aai-graphadmin-settings"
-    mvn-version: "mvn36"
-    java-version: openjdk17
+    mvn-version: "mvn35"
+    java-version: openjdk8

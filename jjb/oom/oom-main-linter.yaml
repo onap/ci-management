@@ -7,6 +7,10 @@
     jobs:
       - oom-linters
     subproject:
+      - "commit":
+          tox-dir: "."
+          tox-envs: "gitlint"
+          pattern: "**"
       - "doc8":
           tox-dir: "."
           tox-envs: "doc8"
@@ -27,7 +31,7 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
       - "montreal":
           branch: "montreal"
+      - "london":
+          branch: "london"

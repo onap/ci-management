@@ -36,6 +36,8 @@
 
     triggers:
       - timed: "@daily"
+      - reverse:
+          jobs: "{obj:trigger_jobs}"
 
     builders:
       - lf-infra-pre-build
@@ -63,8 +65,6 @@
     recipients: ""
     java-version: "openjdk17"
     python-version: python3
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
 
     properties:
       - lf-infra-properties:

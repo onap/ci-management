@@ -7,15 +7,13 @@
     jobs:
       - "{project-name}-{stream}-{subproject}-verify-python"
       - "{project-name}-{stream}-verify-golang"
-      - "{project-name}-{stream}-merge-golang":
-          build-node: ubuntu2004-docker-2c-2g
+      - "{project-name}-{stream}-merge-golang"
       - "{project-name}-{stream}-docker-golang-shell-daily":
           script: !include-raw-escape: "build-multicloud-k8s-docker-image.sh"
       - "{project-name}-{stream}-{area}-verify-shell":
           disable-job: "{disable-kud}"
           area: kud-deployment
           build-timeout: 45
-          build-node: ubuntu1804-docker-8c-8g
           script: !include-raw-escape: "kud-deployment.sh"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
@@ -31,4 +29,4 @@
     disable-kud: false
     files: "**"
     archive-artifacts: ""
-    build-node: ubuntu2204-builder-4c-4g
+    build-node: ubuntu1804-builder-4c-4g

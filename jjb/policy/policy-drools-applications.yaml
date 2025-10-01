@@ -1,5 +1,42 @@
 ---
 - project:
+    name: policy-drools-applications
+    project-name: "policy-drools-applications"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
+          mvn-params: "-P docker -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+          mvn-params: "-Dmaven.test.skip=true"
+      - gerrit-maven-docker-stage:
+          sbom-generator: true
+          build-node: ubuntu1804-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-P docker  -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+
+    project: "policy/drools-applications"
+    stream:
+      - "london":
+          branch: "london"
+    mvn-settings: "policy-drools-applications-settings"
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    java-version: openjdk11
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-docker-8c-8g
+
+- project:
     name: policy-drools-applications-java-17
     project-name: "policy-drools-applications"
     jobs:
@@ -28,10 +65,8 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"
@@ -58,27 +93,6 @@
     java-version: openjdk17
     java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     mvn-goals: "clean install"
-    cron: "@daily"
-
-- project:
-    name: policy-drools-applications-sonar-verify
-    jobs:
-      - gerrit-maven-sonar-verify
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
-    project: "policy/drools-applications"
-    project-name: "policy-drools-applications"
-    branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    mvn-settings: "policy-drools-applications-settings"
-    mvn-goals: "clean install"
-    java-version: openjdk17
-    java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
-    sonarcloud-qualitygate-wait: true
 
 - project:
     name: policy-drools-applications-clm

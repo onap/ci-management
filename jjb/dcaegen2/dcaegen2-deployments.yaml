@@ -14,6 +14,8 @@
     stream:
       - "master":
           branch: "master"
+      - "london":
+          branch: "london"
     mvn-settings: "dcaegen2-deployments-settings"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"

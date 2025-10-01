@@ -1,6 +1,6 @@
 ---
 - project:
-    name: ccsdk-parent-released-java17
+    name: ccsdk-parent-java11
     project-name: "ccsdk-parent"
     jobs:
       - gerrit-maven-verify:
@@ -20,11 +20,9 @@
     nexus-snapshot-repo: "snapshots"
     project: "ccsdk/parent"
     stream:
-      - "oslo":
-          branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
-    java-version: openjdk17
+      - "kohn":
+          branch: "kohn"
+    java-version: openjdk11
     mvn-version: "mvn38"
     mvn-settings: "ccsdk-parent-settings"
     # due to a strange macro / variable translation problem this needs to be
@@ -36,16 +34,15 @@
     archive-artifacts: ""
 
 - project:
-    name: ccsdk-parent-current-java21
+    name: ccsdk-parent-java17
     project-name: "ccsdk-parent"
     jobs:
       - gerrit-maven-verify:
           cron: ""
       - gerrit-maven-merge:
-          cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-stage:
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-8c-8g
           sign-artifacts: true
           mvn-params: "-Dmaven.test.skip=true"
           cron: ""
@@ -57,8 +54,6 @@
     nexus-snapshot-repo: "snapshots"
     project: "ccsdk/parent"
     stream:
-      - "paris":
-          branch: "paris"
       - "master":
           branch: "master"
           jobs:
@@ -70,10 +65,13 @@
                 mvn-params: "-Dmaven.test.skip=true -Drevision=3.0.0"
             - "{project-name}-gerrit-release-jobs":
                 mvn-params: "-Drevision=3.0.0"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+      - "montreal":
+          branch: "montreal"
+      - "london":
+          branch: "london"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-parent-settings"
-    build-node: ubuntu2204-docker-8c-8g
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
     # in the job
@@ -92,8 +90,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
+    java-version: openjdk17
+    mvn-version: "mvn38"
     mvn-settings: "ccsdk-parent-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: centos8-builder-4c-4g

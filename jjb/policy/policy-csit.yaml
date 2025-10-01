@@ -2,6 +2,7 @@
 - project:
     name: policy-distribution-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-distribution"
     recipients: "ram_krishna.verma@bell.ca"
@@ -9,16 +10,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "distribution"
+    trigger_jobs:
+      - "policy-distribution-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-xacml-pdp-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-xacml-pdp"
     recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
@@ -26,31 +31,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "xacml-pdp"
-
-- project:
-    name: policy-opa-pdp-project-csit
-    jobs:
-      - "{project-name}-{stream}-project-csit-{functionality}"
-    project-name: "policy-opa-pdp"
-    recipients: "dm00536893@techmahindra.com"
-    project: "policy/docker"
-    stream:
-      - "master":
-          branch: "master"
-      - "paris":
-          branch: "paris"
-    functionality:
-      - "policy-opa-pdp"
+    trigger_jobs:
+      - "policy-xacml-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-drools-applications-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-drools-applications"
     recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
@@ -58,16 +52,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "drools-applications"
+    trigger_jobs:
+      - "policy-drools-applications-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-drools-pdp-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-drools-pdp"
     recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
@@ -75,16 +73,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "drools-pdp"
+    trigger_jobs:
+      - "policy-drools-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-apex-pdp-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-apex-pdp"
     recipients: "liam.fallon@est.tech ram_krishna.verma@bell.ca"
@@ -92,16 +94,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "apex-pdp"
+    trigger_jobs:
+      - "policy-apex-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-pap-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-pap"
     recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
@@ -109,16 +115,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "pap"
+    trigger_jobs:
+      - "policy-pap-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-api-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-api"
     recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
@@ -126,16 +136,20 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "api"
+    trigger_jobs:
+      - "policy-api-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
 
 - project:
     name: policy-clamp-project-csit
     jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-clamp"
     recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
@@ -143,9 +157,27 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
-      - "paris":
-          branch: "paris"
+      - "montreal":
+          branch: "montreal"
     functionality:
       - "clamp"
+    trigger_jobs:
+      - "policy-clamp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"
+
+- project:
+    name: policy-apex-pdp-postgres-project-csit
+    jobs:
+      - "{project-name}-{stream}-project-csit-verify-{functionality}"
+      - "{project-name}-{stream}-project-csit-{functionality}"
+    project-name: "policy-apex-pdp"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
+    project: "policy/docker"
+    stream:
+      - "master":
+          branch: "master"
+    functionality:
+      - "apex-pdp-postgres"
+    trigger_jobs:
+      - "policy-apex-pdp-{stream}-merge-java"
+      - "policy-docker-{stream}-merge-java"

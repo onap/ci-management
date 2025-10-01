@@ -132,7 +132,6 @@
       - provide-maven-settings:
           global-settings-file: "global-settings"
           settings-file: "{mvn-settings}"
-      - docker-login
       - shell: |
           #!/bin/bash
           cd $WORKSPACE/{path}

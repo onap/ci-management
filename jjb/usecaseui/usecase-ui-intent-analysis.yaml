@@ -6,8 +6,10 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "usecase-ui-intent-analysis-settings"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -25,7 +27,7 @@
           container-staging-registry: "nexus3.onap.org:10003"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-    java-version: openjdk17
+    java-version: openjdk11
     files: "**"
     archive-artifacts: ""
     docker-pom: "pom.xml"
@@ -44,9 +46,9 @@
     project-name: "usecase-ui-intent-analysis"
     branch: "master"
     mvn-settings: "usecase-ui-intent-analysis-settings"
-    java-version: openjdk17
+    java-version: openjdk11
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: usecase-ui-intent-analysis-clm
@@ -60,4 +62,4 @@
       - "master":
           branch: "master"
     mvn-settings: "usecase-ui-intent-analysis-settings"
-    java-version: openjdk17
+    java-version: openjdk11

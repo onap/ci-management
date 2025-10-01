@@ -8,31 +8,17 @@
       - oom-linters
     subproject:
       - "yaml":
-          tox-dir: "./readiness-python"
+          tox-dir: "."
           tox-envs: "yaml"
           pattern: "**/*.yaml"
       - "yml":
-          tox-dir: "./readiness-python"
+          tox-dir: "."
           tox-envs: "yaml"
           pattern: "**/*.yml"
       - "py":
-          tox-dir: "./readiness-python"
+          tox-dir: "."
           tox-envs: "python"
           pattern: "**/*.python"
-    stream:
-      - "master":
-          branch: "master"
-
-- project:
-    name: oom-readiness-verify
-    project-name: oom-readiness
-    project: oom/readiness
-    mvn-settings: "oom-settings"
-    path: "."
-    golangver: "golang123"
-    build-node: ubuntu2204-docker-4c-4g
-    jobs:
-      - "{project-name}-{stream}-verify-golang"
     stream:
       - "master":
           branch: "master"

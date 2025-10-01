@@ -7,8 +7,6 @@
       - "master":
           branch: "master"
           java-version: openjdk11
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
     mvn-settings: "multicloud-framework-settings"
     subproject:
       - "multivimbroker":
@@ -53,11 +51,10 @@
     project: "multicloud/framework"
     project-name: "multicloud-framework-multivimbroker"
     branch: "master"
-    mvn-version: "mvn36"
     mvn-params: "-f multivimbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-framework-multivimbroker-clm
@@ -69,7 +66,6 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn36"
     mvn-params: "-f multivimbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"
 
@@ -86,11 +82,10 @@
     project-name: "multicloud-framework-artifactbroker"
     branch: "master"
     java-version: openjdk11
-    mvn-version: "mvn36"
     mvn-params: "-f artifactbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: multicloud-framework-artifactbroker-clm
@@ -103,6 +98,5 @@
       - "master":
           branch: "master"
     java-version: openjdk11
-    mvn-version: "mvn36"
     mvn-params: "-f artifactbroker/pom.xml"
     mvn-settings: "multicloud-framework-settings"

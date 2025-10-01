@@ -28,12 +28,16 @@
     stream:
       - "master":
           branch: "master"
+      - "kohn":
+          branch: "kohn"
+      - "jakarta":
+          branch: "jakarta"
     mvn-settings: "aai-schema-service-settings"
     mvn-version: "mvn36"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk17
+    java-version: openjdk11
 
 - project:
     name: aai-schema-service-sonar
@@ -44,13 +48,13 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk17
+    java-version: openjdk11
     project: "aai/schema-service"
     project-name: "aai-schema-service"
     branch: "master"
     mvn-settings: "aai-schema-service-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     mvn-version: "mvn36"
 
 - project:
@@ -60,7 +64,7 @@
     nexus-iq-namespace: "onap-"
     project: "aai/schema-service"
     project-name: "aai-schema-service"
-    java-version: openjdk17
+    java-version: openjdk11
     stream:
       - "master":
           branch: "master"

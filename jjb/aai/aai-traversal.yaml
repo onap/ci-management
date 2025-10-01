@@ -31,12 +31,16 @@
     stream:
       - "master":
           branch: "master"
+      - "kohn":
+          branch: "kohn"
+      - "jakarta":
+          branch: "jakarta"
     mvn-settings: "aai-traversal-settings"
-    mvn-version: "mvn36"
+    mvn-version: "mvn35"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-    java-version: openjdk17
+    java-version: openjdk8
 
 - project:
     name: aai-traversal-sonar
@@ -52,9 +56,9 @@
     branch: "master"
     mvn-settings: "aai-traversal-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    mvn-version: "mvn36"
-    java-version: openjdk17
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    mvn-version: "mvn35"
+    java-version: openjdk8
 
 - project:
     name: aai-traversal-clm
@@ -67,5 +71,5 @@
       - "master":
           branch: "master"
     mvn-settings: "aai-traversal-settings"
-    mvn-version: "mvn36"
-    java-version: openjdk17
+    mvn-version: "mvn35"
+    java-version: openjdk8

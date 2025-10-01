@@ -6,8 +6,10 @@
     stream:
       - "master":
           branch: "master"
-      - "newdelhi":
-          branch: "newdelhi"
+      - "london":
+          branch: "london"
+      - "montreal":
+          branch: "montreal"
     mvn-settings: "usecase-ui-nlp-settings"
     jobs:
       - "{project-name}-{stream}-verify-java"
@@ -42,7 +44,7 @@
     branch: "master"
     mvn-settings: "usecase-ui-nlp-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: usecase-ui-nlp-clm

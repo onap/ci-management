@@ -23,6 +23,8 @@
     stream:
       - "master":
           branch: "master"
+      - "london":
+          branch: "london"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
     mvn-settings: "dcaegen2-collectors-restconf-settings"
@@ -50,7 +52,7 @@
     branch: "master"
     mvn-settings: "dcaegen2-collectors-restconf-settings"
     mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
 
 - project:
     name: dcaegen2-collectors-restconf-clm
