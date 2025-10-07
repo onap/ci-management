@@ -423,6 +423,24 @@
                   pattern: "**"
 
 - trigger:
+    name: gerrit-trigger-test-manually
+    triggers:
+      - gerrit:
+          server-name: "{server}"
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: "retest"
+          projects:
+            - project-compare-type: "ANT"
+              project-pattern: "{project}"
+              branches:
+                - branch-compare-type: "ANT"
+                  branch-pattern: "**/{branch}"
+              file-paths:
+                - compare-type: "ANT"
+                  pattern: "**"
+
+- trigger:
     name: trigger-on-build-success
     triggers:
       - reverse:

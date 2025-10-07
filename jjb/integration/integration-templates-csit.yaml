@@ -256,8 +256,7 @@
           choosing-strategy: "gerrit"
           submodule-recursive: "{submodule-recursive}"
     triggers:
-      - timed: "@midnight"
-      - gerrit-trigger-release-manually:
+      - gerrit-trigger-test-manually:
           server: "{server-name}"
           project: "{project}"
           branch: "{branch}"
