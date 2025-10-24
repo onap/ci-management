@@ -6,7 +6,8 @@
     golangver: "golang114"
     jobs:
       - "{project-name}-{stream}-{subproject}-verify-python"
-      - "{project-name}-{stream}-verify-golang"
+      - "{project-name}-{stream}-verify-golang":
+          build-node: ubuntu2204-docker-8c-8g
       - "{project-name}-{stream}-merge-golang":
           build-node: ubuntu2004-docker-2c-2g
       - "{project-name}-{stream}-docker-golang-shell-daily":
