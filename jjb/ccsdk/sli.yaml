@@ -91,19 +91,3 @@
     mvn-settings: "ccsdk-sli-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
-
-- project:
-    name: ccsdk-sli-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "ccsdk/sli"
-    project-name: "ccsdk-sli"
-    stream:
-      - "master":
-          branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    mvn-settings: "ccsdk-sli-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
