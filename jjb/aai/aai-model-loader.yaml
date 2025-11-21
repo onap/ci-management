@@ -32,7 +32,7 @@
     archive-artifacts: ""
     build-node: centos8-docker-4c-4g
     mvn-version: "mvn36"
-    java-version: openjdk11
+    java-version: openjdk17
     nexus-snapshot-repo: "snapshots"
     mvn-snapshot-id: "ecomp-snapshots"
 
@@ -52,7 +52,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
-    java-version: openjdk11
+    java-version: openjdk17
 
 - project:
     name: aai-model-loader-clm
@@ -66,4 +66,4 @@
           branch: "master"
     mvn-settings: "aai-model-loader-settings"
     mvn-version: "mvn36"
-    java-version: openjdk11
+    java-version: openjdk17
