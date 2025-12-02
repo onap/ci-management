@@ -28,10 +28,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-pap-settings"

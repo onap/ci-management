@@ -28,10 +28,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g

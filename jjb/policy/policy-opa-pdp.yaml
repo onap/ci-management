@@ -34,6 +34,8 @@
           branch: "master"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     mvn-settings: "policy-opa-pdp-settings"
 
 - project:
