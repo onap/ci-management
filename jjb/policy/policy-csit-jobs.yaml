@@ -3,7 +3,7 @@
     name: "{project-name}-{stream}-project-csit-{functionality}"
     disabled: false
     project-type: freestyle
-    build-node: "ubuntu1804-docker-8c-8g"
+    build-node: "ubuntu2204-docker-8c-8g"
     node: "{build-node}"
     recipients: ""
     java-version: "openjdk17"
@@ -58,10 +58,10 @@
     disabled: false
 
     project-type: freestyle
-    build-node: "ubuntu1804-docker-8c-8g"
+    build-node: "ubuntu2204-docker-8c-8g"
     node: "{build-node}"
     recipients: ""
-    java-version: "openjdk17"
+    java-version: "openjdk21"
     python-version: python3
     mvn-version: "mvn36"
     maven-version: "mvn36"

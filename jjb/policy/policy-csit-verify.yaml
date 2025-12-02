@@ -8,10 +8,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "distribution"
 
@@ -24,10 +24,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "xacml-pdp"
 
@@ -42,6 +42,8 @@
           branch: "master"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "opa-pdp"
 
@@ -54,10 +56,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "drools-applications"
 
@@ -70,10 +72,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "drools-pdp"
 
@@ -86,10 +88,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "apex-pdp"
 
@@ -102,10 +104,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "pap"
 
@@ -118,10 +120,10 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "api"
 
@@ -134,9 +136,9 @@
     stream:
       - "master":
           branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     functionality:
       - "clamp"

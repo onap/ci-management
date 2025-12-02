@@ -26,15 +26,45 @@
 
     project: "policy/docker"
     stream:
-      - "master":
-          branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
+
+- project:
+    name: policy-docker-base-common-java-21
+    project-name: "policy-docker"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
+          mvn-params: "-P docker"
+          build-node: ubuntu2204-docker-8c-8g
+      - gerrit-maven-docker-stage:
+          sbom-generator: true
+          build-node: ubuntu2204-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: ubuntu2204-docker-8c-8g
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "policy-docker-settings"
+    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
+    java-version: openjdk21
+    project: "policy/docker"
+    stream:
+      - "master":
+          branch: "master"
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu2204-docker-8c-8g
 
 - project:
     name: policy-docker-clm
@@ -46,9 +76,9 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-docker-settings"
     mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    java-version: openjdk17
+    java-version: openjdk21

@@ -26,12 +26,10 @@
 
     project: "policy/clamp"
     stream:
-      - "master":
-          branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
@@ -41,56 +39,89 @@
     build-node: ubuntu1804-docker-8c-8g
 
 - project:
+    name: policy-clamp-java-21
+    project-name: "policy-clamp"
+    project: "policy/clamp"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "{project-name}-settings"
+    java-version: openjdk21
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu2204-docker-8c-8g
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java":
+          docker-pom: "pom.xml"
+          mvn-profile: "docker"
+          mvn-params: "-P docker"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          maven-versions-plugin: true
+          mvn-params: "-Dmaven.test.skip=true"
+      - gerrit-maven-docker-stage:
+          sbom-generator: true
+          maven-versions-plugin: true
+          mvn-params: "-P docker -Dmaven.test.skip=true"
+          container-public-registry: "nexus3.onap.org:10001"
+          container-staging-registry: "nexus3.onap.org:10003"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+    stream:
+      - "master":
+          branch: "master"
+
+- project:
     name: policy-clamp-sonar
+    project: "policy/clamp"
+    project-name: "policy-clamp"
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
-    project: "policy/clamp"
-    project-name: "policy-clamp"
+    build-node: ubuntu2204-docker-8c-8g
     branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    mvn-settings: "policy-clamp-settings"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "{project-name}-settings"
+    java-version: openjdk21
     mvn-goals: "clean install"
-    java-version: openjdk17
     cron: "@daily"
 
 - project:
     name: policy-clamp-sonar-verify
+    project: "policy/clamp"
+    project-name: "policy-clamp"
     jobs:
       - gerrit-maven-sonar-verify
     sonarcloud: true
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
-    project: "policy/clamp"
-    project-name: "policy-clamp"
+    build-node: ubuntu2204-docker-8c-8g
     branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    mvn-settings: "policy-clamp-settings"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "{project-name}-settings"
+    java-version: openjdk21
     mvn-goals: "clean install"
-    java-version: openjdk17
     sonarcloud-qualitygate-wait: true
 
 - project:
     name: policy-clamp-clm
-    jobs:
-      - gerrit-maven-clm:
-    nexus-iq-namespace: "onap-"
-    project: "policy/clamp"
+    project: policy/clamp
     project-name: "policy-clamp"
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: "onap-"
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    mvn-settings: "policy-clamp-settings"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "{project-name}-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu1804-docker-8c-8g
-    java-version: openjdk17
+    java-version: openjdk21

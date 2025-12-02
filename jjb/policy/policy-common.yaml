@@ -16,12 +16,10 @@
 
     project: "policy/common"
     stream:
-      - "master":
-          branch: "master"
-      - "oslo":
-          branch: "oslo"
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-common-settings"
@@ -31,6 +29,33 @@
     build-node: ubuntu1804-builder-4c-4g
 
 - project:
+    name: policy-common-java-21
+    project-name: "policy-common"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sbom-generator: true
+          sign-artifacts: true
+          build-node: ubuntu2204-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-Dmaven.test.skip=true"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: ubuntu2204-docker-8c-8g
+
+    project: "policy/common"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
+    mvn-settings: "policy-common-settings"
+    java-version: openjdk21
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu2204-docker-8c-8g
+
+- project:
     name: policy-common-sonar
     jobs:
       - gerrit-maven-sonar
@@ -38,14 +63,14 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-docker-8c-8g
     project: "policy/common"
     project-name: "policy-common"
     branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-common-settings"
-    java-version: openjdk17
+    java-version: openjdk21
     mvn-goals: "clean install"
     cron: "@daily"
 
@@ -57,15 +82,15 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     project: "policy/common"
     project-name: "policy-common"
     branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-common-settings"
     mvn-goals: "clean install"
-    java-version: openjdk17
+    java-version: openjdk21
     sonarcloud-qualitygate-wait: true
 
 - project:
@@ -78,8 +103,8 @@
     stream:
       - "master":
           branch: "master"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     mvn-settings: "policy-common-settings"
     mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    java-version: openjdk17
+    java-version: openjdk21
