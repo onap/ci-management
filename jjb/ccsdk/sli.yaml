@@ -42,17 +42,19 @@
     jobs:
       - gerrit-maven-verify:
           cron: ""
+          mvn-params: "-DallowIncompleteProjects=true"
       - gerrit-maven-merge:
           cron: "@daily"
-          mvn-params: "-Dmaven.test.skip=true"
+          mvn-params: "-Dmaven.test.skip=true -DallowIncompleteProjects=true"
       - gerrit-maven-stage:
           build-node: ubuntu2204-docker-8c-8g
           sign-artifacts: true
-          mvn-params: "-Dmaven.test.skip=true"
+          mvn-params: "-Dmaven.test.skip=true -DallowIncompleteProjects=true"
           cron: ""
           sbom-generator: true
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
+          mvn-params: "-DallowIncompleteProjects=true"
 
     project: "ccsdk/sli"
     stream:

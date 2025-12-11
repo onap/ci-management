@@ -39,16 +39,20 @@
     name: sdnc-northbound-current-java21
     project-name: "sdnc-northbound"
     jobs:
-      - gerrit-maven-verify
+      - gerrit-maven-verify:
+          mvn-params: "-DallowIncompleteProjects=true"
       - gerrit-maven-merge:
           cron: "@daily"
+          mvn-params: "-DallowIncompleteProjects=true"
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: ubuntu2204-docker-8c-8g
           cron: ""
           sbom-generator: true
+          mvn-params: "-DallowIncompleteProjects=true"
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
+          mvn-params: "-DallowIncompleteProjects=true"
 
     project: "sdnc/northbound"
     stream:
