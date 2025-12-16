@@ -40,7 +40,7 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: ccsdk-oran-current-java21
+    name: ccsdk-oran
     project-name: "ccsdk-oran"
     jobs:
       - gerrit-maven-verify:
@@ -69,6 +69,8 @@
     stream:
       - "master":
           branch: "master"
+      - "quebec":
+          branch: "quebec"
       - "paris":
           branch: "paris"
     java-version: openjdk21
