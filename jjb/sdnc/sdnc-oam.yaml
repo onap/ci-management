@@ -1,45 +1,6 @@
 ---
 - project:
-    name: sdnc-oam-released-java17
-    project-name: "sdnc-oam"
-    jobs:
-      - gerrit-maven-verify:
-          cron: ""
-      - gerrit-maven-merge:
-          mvn-params: "-Dmaven.test.skip=true"
-      - gerrit-maven-stage:
-          build-node: centos8-docker-8c-8g
-          sign-artifacts: true
-          mvn-params: "-Dmaven.test.skip=true"
-          cron: ""
-          sbom-generator: true
-      - gerrit-maven-docker-stage:
-          build-node: centos8-docker-8c-8g
-          container-public-registry: "nexus3.onap.org:10001"
-          container-staging-registry: "nexus3.onap.org:10003"
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
-          maven-versions-plugin: true
-      - "{project-name}-gerrit-release-jobs":
-          build-node: centos7-docker-2c-1g
-    project: "sdnc/oam"
-    stream:
-      - "oslo":
-          branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
-    java-version: openjdk17
-    mvn-version: "mvn38"
-    mvn-settings: "sdnc-oam-settings"
-    files: "**"
-    archive-artifacts: ""
-    sign-artifacts: true
-    build-node: centos8-docker-8c-8g
-    shallow-clone: true
-    mvn-snapshot-id: "ecomp-snapshots"
-    nexus-snapshot-repo: "snapshots"
-
-- project:
-    name: sdnc-oam-current-java21
+    name: sdnc-oam
     project-name: "sdnc-oam"
     jobs:
       - gerrit-maven-verify:
@@ -66,6 +27,8 @@
     stream:
       - "paris":
           branch: "paris"
+      - "quebec":
+          branch: "quebec"
       - "master":
           branch: "master"
     java-version: openjdk21
