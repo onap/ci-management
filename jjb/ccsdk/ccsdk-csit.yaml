@@ -15,12 +15,10 @@
     stream:
       - "master":
           branch: "master"
+      - "quebec":
+          branch: "quebec"
       - "paris":
           branch: "paris"
-      - "oslo":
-          branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
     mvn-settings: "ccsdk-distribution-settings"
     mvn-version: "mvn38"
     robot-options: ""
@@ -40,10 +38,6 @@
     stream:
       - "paris":
           branch: "paris"
-      - "oslo":
-          branch: "oslo"
-      - "newdelhi":
-          branch: "newdelhi"
     java-version: openjdk17
     mvn-settings: "ccsdk-oran-settings"
     mvn-version: "mvn38"
@@ -62,6 +56,8 @@
     # project name in gerrit
     project: "ccsdk/oran"
     stream:
+      - "quebec":
+          branch: "quebec"
       - "master":
           branch: "master"
     java-version: openjdk21
