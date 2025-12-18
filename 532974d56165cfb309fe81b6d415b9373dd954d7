@@ -22,6 +22,30 @@
       },
       "revId": "532974d56165cfb309fe81b6d415b9373dd954d7",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83fc03f9_f293167f",
+        "filename": "jjb/ccsdk/ccsdk-oran.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2025-12-18T14:44:29Z",
+      "side": 1,
+      "message": "No problem - I added that back for ccsdk/oran.",
+      "parentUuid": "37794396_c69b9567",
+      "range": {
+        "startLine": 3,
+        "startChar": 3,
+        "endLine": 3,
+        "endChar": 20
+      },
+      "revId": "532974d56165cfb309fe81b6d415b9373dd954d7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
