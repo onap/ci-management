@@ -143,11 +143,25 @@
     recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
     project: "policy/docker"
     stream:
-      - "master":
-          branch: "master"
       - "paris":
           branch: "paris"
       - "quebec":
           branch: "quebec"
+    functionality:
+      - "clamp"
+
+- project:
+    name: policy-clamp-master-project-csit
+    jobs:
+      - "{project-name}-review-verification-maven-{stream}":
+          mvn-goals: clean install
+          mvn-params: "-P docker -Dmaven.test.skip=true -Ddocker.repository.push="
+    project-name: "policy-clamp"
+    recipients: "ramesh.murugan.iyer@est.tech wayne.dunican@est.tech daniel.hanrahan@est.tech"
+    project: "policy/clamp"
+    stream:
+      - "master":
+          branch: "master"
+    robot-options: ""
     functionality:
       - "clamp"
