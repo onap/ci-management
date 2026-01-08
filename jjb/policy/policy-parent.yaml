@@ -41,7 +41,7 @@
           maven-versions-plugin: true
           mvn-params: "-Dmaven.test.skip=true"
       - "{project-name}-gerrit-release-jobs":
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     project: "policy/parent"
     stream:
       - "master":
