@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "622efa16_dee4e72a",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 6070
+      },
+      "writtenOn": "2026-01-08T11:32:17Z",
+      "side": 1,
+      "message": "same here.?",
+      "range": {
+        "startLine": 40,
+        "startChar": 22,
+        "endLine": 40,
+        "endChar": 32
+      },
+      "revId": "933835fb247399107a71e200dd1476dcb226c4e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84beb4ae_df380e8d",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6070
+      },
+      "writtenOn": "2026-01-08T11:32:17Z",
+      "side": 1,
+      "message": "Do we need changes here as well I wonder?",
+      "range": {
+        "startLine": 55,
+        "startChar": 16,
+        "endLine": 55,
+        "endChar": 26
+      },
+      "revId": "933835fb247399107a71e200dd1476dcb226c4e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
