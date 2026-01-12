@@ -48,6 +48,30 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1d66c00_294a215d",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2026-01-12T11:37:12Z",
+      "side": 1,
+      "message": "I suspect the build node change there is fine. We can always update that later if it becomes clear it needs to be reverted too.",
+      "parentUuid": "22cfcbd9_967bfbc2",
+      "range": {
+        "startLine": 40,
+        "startChar": 22,
+        "endLine": 40,
+        "endChar": 32
+      },
+      "revId": "933835fb247399107a71e200dd1476dcb226c4e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84beb4ae_df380e8d",
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "I didn\u0027t think changes were needed here either. Again, maybe Matt can confirm.",
       "parentUuid": "84beb4ae_df380e8d",
+      "range": {
+        "startLine": 55,
+        "startChar": 16,
+        "endLine": 55,
+        "endChar": 26
+      },
+      "revId": "933835fb247399107a71e200dd1476dcb226c4e7",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d30b5dc2_96d41e6a",
+        "filename": "jjb/policy/policy-parent.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2026-01-12T11:37:12Z",
+      "side": 1,
+      "message": "Let\u0027s get this merged so we can test the release job again, hopefully get unblocked.",
+      "parentUuid": "d3aef58b_4401a5f0",
       "range": {
         "startLine": 55,
         "startChar": 16,
