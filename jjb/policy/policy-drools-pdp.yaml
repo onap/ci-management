@@ -57,11 +57,13 @@
           mvn-params: "-P docker"
       - gerrit-maven-stage:
           sbom-generator: true
+          build-node: centos8-docker-4c-4g
           sign-artifacts: true
           maven-versions-plugin: true
           mvn-params: "-Dmaven.test.skip=true"
       - gerrit-maven-docker-stage:
           sbom-generator: true
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: "-P docker -Dmaven.test.skip=true"
           container-public-registry: "nexus3.onap.org:10001"
