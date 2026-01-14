@@ -37,7 +37,6 @@
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           mvn-params: "-Dmaven.test.skip=true"
       - "{project-name}-gerrit-release-jobs":
