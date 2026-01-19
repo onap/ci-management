@@ -60,7 +60,6 @@
           sign-artifacts: true
           maven-versions-plugin: true
           mvn-params: "-Dmaven.test.skip=true"
-          build-node: centos8-docker-4c-4g
       - gerrit-maven-docker-stage:
           sbom-generator: true
           maven-versions-plugin: true
