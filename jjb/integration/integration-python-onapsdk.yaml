@@ -5,8 +5,11 @@
     project-name: integration-python-onapsdk
     python-version: python3
     build-node: ubuntu1804-docker-8c-8g
+    tox-dir: "."
+    tox-envs: "py38,py39"
     jobs:
       - integration-linters
+      - gerrit-tox-verify
     stream:
       - "master":
           branch: "master"
