@@ -22,6 +22,30 @@
       },
       "revId": "92b5b8b74d1c94624f40b5954e83c3f13836e889",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03dae66f_a78b8b5d",
+        "filename": "jjb/policy/policy-csit.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 6742
+      },
+      "writtenOn": "2026-02-13T13:48:28Z",
+      "side": 1,
+      "message": "never mind, I see you removed master already, only kept the old branches",
+      "parentUuid": "f78f07ed_4c9631fd",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 151,
+        "endChar": 15
+      },
+      "revId": "92b5b8b74d1c94624f40b5954e83c3f13836e889",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
