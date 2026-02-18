@@ -39,7 +39,7 @@
       block:
         - name: "Fetch golang {{golang_version}} to /tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
           get_url:
-            url: "https://storage.googleapis.com/golang/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
+            url: "https://go.dev/dl/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
             dest: "/tmp/go{{golang_version}}.linux-{{host_arch}}.tar.gz"
             checksum: "{{golang_checksum}}"
         - name: "Install golang {{golang_version}} to /usr/local"
