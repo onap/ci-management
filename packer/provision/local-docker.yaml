@@ -170,22 +170,19 @@
             update_cache: true
             state: present
           become: true
-        - name: add nodejs apt key
-          apt_key:
-            url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-            state: present
+
+        - name: Download and run NodeSource setup script
+          ansible.builtin.shell: |
+            curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+          args:
+            creates: /etc/apt/sources.list.d/nodesource.list
           become: true
-        - name: add nodejs repository
-          apt_repository:
-            repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
+
+        - name: Install nodejs
+          ansible.builtin.apt:
+            name: nodejs
             state: present
             update_cache: true
-          become: true
-        - name: install nodejs
-          apt:
-            name:
-              - nodejs
-            state: present
           become: true
       when: ansible_distribution == 'Ubuntu'
 
