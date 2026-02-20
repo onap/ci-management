@@ -170,21 +170,46 @@
             update_cache: true
             state: present
           become: true
-        - name: add nodejs apt key
-          apt_key:
-            url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-            state: present
+
+        - name: Create APT keyrings directory
+          ansible.builtin.file:
+            path: /etc/apt/keyrings
+            state: directory
+            mode: "0755"
           become: true
-        - name: add nodejs repository
-          apt_repository:
-            repo: deb https://deb.nodesource.com/node_19.x {{ ansible_distribution_release }} main
-            state: present
-            update_cache: true
+
+        - name: Download NodeSource GPG key
+          ansible.builtin.get_url:
+            url: https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+            dest: /tmp/nodesource.asc
+            mode: "0644"
+
+        - name: Dearmor NodeSource GPG key
+          ansible.builtin.command:
+            cmd: gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg /tmp/nodesource.asc
+            creates: /etc/apt/keyrings/nodesource.gpg
           become: true
-        - name: install nodejs
-          apt:
-            name:
-              - nodejs
+
+        - name: Remove temporary key file
+          ansible.builtin.file:
+            path: /tmp/nodesource.asc
+            state: absent
+
+        - name: Add NodeSource repository
+          ansible.builtin.apt_repository:
+            repo: "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main"
+            state: present
+            filename: nodesource
+          become: true
+
+        - name: Update apt cache
+          ansible.builtin.apt:
+            update_cache: yes
+          become: true
+
+        - name: Install Node.js
+          ansible.builtin.apt:
+            name: nodejs
             state: present
           become: true
       when: ansible_distribution == 'Ubuntu'
