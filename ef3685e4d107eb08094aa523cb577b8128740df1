@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39cacfa6_103a246e",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2026-02-20T20:29:36Z",
+      "side": 1,
+      "message": "Was it not possible to do something like was done for node 19? Running curl scripts this way is not really considered best practice",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
