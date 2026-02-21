@@ -22,6 +22,30 @@
       },
       "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ba9aced_4f5d8cf8",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2026-02-21T03:03:15Z",
+      "side": 1,
+      "message": "Sadly the old way to setup the installation repo is not working, I tried a similar approach for node 20 and it get following error:\n\n---\nThe repository \u0027https://deb.nodesource.com/node_20.x jammy Release\u0027 does not have a Release file., W:Updating from such a repository can\u0027t be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Skipping acquire of configured file \u0027main/source/Sources\u0027 as repository \u0027https://deb.nodesource.com/node_22.x nodistro InRelease\u0027 does not seem to provide it (sources.list entry misspelt?), W:https://ppa.launchpadcontent.net/openjdk-r/ppa/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details\n---\n\nAlternatively I solved the DEPRECATION note above but still got a similar error:\n\n---\n\u003d\u003d\u003e openstack.docker: 188         - name: Add nodejs repository with signed-by\n\u003d\u003d\u003e openstack.docker: Failed to update apt cache after 5 retries: E:The repository \u0027https://deb.nodesource.com/node_20.x jammy Release\u0027 does not have a Release file., W:Updating from such a repository can\u0027t be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Skipping acquire of configured file \u0027main/source/Sources\u0027 as repository \u0027https://deb.nodesource.com/node_22.x nodistro InRelease\u0027 does not seem to provide it (sources.list entry misspelt?), W:https://ppa.launchpadcontent.net/openjdk-r/ppa/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.\n\u003d\u003d\u003e openstack.docker: 189           ansible.builtin.apt_repository:\n\u003d\u003d\u003e openstack.docker: 190             repo: \"deb [signed-by\u003d/etc/apt/keyrings/nodesource.asc] https://deb.nodesource.com/node_20.x {{ ansib...\n\u003d\u003d\u003e openstack.docker:\n\u003d\u003d\u003e openstack.docker:                       ^ column 19\n---\n\nI\u0027m afraid my first approach is the only option that works so far, I will try to find another way without using curl.",
+      "parentUuid": "39cacfa6_103a246e",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
