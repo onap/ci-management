@@ -70,6 +70,30 @@
       },
       "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55145777_f4cddedf",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2026-02-24T20:45:45Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c84e2c2d_c80f644c",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
