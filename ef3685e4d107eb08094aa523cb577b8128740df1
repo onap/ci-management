@@ -46,6 +46,30 @@
       },
       "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c84e2c2d_c80f644c",
+        "filename": "packer/provision/local-docker.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2026-02-24T08:17:48Z",
+      "side": 1,
+      "message": "Hi @agrimberg@linuxfoundation.org\nI found another way to fix this, please review my latest patchset.",
+      "parentUuid": "3ba9aced_4f5d8cf8",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 183,
+        "endChar": 24
+      },
+      "revId": "ef3685e4d107eb08094aa523cb577b8128740df1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
