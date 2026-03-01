@@ -54,7 +54,7 @@
     # update-cloud-image: true
     build-timeout: 10
 
-    gerrit-user: "jenkins-$SILO"
+    gerrit-user: "onap-jobbuilder"
     gerrit-host: "gerrit.onap.org"
     gerrit-topic: "update-cloud-image"
     reviewers-email: "onap-jobbuilder@jenkins.onap.org"
