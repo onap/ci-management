@@ -1,0 +1,44 @@
+---
+- project:
+    name: ccsdk-cds-py-executor
+    project: ccsdk/cds
+    project-name: ccsdk-cds-py-executor
+    mvn-settings: ccsdk-cds-settings
+    build-node: ubuntu2204-builder-4c-4g
+    python-version: python3
+    tox-dir: ms/py-executor
+    tox-envs: py37
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: "ms/py-executor/.*"
+    stream:
+      - master:
+          branch: master
+      - quebec:
+          branch: quebec
+      - paris:
+          branch: paris
+    jobs:
+      - gerrit-tox-verify
+
+- project:
+    name: ccsdk-cds-artifact-manager
+    project: ccsdk/cds
+    project-name: ccsdk-cds-artifact-manager
+    mvn-settings: ccsdk-cds-settings
+    build-node: ubuntu2204-builder-4c-4g
+    python-version: python3
+    tox-dir: ms/artifact-manager
+    tox-envs: py37
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: "ms/artifact-manager/.*"
+    stream:
+      - master:
+          branch: master
+      - quebec:
+          branch: quebec
+      - paris:
+          branch: paris
+    jobs:
+      - gerrit-tox-verify
