@@ -4,7 +4,7 @@
     project: ccsdk/cds
     project-name: ccsdk-cds-py-executor
     mvn-settings: ccsdk-cds-settings
-    build-node: ubuntu2204-builder-4c-4g
+    build-node: ubuntu1804-docker-8c-8g
     python-version: python3
     tox-dir: ms/py-executor
     tox-envs: py38
@@ -26,7 +26,7 @@
     project: ccsdk/cds
     project-name: ccsdk-cds-artifact-manager
     mvn-settings: ccsdk-cds-settings
-    build-node: ubuntu2204-builder-4c-4g
+    build-node: ubuntu1804-docker-8c-8g
     python-version: python3
     tox-dir: ms/artifact-manager
     tox-envs: py38
