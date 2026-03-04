@@ -7,7 +7,7 @@
     build-node: ubuntu2204-builder-4c-4g
     python-version: python3
     tox-dir: ms/py-executor
-    tox-envs: py37
+    tox-envs: py38
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: "ms/py-executor/.*"
@@ -29,7 +29,7 @@
     build-node: ubuntu2204-builder-4c-4g
     python-version: python3
     tox-dir: ms/artifact-manager
-    tox-envs: py37
+    tox-envs: py38
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: "ms/artifact-manager/.*"
