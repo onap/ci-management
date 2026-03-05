@@ -22,6 +22,23 @@
       - gerrit-tox-verify
 
 - project:
+    name: ccsdk-cds-e2e-playwright
+    project-name: ccsdk-cds
+    project: ccsdk/cds
+    build-node: ubuntu2204-docker-8c-8g
+    build-timeout: 30
+    pattern: "cds-ui/**"
+    area: e2e-playwright
+    script: !include-raw-escape: cds-playwright-e2e.sh
+    stream:
+      - master:
+          branch: master
+      - quebec:
+          branch: quebec
+    jobs:
+      - "{project-name}-{stream}-{area}-verify-shell"
+
+- project:
     name: ccsdk-cds-artifact-manager
     project: ccsdk/cds
     project-name: ccsdk-cds-artifact-manager
