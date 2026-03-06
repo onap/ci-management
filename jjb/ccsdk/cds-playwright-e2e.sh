@@ -40,6 +40,24 @@ npm_install() {
 	fi
 }
 
+npm_install_public_registry() {
+	local userconfig rc
+	userconfig="$(mktemp /tmp/npmrc-public.XXXXXX)"
+	cat > "$userconfig" << 'EOF'
+registry=https://registry.npmjs.org/
+always-auth=false
+EOF
+
+	rc=0
+	if [[ -f package-lock.json ]]; then
+		npm ci --userconfig "$userconfig" || rc=$?
+	else
+		npm install --userconfig "$userconfig" || rc=$?
+	fi
+	rm -f "$userconfig"
+	return "$rc"
+}
+
 # ── Install dependencies for each component ───────────────────────────────────
 
 echo "---> Installing server (LoopBack BFF) dependencies"
@@ -52,7 +70,7 @@ npm_install
 
 echo "---> Installing e2e-playwright dependencies"
 cd "$WORKSPACE/cds-ui/e2e-playwright"
-npm_install
+npm_install_public_registry
 
 # ── Install Playwright browser (Firefox, matching the config) ────────────────
 echo "---> Installing Playwright Firefox browser"
