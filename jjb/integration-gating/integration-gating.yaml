@@ -1,0 +1,15 @@
+---
+- project:
+    name: integration-gating-project-view
+    project-name: integration-gating
+    views:
+      - project-view
+
+- project:
+    name: integration-gating-info
+    project: integration/gating
+    project-name: integration-gating
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
