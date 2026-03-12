@@ -13,6 +13,10 @@
     stream:
       - "master":
           branch: "master"
+      - "quebec":
+          branch: "quebec"
+      - "rabat":
+          branch: "rabat"
 
     jobs:
       - "{project-name}-{stream}-image-verify":
