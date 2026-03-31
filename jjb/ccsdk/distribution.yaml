@@ -7,7 +7,7 @@
           cron: ""
       - gerrit-maven-merge:
           cron: "@daily"
-          mvn-params: "-Dmaven.test.skip=true"
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.run=true -Pdocker"
       - gerrit-maven-stage:
           build-node: ubuntu2204-docker-8c-8g
           sign-artifacts: true
