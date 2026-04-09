@@ -54,9 +54,9 @@
     name: ccsdk-oran-csit-java21
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -DallowIncompleteProjects=true -Pdocker"
       - "{project-name}-merge-verification-maven-{stream}":
-          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -Pdocker"
+          mvn-params: "-Dmaven.test.skip=true -Ddocker.skip.push=true -DallowIncompleteProjects=true -Pdocker"
     project-name: "ccsdk-oran"
     recipients: "John.Keeney@est.tech"
     # project name in gerrit
