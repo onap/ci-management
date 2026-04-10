@@ -155,6 +155,7 @@
     submodule-recursive: true
     submodule-timeout: 10
     submodule-disable: false
+    trigger-files: ""
 
     disabled: false
     archive-artifacts: >
@@ -260,6 +261,11 @@
           server: "{server-name}"
           project: "{project}"
           branch: "{branch}"
+      - gerrit-trigger-patch-merged:
+          server: "{server-name}"
+          project: "{project}"
+          branch: "{branch}"
+          files: "{trigger-files}"
 
 - job-template:
     # Job template for unified merge verification jobs in
