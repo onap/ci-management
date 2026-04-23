@@ -11,6 +11,9 @@
       - "master":
           branch: "master"
           java-version: openjdk11
+      - "spring-boot-3-0":
+          branch: "spring-boot-3-0"
+          java-version: openjdk17
     functionality:
       - "integration-etsi-testing":
           trigger_jobs:
