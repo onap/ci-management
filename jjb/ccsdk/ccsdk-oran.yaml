@@ -5,6 +5,7 @@
     jobs:
       - gerrit-maven-verify:
           cron: ""
+          mvn-params: "-DallowIncompleteProjects=true"
       - gerrit-maven-merge:
           mvn-params: "-Dmaven.test.skip=true -DallowIncompleteProjects=true"
       - gerrit-maven-stage:
