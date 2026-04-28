@@ -2,7 +2,7 @@
 - project:
     name: so-project-view
     project-name: so
-    java-version: openjdk11
+    java-version: openjdk17
     views:
       - project-view
 
@@ -28,7 +28,11 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
+          build-node: centos8-docker-8c-8g
+          # Define maven version for both ONAP and global-jjb jobs
+          maven-version: mvn38
+          mvn-version: mvn38
           gerrit-maven-stage:
             build-node: centos8-docker-4c-4g
           gerrit-maven-docker-stage:
@@ -54,7 +58,7 @@
 
 - project:
     name: so-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -72,7 +76,7 @@
 
 - project:
     name: "so-coverity"
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - "onap-gerrit-maven-coverity"
     build-node: "ubuntu1804-docker-v1-8c-8g"
@@ -100,7 +104,7 @@
 
 - project:
     name: so-clm
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
