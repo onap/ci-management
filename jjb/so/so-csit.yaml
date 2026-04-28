@@ -1,7 +1,7 @@
 ---
 - project:
     name: so-csit
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - "{project-name}-{stream}-verify-csit-{functionality}"
       - "{project-name}-{stream}-csit-{functionality}"
@@ -10,7 +10,7 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
       - "spring-boot-3-0":
           branch: "spring-boot-3-0"
           java-version: openjdk17

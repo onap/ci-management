@@ -16,7 +16,7 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
     mvn-settings: "so-libs-settings"
     # due to a strange macro / variable translation problem this needs to be
     # passed as a string block to properly get the properties correctly defined
@@ -28,7 +28,7 @@
 
 - project:
     name: so-libs-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -45,7 +45,7 @@
 
 - project:
     name: so-libs-clm
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
