@@ -20,21 +20,18 @@
     wrapper: true
 
 - project:
-    name: portal-ng-bff-gradle-publish-jar
+    name: portal-ng-bff-gradle-publish
     project-name: "portal-ng-bff"
     project: "portal-ng/bff"
     branch: "master"
     build-node: ubuntu1804-docker-8c-8g
     jobs:
-      - gerrit-gradle-publish-jar
+      - gerrit-gradle-publish
     stream:
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-bff-settings"
     publish-credential: portal-ng-bff
-    publish-directory: /w/workspace/portal-ng-bff-gradle-publish-jar-master/lib/build/libs
-    publish-file-extension: jar
-    publish-url: https://nexus.onap.org/content/repositories/releases/org/onap/portal-ng-bff/
     wrapper: true
 
 - project:

@@ -1,0 +1,106 @@
+---
+# Job template for publishing a Gradle project to Nexus via `./gradlew publish`.
+# Unlike the upstream gerrit-gradle-publish-jar template (which runs shadowJar
+# followed by a raw nexus-upload.sh HTTP PUT), this template delegates the full
+# Maven-compatible publish (jar + POM generation + upload) to Gradle's own
+# maven-publish plugin.  Credentials are injected as the same NEXUS_USERNAME /
+# NEXUS_PASSWORD environment variables that the project's publishing {} block
+# reads via System.getenv().
+
+- _onap_gradle_publish_common: &onap_gradle_publish_common
+    name: onap-gradle-publish-common
+
+    ######################
+    # Default parameters #
+    ######################
+
+    branch: master
+    build-days-to-keep: 7
+    build-timeout: 60
+    java-version: openjdk17
+    publish-credential: ""
+    stream: master
+    submodule-recursive: true
+    submodule-timeout: 10
+    submodule-disable: false
+    wrapper: true
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: "{build-node}"
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: "{build-days-to-keep}"
+
+    parameters:
+      - lf-infra-parameters:
+          project: "{project}"
+          branch: "{branch}"
+          stream: "{stream}"
+
+    publishers:
+      - lf-infra-publish
+
+    gerrit_gradle_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: '^Patch Set\s+\d+:\s+remerge\s*$'
+
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: ".*"
+
+- job-template:
+    name: "{project-name}-gradle-publish-{stream}"
+    id: gerrit-gradle-publish
+    <<: *onap_gradle_publish_common
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: "{publish-credential}"
+              username: NEXUS_USERNAME
+              password: NEXUS_PASSWORD
+
+    builders:
+      - lf-infra-pre-build
+      - lf-update-java-alternatives:
+          java-version: "{java-version}"
+      - lf-infra-docker-login:
+          global-settings-file: "global-settings"
+          settings-file: "{mvn-settings}"
+      - gradle:
+          wrapper: "{wrapper}"
+          executable: true
+          tasks: |
+            publish
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "$GIT_URL/$PROJECT"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
+          submodule-recursive: "{submodule-recursive}"
+          submodule-timeout: "{submodule-timeout}"
+          submodule-disable: "{submodule-disable}"
+          choosing-strategy: default
+
+    triggers:
+      - gerrit:
+          server-name: "{gerrit-server-name}"
+          trigger-on: "{obj:gerrit_gradle_merge_triggers}"
+          projects:
+            - project-compare-type: ANT
+              project-pattern: "{project}"
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: "**/{branch}"
+              file-paths: "{obj:gerrit_trigger_file_paths}"
