@@ -63,3 +63,18 @@
       - "master":
           branch: "master"
     mvn-settings: "portal-ng-bff-settings"
+
+- project:
+    name: portal-ng-bff-gradle-release
+    project-name: "portal-ng-bff"
+    project: "portal-ng/bff"
+    branch: "master"
+    build-node: ubuntu1804-docker-8c-8g
+    jobs:
+      - gerrit-gradle-release
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "portal-ng-bff-settings"
+    publish-credential: portal-ng-bff
+    wrapper: true
