@@ -16,6 +16,24 @@
       "message": "Hi,\nI would like to confirm if this node size upgrade is required. Please bear in mind this will increase hosting cost for ONAP.",
       "revId": "5878e054f88ddc7c5ac9b9f74523cb133139332f",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40669e97_d12b9728",
+        "filename": "jjb/ccsdk/ccsdk-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2026-05-06T09:55:00Z",
+      "side": 1,
+      "message": "OK. Lets try with the original node size and we\u0027ll see if just the maven configuration change above fixes the issue.",
+      "parentUuid": "ae9c7539_5d785ecd",
+      "revId": "5878e054f88ddc7c5ac9b9f74523cb133139332f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
