@@ -27,6 +27,11 @@
     build-node: ubuntu1804-docker-8c-8g
     docker-name: "onap/portal-ng/history"
     container-tag-method: latest
+    post_docker_build_script: |
+      #!/bin/bash
+      set -eu -o pipefail
+      cd "$WORKSPACE"
+      ./docker-push-staging-tags.sh
     jobs:
       - "{project-name}-gerrit-docker-jobs"
     stream:
