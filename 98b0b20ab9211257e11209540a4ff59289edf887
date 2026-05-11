@@ -34,6 +34,23 @@
       "parentUuid": "0c368fde_1a6375e9",
       "revId": "98b0b20ab9211257e11209540a4ff59289edf887",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee5d344e_18fd736d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7849
+      },
+      "writtenOn": "2026-05-11T13:27:34Z",
+      "side": 1,
+      "message": "Shall I delete the old job definition?",
+      "revId": "98b0b20ab9211257e11209540a4ff59289edf887",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
