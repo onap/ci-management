@@ -7,9 +7,9 @@
 
 - project:
     name: cps-clm
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
@@ -21,10 +21,10 @@
     build-node: centos8-docker-8c-8g
 
 - project:
-    name: cps-java17
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    name: cps-java21
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     project-name: "cps"
     project: "cps"
     jobs:
@@ -59,9 +59,9 @@
 
 - project:
     name: cps-sonar
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -78,9 +78,9 @@
 
 - project:
     name: cps-sonar-verify
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     jobs:
       - gerrit-maven-sonar-verify
     sonarcloud: true

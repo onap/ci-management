@@ -1,9 +1,9 @@
 ---
 - project:
-    name: cps-csit-java17
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
+    name: cps-csit-java21
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    maven-version: "mvn39"
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install
