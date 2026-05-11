@@ -16,6 +16,24 @@
       "message": "Hi @Fiete,\nWill this new gerrit-gradle-release job and recently merged gerrit-gradle-publish job replace old global-jjb\u0027s gerrit-gradle-publish-jar job?",
       "revId": "98b0b20ab9211257e11209540a4ff59289edf887",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97d315fa_05393636",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7849
+      },
+      "writtenOn": "2026-05-11T06:00:55Z",
+      "side": 1,
+      "message": "Hi Kevin, yes that replaces the old job",
+      "parentUuid": "0c368fde_1a6375e9",
+      "revId": "98b0b20ab9211257e11209540a4ff59289edf887",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
