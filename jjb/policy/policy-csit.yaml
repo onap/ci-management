@@ -156,9 +156,8 @@
       - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install
           mvn-params: "-P docker -Dmaven.test.skip=true -Ddocker.repository.push="
-          trigger-files: "**"
     project-name: "policy-clamp"
-    build-node: ubuntu2204-docker-8c-8g
+    build-node: ubuntu2004-docker-8c-8g
     recipients: "ramesh.murugan.iyer@est.tech wayne.dunican@est.tech daniel.hanrahan@est.tech"
     project: "policy/clamp"
     stream:
