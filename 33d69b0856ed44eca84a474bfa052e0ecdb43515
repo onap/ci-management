@@ -16,6 +16,23 @@
       "message": "You will have to upgrade the builder nodes as well, because JDK21 is not available in CentOS 8. Additionally please be aware that this change will impact jobs pointing to master branch so if there are incompatibilities those jobs will be broken until incompatibilities are fixed or the change is rolled back.",
       "revId": "33d69b0856ed44eca84a474bfa052e0ecdb43515",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccfe5409_5d9d14bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893
+      },
+      "writtenOn": "2026-05-12T07:50:29Z",
+      "side": 1,
+      "message": "I suggest we support Paris release and master",
+      "revId": "33d69b0856ed44eca84a474bfa052e0ecdb43515",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
