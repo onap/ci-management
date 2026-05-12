@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce5273e3_a3c31aee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893
+      },
+      "writtenOn": "2026-05-12T11:55:41Z",
+      "side": 1,
+      "message": "For Java 17 I\u0027d stick with its existing build-node",
+      "revId": "bf76109316e9d9572d9536b49e0949f9e45ab043",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
