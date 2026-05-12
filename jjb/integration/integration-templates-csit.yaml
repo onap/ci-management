@@ -155,7 +155,6 @@
     submodule-recursive: true
     submodule-timeout: 10
     submodule-disable: false
-    trigger-files: ""
 
     disabled: false
     archive-artifacts: >
@@ -250,6 +249,7 @@
     name: "{project-name}-review-verification-maven-{stream}"
 
     <<: *verification_maven_job_boiler_plate
+    pattern: "**"
 
     scm:
       - gerrit-trigger-scm:
@@ -257,15 +257,11 @@
           choosing-strategy: "gerrit"
           submodule-recursive: "{submodule-recursive}"
     triggers:
-      - gerrit-trigger-test-manually:
+      - gerrit-trigger-patch-submitted:
           server: "{server-name}"
           project: "{project}"
           branch: "{branch}"
-      - gerrit-trigger-patch-merged:
-          server: "{server-name}"
-          project: "{project}"
-          branch: "{branch}"
-          files: "{trigger-files}"
+          files: "{obj:pattern}"
 
 - job-template:
     # Job template for unified merge verification jobs in
