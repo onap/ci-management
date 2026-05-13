@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58b4a40d_1f11145b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893
+      },
+      "writtenOn": "2026-05-13T08:10:52Z",
+      "side": 1,
+      "message": "CPS not ready to receive yet so do not merge",
+      "revId": "5e0b4ba3d9bddfde842ef9dffb5eb5312f409d3c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
