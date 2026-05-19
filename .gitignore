@@ -1,6 +1,9 @@
 # Ignore Mac temp files
 .DS_Store
 
+# Ignore node.js linting artefacts
+node_modules/
+
 # Ignore Vim temporary files
 .*.sw?
 
