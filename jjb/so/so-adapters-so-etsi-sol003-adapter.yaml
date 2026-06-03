@@ -30,6 +30,8 @@
       - "master":
           branch: "master"
           java-version: openjdk11
+          maven-version: mvn38
+          mvn-version: mvn38
     mvn-settings: "so-adapters-so-etsi-sol003-adapter-settings"
     files: "**"
     archive-artifacts: ""
