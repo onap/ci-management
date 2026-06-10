@@ -134,8 +134,6 @@
     project-name: "policy-clamp"
     project: "policy/docker"
     stream:
-      - "master":
-          branch: "master"
       - "paris":
           branch: "paris"
       - "quebec":
