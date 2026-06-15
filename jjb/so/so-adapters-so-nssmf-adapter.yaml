@@ -29,7 +29,9 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
+          maven-version: mvn38
+          mvn-version: mvn38
     mvn-settings: "so-adapters-so-nssmf-adapter-settings"
     files: "**"
     archive-artifacts: ""
@@ -37,7 +39,7 @@
 
 - project:
     name: so-adapters-so-nssmf-adapter-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
