@@ -29,7 +29,7 @@
     stream:
       - "master":
           branch: "master"
-          java-version: openjdk11
+          java-version: openjdk17
           maven-version: mvn38
           mvn-version: mvn38
     mvn-settings: "so-adapters-so-etsi-sol003-adapter-settings"
@@ -39,7 +39,7 @@
 
 - project:
     name: so-adapters-so-etsi-sol003-adapter-sonar
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -57,7 +57,7 @@
 
 - project:
     name: so-adapters-so-etsi-sol003-adapter-clm
-    java-version: openjdk11
+    java-version: openjdk17
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"
