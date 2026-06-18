@@ -1,0 +1,28 @@
+---
+- project:
+    name: logging-analytics
+    project-name: "logging-analytics"
+    jobs:
+      - gerrit-maven-verify:
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+          mvn-goals: "clean install"
+      - gerrit-maven-merge:
+          mvn-goals: "clean deploy"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          sbom-generator: true
+          build-node: centos8-docker-4c-4g
+          maven-versions-plugin: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: centos7-docker-2c-1g
+    project: "logging-analytics"
+    stream:
+      - "master":
+          branch: "master"
+    java-version: openjdk11
+    mvn-settings: "logging-analytics-settings"
+    maven-deploy-properties: |
+      deployAtEnd=true
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu1804-docker-8c-8g
