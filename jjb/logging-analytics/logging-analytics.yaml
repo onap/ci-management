@@ -19,7 +19,7 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-settings: "logging-analytics-settings"
     maven-deploy-properties: |
       deployAtEnd=true
