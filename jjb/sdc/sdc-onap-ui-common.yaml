@@ -12,6 +12,7 @@
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdc-onap-ui-common-settings"
+    java-version: openjdk11
     build-node: ubuntu2204-builder-4c-4g
     files: "**"
     archive-artifacts: ""
@@ -26,6 +27,7 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
+    java-version: openjdk11
     build-node: ubuntu2204-builder-4c-4g
     project: "sdc/onap-ui-common"
     project-name: "sdc-onap-ui-common"
