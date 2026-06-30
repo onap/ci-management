@@ -1,24 +1,11 @@
 ---
-- project:
-    name: sdc-onap-ui-common
-    project-name: "sdc-onap-ui-common"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
-    project: "sdc/onap-ui-common"
-    stream:
-      - "master":
-          branch: "master"
-      - "montreal":
-          branch: "montreal"
-    mvn-settings: "sdc-onap-ui-common-settings"
-    java-version: openjdk11
-    build-node: ubuntu2204-builder-4c-4g
-    files: "**"
-    archive-artifacts: ""
-    build-timeout: 60
-    maven-version: "mvn36"
-
+# The verify and merge pipelines for this repository have migrated to
+# GitHub Actions (see .github/workflows/gerrit-verify.yaml and
+# gerrit-merge.yaml in sdc/onap-ui-common). The Jenkins verify-java and
+# merge-java jobs are therefore removed as duplicates; merge-java was also
+# failing because it attempted a Maven `deploy` of this JS/SCSS library to
+# the Nexus releases repo (401 Unauthorized). The SonarCloud job is retained
+# until equivalent scanning is added to the GitHub Actions workflows.
 - project:
     name: sdc-onap-ui-common-sonar
     jobs:
