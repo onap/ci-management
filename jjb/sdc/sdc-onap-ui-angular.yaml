@@ -1,27 +1,21 @@
 ---
+# The verify and merge pipelines for this repository have migrated to
+# GitHub Actions (see .github/workflows/gerrit-verify.yaml and
+# gerrit-merge.yaml in sdc/onap-ui-angular). The Jenkins verify-java and
+# merge-java jobs are therefore removed as duplicates: verify-java only ran
+# `npm run build` + `npm run storybook:build` (no tests), which the GHA
+# verify now reproduces and extends with a Jest suite and coverage, and
+# merge-java attempted a Maven `deploy` of this Angular/TypeScript library
+# to the Nexus releases repo instead of the npm registry that consumers
+# actually resolve from. The GHA merge workflow replaces it with the correct
+# model (npm snapshot on every merge, npm release gated on a releases/ file).
+# The SonarCloud job is retained until equivalent scanning is added to the
+# GitHub Actions workflows.
 - project:
     name: sdc-onap-ui-project-view
     project-name: sdc-onap-ui
     views:
       - project-view
-
-- project:
-    name: sdc-onap-ui-angular
-    project-name: "sdc-onap-ui-angular"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
-    project: "sdc/onap-ui-angular"
-    stream:
-      - "master":
-          branch: "master"
-      - "montreal":
-          branch: "montreal"
-    mvn-settings: "sdc-onap-ui-angular-settings"
-    files: "**"
-    archive-artifacts: ""
-    build-timeout: 60
-    maven-version: "mvn36"
 
 - project:
     name: sdc-onap-ui-angular-sonar
