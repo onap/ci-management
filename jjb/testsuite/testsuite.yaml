@@ -51,7 +51,7 @@
       - "robot":
           tox-dir: "."
           tox-envs: "robot"
-          pattern: "robot/testsuites/usecases/*.robot"
+          pattern: "robot/**/*.robot"
     stream:
       - "master":
           branch: "master"
