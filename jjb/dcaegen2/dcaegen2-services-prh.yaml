@@ -22,7 +22,7 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
+    java-version: openjdk17
     mvn-settings: "dcaegen2-services-prh-settings"
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
@@ -41,7 +41,7 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: ubuntu1804-docker-8c-8g
-    java-version: openjdk11
+    java-version: openjdk17
     project: "dcaegen2/services/prh"
     project-name: "dcaegen2-services-prh"
     branch: "master"
@@ -56,7 +56,7 @@
     nexus-iq-namespace: "onap-"
     project: dcaegen2/services/prh
     build-node: ubuntu1804-docker-8c-8g
-    java-version: openjdk11
+    java-version: openjdk17
     project-name: "dcaegen2-services-prh"
     stream:
       - "master":
