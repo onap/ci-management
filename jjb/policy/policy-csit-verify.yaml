@@ -8,10 +8,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "distribution"
 
@@ -24,10 +24,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "xacml-pdp"
 
@@ -40,10 +40,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "opa-pdp"
 
@@ -56,10 +56,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-applications"
 
@@ -72,10 +72,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-pdp"
 
@@ -88,10 +88,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "apex-pdp"
 
@@ -104,10 +104,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "pap"
 
@@ -120,10 +120,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "api"
 
@@ -134,9 +134,9 @@
     project-name: "policy-clamp"
     project: "policy/docker"
     stream:
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "clamp"

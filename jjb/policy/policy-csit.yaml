@@ -9,10 +9,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "distribution"
 
@@ -26,10 +26,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "xacml-pdp"
 
@@ -43,10 +43,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "policy-opa-pdp"
 
@@ -60,10 +60,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-applications"
 
@@ -77,10 +77,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-pdp"
 
@@ -94,10 +94,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "apex-pdp"
 
@@ -111,10 +111,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "pap"
 
@@ -128,10 +128,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "api"
 
@@ -143,10 +143,10 @@
     recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
     project: "policy/docker"
     stream:
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "clamp"
 

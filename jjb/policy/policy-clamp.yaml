@@ -26,10 +26,10 @@
 
     project: "policy/clamp"
     stream:
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     mvn-version: "mvn36"
     maven-version: "mvn36"
     mvn-settings: "policy-clamp-settings"
