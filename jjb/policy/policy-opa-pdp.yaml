@@ -32,10 +32,10 @@
     stream:
       - "master":
           branch: "master"
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     mvn-settings: "policy-opa-pdp-settings"
 
 - project:
