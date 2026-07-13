@@ -30,6 +30,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     mvn-settings: "policy-drools-applications-settings"
     mvn-version: "mvn36"
     maven-version: "mvn36"

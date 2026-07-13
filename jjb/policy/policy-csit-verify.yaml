@@ -12,6 +12,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "distribution"
 
@@ -28,6 +30,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "xacml-pdp"
 
@@ -44,6 +48,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "opa-pdp"
 
@@ -60,6 +66,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-applications"
 
@@ -76,6 +84,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "drools-pdp"
 
@@ -92,6 +102,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "apex-pdp"
 
@@ -108,6 +120,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "pap"
 
@@ -124,6 +138,8 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "api"
 
@@ -138,5 +154,7 @@
           branch: "paris"
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
     functionality:
       - "clamp"
