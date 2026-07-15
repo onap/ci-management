@@ -74,6 +74,8 @@
           branch: "quebec"
       - "paris":
           branch: "paris"
+      - "rabat":
+          branch: "rabat"
     java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-oran-settings"

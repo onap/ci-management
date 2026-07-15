@@ -58,6 +58,8 @@
     stream:
       - "quebec":
           branch: "quebec"
+      - "rabat":
+          branch: "rabat"
       - "master":
           branch: "master"
     java-version: openjdk21
