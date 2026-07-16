@@ -30,6 +30,7 @@
           branch: "master"
     mvn-settings: "aai-schema-service-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
@@ -52,6 +53,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
 
 - project:
     name: aai-schema-service-clm
@@ -66,3 +68,4 @@
           branch: "master"
     mvn-settings: "aai-schema-service-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"

@@ -33,6 +33,7 @@
           branch: "master"
     mvn-settings: "aai-traversal-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
@@ -54,6 +55,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     java-version: openjdk17
 
 - project:
@@ -68,4 +70,5 @@
           branch: "master"
     mvn-settings: "aai-traversal-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     java-version: openjdk17

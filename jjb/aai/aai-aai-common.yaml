@@ -23,6 +23,7 @@
           branch: "master"
     mvn-settings: "aai-aai-common-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     files: "**"
     archive-artifacts: ""
     build-node: centos8-docker-4c-4g
@@ -45,6 +46,7 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     java-version: openjdk17
 
 - project:
@@ -61,6 +63,7 @@
     mvn-params: ""
     mvn-settings: "aai-aai-common-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     java-version: openjdk17
 
 - project:
@@ -84,6 +87,7 @@
     docker-root: "$WORKSPACE/Dockerfiles/aai-common/"
     mvn-settings: "aai-aai-common-settings"
     mvn-version: "mvn36"
+    maven-version: "mvn36"
     files: "Dockerfiles/aai-common/**"
     build-node: ubuntu1804-docker-8c-8g
     java-version: openjdk17
