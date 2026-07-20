@@ -22,6 +22,40 @@
       },
       "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a6080ec_ecabafcb",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin-csit.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2026-07-20T21:40:23Z",
+      "side": 1,
+      "message": "I recommend setting project-name to a more appropriate name otherwise it will try to duplicate other jobs already using same project name. You can use same value you use in previous lines for name value.",
+      "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac62b5dd_9ed0a600",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7833
+      },
+      "writtenOn": "2026-07-20T21:40:23Z",
+      "side": 1,
+      "message": "I recommend setting project-name to a more appropriate name otherwise it will try to duplicate other jobs already using same project name. You can use same value you use in previous lines for name value.",
+      "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
