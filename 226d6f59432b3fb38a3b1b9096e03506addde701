@@ -24,6 +24,23 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "31eaba64_2d0272ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4893
+      },
+      "writtenOn": "2026-07-21T10:11:09Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a6080ec_ecabafcb",
@@ -54,6 +71,24 @@
       "writtenOn": "2026-07-20T21:40:23Z",
       "side": 1,
       "message": "I recommend setting project-name to a more appropriate name otherwise it will try to duplicate other jobs already using same project name. You can use same value you use in previous lines for name value.",
+      "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3a493ef_4a43ed30",
+        "filename": "jjb/cps/cps-ncmp-dmi-plugin.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4893
+      },
+      "writtenOn": "2026-07-21T10:11:09Z",
+      "side": 1,
+      "message": "Has something changed in this regard lately? Our previous jobs in cps never changed the project-name and nor did the policy jobs as far as I can see.\nhttps://gerrit.onap.org/r/c/ci-management/+/144286/3/jjb/cps/cps.yaml\nhttps://gerrit.onap.org/r/c/ci-management/+/146187/4/jjb/policy/policy-apex-pdp.yaml",
+      "parentUuid": "ac62b5dd_9ed0a600",
       "revId": "226d6f59432b3fb38a3b1b9096e03506addde701",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
