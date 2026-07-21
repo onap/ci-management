@@ -71,6 +71,7 @@
     maven-version: "mvn39"
     mvn-settings: "policy-common-settings"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-goals: "clean install"
     cron: "@daily"
 
@@ -91,6 +92,7 @@
     mvn-settings: "policy-common-settings"
     mvn-goals: "clean install"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     sonarcloud-qualitygate-wait: true
 
 - project:
