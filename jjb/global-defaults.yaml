@@ -55,7 +55,7 @@
     maven-version: "mvn33"
 
     # git submodule attributes
-    submodule-recursive: true
+    submodule-recursive: truesorry 
     submodule-disable: false
 
     # Jenkins
@@ -64,7 +64,7 @@
 
     # SonarCloud
     sonarcloud_project_organization: onap
-    sonar_mvn_goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar"
+    sonar_mvn_goal: "org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar"
 
     # Nexus3 docker registries
     container-public-registry: nexus3.onap.org:10001
