@@ -34,6 +34,7 @@
           mvn-goals: clean install
           mvn-params: "-Dmaven.test.skip=true -Pdocker"
     project-name: "cps-ncmp-dmi-plugin-csit-java21"
+    build-node: ubuntu2204-docker-8c-8g
     recipients: "toine.siebelink@est.tech"
     # project name in gerrit
     project: "cps/ncmp-dmi-plugin"
