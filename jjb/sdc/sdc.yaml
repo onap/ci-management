@@ -101,7 +101,8 @@
     project-name: "sdc"
     branch: "master"
     mvn-settings: "sdc-settings"
-    java-version: openjdk11
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"

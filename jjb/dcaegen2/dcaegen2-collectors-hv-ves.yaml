@@ -39,14 +39,15 @@
 
 - project:
     name: dcaegen2-collectors-hv-ves-sonar
-    java-version: openjdk11
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     project: "dcaegen2/collectors/hv-ves"
     project-name: "dcaegen2-collectors-hv-ves"
     branch: "master"

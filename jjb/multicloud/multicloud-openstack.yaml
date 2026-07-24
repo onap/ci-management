@@ -51,7 +51,9 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-builder-4c-4g
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-windriver"
     branch: "master"
@@ -68,7 +70,9 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-builder-4c-4g
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-pike"
     branch: "master"
@@ -85,7 +89,9 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-builder-4c-4g
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-starlingx"
     branch: "master"
@@ -115,7 +121,9 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-builder-4c-4g
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-fcaps"
     branch: "master"
@@ -132,7 +140,9 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-builder-4c-4g
+    build-node: ubuntu2204-builder-4c-4g
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     project: "multicloud/openstack"
     project-name: "multicloud-openstack-hpa"
     branch: "master"

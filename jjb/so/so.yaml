@@ -50,7 +50,8 @@
 
 - project:
     name: so-sonar
-    java-version: openjdk17
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -58,7 +59,7 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     max-git-repo-age-hours: 48
-    build-node: ubuntu1804-docker-v1-8c-8g
+    build-node: ubuntu2204-docker-v1-8c-8g
     project: "so"
     project-name: "so"
     branch: "master"

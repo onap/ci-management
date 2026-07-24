@@ -45,7 +45,8 @@
 
 - project:
     name: dcaegen2-services-sdk-sonar
-    java-version: openjdk11
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

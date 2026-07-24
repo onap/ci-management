@@ -39,14 +39,15 @@
 
 - project:
     name: dcaegen2-analytics-tca-gen2-sonar
-    java-version: openjdk11
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     project: "dcaegen2/analytics/tca-gen2"
     project-name: "dcaegen2-analytics-tca-gen2"
     branch: "master"

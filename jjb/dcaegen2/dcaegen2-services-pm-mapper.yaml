@@ -44,11 +44,12 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     project: "dcaegen2/services/pm-mapper"
     project-name: "dcaegen2-services-pm-mapper"
     branch: "master"
-    java-version: openjdk11
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-settings: "dcaegen2-services-pm-mapper-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"

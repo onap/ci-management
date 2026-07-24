@@ -47,7 +47,8 @@
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
     maven-version: "mvn36"
-    java-version: openjdk17
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
 
 - project:
     name: aai-aai-common-clm

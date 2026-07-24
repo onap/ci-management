@@ -47,7 +47,7 @@
     sonarcloud-project-organization: "{sonarcloud_project_organization}"
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     project: "aai/traversal"
     project-name: "aai-traversal"
     branch: "master"
@@ -56,7 +56,8 @@
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
     maven-version: "mvn36"
-    java-version: openjdk17
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
 
 - project:
     name: aai-traversal-clm
