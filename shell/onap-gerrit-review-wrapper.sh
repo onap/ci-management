@@ -29,6 +29,24 @@
 set -eu
 echo "--> onap-gerrit-review-wrapper.sh"
 
+# Skip OGR entirely when this patch set only touches files under .github/.
+# The OGR rules (ChangeLog.md, LICENSE.txt, version bumps, copyright headers,
+# etc.) are meant for project source/release content and do not apply to
+# GitHub-only metadata (workflows, dependabot config, issue templates, ...).
+#
+# Gerrit verify builds check out a single patch set commit on top of the
+# target branch, so HEAD^ is the branch tip before the patch and HEAD is the
+# patch itself; diffing the two gives exactly the files touched by this
+# change.
+if git rev-parse --verify -q HEAD^ >/dev/null 2>&1; then
+    changed_files=$(git diff --name-only HEAD^ HEAD || true)
+    if [ -n "$changed_files" ] && ! printf '%s\n' "$changed_files" | grep -qv '^\.github/'; then
+        echo "--> onap-gerrit-review-wrapper.sh: all changed files are under .github/, skipping OGR checks"
+        printf '%s\n' "$changed_files"
+        exit 0
+    fi
+fi
+
 # Cleanup temporary directory if exist
 rm -Rf /tmp/ogr
 
