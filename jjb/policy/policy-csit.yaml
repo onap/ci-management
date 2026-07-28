@@ -4,7 +4,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-distribution"
-    recipients: "ram_krishna.verma@bell.ca"
+    recipients: "ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -21,7 +21,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-xacml-pdp"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -38,7 +38,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-opa-pdp"
-    recipients: "dm00536893@techmahindra.com"
+    recipients: "dm00536893@techmahindra.com sangeeta.bellara@t-systems.com sangeeta.bellara@t-systems.com"
     project: "policy/docker"
     stream:
       - "master":
@@ -55,7 +55,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-drools-applications"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -72,7 +72,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-drools-pdp"
-    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com"
+    recipients: "jrh3@att.com jorge.hernandez-herrero@att.com ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -89,7 +89,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-apex-pdp"
-    recipients: "liam.fallon@est.tech ram_krishna.verma@bell.ca"
+    recipients: "ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -106,7 +106,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-pap"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
+    recipients: "jrh3@att.com ram_krishna.verma@bell.ca ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -123,7 +123,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-api"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca"
+    recipients: "jrh3@att.com ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "master":
@@ -140,7 +140,7 @@
     jobs:
       - "{project-name}-{stream}-project-csit-{functionality}"
     project-name: "policy-clamp"
-    recipients: "jrh3@att.com ram_krishna.verma@bell.ca liam.fallon@est.tech pd1248@att.com"
+    recipients: "ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/docker"
     stream:
       - "paris":
@@ -159,7 +159,7 @@
           java-version: "openjdk21"
     project-name: "policy-clamp"
     build-node: ubuntu2204-docker-8c-8g
-    recipients: "ramesh.murugan.iyer@est.tech wayne.dunican@est.tech daniel.hanrahan@est.tech"
+    recipients: "ramesh.murugan.iyer@est.tech daniel.hanrahan@est.tech"
     project: "policy/clamp"
     stream:
       - "master":
