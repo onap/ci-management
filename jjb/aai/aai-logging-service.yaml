@@ -41,6 +41,8 @@
     mvn-settings: "aai-logging-service-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
+    java-version: openjdk21
+    sonarcloud-java-version: openjdk21
 
 - project:
     name: aai-logging-service-clm

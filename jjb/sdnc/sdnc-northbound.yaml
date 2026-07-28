@@ -57,6 +57,7 @@
     mvn-settings: "sdnc-northbound-settings"
     mvn-goals: "clean install"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-version: "mvn39"
     mvn-opts: "-Xmx1024m"
 
