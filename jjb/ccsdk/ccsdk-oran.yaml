@@ -117,6 +117,7 @@
     project-name: "ccsdk-oran"
     branch: "master"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-oran-settings"
     mvn-goals: "clean install"

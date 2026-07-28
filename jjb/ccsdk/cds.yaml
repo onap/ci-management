@@ -58,6 +58,7 @@
     project-name: "ccsdk-cds"
     branch: "master"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "ccsdk-cds-settings"
     mvn-goals: "clean install"
