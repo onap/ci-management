@@ -70,6 +70,7 @@
     project-name: "sdnc-apps"
     branch: "master"
     java-version: openjdk21
+    sonarcloud-java-version: openjdk21
     mvn-version: "mvn39"
     mvn-settings: "sdnc-apps-settings"
     mvn-goals: "clean install"
