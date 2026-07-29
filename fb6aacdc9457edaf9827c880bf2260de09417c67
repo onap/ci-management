@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d65ee57a_4d4d528e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8049
+      },
+      "writtenOn": "2026-07-29T09:32:26Z",
+      "side": 1,
+      "message": "Don\u0027t think the markdown file was supposed to be in this change, but if it is, it\u0027s failing pre-commit hook checks (prettier is reformatting the file).",
+      "revId": "fb6aacdc9457edaf9827c880bf2260de09417c67",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
