@@ -94,19 +94,3 @@
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
     sonarcloud-qualitygate-wait: true
-
-- project:
-    name: policy-common-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: policy/common
-    project-name: "policy-common"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
-    mvn-settings: "policy-common-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    java-version: openjdk21

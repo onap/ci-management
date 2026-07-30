@@ -27,13 +27,3 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-
-- project:
-    name: dcaegen2-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "dcaegen2"
-    project-name: "dcaegen2"
-    branch: "master"
-    mvn-settings: "dcaegen2-settings"

@@ -33,14 +33,3 @@
     docker-pom: "pom.xml"
     mvn-profile: docker
     build-node: ubuntu1804-builder-4c-4g
-
-- project:
-    name: usecase-ui-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: usecase-ui
-    project-name: "usecase-ui"
-    build-node: ubuntu1804-builder-4c-4g
-    branch: "master"
-    mvn-settings: "usecase-ui-settings"

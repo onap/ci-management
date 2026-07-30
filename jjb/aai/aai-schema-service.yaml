@@ -55,18 +55,3 @@
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     mvn-version: "mvn36"
     maven-version: "mvn36"
-
-- project:
-    name: aai-schema-service-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "aai/schema-service"
-    project-name: "aai-schema-service"
-    java-version: openjdk17
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "aai-schema-service-settings"
-    mvn-version: "mvn36"
-    maven-version: "mvn36"

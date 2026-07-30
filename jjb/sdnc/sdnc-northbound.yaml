@@ -60,19 +60,3 @@
     sonarcloud-java-version: openjdk21
     mvn-version: "mvn39"
     mvn-opts: "-Xmx1024m"
-
-- project:
-    name: sdnc-northbound-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: sdnc/northbound
-    project-name: "sdnc-northbound"
-    build-node: ubuntu2204-builder-4c-4g
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "sdnc-northbound-settings"
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

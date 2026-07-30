@@ -54,17 +54,3 @@
     mvn-version: "mvn36"
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
-
-- project:
-    name: aai-sparky-be-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "aai/sparky-be"
-    project-name: "aai-sparky-be"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "aai-sparky-be-settings"
-    mvn-version: "mvn36"
-    java-version: openjdk11

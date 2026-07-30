@@ -6,21 +6,6 @@
       - project-view
 
 - project:
-    name: cps-clm
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "cps"
-    project-name: "cps"
-    branch: "master"
-    mvn-settings: "cps-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
-
-- project:
     name: cps-java17
     java-version: openjdk17
     mvn-version: "mvn36"

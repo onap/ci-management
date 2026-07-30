@@ -94,17 +94,3 @@
       /bower_components_external/
       /src/test/
       /__test__/
-
-- project:
-    name: so-clm
-    java-version: openjdk17
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: so
-    project-name: "so"
-    build-node: ubuntu1804-docker-v1-8c-8g
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "so-settings"

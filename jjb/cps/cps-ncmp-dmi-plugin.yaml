@@ -74,21 +74,6 @@
     build-node: ubuntu2204-docker-8c-8g
 
 - project:
-    name: cps-ncmp-dmi-plugin-clm
-    java-version: openjdk21
-    mvn-version: mvn39
-    maven-version: mvn39
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: onap-
-    project: cps/ncmp-dmi-plugin
-    project-name: cps-ncmp-dmi-plugin
-    branch: master
-    mvn-settings: cps-ncmp-dmi-plugin-settings
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g
-
-- project:
     name: cps-ncmp-dmi-plugin-sonar
     java-version: openjdk21
     mvn-version: mvn39

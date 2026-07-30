@@ -111,19 +111,3 @@
     sonarcloud-java-version: openjdk21
     mvn-goals: "clean install"
     sonarcloud-qualitygate-wait: true
-
-- project:
-    name: policy-distribution-clm
-    project: policy/distribution
-    project-name: "policy-distribution"
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
-    mvn-settings: "{project-name}-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    java-version: openjdk21

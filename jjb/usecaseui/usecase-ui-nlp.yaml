@@ -47,17 +47,6 @@
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
 - project:
-    name: usecase-ui-nlp-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: usecase-ui/nlp
-    project-name: "usecase-ui-nlp"
-    build-node: ubuntu1804-builder-4c-4g
-    branch: "master"
-    mvn-settings: "usecase-ui-nlp-settings"
-
-- project:
     name: usecase-ui-nlp-project-view
     project-name: usecase-ui-nlp
     views:

@@ -44,17 +44,6 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
 
-- project:
-    name: dcaegen2-utils-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: dcaegen2/utils
-    build-node: ubuntu1804-docker-8c-8g
-    project-name: "dcaegen2-utils"
-    branch: "master"
-    mvn-settings: "dcaegen2-utils-settings"
-
 - _cbs_client_pypi_common: &cbs_client_pypi_common
     name: cbs-client-pypi-common
     # jenkins job prefix

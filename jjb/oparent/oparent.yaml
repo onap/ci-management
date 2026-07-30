@@ -28,13 +28,3 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu1804-builder-4c-4g
-
-- project:
-    name: oparent-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: oparent
-    project-name: "oparent"
-    branch: "master"
-    mvn-settings: "oparent-settings"

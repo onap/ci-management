@@ -54,17 +54,3 @@
     mvn-settings: "dcaegen2-collectors-hv-ves-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
-    name: dcaegen2-collectors-hv-ves-clm
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: dcaegen2/collectors/hv-ves
-    project-name: "dcaegen2-collectors-hv-ves"
-    stream:
-      - "master":
-          branch: "master"
-    build-node: ubuntu1804-docker-8c-8g
-    mvn-settings: "dcaegen2-collectors-hv-ves-settings"

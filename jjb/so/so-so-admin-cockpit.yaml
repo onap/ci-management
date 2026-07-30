@@ -81,17 +81,3 @@
       /bower_components_external/
       /src/test/
       /__test__/
-
-- project:
-    name: so-so-admin-cockpit-clm
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "so/so-admin-cockpit"
-    project-name: "so-so-admin-cockpit"
-    build-node: ubuntu1804-docker-v1-8c-8g
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "so-so-admin-cockpit-settings"

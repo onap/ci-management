@@ -60,17 +60,3 @@
     mvn-opts: "-Xmx1024m"
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
-
-- project:
-    name: sdc-sdc-workflow-designer-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: sdc/sdc-workflow-designer
-    project-name: "sdc-sdc-workflow-designer"
-    build-node: centos8-docker-4c-4g
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "sdc-sdc-workflow-designer-settings"
-    java-version: openjdk11

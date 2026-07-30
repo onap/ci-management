@@ -12,12 +12,6 @@
       - project-view
 
 - project:
-    name: sdc-clm-project-view
-    project-name: sdc-clm
-    views:
-      - project-view
-
-- project:
     name: sdc-project-view
     project-name: sdc
     views:
@@ -107,21 +101,3 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
     mvn-version: "mvn36"
-
-- project:
-    name: sdc-clm
-    jobs:
-      - gerrit-maven-clm:
-          build-timeout: 120
-          submodule-timeout: 30
-          mvn-params: "-P skip-integration-tests -Dnpm.registry=https://nexus3.onap.org/repository/npm.public/npm/-/"
-    nexus-iq-namespace: "onap-"
-    project: sdc
-    project-name: "sdc"
-    build-node: ubuntu2204-docker-8c-8g
-    stream:
-      - "master":
-          branch: "master"
-    mvn-version: "mvn36"
-    mvn-settings: "sdc-settings"
-    java-version: openjdk11

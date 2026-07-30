@@ -43,15 +43,3 @@
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
-
-- project:
-    name: aai-logging-service-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "aai/logging-service"
-    project-name: "aai-logging-service"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "aai-logging-service-settings"

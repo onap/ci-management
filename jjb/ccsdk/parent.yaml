@@ -47,19 +47,3 @@
       deployAtEnd=true
     files: "**"
     archive-artifacts: ""
-
-- project:
-    name: ccsdk-parent-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "ccsdk/parent"
-    project-name: "ccsdk-parent"
-    stream:
-      - "master":
-          branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    mvn-settings: "ccsdk-parent-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g

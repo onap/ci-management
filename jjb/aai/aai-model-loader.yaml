@@ -54,17 +54,3 @@
     mvn-version: "mvn36"
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
-
-- project:
-    name: aai-model-loader-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "aai/model-loader"
-    project-name: "aai-model-loader"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "aai-model-loader-settings"
-    mvn-version: "mvn36"
-    java-version: openjdk17

@@ -45,19 +45,3 @@
     build-node: ubuntu2204-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
-
-- project:
-    name: ccsdk-distribution-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: "ccsdk/distribution"
-    project-name: "ccsdk-distribution"
-    stream:
-      - "master":
-          branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    mvn-settings: "ccsdk-distribution-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    build-node: ubuntu2204-docker-8c-8g

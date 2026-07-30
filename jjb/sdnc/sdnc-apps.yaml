@@ -76,19 +76,3 @@
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
     maven-version: "mvn39"
-
-- project:
-    name: sdnc-apps-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: sdnc/apps
-    project-name: "sdnc-apps"
-    build-node: ubuntu2204-builder-4c-4g
-    stream:
-      - "master":
-          branch: "master"
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    mvn-settings: "sdnc-apps-settings"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"

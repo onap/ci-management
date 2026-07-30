@@ -50,17 +50,3 @@
     mvn-settings: "dcaegen2-services-mapper-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
-    name: dcaegen2-services-mapper-clm
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: dcaegen2/services/mapper
-    build-node: ubuntu1804-docker-8c-8g
-    project-name: "dcaegen2-services-mapper"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "dcaegen2-services-mapper-settings"

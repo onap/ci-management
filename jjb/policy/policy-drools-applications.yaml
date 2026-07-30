@@ -113,20 +113,3 @@
     mvn-goals: "clean install"
     java-opts: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
     sonarcloud-qualitygate-wait: true
-
-- project:
-    name: policy-drools-applications-clm
-    project: policy/drools-applications
-    project-name: "policy-drools-applications"
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
-    mvn-settings: "{project-name}-settings"
-    mvn-params: "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false"
-    mvn-opts: "--add-opens=java.base/java.util=ALL-UNNAMED"
-    java-version: openjdk21

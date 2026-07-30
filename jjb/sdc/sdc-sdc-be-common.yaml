@@ -48,15 +48,3 @@
     mvn-params: "-Dsonar.branch={branch}"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m"
-
-- project:
-    name: sdc-sdc-be-common-clm
-    jobs:
-      - gerrit-maven-clm
-    nexus-iq-namespace: "onap-"
-    project: sdc/sdc-be-common
-    project-name: "sdc-sdc-be-common"
-    stream:
-      - "master":
-          branch: "master"
-    mvn-settings: "sdc-sdc-be-common-settings"
