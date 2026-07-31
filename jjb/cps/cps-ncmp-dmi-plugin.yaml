@@ -49,8 +49,15 @@
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
     jobs:
-      - gerrit-maven-docker-verify:
-          container-public-registry: nexus3.onap.org:10001
+      # cps-ncmp-dmi-plugin-java21-maven-docker-verify-master-mvn39-openjdk21
+      # is retired: .github/workflows/gerrit-verify.yaml in the
+      # cps/ncmp-dmi-plugin repository now performs the Maven verify
+      # build for master and votes Verified back to Gerrit. The template
+      # ran 'clean install' with no -Pdocker, and the jib plugin sits in
+      # pluginManagement and the docker profile, so neither lane builds
+      # images on verify; the work is the same. The paris stream keeps
+      # its job, in the cps-ncmp-dmi-plugin-java17 project above,
+      # because the GitHub workflow exists only on master.
       - gerrit-maven-merge
       - gerrit-maven-stage:
           sign-artifacts: true
