@@ -46,7 +46,12 @@
     project-name: "cps"
     project: "cps"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      # cps-master-verify-java is retired: the GitHub Actions lane
+      # .github/workflows/gerrit-verify.yaml in the cps repository now
+      # performs the Maven verify build for master, and votes Verified
+      # back to Gerrit. Note the paris stream keeps its job, in the
+      # cps-java17 project above, because the GitHub workflow exists
+      # only on the master branch.
       - "{project-name}-{stream}-merge-java":
           docker-pom: "pom.xml"
           mvn-params: "-P cps-ncmp-docker"
