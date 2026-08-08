@@ -165,6 +165,6 @@
       - "master":
           branch: "master"
     mvn-settings: "policy-clamp-settings"
-    robot-options: ""
+    robot-options: "--local"
     functionality:
       - "clamp"
