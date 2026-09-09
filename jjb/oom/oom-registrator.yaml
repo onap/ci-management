@@ -4,7 +4,6 @@
     project-name: "oom-registrator"
     jobs:
       - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
           sign-artifacts: true
