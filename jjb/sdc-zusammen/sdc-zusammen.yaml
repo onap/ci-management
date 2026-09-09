@@ -1,0 +1,15 @@
+---
+- project:
+    name: sdc-zusammen-project-view
+    project-name: sdc-zusammen
+    views:
+      - project-view
+
+- project:
+    name: sdc-zusammen-info
+    project: sdc/zusammen
+    project-name: sdc-zusammen
+    build-node: centos8-builder-2c-1g
+    branch: master
+    jobs:
+      - gerrit-info-yaml-verify
