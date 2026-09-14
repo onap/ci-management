@@ -13,3 +13,40 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+- project:
+    name: sdc-zusammen
+    project-name: "sdc-zusammen"
+    project: "sdc/zusammen"
+    jobs:
+      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-merge-java"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          sbom-generator: true
+          build-node: ubuntu2204-docker-8c-8g
+          maven-versions-plugin: true
+      - "{project-name}-gerrit-release-jobs":
+          build-node: ubuntu2204-docker-8c-8g
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-zusammen-settings"
+    mvn-version: "mvn36"
+    java-version: openjdk11
+    files: "**"
+    archive-artifacts: ""
+    build-timeout: 60
+
+- project:
+    name: sdc-zusammen-clm
+    jobs:
+      - gerrit-maven-clm
+    nexus-iq-namespace: "onap-"
+    project: sdc/zusammen
+    project-name: "sdc-zusammen"
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-zusammen-settings"
+    java-version: openjdk11
