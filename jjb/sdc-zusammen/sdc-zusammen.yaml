@@ -13,3 +13,39 @@
     branch: master
     jobs:
       - gerrit-info-yaml-verify
+
+# Merge, stage and release only.
+#
+# The patchset verify lane and the Nexus IQ CLM scan run on GitHub
+# Actions instead; see sdc/zusammen change 147505, which adds
+# .github/workflows/gerrit-verify.yaml and gerrit-clm.yaml. These
+# three lanes stay on Jenkins only until java-workflows grows
+# equivalents.
+- project:
+    name: sdc-zusammen
+    project-name: "sdc-zusammen"
+    project: "sdc/zusammen"
+    jobs:
+      # mvn-params is set per job rather than for the project, because
+      # lf-maven-merge defaults it to "-Dmerge" while lf-maven-stage
+      # defaults it to the empty string; one project-level value would
+      # silently drop -Dmerge from the merge lane.
+      - "{project-name}-{stream}-merge-java":
+          mvn-params: "-Dmerge -Dgpg.skip -Djacoco.skip=true"
+      - gerrit-maven-stage:
+          sign-artifacts: true
+          sbom-generator: true
+          build-node: ubuntu2204-docker-8c-8g
+          maven-versions-plugin: true
+          mvn-params: "-Dgpg.skip -Djacoco.skip=true"
+      - "{project-name}-gerrit-release-jobs":
+          build-node: ubuntu2204-docker-8c-8g
+    stream:
+      - "master":
+          branch: "master"
+    mvn-settings: "sdc-zusammen-settings"
+    mvn-version: "mvn36"
+    java-version: openjdk11
+    files: "**"
+    archive-artifacts: ""
+    build-timeout: 60
