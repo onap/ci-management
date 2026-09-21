@@ -32,14 +32,20 @@
       # silently drop -Dmerge from the merge lane.
       - "{project-name}-{stream}-merge-java":
           mvn-params: "-Dmerge -Dgpg.skip -Djacoco.skip=true"
+      # ubuntu2204 carries a JRE, not a JDK, at the openjdk11 path, so
+      # update-java-alternatives leaves javac and javadoc unavailable
+      # there. maven-compiler-plugin survives that, because it compiles
+      # in process through ToolProvider, but maven-javadoc-plugin forks
+      # the executable and fails. The lane needs a centos8 node for as
+      # long as java-version stays openjdk11.
       - gerrit-maven-stage:
           sign-artifacts: true
           sbom-generator: true
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos8-docker-4c-4g
           maven-versions-plugin: true
           mvn-params: "-Dgpg.skip -Djacoco.skip=true"
       - "{project-name}-gerrit-release-jobs":
-          build-node: ubuntu2204-docker-8c-8g
+          build-node: centos7-docker-2c-1g
     stream:
       - "master":
           branch: "master"
