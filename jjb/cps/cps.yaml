@@ -75,23 +75,3 @@
     files: "**"
     archive-artifacts: ""
     build-node: ubuntu2204-docker-8c-8g
-
-- project:
-    name: cps-sonar
-    java-version: openjdk21
-    mvn-version: "mvn39"
-    maven-version: "mvn39"
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonarcloud-java-version: openjdk21
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    cron: "@daily"
-    build-node: ubuntu2204-docker-8c-8g
-    project: "cps"
-    project-name: "cps"
-    branch: "master"
-    mvn-settings: "cps-settings"
-    mvn-goals: "clean install"
