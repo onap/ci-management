@@ -30,8 +30,11 @@
       # lf-maven-merge defaults it to "-Dmerge" while lf-maven-stage
       # defaults it to the empty string; one project-level value would
       # silently drop -Dmerge from the merge lane.
+      # This template reads maven-version, not the mvn-version the
+      # stage lane uses, and would otherwise get the mvn33 default.
       - "{project-name}-{stream}-merge-java":
           mvn-params: "-Dmerge -Dgpg.skip -Djacoco.skip=true"
+          maven-version: "mvn36"
       # ubuntu2204 carries a JRE, not a JDK, at the openjdk11 path, so
       # update-java-alternatives leaves javac and javadoc unavailable
       # there. maven-compiler-plugin survives that, because it compiles
