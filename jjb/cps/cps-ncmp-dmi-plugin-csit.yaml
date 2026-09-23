@@ -1,27 +1,5 @@
 ---
 - project:
-    name: cps-ncmp-dmi-plugin-csit-java17
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    jobs:
-      - "{project-name}-review-verification-maven-{stream}":
-          mvn-goals: clean install
-          mvn-params: "-Dmaven.test.skip=true -Pdocker"
-      - "{project-name}-merge-verification-maven-{stream}":
-          mvn-goals: clean install
-          mvn-params: "-Dmaven.test.skip=true -Pdocker"
-    project-name: "cps-ncmp-dmi-plugin"
-    recipients: "toine.siebelink@est.tech"
-    # project name in gerrit
-    project: "cps/ncmp-dmi-plugin"
-    stream:
-      - "paris":
-          branch: "paris"
-    mvn-settings: "cps-ncmp-dmi-plugin-settings"
-    robot-options: ""
-
-- project:
     name: cps-ncmp-dmi-plugin-csit-java21
     java-version: openjdk21
     mvn-version: "mvn39"
