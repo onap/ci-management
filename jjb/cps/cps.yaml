@@ -6,39 +6,6 @@
       - project-view
 
 - project:
-    name: cps-java17
-    java-version: openjdk17
-    mvn-version: "mvn36"
-    maven-version: "mvn36"
-    project-name: "cps"
-    project: "cps"
-    jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java":
-          docker-pom: "pom.xml"
-          mvn-params: "-P cps-ncmp-docker"
-      - gerrit-maven-stage:
-          sign-artifacts: true
-          build-node: centos8-docker-8c-8g
-          maven-versions-plugin: true
-          sbom-generator: true
-      - gerrit-maven-docker-stage:
-          build-node: centos8-docker-8c-8g
-          maven-versions-plugin: true
-          mvn-params: "-P cps-ncmp-docker"
-          container-public-registry: "nexus3.onap.org:10001"
-          container-staging-registry: "nexus3.onap.org:10003"
-      - "{project-name}-gerrit-release-jobs":
-          build-node: centos7-docker-2c-1g
-    stream:
-      - "paris":
-          branch: "paris"
-    mvn-settings: "cps-settings"
-    files: "**"
-    archive-artifacts: ""
-    build-node: centos8-docker-8c-8g
-
-- project:
     name: cps-java21
     java-version: openjdk21
     mvn-version: "mvn39"
@@ -49,9 +16,7 @@
       # cps-master-verify-java is retired: the GitHub Actions lane
       # .github/workflows/gerrit-verify.yaml in the cps repository now
       # performs the Maven verify build for master, and votes Verified
-      # back to Gerrit. Note the paris stream keeps its job, in the
-      # cps-java17 project above, because the GitHub workflow exists
-      # only on the master branch.
+      # back to Gerrit.
       - "{project-name}-{stream}-merge-java":
           docker-pom: "pom.xml"
           mvn-params: "-P cps-ncmp-docker"
