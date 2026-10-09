@@ -36,21 +36,3 @@
     nexus-snapshot-repo: "snapshots"
     mvn-snapshot-id: "ecomp-snapshots"
 
-- project:
-    name: aai-model-loader-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-builder-4c-4g
-    project: "aai/model-loader"
-    project-name: "aai-model-loader"
-    branch: "master"
-    mvn-settings: "aai-model-loader-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-    mvn-version: "mvn36"
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
