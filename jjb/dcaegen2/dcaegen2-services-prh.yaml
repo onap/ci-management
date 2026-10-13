@@ -31,21 +31,3 @@
     build-node: "ubuntu1804-docker-8c-8g"
     maven-deploy-properties: |
       deployAtEnd=true
-
-- project:
-    name: dcaegen2-services-prh-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-8c-8g
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    project: "dcaegen2/services/prh"
-    project-name: "dcaegen2-services-prh"
-    branch: "master"
-    mvn-settings: "dcaegen2-services-prh-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
