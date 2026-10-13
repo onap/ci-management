@@ -41,22 +41,3 @@
     mvn-profile: docker
     build-node: centos8-docker-4c-4g
     maven-version: "mvn36"
-
-- project:
-    name: sdc-sdc-workflow-designer-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-4c-4g
-    project: "sdc/sdc-workflow-designer"
-    project-name: "sdc-sdc-workflow-designer"
-    branch: "master"
-    mvn-settings: "sdc-sdc-workflow-designer-settings"
-    mvn-params: "-Djacoco.skip=false -Dsonar.branch={branch}"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m"
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21

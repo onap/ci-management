@@ -40,24 +40,6 @@
     nexus-snapshot-repo: "snapshots"
 
 - project:
-    name: dcaegen2-collectors-ves-sonar
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-8c-8g
-    project: "dcaegen2/collectors/ves"
-    project-name: "dcaegen2-collectors-ves"
-    branch: "master"
-    mvn-settings: "dcaegen2-collectors-ves-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
     name: dcaegen2-collectors-ves-clm
     java-version: openjdk11
     jobs:
