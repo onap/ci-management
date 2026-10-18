@@ -3,8 +3,6 @@
     name: ccsdk-cds
     project-name: "ccsdk-cds"
     jobs:
-      - gerrit-maven-verify:
-          mvn-params: "-Ddocker.skip.push=true -Pdocker"
       - gerrit-maven-merge:
           cron: "@daily"
           mvn-params: "-Dmaven.test.skip=true"
@@ -44,6 +42,26 @@
     build-node: ubuntu2204-docker-8c-8g
     mvn-snapshot-id: "ecomp-snapshots"
     nexus-snapshot-repo: "snapshots"
+
+# master is verified by the GitHub Actions workflow in ccsdk/cds
+- project:
+    name: ccsdk-cds-release-verify
+    project-name: "ccsdk-cds"
+    jobs:
+      - gerrit-maven-verify:
+          mvn-params: "-Ddocker.skip.push=true -Pdocker"
+    project: "ccsdk/cds"
+    stream:
+      - "quebec":
+          branch: "quebec"
+      - "paris":
+          branch: "paris"
+    java-version: openjdk21
+    mvn-version: "mvn39"
+    mvn-settings: "ccsdk-cds-settings"
+    files: "**"
+    archive-artifacts: ""
+    build-node: ubuntu2204-docker-8c-8g
 
 - project:
     name: ccsdk-cds-sonar
