@@ -17,9 +17,12 @@
       # .github/workflows/gerrit-verify.yaml in the cps repository now
       # performs the Maven verify build for master, and votes Verified
       # back to Gerrit.
-      - "{project-name}-{stream}-merge-java":
-          docker-pom: "pom.xml"
-          mvn-params: "-P cps-ncmp-docker"
+      #
+      # cps-master-merge-java is retired: .github/workflows/gerrit-merge.yaml
+      # in the cps repository now builds master on each merge and
+      # publishes its Maven SNAPSHOTs to Nexus. That lane does not push
+      # the per-merge snapshot container images the Jenkins job pushed
+      # through Jib; a container lane is to follow.
       - gerrit-maven-stage:
           sign-artifacts: true
           build-node: ubuntu2204-docker-8c-8g
