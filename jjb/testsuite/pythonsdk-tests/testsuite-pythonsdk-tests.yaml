@@ -27,6 +27,10 @@
           tox-dir: "."
           tox-envs: "rst"
           pattern: "**/*.rst"
+      - "tox":
+          tox-dir: "."
+          tox-envs: "json,yaml,py"
+          pattern: "tox.ini"
     stream:
       - "master":
           branch: "master"

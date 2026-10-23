@@ -23,6 +23,10 @@
           tox-dir: "."
           tox-envs: "md"
           pattern: "**/*.md"
+      - "tox":
+          tox-dir: "."
+          tox-envs: "json,yaml,md"
+          pattern: "tox.ini"
     stream:
       - "master":
           branch: "master"
