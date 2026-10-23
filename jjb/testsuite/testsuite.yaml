@@ -33,6 +33,7 @@
     project: "testsuite"
     project-name: "testsuite"
     python-version: python3
+    build-node: ubuntu2204-docker-4c-4g
     jobs:
       - integration-linters
     subproject:

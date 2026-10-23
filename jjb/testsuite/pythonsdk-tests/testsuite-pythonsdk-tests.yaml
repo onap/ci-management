@@ -4,6 +4,7 @@
     project: "testsuite/pythonsdk-tests"
     project-name: "testsuite-pythonsdk-tests"
     python-version: python3
+    build-node: ubuntu2204-docker-4c-4g
     jobs:
       - integration-linters
     subproject:

@@ -4,6 +4,7 @@
     project: integration/xtesting
     project-name: integration-xtesting
     python-version: python3
+    build-node: ubuntu2204-docker-4c-4g
     jobs:
       - integration-linters
     subproject:
