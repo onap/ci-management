@@ -4,9 +4,9 @@
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
     python-version: python3
-    build-node: ubuntu1804-docker-8c-8g
+    build-node: ubuntu2204-docker-8c-8g
     tox-dir: "."
-    tox-envs: "py38,py39"
+    tox-envs: "py311"
     jobs:
       - integration-linters
       - gerrit-tox-verify
@@ -14,23 +14,10 @@
       - "master":
           branch: "master"
     subproject:
-      - "python3.8":
+      - "python3.11":
           tox-dir: "."
-          tox-envs: "py38"
+          tox-envs: "py311"
           pattern: "**/*.py"
-      - "python3.9":
-          tox-dir: "."
-          tox-envs: "py39"
-          pattern: "**/*.py"
-      # Disable due to https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/IT-25247
-      # - 'python3.10':
-      #     tox-dir: '.'
-      #     tox-envs: 'py310'
-      #     pattern: '**/*.py'
-      # - 'python3.11':
-      #     tox-dir: '.'
-      #     tox-envs: 'py311'
-      #     pattern: '**/*.py'
       - "pylint":
           tox-dir: "."
           tox-envs: "pylint"
@@ -54,6 +41,7 @@
     name: integration-python-onapsdk-pypi-build
     project: integration/python-onapsdk
     project-name: integration-python-onapsdk
+    build-node: ubuntu2204-docker-8c-8g
     stream:
       - "master":
           branch: "master"
