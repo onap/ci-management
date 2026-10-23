@@ -3,7 +3,7 @@
     name: multicloud-k8s
     project-name: "multicloud-k8s"
     path: "src"
-    golangver: "golang114"
+    golangver: "golang123"
     jobs:
       - "{project-name}-{stream}-{subproject}-verify-python"
       - "{project-name}-{stream}-merge-golang":
