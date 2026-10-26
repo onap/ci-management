@@ -13,13 +13,13 @@
       - gerrit-maven-merge:
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
+          build-node: ubuntu2204-docker-8c-8g
           maven-versions-plugin: true
           sbom-generator: true
       - gerrit-maven-docker-stage:
           sbom-generator: true
           mvn-params: "-f sparkybe-onap-application/pom.xml -P docker -B -Dmaven.test.skip=true"
-          build-node: ubuntu1804-docker-8c-8g
+          build-node: ubuntu2204-docker-8c-8g
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
       - "{project-name}-gerrit-release-jobs":
@@ -32,7 +32,8 @@
     files: "**"
     archive-artifacts: ""
     mvn-version: "mvn36"
-    java-version: openjdk11
+    java-version: openjdk21
+    build-node: ubuntu2204-builder-4c-4g
     nexus-snapshot-repo: "snapshots"
     mvn-snapshot-id: "ecomp-snapshots"
 
