@@ -13,7 +13,7 @@
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
-          build-node: centos8-docker-4c-4g
+          build-node: ubuntu2204-docker-4c-4g
           maven-versions-plugin: true
           sbom-generator: true
       - "{project-name}-gerrit-release-jobs":
@@ -25,6 +25,10 @@
     mvn-settings: "aai-rest-client-settings"
     files: "**"
     archive-artifacts: ""
+    mvn-version: "mvn36"
+    maven-version: "mvn36"
+    java-version: openjdk21
+    build-node: ubuntu2204-builder-4c-4g
 
 - project:
     name: aai-rest-client-sonar
@@ -35,6 +39,7 @@
     sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     sonar-mvn-goal: "{sonar_mvn_goal}"
     build-node: ubuntu2204-builder-4c-4g
+    mvn-version: "mvn36"
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
     project: "aai/rest-client"
