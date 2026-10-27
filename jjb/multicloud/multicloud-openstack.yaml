@@ -44,25 +44,6 @@
           pom: "fcaps/pom.xml"
 
 - project:
-    name: multicloud-openstack-windriver-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-builder-4c-4g
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    project: "multicloud/openstack"
-    project-name: "multicloud-openstack-windriver"
-    branch: "master"
-    mvn-params: "-f windriver/pom.xml"
-    mvn-settings: "multicloud-openstack-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
     name: multicloud-openstack-pike-sonar
     jobs:
       - gerrit-maven-sonar
@@ -77,25 +58,6 @@
     project-name: "multicloud-openstack-pike"
     branch: "master"
     mvn-params: "-f pike/pom.xml"
-    mvn-settings: "multicloud-openstack-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
-    name: multicloud-openstack-starlingx-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-builder-4c-4g
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    project: "multicloud/openstack"
-    project-name: "multicloud-openstack-starlingx"
-    branch: "master"
-    mvn-params: "-f starlingx/pom.xml"
     mvn-settings: "multicloud-openstack-settings"
     mvn-goals: "clean install"
     mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"

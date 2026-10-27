@@ -41,9 +41,6 @@
     nexus-iq-namespace: "onap-"
     tox-dir: "{src-dir}"
     tox-envs: "py3"
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     python-version: python3
     wss-product-name: "{project-name}"
     docker-root: "{src-dir}"
@@ -66,11 +63,6 @@
             docker tag $DNAME:$DOCKER_IMAGE_TAG $DNAME:latest
             docker push $DNAME:$DOCKER_IMAGE_TAG2
             docker push $DNAME:latest
-          stream: master
-          branch: master
-      - gerrit-tox-sonar:
-          # workaround because gerrit-tox-sonar doesn't support mvn-params/opts
-          sonar-mvn-goal: "-f {src-dir}/pom.xml sonar:sonar"
           stream: master
           branch: master
 
