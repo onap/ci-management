@@ -5,6 +5,8 @@
     #
 
     name: "{project-name}-{stream}-build-and-upload"
+    disable-job: false
+    disabled: "{disable-job}"
 
     pre_script: ""
     post_script: ""
