@@ -1,7 +1,8 @@
 ---
 - job-template:
     name: "{project-name}-{stream}-verify-csit-{functionality}"
-    disabled: false
+    disable-job: false
+    disabled: "{disable-job}"
 
     project-type: freestyle
     build-node: "ubuntu1804-docker-8c-8g"
@@ -64,7 +65,8 @@
 
 - job-template:
     name: "{project-name}-{stream}-csit-{functionality}"
-    disabled: false
+    disable-job: false
+    disabled: "{disable-job}"
 
     project-type: freestyle
     build-node: "ubuntu1804-docker-8c-8g"
@@ -156,7 +158,8 @@
     submodule-timeout: 10
     submodule-disable: false
 
-    disabled: false
+    disable-job: false
+    disabled: "{disable-job}"
     archive-artifacts: >
       **/*.log
       **/hs_err_*.log

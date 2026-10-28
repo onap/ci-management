@@ -16,6 +16,8 @@
     #                trigger the job
 
     name: "{project-name}-{stream}-{subproject}-verify-python"
+    disable-job: false
+    disabled: "{disable-job}"
     path: "$WORKSPACE"
 
     project-type: freestyle

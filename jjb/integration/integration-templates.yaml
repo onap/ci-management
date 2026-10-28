@@ -54,6 +54,8 @@
     #     pattern:        List of file patterns to scan
 
     name: "{project-name}-{stream}-{subproject}-lint"
+    disable-job: false
+    disabled: "{disable-job}"
     id: integration-linters
     project-type: freestyle
     description: "Job intended for running linters with Tox and Coala"
