@@ -1,6 +1,7 @@
 ---
 - project:
     name: "integration-onap-components-simulators-docker"
+    disable-job: true
     jobs:
       - gerrit-docker-verify:
           project-name: "integration-onap-component-simulators-aai"
@@ -35,6 +36,7 @@
           docker-root: ./mock-dmaap
           docker-name: "onap/onap-component-mock-dmaap"
       - gerrit-docker-verify:
+          disable-job: false
           project-name: "integration-onap-component-simulators-msb-k8s"
           docker-root: ./mock-msb-k8s
           docker-name: "onap/onap-component-mock-k8s"

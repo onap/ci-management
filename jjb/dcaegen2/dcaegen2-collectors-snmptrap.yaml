@@ -1,6 +1,7 @@
 ---
 - project:
     name: dcaegen2-collectors-snmptrap
+    disable-job: true
     project-name: "dcaegen2-collectors-snmptrap"
     project: "dcaegen2/collectors/snmptrap"
     python-version: python3
@@ -11,7 +12,10 @@
     build-node: ubuntu1804-docker-8c-8g
     mvn-settings: "dcaegen2-collectors-snmptrap-settings"
     jobs:
-      - "{project-name}-python-jobs":
+      - gerrit-tox-verify:
+          disable-job: false
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-tox-merge:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - "{project-name}-{stream}-release-version-java-daily"
       - "{project-name}-gerrit-release-jobs":
@@ -30,6 +34,7 @@
 
 - project:
     name: dcaegen2-collectors-snmptrap-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

@@ -1,9 +1,11 @@
 ---
 - project:
     name: oom-registrator
+    disable-job: true
     project-name: "oom-registrator"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
@@ -32,6 +34,7 @@
 
 - project:
     name: oom-registrator-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

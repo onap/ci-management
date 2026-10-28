@@ -7,9 +7,11 @@
 
 - project:
     name: sdc-sdc-be-common
+    disable-job: true
     project-name: "sdc-sdc-be-common"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -32,6 +34,7 @@
 
 - project:
     name: sdc-sdc-be-common-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

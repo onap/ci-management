@@ -1,9 +1,13 @@
 ---
 - project:
     name: dcaegen2-services-heartbeat
+    disable-job: true
     project-name: "dcaegen2-services-heartbeat"
     jobs:
-      - "{project-name}-python-jobs":
+      - gerrit-tox-verify:
+          disable-job: false
+          pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
+      - gerrit-tox-merge:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - "{project-name}-{stream}-release-version-java-daily"
       - "{project-name}-gerrit-release-jobs":
@@ -25,6 +29,7 @@
 
 - project:
     name: dcaegen2-services-heartbeat-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -43,6 +48,7 @@
 
 - project:
     name: dcaegen2-services-heartbeat-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

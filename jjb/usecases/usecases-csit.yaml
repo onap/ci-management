@@ -1,6 +1,7 @@
 ---
 - project:
     name: usecases-pnf-sw-upgrade
+    disable-job: true
     jobs:
       - "{project-name}-{stream}-verify-csit-{functionality}"
       - "{project-name}-{stream}-csit-{functionality}"
@@ -17,6 +18,7 @@
 
 - project:
     name: usecases-config-over-netconf
+    disable-job: true
     jobs:
       - "{project-name}-{stream}-verify-csit-{functionality}"
       - "{project-name}-{stream}-csit-{functionality}"

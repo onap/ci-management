@@ -7,9 +7,11 @@
 
 - project:
     name: aai-graphgraph-master
+    disable-job: true
     project-name: "aai-graphgraph"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -34,6 +36,7 @@
 
 - project:
     name: aai-graphgraph-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -52,6 +55,7 @@
 
 - project:
     name: aai-graphgraph-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

@@ -1,6 +1,7 @@
 ---
 - project:
     name: integration-5G-core-nf-simulator
+    disable-job: true
     project-name: integration-5G-core-nf-simulator
     project: integration/simulators/5G-core-nf-simulator
     stream:
@@ -28,6 +29,7 @@
 
 - project:
     name: integration-5G-core-nf-simulator-linters
+    disable-job: true
     project: integration/simulators/5G-core-nf-simulator
     project-name: integration-5G-core-nf-simulator
     python-version: python3
@@ -35,6 +37,7 @@
       - integration-linters
     subproject:
       - "yaml":
+          disable-job: false
           tox-dir: "."
           tox-envs: "yaml"
           pattern: "**/*.yaml"

@@ -1,6 +1,7 @@
 ---
 - project:
     name: multicloud-openstack-vmware-python
+    disable-job: true
     project-name: "multicloud-openstack-vmware"
     project: "multicloud/openstack/vmware"
     stream:

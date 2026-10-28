@@ -1,10 +1,12 @@
 ---
 - project:
     name: integration-simulators-nf-simulator-netconf-server
+    disable-job: true
     project-name: "integration-simulators-nf-simulator-netconf-server"
     python-version: python3.8
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -34,6 +36,7 @@
 
 - project:
     name: integration-simulators-nf-simulator-netconf-server-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

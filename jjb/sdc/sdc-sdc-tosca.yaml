@@ -8,9 +8,11 @@
 
 - project:
     name: sdc-sdc-tosca
+    disable-job: true
     project-name: "sdc-sdc-tosca"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -35,6 +37,7 @@
 
 - project:
     name: sdc-sdc-tosca-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -54,6 +57,7 @@
 
 - project:
     name: sdc-sdc-tosca-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

@@ -1,10 +1,12 @@
 ---
 - project:
     name: dcaegen2-services-mapper
+    disable-job: true
     project-name: "dcaegen2-services-mapper"
     java-version: openjdk11
     jobs:
       - gerrit-maven-verify:
+          disable-job: false
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
       - gerrit-maven-merge
       - gerrit-maven-stage:
@@ -35,6 +37,7 @@
 
 - project:
     name: dcaegen2-services-mapper-sonar
+    disable-job: true
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
     jobs:

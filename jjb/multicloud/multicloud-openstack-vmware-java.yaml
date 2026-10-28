@@ -1,6 +1,7 @@
 ---
 - project:
     name: multicloud-openstack-vmware-java
+    disable-job: true
     project-name: "multicloud-openstack-vmware"
     project: "multicloud/openstack/vmware"
     stream:
@@ -25,7 +26,8 @@
           maven-versions-plugin: true
           container-public-registry: "nexus3.onap.org:10001"
           container-staging-registry: "nexus3.onap.org:10003"
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - "{project-name}-{stream}-{subproject}-verify-java"
       - "{project-name}-{stream}-{subproject}-merge-java"
@@ -38,6 +40,7 @@
 
 - project:
     name: multicloud-openstack-vmware-java-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

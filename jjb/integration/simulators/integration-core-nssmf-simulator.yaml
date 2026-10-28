@@ -1,6 +1,7 @@
 ---
 - project:
     name: integration-simulators-core-nssmf-simulator
+    disable-job: true
     project: integration/simulators/core-nssmf-simulator
     project-name: integration-simulators-core-nssmf-simulator
     stream:
@@ -14,6 +15,7 @@
     build-node: ubuntu1804-docker-8c-8g
     jobs:
       - "{project-name}-{stream}-verify-java":
+          disable-job: false
           mvn-goals: "clean install"
       - "{project-name}-{stream}-merge-java":
           mvn-goals: "clean deploy"

@@ -1,10 +1,12 @@
 ---
 - project:
     name: integration-simulators-nf-simulator-avcn-manager
+    disable-job: true
     project-name: "integration-simulators-nf-simulator-avcn-manager"
     java-version: openjdk11
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -34,6 +36,7 @@
 
 - project:
     name: integration-simulators-nf-simulator-avcn-manager-sonar
+    disable-job: true
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
     jobs:

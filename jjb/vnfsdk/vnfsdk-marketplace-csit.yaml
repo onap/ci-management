@@ -1,6 +1,7 @@
 ---
 - project:
     name: vnfsdk-marketplace-csit
+    disable-job: true
     jobs:
       - "{project-name}-{stream}-verify-csit-{functionality}"
       - "{project-name}-{stream}-csit-{functionality}"
