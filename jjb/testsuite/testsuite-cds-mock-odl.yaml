@@ -38,26 +38,3 @@
     stream:
       - "master":
           branch: "master"
-
-- project:
-    name: "testsuite-cds-mock-odl-docker"
-    jobs:
-      - gerrit-docker-verify:
-          project-name: "testsuite-cds-mock-odl"
-          docker-root: .
-          docker-name: "onap/cds-mock-odl"
-          docker-build-args: "-f ./docker/Dockerfile"
-      - gerrit-docker-merge:
-          project-name: "testsuite-cds-mock-odl"
-          docker-root: .
-          docker-name: "onap/cds-mock-odl"
-          docker-build-args: "-f ./docker/Dockerfile"
-    project: "testsuite/cds-modk-odl"
-    stream:
-      - "master":
-          branch: "master"
-          files: ""
-    docker-root: "$WORKSPACE"
-    mvn-settings: "testsuite-cds-mock-odl-settings"
-    build-node: ubuntu1804-docker-8c-8g
-    container-tag-method: stream
