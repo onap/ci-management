@@ -1,6 +1,7 @@
 ---
 - project:
     name: integration-docker-onap-python-linters
+    disable-job: true
     project: integration/docker/onap-python
     project-name: integration-docker-onap-python
     python-version: python3
@@ -8,6 +9,7 @@
       - integration-linters
     subproject:
       - "yaml":
+          disable-job: false
           tox-dir: "."
           tox-envs: "yaml"
           pattern: "**/*.yaml"
@@ -29,6 +31,7 @@
 
 - project:
     name: integration-docker-onap-python-release
+    disable-job: true
     project-name: "integration-docker-onap-python"
     project: "integration/docker/onap-python"
     mvn-settings: "integration-settings"
@@ -38,6 +41,7 @@
 
 - project:
     name: "integration-docker-onap-python-docker"
+    disable-job: true
     jobs:
       - gerrit-docker-verify
       - gerrit-docker-merge

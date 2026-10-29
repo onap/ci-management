@@ -1,6 +1,7 @@
 ---
 - project:
     name: dcaegen2-services-pm-mapper
+    disable-job: true
     # job template iterators
     project-name: "dcaegen2-services-pm-mapper"
     stream:
@@ -19,6 +20,7 @@
     build-node: ubuntu1804-docker-8c-8g
     jobs:
       - gerrit-maven-verify:
+          disable-job: false
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
           mvn-goals: "clean install docker:build"
       - gerrit-maven-merge:
@@ -38,6 +40,7 @@
 
 - project:
     name: dcaegen2-services-pm-mapper-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -56,6 +59,7 @@
 
 - project:
     name: dcaegen2-services-pm-mapper-clm
+    disable-job: true
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

@@ -7,9 +7,11 @@
 
 - project:
     name: oparent
+    disable-job: true
     project-name: "oparent"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true

@@ -1,12 +1,14 @@
 ---
 - project:
     name: vnfsdk-pkgtools
+    disable-job: true
     project-name: "vnfsdk-pkgtools"
     python-version: python3
     tox-dir: "."
     tox-envs: ""
     subproject:
       - pkgtools:
+          disable-job: false
           path: "."
           pattern: "**"
     project: "vnfsdk/pkgtools"
@@ -22,6 +24,7 @@
 
 - project:
     name: vnfsdk-pkgtools-tox-sonar
+    disable-job: true
     jobs:
       - gerrit-tox-sonar
     build-node: ubuntu1804-builder-4c-4g

@@ -1,9 +1,11 @@
 ---
 - project:
     name: sdc-sdc-pubsub
+    disable-job: true
     project-name: "sdc-sdc-pubsub"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
     project: "sdc/sdc-pubsub"
     stream:
@@ -19,6 +21,7 @@
 
 - project:
     name: sdc-sdc-pubsub-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

@@ -1,6 +1,7 @@
 ---
 - project:
     name: offline-installer
+    disable-job: true
     project-name: "offline-installer"
     build-node: "ubuntu1804-docker-8c-8g"
     offline_review_bootstrap: !include-raw-escape: offline-installer-review-bootstrap.sh
@@ -13,10 +14,12 @@
 
     jobs:
       - "{project-name}-{stream}-review":
+          disable-job: false
           build_script: "{offline_review_bootstrap}"
 
 - project:
     name: offline-installer-linters
+    disable-job: true
     project: oom/offline-installer
     project-name: offline-installer
     python-version: python3
@@ -33,6 +36,7 @@
 
 - project:
     name: offline-installer-pytest
+    disable-job: true
     project: oom/offline-installer
     project-name: offline-installer
     build-node: ubuntu1804-docker-8c-8g

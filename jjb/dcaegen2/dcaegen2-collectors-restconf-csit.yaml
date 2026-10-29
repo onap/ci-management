@@ -1,6 +1,7 @@
 ---
 - project:
     name: dcaegen2-collectors-restconf-csit
+    disable-job: true
     jobs:
       - "{project-name}-{stream}-verify-csit-{functionality}"
       - "{project-name}-{stream}-csit-{functionality}"

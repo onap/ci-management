@@ -1,13 +1,15 @@
 ---
 - project:
     name: dcaegen2-utils
+    disable-job: true
     project-name: "dcaegen2-utils"
     python-version: python3
 
     jobs:
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - "{project-name}-{stream}-release-version-java-daily"
     project: "dcaegen2/utils"
@@ -28,6 +30,7 @@
 
 - project:
     name: dcaegen2-utils-sonar
+    disable-job: true
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true
@@ -61,6 +64,7 @@
 
 - project:
     name: dcaegen2-platform-cbs-client-pypi-build
+    disable-job: true
     <<: *cbs_client_pypi_common
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
@@ -72,6 +76,7 @@
 
 - project:
     name: dcaegen2-platform-cbs-client-pypi-release
+    disable-job: true
     <<: *cbs_client_pypi_common
     jobs:
       - gerrit-pypi-release-verify

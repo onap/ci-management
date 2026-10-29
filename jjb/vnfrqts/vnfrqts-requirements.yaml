@@ -1,6 +1,7 @@
 ---
 - project:
     name: vnfrqts-requirements-upload-json
+    disable-job: true
     project: "vnfrqts/requirements"
     project-name: "vnfrqts-requirements"
     mvn-settings: "vnfrqts-requirements-settings"

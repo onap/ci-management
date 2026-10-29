@@ -20,6 +20,7 @@
 
 - project:
     name: integration-simulators-nf-simulator-sonar
+    disable-job: true
     jobs:
       - gerrit-tox-sonar
     build-node: ubuntu1804-builder-4c-4g

@@ -1,9 +1,11 @@
 ---
 - project:
     name: vnfsdk-lctest
+    disable-job: true
     project: "vnfsdk/lctest"
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
     project-name: "vnfsdk-lctest"
     stream:

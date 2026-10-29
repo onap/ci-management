@@ -7,6 +7,7 @@
 
 - project:
     name: integration-ietf-actn-tools-linters
+    disable-job: true
     project: integration/ietf-actn-tools
     project-name: integration-ietf-actn-tools
     python-version: python3
@@ -14,6 +15,7 @@
       - integration-linters
     subproject:
       - "yaml":
+          disable-job: false
           tox-dir: "."
           tox-envs: "yaml"
           pattern: "**/*.yaml"

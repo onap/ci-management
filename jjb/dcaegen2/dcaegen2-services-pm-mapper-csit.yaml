@@ -1,6 +1,7 @@
 ---
 - project:
     name: dcaegen2-services-pm-mapper-csit
+    disable-job: true
     jobs:
       - "{project-name}-review-verification-maven-{stream}":
           mvn-goals: clean install docker:build

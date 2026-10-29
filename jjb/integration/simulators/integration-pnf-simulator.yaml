@@ -1,6 +1,7 @@
 ---
 - project:
     name: integration-simulators-pnf-simulator
+    disable-job: true
     project-name: integration-pnf-simulator
     stream:
       - "master":
@@ -33,6 +34,7 @@
 
 - project:
     name: integration-simulators-pnf-simulator-sonar
+    disable-job: true
     java-version: openjdk21
     sonarcloud-java-version: openjdk21
     jobs:
@@ -67,6 +69,7 @@
 
 - project:
     name: integration-simulators-pnf-simulator-linters
+    disable-job: true
     project: integration/simulators/pnf-simulator
     project-name: integration-pnf-simulator
     python-version: python3

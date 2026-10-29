@@ -1,6 +1,7 @@
 ---
 - project:
     name: vfc-nfvo-db
+    disable-job: true
     project: "vfc/nfvo/db"
     project-name: "vfc-nfvo-db"
     mvn-settings: "vfc-nfvo-db-settings"
@@ -9,7 +10,8 @@
           branch: "master"
     build-node: ubuntu1804-builder-4c-4g
     jobs:
-      - "{project-name}-{stream}-verify-java"
+      - "{project-name}-{stream}-verify-java":
+          disable-job: false
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sbom-generator: true
