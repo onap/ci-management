@@ -29,22 +29,3 @@
     maven-version: "mvn36"
     java-version: openjdk21
     build-node: ubuntu2204-builder-4c-4g
-
-- project:
-    name: aai-rest-client-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-builder-4c-4g
-    mvn-version: "mvn36"
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    project: "aai/rest-client"
-    project-name: "aai-rest-client"
-    branch: "master"
-    mvn-settings: "aai-rest-client-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
