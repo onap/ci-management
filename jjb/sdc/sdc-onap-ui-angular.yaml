@@ -9,29 +9,10 @@
 # to the Nexus releases repo instead of the npm registry that consumers
 # actually resolve from. The GHA merge workflow replaces it with the correct
 # model (npm snapshot on every merge, npm release gated on a releases/ file).
-# The SonarCloud job is retained until equivalent scanning is added to the
-# GitHub Actions workflows.
+# The SonarCloud job has moved too, to .github/workflows/sonar-master.yaml,
+# so this file now only defines the project view.
 - project:
     name: sdc-onap-ui-project-view
     project-name: sdc-onap-ui
     views:
       - project-view
-
-- project:
-    name: sdc-onap-ui-angular-sonar
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-builder-4c-4g
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    project: "sdc/onap-ui-angular"
-    project-name: "sdc-onap-ui-angular"
-    branch: "master"
-    mvn-settings: "sdc-onap-ui-angular-settings"
-    mvn-params: "-Dsonar.branch={branch}"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m"

@@ -33,24 +33,6 @@
     build-node: "ubuntu1804-docker-8c-8g"
 
 - project:
-    name: integration-simulators-nf-simulator-ves-client-sonar
-    java-version: openjdk21
-    sonarcloud-java-version: openjdk21
-    jobs:
-      - gerrit-maven-sonar
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    sonar-mvn-goal: "{sonar_mvn_goal}"
-    build-node: ubuntu2204-docker-8c-8g
-    project: "integration/simulators/nf-simulator/ves-client"
-    project-name: "integration-simulators-nf-simulator-ves-client"
-    branch: "master"
-    mvn-settings: "integration-simulators-nf-simulator-ves-client-settings"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxMetaspaceSize=256m"
-
-- project:
     name: integration-simulators-nf-simulator-ves-client-view
     project-name: integration-simulators-nf-simulator-ves-client
     views:
