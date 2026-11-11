@@ -19,6 +19,7 @@
           mvn-params: "-DskipTests"
       - gerrit-maven-docker-stage:
           sbom-generator: true
+          build-node: ubuntu1804-docker-8c-8g
           maven-versions-plugin: true
           mvn-params: "-P docker -DskipTests"
           container-public-registry: "nexus3.onap.org:10001"
@@ -33,10 +34,6 @@
           # Define maven version for both ONAP and global-jjb jobs
           maven-version: mvn38
           mvn-version: mvn38
-          gerrit-maven-stage:
-            build-node: centos8-docker-4c-4g
-          gerrit-maven-docker-stage:
-            build-node: ubuntu1804-docker-v1-8c-8g
       - "java17":
           branch: "java17"
           java-version: openjdk17
