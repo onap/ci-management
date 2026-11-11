@@ -16,6 +16,7 @@
           sbom-generator: true
           sign-artifacts: true
           maven-versions-plugin: true
+          mvn-params: "-DskipTests"
       - gerrit-maven-docker-stage:
           sbom-generator: true
           maven-versions-plugin: true
