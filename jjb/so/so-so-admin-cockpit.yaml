@@ -9,9 +9,13 @@
     name: so-so-admin-cockpit
     project-name: "so-so-admin-cockpit"
     jobs:
-      - "{project-name}-{stream}-verify-java"
-      - "{project-name}-{stream}-merge-java"
+      - "{project-name}-{stream}-verify-java":
+          mvn-params: "-DskipFrontendTests=true"
+      - "{project-name}-{stream}-verify-frontend"
+      - "{project-name}-{stream}-merge-java":
+          mvn-params: "-DskipFrontendTests=true"
       - gerrit-maven-stage:
+          mvn-params: "-DskipFrontendTests=true"
           sbom-generator: true
           sign-artifacts: true
           build-node: centos8-docker-4c-4g
