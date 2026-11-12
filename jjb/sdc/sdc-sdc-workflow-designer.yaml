@@ -32,6 +32,7 @@
     stream:
       - "master":
           branch: "master"
+          java-version: openjdk17
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdc-sdc-workflow-designer-settings"
