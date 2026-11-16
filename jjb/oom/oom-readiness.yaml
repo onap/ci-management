@@ -49,7 +49,6 @@
 - project:
     name: "oom-readiness-docker"
     jobs:
-      - gerrit-docker-verify
       - gerrit-docker-merge
     project-name: "oom-readiness"
     project: "oom/readiness"
