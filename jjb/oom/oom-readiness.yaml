@@ -45,19 +45,3 @@
     jobs:
       - "{project-name}-gerrit-release-jobs":
           build-node: centos7-docker-2c-1g
-
-- project:
-    name: "oom-readiness-docker"
-    jobs:
-      - gerrit-docker-merge
-    project-name: "oom-readiness"
-    project: "oom/readiness"
-    stream:
-      - "master":
-          branch: "master"
-          files: ""
-    docker-name: "onap/oom/readiness"
-    docker-build-args: "-f ./Dockerfile"
-    docker-root: "$WORKSPACE"
-    mvn-settings: "oom-settings"
-    build-node: ubuntu1804-docker-8c-8g
