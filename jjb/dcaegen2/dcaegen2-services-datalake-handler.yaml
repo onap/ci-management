@@ -10,8 +10,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
-    maven-version: "mvn35"
+    java-version: openjdk17
+    mvn-version: mvn39
     mvn-settings: "dcaegen2-services-settings"
     container-public-registry: "nexus3.onap.org:10001"
     container-staging-registry: "nexus3.onap.org:10003"
@@ -49,7 +49,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: "components/datalake-handler/feeder/**"
@@ -82,7 +83,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: "components/datalake-handler/admin/**"
@@ -115,7 +117,8 @@
     stream:
       - "master":
           branch: "master"
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     mvn-settings: "dcaegen2-services-settings"
     maven-deploy-properties: |
       deployAtEnd=true
@@ -128,7 +131,8 @@
 
 - project:
     name: dcaegen2-services-datalake-handler-sonar
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     jobs:
       - gerrit-maven-sonar
     sonarcloud: true

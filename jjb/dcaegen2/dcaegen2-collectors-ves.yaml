@@ -2,7 +2,8 @@
 - project:
     name: dcaegen2-collectors-ves
     project-name: "dcaegen2-collectors-ves"
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     jobs:
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
@@ -36,12 +37,12 @@
     archive-artifacts: ""
     build-node: "ubuntu1804-docker-8c-8g"
     mvn-snapshot-id: "ecomp-snapshots"
-    mvn-version: "mvn36"
     nexus-snapshot-repo: "snapshots"
 
 - project:
     name: dcaegen2-collectors-ves-clm
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     jobs:
       - gerrit-maven-clm
     nexus-iq-namespace: "onap-"

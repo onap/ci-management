@@ -2,7 +2,8 @@
 - project:
     name: dcaegen2-platform-ves-openapi-manager
     project-name: "dcaegen2-platform-ves-openapi-manager"
-    java-version: openjdk11
+    java-version: openjdk17
+    mvn-version: mvn39
     jobs:
       - gerrit-maven-verify:
           pre-build-script: !include-raw-escape: ../../shell/onap-gerrit-review-wrapper.sh
