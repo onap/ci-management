@@ -15,6 +15,9 @@
     stream:
       - "master":
           branch: "master"
+          build-node: ubuntu2204-docker-8c-8g
+          java-version: openjdk21
+          mvn-version: mvn39
       - "quebec":
           branch: "quebec"
       - "paris":
