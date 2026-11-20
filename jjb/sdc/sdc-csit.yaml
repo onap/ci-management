@@ -21,6 +21,7 @@
     stream:
       - "master":
           branch: "master"
+          java-version: openjdk17
       - "montreal":
           branch: "montreal"
     build-timeout: 120
