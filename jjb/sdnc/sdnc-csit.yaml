@@ -20,8 +20,6 @@
           mvn-version: mvn39
       - "quebec":
           branch: "quebec"
-      - "paris":
-          branch: "paris"
     mvn-settings: "sdnc-oam-settings"
     mvn-version: "mvn38"
     robot-options: ""

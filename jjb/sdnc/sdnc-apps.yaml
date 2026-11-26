@@ -35,8 +35,6 @@
 
     project: "sdnc/apps"
     stream:
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
       - "master":

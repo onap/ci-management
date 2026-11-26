@@ -20,8 +20,6 @@
 
     project: "sdnc/northbound"
     stream:
-      - "paris":
-          branch: "paris"
       - "quebec":
           branch: "quebec"
       - "master":
