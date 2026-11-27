@@ -7,11 +7,9 @@
 
 - project:
     name: sdc-sdc-be-common
-    disable-job: true
     project-name: "sdc-sdc-be-common"
     jobs:
-      - "{project-name}-{stream}-verify-java":
-          disable-job: false
+      - "{project-name}-{stream}-verify-java"
       - "{project-name}-{stream}-merge-java"
       - gerrit-maven-stage:
           sign-artifacts: true
@@ -24,6 +22,7 @@
     stream:
       - "master":
           branch: "master"
+          java-version: openjdk11
       - "montreal":
           branch: "montreal"
     mvn-settings: "sdc-sdc-be-common-settings"
